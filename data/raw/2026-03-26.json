@@ -48,18 +48,6 @@
     "keyword_hits": 4
   },
   {
-    "title": "Archive: 2026 - GitHub Changelog",
-    "source": "GitHub Changelog",
-    "url": "https://github.blog/changelog/feed/",
-    "landing_url": "https://github.blog/changelog/",
-    "priority": 2,
-    "publish_date": "2026-03-25T00:00:00+00:00",
-    "author": null,
-    "excerpt": "",
-    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Wed, 25 Mar 2026 23:12:33 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 GitHub Copilot for Jira — Public preview enhancements https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements Allison Wed, 25 Mar 2026 21:09:35 +0000 https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements <p>Since launching the public preview of GitHub Copilot coding agent for Jira, we&#8217;ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements\">GitHub Copilot for Jira — Public preview enhancements</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Since launching the <a href=\"https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/\">public preview</a> of GitHub Copilot coding agent for Jira, we&rsquo;ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try the integration, report issues, and share suggestions&mdash;your input has directly shaped the improvements we have shipped.</p> <h2 id=\"whats-new\" id=\"whats-new\" ><a class=\"heading-link\" href=\"#whats-new\">What&rsquo;s new<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h2> <h3 id=\"improved-onboarding-and-setup-guidance\" id=\"improved-onboarding-and-setup-guidance\" ><a class=\"heading-link\" href=\"#improved-onb",
-    "keyword_hits": 2
-  },
-  {
     "title": "GitHub Changelog",
     "source": "GitHub Changelog",
     "url": "https://github.blog/changelog/2026/?label=account-management",
@@ -108,18 +96,6 @@
     "keyword_hits": 2
   },
   {
-    "title": "GitHub Changelog",
-    "source": "GitHub Changelog",
-    "url": "https://github.blog/changelog/",
-    "landing_url": "https://github.blog/changelog/",
-    "priority": 2,
-    "publish_date": "2026-03-25T00:00:00+00:00",
-    "author": null,
-    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
-    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot coding agent repository access via the API account management copilot ... +1 Mar.24 Improvement Faster incremental analysis with CodeQL in pull requests application security Mar.23 Release Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse copilot Mar.23 Improvement Push protection exemptions from repository settings application security Mar.20 Improvement Copilot usage metrics now resolve auto model selection to actual models copilot Mar.20 Improvement Trace any Copilot coding agent commit to its session logs copilot Mar.20 Improvement Monitor Copilot coding agent logs live in Raycast copilot Mar.20 Improvement A smoother navigation experience in GitHub Mobile for Android client apps Mar.19 Improvement More visibility into Copilot coding agent sessions copilot Mar.19 Improvement GitHub Actions: La",
-    "keyword_hits": 3
-  },
-  {
     "title": "Archive: March 2026 - GitHub Changelog",
     "source": "GitHub Changelog",
     "url": "https://github.blog/changelog/2026/3/",
@@ -129,6 +105,18 @@
     "author": null,
     "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
     "body_excerpt": "Archive: March 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot coding agent repository access via the API account management copilot ... +1 Mar.24 Improvement Faster incremental analysis with CodeQL in pull requests application security Mar.23 Release Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse copilot Mar.23 Improvement Push protection exemptions from repository settings application security Mar.20 Improvement Copilot usage metrics now resolve auto model selection to actual models copilot Mar.20 Improvement Trace any Copilot coding agent commit to its session logs copilot Mar.20 Improvement Monitor Copilot coding agent logs live in Raycast copilot Mar.20 Improvement A smoother navigation experience in GitHub Mobile for Android client apps Mar.19 Improvement More visibility into Copilot coding agent sessions copilot Mar.19 Improvem",
+    "keyword_hits": 3
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026/?label=collaboration-tools",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-25T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.19 Improvement Codespaces with data residency now available in Japan collaboration tools Mar.19 Improvement View code and comments side-by-side in pull request Files changed page collaboration tools Mar.17 Release GitHub Enterprise Server 3.20 is now generally available collaboration tools Mar.05 Release GitHub Copilot coding agent for Jira is now in public preview collaboration tools copilot ... +1 Mar.05 Release Quick access to merge status in pull requests is in public preview collaboration tools February Feb 2026 February Feb 2026 Feb.24 Release GitHub Enterprise Server 3.20 release candidate is available collaboration tools Feb.24 Release Repository dashboard is now generally available collaboration tools Feb.19 Improvement Changes to test merge commit generation for pull requests collaboration tools Feb.19 Improvement Access all pull request comments without leaving the new Files changed page collaboration tools Feb.17 Release Required reviewer rule is now generally available collaboration tools platform governance ... +1 Feb.13 Improvement Updated GitHub status page experience actions collaboration tools copilot platform gov",
     "keyword_hits": 3
   },
   {
@@ -144,15 +132,75 @@
     "keyword_hits": 3
   },
   {
-    "title": "GitHub Changelog",
+    "title": "Archive: 2026 - GitHub Changelog",
     "source": "GitHub Changelog",
-    "url": "https://github.blog/changelog/2026/?label=collaboration-tools",
+    "url": "https://github.blog/changelog/feed/",
     "landing_url": "https://github.blog/changelog/",
     "priority": 2,
-    "publish_date": "2026-03-25T00:00:00+00:00",
+    "publish_date": "2026-03-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Thu, 26 Mar 2026 17:45:31 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Ask @copilot to resolve merge conflicts on pull requests https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests Allison Thu, 26 Mar 2026 17:32:22 +0000 https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests <p>Copilot coding agent can now resolve merge conflicts on pull requests. To ask Copilot to resolve merge conflicts, mention @copilot in a comment and tell it what to do: @copilot&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests\">Ask @copilot to resolve merge conflicts on pull requests</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p><a href=\"https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent\">Copilot coding agent</a> can now resolve merge conflicts on pull requests.</p> <p>To ask Copilot to resolve merge conflicts, mention <code>@copilot</code> in a comment and tell it what to do: <code>@copilot Merge in main and resolve the conflicts</code>.</p> <p>The agent works in its own cloud-based development environment where it can make the changes, check that the build and tests still pass, and then push.</p> <p>Copilot coding agent can also:</p> <ul> <li><strong>Fix failing GitHub Actions workflows</strong>: <code>@copilot Fix the failing tests</code></li> <li><strong>Address code review comments</strong>: <code>@copilot Address this com",
+    "keyword_hits": 2
+  },
+  {
+    "title": "New pull requests dashboard is in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-03-26-new-pull-requests-dashboard-is-in-public-preview",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "A public preview of the refreshed pull requests dashboard is now available at github.com/pulls, introducing a new pull request inbox and saved views so you can organize and prioritize the…",
+    "body_excerpt": "New pull requests dashboard is in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release March 26, 2026 • 1 minute read New pull requests dashboard is in public preview Table of Contents 📥 Inbox 📂 Saved views 🧐 Powerful filtering ♥️ Feedback Menu. Currently selected: 📥 Inbox 📥 Inbox 📂 Saved views 🧐 Powerful filtering ♥️ Feedback A public preview of the refreshed pull requests dashboard is now available at github.com/pulls , introducing a new pull request inbox and saved views so you can organize and prioritize the pull requests that need your attention. 📥 Inbox Inbox is your new home to discover the pull requests that need your attention, including your review, pull requests that need fixing, and pull requests that are ready to merge. Filter by repository or how recently a pull request was updated to focus on what matters most. 📂 Saved views Create, edit, and organize custom views based on your most-used search queries. To create a saved view from an existing view, click the “+” ( Create a view ) icon in the sidebar, give the new view a name, and click Save view . 🧐 Powerful filtering New filtering options help you focus in on what matters most: Smart default filters : Quickly access pull requests with built-in filters like Authored by me , Assigned to me , Involves me , and Review requested . The Authored by me filter includes all of your pull requests, including those authored by GitHub Copilot on your behalf. Filtering : Content assist and auto-complete help you find pull requests across repositories, teams, organizations, and projects. Advanced search support : Perform advanced searches using AND and OR keywords as well as nested searches. Note that a space between filter fields acts as an AND search. For example, (org:github AND author:@me) OR (org:dizzbot assignee:mona) finds pull",
+    "keyword_hits": 2
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026/?label=projects-and-issues",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-26T00:00:00+00:00",
     "author": null,
     "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
-    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.19 Improvement Codespaces with data residency now available in Japan collaboration tools Mar.19 Improvement View code and comments side-by-side in pull request Files changed page collaboration tools Mar.17 Release GitHub Enterprise Server 3.20 is now generally available collaboration tools Mar.05 Release GitHub Copilot coding agent for Jira is now in public preview collaboration tools copilot ... +1 Mar.05 Release Quick access to merge status in pull requests is in public preview collaboration tools February Feb 2026 February Feb 2026 Feb.24 Release GitHub Enterprise Server 3.20 release candidate is available collaboration tools Feb.24 Release Repository dashboard is now generally available collaboration tools Feb.19 Improvement Changes to test merge commit generation for pull requests collaboration tools Feb.19 Improvement Access all pull request comments without leaving the new Files changed page collaboration tools Feb.17 Release Required reviewer rule is now generally available collaboration tools platform governance ... +1 Feb.13 Improvement Updated GitHub status page experience actions collaboration tools copilot platform gov",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available projects & issues Mar.12 Release Issue fields: Structured issue metadata is in public preview projects & issues Mar.05 Improvement Hierarchy view improvements and file uploads in issue forms projects & issues February Feb 2026 February Feb 2026 Feb.26 Improvement Improved search on the issues dashboard projects & issues Feb.19 Release GitHub Projects: Import items based on a query and hierarchy view improvements projects & issues Feb.13 Improvement Updated GitHub status page experience actions collaboration tools copilot platform governance projects & issues ... +4 Feb.13 Release GitHub Agentic Workflows are now in technical preview actions collaboration tools copilot projects & issues ... +3 Feb.05 Release Pinned comments on GitHub Issues projects & issues January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness",
+    "keyword_hits": 2
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.26 Improvement Ask @copilot to resolve merge conflicts on pull requests copilot Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.26 Release Custom images for GitHub-hosted runners are now generally available actions Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot coding agent repository access via the API account management copilot ... +1 Mar.24 Improvement Faster incremental analysis with CodeQL in pull requests application security Mar.23 Release Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse copilot Mar.23 Improvement Push protection exemptions from repository settings application security Mar.20 Improvement Copilot usage metrics now resolve auto model selection to actual models copilot Mar.20 Improvement Trace any Copi",
     "keyword_hits": 3
+  },
+  {
+    "title": "Ask @copilot to resolve merge conflicts on pull requests - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot coding agent can now resolve merge conflicts on pull requests. To ask Copilot to resolve merge conflicts, mention @copilot in a comment and tell it what to do: @copilot…",
+    "body_excerpt": "Ask @copilot to resolve merge conflicts on pull requests - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement March 26, 2026 • 1 minute read Ask @copilot to resolve merge conflicts on pull requests Copilot coding agent can now resolve merge conflicts on pull requests. To ask Copilot to resolve merge conflicts, mention @copilot in a comment and tell it what to do: @copilot Merge in main and resolve the conflicts . The agent works in its own cloud-based development environment where it can make the changes, check that the build and tests still pass, and then push. Copilot coding agent can also: Fix failing GitHub Actions workflows : @copilot Fix the failing tests Address code review comments : @copilot Address this comment Make any other changes : @copilot Add a unit test covering the case when the model argument is missing Copilot coding agent is available with all paid Copilot plans. If you’re a Copilot Business or Copilot Enterprise user, an administrator will have to enable Copilot coding agent before you can use it. To learn more, see “Asking GitHub Copilot to make changes to an existing pull request” in the GitHub docs. copilot Share Copied Shared Back to changelog Related Posts Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot coding agent repository access via the API account management copilot ... +1 Mar.23 Release Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse copilot M",
+    "keyword_hits": 3
+  },
+  {
+    "title": "Agent activity in GitHub Issues and Projects - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Today, we’re shipping two new features that bring agent activity directly into your planning workflows. Agent sessions under assignees in GitHub Issues When a coding agent (e.g., Copilot, Claude, or…",
+    "body_excerpt": "Agent activity in GitHub Issues and Projects - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release March 26, 2026 • 1 minute read Agent activity in GitHub Issues and Projects Table of Contents Agent sessions under assignees in GitHub Issues Agent sessions in project table and board views Menu. Currently selected: Agent sessions under assignees in GitHub Issues Agent sessions under assignees in GitHub Issues Agent sessions in project table and board views Today, we’re shipping two new features that bring agent activity directly into your planning workflows. Agent sessions under assignees in GitHub Issues When a coding agent (e.g., Copilot, Claude, or Codex) is assigned to an issue, its session now appears directly under the assignee in the sidebar. Each session shows a live status: “queued”, “working”, “waiting for review”, or “completed”. Click any session to jump straight into the session logs. This is now generally available for all repositories with access to coding agents. Agent sessions in project table and board views Agent sessions now surface directly in project table and board views. You can see at a glance which items have attached agent sessions, their current status, and how work is progressing across a large body of work. To try this out, open the View menu and turn on Show agent sessions . Join the discussion within GitHub Community . Table of Contents Agent sessions under assignees in GitHub Issues Agent sessions in project table and board views Menu. Currently selected: Agent sessions under assignees in GitHub Issues Agent sessions under assignees in GitHub Issues Agent sessions in project table and board views projects & issues Share Copied Shared Back to changelog Related Posts Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available projects & issues Mar.12 R",
+    "keyword_hits": 4
   }
 ]

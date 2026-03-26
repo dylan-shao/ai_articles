@@ -152,20 +152,21 @@
       <div class="nav">
         <a href="index.html">Latest</a>
         <a href="archive.html">Archive</a>
+        <a href="harness.html">Harness Library</a>
         <a href="latest.zh.html">中文</a>
         <a href="latest.en.html">English</a>
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-03-26.zh.html'>中文</a><a class="" href='2026-03-26.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-03-26.zh.html'>中文</a><a class="" href='2026-03-26.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
         </aside>
         <main class="panel">
           <h1 id="ai-coding-daily-digest-2026-03-26">AI Coding Daily Digest - 2026-03-26</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>今天最强信号集中在两条主线：其一，Anthropic 直接量化了 agentic coding benchmark 中由基础设施配置带来的显著噪声，说明 leaderboard 上几个点的差距未必代表真实模型能力差距。</li>
-<li>其二，开发者代理正在快速进入企业流程层：权限自动化、Jira 驱动的编码代理、以及可观测性/采用度指标都开始从“能不能用”转向“如何安全治理与规模化运营”。</li>
-<li>对平台和工程负责人而言，这意味着要同时建设两类能力：一类是可信 eval harness 与可复现实验环境，另一类是面向组织落地的权限、上下文接入、审计与采用度度量。</li>
+<li>今天最强信号来自两类内容：一是 Anthropic 对 agentic coding eval 基础设施噪声的定量分析，直接挑战当前排行榜可比性；二是 GitHub/Anthropic 对生产级编码代理的权限、安全、可观测性与工作流嵌入的持续落地。</li>
+<li>对工程负责人而言，重点不在“代理更能写代码了”，而在于评测需要更严格的环境控制、生产使用需要更细粒度的权限门控，以及组织采用开始依赖可观测性与管理面能力。</li>
+<li>MCP 与代码知识协议也在继续制度化：GitHub 将外部知识上下文接入实际代理流程，Sourcegraph 则推动 SCIP 走向开放治理，说明‘给代理稳定、可复用的代码/文档语义层’正在成为基础设施层议题。</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
 <h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
@@ -175,14 +176,13 @@
 <li>Publish date: N/A</li>
 <li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
 </ul>
-<p>Anthropic 讨论了 agentic coding benchmark（如 SWE-bench、Terminal-Bench）中一个被系统性低估的问题：运行基础设施本身会显著改变分数。其内部实验显示，仅仅改变资源配置和执行环境，Terminal-Bench 2.0 的结果就可产生 6 个百分点差异，甚至超过领先模型之间的榜单差距。</p>
-<p>Why it matters: 这是近期最重要的技术信号之一，因为它直接挑战了业界对 coding-agent leaderboard 的解释方式。对负责模型选型、内评体系或基准平台的团队来说，重点不再只是“跑 benchmark”，而是“定义被测对象到底包含什么”：模型、agent policy、工具链、资源预算、超时策略、调度方式都在共同决定成绩。</p>
+<p>Anthropic 量化了 agentic coding benchmark 中由运行环境带来的分数波动，指出在 Terminal-Bench 2.0 上，仅基础设施资源配置差异就可造成 6 个百分点的成绩差距，超过很多模型排行榜之间的差值。文章强调，对这类需要执行代码、安装依赖、运行测试和多轮迭代的评测而言，运行时环境不是中性容器，而是被测系统的一部分。</p>
+<p>Why it matters: 这是今天最重要的技术文章，因为它直接指出当前 AI 编码代理评测的一个系统性缺陷：如果 CPU、RAM、超时策略、容器调度和资源 enforcement 不统一，排行榜比较就可能失真。对自建 eval harness、模型选型和采购决策都有直接影响。</p>
 <p>Key takeaways:
-- Agentic eval 与静态 benchmark 不同，运行环境不是被动容器，而是问题求解过程的一部分。
-- 资源规格说明不足以保证可比性；真正关键的是一致的资源隔离、执行限制与错误归因方法。
-- 如果 leaderboard 差距小于基础设施噪声，组织不应据此做高成本采购或路线判断。</p>
-<p>Tags: agentic-evals, benchmarking, harness-design, infra, reproducibility
-Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+- Agentic coding eval 与静态 benchmark 不同，环境配置会改变“题目本身”，而不是仅影响执行稳定性。
+- 仅靠 benchmark 文档里写推荐资源还不够，关键在于一致、可验证、可复现的 enforcement 机制。</p>
+<p>Tags: agentic-coding, evals, benchmarking, harness-design, infrastructure
+Scores: signal 10/5, novelty 9/5, actionability 10/5</p>
 <h2 id="claude-code-auto-mode-a-safer-way-to-skip-permissions">Claude Code auto mode: a safer way to skip permissions</h2>
 <ul>
 <li>Source: Anthropic Engineering</li>
@@ -190,44 +190,41 @@ Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: <a href="https://www.anthropic.com/engineering/claude-code-auto-mode">https://www.anthropic.com/engineering/claude-code-auto-mode</a></li>
 </ul>
-<p>Anthropic 介绍了 Claude Code 的 auto mode：在保留一定安全控制的同时，减少开发者高频点击批准权限的疲劳。文章披露了一个关键运营数据——用户会批准 93% 的权限提示，因此纯手动审批既增加摩擦，也未必真正提升安全；Anthropic 转而使用分类器自动批准部分低风险操作，并基于内部 agent 事故案例定义防护边界。</p>
-<p>Why it matters: 这篇文章的价值在于它把 agent 安全问题从抽象原则拉回到产品与平台控制面：当代理真正能写代码、改文件、访问网络、碰生产边界时，权限模型必须在“摩擦成本”和“事故概率”之间动态平衡。对企业平台团队来说，这比单纯讨论 sandbox 更接近真实部署场景。</p>
+<p>Anthropic 介绍了 Claude Code 的 auto mode：用分类器自动批准一部分高置信度、低风险操作，以减少频繁权限弹窗导致的 approval fatigue，同时避免完全关闭权限检查。文章基于内部 incident log 讨论了编码代理的典型越权/误行动作，如删除远程分支、泄露 token、误触生产数据库迁移等。</p>
+<p>Why it matters: 这篇文章的价值在于把“代理权限管理”从粗粒度开关，推进到分类器驱动的风险分层控制。对准备在终端、CI、repo 写权限场景里部署编码代理的团队来说，这比单纯强调能力提升更接近真实生产问题。</p>
 <p>Key takeaways:
-- “用户大多会点批准”意味着手动确认并不是可靠的最终防线，反而可能制造审批疲劳。
-- 权限系统正在从静态 allow/deny 转向基于分类器、上下文和事故模式的风险分层决策。
-- 内部事故日志是构建 agent guardrails 的高价值输入，不应只依赖理论威胁建模。</p>
-<p>Tags: agent-safety, permissions, developer-tooling, guardrails, enterprise-adoption
+- 93% 的权限提示最终都会被用户批准，说明纯人工逐条审批既有摩擦，也会退化为形式主义。
+- 比起完全 sandbox 或完全跳过权限，更可行的路线是‘模型能力 + 分类器 + incident-driven policy’的中间层。</p>
+<p>Tags: agent-safety, permissions, developer-tooling, risk-controls, terminal-agents
 Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="agent-activity-in-github-issues-and-projects">Agent activity in GitHub Issues and Projects</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-03-26T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects">https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects</a></li>
+</ul>
+<p>GitHub 将编码代理会话直接暴露到 Issues 与 Projects 中：当 Copilot、Claude、Codex 等代理被分配到 issue 后，会在 assignee 下显示会话状态（queued、working、waiting for review、completed），并支持跳转到 session logs；Projects 的 table/board 视图也可展示代理会话与状态。</p>
+<p>Why it matters: 这不是单纯 UI 小改动，而是组织采用编码代理的关键一步：代理工作从隐藏在 IDE/聊天窗口中，转向进入团队级工作跟踪与项目管理系统。对平台团队来说，这意味着代理开始具备可观测、可审计、可协作的工作对象属性。</p>
+<p>Key takeaways:
+- 代理采用正在从个人工具转向团队工作流实体，需要状态、日志和跨任务可见性。
+- GitHub 正在形成‘计划系统 + 代理执行 + 日志追踪’的一体化闭环。</p>
+<p>Tags: organizational-adoption, observability, workflow-integration, github, coding-agents
+Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
 <h2 id="github-copilot-for-jira-public-preview-enhancements">GitHub Copilot for Jira — Public preview enhancements</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
-<li>Author: Allison</li>
+<li>Author: N/A</li>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: <a href="https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements">https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements</a></li>
 </ul>
-<p>GitHub 更新了 Copilot coding agent 与 Jira 的集成，加入了更清晰的接入引导、在 Jira 中选择模型、自动把 Jira ticket 信息带入分支名和 PR 标题，以及通过 Atlassian MCP server 将 Confluence 页面作为上下文供代理访问。</p>
-<p>Why it matters: 高信号点不在“又一个集成”，而在它揭示了企业 AI coding 的真实落地方向：任务入口来自工单系统，关键上下文来自文档系统，执行者是代码代理，贯穿链路需要可追踪的命名、链接和治理。尤其是 Confluence 通过 MCP 接入，说明 MCP 正在成为企业上下文治理层的一部分，而不只是 demo 协议。</p>
+<p>GitHub 更新了 Copilot coding agent for Jira：改进接入与报错提示、支持在 Jira 评论中指定模型、自动把 Jira ticket 号写入 PR 标题和分支名，并通过 Atlassian MCP server 把 Confluence 文档作为代理上下文接入。</p>
+<p>Why it matters: 这条更新的高信号点在于 MCP 的实际落地：不是泛泛讨论协议，而是把企业文档上下文（Confluence）接入真实编码代理工作流。同时，Jira→PR 的标识链路加强了任务到代码的可追踪性。</p>
 <p>Key takeaways:
-- 企业级 coding agent 正在从 IDE 内协助扩展到 issue-driven、workflow-native 的异步执行模式。
-- MCP 的实际价值在于把文档与知识源以可治理的方式接入代理，而非单纯“连更多工具”。
-- PR 标题、分支名、ticket 链接等元数据标准化，会成为后续审计、度量和追责的重要基础。</p>
-<p>Tags: github-copilot, jira, mcp, workflow-integration, enterprise-context
+- MCP 正在从‘生态接口标准’变成企业文档与任务系统接入编码代理的实际集成层。
+- 企业级代理工作流的关键不是单次生成，而是 ticket、文档、branch、PR 之间的上下文贯通。</p>
+<p>Tags: mcp, jira, confluence, workflow-integration, enterprise-adoption
 Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
-<h2 id="the-future-of-scip">The Future of SCIP</h2>
-<ul>
-<li>Source: Sourcegraph Blog</li>
-<li>Author: Justin Dorfman; Michal Kielbowicz</li>
-<li>Publish date: 2026-03-25T00:00:00+00:00</li>
-<li>URL: <a href="https://sourcegraph.com/blog/the-future-of-scip">https://sourcegraph.com/blog/the-future-of-scip</a></li>
-</ul>
-<p>Sourcegraph 宣布将 SCIP 从 Sourcegraph 主导项目转向独立、开放治理的社区项目。SCIP 是一种语言无关的源码索引协议，支撑 definition/reference 等代码导航能力；此次变化表明代码图谱与语义索引基础设施正从厂商资产转向更中立的生态层。</p>
-<p>Why it matters: 虽然这不是当天最直接可落地的功能更新，但它对 repo understanding、代码图谱和 agent 上下文基础设施有长期意义。若语义索引协议走向开放治理，企业在构建多工具、多代理、跨供应商的代码理解层时，会更容易避免深度绑定单一厂商。</p>
-<p>Key takeaways:
-- 代码语义索引协议正在从产品内部能力转向更开放的生态基础设施。
-- 对需要长期维护代码图谱和知识层的组织，开放治理比单厂商控制更可持续。
-- 这可能利好基于代码索引构建的 agent 检索、导航、重构与批量变更工具链。</p>
-<p>Tags: scip, repo-understanding, code-graph, open-governance, developer-infrastructure
-Scores: signal 7/5, novelty 7/5, actionability 6/5</p>
 <h2 id="copilot-usage-metrics-now-identify-active-copilot-coding-agent-users">Copilot usage metrics now identify active Copilot coding agent users</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
@@ -235,55 +232,66 @@ Scores: signal 7/5, novelty 7/5, actionability 6/5</p>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: <a href="https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users">https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users</a></li>
 </ul>
-<p>GitHub 在 Copilot 使用指标中新增了对 Copilot coding agent 使用者的识别字段 <code>used_copilot_coding_agent</code>，管理员现在可以在日维度和 28 天报告中区分 IDE agent mode 与 issue/PR 驱动的 coding agent 活动。</p>
-<p>Why it matters: 这是组织采用层面的关键信号。随着编码代理从 IDE 扩展到 issue、PR、Jira 等表面，传统 seat-based 或 IDE-based 采用统计已经失真。新的度量字段意味着企业终于可以把“代理是否真的被用起来”纳入平台经营、预算评估和团队 enablement 体系。</p>
+<p>GitHub 在 Copilot usage metrics 中新增了 used_copilot_coding_agent 字段，使企业和组织管理员可以在日/28 日报表中区分 IDE agent mode 使用与 Copilot coding agent 使用，覆盖 issue 指派与 PR 评论触发的代理会话。</p>
+<p>Why it matters: 这条更新虽短，但非常关键：组织层面的 AI 编码采用正在从 seat 数量和 IDE 活跃度，演进到具体代理工作流的使用分析。没有这种分层指标，就很难评估代理是否真正嵌入交付流程。</p>
 <p>Key takeaways:
-- AI coding 采用度正在从单一 IDE 指标拆分为多表面、多工作流指标体系。
-- 可观测性是代理规模化落地的前提，没有分层 usage 指标就难以做治理与 ROI 评估。
-- 平台团队应把代理使用事件纳入现有数据仓库和工程效率看板，而不是只看许可证分配。</p>
-<p>Tags: adoption-metrics, github-copilot, observability, enterprise-governance, coding-agents
-Scores: signal 7/5, novelty 6/5, actionability 9/5</p>
+- 平台团队需要把 IDE 补全、IDE agent 和异步 coding agent 视为不同采用曲线来衡量。
+- 管理面与度量能力正在成为企业采购和内部推广编码代理的必要条件。</p>
+<p>Tags: adoption-metrics, github-copilot, enterprise-admin, organizational-adoption, coding-agents
+Scores: signal 7/5, novelty 6/5, actionability 8/5</p>
+<h2 id="the-future-of-scip">The Future of SCIP</h2>
+<ul>
+<li>Source: Sourcegraph Blog</li>
+<li>Author: Justin Dorfman; Michal Kielbowicz</li>
+<li>Publish date: 2026-03-25T00:00:00+00:00</li>
+<li>URL: <a href="https://sourcegraph.com/blog/the-future-of-scip">https://sourcegraph.com/blog/the-future-of-scip</a></li>
+</ul>
+<p>Sourcegraph 宣布将 SCIP 从 Sourcegraph 主导项目转向独立、开放治理的社区项目，并设立 Core Steering Committee。SCIP 作为语言无关的源码索引协议，支撑代码导航和语义级代码理解能力。</p>
+<p>Why it matters: 这条消息的意义在于基础协议层的开放化。随着代理越来越依赖 repo understanding、符号索引和跨语言语义检索，代码智能协议若能脱离单厂商控制，更有机会成为长期基础设施。</p>
+<p>Key takeaways:
+- 代码理解基础设施正在从产品功能上升为需要社区治理的协议层资产。
+- 对自建 code graph、代码搜索、代理上下文系统的团队，SCIP 的开放治理提升了长期采用信心。</p>
+<p>Tags: scip, repo-understanding, code-intelligence, open-governance, developer-infrastructure
+Scores: signal 7/5, novelty 6/5, actionability 7/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
 <li>Claude Code auto mode: a safer way to skip permissions</li>
-<li>GitHub Copilot for Jira — Public preview enhancements</li>
+<li>Agent activity in GitHub Issues and Projects</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>基础设施噪声（infrastructure noise）</li>
-<li>Auto mode</li>
-<li>used_copilot_coding_agent</li>
-<li>Atlassian MCP server</li>
-<li>SCIP 开放治理</li>
+<li>Infrastructure noise：指 agentic coding eval 中由 CPU/RAM/超时/调度等运行环境差异引入的分数波动。</li>
+<li>Approval fatigue：用户因高频权限确认而逐渐机械化批准，削弱安全控制效果。</li>
+<li>used_copilot_coding_agent：GitHub Copilot 使用指标中的字段，用于标记用户是否活跃使用异步编码代理。</li>
+<li>SCIP：语言无关的源码索引协议，用于代码导航、符号引用和语义理解。</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>Agentic coding eval 的可复现性与 harness 设计正在成为核心问题</li>
-<li>权限控制从手动审批转向风险分层自动化</li>
-<li>AI coding 正从 IDE 扩展到 Jira/PR/文档驱动的企业工作流</li>
-<li>采用度与审计指标开始覆盖代理式编码活动</li>
-<li>代码图谱与语义索引基础设施趋向开放生态</li>
+<li>Agent 评测正在从模型比较转向‘模型 + 运行环境 + harness’的整体系统比较。</li>
+<li>生产级编码代理的核心竞争点正转向权限分层、安全控制、会话日志与组织级可观测性。</li>
+<li>MCP、SCIP 等上下文与语义协议层正在成为代理生态的基础设施。</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>如果你在内部评测 coding agents，需要把 CPU/RAM、超时、隔离方式、重试与 infra failure taxonomy 作为 benchmark 的一等配置管理对象。</li>
-<li>如果你在推动组织落地编码代理，应优先建立权限策略、事故复盘、会话日志和使用度量，而不只是扩大 seat 覆盖率。</li>
-<li>如果你的上下文主要分散在 Jira、Confluence、代码库和 PR 中，MCP/索引层会逐渐成为企业 AI 平台的关键控制面。</li>
+<li>如果你在内部做 SWE-bench/Terminal-Bench 类评测，需要把资源预算、超时、容器调度和失败分类纳入 benchmark protocol，而不是只记录 prompt 与模型版本。</li>
+<li>如果你准备让代理拥有写权限、运行命令或接触内部系统，应优先建设基于风险分级的 permission policy，而不是二选一地选择 sandbox 或完全放开。</li>
+<li>若组织正推动 AI coding adoption，下一阶段 KPI 应从席位覆盖率转向：代理会话量、任务链路打通率、日志可追踪性、以及对交付吞吐的真实影响。</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
 <li>Claude Code auto mode: a safer way to skip permissions</li>
+<li>Agent activity in GitHub Issues and Projects</li>
 <li>GitHub Copilot for Jira — Public preview enhancements</li>
 <li>Copilot usage metrics now identify active Copilot coding agent users</li>
 <li>The Future of SCIP</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>GitHub 各类归档页、标签页和总览页，它们主要是导航聚合，不是原始高信号内容。</li>
-<li>Disable comments on individual commits 这类常规协作功能更新，与 AI coding / agent 平台主题相关性弱。</li>
-<li>纯产品小修小补而没有技术机制、治理模型或基础设施细节的 changelog。</li>
+<li>泛化的 GitHub Changelog 列表页、标签页和归档页，本身不是独立技术内容。</li>
+<li>像‘新 PR dashboard’、‘disable comments on individual commits’这类通用协作功能更新，与 AI coding / agent 基础设施关系较弱。</li>
+<li>‘Ask @copilot to resolve merge conflicts’ 虽然有用，但技术深度有限，更像能力增量而非新的系统性洞见。</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
@@ -291,6 +299,10 @@ Scores: signal 7/5, novelty 6/5, actionability 9/5</p>
 <li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
 <li><a href="https://sourcegraph.com/blog">Sourcegraph Blog</a></li>
 <li><a href="https://sourcegraph.com/blog">Sourcegraph Blog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>

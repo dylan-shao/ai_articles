@@ -1,12 +1,48 @@
 {
-  "updated_at": "2026-03-27",
+  "updated_at": "2026-03-26",
   "items": [
+    {
+      "title": "GitHub Copilot for Jira — Public preview enhancements",
+      "url": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
+      "summary": "GitHub 更新了 Copilot coding agent for Jira：改进接入与报错提示、支持在 Jira 评论中指定模型、自动把 Jira ticket 号写入 PR 标题和分支名，并通过 Atlassian MCP server 把 Confluence 文档作为代理上下文接入。",
+      "published_date": "2026-03-25T00:00:00+00:00",
+      "source": "GitHub Changelog",
+      "added_from": "daily_digest",
+      "added_on": "2026-03-26"
+    },
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary": "从评测基础设施层面解释 harness engineering：容器资源、执行环境和 headroom 选择会显著影响 agentic coding benchmark，必须把 infra 当成一等实验变量。",
+      "published_date": "2026-03-25",
+      "source": "Anthropic Engineering",
+      "added_from": "seed",
+      "added_on": "2026-03-27"
+    },
     {
       "title": "Harness design for long-running application development",
       "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
       "summary": "Anthropic 详细拆解了如何把长时运行 coding agent 做成可持续推进的工程系统，核心包括 planner / generator / evaluator 分工、sprint contract、context reset 与自动 QA 闭环。",
       "published_date": "2026-03-24",
       "source": "Anthropic Engineering",
+      "added_from": "seed",
+      "added_on": "2026-03-27"
+    },
+    {
+      "title": "How OpenAI uses Codex",
+      "url": "https://openai.com/business/guides-and-resources/how-openai-uses-codex/",
+      "summary": "从 OpenAI 内部团队视角总结了 Codex 在代码理解、迁移、测试覆盖、性能优化和开发节奏管理中的最佳实践，适合作为 agentic coding 组织落地参考。",
+      "published_date": "2026-03-06",
+      "source": "OpenAI",
+      "added_from": "seed",
+      "added_on": "2026-03-27"
+    },
+    {
+      "title": "A New Era for Sourcegraph: The Intelligence Layer for AI Coding Agents and Developers",
+      "url": "https://sourcegraph.com/blog/a-new-era-for-sourcegraph-the-intelligence-layer-for-ai-coding-agents-and-developers",
+      "summary": "从大型代码库上下文供应角度讨论 AI coding agents 所需的 intelligence layer，覆盖跨仓库语义理解、历史上下文和 MCP 接入，是企业级 harness 基础设施的重要参考。",
+      "published_date": "2026-02-25",
+      "source": "Sourcegraph Blog",
       "added_from": "seed",
       "added_on": "2026-03-27"
     },
@@ -20,20 +56,11 @@
       "added_on": "2026-03-27"
     },
     {
-      "title": "Quantifying infrastructure noise in agentic coding evals",
-      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-      "summary": "从评测基础设施层面解释 harness engineering：容器资源、执行环境和 headroom 选择会显著影响 agentic coding benchmark，必须把 infra 当成一等实验变量。",
-      "published_date": "2026-03-25",
+      "title": "Code execution with MCP: Building more efficient agents",
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "summary": "展示如何把 MCP 工具暴露成代码接口而不是把所有工具定义直接塞进上下文，属于 harness/tooling 层非常实用的最佳实践。",
+      "published_date": "2025-11-04",
       "source": "Anthropic Engineering",
-      "added_from": "seed",
-      "added_on": "2026-03-27"
-    },
-    {
-      "title": "Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents",
-      "summary": "Anthropic 关于 workflow vs. agent 的经典文章，适合做 harness engineering 的总论，强调简单可组合模式、透明规划、工具接口设计和从最小系统开始迭代。",
-      "published_date": "2024-12-19",
-      "source": "Anthropic Research",
       "added_from": "seed",
       "added_on": "2026-03-27"
     },
@@ -42,15 +69,6 @@
       "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
       "summary": "围绕上下文压缩、记忆保留和信息组织展开，是 harness engineering 中 context layer 设计的代表性文章。",
       "published_date": "2025-09-29",
-      "source": "Anthropic Engineering",
-      "added_from": "seed",
-      "added_on": "2026-03-27"
-    },
-    {
-      "title": "Code execution with MCP: Building more efficient agents",
-      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
-      "summary": "展示如何把 MCP 工具暴露成代码接口而不是把所有工具定义直接塞进上下文，属于 harness/tooling 层非常实用的最佳实践。",
-      "published_date": "2025-11-04",
       "source": "Anthropic Engineering",
       "added_from": "seed",
       "added_on": "2026-03-27"
@@ -74,20 +92,11 @@
       "added_on": "2026-03-27"
     },
     {
-      "title": "How OpenAI uses Codex",
-      "url": "https://openai.com/business/guides-and-resources/how-openai-uses-codex/",
-      "summary": "从 OpenAI 内部团队视角总结了 Codex 在代码理解、迁移、测试覆盖、性能优化和开发节奏管理中的最佳实践，适合作为 agentic coding 组织落地参考。",
-      "published_date": "2026-03-06",
-      "source": "OpenAI",
-      "added_from": "seed",
-      "added_on": "2026-03-27"
-    },
-    {
-      "title": "A New Era for Sourcegraph: The Intelligence Layer for AI Coding Agents and Developers",
-      "url": "https://sourcegraph.com/blog/a-new-era-for-sourcegraph-the-intelligence-layer-for-ai-coding-agents-and-developers",
-      "summary": "从大型代码库上下文供应角度讨论 AI coding agents 所需的 intelligence layer，覆盖跨仓库语义理解、历史上下文和 MCP 接入，是企业级 harness 基础设施的重要参考。",
-      "published_date": "2026-02-25",
-      "source": "Sourcegraph Blog",
+      "title": "Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "summary": "Anthropic 关于 workflow vs. agent 的经典文章，适合做 harness engineering 的总论，强调简单可组合模式、透明规划、工具接口设计和从最小系统开始迭代。",
+      "published_date": "2024-12-19",
+      "source": "Anthropic Research",
       "added_from": "seed",
       "added_on": "2026-03-27"
     }
