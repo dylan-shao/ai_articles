@@ -11,13 +11,15 @@
     "landing_url": "https://openai.com/index/",
     "allowed_domains": ["openai.com", "www.openai.com"],
     "allowed_path_prefixes": ["/index/", "/codex/"],
+    "excluded_path_prefixes": ["/index/openai-for-business/", "/index/consumer-apps/"],
     "priority": 1
   },
   {
     "name": "OpenAI Cookbook",
     "landing_url": "https://cookbook.openai.com/",
     "allowed_domains": ["cookbook.openai.com"],
-    "allowed_path_prefixes": ["/"],
+    "allowed_path_prefixes": ["/examples/"],
+    "excluded_path_prefixes": ["/api/", "/learn", "/community", "/showcase", "/blog", "/cookbook", "/apps-sdk", "/commerce"],
     "priority": 1
   },
   {

@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import warnings
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -15,8 +16,8 @@ from typing import Iterable
 from urllib.parse import urljoin, urlparse
 
 import requests
-from bs4 import BeautifulSoup
-from openai import OpenAI
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from openai import OpenAI, OpenAIError, RateLimitError
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +59,8 @@ Prefer 2-8 items. If the day is weak, return only the strong items.
 If no item is strong enough, set `full_digest_worthy` to false and keep at most 3 borderline items.
 """
 
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
 
 @dataclass
 class Candidate:
@@ -71,6 +74,74 @@ class Candidate:
     excerpt: str
     body_excerpt: str
     keyword_hits: int
+
+
+def fallback_item(candidate: Candidate) -> dict:
+    published = candidate.publish_date or "Unknown"
+    summary_zh = (
+        f"该候选来自 {candidate.source}，标题与摘要显示其与 AI coding / developer tooling 主题相关。"
+        "由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。"
+    )
+    summary_en = (
+        f"This candidate comes from {candidate.source} and appears relevant to AI coding or developer tooling."
+        " The cloud run did not complete model ranking, so it is being retained as a borderline item."
+    )
+    return {
+        "title": candidate.title,
+        "source": candidate.source,
+        "author": candidate.author or "",
+        "publish_date": published,
+        "url": candidate.url,
+        "summary_zh": summary_zh,
+        "summary_en": summary_en,
+        "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
+        "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+        "key_takeaways_zh": [
+            f"来源优先级: Tier {candidate.priority}",
+            f"关键词命中数: {candidate.keyword_hits}",
+        ],
+        "key_takeaways_en": [
+            f"Source priority: Tier {candidate.priority}",
+            f"Keyword hits: {candidate.keyword_hits}",
+        ],
+        "tags": ["fallback", "candidate-review"],
+        "signal_score": min(max(candidate.keyword_hits, 1), 5),
+        "novelty_score": 2,
+        "actionability_score": 2,
+    }
+
+
+def build_fallback_result(candidates: list[Candidate], today: str, error_message: str) -> dict:
+    shortlisted = sorted(
+        candidates,
+        key=lambda item: (item.priority, -(item.keyword_hits), item.publish_date or ""),
+    )[:3]
+    return {
+        "full_digest_worthy": False,
+        "generated_via_fallback": True,
+        "generation_error": error_message,
+        "executive_summary_zh": [
+            f"{today} 的云端日报抓取成功，但模型总结阶段失败。",
+            "本次产出使用降级模板，仅保留最相关的候选来源供人工快速浏览。",
+            "最常见原因是 API quota 不足、账单问题，或临时模型调用错误。",
+        ],
+        "executive_summary_en": [
+            f"The {today} cloud digest collected sources successfully but failed during model summarization.",
+            "This output uses a fallback template and keeps only the most relevant candidates for quick review.",
+            "The most common causes are insufficient API quota, billing issues, or transient model errors.",
+        ],
+        "items": [fallback_item(candidate) for candidate in shortlisted],
+        "top_items": [candidate.title for candidate in shortlisted[:3]],
+        "new_terms_zh": ["insufficient_quota", "fallback digest"],
+        "new_terms_en": ["insufficient_quota", "fallback digest"],
+        "themes_zh": ["云端调度正常，但模型额度不足会让总结阶段失败。", "需要把抓取与总结解耦，保证站点可持续更新。"],
+        "themes_en": ["Cloud scheduling can succeed even when model quota fails.", "Source collection and summarization should be decoupled so the site keeps updating."],
+        "implications_zh": ["为生产环境准备备用模型或降级路径。", "监控 API quota 和账单状态，避免整条流水线硬失败。"],
+        "implications_en": ["Prepare a backup model or fallback path for production.", "Monitor API quota and billing so the whole pipeline does not hard-fail."],
+        "reading_order": [candidate.url for candidate in shortlisted],
+        "what_to_ignore_zh": [f"本次完整总结未生成，原因: {error_message}"],
+        "what_to_ignore_en": [f"The full digest was not generated because: {error_message}"],
+    }
 
 
 def now_utc() -> datetime:
@@ -105,7 +176,10 @@ def allowed_link(url: str, source: dict) -> bool:
         return False
     if parsed.netloc not in source["allowed_domains"]:
         return False
-    return any(parsed.path.startswith(prefix) for prefix in source["allowed_path_prefixes"])
+    if not any(parsed.path.startswith(prefix) for prefix in source["allowed_path_prefixes"]):
+        return False
+    excluded_prefixes = source.get("excluded_path_prefixes", [])
+    return not any(parsed.path.startswith(prefix) for prefix in excluded_prefixes)
 
 
 def parse_publish_date(soup: BeautifulSoup, html: str) -> datetime | None:
@@ -171,15 +245,36 @@ def fetch(session: requests.Session, url: str) -> requests.Response:
     response = session.get(
         url,
         timeout=DEFAULT_TIMEOUT,
-        headers={"User-Agent": "ai-coding-digest-bot/1.0"},
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/136.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        },
     )
     response.raise_for_status()
     return response
 
 
+def make_soup(body: str, url: str, content_type: str | None = None) -> BeautifulSoup:
+    lower_type = (content_type or "").lower()
+    lower_url = url.lower()
+    parse_as_xml = (
+        "xml" in lower_type
+        or lower_url.endswith(".xml")
+        or lower_url.endswith(".rss")
+        or lower_url.endswith("/feed")
+    )
+    parser = "xml" if parse_as_xml else "html.parser"
+    return BeautifulSoup(body, parser)
+
+
 def extract_links(session: requests.Session, source: dict) -> list[str]:
-    html = fetch(session, source["landing_url"]).text
-    soup = BeautifulSoup(html, "html.parser")
+    response = fetch(session, source["landing_url"])
+    html = response.text
+    soup = make_soup(html, source["landing_url"], response.headers.get("Content-Type"))
     seen = set()
     links: list[str] = []
     for anchor in soup.find_all("a", href=True):
@@ -198,8 +293,9 @@ def extract_links(session: requests.Session, source: dict) -> list[str]:
 
 
 def extract_candidate(session: requests.Session, source: dict, article_url: str, since: datetime) -> Candidate | None:
-    html = fetch(session, article_url).text
-    soup = BeautifulSoup(html, "html.parser")
+    response = fetch(session, article_url)
+    html = response.text
+    soup = make_soup(html, article_url, response.headers.get("Content-Type"))
     title = clean_text(soup.title.get_text(" ", strip=True) if soup.title else "")
     if not title:
         h1 = soup.find("h1")
@@ -243,6 +339,7 @@ def collect_candidates(now: datetime) -> list[Candidate]:
     session = requests.Session()
     candidates: list[Candidate] = []
     for source in load_sources():
+        source_hits = 0
         try:
             links = extract_links(session, source)
         except requests.RequestException as exc:
@@ -256,6 +353,8 @@ def collect_candidates(now: datetime) -> list[Candidate]:
                 continue
             if candidate:
                 candidates.append(candidate)
+                source_hits += 1
+        print(f"[info] {source['name']}: kept {source_hits} candidates from {len(links)} links")
     deduped: dict[str, Candidate] = {}
     for item in candidates:
         deduped[item.url] = item
@@ -314,18 +413,23 @@ Candidates:
 def call_model(model: str, candidates: list[Candidate], today: str) -> dict:
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is required")
+        return build_fallback_result(candidates, today, "OPENAI_API_KEY is missing")
 
     client = OpenAI(api_key=api_key)
-    response = client.responses.create(
-        model=model,
-        input=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": build_user_prompt(candidates, today)},
-        ],
-    )
-    text = response.output_text.strip()
-    return json.loads(text)
+    try:
+        response = client.responses.create(
+            model=model,
+            input=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_user_prompt(candidates, today)},
+            ],
+        )
+        text = response.output_text.strip()
+        return json.loads(text)
+    except RateLimitError as exc:
+        return build_fallback_result(candidates, today, f"OpenAI quota error: {exc}")
+    except (OpenAIError, json.JSONDecodeError) as exc:
+        return build_fallback_result(candidates, today, f"Model generation error: {exc}")
 
 
 def render_item_markdown(item: dict, lang: str) -> str:
@@ -427,9 +531,13 @@ def main() -> int:
     ensure_dirs()
     today_dt = datetime.strptime(args.today, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     candidates = collect_candidates(today_dt)
+    print(f"[info] collected {len(candidates)} total candidates")
     if not candidates:
         raise RuntimeError("No candidates collected. Check source fetchers or network access.")
+    print(f"[info] generating digest with model {args.model}")
     result = call_model(args.model, candidates, args.today)
+    if result.get("generated_via_fallback"):
+        print(f"[warn] generated fallback digest: {result.get('generation_error', 'unknown error')}", file=sys.stderr)
     write_outputs(args.today, result, candidates)
     return 0
 

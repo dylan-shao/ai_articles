@@ -1,4 +1,4 @@
-# AI Coding Digest Pipeline1
+# AI Coding Digest Pipeline
 
 This repository contains a cloud-friendly scaffold for a daily AI coding digest:
 
