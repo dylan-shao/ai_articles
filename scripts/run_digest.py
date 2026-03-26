@@ -16,7 +16,7 @@ from typing import Iterable
 from urllib.parse import urljoin, urlparse
 
 import requests
-from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from bs4 import BeautifulSoup, FeatureNotFound, XMLParsedAsHTMLWarning
 from openai import OpenAI, OpenAIError, RateLimitError
 
 
@@ -267,8 +267,12 @@ def make_soup(body: str, url: str, content_type: str | None = None) -> Beautiful
         or lower_url.endswith(".rss")
         or lower_url.endswith("/feed")
     )
-    parser = "xml" if parse_as_xml else "html.parser"
-    return BeautifulSoup(body, parser)
+    if parse_as_xml:
+        try:
+            return BeautifulSoup(body, "xml")
+        except FeatureNotFound:
+            pass
+    return BeautifulSoup(body, "html.parser")
 
 
 def extract_links(session: requests.Session, source: dict) -> list[str]:
@@ -350,6 +354,9 @@ def collect_candidates(now: datetime) -> list[Candidate]:
                 candidate = extract_candidate(session, source, link, since)
             except requests.RequestException as exc:
                 print(f"[warn] failed to read article {link}: {exc}", file=sys.stderr)
+                continue
+            except Exception as exc:
+                print(f"[warn] failed to parse article {link}: {exc}", file=sys.stderr)
                 continue
             if candidate:
                 candidates.append(candidate)
