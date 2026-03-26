@@ -281,6 +281,18 @@ def extract_links(session: requests.Session, source: dict) -> list[str]:
     soup = make_soup(html, source["landing_url"], response.headers.get("Content-Type"))
     seen = set()
     links: list[str] = []
+    loc_tags = soup.find_all("loc")
+    if loc_tags:
+        for tag in loc_tags:
+            href = clean_text(tag.get_text(" ", strip=True))
+            href = href.split("#", 1)[0]
+            if not href or href in seen or not allowed_link(href, source):
+                continue
+            seen.add(href)
+            links.append(href)
+            if len(links) >= MAX_LINKS_PER_SOURCE:
+                break
+        return links
     for anchor in soup.find_all("a", href=True):
         href = urljoin(source["landing_url"], anchor["href"])
         href = href.split("#", 1)[0]

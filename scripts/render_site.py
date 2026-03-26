@@ -255,6 +255,12 @@ def sort_selected_items_markdown(text: str) -> str:
 
 
 def render_markdown(md_text: str) -> str:
+    md_text = re.sub(
+        r"(^-\s+URL:\s+)(https?://\S+)$",
+        r"\1[\2](\2)",
+        md_text,
+        flags=re.MULTILINE,
+    )
     return markdown.markdown(
         md_text,
         extensions=["extra", "sane_lists", "toc"],

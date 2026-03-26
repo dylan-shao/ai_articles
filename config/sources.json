@@ -8,7 +8,7 @@
   },
   {
     "name": "OpenAI Blog",
-    "landing_url": "https://openai.com/news/product-releases/",
+    "landing_url": "https://openai.com/sitemap.xml",
     "allowed_domains": ["openai.com", "www.openai.com"],
     "allowed_path_prefixes": ["/index/", "/news/"],
     "excluded_path_prefixes": ["/newsroom", "/news/rss.xml", "/index/openai-for-business/", "/index/consumer-apps/"],
