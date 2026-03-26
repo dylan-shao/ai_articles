@@ -7,49 +7,143 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f7f4ec;
-        --panel: #fffdf8;
-        --ink: #1f2328;
-        --muted: #55606e;
-        --accent: #9c3d10;
-        --line: #e6dcc9;
+        --bg: #f3efe6;
+        --panel: #fffdf7;
+        --sidebar: #f7f1e5;
+        --ink: #1d232b;
+        --muted: #606a78;
+        --accent: #9f3f14;
+        --accent-soft: #f5e4d8;
+        --line: #e3d6bf;
       }
+      * { box-sizing: border-box; }
       body {
         margin: 0;
         font-family: Georgia, "Times New Roman", serif;
-        background: radial-gradient(circle at top, #fffaf0 0%, var(--bg) 65%);
+        background:
+          radial-gradient(circle at top left, #fff9ef 0%, transparent 35%),
+          linear-gradient(180deg, #fbf6ed 0%, var(--bg) 100%);
         color: var(--ink);
       }
-      .wrap {
-        max-width: 880px;
-        margin: 0 auto;
-        padding: 32px 20px 64px;
-      }
-      .panel {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 28px;
-        box-shadow: 0 10px 30px rgba(55, 43, 22, 0.06);
-      }
       a { color: var(--accent); }
+      .wrap {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 24px 18px 48px;
+      }
       .nav {
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         color: var(--muted);
       }
       .nav a {
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 700;
       }
-      h1, h2, h3 { line-height: 1.2; }
-      ul, ol { padding-left: 1.25rem; }
-      code {
+      .layout {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .sidebar, .panel {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(58, 43, 21, 0.06);
+      }
+      .sidebar {
+        position: sticky;
+        top: 18px;
+        padding: 20px;
+        background: linear-gradient(180deg, #fbf5ea 0%, var(--sidebar) 100%);
+      }
+      .panel {
+        padding: 30px;
+        background: var(--panel);
+      }
+      .sidebar h2, .sidebar h3 {
+        margin: 0 0 12px;
+        line-height: 1.15;
+      }
+      .sidebar h2 {
+        font-size: 1.1rem;
+      }
+      .sidebar h3 {
+        margin-top: 22px;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar li + li {
+        margin-top: 8px;
+      }
+      .sidebar a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+      .sidebar a:hover {
+        background: rgba(159, 63, 20, 0.08);
+      }
+      .sidebar a.current {
+        background: var(--accent-soft);
+        font-weight: 700;
+      }
+      .lang-switch {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .lang-switch a {
+        text-align: center;
+        border: 1px solid var(--line);
+        background: #fffaf2;
+      }
+      .meta-note {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .panel h1, .panel h2, .panel h3 {
+        line-height: 1.2;
+      }
+      .panel h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+      .panel h2 {
+        margin-top: 2rem;
+        font-size: 1.35rem;
+      }
+      .panel ul, .panel ol {
+        padding-left: 1.25rem;
+      }
+      .panel code {
         background: #f4ecdf;
         border-radius: 4px;
         padding: 0.1em 0.3em;
+      }
+      .priority-note {
+        margin: -0.2rem 0 1.2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 900px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+        }
       }
     </style>
   </head>
@@ -61,87 +155,136 @@
         <a href="/latest.zh.html">中文</a>
         <a href="/latest.en.html">English</a>
       </div>
-      <div class="panel">
-        <h1 id="ai-coding-daily-digest-2026-03-26">AI Coding Daily Digest - 2026-03-26</h1>
+      <div class="layout">
+        <aside class="sidebar">
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='/latest.zh.html'>中文</a><a class="current" href='/latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='/latest.en.html'>Latest digest</a></li><li><a class='' href='/archive.html'>Archive index</a></li></ul><h3>History</h3><ul><li><a class='' href='/2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='/2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
+        </aside>
+        <main class="panel">
+          <h1 id="ai-coding-daily-digest-2026-03-26">AI Coding Daily Digest - 2026-03-26</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>The 2026-03-26 cloud digest collected sources successfully but failed during model summarization.</li>
-<li>This output uses a fallback template and keeps only the most relevant candidates for quick review.</li>
-<li>The most common causes are insufficient API quota, billing issues, or transient model errors.</li>
+<li>The strongest signal today is Anthropic’s quantification of infrastructure noise in agentic coding evals: runtime resources, time limits, and enforcement choices alone can shift benchmark scores by several points, enough to change leaderboard conclusions.</li>
+<li>A second high-value item is Claude Code auto mode, which introduces a classifier-based middle ground between full permission bypass and manual approval, showing that coding agents are moving from pure capability competition toward permission governance and misexecution prevention.</li>
+<li>Sourcegraph’s move to transition SCIP to community governance suggests code indexing and code graph protocols are becoming durable infrastructure layers rather than vendor-specific features.</li>
+<li>Two GitHub changelog items are still worth tracking for org adoption: usage metrics now identify active coding-agent users, and the Jira integration now pulls Confluence context via MCP, signaling productization of issue-driven development plus enterprise knowledge connectivity.</li>
 </ul>
-<h2 id="selected-items">Selected Items</h2>
-<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals-anthropic">Quantifying infrastructure noise in agentic coding evals \ Anthropic</h2>
+<h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
+<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
 <ul>
 <li>Source: Anthropic Engineering</li>
 <li>Author: N/A</li>
-<li>Publish date: Unknown</li>
+<li>Publish date: N/A</li>
 <li>URL: https://www.anthropic.com/engineering/infrastructure-noise</li>
 </ul>
-<p>This candidate comes from Anthropic Engineering and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.</p>
-<p>Why it matters: When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.</p>
+<p>Anthropic examines “infrastructure noise” in agentic coding benchmarks. Unlike static evals, benchmarks such as SWE-bench and Terminal-Bench make the runtime environment part of the task itself. Their internal experiments found that resource configuration alone produced roughly a 6-point swing on Terminal-Bench 2.0, exceeding the gap between many top models.</p>
+<p>Why it matters: This directly challenges how the industry interprets coding-agent leaderboards. If CPU, RAM, timeouts, container isolation, and execution policy are not strictly normalized, then many supposed model differences may actually be measuring harness design and infra budget. For teams responsible for evals, vendor selection, or internal platforms, this is the most important technical signal today.</p>
 <p>Key takeaways:
-- Source priority: Tier 1
-- Keyword hits: 6</p>
-<p>Tags: fallback, candidate-review
-Scores: signal 5/5, novelty 2/5, actionability 2/5</p>
-<h2 id="the-future-of-scip-sourcegraph-blog">The Future of SCIP | Sourcegraph Blog</h2>
+- Agentic coding evals are not pure model tests; the runtime environment changes task difficulty and solvability.
+- Documented resource recommendations are not enough for reproducibility; enforcement and execution consistency matter.
+- High-quality future benchmarks will need to treat infra config, scheduling, and failure taxonomy as first-class parts of the evaluation.</p>
+<p>Tags: agentic-coding, evals, benchmark-harness, reproducibility
+Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+<h2 id="claude-code-auto-mode-a-safer-way-to-skip-permissions">Claude Code auto mode: a safer way to skip permissions</h2>
+<ul>
+<li>Source: Anthropic Engineering</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-03-25T00:00:00+00:00</li>
+<li>URL: https://www.anthropic.com/engineering/claude-code-auto-mode</li>
+</ul>
+<p>Anthropic introduces Claude Code auto mode, aiming for a safer middle ground between prompting for every permission and fully bypassing approvals with dangerously-skip-permissions. The mode uses classifiers to automate some decisions, reducing approval fatigue while blocking higher-risk actions.</p>
+<p>Why it matters: As coding agents gain access to shells, git, networks, databases, and remote systems, permissioning becomes a core architectural problem, not just a UX detail. Anthropic’s disclosed incidents—deleting remote branches, leaking tokens, attempting production migrations—show that higher autonomy must be paired with risk classification, policy enforcement, and incident logging, not just stronger models.</p>
+<p>Key takeaways:
+- If 93% of permission prompts are approved anyway, manual approval alone quickly degrades into rote clicking.
+- A more viable path is classifier- and policy-based auto-approval for low-risk actions while reserving human attention for high-risk operations.
+- Teams deploying coding agents should prioritize permission modes, audit logs, and incident forensics design.</p>
+<p>Tags: agent-safety, permissions, developer-tooling, governance
+Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="the-future-of-scip">The Future of SCIP</h2>
 <ul>
 <li>Source: Sourcegraph Blog</li>
-<li>Author: N/A</li>
+<li>Author: Justin Dorfman; Michal Kielbowicz</li>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: https://sourcegraph.com/blog/the-future-of-scip</li>
 </ul>
-<p>This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.</p>
-<p>Why it matters: When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.</p>
+<p>Sourcegraph announced that SCIP will transition from a Sourcegraph-led project to an independently governed community project with open governance and a core steering committee. SCIP is a language-agnostic source-code indexing protocol used for code navigation such as go-to-definition and find-references.</p>
+<p>Why it matters: For AI coding, code understanding quality increasingly depends on durable indexing and semantic layers, not just chat UX. Community governance for SCIP suggests code graph, cross-repo search, and semantic navigation may become reusable ecosystem infrastructure rather than private vendor moats.</p>
 <p>Key takeaways:
-- Source priority: Tier 1
-- Keyword hits: 4</p>
-<p>Tags: fallback, candidate-review
-Scores: signal 4/5, novelty 2/5, actionability 2/5</p>
-<h2 id="sourcegraph-blog">Sourcegraph | Blog</h2>
+- Code indexing protocols are evolving from internal product capabilities into ecosystem-level building blocks.
+- Open governance improves the odds of shared code-understanding infrastructure across tools, platforms, agents, and MCP-connected systems.
+- If your platform depends on repo understanding, SCIP is worth tracking as an ecosystem layer rather than a single-vendor feature.</p>
+<p>Tags: SCIP, repo-understanding, code-intelligence, open-governance
+Scores: signal 8/5, novelty 7/5, actionability 7/5</p>
+<h2 id="github-copilot-for-jira-public-preview-enhancements">GitHub Copilot for Jira — Public preview enhancements</h2>
 <ul>
-<li>Source: Sourcegraph Blog</li>
+<li>Source: GitHub Changelog</li>
+<li>Author: Allison</li>
+<li>Publish date: 2026-03-25T00:00:00+00:00</li>
+<li>URL: https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements</li>
+</ul>
+<p>GitHub shipped enhancements to Copilot for Jira public preview, including better onboarding, model selection from Jira, automatic Jira ticket references in branch names and PR titles, and Confluence context via the Atlassian MCP server.</p>
+<p>Why it matters: The real significance is architectural, not cosmetic: issue tracking, code hosting, and knowledge bases are being connected into a closed-loop agent workflow through MCP. For larger organizations, that is closer to real software delivery than IDE-only assistance.</p>
+<p>Key takeaways:
+- MCP is moving from a protocol concept toward a practical enterprise knowledge connectivity layer.
+- Issue-driven coding agents are gaining stronger traceability across ticket, branch, PR, and documentation context.
+- If your org already runs Jira and Confluence, the next questions are permissions, context quality, and auditability rather than basic connectivity.</p>
+<p>Tags: GitHub-Copilot, Jira, MCP, org-adoption
+Scores: signal 7/5, novelty 7/5, actionability 8/5</p>
+<h2 id="copilot-usage-metrics-now-identify-active-copilot-coding-agent-users">Copilot usage metrics now identify active Copilot coding agent users</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
-<li>URL: https://sourcegraph.com/blog</li>
+<li>URL: https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users</li>
 </ul>
-<p>This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.</p>
-<p>Why it matters: When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.</p>
+<p>GitHub added a <code>used_copilot_coding_agent</code> field to Copilot usage metrics, allowing enterprise and org admins to identify active coding-agent users in daily and 28-day reports and distinguish them from IDE agent mode usage.</p>
+<p>Why it matters: This is a practical organizational adoption signal: enterprises are no longer only asking whether the model is good, but which teams, workflows, and surfaces are actually using coding agents. Without this layered telemetry, budget, governance, and ROI discussions remain blurry.</p>
 <p>Key takeaways:
-- Source priority: Tier 1
-- Keyword hits: 3</p>
-<p>Tags: fallback, candidate-review
-Scores: signal 3/5, novelty 2/5, actionability 2/5</p>
+- AI coding management is shifting from seat counts to workflow-, surface-, and behavior-level telemetry.
+- Separating IDE usage from coding-agent usage helps determine whether an org is still in augmentation mode or moving into autonomous execution.
+- Platform teams should establish their own adoption taxonomy early rather than rely only on vendor dashboards.</p>
+<p>Tags: metrics, org-adoption, GitHub-Copilot, governance
+Scores: signal 7/5, novelty 6/5, actionability 9/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals \ Anthropic</li>
-<li>The Future of SCIP | Sourcegraph Blog</li>
-<li>Sourcegraph | Blog</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Claude Code auto mode: a safer way to skip permissions</li>
+<li>The Future of SCIP</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>insufficient_quota</li>
-<li>fallback digest</li>
+<li>infrastructure noise</li>
+<li>auto mode</li>
+<li>used_copilot_coding_agent</li>
+<li>open governance for SCIP</li>
+<li>Atlassian MCP server</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>Cloud scheduling can succeed even when model quota fails.</li>
-<li>Source collection and summarization should be decoupled so the site keeps updating.</li>
+<li>Agentic coding evaluation is shifting from model comparison toward environment and harness comparison.</li>
+<li>Coding-agent products are entering a phase defined by permission governance, auditability, and risk tiering.</li>
+<li>Code-understanding infrastructure and knowledge-connection protocols are becoming platform layers and standards.</li>
+<li>Organizational adoption increasingly depends on finer-grained workflow telemetry.</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>Prepare a backup model or fallback path for production.</li>
-<li>Monitor API quota and billing so the whole pipeline does not hard-fail.</li>
+<li>If you run internal benchmarks, you need resource quotas, timeouts, container policy, and infra-failure taxonomy in the eval spec; otherwise results are not trustworthy.</li>
+<li>If you are rolling out coding agents, permission models and incident forensics will likely expose bottlenecks sooner than model selection alone.</li>
+<li>If you are building repo understanding or enterprise knowledge connectivity, prioritize interoperable protocols and open ecosystems over closed point features.</li>
+<li>Platform teams should segment adoption into IDE assistance, issue-driven agents, PR-driven agents, and external knowledge access.</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>https://www.anthropic.com/engineering/infrastructure-noise</li>
-<li>https://sourcegraph.com/blog/the-future-of-scip</li>
-<li>https://sourcegraph.com/blog</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Claude Code auto mode: a safer way to skip permissions</li>
+<li>The Future of SCIP</li>
+<li>GitHub Copilot for Jira — Public preview enhancements</li>
+<li>Copilot usage metrics now identify active Copilot coding agent users</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>The full digest was not generated because: OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</li>
+<li>Ignore GitHub index pages, tag archives, and aggregate changelog listings; they add no new technical substance.</li>
+<li>Items like disabling comments on individual commits are low relevance to the AI coding/platform theme.</li>
+<li>Generic product enhancements that only add UI or onboarding polish without architectural detail should be deprioritized.</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
@@ -159,6 +302,7 @@ Scores: signal 3/5, novelty 2/5, actionability 2/5</p>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 </ul>
+        </main>
       </div>
     </div>
   </body>

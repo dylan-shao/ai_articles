@@ -1,135 +1,227 @@
 {
-  "full_digest_worthy": false,
-  "generated_via_fallback": true,
-  "generation_error": "OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+  "full_digest_worthy": true,
   "executive_summary_zh": [
-    "2026-03-26 的云端日报抓取成功，但模型总结阶段失败。",
-    "本次产出使用降级模板，仅保留最相关的候选来源供人工快速浏览。",
-    "最常见原因是 API quota 不足、账单问题，或临时模型调用错误。"
+    "今天最强信号来自 Anthropic 对 agentic coding 评测基础设施噪声的量化研究：运行资源、限时与隔离策略本身就能带来数个百分点的分差，足以改变模型排行榜结论。",
+    "第二条高价值信息是 Claude Code 的 auto mode：它把“全跳过权限”和“每步人工批准”之间，新增了一个基于分类器与风险判断的中间层，反映出 coding agent 正从能力竞争转向权限治理与误操作抑制。",
+    "Sourcegraph 将 SCIP 转向社区治理，说明代码索引与代码图谱协议正在成为更长期的基础设施层，而不是单一厂商特性。",
+    "GitHub 的两条更新虽是 changelog，但对组织落地有现实意义：一是用 usage metrics 区分 coding agent 活跃用户，二是 Jira 集成开始通过 MCP 接入 Confluence 上下文，显示工单驱动开发与知识系统接线正在产品化。"
   ],
   "executive_summary_en": [
-    "The 2026-03-26 cloud digest collected sources successfully but failed during model summarization.",
-    "This output uses a fallback template and keeps only the most relevant candidates for quick review.",
-    "The most common causes are insufficient API quota, billing issues, or transient model errors."
+    "The strongest signal today is Anthropic’s quantification of infrastructure noise in agentic coding evals: runtime resources, time limits, and enforcement choices alone can shift benchmark scores by several points, enough to change leaderboard conclusions.",
+    "A second high-value item is Claude Code auto mode, which introduces a classifier-based middle ground between full permission bypass and manual approval, showing that coding agents are moving from pure capability competition toward permission governance and misexecution prevention.",
+    "Sourcegraph’s move to transition SCIP to community governance suggests code indexing and code graph protocols are becoming durable infrastructure layers rather than vendor-specific features.",
+    "Two GitHub changelog items are still worth tracking for org adoption: usage metrics now identify active coding-agent users, and the Jira integration now pulls Confluence context via MCP, signaling productization of issue-driven development plus enterprise knowledge connectivity."
   ],
   "items": [
     {
-      "title": "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+      "title": "Quantifying infrastructure noise in agentic coding evals",
       "source": "Anthropic Engineering",
       "author": "",
-      "publish_date": "Unknown",
+      "publish_date": "",
       "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-      "summary_zh": "该候选来自 Anthropic Engineering，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
-      "summary_en": "This candidate comes from Anthropic Engineering and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
-      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
-      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "summary_zh": "Anthropic 讨论了 agentic coding 基准测试中的“基础设施噪声”问题：与静态评测不同，SWE-bench、Terminal-Bench 这类评测把运行环境本身变成了解题过程的一部分。其内部实验显示，仅资源配置差异就在 Terminal-Bench 2.0 上造成约 6 个百分点的分差，超过很多模型榜单之间的差距。",
+      "summary_en": "Anthropic examines “infrastructure noise” in agentic coding benchmarks. Unlike static evals, benchmarks such as SWE-bench and Terminal-Bench make the runtime environment part of the task itself. Their internal experiments found that resource configuration alone produced roughly a 6-point swing on Terminal-Bench 2.0, exceeding the gap between many top models.",
+      "why_it_matters_zh": "这直接挑战了当前业界对 coding agent 排行榜的解读方式：如果 CPU、RAM、超时、容器隔离与执行策略没有被严格标准化，那么很多所谓“模型能力差异”其实可能是在测 harness 设计与基础设施预算。对负责评测、采购或内部平台建设的团队来说，这是今天最重要的技术信号。",
+      "why_it_matters_en": "This directly challenges how the industry interprets coding-agent leaderboards. If CPU, RAM, timeouts, container isolation, and execution policy are not strictly normalized, then many supposed model differences may actually be measuring harness design and infra budget. For teams responsible for evals, vendor selection, or internal platforms, this is the most important technical signal today.",
       "key_takeaways_zh": [
-        "来源优先级: Tier 1",
-        "关键词命中数: 6"
+        "Agentic coding 评测不是纯模型测验，运行环境本身会改变任务难度与可完成性。",
+        "资源规范“写在文档里”不等于评测结果可复现；真正关键的是统一执行与强制约束机制。",
+        "未来高质量 benchmark 需要把 infra 配置、调度与失败分类作为正式评测对象的一部分。"
       ],
       "key_takeaways_en": [
-        "Source priority: Tier 1",
-        "Keyword hits: 6"
+        "Agentic coding evals are not pure model tests; the runtime environment changes task difficulty and solvability.",
+        "Documented resource recommendations are not enough for reproducibility; enforcement and execution consistency matter.",
+        "High-quality future benchmarks will need to treat infra config, scheduling, and failure taxonomy as first-class parts of the evaluation."
       ],
       "tags": [
-        "fallback",
-        "candidate-review"
+        "agentic-coding",
+        "evals",
+        "benchmark-harness",
+        "reproducibility"
       ],
-      "signal_score": 5,
-      "novelty_score": 2,
-      "actionability_score": 2
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
     },
     {
-      "title": "The Future of SCIP | Sourcegraph Blog",
-      "source": "Sourcegraph Blog",
+      "title": "Claude Code auto mode: a safer way to skip permissions",
+      "source": "Anthropic Engineering",
       "author": "",
+      "publish_date": "2026-03-25T00:00:00+00:00",
+      "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "summary_zh": "Anthropic 介绍了 Claude Code 的 auto mode，目标是在“每次都弹权限确认”和“dangerously-skip-permissions 完全放开”之间找到更安全的自动化路径。该模式使用分类器自动处理部分请求，以减少批准疲劳，同时阻断高风险操作。",
+      "summary_en": "Anthropic introduces Claude Code auto mode, aiming for a safer middle ground between prompting for every permission and fully bypassing approvals with dangerously-skip-permissions. The mode uses classifiers to automate some decisions, reducing approval fatigue while blocking higher-risk actions.",
+      "why_it_matters_zh": "随着 coding agent 开始接触 shell、git、网络、数据库和远程系统，权限系统已经成为产品能力之外的核心架构问题。Anthropic 公开列举误删远端分支、泄露令牌、误触生产迁移等内部案例，说明“高自主”必须配合风险分级、策略执行与事件日志，而不仅是更强模型。",
+      "why_it_matters_en": "As coding agents gain access to shells, git, networks, databases, and remote systems, permissioning becomes a core architectural problem, not just a UX detail. Anthropic’s disclosed incidents—deleting remote branches, leaking tokens, attempting production migrations—show that higher autonomy must be paired with risk classification, policy enforcement, and incident logging, not just stronger models.",
+      "key_takeaways_zh": [
+        "93% 的权限提示最终都会被用户批准，说明纯人工确认会迅速退化为形式化点击。",
+        "更可行的方向是以分类器和策略层做低风险自动放行，把人工注意力保留给少数高风险动作。",
+        "组织在部署 coding agent 时应优先设计权限模式、审计日志和事故回溯链路。"
+      ],
+      "key_takeaways_en": [
+        "If 93% of permission prompts are approved anyway, manual approval alone quickly degrades into rote clicking.",
+        "A more viable path is classifier- and policy-based auto-approval for low-risk actions while reserving human attention for high-risk operations.",
+        "Teams deploying coding agents should prioritize permission modes, audit logs, and incident forensics design."
+      ],
+      "tags": [
+        "agent-safety",
+        "permissions",
+        "developer-tooling",
+        "governance"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "The Future of SCIP",
+      "source": "Sourcegraph Blog",
+      "author": "Justin Dorfman; Michal Kielbowicz",
       "publish_date": "2026-03-25T00:00:00+00:00",
       "url": "https://sourcegraph.com/blog/the-future-of-scip",
-      "summary_zh": "该候选来自 Sourcegraph Blog，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
-      "summary_en": "This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
-      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
-      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "summary_zh": "Sourcegraph 宣布将 SCIP 从 Sourcegraph 主导的项目转向独立、开放治理的社区项目，并计划建立核心指导委员会。SCIP 是一种语言无关的源代码索引协议，支撑跳转定义、引用查找等代码导航能力。",
+      "summary_en": "Sourcegraph announced that SCIP will transition from a Sourcegraph-led project to an independently governed community project with open governance and a core steering committee. SCIP is a language-agnostic source-code indexing protocol used for code navigation such as go-to-definition and find-references.",
+      "why_it_matters_zh": "对 AI coding 来说，代码理解质量越来越取决于稳定的索引与语义层，而不只是聊天界面。SCIP 的社区化意味着代码图谱、跨仓搜索、语义导航等能力更可能成为可复用的生态基础，而非某家平台的私有护城河。",
+      "why_it_matters_en": "For AI coding, code understanding quality increasingly depends on durable indexing and semantic layers, not just chat UX. Community governance for SCIP suggests code graph, cross-repo search, and semantic navigation may become reusable ecosystem infrastructure rather than private vendor moats.",
       "key_takeaways_zh": [
-        "来源优先级: Tier 1",
-        "关键词命中数: 4"
+        "代码索引协议正从产品内部能力演进为生态层标准组件。",
+        "开放治理有利于多工具、多平台共享代码理解基础设施，尤其适合 agent 和 MCP 场景。",
+        "如果你的平台依赖 repo understanding，值得跟踪 SCIP 生态而非只看单一供应商接口。"
       ],
       "key_takeaways_en": [
-        "Source priority: Tier 1",
-        "Keyword hits: 4"
+        "Code indexing protocols are evolving from internal product capabilities into ecosystem-level building blocks.",
+        "Open governance improves the odds of shared code-understanding infrastructure across tools, platforms, agents, and MCP-connected systems.",
+        "If your platform depends on repo understanding, SCIP is worth tracking as an ecosystem layer rather than a single-vendor feature."
       ],
       "tags": [
-        "fallback",
-        "candidate-review"
+        "SCIP",
+        "repo-understanding",
+        "code-intelligence",
+        "open-governance"
       ],
-      "signal_score": 4,
-      "novelty_score": 2,
-      "actionability_score": 2
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 7
     },
     {
-      "title": "Sourcegraph | Blog",
-      "source": "Sourcegraph Blog",
-      "author": "",
+      "title": "GitHub Copilot for Jira — Public preview enhancements",
+      "source": "GitHub Changelog",
+      "author": "Allison",
       "publish_date": "2026-03-25T00:00:00+00:00",
-      "url": "https://sourcegraph.com/blog",
-      "summary_zh": "该候选来自 Sourcegraph Blog，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
-      "summary_en": "This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
-      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
-      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "url": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
+      "summary_zh": "GitHub 更新了 Copilot for Jira 的公测功能，包括更好的接入指引、在 Jira 中选择模型、在 PR/分支名中自动带 Jira ticket 编号，以及通过 Atlassian MCP server 接入 Confluence 页面作为上下文。",
+      "summary_en": "GitHub shipped enhancements to Copilot for Jira public preview, including better onboarding, model selection from Jira, automatic Jira ticket references in branch names and PR titles, and Confluence context via the Atlassian MCP server.",
+      "why_it_matters_zh": "这条更新的真正价值不在功能点本身，而在架构方向：工单系统、代码托管与知识库开始通过 MCP 和 agent 工作流被串成闭环。对大型组织来说，这比单纯 IDE 内补全更接近真实的软件交付链路。",
+      "why_it_matters_en": "The real significance is architectural, not cosmetic: issue tracking, code hosting, and knowledge bases are being connected into a closed-loop agent workflow through MCP. For larger organizations, that is closer to real software delivery than IDE-only assistance.",
       "key_takeaways_zh": [
-        "来源优先级: Tier 1",
-        "关键词命中数: 3"
+        "MCP 正在从“工具协议概念”走向企业知识系统接线方式。",
+        "工单驱动的 coding agent 开始具备更完整的可追踪性：ticket、分支、PR 与文档上下文贯通。",
+        "如果团队已经有 Jira/Confluence，下一步重点是权限、上下文质量和审计，而不是是否能接。"
       ],
       "key_takeaways_en": [
-        "Source priority: Tier 1",
-        "Keyword hits: 3"
+        "MCP is moving from a protocol concept toward a practical enterprise knowledge connectivity layer.",
+        "Issue-driven coding agents are gaining stronger traceability across ticket, branch, PR, and documentation context.",
+        "If your org already runs Jira and Confluence, the next questions are permissions, context quality, and auditability rather than basic connectivity."
       ],
       "tags": [
-        "fallback",
-        "candidate-review"
+        "GitHub-Copilot",
+        "Jira",
+        "MCP",
+        "org-adoption"
       ],
-      "signal_score": 3,
-      "novelty_score": 2,
-      "actionability_score": 2
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 8
+    },
+    {
+      "title": "Copilot usage metrics now identify active Copilot coding agent users",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-03-25T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users",
+      "summary_zh": "GitHub 在 Copilot usage metrics 中新增了对 Copilot coding agent 活跃用户的识别字段 `used_copilot_coding_agent`，企业和组织管理员可在日报与 28 天报表中区分 IDE agent mode 与 issue/PR 驱动的 coding agent 使用情况。",
+      "summary_en": "GitHub added a `used_copilot_coding_agent` field to Copilot usage metrics, allowing enterprise and org admins to identify active coding-agent users in daily and 28-day reports and distinguish them from IDE agent mode usage.",
+      "why_it_matters_zh": "这是一条很务实的组织落地信号：企业已经不再只问“模型强不强”，而是要衡量哪些团队、哪些工作流、哪些接入面真正发生了 agent adoption。没有这种分层度量，预算、治理和 ROI 讨论都会失真。",
+      "why_it_matters_en": "This is a practical organizational adoption signal: enterprises are no longer only asking whether the model is good, but which teams, workflows, and surfaces are actually using coding agents. Without this layered telemetry, budget, governance, and ROI discussions remain blurry.",
+      "key_takeaways_zh": [
+        "AI coding 的管理面正在从 seat 统计转向按工作流、按入口、按行为分类的精细度量。",
+        "区分 IDE 用法与 coding agent 用法，有助于判断组织是在“补全增强”还是“自主执行”阶段。",
+        "平台团队应尽早建立自有 adoption taxonomy，而不是只看供应商默认报表。"
+      ],
+      "key_takeaways_en": [
+        "AI coding management is shifting from seat counts to workflow-, surface-, and behavior-level telemetry.",
+        "Separating IDE usage from coding-agent usage helps determine whether an org is still in augmentation mode or moving into autonomous execution.",
+        "Platform teams should establish their own adoption taxonomy early rather than rely only on vendor dashboards."
+      ],
+      "tags": [
+        "metrics",
+        "org-adoption",
+        "GitHub-Copilot",
+        "governance"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 9
     }
   ],
   "top_items": [
-    "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
-    "The Future of SCIP | Sourcegraph Blog",
-    "Sourcegraph | Blog"
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Claude Code auto mode: a safer way to skip permissions",
+    "The Future of SCIP"
   ],
   "new_terms_zh": [
-    "insufficient_quota",
-    "fallback digest"
+    "基础设施噪声（infrastructure noise）",
+    "Auto mode",
+    "used_copilot_coding_agent",
+    "开放治理的 SCIP",
+    "Atlassian MCP server"
   ],
   "new_terms_en": [
-    "insufficient_quota",
-    "fallback digest"
+    "infrastructure noise",
+    "auto mode",
+    "used_copilot_coding_agent",
+    "open governance for SCIP",
+    "Atlassian MCP server"
   ],
   "themes_zh": [
-    "云端调度正常，但模型额度不足会让总结阶段失败。",
-    "需要把抓取与总结解耦，保证站点可持续更新。"
+    "Agentic coding 评测开始从比模型转向比环境与 harness",
+    "Coding agent 产品进入权限治理、审计与风险分层阶段",
+    "代码理解基础设施与知识连接协议正在平台化、标准化",
+    "组织采用开始依赖更细颗粒度的工作流度量"
   ],
   "themes_en": [
-    "Cloud scheduling can succeed even when model quota fails.",
-    "Source collection and summarization should be decoupled so the site keeps updating."
+    "Agentic coding evaluation is shifting from model comparison toward environment and harness comparison.",
+    "Coding-agent products are entering a phase defined by permission governance, auditability, and risk tiering.",
+    "Code-understanding infrastructure and knowledge-connection protocols are becoming platform layers and standards.",
+    "Organizational adoption increasingly depends on finer-grained workflow telemetry."
   ],
   "implications_zh": [
-    "为生产环境准备备用模型或降级路径。",
-    "监控 API quota 和账单状态，避免整条流水线硬失败。"
+    "如果你在做内部 benchmark，必须把资源配额、timeout、容器策略和 infra 失败分类写入评测规范，否则结论不可信。",
+    "如果你在推进 coding agent 落地，权限模式与事故回溯会比更多模型切换更快暴露真实瓶颈。",
+    "如果你在建设 repo understanding 或企业知识接入，优先关注可互操作协议与开放生态，而不是封闭单点功能。",
+    "平台团队应把 adoption 监控拆成 IDE 辅助、issue 驱动 agent、PR 驱动 agent、外部知识调用等维度。"
   ],
   "implications_en": [
-    "Prepare a backup model or fallback path for production.",
-    "Monitor API quota and billing so the whole pipeline does not hard-fail."
+    "If you run internal benchmarks, you need resource quotas, timeouts, container policy, and infra-failure taxonomy in the eval spec; otherwise results are not trustworthy.",
+    "If you are rolling out coding agents, permission models and incident forensics will likely expose bottlenecks sooner than model selection alone.",
+    "If you are building repo understanding or enterprise knowledge connectivity, prioritize interoperable protocols and open ecosystems over closed point features.",
+    "Platform teams should segment adoption into IDE assistance, issue-driven agents, PR-driven agents, and external knowledge access."
   ],
   "reading_order": [
-    "https://www.anthropic.com/engineering/infrastructure-noise",
-    "https://sourcegraph.com/blog/the-future-of-scip",
-    "https://sourcegraph.com/blog"
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Claude Code auto mode: a safer way to skip permissions",
+    "The Future of SCIP",
+    "GitHub Copilot for Jira — Public preview enhancements",
+    "Copilot usage metrics now identify active Copilot coding agent users"
   ],
   "what_to_ignore_zh": [
-    "本次完整总结未生成，原因: OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    "GitHub 各种索引页、按标签归档页和总览页，本身没有新增技术信息。",
+    "Disable comments on individual commits 这类通用协作功能与 AI coding 主线相关性低。",
+    "泛化的产品增强如果只有 UI 或 onboarding 改进、缺少架构细节，可降级处理。"
   ],
   "what_to_ignore_en": [
-    "The full digest was not generated because: OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    "Ignore GitHub index pages, tag archives, and aggregate changelog listings; they add no new technical substance.",
+    "Items like disabling comments on individual commits are low relevance to the AI coding/platform theme.",
+    "Generic product enhancements that only add UI or onboarding polish without architectural detail should be deprioritized."
   ]
 }
