@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Anthropic Engineering",
+    "landing_url": "https://www.anthropic.com/engineering",
+    "allowed_domains": ["www.anthropic.com", "anthropic.com"],
+    "allowed_path_prefixes": ["/engineering/"],
+    "priority": 1
+  },
+  {
+    "name": "OpenAI Blog",
+    "landing_url": "https://openai.com/index/",
+    "allowed_domains": ["openai.com", "www.openai.com"],
+    "allowed_path_prefixes": ["/index/", "/codex/"],
+    "priority": 1
+  },
+  {
+    "name": "OpenAI Cookbook",
+    "landing_url": "https://cookbook.openai.com/",
+    "allowed_domains": ["cookbook.openai.com"],
+    "allowed_path_prefixes": ["/"],
+    "priority": 1
+  },
+  {
+    "name": "Sourcegraph Blog",
+    "landing_url": "https://sourcegraph.com/blog",
+    "allowed_domains": ["sourcegraph.com"],
+    "allowed_path_prefixes": ["/blog", "/changelog/"],
+    "priority": 1
+  },
+  {
+    "name": "GitHub Changelog",
+    "landing_url": "https://github.blog/changelog/",
+    "allowed_domains": ["github.blog"],
+    "allowed_path_prefixes": ["/changelog/"],
+    "priority": 2
+  }
+]
