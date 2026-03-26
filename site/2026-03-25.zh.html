@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-03-25.zh</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f4ec;
+        --panel: #fffdf8;
+        --ink: #1f2328;
+        --muted: #55606e;
+        --accent: #9c3d10;
+        --line: #e6dcc9;
+      }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background: radial-gradient(circle at top, #fffaf0 0%, var(--bg) 65%);
+        color: var(--ink);
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(55, 43, 22, 0.06);
+      }
+      a { color: var(--accent); }
+      .nav {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        color: var(--muted);
+      }
+      .nav a {
+        text-decoration: none;
+        font-weight: 600;
+      }
+      h1, h2, h3 { line-height: 1.2; }
+      ul, ol { padding-left: 1.25rem; }
+      code {
+        background: #f4ecdf;
+        border-radius: 4px;
+        padding: 0.1em 0.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="nav">
+        <a href="/index.html">Latest</a>
+        <a href="/archive.html">Archive</a>
+        <a href="/latest.zh.html">中文</a>
+        <a href="/latest.en.html">English</a>
+      </div>
+      <div class="panel">
+        <h1 id="ai-coding-daily-digest-2026-03-25">AI Coding Daily Digest - 2026-03-25</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>过去 24 小时里，真正达到高信号门槛的内容很少，主要集中在 Anthropic Engineering，且都非常贴近“如何把 AI coding 做成可复现、可扩展、可运营的工程系统”这个核心问题。今天最重要的信号不是新模型或新产品，而是两类更底层的工程认知：一类是长时运行 coding agent 的 harness 设计，另一类是 agentic coding eval 的基础设施噪声控制。前者说明，想把 agent 从“能写一点代码”推到“能连续数小时交付完整应用”，关键不只是模型本身，而是 planner / generator / evaluator 的结构化编排、context 管理与 QA 闭环。后者说明，很多 benchmark 分数差异未必来自模型能力，而可能只是容器资源、OOM 策略、时段延迟等 scaffold 差异。对工程团队而言，这两篇文章一起把讨论重心从“哪家模型更强”拉回到“你怎么搭系统、怎么测系统、怎么解释结果”。我额外检查了 OpenAI Developers Blog、OpenAI Cookbook、Sourcegraph 以及 GitHub 官方更新页；最近 24 小时内未发现同等质量、同等相关度的新内容。今天适合深读，数量不多，但密度很高。</p>
+<h2 id="selected-items">Selected Items</h2>
+<h3 id="1-harness-design-for-long-running-application-development">1. Harness design for long-running application development</h3>
+<ul>
+<li>Title: Harness design for long-running application development</li>
+<li>Source: Anthropic Engineering</li>
+<li>Author: Prithvi Rajasekaran</li>
+<li>Publish date: 2026-03-24</li>
+<li>URL: <a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">anthropic.com/engineering/harness-design-long-running-apps</a></li>
+</ul>
+<p><strong>Summary</strong><br />
+文章系统拆解了 Anthropic 如何把 agentic coding 从单代理、短会话，推进到可持续数小时的完整应用构建流程。核心做法是从早期的 initializer/coder 结构，发展到 planner / generator / evaluator 三代理架构，并在前端设计与全栈应用构建上都验证了“生成-评审”闭环的价值。文中还给出多个关键工程细节，包括 context reset vs. compaction、sprint contract、基于文件的 agent 间通信、以及 Playwright MCP 驱动的自动 QA。</p>
+<p><strong>Why it matters</strong><br />
+这是少见的、把长时自主 coding workflow 当成“系统设计问题”而非“prompt 技巧问题”来讲清楚的第一手工程文章。对任何想在组织内落地 AI coding 平台的人，这篇文章都比单纯看 benchmark 更有指导意义。</p>
+<p><strong>Key takeaways</strong>
+- 长任务性能的关键，不只是模型能力，而是 harness 是否把规划、实现、评估拆成稳定的职责边界。
+- <code>context reset</code> 和 <code>automatic compaction</code> 是两种不同策略，适用条件取决于模型在长上下文下的退化方式。
+- <code>evaluator</code> 不只是测 bug，还负责把“什么算完成”结构化为 sprint contract，从而降低 generator 偏航。
+- Playwright MCP + 明确评分标准，把原本主观的 UI/产品质量评估，变成可迭代优化的工程反馈回路。</p>
+<p><strong>Applicable tags</strong>
+- <code>agentic-coding</code>
+- <code>harness-design</code>
+- <code>multi-agent</code>
+- <code>context-engineering</code>
+- <code>qa-automation</code>
+- <code>mcp</code>
+- <code>long-running-workflows</code></p>
+<p><strong>Scores</strong>
+- Signal score: 5/5
+- Novelty score: 5/5
+- Actionability score: 5/5</p>
+<h3 id="2-quantifying-infrastructure-noise-in-agentic-coding-evals">2. Quantifying infrastructure noise in agentic coding evals</h3>
+<ul>
+<li>Title: Quantifying infrastructure noise in agentic coding evals</li>
+<li>Source: Anthropic Engineering</li>
+<li>Author: Gian Segato</li>
+<li>Publish date: 未显式标注；基于 2026-03-25 的 Anthropic Engineering 首页最新置顶位置推断为近 24 小时内发布</li>
+<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">anthropic.com/engineering/infrastructure-noise</a></li>
+</ul>
+<p><strong>Summary</strong><br />
+文章量化了 agentic coding eval 中一个经常被忽略的问题：基础设施配置本身会显著改变结果。Anthropic 在 Terminal-Bench 2.0 和 SWE-bench 上展示，CPU/RAM headroom、容器资源 enforcement 策略、以及运行时波动，都可能带来 1.5 到 6 个百分点的分数变化，足以覆盖 leaderboard 上很多“模型领先幅度”。作者因此建议把资源配置视为 eval 的一等实验变量，而不是隐含前提。</p>
+<p><strong>Why it matters</strong><br />
+这篇文章直接挑战了很多团队对 AI coding benchmark 的默认解读方式。对做模型选型、内部评测平台、或采购决策的人来说，它几乎等于在说：如果你不控制 scaffold，很多结论都不稳。</p>
+<p><strong>Key takeaways</strong>
+- 在 agentic coding eval 中，运行环境不是中性背景，而是问题求解过程的一部分。
+- 容器资源配置不应只给单一固定值，而应区分 guaranteed allocation 和 hard kill threshold。
+- 对 Terminal-Bench 2.0，约 <code>3x</code> headroom 能显著降低基础设施误差，同时把分数提升控制在统计噪声内。
+- 对公开 leaderboard，低于 3 个百分点的差距应默认持保留态度，直到资源配置与执行方法被充分披露。</p>
+<p><strong>Applicable tags</strong>
+- <code>coding-evals</code>
+- <code>swe-bench</code>
+- <code>terminal-bench</code>
+- <code>benchmarking</code>
+- <code>infra</code>
+- <code>reproducibility</code>
+- <code>scaffolding</code></p>
+<p><strong>Scores</strong>
+- Signal score: 5/5
+- Novelty score: 5/5
+- Actionability score: 4/5</p>
+<h2 id="top-3-items-today">Top 3 Items Today</h2>
+<p>今天只有 2 项达到门槛：</p>
+<ol>
+<li><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Harness design for long-running application development</a></li>
+<li><a href="https://www.anthropic.com/engineering/infrastructure-noise">Quantifying infrastructure noise in agentic coding evals</a></li>
+</ol>
+<h2 id="new-concepts-terms-worth-tracking">New Concepts / Terms Worth Tracking</h2>
+<ul>
+<li><code>Sprint contract</code></li>
+<li>在 generator 开工前，先由 generator 与 evaluator 对“本轮 done 的可验证定义”达成一致。</li>
+<li><code>Context anxiety</code></li>
+<li>模型接近自身感知的上下文极限时，会提前收尾或保守化；这不是简单 token 不够，而是行为模式变化。</li>
+<li><code>Resource headroom calibration</code></li>
+<li>通过校准 floor / ceiling 区间，尽量把 infra error 降下来，同时避免把 benchmark 变成“资源越多越高分”的另一种测试。</li>
+<li><code>Infrastructure noise</code></li>
+<li>不是泛泛的系统不稳定，而是足以系统性扭曲 agentic eval 结论的实验变量。</li>
+</ul>
+<h2 id="themes-across-the-day">Themes Across the Day</h2>
+<ul>
+<li>AI coding 的真正难点正在从“模型会不会写代码”转向“你如何设计长期运行系统与反馈环”。</li>
+<li>评测体系开始从 prompt/model 导向，转向 scaffold/infra 导向。</li>
+<li>QA、代码审查、产品验收这些传统软件工程环节，正在被重新编码为 agentic workflow 的显式组件。</li>
+<li>“可解释的工程过程”比单次 demo 成功更重要。</li>
+</ul>
+<h2 id="implications-for-engineering-teams">Implications for Engineering Teams</h2>
+<ul>
+<li>如果你在内部做 coding agent 平台，优先投资 harness，而不是过早押注某个单模型分数。</li>
+<li>如果你在做 eval 或模型选型，必须记录并控制 CPU/RAM、timeout、并发、sandbox 策略与运行时波动。</li>
+<li>如果你在推动团队采用 AI coding，最值得试验的不是“让 agent 一口气写完整仓库”，而是把 planner、implementer、reviewer、QA 拆开并定义交接物。</li>
+<li>如果你在衡量 ROI，应该把“长任务完成率、返工率、人工审查负担、infra 成本”放进同一套度量里。</li>
+</ul>
+<h2 id="recommended-follow-up-reading-order">Recommended Follow-up Reading Order</h2>
+<ol>
+<li>先读 <a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Harness design for long-running application development</a></li>
+<li>再读 <a href="https://www.anthropic.com/engineering/infrastructure-noise">Quantifying infrastructure noise in agentic coding evals</a></li>
+<li>然后回看 Anthropic 工程页上的历史文章作为背景：
+   - <a href="https://www.anthropic.com/engineering">Effective harnesses for long-running agents</a>
+   - <a href="https://www.anthropic.com/engineering">Effective context engineering for AI agents</a></li>
+<li>若要补充产品侧落地视角，再回补 GitHub Copilot 3 月上旬的 CLI / web repo exploration 更新页：<a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+</ol>
+<h2 id="what-to-ignore">What to Ignore</h2>
+<ul>
+<li>GitHub Copilot 3 月上旬的一批更新，如 CLI 发起 code review、web 端 repo exploration、JetBrains agent 改进，值得放进回补列表，但不属于“今天的新信号”。</li>
+<li>OpenAI Developers Blog、OpenAI Cookbook、Sourcegraph 官方页在最近 24 小时内未见满足本日报门槛的新发文，不必为了凑数纳入。</li>
+</ul>
+<p>Sources checked: <a href="https://www.anthropic.com/engineering">Anthropic Engineering</a>, <a href="https://github.blog/changelog/">GitHub Changelog</a>, <a href="https://sourcegraph.com/changelog/2026-03-02">Sourcegraph Changelog</a>, <a href="https://openai.com/index/">OpenAI Blog</a>, <a href="https://cookbook.openai.com/">OpenAI Cookbook</a></p>
+      </div>
+    </div>
+  </body>
+</html>
