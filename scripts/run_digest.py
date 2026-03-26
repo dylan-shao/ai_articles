@@ -25,6 +25,8 @@ CONFIG_PATH = ROOT / "config" / "sources.json"
 CONTENT_DIR = ROOT / "content"
 DATA_RAW_DIR = ROOT / "data" / "raw"
 DATA_PROCESSED_DIR = ROOT / "data" / "processed"
+DATA_COLLECTIONS_DIR = ROOT / "data" / "collections"
+HARNESS_LIBRARY_PATH = DATA_COLLECTIONS_DIR / "harness_articles.json"
 DEFAULT_TIMEOUT = 20
 MAX_LINKS_PER_SOURCE = 16
 MIN_KEYWORD_HITS = 2
@@ -48,6 +50,20 @@ KEYWORDS = [
     "cli",
     "ide",
     "tool use",
+]
+HARNESS_KEYWORDS = [
+    "harness",
+    "scaffold",
+    "scaffolding",
+    "long-running",
+    "context engineering",
+    "agent sdk",
+    "agentic coding",
+    "coding eval",
+    "eval infrastructure",
+    "mcp",
+    "tool use",
+    "multi-agent",
 ]
 
 SYSTEM_PROMPT = """You are an AI coding daily intelligence analyst.
@@ -157,7 +173,7 @@ def slug_date(dt: datetime) -> str:
 
 
 def ensure_dirs() -> None:
-    for directory in [CONTENT_DIR, DATA_RAW_DIR, DATA_PROCESSED_DIR]:
+    for directory in [CONTENT_DIR, DATA_RAW_DIR, DATA_PROCESSED_DIR, DATA_COLLECTIONS_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
 
 
@@ -533,6 +549,54 @@ def render_digest(result: dict, today: str, lang: str, candidates: list[Candidat
     return "\n".join(lines) + "\n"
 
 
+def is_harness_related(item: dict) -> bool:
+    text = " ".join(
+        [
+            item.get("title", ""),
+            item.get("summary_zh", ""),
+            item.get("summary_en", ""),
+            item.get("why_it_matters_zh", ""),
+            item.get("why_it_matters_en", ""),
+            " ".join(item.get("tags", [])),
+        ]
+    ).lower()
+    return any(keyword in text for keyword in HARNESS_KEYWORDS)
+
+
+def update_harness_library(today: str, result: dict) -> None:
+    if HARNESS_LIBRARY_PATH.exists():
+        payload = json.loads(HARNESS_LIBRARY_PATH.read_text())
+    else:
+        payload = {"updated_at": today, "items": []}
+
+    items = payload.get("items", [])
+    known_urls = {entry["url"] for entry in items}
+    additions = 0
+    for item in result.get("items", []):
+        if not is_harness_related(item):
+            continue
+        if item["url"] in known_urls:
+            continue
+        items.append(
+            {
+                "title": item["title"],
+                "url": item["url"],
+                "summary": item.get("summary_zh") or item.get("summary_en") or "",
+                "published_date": item.get("publish_date") or today,
+                "source": item.get("source") or "",
+                "added_from": "daily_digest",
+                "added_on": today,
+            }
+        )
+        known_urls.add(item["url"])
+        additions += 1
+
+    payload["updated_at"] = today
+    payload["items"] = sorted(items, key=lambda entry: entry.get("published_date", ""), reverse=True)
+    HARNESS_LIBRARY_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+    print(f"[info] harness library updated with {additions} new items")
+
+
 def write_outputs(today: str, result: dict, candidates: list[Candidate]) -> None:
     zh_body = render_digest(result, today, "zh", candidates)
     en_body = render_digest(result, today, "en", candidates)
@@ -547,6 +611,7 @@ def write_outputs(today: str, result: dict, candidates: list[Candidate]) -> None
     }
     for path, body in files.items():
         path.write_text(body)
+    update_harness_library(today, result)
 
 
 def main() -> int:

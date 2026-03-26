@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import json
 from pathlib import Path
 
 import markdown
@@ -11,6 +12,7 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_DIR = ROOT / "content"
 SITE_DIR = ROOT / "site"
+HARNESS_LIBRARY_PATH = ROOT / "data" / "collections" / "harness_articles.json"
 NON_ITEM_SECTIONS = {
     "Executive Summary",
     "Selected Items",
@@ -179,6 +181,7 @@ HTML_SHELL = """<!doctype html>
       <div class="nav">
         <a href="index.html">Latest</a>
         <a href="archive.html">Archive</a>
+        <a href="harness.html">Harness Library</a>
         <a href="latest.zh.html">中文</a>
         <a href="latest.en.html">English</a>
       </div>
@@ -203,6 +206,13 @@ def content_entries() -> list[str]:
             continue
         dates.append(path.stem.replace(".zh", ""))
     return dates
+
+
+def load_harness_items() -> list[dict]:
+    if not HARNESS_LIBRARY_PATH.exists():
+        return []
+    payload = json.loads(HARNESS_LIBRARY_PATH.read_text())
+    return sorted(payload.get("items", []), key=lambda entry: entry.get("published_date", ""), reverse=True)
 
 
 def score_tuple(block: list[str]) -> tuple[int, int, int]:
@@ -284,6 +294,7 @@ def build_sidebar(current_name: str, lang: str) -> str:
 
     latest_current = "current" if current_name in {"index.html", latest_link} else ""
     archive_current = "current" if current_name == "archive.html" else ""
+    harness_current = "current" if current_name == "harness.html" else ""
     return (
         "<h2>AI Coding Digest</h2>"
         "<div class='lang-switch'>"
@@ -294,6 +305,7 @@ def build_sidebar(current_name: str, lang: str) -> str:
         "<ul>"
         f"<li><a class='{latest_current}' href='{latest_link}'>Latest digest</a></li>"
         f"<li><a class='{archive_current}' href='archive.html'>Archive index</a></li>"
+        f"<li><a class='{harness_current}' href='harness.html'>Harness library</a></li>"
         "</ul>"
         "<h3>History</h3>"
         "<ul>"
@@ -316,6 +328,25 @@ def build_archive_index() -> str:
         + "".join(entries)
         + "</ul>"
     )
+
+
+def build_harness_page() -> str:
+    items = load_harness_items()
+    cards = []
+    for item in items:
+        cards.append(
+            "<article style='border:1px solid var(--line); border-radius:16px; padding:18px; margin:0 0 16px; background:#fffaf2;'>"
+            f"<h2 style='margin-top:0;'><a href='{item['url']}' target='_blank' rel='noopener noreferrer'>{item['title']}</a></h2>"
+            f"<p style='margin:0 0 8px; color:var(--muted);'>{item.get('published_date', 'Unknown')} · {item.get('source', 'Unknown source')}</p>"
+            f"<p style='margin:0 0 10px;'><strong>核心总结：</strong>{item.get('summary', '')}</p>"
+            f"<p style='margin:0;'><strong>链接：</strong><a href='{item['url']}' target='_blank' rel='noopener noreferrer'>{item['url']}</a></p>"
+            "</article>"
+        )
+    intro = (
+        "<h1>Harness Engineering Library</h1>"
+        "<p class='priority-note'>这一页汇总 harness engineering 相关的经典文章、最佳实践和高质量工程总结。首批内容来自历史高质量文章的人工 seed，后续每天 digest 命中相关条目时会自动补充进来。</p>"
+    )
+    return intro + "".join(cards)
 
 
 def render_markdown_page(input_path: Path, output_path: Path, lang: str) -> None:
@@ -358,6 +389,14 @@ def main() -> int:
             body=build_archive_index(),
             lang="zh",
             sidebar=build_sidebar("archive.html", "zh"),
+        )
+    )
+    (SITE_DIR / "harness.html").write_text(
+        HTML_SHELL.format(
+            title="Harness Library",
+            body=build_harness_page(),
+            lang="zh",
+            sidebar=build_sidebar("harness.html", "zh"),
         )
     )
     return 0
