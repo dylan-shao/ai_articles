@@ -1,0 +1,135 @@
+{
+  "full_digest_worthy": false,
+  "generated_via_fallback": true,
+  "generation_error": "OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+  "executive_summary_zh": [
+    "2026-03-26 的云端日报抓取成功，但模型总结阶段失败。",
+    "本次产出使用降级模板，仅保留最相关的候选来源供人工快速浏览。",
+    "最常见原因是 API quota 不足、账单问题，或临时模型调用错误。"
+  ],
+  "executive_summary_en": [
+    "The 2026-03-26 cloud digest collected sources successfully but failed during model summarization.",
+    "This output uses a fallback template and keeps only the most relevant candidates for quick review.",
+    "The most common causes are insufficient API quota, billing issues, or transient model errors."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "Unknown",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "该候选来自 Anthropic Engineering，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
+      "summary_en": "This candidate comes from Anthropic Engineering and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
+      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
+      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "key_takeaways_zh": [
+        "来源优先级: Tier 1",
+        "关键词命中数: 6"
+      ],
+      "key_takeaways_en": [
+        "Source priority: Tier 1",
+        "Keyword hits: 6"
+      ],
+      "tags": [
+        "fallback",
+        "candidate-review"
+      ],
+      "signal_score": 5,
+      "novelty_score": 2,
+      "actionability_score": 2
+    },
+    {
+      "title": "The Future of SCIP | Sourcegraph Blog",
+      "source": "Sourcegraph Blog",
+      "author": "",
+      "publish_date": "2026-03-25T00:00:00+00:00",
+      "url": "https://sourcegraph.com/blog/the-future-of-scip",
+      "summary_zh": "该候选来自 Sourcegraph Blog，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
+      "summary_en": "This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
+      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
+      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "key_takeaways_zh": [
+        "来源优先级: Tier 1",
+        "关键词命中数: 4"
+      ],
+      "key_takeaways_en": [
+        "Source priority: Tier 1",
+        "Keyword hits: 4"
+      ],
+      "tags": [
+        "fallback",
+        "candidate-review"
+      ],
+      "signal_score": 4,
+      "novelty_score": 2,
+      "actionability_score": 2
+    },
+    {
+      "title": "Sourcegraph | Blog",
+      "source": "Sourcegraph Blog",
+      "author": "",
+      "publish_date": "2026-03-25T00:00:00+00:00",
+      "url": "https://sourcegraph.com/blog",
+      "summary_zh": "该候选来自 Sourcegraph Blog，标题与摘要显示其与 AI coding / developer tooling 主题相关。由于本次云端运行未完成模型精排，这里保留为待人工确认的边缘项。",
+      "summary_en": "This candidate comes from Sourcegraph Blog and appears relevant to AI coding or developer tooling. The cloud run did not complete model ranking, so it is being retained as a borderline item.",
+      "why_it_matters_zh": "当模型调用失败时，它至少能保留今天抓到的高相关原始来源，避免整条流水线中断。",
+      "why_it_matters_en": "When the model call fails, this preserves the strongest raw sources instead of breaking the whole pipeline.",
+      "key_takeaways_zh": [
+        "来源优先级: Tier 1",
+        "关键词命中数: 3"
+      ],
+      "key_takeaways_en": [
+        "Source priority: Tier 1",
+        "Keyword hits: 3"
+      ],
+      "tags": [
+        "fallback",
+        "candidate-review"
+      ],
+      "signal_score": 3,
+      "novelty_score": 2,
+      "actionability_score": 2
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+    "The Future of SCIP | Sourcegraph Blog",
+    "Sourcegraph | Blog"
+  ],
+  "new_terms_zh": [
+    "insufficient_quota",
+    "fallback digest"
+  ],
+  "new_terms_en": [
+    "insufficient_quota",
+    "fallback digest"
+  ],
+  "themes_zh": [
+    "云端调度正常，但模型额度不足会让总结阶段失败。",
+    "需要把抓取与总结解耦，保证站点可持续更新。"
+  ],
+  "themes_en": [
+    "Cloud scheduling can succeed even when model quota fails.",
+    "Source collection and summarization should be decoupled so the site keeps updating."
+  ],
+  "implications_zh": [
+    "为生产环境准备备用模型或降级路径。",
+    "监控 API quota 和账单状态，避免整条流水线硬失败。"
+  ],
+  "implications_en": [
+    "Prepare a backup model or fallback path for production.",
+    "Monitor API quota and billing so the whole pipeline does not hard-fail."
+  ],
+  "reading_order": [
+    "https://www.anthropic.com/engineering/infrastructure-noise",
+    "https://sourcegraph.com/blog/the-future-of-scip",
+    "https://sourcegraph.com/blog"
+  ],
+  "what_to_ignore_zh": [
+    "本次完整总结未生成，原因: OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+  ],
+  "what_to_ignore_en": [
+    "The full digest was not generated because: OpenAI quota error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+  ]
+}
