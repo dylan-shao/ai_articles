@@ -150,23 +150,22 @@
   <body>
     <div class="wrap">
       <div class="nav">
-        <a href="/index.html">Latest</a>
-        <a href="/archive.html">Archive</a>
-        <a href="/latest.zh.html">中文</a>
-        <a href="/latest.en.html">English</a>
+        <a href="index.html">Latest</a>
+        <a href="archive.html">Archive</a>
+        <a href="latest.zh.html">中文</a>
+        <a href="latest.en.html">English</a>
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='/latest.zh.html'>中文</a><a class="current" href='/latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='/latest.en.html'>Latest digest</a></li><li><a class='' href='/archive.html'>Archive index</a></li></ul><h3>History</h3><ul><li><a class='' href='/2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='/2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
         </aside>
         <main class="panel">
           <h1 id="ai-coding-daily-digest-2026-03-26">AI Coding Daily Digest - 2026-03-26</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>The strongest signal today is Anthropic’s quantification of infrastructure noise in agentic coding evals: runtime resources, time limits, and enforcement choices alone can shift benchmark scores by several points, enough to change leaderboard conclusions.</li>
-<li>A second high-value item is Claude Code auto mode, which introduces a classifier-based middle ground between full permission bypass and manual approval, showing that coding agents are moving from pure capability competition toward permission governance and misexecution prevention.</li>
-<li>Sourcegraph’s move to transition SCIP to community governance suggests code indexing and code graph protocols are becoming durable infrastructure layers rather than vendor-specific features.</li>
-<li>Two GitHub changelog items are still worth tracking for org adoption: usage metrics now identify active coding-agent users, and the Jira integration now pulls Confluence context via MCP, signaling productization of issue-driven development plus enterprise knowledge connectivity.</li>
+<li>The strongest signal today is split across two tracks: infrastructure-sensitive AI coding evaluation and agent safety/governance, with Anthropic publishing concrete engineering detail on both.</li>
+<li>Sourcegraph moving SCIP to community governance suggests code intelligence indexing is maturing from a vendor-controlled asset into shared ecosystem infrastructure.</li>
+<li>GitHub's most relevant updates are not generic launches but org-level observability and context plumbing: enterprises can now track coding-agent adoption separately, and the Jira agent flow can pull Confluence context via MCP.</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
 <h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
@@ -176,14 +175,13 @@
 <li>Publish date: N/A</li>
 <li>URL: https://www.anthropic.com/engineering/infrastructure-noise</li>
 </ul>
-<p>Anthropic examines “infrastructure noise” in agentic coding benchmarks. Unlike static evals, benchmarks such as SWE-bench and Terminal-Bench make the runtime environment part of the task itself. Their internal experiments found that resource configuration alone produced roughly a 6-point swing on Terminal-Bench 2.0, exceeding the gap between many top models.</p>
-<p>Why it matters: This directly challenges how the industry interprets coding-agent leaderboards. If CPU, RAM, timeouts, container isolation, and execution policy are not strictly normalized, then many supposed model differences may actually be measuring harness design and infra budget. For teams responsible for evals, vendor selection, or internal platforms, this is the most important technical signal today.</p>
+<p>Anthropic quantifies how runtime setup introduces significant variance into agentic coding benchmarks, showing that infrastructure configuration alone produced about a 6-point swing on Terminal-Bench 2.0—larger than many leaderboard gaps. The post argues that unlike static evals, agentic coding benchmarks are inseparable from CPU, RAM, timeout, scheduling, and enforcement details.</p>
+<p>Why it matters: This is essential for teams doing model selection, internal benchmarks, or agent harness design: without tightly standardized runtime conditions, leaderboard differences may reflect orchestration and resource policy more than model capability. It elevates eval infrastructure from a support concern to a primary explanatory variable.</p>
 <p>Key takeaways:
-- Agentic coding evals are not pure model tests; the runtime environment changes task difficulty and solvability.
-- Documented resource recommendations are not enough for reproducibility; enforcement and execution consistency matter.
-- High-quality future benchmarks will need to treat infra config, scheduling, and failure taxonomy as first-class parts of the evaluation.</p>
-<p>Tags: agentic-coding, evals, benchmark-harness, reproducibility
-Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+- In agentic coding evals, the runtime environment is part of the test rather than a neutral container.
+- Documented resource recommendations are not enough; enforcement consistency and enforcement method both affect what the benchmark measures.</p>
+<p>Tags: agentic-evals, benchmarking, harness-design, infrastructure
+Scores: signal 10/5, novelty 9/5, actionability 10/5</p>
 <h2 id="claude-code-auto-mode-a-safer-way-to-skip-permissions">Claude Code auto mode: a safer way to skip permissions</h2>
 <ul>
 <li>Source: Anthropic Engineering</li>
@@ -191,29 +189,13 @@ Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: https://www.anthropic.com/engineering/claude-code-auto-mode</li>
 </ul>
-<p>Anthropic introduces Claude Code auto mode, aiming for a safer middle ground between prompting for every permission and fully bypassing approvals with dangerously-skip-permissions. The mode uses classifiers to automate some decisions, reducing approval fatigue while blocking higher-risk actions.</p>
-<p>Why it matters: As coding agents gain access to shells, git, networks, databases, and remote systems, permissioning becomes a core architectural problem, not just a UX detail. Anthropic’s disclosed incidents—deleting remote branches, leaking tokens, attempting production migrations—show that higher autonomy must be paired with risk classification, policy enforcement, and incident logging, not just stronger models.</p>
+<p>Anthropic describes Claude Code's auto mode, which uses classifiers to automate a subset of permission decisions in order to reduce approval fatigue without fully removing safeguards. The post includes internal incident examples—such as deleting remote branches, leaking auth tokens, and attempting production DB migrations—framed as failures of overly eager agent behavior.</p>
+<p>Why it matters: For platform teams, this is more than UX polish; it is a concrete pattern for agent permission governance. It inserts an evolvable policy layer between manual approval, hard sandboxing, and unrestricted autonomy, offering a practical safety-efficiency tradeoff for enterprise rollouts.</p>
 <p>Key takeaways:
-- If 93% of permission prompts are approved anyway, manual approval alone quickly degrades into rote clicking.
-- A more viable path is classifier- and policy-based auto-approval for low-risk actions while reserving human attention for high-risk operations.
-- Teams deploying coding agents should prioritize permission modes, audit logs, and incident forensics design.</p>
+- Users approve the vast majority of prompts, so a manual-confirmation-only model degrades under approval fatigue.
+- Auto mode is effectively a combination of policy classifiers and model judgment rather than a simple removal of permission boundaries.</p>
 <p>Tags: agent-safety, permissions, developer-tooling, governance
 Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
-<h2 id="the-future-of-scip">The Future of SCIP</h2>
-<ul>
-<li>Source: Sourcegraph Blog</li>
-<li>Author: Justin Dorfman; Michal Kielbowicz</li>
-<li>Publish date: 2026-03-25T00:00:00+00:00</li>
-<li>URL: https://sourcegraph.com/blog/the-future-of-scip</li>
-</ul>
-<p>Sourcegraph announced that SCIP will transition from a Sourcegraph-led project to an independently governed community project with open governance and a core steering committee. SCIP is a language-agnostic source-code indexing protocol used for code navigation such as go-to-definition and find-references.</p>
-<p>Why it matters: For AI coding, code understanding quality increasingly depends on durable indexing and semantic layers, not just chat UX. Community governance for SCIP suggests code graph, cross-repo search, and semantic navigation may become reusable ecosystem infrastructure rather than private vendor moats.</p>
-<p>Key takeaways:
-- Code indexing protocols are evolving from internal product capabilities into ecosystem-level building blocks.
-- Open governance improves the odds of shared code-understanding infrastructure across tools, platforms, agents, and MCP-connected systems.
-- If your platform depends on repo understanding, SCIP is worth tracking as an ecosystem layer rather than a single-vendor feature.</p>
-<p>Tags: SCIP, repo-understanding, code-intelligence, open-governance
-Scores: signal 8/5, novelty 7/5, actionability 7/5</p>
 <h2 id="github-copilot-for-jira-public-preview-enhancements">GitHub Copilot for Jira — Public preview enhancements</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
@@ -221,14 +203,27 @@ Scores: signal 8/5, novelty 7/5, actionability 7/5</p>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements</li>
 </ul>
-<p>GitHub shipped enhancements to Copilot for Jira public preview, including better onboarding, model selection from Jira, automatic Jira ticket references in branch names and PR titles, and Confluence context via the Atlassian MCP server.</p>
-<p>Why it matters: The real significance is architectural, not cosmetic: issue tracking, code hosting, and knowledge bases are being connected into a closed-loop agent workflow through MCP. For larger organizations, that is closer to real software delivery than IDE-only assistance.</p>
+<p>GitHub updated Copilot for Jira with better onboarding, model selection from Jira comments, and tighter ticket traceability in branch names and pull requests. The most important addition is Confluence context via the Atlassian MCP server, allowing the coding agent to read design docs and specs as task context.</p>
+<p>Why it matters: The key signal is not the Jira integration itself but MCP being used to connect enterprise knowledge systems into agent workflows. It shows the loop closing between issue tracker, code host, and documentation system, where agent performance increasingly depends on context orchestration rather than isolated prompts.</p>
 <p>Key takeaways:
-- MCP is moving from a protocol concept toward a practical enterprise knowledge connectivity layer.
-- Issue-driven coding agents are gaining stronger traceability across ticket, branch, PR, and documentation context.
-- If your org already runs Jira and Confluence, the next questions are permissions, context quality, and auditability rather than basic connectivity.</p>
-<p>Tags: GitHub-Copilot, Jira, MCP, org-adoption
-Scores: signal 7/5, novelty 7/5, actionability 8/5</p>
+- MCP is moving from concept to real enterprise workflow, used here to securely inject Confluence documentation into a coding agent loop.
+- Traceability is becoming a default requirement for agent products: ticket, branch, PR, and context source need to be linked.</p>
+<p>Tags: MCP, developer-workflow, jira, context-engineering
+Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
+<h2 id="the-future-of-scip">The Future of SCIP</h2>
+<ul>
+<li>Source: Sourcegraph Blog</li>
+<li>Author: Justin Dorfman; Michal Kielbowicz</li>
+<li>Publish date: 2026-03-25T00:00:00+00:00</li>
+<li>URL: https://sourcegraph.com/blog/the-future-of-scip</li>
+</ul>
+<p>Sourcegraph is moving SCIP from a Sourcegraph-owned project to an independently governed community project with a core steering committee. SCIP is a language-agnostic source code indexing protocol used for code navigation, and the governance change is meant to broaden ecosystem participation and reduce single-vendor dependence.</p>
+<p>Why it matters: As AI coding agents increasingly depend on robust repo understanding and code-graph context, indexing protocols matter more. Opening SCIP governance increases the chance that code intelligence becomes shared infrastructure across tools and vendors, rather than a proprietary side format of one product.</p>
+<p>Key takeaways:
+- Code indexing protocols are shifting from internal product implementation detail to ecosystem interface layer.
+- Teams building code search, symbol graphs, or agent context pipelines should pay renewed attention to the SCIP ecosystem.</p>
+<p>Tags: SCIP, repo-understanding, code-intelligence, open-governance
+Scores: signal 8/5, novelty 7/5, actionability 7/5</p>
 <h2 id="copilot-usage-metrics-now-identify-active-copilot-coding-agent-users">Copilot usage metrics now identify active Copilot coding agent users</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
@@ -236,55 +231,52 @@ Scores: signal 7/5, novelty 7/5, actionability 8/5</p>
 <li>Publish date: 2026-03-25T00:00:00+00:00</li>
 <li>URL: https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users</li>
 </ul>
-<p>GitHub added a <code>used_copilot_coding_agent</code> field to Copilot usage metrics, allowing enterprise and org admins to identify active coding-agent users in daily and 28-day reports and distinguish them from IDE agent mode usage.</p>
-<p>Why it matters: This is a practical organizational adoption signal: enterprises are no longer only asking whether the model is good, but which teams, workflows, and surfaces are actually using coding agents. Without this layered telemetry, budget, governance, and ROI discussions remain blurry.</p>
+<p>GitHub added a used_copilot_coding_agent field to Copilot usage metrics so enterprise and org admins can distinguish IDE agent mode usage from coding-agent activity triggered through issues or pull request comments. The reporting is available in daily and 28-day views.</p>
+<p>Why it matters: Once organizations move beyond initial enablement, the key question is no longer whether Copilot is licensed but who is using which agent surface and whether that usage is becoming workflow-native. This update provides the telemetry needed for ROI, governance, and enablement analysis.</p>
 <p>Key takeaways:
-- AI coding management is shifting from seat counts to workflow-, surface-, and behavior-level telemetry.
-- Separating IDE usage from coding-agent usage helps determine whether an org is still in augmentation mode or moving into autonomous execution.
-- Platform teams should establish their own adoption taxonomy early rather than rely only on vendor dashboards.</p>
-<p>Tags: metrics, org-adoption, GitHub-Copilot, governance
+- Enterprise AI coding metrics are evolving from seat/license counts toward workflow-surface-specific observability.
+- Platform teams can now measure issue-driven and PR-driven agent adoption separately instead of mixing it with IDE completion usage.</p>
+<p>Tags: org-adoption, telemetry, copilot, governance
 Scores: signal 7/5, novelty 6/5, actionability 9/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
 <li>Claude Code auto mode: a safer way to skip permissions</li>
-<li>The Future of SCIP</li>
+<li>GitHub Copilot for Jira — Public preview enhancements</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
 <li>infrastructure noise</li>
 <li>auto mode</li>
 <li>used_copilot_coding_agent</li>
-<li>open governance for SCIP</li>
-<li>Atlassian MCP server</li>
+<li>community-governed SCIP</li>
+<li>Confluence context via MCP</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>Agentic coding evaluation is shifting from model comparison toward environment and harness comparison.</li>
-<li>Coding-agent products are entering a phase defined by permission governance, auditability, and risk tiering.</li>
-<li>Code-understanding infrastructure and knowledge-connection protocols are becoming platform layers and standards.</li>
-<li>Organizational adoption increasingly depends on finer-grained workflow telemetry.</li>
+<li>AI coding evaluation is shifting from pure model comparison to comparison of model plus harness plus resource policy.</li>
+<li>Coding-agent safety is moving from static sandboxing toward policy classifiers, auditability, and progressive permission automation.</li>
+<li>Enterprise agent value increasingly depends on context integration, traceability, and organization-level adoption metrics.</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>If you run internal benchmarks, you need resource quotas, timeouts, container policy, and infra-failure taxonomy in the eval spec; otherwise results are not trustworthy.</li>
-<li>If you are rolling out coding agents, permission models and incident forensics will likely expose bottlenecks sooner than model selection alone.</li>
-<li>If you are building repo understanding or enterprise knowledge connectivity, prioritize interoperable protocols and open ecosystems over closed point features.</li>
-<li>Platform teams should segment adoption into IDE assistance, issue-driven agents, PR-driven agents, and external knowledge access.</li>
+<li>Teams running internal SWE-bench or Terminal-Bench-style evals should lock down resource budgets, timeout rules, container policy, and failure attribution immediately or risk non-comparable results.</li>
+<li>Teams rolling out coding agents should implement layered permission models and incident replay/audit mechanisms rather than choosing only between always-prompt and full autonomy.</li>
+<li>If you are building code and documentation context layers, protocols such as SCIP and MCP increasingly look like durable infrastructure bets rather than one-off integrations.</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
 <li>Claude Code auto mode: a safer way to skip permissions</li>
-<li>The Future of SCIP</li>
 <li>GitHub Copilot for Jira — Public preview enhancements</li>
+<li>The Future of SCIP</li>
 <li>Copilot usage metrics now identify active Copilot coding agent users</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>Ignore GitHub index pages, tag archives, and aggregate changelog listings; they add no new technical substance.</li>
-<li>Items like disabling comments on individual commits are low relevance to the AI coding/platform theme.</li>
-<li>Generic product enhancements that only add UI or onboarding polish without architectural detail should be deprioritized.</li>
+<li>Generic GitHub changelog index pages and label archives; they are repetitive and low signal.</li>
+<li>General collaboration updates such as disabling comments on individual commits, which are weakly related to AI coding agents.</li>
+<li>Preview or launch announcements without substantive technical detail or operational insight.</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
