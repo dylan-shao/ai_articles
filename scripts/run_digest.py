@@ -347,7 +347,15 @@ def collect_candidates(now: datetime) -> list[Candidate]:
         try:
             links = extract_links(session, source)
         except requests.RequestException as exc:
-            print(f"[warn] failed to read {source['name']}: {exc}", file=sys.stderr)
+            status_code = getattr(getattr(exc, "response", None), "status_code", None)
+            is_optional = source.get("optional", False)
+            if is_optional and status_code in {401, 403, 429}:
+                print(
+                    f"[info] skipped optional source {source['name']} due to HTTP {status_code}",
+                    file=sys.stderr,
+                )
+            else:
+                print(f"[warn] failed to read {source['name']}: {exc}", file=sys.stderr)
             continue
         for link in links:
             try:

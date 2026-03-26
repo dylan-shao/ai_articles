@@ -177,10 +177,10 @@ HTML_SHELL = """<!doctype html>
   <body>
     <div class="wrap">
       <div class="nav">
-        <a href="/index.html">Latest</a>
-        <a href="/archive.html">Archive</a>
-        <a href="/latest.zh.html">中文</a>
-        <a href="/latest.en.html">English</a>
+        <a href="index.html">Latest</a>
+        <a href="archive.html">Archive</a>
+        <a href="latest.zh.html">中文</a>
+        <a href="latest.en.html">English</a>
       </div>
       <div class="layout">
         <aside class="sidebar">
@@ -268,7 +268,7 @@ def build_sidebar(current_name: str, lang: str) -> str:
     for date in dates:
         target = f"{date}.{lang}.html"
         css_class = "current" if current_name == target else ""
-        archive_items.append(f"<li><a class='{css_class}' href='/{target}'>{date}</a></li>")
+        archive_items.append(f"<li><a class='{css_class}' href='{target}'>{date}</a></li>")
 
     zh_target = current_name.replace(".en.html", ".zh.html") if current_name.endswith(".en.html") else current_name
     en_target = current_name.replace(".zh.html", ".en.html") if current_name.endswith(".zh.html") else current_name
@@ -281,13 +281,13 @@ def build_sidebar(current_name: str, lang: str) -> str:
     return (
         "<h2>AI Coding Digest</h2>"
         "<div class='lang-switch'>"
-        f"<a class=\"{'current' if lang == 'zh' else ''}\" href='/{zh_target}'>中文</a>"
-        f"<a class=\"{'current' if lang == 'en' else ''}\" href='/{en_target}'>English</a>"
+        f"<a class=\"{'current' if lang == 'zh' else ''}\" href='{zh_target}'>中文</a>"
+        f"<a class=\"{'current' if lang == 'en' else ''}\" href='{en_target}'>English</a>"
         "</div>"
         "<h3>Views</h3>"
         "<ul>"
-        f"<li><a class='{latest_current}' href='/{latest_link}'>Latest digest</a></li>"
-        f"<li><a class='{archive_current}' href='/archive.html'>Archive index</a></li>"
+        f"<li><a class='{latest_current}' href='{latest_link}'>Latest digest</a></li>"
+        f"<li><a class='{archive_current}' href='archive.html'>Archive index</a></li>"
         "</ul>"
         "<h3>History</h3>"
         "<ul>"
@@ -301,7 +301,7 @@ def build_archive_index() -> str:
     entries = []
     for date in content_entries():
         entries.append(
-            f"<li><a href='/{date}.zh.html'>{date} 中文</a> · <a href='/{date}.en.html'>{date} English</a></li>"
+            f"<li><a href='{date}.zh.html'>{date} 中文</a> · <a href='{date}.en.html'>{date} English</a></li>"
         )
     return (
         "<h1>AI Coding Digest Archive</h1>"
