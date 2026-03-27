@@ -1,0 +1,225 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最强信号来自 Anthropic 对 agentic coding eval 基础设施噪声的量化：同一模型在不同资源配置下，Terminal-Bench 2.0 分数可相差 6 个百分点，足以颠覆当前 leaderboard 式比较。",
+    "第二个高价值主题是“代码搜索/仓库理解正在转向应急与治理工具”：Sourcegraph 用 Deep Search 追踪 LiteLLM 供应链投毒暴露面，展示了可复现的跨仓库依赖审计流程。",
+    "GitHub 继续把 coding agent 嵌入开发与项目管理主流程，包括 PR 冲突自动解决、Issues/Projects 中的 agent session 可视化，以及 Agentic Workflow 配置在 Actions run summary 中的可审计化。",
+    "对平台/工程负责人而言，重点不再是‘是否有 agent’，而是如何建立可比较的评测环境、可追踪的执行轨迹，以及面向安全事件的 repo-level 检索与批量修复能力。"
+  ],
+  "executive_summary_en": [
+    "The strongest signal today is Anthropic’s quantification of infrastructure noise in agentic coding evals: the same model can swing by 6 percentage points on Terminal-Bench 2.0 purely from runtime configuration, enough to invalidate leaderboard-style comparisons.",
+    "A second high-value theme is that code search/repo understanding is becoming an incident-response and governance tool: Sourcegraph used Deep Search to trace LiteLLM supply-chain exposure and showed a reproducible cross-repo dependency audit workflow.",
+    "GitHub continues embedding coding agents into core developer flow and project management, including PR conflict resolution, agent-session visibility in Issues/Projects, and better auditability of Agentic Workflow configs in Actions run summaries.",
+    "For backend/platform engineering leaders, the question is no longer whether agents exist, but how to build comparable eval environments, traceable execution surfaces, and repo-wide search/remediation capabilities for security incidents."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 说明了 agentic coding benchmark 与静态基准的根本差异：运行时环境本身就是能力测量的一部分。其内部实验显示，在 Terminal-Bench 2.0 上，仅基础设施资源与执行配置差异，就能带来 6 个百分点的成绩波动，且显著性达到 p < 0.01。",
+      "summary_en": "Anthropic argues that agentic coding benchmarks differ fundamentally from static benchmarks because the runtime environment is part of the task. In internal experiments on Terminal-Bench 2.0, infrastructure resources and execution configuration alone caused a 6-point score swing with statistical significance (p < 0.01).",
+      "why_it_matters_zh": "这是当前最重要的评测方法论信号之一。很多团队正用 SWE-bench、Terminal-Bench 一类结果来决定模型选型、预算和集成策略；如果 infra 设定本身足以超过模型间 leaderboard 差距，那么你需要把 benchmark harness、资源限额、超时策略和隔离方式视为一等公民，而不是把分数当作可直接比较的事实。",
+      "why_it_matters_en": "This is one of the most important evaluation-methodology signals right now. Many teams are using SWE-bench- and Terminal-Bench-style results to drive model selection, budget, and integration decisions; if infra setup alone can exceed leaderboard gaps, then benchmark harnesses, resource budgets, timeouts, and isolation policies must be treated as first-class variables rather than invisible defaults.",
+      "key_takeaways_zh": [
+        "Agentic coding eval 测到的不只是模型，还包括运行环境、资源约束和执行策略。",
+        "如果不强约束并记录 CPU/RAM/timeout/enforcement 方法，跨团队和跨供应商分数不可直接比较。",
+        "评测 harness 需要像生产系统一样可复现、可观测、可审计。"
+      ],
+      "key_takeaways_en": [
+        "Agentic coding evals measure not just the model, but also the runtime environment, resource limits, and execution policy.",
+        "Without strict control and logging of CPU/RAM/timeout/enforcement methodology, cross-team and cross-vendor scores are not directly comparable.",
+        "Benchmark harnesses need production-grade reproducibility, observability, and auditability."
+      ],
+      "tags": [
+        "agentic-evals",
+        "benchmark-harness",
+        "terminal-bench",
+        "reproducibility"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "Detecting supply chain attacks at scale with Deep Search",
+      "source": "Sourcegraph Blog",
+      "author": "Stephanie Jarmak, Travis Lyons",
+      "publish_date": "2026-03-26",
+      "url": "https://sourcegraph.com/blog/detecting-supply-chain-attacks-at-scale-with-deep-search",
+      "summary_zh": "Sourcegraph 用 LiteLLM 在 PyPI 的投毒事件做案例，展示如何借助 Deep Search 和 Code Search 快速判定哪些公开仓库受版本 pinning 保护，哪些仓库因未锁版本或使用范围约束而暴露风险，并给出可复用的检索与排查方法。",
+      "summary_en": "Using the poisoned LiteLLM releases on PyPI as a case study, Sourcegraph shows how Deep Search and Code Search can quickly identify which public repositories are protected by strict version pinning and which are exposed through unpinned or range-based dependencies, with a reproducible investigation workflow.",
+      "why_it_matters_zh": "这不是普通的产品宣传，而是一个高贴近现实的 repo understanding / code search 运维场景。对平台团队来说，AI 搜索能力的直接价值并不是‘问代码问题’，而是在供应链事件发生时做跨仓库暴露面分析、生成修复清单，并缩短从发现到处置的时间。",
+      "why_it_matters_en": "This is more than a product post; it is a realistic repo-understanding and code-search operations scenario. For platform teams, the immediate value of AI-assisted search is not just asking questions about code, but doing cross-repo exposure analysis during supply-chain incidents, generating remediation lists, and shrinking time-to-response.",
+      "key_takeaways_zh": [
+        "依赖 pinning 与范围约束的差异，在应急时会直接决定暴露面。",
+        "跨仓库语义搜索适合做快速 triage，而不是只依赖 SBOM 或单仓库 grep。",
+        "可复现的搜索查询与结果导出流程，应纳入安全事件响应手册。"
+      ],
+      "key_takeaways_en": [
+        "The difference between strict pinning and range-based dependency specs directly determines exposure during incidents.",
+        "Cross-repo semantic/code search is useful for rapid triage, not just SBOMs or per-repo grep.",
+        "Reproducible query and export workflows should become part of incident response playbooks."
+      ],
+      "tags": [
+        "repo-understanding",
+        "supply-chain-security",
+        "code-search",
+        "incident-response"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "Ask @copilot to resolve merge conflicts on pull requests",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-03-26",
+      "url": "https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests",
+      "summary_zh": "GitHub Copilot coding agent 现在可通过在 PR 评论中 @copilot 来自动合并主干并解决冲突。该 agent 在云端开发环境中执行修改、运行构建与测试，然后把结果推回 PR；同一机制也可用于修复 failing workflows、回应 review comments 和补充测试。",
+      "summary_en": "GitHub Copilot coding agent can now resolve PR merge conflicts by mentioning @copilot in a comment. The agent operates in its own cloud development environment, makes the changes, runs builds and tests, and pushes the result back; the same mechanism also supports fixing failing workflows, addressing review comments, and adding tests.",
+      "why_it_matters_zh": "这代表 agent 正从 IDE 内联建议走向‘可委派的异步开发执行单元’。对于工程管理与平台治理，这会带来新的控制面问题：谁能触发 agent、它在哪个环境运行、如何受仓库权限和审计约束，以及哪些自动化动作适合进入受保护分支流程。",
+      "why_it_matters_en": "This shows the shift from IDE-side suggestion tools to delegable asynchronous execution units. For engineering management and platform governance, that creates a new control plane: who can invoke the agent, where it runs, how it is constrained by repo permissions and auditability, and which automated actions are safe to introduce into protected-branch workflows.",
+      "key_takeaways_zh": [
+        "PR 评论正在变成 agent 的任务入口，开发协作界面与执行界面开始合并。",
+        "云端执行环境加上测试回归检查，是 agent 从建议走向落地修改的关键能力。",
+        "企业需要定义 agent 权限、触发策略和审计要求。"
+      ],
+      "key_takeaways_en": [
+        "PR comments are becoming a task-ingress surface for agents, merging collaboration UI with execution UI.",
+        "A cloud execution environment plus build/test validation is key to moving from suggestion to committed change.",
+        "Enterprises need explicit policies for agent permissions, invocation rules, and auditing."
+      ],
+      "tags": [
+        "github-copilot",
+        "coding-agent",
+        "pull-requests",
+        "workflow-automation"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 8
+    },
+    {
+      "title": "Agent activity in GitHub Issues and Projects",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-03-26",
+      "url": "https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects",
+      "summary_zh": "GitHub 在 Issues 和 Projects 中直接展示 coding agent 的 session 状态，包括 queued、working、waiting for review、completed，并允许从项目视图跳转到 session logs。该能力把 agent 工作流纳入任务计划与执行追踪的统一界面。",
+      "summary_en": "GitHub now surfaces coding-agent session states directly in Issues and Projects, including queued, working, waiting for review, and completed, with links into session logs. This integrates agent workflows into the same planning and execution-tracking surfaces used for human work.",
+      "why_it_matters_zh": "这是组织采用层面的关键信号：agent 不再只是个人工具，而是项目系统中的可观察工作实体。对于工程负责人，这意味着可以开始思考 agent WIP、队列状态、review handoff、失败重试和吞吐量等管理指标，以及如何把 agent 纳入现有 delivery governance。",
+      "why_it_matters_en": "This is an important organizational-adoption signal: agents are no longer just personal tools but observable work entities inside the project system. For engineering leaders, that means you can start thinking in terms of agent WIP, queue state, review handoff, retry/failure modes, and throughput, and how to incorporate agents into existing delivery governance.",
+      "key_takeaways_zh": [
+        "Agent session 正在被产品化为可管理、可追踪的工作项，而非隐形后台动作。",
+        "项目工具将逐步需要同时管理人类和 agent 的分工与状态。",
+        "session logs 将成为后续审计、复盘和评估的重要数据源。"
+      ],
+      "key_takeaways_en": [
+        "Agent sessions are being productized as manageable, trackable work items rather than hidden background actions.",
+        "Project tooling will increasingly need to manage both human and agent allocation/state.",
+        "Session logs are likely to become important inputs for audit, retrospectives, and evaluation."
+      ],
+      "tags": [
+        "organizational-adoption",
+        "agent-ops",
+        "github-projects",
+        "observability"
+      ],
+      "signal_score": 7,
+      "novelty_score": 8,
+      "actionability_score": 7
+    },
+    {
+      "title": "View Agentic Workflow configs in the Actions run summary",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-03-26",
+      "url": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
+      "summary_zh": "GitHub 现在允许在 Actions run summary 中直接查看 Agentic Workflow 的 markdown 配置，减少页面跳转，并显式展示某次运行使用的精确配置。",
+      "summary_en": "GitHub now shows Agentic Workflow markdown configs directly in the Actions run summary, reducing context switching and exposing the exact configuration used for a given run.",
+      "why_it_matters_zh": "虽然是小更新，但对 harness 设计与生产治理很关键。agent 系统的核心问题之一是‘这次到底按什么提示/规则/步骤执行的’；把配置固化到运行摘要中，等于提高了可复现性、审计性与事后归因能力。",
+      "why_it_matters_en": "While small, this matters for harness design and production governance. One core problem in agent systems is knowing exactly which prompt/rules/steps were used for a run; surfacing config in the run summary materially improves reproducibility, auditability, and postmortem attribution.",
+      "key_takeaways_zh": [
+        "Agent workflow 配置需要像 CI 配置一样成为可追踪工件。",
+        "运行摘要中暴露配置可降低排障和复盘成本。",
+        "这类细节是把 agent 自动化纳入合规与治理框架的基础。"
+      ],
+      "key_takeaways_en": [
+        "Agent workflow configuration needs to become a traceable artifact, like CI configuration.",
+        "Showing config in run summaries reduces debugging and retrospective overhead.",
+        "These details are foundational for bringing agent automation under compliance and governance controls."
+      ],
+      "tags": [
+        "agentic-workflows",
+        "actions",
+        "auditability",
+        "harness-design"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Detecting supply chain attacks at scale with Deep Search",
+    "Ask @copilot to resolve merge conflicts on pull requests"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）",
+    "Agent session",
+    "Agentic Workflow",
+    "云端开发执行环境"
+  ],
+  "new_terms_en": [
+    "infrastructure noise",
+    "agent session",
+    "Agentic Workflow",
+    "cloud-based development environment"
+  ],
+  "themes_zh": [
+    "Agentic coding eval 的可比性正在受到运行环境变量挑战",
+    "仓库理解与代码搜索正从开发辅助转向安全响应与治理",
+    "Coding agent 正嵌入 PR、Issue、Project、Actions 等主流程系统",
+    "可审计性与可复现性正在成为 agent 生产化的核心要求"
+  ],
+  "themes_en": [
+    "Comparability of agentic coding evals is being challenged by runtime-environment variance",
+    "Repo understanding and code search are moving from developer assistance into security response and governance",
+    "Coding agents are being embedded into PR, Issue, Project, and Actions system-of-work surfaces",
+    "Auditability and reproducibility are becoming core requirements for production agent adoption"
+  ],
+  "implications_zh": [
+    "若你在内部评估 coding agent，必须把资源配额、超时、沙箱与失败重试策略纳入 benchmark protocol，并保留完整运行元数据。",
+    "应建设跨仓库依赖与代码搜索能力，用于供应链事件 triage、风险定界与批量修复。",
+    "需要为 PR 驱动的 agent 执行定义明确的权限边界、触发入口、审计日志与人工 review gate。",
+    "项目管理系统将逐步需要同时跟踪 human work 与 agent work，团队指标体系也应随之更新。"
+  ],
+  "implications_en": [
+    "If you run internal coding-agent evaluations, resource budgets, timeouts, sandboxing, and retry policy must be part of the benchmark protocol, with full run metadata retained.",
+    "You should build cross-repo dependency and code-search capability for supply-chain triage, blast-radius analysis, and bulk remediation.",
+    "PR-driven agent execution needs explicit policy around permissions, invocation paths, audit logs, and human review gates.",
+    "Project management systems will increasingly need to track both human work and agent work, and team metrics should evolve accordingly."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "View Agentic Workflow configs in the Actions run summary",
+    "Ask @copilot to resolve merge conflicts on pull requests",
+    "Agent activity in GitHub Issues and Projects",
+    "Detecting supply chain attacks at scale with Deep Search"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub 上关于 Gemini 3 Pro deprecated 的公告，更多是模型目录维护，不具备高技术信号。",
+    "新的 pull requests dashboard 属于协作 UX 改进，对 AI coding/agent 基础设施价值有限。",
+    "候选列表中的通用 GitHub Changelog 索引页和归档页属于聚合入口，不应替代原始条目阅读。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub notice about Gemini 3 Pro deprecation is mostly model-catalog maintenance, not a high-signal technical item.",
+    "The new pull requests dashboard is primarily a collaboration UX update with limited relevance to AI coding or agent infrastructure.",
+    "Generic GitHub Changelog index/archive pages are aggregation surfaces and should not replace reading the original item pages."
+  ]
+}

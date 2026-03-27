@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-03-26",
+  "updated_at": "2026-03-27",
   "items": [
+    {
+      "title": "View Agentic Workflow configs in the Actions run summary",
+      "url": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
+      "summary": "GitHub 现在允许在 Actions run summary 中直接查看 Agentic Workflow 的 markdown 配置，减少页面跳转，并显式展示某次运行使用的精确配置。",
+      "published_date": "2026-03-26",
+      "source": "GitHub Changelog",
+      "added_from": "daily_digest",
+      "added_on": "2026-03-27"
+    },
     {
       "title": "GitHub Copilot for Jira — Public preview enhancements",
       "url": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
