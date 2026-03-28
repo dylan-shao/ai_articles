@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>latest.en</title>
+    <title>2026-03-28.zh</title>
     <style>
       :root {
         color-scheme: light;
@@ -158,15 +158,15 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-03-28.zh.html'>中文</a><a class="" href='2026-03-28.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
         </aside>
         <main class="panel">
           <h1 id="ai-coding-daily-digest-2026-03-28">AI Coding Daily Digest - 2026-03-28</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>Only one candidate is strong enough today, but it is highly relevant: infrastructure noise in agentic coding evaluations.</li>
-<li>Anthropic’s main finding is that runtime configuration and enforcement can shift benchmark scores by more than the gap separating top models on coding leaderboards.</li>
-<li>For engineering leaders, this means model evaluation, vendor comparison, and internal bake-offs need environment governance and harness discipline, not just prompt/model tuning.</li>
+<li>今天候选内容里只有一篇足够有技术含量的文章，主题聚焦在 agentic coding eval 的基础设施噪声，这对解读 SWE-bench、Terminal-Bench 一类榜单非常关键。</li>
+<li>Anthropic 给出的核心结论是：运行时资源配置与执行约束本身就会显著改变评测结果，分差甚至可能大于模型榜单上的领先差距。</li>
+<li>对工程负责人而言，这意味着在采购、选型、上线和内部横评中，必须把“评测环境治理”视为与模型能力同等重要的一层系统设计。 </li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
 <h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
@@ -176,12 +176,12 @@
 <li>Publish date: N/A</li>
 <li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
 </ul>
-<p>Anthropic examines a frequently overlooked variable in agentic coding benchmarks: infrastructure configuration. In internal Terminal-Bench 2.0 experiments, different resource setups and enforcement methods produced roughly a 6-point score swing, larger than the margin between many frontier models on public leaderboards. Because these evaluations let models write code, run tests, install dependencies, and iterate in a live environment, the runtime is part of the task itself rather than a neutral container; CPU, RAM, time limits, and enforcement mechanics materially change what is being measured.</p>
-<p>Why it matters: This piece challenges the default assumption that coding benchmark scores are clean measurements of model quality. For teams comparing models, agents, or internal stacks, any conclusion without a standardized harness, resource budget, and failure attribution policy may mostly reflect who benefits from a particular environment rather than who is genuinely better at software engineering tasks.</p>
+<p>Anthropic 讨论了 agentic coding benchmark 中常被忽略的一层变量：基础设施配置本身。文章指出，在 Terminal-Bench 2.0 的内部实验中，不同资源配置与执行方式可造成约 6 个百分点的成绩差异，已经超过许多前沿模型在榜单上的分差。由于这类评测要求模型在真实运行环境中写代码、跑测试、安装依赖并多轮迭代，运行时不再是被动容器，而是评测的一部分，因此 CPU、RAM、时限和资源 enforcement 方式都会改变“被测的到底是什么”。</p>
+<p>Why it matters: 这篇文章直接挑战了团队对 coding benchmark 分数的默认解读方式。对于在做模型选型、代理框架对比、CI 中自动评测或内部 coding agent 竞标的团队来说，如果没有统一且可复现的 harness、资源预算和失败归因机制，那么结论可能反映的是“谁更吃资源、谁更适应某种容器策略”，而不是谁真正更擅长软件工程任务。</p>
 <p>Key takeaways:
-- Unlike static benchmarks, agentic coding evals make the runtime environment part of the task, so infra is a first-class experimental variable.
-- Resource budgets and enforcement methodology can materially shift scores; without standardization, small model deltas are not trustworthy.
-- Eval design should specify CPU, RAM, timeout, retry policy, container isolation, and infra error attribution, or leaderboard-driven decisions may be misleading.</p>
+- Agentic coding eval 与静态 benchmark 不同，运行环境是任务的一部分，因此 infra 不是背景变量，而是核心实验条件。
+- 资源预算与 enforcement 方法会显著影响得分；若不统一，模型之间的细微分差缺乏可比性。
+- 评测设计应明确 CPU、RAM、超时、重试、容器隔离和 infra error 归因，否则 leaderboard 容易误导采购与部署决策。 </p>
 <p>Tags: agentic-coding, evaluation, benchmarking, harness-design, infrastructure, Terminal-Bench
 Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
 <h2 id="top-items">Top Items</h2>
@@ -190,22 +190,22 @@ Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>infrastructure noise</li>
-<li>resource enforcement methodology</li>
+<li>基础设施噪声（infrastructure noise）</li>
+<li>资源 enforcement 方法</li>
 <li>agentic coding eval</li>
-<li>infra error attribution</li>
+<li>infra error 归因</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>AI coding evaluation is shifting from pure model scoring to system-level measurement of model plus runtime plus execution policy.</li>
-<li>Benchmark comparability is increasingly constrained by harness standardization and resource governance, not just prompts and models.</li>
-<li>Engineering organizations should treat eval platforms as production-grade infrastructure.</li>
+<li>AI coding 评测正在从“模型打分”转向“模型+运行环境+执行策略”的系统评测。</li>
+<li>榜单可比性的瓶颈开始从 prompt 与模型本身，转移到 harness 标准化与资源治理。</li>
+<li>工程组织需要把 eval 平台当成生产级基础设施来建设。 </li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>If you run internal coding-agent bake-offs, freeze container images, CPU/RAM quotas, timeout and retry rules, and separately track infra failures.</li>
-<li>If you rely on public leaderboards for model selection, ask for runtime and enforcement details because score differences may not be operationally meaningful.</li>
-<li>If you design your own benchmark, make resource specs and enforcement mechanics part of the protocol and provide reproducible harness scripts.</li>
+<li>如果你在做内部 coding-agent bake-off，应冻结容器镜像、CPU/RAM 配额、timeout 与重试规则，并单独统计 infra failure。</li>
+<li>如果你依赖外部 leaderboard 做模型采购，应该追问运行环境与执行约束，否则分数差异可能不可操作。</li>
+<li>如果你在设计自家 benchmark，应把资源规格和 enforcement 机制写入协议，并提供可复现实验脚本。 </li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
@@ -213,8 +213,8 @@ Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>Do not interpret 1-3 point coding leaderboard gaps as clean evidence of superior model capability.</li>
-<li>Do not treat runtime environment details as implementation trivia; in agentic evals they are part of the experiment.</li>
+<li>不要把 coding leaderboard 上 1-3 个百分点的差距直接解读为模型能力领先。</li>
+<li>不要忽视 benchmark 运行环境细节；在 agentic eval 里它不是实现细节，而是实验变量。 </li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
