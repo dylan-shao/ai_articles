@@ -289,7 +289,7 @@ HTML_SHELL = """<!doctype html>
       }}
       .video-detail {{
         display: grid;
-        grid-template-columns: minmax(0, 7fr) minmax(320px, 3fr);
+        grid-template-columns: minmax(280px, 3fr) minmax(0, 7fr);
         gap: 22px;
         align-items: start;
       }}
@@ -312,6 +312,104 @@ HTML_SHELL = """<!doctype html>
         border: 0;
         border-radius: 14px;
         background: #000;
+      }}
+      .video-fallback {{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: min(70vh, 860px);
+        border-radius: 18px;
+        padding: 28px;
+        color: #fff;
+        background:
+          linear-gradient(180deg, rgba(10, 15, 25, 0.12) 0%, rgba(10, 15, 25, 0.9) 100%),
+          linear-gradient(135deg, #8f1d13 0%, #c33b1f 38%, #1f2735 100%);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        overflow: hidden;
+      }}
+      .video-fallback::before {{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(10, 15, 25, 0.08) 0%, rgba(10, 15, 25, 0.88) 100%),
+          var(--video-poster, none);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+        pointer-events: none;
+      }}
+      .video-fallback-content {{
+        position: relative;
+        z-index: 1;
+      }}
+      .video-fallback-kicker {{
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: 14px;
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.14);
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }}
+      .video-fallback h2 {{
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 3vw, 3.4rem);
+        color: #fff;
+      }}
+      .video-fallback p {{
+        max-width: 42rem;
+        margin: 0 0 18px;
+        color: rgba(255,255,255,0.88);
+      }}
+      .video-play-button {{
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        background: rgba(255,255,255,0.92);
+        color: #111827;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+      }}
+      .video-play-button:hover {{
+        transform: translateY(-1px);
+      }}
+      .video-actions {{
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }}
+      .video-action {{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }}
+      .video-action-primary {{
+        background: #fff;
+        color: #111827 !important;
+      }}
+      .video-action-secondary {{
+        background: rgba(255,255,255,0.12);
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,0.18);
       }}
       .video-summary-card h2 {{
         margin-top: 0;
@@ -487,16 +585,13 @@ HTML_SHELL = """<!doctype html>
 
         Array.prototype.slice.call(document.querySelectorAll("[data-jump-to]")).forEach(function (button) {{
           button.addEventListener("click", function () {{
-            var iframe = document.getElementById("video-player");
-            if (!iframe) {{
+            var jumpUrl = button.getAttribute("data-jump-url");
+            if (jumpUrl) {{
+              window.open(jumpUrl, "_blank", "noopener,noreferrer");
               return;
             }}
-            var base = iframe.getAttribute("data-base-src");
-            var seconds = parseInt(button.getAttribute("data-jump-to"), 10) || 0;
-            iframe.setAttribute("src", base + "&start=" + seconds + "&autoplay=1");
           }});
         }});
-
         setTheme(initialTheme);
       }})();
     </script>
@@ -728,9 +823,11 @@ def build_video_page(item: dict, lang: str) -> str:
     for highlight in video.get("highlights", []):
         title = highlight.get(f"title_{suffix}", "")
         summary = highlight.get(f"summary_{suffix}", "")
+        jump_url = f"{video.get('youtube_url', '')}&t={highlight.get('start_seconds', 0)}s"
         highlights_html.append(
             "<button class='video-highlight' type='button' "
-            f"data-jump-to='{highlight.get('start_seconds', 0)}'>"
+            f"data-jump-to='{highlight.get('start_seconds', 0)}' "
+            f"data-jump-url='{jump_url}'>"
             f"<span class='video-timecode'>{highlight.get('timecode', '0:00')}</span>"
             f"<strong>{title}</strong>"
             f"<p>{summary}</p>"
@@ -739,9 +836,15 @@ def build_video_page(item: dict, lang: str) -> str:
     article_label = "原文链接" if lang == "zh" else "Article link"
     video_label = "YouTube 链接" if lang == "zh" else "YouTube link"
     page_title = item.get("title", "Video summary")
-    base_embed_url = video.get("embed_url", "")
-    if "youtube.com/embed/" in base_embed_url:
-        base_embed_url = base_embed_url.replace("https://www.youtube.com/embed/", "https://www.youtube-nocookie.com/embed/")
+    open_label = "在 YouTube 中打开视频" if lang == "zh" else "Open on YouTube"
+    article_open_label = "查看原文" if lang == "zh" else "Open article"
+    play_label = "在页面内播放" if lang == "zh" else "Play in page"
+    play_hint = (
+        "由于当前视频在页面内嵌播放不稳定，这里改为稳定方案：保留封面和结构化重点，播放统一跳转到 YouTube。"
+        if lang == "zh"
+        else "Inline playback is unreliable for this video in the current environment, so this page keeps the poster and structured highlights while opening playback on YouTube."
+    )
+    poster_url = f"https://i.ytimg.com/vi/{video.get('video_id', '')}/maxresdefault.jpg"
     return (
         f"<h1>{page_title}</h1>"
         "<p class='priority-note'>"
@@ -756,10 +859,22 @@ def build_video_page(item: dict, lang: str) -> str:
         + "</p>"
         "<div class='video-detail'>"
         "<section class='video-player-card'>"
-        f"<iframe id='video-player' class='video-embed' src='{base_embed_url}' "
-        f"data-base-src='{base_embed_url}' "
-        "title='YouTube video player' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' "
-        "allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
+        f"<div class='video-fallback' style=\"--video-poster:url('{poster_url}');\">"
+        f"<a class='video-play-button' href='{video.get('youtube_url', '')}' target='_blank' rel='noopener noreferrer'><span aria-hidden='true'>▶</span>{play_label}</a>"
+        "<div class='video-fallback-content'>"
+        f"<span class='video-fallback-kicker'>{'YouTube Companion' if lang == 'en' else 'YouTube 伴随页'}</span>"
+        f"<h2>{page_title}</h2>"
+        + (
+            f"<p>{play_hint}</p>"
+            if lang == "en"
+            else f"<p>{play_hint}</p>"
+        )
+        + "<div class='video-actions'>"
+        + f"<a class='video-action video-action-primary' href='{video.get('youtube_url', '')}' target='_blank' rel='noopener noreferrer'>{open_label}</a>"
+        + f"<a class='video-action video-action-secondary' href='{item.get('url', '')}' target='_blank' rel='noopener noreferrer'>{article_open_label}</a>"
+        + "</div>"
+        + "</div>"
+        + "</div>"
         f"<p class='video-source-link'>{article_label}: <a href='{item.get('url', '')}' target='_blank' rel='noopener noreferrer'>{item.get('url', '')}</a><br />"
         f"{video_label}: <a href='{video.get('youtube_url', '')}' target='_blank' rel='noopener noreferrer'>{video.get('youtube_url', '')}</a></p>"
         "</section>"
