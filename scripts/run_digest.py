@@ -161,6 +161,35 @@ def build_fallback_result(candidates: list[Candidate], today: str, error_message
     }
 
 
+def build_empty_day_result(today: str, reason: str) -> dict:
+    return {
+        "full_digest_worthy": False,
+        "generated_via_empty_day": True,
+        "generation_reason": reason,
+        "executive_summary_zh": [
+            f"{today} 没有新增的高信号候选进入日报。",
+            "这通常意味着来源站点当天没有足够相关的新文章，或者候选都被最近几天的跨天去重规则过滤掉了。",
+            "流水线本次会继续产出站点文件，但保留为空日报而不是直接失败。",
+        ],
+        "executive_summary_en": [
+            f"No new high-signal candidates made it into the digest for {today}.",
+            "This usually means the source set did not publish sufficiently relevant new articles, or every candidate was filtered by recent cross-day dedupe.",
+            "The pipeline will still publish site artifacts for the day instead of failing the run.",
+        ],
+        "items": [],
+        "top_items": [],
+        "new_terms_zh": ["空日报", "跨天去重"],
+        "new_terms_en": ["empty digest", "cross-day dedupe"],
+        "themes_zh": ["低信号日期应该稳定产出，而不是让自动化流程报错。", "跨天去重需要和空日报策略一起工作，避免重复内容与任务失败同时出现。"],
+        "themes_en": ["Low-signal days should still produce a stable artifact instead of failing automation.", "Cross-day dedupe should work together with an empty-digest path so duplicate suppression does not break the job."],
+        "implications_zh": ["站点与归档会继续按日更新，即使当天没有新内容。", "后续如需更激进的策略，可以把被去重文章单独标记为“昨日已覆盖”。"],
+        "implications_en": ["The site and archive can keep updating daily even when there is no new content.", "If needed, we can later add an explicit 'already covered recently' note for deduped articles."],
+        "reading_order": [],
+        "what_to_ignore_zh": [reason],
+        "what_to_ignore_en": [reason],
+    }
+
+
 def now_utc() -> datetime:
     return datetime.now(timezone.utc)
 
@@ -654,7 +683,10 @@ def main() -> int:
     candidates = collect_candidates(today_dt, args.today)
     print(f"[info] collected {len(candidates)} total candidates")
     if not candidates:
-        raise RuntimeError("No candidates collected. Check source fetchers or network access.")
+        reason = "No new candidates survived collection after source filtering and recent-digest dedupe."
+        print(f"[warn] {reason}", file=sys.stderr)
+        write_outputs(args.today, build_empty_day_result(args.today, reason), candidates)
+        return 0
     print(f"[info] generating digest with model {args.model}")
     result = call_model(args.model, candidates, args.today)
     if result.get("generated_via_fallback"):
