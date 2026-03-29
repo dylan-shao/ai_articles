@@ -7,11 +7,13 @@ import json
 from pathlib import Path
 
 import markdown
+from bs4 import BeautifulSoup
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_DIR = ROOT / "content"
 SITE_DIR = ROOT / "site"
+DATA_PROCESSED_DIR = ROOT / "data" / "processed"
 HARNESS_LIBRARY_PATH = ROOT / "data" / "collections" / "harness_articles.json"
 NON_ITEM_SECTIONS = {
     "Executive Summary",
@@ -116,6 +118,24 @@ HTML_SHELL = """<!doctype html>
         transition: background 220ms ease, color 220ms ease;
       }}
       a {{ color: var(--accent); }}
+      .video-icon-link {{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-left: 0.45rem;
+        border-radius: 999px;
+        background: #ff0033;
+        color: #fff !important;
+        text-decoration: none;
+        vertical-align: middle;
+        box-shadow: 0 8px 18px rgba(255, 0, 51, 0.18);
+      }}
+      .video-icon-link:hover {{
+        transform: translateY(-1px);
+        filter: brightness(1.03);
+      }}
       .wrap {{
         max-width: 1220px;
         margin: 0 auto;
@@ -169,6 +189,15 @@ HTML_SHELL = """<!doctype html>
         grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
         gap: 18px;
         align-items: start;
+      }}
+      body.page-video .wrap {{
+        max-width: min(1680px, 100vw);
+      }}
+      body.page-video .layout {{
+        grid-template-columns: 1fr;
+      }}
+      body.page-video .sidebar {{
+        display: none;
       }}
       .sidebar, .panel {{
         border: 1px solid var(--line);
@@ -258,6 +287,68 @@ HTML_SHELL = """<!doctype html>
         border-radius: 4px;
         padding: 0.1em 0.3em;
       }}
+      .video-detail {{
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(320px, 3fr);
+        gap: 22px;
+        align-items: start;
+      }}
+      .video-player-card, .video-summary-card {{
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--chip-bg);
+        padding: 18px;
+      }}
+      body.page-video .panel {{
+        padding: 22px;
+      }}
+      body.page-video .video-player-card,
+      body.page-video .video-summary-card {{
+        min-height: calc(100vh - 160px);
+      }}
+      .video-embed {{
+        width: 100%;
+        height: min(70vh, 860px);
+        border: 0;
+        border-radius: 14px;
+        background: #000;
+      }}
+      .video-summary-card h2 {{
+        margin-top: 0;
+      }}
+      .video-overview {{
+        margin-bottom: 18px;
+        color: var(--ink);
+      }}
+      .video-highlights {{
+        display: grid;
+        gap: 12px;
+      }}
+      .video-highlight {{
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        color: var(--ink);
+        padding: 14px 16px;
+        cursor: pointer;
+      }}
+      .video-highlight:hover {{
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }}
+      .video-timecode {{
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 700;
+        color: var(--accent);
+      }}
+      .video-source-link {{
+        margin-top: 12px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }}
       .panel p, .panel li {{
         font-size: 1.02rem;
         line-height: 1.72;
@@ -320,6 +411,9 @@ HTML_SHELL = """<!doctype html>
         .layout {{
           grid-template-columns: 1fr;
         }}
+        .video-detail {{
+          grid-template-columns: 1fr;
+        }}
         .sidebar {{
           position: static;
         }}
@@ -332,7 +426,7 @@ HTML_SHELL = """<!doctype html>
       }}
     </style>
   </head>
-  <body data-theme="classic">
+  <body class="{body_class}" data-theme="classic">
     <div class="wrap">
       <div class="nav">
         <div class="nav-links">
@@ -391,6 +485,18 @@ HTML_SHELL = """<!doctype html>
           }});
         }});
 
+        Array.prototype.slice.call(document.querySelectorAll("[data-jump-to]")).forEach(function (button) {{
+          button.addEventListener("click", function () {{
+            var iframe = document.getElementById("video-player");
+            if (!iframe) {{
+              return;
+            }}
+            var base = iframe.getAttribute("data-base-src");
+            var seconds = parseInt(button.getAttribute("data-jump-to"), 10) || 0;
+            iframe.setAttribute("src", base + "&start=" + seconds + "&autoplay=1");
+          }});
+        }});
+
         setTheme(initialTheme);
       }})();
     </script>
@@ -413,6 +519,88 @@ def load_harness_items() -> list[dict]:
         return []
     payload = json.loads(HARNESS_LIBRARY_PATH.read_text())
     return sorted(payload.get("items", []), key=lambda entry: entry.get("published_date", ""), reverse=True)
+
+
+def load_processed_items() -> list[dict]:
+    items: list[dict] = []
+    for path in sorted(DATA_PROCESSED_DIR.glob("*.json"), reverse=True):
+        try:
+            payload = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            continue
+        for item in payload.get("items", []):
+            if item.get("video", {}).get("slug"):
+                items.append(item)
+    return items
+
+
+def load_all_video_items() -> list[dict]:
+    items = load_processed_items()
+    for item in load_harness_items():
+        if item.get("video", {}).get("slug"):
+            items.append(item)
+    return items
+
+
+def render_video_icon(item: dict, lang: str) -> str:
+    video = item.get("video")
+    if not video or not video.get("slug"):
+        return ""
+    label = "查看视频总结" if lang == "zh" else "Open video summary"
+    return (
+        f"<a class='video-icon-link' href='video-{video['slug']}.{lang}.html' "
+        f"title='{label}' aria-label='{label}'>"
+        "<span aria-hidden='true'>▶</span>"
+        "</a>"
+    )
+
+
+def build_video_pages() -> list[tuple[str, str, str]]:
+    pages: list[tuple[str, str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for item in load_all_video_items():
+        video = item.get("video", {})
+        slug = video.get("slug")
+        if not slug:
+            continue
+        for lang in ["zh", "en"]:
+            key = (slug, lang)
+            if key in seen:
+                continue
+            seen.add(key)
+            pages.append((f"video-{slug}.{lang}.html", build_video_page(item, lang), lang))
+    return pages
+
+
+def load_processed_payload_for_markdown(input_path: Path) -> dict:
+    if input_path.name.startswith("latest."):
+        candidates = sorted(DATA_PROCESSED_DIR.glob("*.json"), reverse=True)
+        if not candidates:
+            return {}
+        return json.loads(candidates[0].read_text())
+    date = input_path.stem.split(".")[0]
+    path = DATA_PROCESSED_DIR / f"{date}.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text())
+
+
+def inject_video_icons(body: str, input_path: Path, lang: str) -> str:
+    payload = load_processed_payload_for_markdown(input_path)
+    items_by_title = {
+        item.get("title", ""): item for item in payload.get("items", []) if item.get("video", {}).get("slug")
+    }
+    if not items_by_title:
+        return body
+    soup = BeautifulSoup(body, "html.parser")
+    for heading in soup.find_all("h2"):
+        title = heading.get_text(" ", strip=True)
+        item = items_by_title.get(title)
+        if not item or heading.find(class_="video-icon-link"):
+            continue
+        icon = BeautifulSoup(render_video_icon(item, lang), "html.parser")
+        heading.append(icon)
+    return str(soup)
 
 
 def score_tuple(block: list[str]) -> tuple[int, int, int]:
@@ -531,13 +719,67 @@ def build_archive_index() -> str:
     )
 
 
+def build_video_page(item: dict, lang: str) -> str:
+    suffix = "zh" if lang == "zh" else "en"
+    video = item.get("video", {})
+    overview = video.get(f"overview_{suffix}", "")
+    basis_note = video.get(f"summary_basis_{suffix}", "")
+    highlights_html = []
+    for highlight in video.get("highlights", []):
+        title = highlight.get(f"title_{suffix}", "")
+        summary = highlight.get(f"summary_{suffix}", "")
+        highlights_html.append(
+            "<button class='video-highlight' type='button' "
+            f"data-jump-to='{highlight.get('start_seconds', 0)}'>"
+            f"<span class='video-timecode'>{highlight.get('timecode', '0:00')}</span>"
+            f"<strong>{title}</strong>"
+            f"<p>{summary}</p>"
+            "</button>"
+        )
+    article_label = "原文链接" if lang == "zh" else "Article link"
+    video_label = "YouTube 链接" if lang == "zh" else "YouTube link"
+    page_title = item.get("title", "Video summary")
+    base_embed_url = video.get("embed_url", "")
+    if "youtube.com/embed/" in base_embed_url:
+        base_embed_url = base_embed_url.replace("https://www.youtube.com/embed/", "https://www.youtube-nocookie.com/embed/")
+    return (
+        f"<h1>{page_title}</h1>"
+        "<p class='priority-note'>"
+        + (
+            basis_note
+            or (
+                "左侧是原始视频，右侧是基于完整 transcript 生成的结构化摘要；点击任一片段会让视频从对应时间开始播放。"
+                if lang == "zh"
+                else "The player stays on the left and the transcript-based summary stays on the right. Click any highlight to jump the video to that moment."
+            )
+        )
+        + "</p>"
+        "<div class='video-detail'>"
+        "<section class='video-player-card'>"
+        f"<iframe id='video-player' class='video-embed' src='{base_embed_url}' "
+        f"data-base-src='{base_embed_url}' "
+        "title='YouTube video player' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' "
+        "allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
+        f"<p class='video-source-link'>{article_label}: <a href='{item.get('url', '')}' target='_blank' rel='noopener noreferrer'>{item.get('url', '')}</a><br />"
+        f"{video_label}: <a href='{video.get('youtube_url', '')}' target='_blank' rel='noopener noreferrer'>{video.get('youtube_url', '')}</a></p>"
+        "</section>"
+        "<section class='video-summary-card'>"
+        + (f"<h2>{'视频总结' if lang == 'zh' else 'Video summary'}</h2>" if overview else "")
+        + (f"<p class='video-overview'>{overview}</p>" if overview else "")
+        + f"<div class='video-highlights'>{''.join(highlights_html)}</div>"
+        "</section>"
+        "</div>"
+    )
+
+
 def build_harness_page() -> str:
     items = load_harness_items()
     cards = []
     for item in items:
+        icon = render_video_icon(item, "zh")
         cards.append(
             "<article style='border:1px solid var(--line); border-radius:16px; padding:18px; margin:0 0 16px; background:#fffaf2;'>"
-            f"<h2 style='margin-top:0;'><a href='{item['url']}' target='_blank' rel='noopener noreferrer'>{item['title']}</a></h2>"
+            f"<h2 style='margin-top:0;'><a href='{item['url']}' target='_blank' rel='noopener noreferrer'>{item['title']}</a>{icon}</h2>"
             f"<p style='margin:0 0 8px; color:var(--muted);'>{item.get('published_date', 'Unknown')} · {item.get('source', 'Unknown source')}</p>"
             f"<p style='margin:0 0 10px;'><strong>核心总结：</strong>{item.get('summary', '')}</p>"
             f"<p style='margin:0;'><strong>链接：</strong><a href='{item['url']}' target='_blank' rel='noopener noreferrer'>{item['url']}</a></p>"
@@ -553,6 +795,7 @@ def build_harness_page() -> str:
 def render_markdown_page(input_path: Path, output_path: Path, lang: str) -> None:
     sorted_md = sort_selected_items_markdown(input_path.read_text())
     body = render_markdown(sorted_md)
+    body = inject_video_icons(body, input_path, lang)
     if "## Selected Items" in sorted_md:
         body = body.replace(
             "<h2 id=\"selected-items\">Selected Items</h2>",
@@ -564,6 +807,7 @@ def render_markdown_page(input_path: Path, output_path: Path, lang: str) -> None
             body=body,
             lang=lang,
             sidebar=build_sidebar(output_path.name, lang),
+            body_class="",
         )
     )
 
@@ -579,9 +823,14 @@ def main() -> int:
     (SITE_DIR / "index.html").write_text(
         HTML_SHELL.format(
             title="latest.zh",
-            body=render_markdown(sort_selected_items_markdown((CONTENT_DIR / "latest.zh.md").read_text())),
+            body=inject_video_icons(
+                render_markdown(sort_selected_items_markdown((CONTENT_DIR / "latest.zh.md").read_text())),
+                CONTENT_DIR / "latest.zh.md",
+                "zh",
+            ),
             lang="zh",
             sidebar=build_sidebar("index.html", "zh"),
+            body_class="",
         )
     )
     (SITE_DIR / "archive.html").write_text(
@@ -590,6 +839,7 @@ def main() -> int:
             body=build_archive_index(),
             lang="zh",
             sidebar=build_sidebar("archive.html", "zh"),
+            body_class="",
         )
     )
     (SITE_DIR / "harness.html").write_text(
@@ -598,8 +848,19 @@ def main() -> int:
             body=build_harness_page(),
             lang="zh",
             sidebar=build_sidebar("harness.html", "zh"),
+            body_class="",
         )
     )
+    for html_name, body, lang in build_video_pages():
+        (SITE_DIR / html_name).write_text(
+            HTML_SHELL.format(
+                title=html_name.replace(".html", ""),
+                body=body,
+                lang=lang,
+                sidebar=build_sidebar(html_name, lang),
+                body_class="page-video",
+            )
+        )
     return 0
 
 

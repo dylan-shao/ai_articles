@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -13,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Iterable
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup, FeatureNotFound, XMLParsedAsHTMLWarning
@@ -26,6 +27,7 @@ CONTENT_DIR = ROOT / "content"
 DATA_RAW_DIR = ROOT / "data" / "raw"
 DATA_PROCESSED_DIR = ROOT / "data" / "processed"
 DATA_COLLECTIONS_DIR = ROOT / "data" / "collections"
+MANUAL_VIDEO_OVERRIDES_PATH = ROOT / "data" / "manual_video_overrides.json"
 HARNESS_LIBRARY_PATH = DATA_COLLECTIONS_DIR / "harness_articles.json"
 DEFAULT_TIMEOUT = 20
 MAX_LINKS_PER_SOURCE = 16
@@ -76,6 +78,12 @@ Prefer 2-8 items. If the day is weak, return only the strong items.
 If no item is strong enough, set `full_digest_worthy` to false and keep at most 3 borderline items.
 """
 
+VIDEO_SUMMARY_SYSTEM_PROMPT = """You summarize long-form technical YouTube videos for an engineering audience.
+Return valid JSON only.
+Use the transcript as the source of truth and do not invent details that are not supported by it.
+Keep the output concise, concrete, and useful for a reader who wants the key arguments and exact moments worth replaying.
+"""
+
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 
@@ -91,6 +99,15 @@ class Candidate:
     excerpt: str
     body_excerpt: str
     keyword_hits: int
+    youtube_url: str | None = None
+    youtube_video_id: str | None = None
+
+
+@dataclass
+class TranscriptSegment:
+    start_seconds: int
+    duration_seconds: int
+    text: str
 
 
 def fallback_item(candidate: Candidate) -> dict:
@@ -283,6 +300,16 @@ def parse_publish_date(soup: BeautifulSoup, html: str) -> datetime | None:
     return None
 
 
+def parse_canonical_url(soup: BeautifulSoup, fallback_url: str) -> str:
+    canonical = soup.find("link", attrs={"rel": "canonical"})
+    if canonical and canonical.get("href"):
+        return canonical["href"].strip()
+    og_url = soup.find("meta", attrs={"property": "og:url"})
+    if og_url and og_url.get("content"):
+        return og_url["content"].strip()
+    return fallback_url
+
+
 def try_parse_datetime(value: str) -> datetime | None:
     value = value.strip()
     try:
@@ -305,6 +332,280 @@ def try_parse_datetime(value: str) -> datetime | None:
         except ValueError:
             continue
     return None
+
+
+def extract_youtube_video_id(url: str) -> str | None:
+    parsed = urlparse(url)
+    host = parsed.netloc.lower().removeprefix("www.")
+    if host == "youtu.be":
+        video_id = parsed.path.strip("/").split("/", 1)[0]
+        return video_id or None
+    if host in {"youtube.com", "m.youtube.com"}:
+        if parsed.path == "/watch":
+            return parse_qs(parsed.query).get("v", [None])[0]
+        if parsed.path.startswith("/embed/") or parsed.path.startswith("/shorts/"):
+            parts = [part for part in parsed.path.split("/") if part]
+            if len(parts) >= 2:
+                return parts[1]
+    return None
+
+
+def canonical_youtube_url(video_id: str) -> str:
+    return f"https://www.youtube.com/watch?v={video_id}"
+
+
+def extract_youtube_url(soup: BeautifulSoup) -> tuple[str | None, str | None]:
+    candidates: list[tuple[str, str]] = []
+    for tag in soup.find_all(["a", "iframe"], href=True):
+        href = tag.get("href")
+        if not href:
+            continue
+        video_id = extract_youtube_video_id(href)
+        if video_id:
+            candidates.append((canonical_youtube_url(video_id), video_id))
+    for tag in soup.find_all("iframe", src=True):
+        src = tag.get("src")
+        if not src:
+            continue
+        video_id = extract_youtube_video_id(src)
+        if video_id:
+            candidates.append((canonical_youtube_url(video_id), video_id))
+    if not candidates:
+        return (None, None)
+    seen_video_ids: set[str] = set()
+    for url, video_id in candidates:
+        if video_id in seen_video_ids:
+            continue
+        seen_video_ids.add(video_id)
+        return (url, video_id)
+    return (None, None)
+
+
+def format_seconds(seconds: int) -> str:
+    hours, remainder = divmod(max(seconds, 0), 3600)
+    minutes, secs = divmod(remainder, 60)
+    if hours:
+        return f"{hours}:{minutes:02d}:{secs:02d}"
+    return f"{minutes}:{secs:02d}"
+
+
+def extract_caption_tracks(player_response: dict) -> list[dict]:
+    captions = player_response.get("captions", {})
+    renderer = captions.get("playerCaptionsTracklistRenderer", {})
+    return renderer.get("captionTracks", []) or []
+
+
+def choose_caption_track(tracks: list[dict]) -> dict | None:
+    if not tracks:
+        return None
+    preferred_scores: list[tuple[int, dict]] = []
+    for track in tracks:
+        score = 0
+        language_code = (track.get("languageCode") or "").lower()
+        kind = (track.get("kind") or "").lower()
+        name = clean_text(track.get("name", {}).get("simpleText", ""))
+        if language_code.startswith("en"):
+            score += 10
+        if kind != "asr":
+            score += 4
+        if "english" in name.lower():
+            score += 2
+        preferred_scores.append((score, track))
+    preferred_scores.sort(key=lambda entry: entry[0], reverse=True)
+    return preferred_scores[0][1]
+
+
+def fetch_youtube_transcript(session: requests.Session, video_id: str) -> list[TranscriptSegment]:
+    watch_url = canonical_youtube_url(video_id)
+    response = fetch(session, watch_url)
+    html_body = response.text
+    player_match = re.search(r"ytInitialPlayerResponse\s*=\s*(\{.+?\})\s*;", html_body, re.DOTALL)
+    if not player_match:
+        return []
+    player_response = json.loads(player_match.group(1))
+    track = choose_caption_track(extract_caption_tracks(player_response))
+    if not track or not track.get("baseUrl"):
+        return []
+    transcript_response = fetch(session, f"{track['baseUrl']}&fmt=json3")
+    transcript_payload = transcript_response.json()
+    segments: list[TranscriptSegment] = []
+    for event in transcript_payload.get("events", []):
+        if "segs" not in event:
+            continue
+        text = clean_text("".join(seg.get("utf8", "") for seg in event.get("segs", [])))
+        text = html.unescape(text)
+        if not text:
+            continue
+        start_seconds = int(event.get("tStartMs", 0) / 1000)
+        duration_seconds = max(int(event.get("dDurationMs", 0) / 1000), 0)
+        segments.append(
+            TranscriptSegment(
+                start_seconds=start_seconds,
+                duration_seconds=duration_seconds,
+                text=text,
+            )
+        )
+    return segments
+
+
+def build_video_summary_prompt(item: dict, transcript: str) -> str:
+    return f"""Article: {item.get('title', '')}
+Article URL: {item.get('url', '')}
+
+Summarize this technical video transcript for an engineering reader.
+Return JSON with this shape:
+{{
+  "overview_zh": "...",
+  "overview_en": "...",
+  "highlights": [
+    {{
+      "start_seconds": 123,
+      "title_zh": "...",
+      "title_en": "...",
+      "summary_zh": "...",
+      "summary_en": "..."
+    }}
+  ]
+}}
+
+Rules:
+- Keep 4 to 8 highlight segments.
+- Each highlight must point to a real moment from the transcript.
+- `start_seconds` must match the start of the discussed moment.
+- Focus on the most actionable technical ideas, claims, methods, warnings, or examples.
+- Keep each summary to 1 or 2 sentences.
+
+Transcript:
+{transcript}
+"""
+
+
+def summarize_video_with_model(client: OpenAI, model: str, item: dict, segments: list[TranscriptSegment]) -> dict | None:
+    if not segments:
+        return None
+    transcript = "\n".join(f"[{format_seconds(segment.start_seconds)}] {segment.text}" for segment in segments)
+    if len(transcript) > 120000:
+        transcript = transcript[:120000]
+    response = client.responses.create(
+        model=model,
+        input=[
+            {"role": "system", "content": VIDEO_SUMMARY_SYSTEM_PROMPT},
+            {"role": "user", "content": build_video_summary_prompt(item, transcript)},
+        ],
+    )
+    payload = json.loads(response.output_text.strip())
+    highlights = []
+    for highlight in payload.get("highlights", []):
+        start_seconds = int(highlight.get("start_seconds", 0))
+        highlights.append(
+            {
+                "start_seconds": start_seconds,
+                "timecode": format_seconds(start_seconds),
+                "title_zh": clean_text(highlight.get("title_zh", "")),
+                "title_en": clean_text(highlight.get("title_en", "")),
+                "summary_zh": clean_text(highlight.get("summary_zh", "")),
+                "summary_en": clean_text(highlight.get("summary_en", "")),
+            }
+        )
+    if not highlights:
+        return None
+    return {
+        "overview_zh": clean_text(payload.get("overview_zh", "")),
+        "overview_en": clean_text(payload.get("overview_en", "")),
+        "summary_basis_zh": "根据完整视频 transcript 生成的重点总结与时间片段。",
+        "summary_basis_en": "Structured highlights generated from the full video transcript.",
+        "highlights": highlights,
+    }
+
+
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or "video"
+
+
+def build_video_slug(item: dict, video_id: str) -> str:
+    return f"{slugify(item.get('title', 'video'))}-{video_id}"
+
+
+def load_manual_video_overrides() -> dict:
+    if not MANUAL_VIDEO_OVERRIDES_PATH.exists():
+        return {}
+    try:
+        return json.loads(MANUAL_VIDEO_OVERRIDES_PATH.read_text())
+    except json.JSONDecodeError as exc:
+        print(f"[warn] failed to parse manual video overrides: {exc}", file=sys.stderr)
+        return {}
+
+
+def build_manual_video_payload(item: dict, override: dict) -> dict:
+    video_id = override["video_id"]
+    payload = {
+        "video_id": video_id,
+        "youtube_url": override.get("youtube_url") or canonical_youtube_url(video_id),
+        "embed_url": f"https://www.youtube.com/embed/{video_id}?rel=0",
+        "slug": build_video_slug(item, video_id),
+        "overview_zh": clean_text(override.get("overview_zh", "")),
+        "overview_en": clean_text(override.get("overview_en", "")),
+        "summary_basis_zh": clean_text(override.get("summary_basis_zh", "")),
+        "summary_basis_en": clean_text(override.get("summary_basis_en", "")),
+        "highlights": [],
+    }
+    for highlight in override.get("highlights", []):
+        start_seconds = int(highlight.get("start_seconds", 0))
+        payload["highlights"].append(
+            {
+                "start_seconds": start_seconds,
+                "timecode": highlight.get("timecode") or format_seconds(start_seconds),
+                "title_zh": clean_text(highlight.get("title_zh", "")),
+                "title_en": clean_text(highlight.get("title_en", "")),
+                "summary_zh": clean_text(highlight.get("summary_zh", "")),
+                "summary_en": clean_text(highlight.get("summary_en", "")),
+            }
+        )
+    return payload
+
+
+def enrich_result_with_video_data(result: dict, candidates: list[Candidate], model: str, today: str) -> dict:
+    items = result.get("items", [])
+    if not items:
+        return result
+    manual_overrides = load_manual_video_overrides()
+    api_key = os.environ.get("OPENAI_API_KEY")
+    candidate_map = {candidate.url: candidate for candidate in candidates}
+    session = requests.Session()
+    client = OpenAI(api_key=api_key) if api_key else None
+    video_cache: dict[str, dict | None] = {}
+    for item in items:
+        override = manual_overrides.get(today, {}).get(item.get("url", ""))
+        if override:
+            item["video"] = build_manual_video_payload(item, override)
+            continue
+        candidate = candidate_map.get(item.get("url", ""))
+        if not candidate or not candidate.youtube_video_id:
+            continue
+        if not client:
+            continue
+        video_id = candidate.youtube_video_id
+        if video_id not in video_cache:
+            try:
+                segments = fetch_youtube_transcript(session, video_id)
+                summary = summarize_video_with_model(client, model, item, segments)
+                if summary:
+                    video_cache[video_id] = {
+                        "video_id": video_id,
+                        "youtube_url": candidate.youtube_url or canonical_youtube_url(video_id),
+                        "embed_url": f"https://www.youtube.com/embed/{video_id}?rel=0",
+                        "slug": build_video_slug(item, video_id),
+                        **summary,
+                    }
+                else:
+                    video_cache[video_id] = None
+            except (requests.RequestException, OpenAIError, json.JSONDecodeError, ValueError) as exc:
+                print(f"[warn] failed to enrich video for {item.get('url', '')}: {exc}", file=sys.stderr)
+                video_cache[video_id] = None
+        if video_cache[video_id]:
+            item["video"] = video_cache[video_id]
+    return result
 
 
 def fetch(session: requests.Session, url: str) -> requests.Response:
@@ -382,6 +683,7 @@ def extract_candidate(session: requests.Session, source: dict, article_url: str,
     if not title:
         h1 = soup.find("h1")
         title = clean_text(h1.get_text(" ", strip=True)) if h1 else article_url
+    normalized_url = parse_canonical_url(soup, article_url)
 
     description_tag = soup.find("meta", attrs={"name": "description"}) or soup.find(
         "meta", attrs={"property": "og:description"}
@@ -401,11 +703,12 @@ def extract_candidate(session: requests.Session, source: dict, article_url: str,
     author_meta = soup.find("meta", attrs={"name": "author"}) or soup.find("meta", attrs={"property": "author"})
     if author_meta and author_meta.get("content"):
         author = clean_text(author_meta["content"])
+    youtube_url, youtube_video_id = extract_youtube_url(soup)
 
     return Candidate(
         title=title,
         source=source["name"],
-        url=article_url,
+        url=normalized_url,
         landing_url=source["landing_url"],
         priority=source["priority"],
         publish_date=publish_dt.isoformat() if publish_dt else None,
@@ -413,6 +716,8 @@ def extract_candidate(session: requests.Session, source: dict, article_url: str,
         excerpt=excerpt,
         body_excerpt=body_excerpt,
         keyword_hits=keyword_hits,
+        youtube_url=youtube_url,
+        youtube_video_id=youtube_video_id,
     )
 
 
@@ -538,8 +843,19 @@ def render_item_markdown(item: dict, lang: str) -> str:
     summary_key = f"summary_{suffix}"
     why_key = f"why_it_matters_{suffix}"
     takeaways_key = f"key_takeaways_{suffix}"
+    video = item.get("video")
+    video_icon = ""
+    if video and video.get("slug"):
+        video_page = f"video-{video['slug']}.{lang}.html"
+        video_label = "查看视频总结" if lang == "zh" else "Open video summary"
+        video_icon = (
+            f" <a class=\"video-icon-link\" href=\"{video_page}\" title=\"{video_label}\" "
+            f"aria-label=\"{video_label}\">"
+            "<span aria-hidden=\"true\">▶</span>"
+            "</a>"
+        )
     lines = [
-        f"## {item['title']}",
+        f"## {item['title']}{video_icon}",
         f"- Source: {item['source']}",
         f"- Author: {item.get('author') or 'N/A'}",
         f"- Publish date: {item.get('publish_date') or 'N/A'}",
@@ -644,6 +960,7 @@ def update_harness_library(today: str, result: dict) -> None:
                 "source": item.get("source") or "",
                 "added_from": "daily_digest",
                 "added_on": today,
+                "video": item.get("video"),
             }
         )
         known_urls.add(item["url"])
@@ -691,6 +1008,7 @@ def main() -> int:
     result = call_model(args.model, candidates, args.today)
     if result.get("generated_via_fallback"):
         print(f"[warn] generated fallback digest: {result.get('generation_error', 'unknown error')}", file=sys.stderr)
+    result = enrich_result_with_video_data(result, candidates, args.model, args.today)
     write_outputs(args.today, result, candidates)
     return 0
 

@@ -1,0 +1,36 @@
+{
+  "2026-03-29": {
+    "https://www.anthropic.com/engineering/infrastructure-noise": {
+      "video_id": "o5Mi5SYSDnY",
+      "youtube_url": "https://www.youtube.com/watch?v=o5Mi5SYSDnY&t=4s",
+      "overview_zh": "测试用手动视频挂载：这个页面用于验证文章旁的 YouTube 图标、视频详情页、以及右侧时间片段跳转交互是否正常。后续当流水线能成功抓到 transcript 并调用模型时，这里会被真实的视频总结覆盖。",
+      "overview_en": "Manual test video attachment. This lets us verify the article-level YouTube icon, the dedicated video page, and timestamp jump behavior before transcript-backed summaries are available in the pipeline.",
+      "highlights": [
+        {
+          "start_seconds": 4,
+          "timecode": "0:04",
+          "title_zh": "测试起点",
+          "title_en": "Test start",
+          "summary_zh": "从这里开始验证视频页面是否能正确从指定时间播放。",
+          "summary_en": "Use this point to confirm the player starts from the requested timestamp."
+        },
+        {
+          "start_seconds": 60,
+          "timecode": "1:00",
+          "title_zh": "中段跳转",
+          "title_en": "Midpoint jump",
+          "summary_zh": "用于验证点击右侧摘要卡片后，左侧 iframe 是否会刷新并跳到对应时间。",
+          "summary_en": "Use this to verify that clicking a summary card reloads the iframe at the matching time."
+        },
+        {
+          "start_seconds": 180,
+          "timecode": "3:00",
+          "title_zh": "长距离跳转",
+          "title_en": "Long jump",
+          "summary_zh": "这个片段主要用于测试较远时间点的跳转是否稳定。",
+          "summary_en": "This jump is mainly for checking that larger seeks still work reliably."
+        }
+      ]
+    }
+  }
+}

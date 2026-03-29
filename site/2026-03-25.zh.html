@@ -87,6 +87,24 @@
         transition: background 220ms ease, color 220ms ease;
       }
       a { color: var(--accent); }
+      .video-icon-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-left: 0.45rem;
+        border-radius: 999px;
+        background: #ff0033;
+        color: #fff !important;
+        text-decoration: none;
+        vertical-align: middle;
+        box-shadow: 0 8px 18px rgba(255, 0, 51, 0.18);
+      }
+      .video-icon-link:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.03);
+      }
       .wrap {
         max-width: 1220px;
         margin: 0 auto;
@@ -140,6 +158,15 @@
         grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
         gap: 18px;
         align-items: start;
+      }
+      body.page-video .wrap {
+        max-width: min(1680px, 100vw);
+      }
+      body.page-video .layout {
+        grid-template-columns: 1fr;
+      }
+      body.page-video .sidebar {
+        display: none;
       }
       .sidebar, .panel {
         border: 1px solid var(--line);
@@ -229,6 +256,68 @@
         border-radius: 4px;
         padding: 0.1em 0.3em;
       }
+      .video-detail {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(320px, 3fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .video-player-card, .video-summary-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--chip-bg);
+        padding: 18px;
+      }
+      body.page-video .panel {
+        padding: 22px;
+      }
+      body.page-video .video-player-card,
+      body.page-video .video-summary-card {
+        min-height: calc(100vh - 160px);
+      }
+      .video-embed {
+        width: 100%;
+        height: min(70vh, 860px);
+        border: 0;
+        border-radius: 14px;
+        background: #000;
+      }
+      .video-summary-card h2 {
+        margin-top: 0;
+      }
+      .video-overview {
+        margin-bottom: 18px;
+        color: var(--ink);
+      }
+      .video-highlights {
+        display: grid;
+        gap: 12px;
+      }
+      .video-highlight {
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        color: var(--ink);
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+      .video-highlight:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .video-timecode {
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .video-source-link {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
       .panel p, .panel li {
         font-size: 1.02rem;
         line-height: 1.72;
@@ -291,6 +380,9 @@
         .layout {
           grid-template-columns: 1fr;
         }
+        .video-detail {
+          grid-template-columns: 1fr;
+        }
         .sidebar {
           position: static;
         }
@@ -303,7 +395,7 @@
       }
     </style>
   </head>
-  <body data-theme="classic">
+  <body class="" data-theme="classic">
     <div class="wrap">
       <div class="nav">
         <div class="nav-links">
@@ -408,6 +500,18 @@
         buttons.forEach(function (button) {
           button.addEventListener("click", function () {
             setTheme(button.getAttribute("data-theme-option"));
+          });
+        });
+
+        Array.prototype.slice.call(document.querySelectorAll("[data-jump-to]")).forEach(function (button) {
+          button.addEventListener("click", function () {
+            var iframe = document.getElementById("video-player");
+            if (!iframe) {
+              return;
+            }
+            var base = iframe.getAttribute("data-base-src");
+            var seconds = parseInt(button.getAttribute("data-jump-to"), 10) || 0;
+            iframe.setAttribute("src", base + "&start=" + seconds + "&autoplay=1");
           });
         });
 

@@ -5,6 +5,7 @@ This repository contains a cloud-friendly scaffold for a daily AI coding digest:
 - collect candidate articles from a small set of priority sources
 - select and summarize them with OpenAI
 - write dated Markdown outputs
+- enrich selected articles with linked YouTube transcript summaries when available
 - render a static site
 - publish through GitHub Pages
 
@@ -18,6 +19,18 @@ This repository contains a cloud-friendly scaffold for a daily AI coding digest:
 - `data/raw/`: collected candidate metadata
 - `data/processed/`: model-selected digest JSON
 - `site/`: static pages deployed to GitHub Pages
+
+## Video companion pages
+
+When a collected article contains a YouTube link and the video has a readable transcript, the pipeline now:
+
+- detects the YouTube video during article collection
+- fetches the transcript
+- asks OpenAI for a bilingual structured summary plus timestamped highlights
+- stores that metadata under each selected digest item
+- renders a YouTube icon beside the article and a dedicated `video-*.html` page
+
+Each video page shows the embedded player on the left and the transcript-based summary on the right. Clicking a highlight jumps the player to the matching timestamp.
 
 ## How GitHub triggers the digest
 
