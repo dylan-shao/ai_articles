@@ -1,123 +1,48 @@
 {
   "full_digest_worthy": false,
+  "generated_via_empty_day": true,
+  "generation_reason": "No new candidates survived collection after source filtering and recent-digest dedupe.",
   "executive_summary_zh": [
-    "今天候选内容中，唯一高信号文章来自 Anthropic，聚焦 agentic coding eval 中常被忽视的基础设施噪声问题。",
-    "文章的核心结论是：在 SWE-bench、Terminal-Bench 一类基准里，CPU、内存、超时、容器调度与资源执行方式本身就可能带来数个百分点的分差，足以超过模型排行榜之间的差距。",
-    "这对后端、平台与工程效率负责人尤其重要，因为它直接影响模型选型、基准复现、采购决策，以及内部 AI coding 平台的评测可信度。"
+    "2026-03-29 没有新增的高信号候选进入日报。",
+    "这通常意味着来源站点当天没有足够相关的新文章，或者候选都被最近几天的跨天去重规则过滤掉了。",
+    "流水线本次会继续产出站点文件，但保留为空日报而不是直接失败。"
   ],
   "executive_summary_en": [
-    "The only strong candidate today is Anthropic’s engineering post on infrastructure noise in agentic coding evaluations.",
-    "Its main point: in benchmarks like SWE-bench and Terminal-Bench, CPU, memory, timeout, scheduling, and enforcement details can shift scores by several percentage points—enough to exceed leaderboard gaps between models.",
-    "This is highly relevant for backend, platform, and engineering leaders because it affects model selection, benchmark reproducibility, procurement decisions, and the credibility of internal AI coding evaluation pipelines."
+    "No new high-signal candidates made it into the digest for 2026-03-29.",
+    "This usually means the source set did not publish sufficiently relevant new articles, or every candidate was filtered by recent cross-day dedupe.",
+    "The pipeline will still publish site artifacts for the day instead of failing the run."
   ],
-  "items": [
-    {
-      "title": "Quantifying infrastructure noise in agentic coding evals",
-      "source": "Anthropic Engineering",
-      "author": "",
-      "publish_date": "",
-      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-      "summary_zh": "Anthropic 分析了 agentic coding 基准中的“基础设施噪声”：与静态 benchmark 不同，SWE-bench、Terminal-Bench 这类任务要求模型在真实运行环境中写代码、跑测试、安装依赖并多轮迭代，因此运行时环境本身会改变结果。文中指出，在 Terminal-Bench 2.0 的内部实验里，资源最充足与最受限配置之间可出现约 6 个百分点的显著差距，甚至高于许多模型排行榜的领先优势。",
-      "summary_en": "Anthropic examines “infrastructure noise” in agentic coding benchmarks. Unlike static benchmarks, tasks such as SWE-bench and Terminal-Bench require models to operate inside a live runtime—writing code, running tests, installing dependencies, and iterating across turns—so the environment itself changes outcomes. The post reports that, in internal Terminal-Bench 2.0 experiments, the gap between the best- and worst-resourced setups reached about 6 percentage points, larger than many leaderboard margins.",
-      "why_it_matters_zh": "这篇文章把评测讨论从“模型能力”拉回到“系统设计”。如果不同团队用不同 CPU/RAM 配置、超时策略、容器隔离与资源 enforcement 方法跑同一个 benchmark，他们实际上并没有在做同一场测试。对建设内部 AI coding 平台、选择供应商模型、或设计工程效率指标的团队来说，这意味着必须把 infra config 视为 benchmark 的一部分进行版本化、审计与公开。",
-      "why_it_matters_en": "This reframes coding evals from pure model comparison to systems design. If teams run the same benchmark with different CPU/RAM limits, timeout policies, container isolation, or enforcement methods, they are not actually administering the same test. For organizations building internal AI coding platforms, choosing vendor models, or defining engineering productivity metrics, infra configuration must be treated as a versioned, auditable part of the benchmark itself.",
-      "key_takeaways_zh": [
-        "Agentic coding eval 的结果不仅由模型决定，还强依赖运行时资源预算与执行方式。",
-        "几百分点的 infra-induced score swing 足以颠覆排行榜解读，因此复现 benchmark 时必须明确并强制资源配置。",
-        "评测框架应记录 CPU、内存、超时、并发、调度与失败类型，否则结论很可能不可比较。"
-      ],
-      "key_takeaways_en": [
-        "Agentic coding eval outcomes are not determined by the model alone; they depend materially on runtime resource budgets and execution policy.",
-        "Infra-induced score swings of several percentage points are large enough to overturn leaderboard interpretations, so benchmark reproduction requires explicit and enforced resource specs.",
-        "Evaluation harnesses should log CPU, memory, timeout, concurrency, scheduling, and failure modes, or conclusions may not be comparable."
-      ],
-      "tags": [
-        "agentic-coding",
-        "benchmarking",
-        "eval-harness",
-        "infrastructure",
-        "Terminal-Bench",
-        "SWE-bench"
-      ],
-      "video": {
-        "video_id": "o5Mi5SYSDnY",
-        "youtube_url": "https://www.youtube.com/watch?v=o5Mi5SYSDnY&t=4s",
-        "embed_url": "https://www.youtube.com/embed/o5Mi5SYSDnY?rel=0",
-        "slug": "quantifying-infrastructure-noise-in-agentic-coding-evals-o5Mi5SYSDnY",
-        "overview_zh": "测试用手动视频挂载：这个页面用于验证文章旁的 YouTube 图标、视频详情页、以及右侧时间片段跳转交互是否正常。后续当流水线能成功抓到 transcript 并调用模型时，这里会被真实的视频总结覆盖。",
-        "overview_en": "Manual test video attachment. This lets us verify the article-level YouTube icon, the dedicated video page, and timestamp jump behavior before transcript-backed summaries are available in the pipeline.",
-        "highlights": [
-          {
-            "start_seconds": 4,
-            "timecode": "0:04",
-            "title_zh": "测试起点",
-            "title_en": "Test start",
-            "summary_zh": "从这里开始验证视频页面是否能正确从指定时间播放。",
-            "summary_en": "Use this point to confirm the player starts from the requested timestamp."
-          },
-          {
-            "start_seconds": 60,
-            "timecode": "1:00",
-            "title_zh": "中段跳转",
-            "title_en": "Midpoint jump",
-            "summary_zh": "用于验证点击右侧摘要卡片后，左侧 iframe 是否会刷新并跳到对应时间。",
-            "summary_en": "Use this to verify that clicking a summary card reloads the iframe at the matching time."
-          },
-          {
-            "start_seconds": 180,
-            "timecode": "3:00",
-            "title_zh": "长距离跳转",
-            "title_en": "Long jump",
-            "summary_zh": "这个片段主要用于测试较远时间点的跳转是否稳定。",
-            "summary_en": "This jump is mainly for checking that larger seeks still work reliably."
-          }
-        ]
-      },
-      "signal_score": 9,
-      "novelty_score": 8,
-      "actionability_score": 9
-    }
-  ],
-  "top_items": [
-    "Quantifying infrastructure noise in agentic coding evals"
-  ],
+  "items": [],
+  "top_items": [],
   "new_terms_zh": [
-    "基础设施噪声（infrastructure noise）",
-    "资源 enforcement 方法",
-    "agentic coding eval"
+    "空日报",
+    "跨天去重"
   ],
   "new_terms_en": [
-    "infrastructure noise",
-    "resource enforcement methodology",
-    "agentic coding eval"
+    "empty digest",
+    "cross-day dedupe"
   ],
   "themes_zh": [
-    "AI 编码评测正在从模型比较转向系统级可复现性",
-    "基准 harness 与运行环境规范成为可信 leaderboard 的关键"
+    "低信号日期应该稳定产出，而不是让自动化流程报错。",
+    "跨天去重需要和空日报策略一起工作，避免重复内容与任务失败同时出现。"
   ],
   "themes_en": [
-    "AI coding evaluation is shifting from model comparison to system-level reproducibility",
-    "Benchmark harness and runtime specification are becoming critical to trustworthy leaderboards"
+    "Low-signal days should still produce a stable artifact instead of failing automation.",
+    "Cross-day dedupe should work together with an empty-digest path so duplicate suppression does not break the job."
   ],
   "implications_zh": [
-    "内部评测平台应把容器规格、CPU/RAM、超时和失败重试策略纳入 benchmark artifact，而不是作为隐藏默认值。",
-    "采购或切换编码模型时，不应只看公开 leaderboard；必须要求可复现实验配置与 infra 日志。",
-    "平台团队可优先投资统一的 eval harness、任务级资源声明、以及 infra-vs-model failure 分类。"
+    "站点与归档会继续按日更新，即使当天没有新内容。",
+    "后续如需更激进的策略，可以把被去重文章单独标记为“昨日已覆盖”。"
   ],
   "implications_en": [
-    "Internal evaluation platforms should package container specs, CPU/RAM, timeout, and retry policy as part of the benchmark artifact rather than leaving them as hidden defaults.",
-    "When procuring or switching coding models, do not rely on public leaderboards alone; require reproducible experiment configs and infrastructure logs.",
-    "Platform teams should prioritize a unified eval harness, task-level resource declarations, and clear separation of infra failures from model failures."
+    "The site and archive can keep updating daily even when there is no new content.",
+    "If needed, we can later add an explicit 'already covered recently' note for deduped articles."
   ],
-  "reading_order": [
-    "Quantifying infrastructure noise in agentic coding evals"
-  ],
+  "reading_order": [],
   "what_to_ignore_zh": [
-    "不要把任何单一 leaderboard 分差直接解读为模型真实能力差异。",
-    "不要忽视 benchmark 运行环境；在 agentic coding 场景里，环境不是中性容器，而是评测的一部分。"
+    "No new candidates survived collection after source filtering and recent-digest dedupe."
   ],
   "what_to_ignore_en": [
-    "Do not treat small leaderboard gaps as direct evidence of true model capability differences.",
-    "Do not ignore the benchmark runtime environment; in agentic coding, the environment is not a neutral container but part of the test itself."
+    "No new candidates survived collection after source filtering and recent-digest dedupe."
   ]
 }

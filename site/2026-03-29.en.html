@@ -417,62 +417,7 @@
         </aside>
         <main class="panel">
           <h1 id="ai-coding-daily-digest-2026-03-29">AI Coding Daily Digest - 2026-03-29</h1>
-<h2 id="executive-summary">Executive Summary</h2>
-<ul>
-<li>The only strong candidate today is Anthropic’s engineering post on infrastructure noise in agentic coding evaluations.</li>
-<li>Its main point: in benchmarks like SWE-bench and Terminal-Bench, CPU, memory, timeout, scheduling, and enforcement details can shift scores by several percentage points—enough to exceed leaderboard gaps between models.</li>
-<li>This is highly relevant for backend, platform, and engineering leaders because it affects model selection, benchmark reproducibility, procurement decisions, and the credibility of internal AI coding evaluation pipelines.</li>
-</ul>
-<h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals<a aria-label="Open video summary" class="video-icon-link" href="video-quantifying-infrastructure-noise-in-agentic-coding-evals-o5Mi5SYSDnY.en.html" title="Open video summary"><span aria-hidden="true">▶</span></a></h2>
-<ul>
-<li>Source: Anthropic Engineering</li>
-<li>Author: N/A</li>
-<li>Publish date: N/A</li>
-<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
-</ul>
-<p>Anthropic examines “infrastructure noise” in agentic coding benchmarks. Unlike static benchmarks, tasks such as SWE-bench and Terminal-Bench require models to operate inside a live runtime—writing code, running tests, installing dependencies, and iterating across turns—so the environment itself changes outcomes. The post reports that, in internal Terminal-Bench 2.0 experiments, the gap between the best- and worst-resourced setups reached about 6 percentage points, larger than many leaderboard margins.</p>
-<p>Why it matters: This reframes coding evals from pure model comparison to systems design. If teams run the same benchmark with different CPU/RAM limits, timeout policies, container isolation, or enforcement methods, they are not actually administering the same test. For organizations building internal AI coding platforms, choosing vendor models, or defining engineering productivity metrics, infra configuration must be treated as a versioned, auditable part of the benchmark itself.</p>
-<p>Key takeaways:
-- Agentic coding eval outcomes are not determined by the model alone; they depend materially on runtime resource budgets and execution policy.
-- Infra-induced score swings of several percentage points are large enough to overturn leaderboard interpretations, so benchmark reproduction requires explicit and enforced resource specs.
-- Evaluation harnesses should log CPU, memory, timeout, concurrency, scheduling, and failure modes, or conclusions may not be comparable.</p>
-<p>Tags: agentic-coding, benchmarking, eval-harness, infrastructure, Terminal-Bench, SWE-bench
-Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
-<h2 id="top-items">Top Items</h2>
-<ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-</ul>
-<h2 id="new-terms">New Terms</h2>
-<ul>
-<li>infrastructure noise</li>
-<li>resource enforcement methodology</li>
-<li>agentic coding eval</li>
-</ul>
-<h2 id="themes">Themes</h2>
-<ul>
-<li>AI coding evaluation is shifting from model comparison to system-level reproducibility</li>
-<li>Benchmark harness and runtime specification are becoming critical to trustworthy leaderboards</li>
-</ul>
-<h2 id="implications">Implications</h2>
-<ul>
-<li>Internal evaluation platforms should package container specs, CPU/RAM, timeout, and retry policy as part of the benchmark artifact rather than leaving them as hidden defaults.</li>
-<li>When procuring or switching coding models, do not rely on public leaderboards alone; require reproducible experiment configs and infrastructure logs.</li>
-<li>Platform teams should prioritize a unified eval harness, task-level resource declarations, and clear separation of infra failures from model failures.</li>
-</ul>
-<h2 id="recommended-reading-order">Recommended Reading Order</h2>
-<ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-</ul>
-<h2 id="what-to-ignore">What to Ignore</h2>
-<ul>
-<li>Do not treat small leaderboard gaps as direct evidence of true model capability differences.</li>
-<li>Do not ignore the benchmark runtime environment; in agentic coding, the environment is not a neutral container but part of the test itself.</li>
-</ul>
-<h2 id="sources-checked">Sources Checked</h2>
-<ul>
-<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
-</ul>
+<p>Today has no high-signal AI coding updates worth a full digest.</p>
         </main>
       </div>
     </div>
