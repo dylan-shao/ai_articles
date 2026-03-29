@@ -2,6 +2,69 @@
   "updated_at": "2026-03-29",
   "items": [
     {
+      "title": "View Agentic Workflow configs in the Actions run summary",
+      "url": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
+      "summary": "GitHub 现在允许在 Actions run summary 中直接查看 Agentic Workflow 的 markdown 配置，减少页面跳转，并显式展示某次运行使用的精确配置。",
+      "published_date": "2026-03-26",
+      "source": "GitHub Changelog",
+      "added_from": "daily_digest",
+      "added_on": "2026-03-27"
+    },
+    {
+      "title": "GitHub Copilot for Jira — Public preview enhancements",
+      "url": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
+      "summary": "GitHub 更新了 Copilot coding agent for Jira：改进接入与报错提示、支持在 Jira 评论中指定模型、自动把 Jira ticket 号写入 PR 标题和分支名，并通过 Atlassian MCP server 把 Confluence 文档作为代理上下文接入。",
+      "published_date": "2026-03-25T00:00:00+00:00",
+      "source": "GitHub Changelog",
+      "added_from": "daily_digest",
+      "added_on": "2026-03-26"
+    },
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary": "从评测基础设施层面解释 harness engineering：容器资源、执行环境和 headroom 选择会显著影响 agentic coding benchmark，必须把 infra 当成一等实验变量。",
+      "published_date": "2026-03-25",
+      "source": "Anthropic Engineering",
+      "added_from": "seed",
+      "added_on": "2026-03-27",
+      "video": {
+        "video_id": "o5Mi5SYSDnY",
+        "youtube_url": "https://www.youtube.com/watch?v=o5Mi5SYSDnY&t=4s",
+        "embed_url": "https://www.youtube.com/embed/o5Mi5SYSDnY?rel=0",
+        "slug": "quantifying-infrastructure-noise-in-agentic-coding-evals-o5Mi5SYSDnY",
+        "overview_zh": "测试用手动视频挂载：这个页面用于验证文章旁的 YouTube 图标、视频详情页、以及右侧时间片段跳转交互是否正常。后续当流水线能成功抓到 transcript 并调用模型时，这里会被真实的视频总结覆盖。",
+        "overview_en": "Manual test video attachment. This lets us verify the article-level YouTube icon, the dedicated video page, and timestamp jump behavior before transcript-backed summaries are available in the pipeline.",
+        "summary_basis_zh": "这版是手动测试数据，用于验证站点交互，不代表真实 transcript 提炼结果。",
+        "summary_basis_en": "This is manual test data for validating the site interaction, not a real transcript-derived summary.",
+        "highlights": [
+          {
+            "start_seconds": 4,
+            "timecode": "0:04",
+            "title_zh": "测试起点",
+            "title_en": "Test start",
+            "summary_zh": "从这里开始验证视频页面是否能正确从指定时间播放。",
+            "summary_en": "Use this point to confirm the player starts from the requested timestamp."
+          },
+          {
+            "start_seconds": 60,
+            "timecode": "1:00",
+            "title_zh": "中段跳转",
+            "title_en": "Midpoint jump",
+            "summary_zh": "用于验证点击右侧摘要卡片后，左侧 iframe 是否会刷新并跳到对应时间。",
+            "summary_en": "Use this to verify that clicking a summary card reloads the iframe at the matching time."
+          },
+          {
+            "start_seconds": 180,
+            "timecode": "3:00",
+            "title_zh": "长距离跳转",
+            "title_en": "Long jump",
+            "summary_zh": "这个片段主要用于测试较远时间点的跳转是否稳定。",
+            "summary_en": "This jump is mainly for checking that larger seeks still work reliably."
+          }
+        ]
+      }
+    },
+    {
       "title": "How Stripe's AI 'Minions' Ship 1,300 PRs Weekly from a Slack Emoji",
       "url": "https://www.chatprd.ai/how-i-ai/stripes-ai-minions-ship-1300-prs-weekly-from-a-slack-emoji",
       "summary": "ChatPRD 对 Stripe engineer Steve Kaliski 的节目整理：核心看点包括从 Slack emoji 触发 coding agent、基于云开发环境并行运行 Minions、以及让 agent 通过 machine payments 调用外部付费服务完成复杂任务。",
@@ -74,69 +137,6 @@
             "title_en": "Ephemeral API-first businesses for agents",
             "summary_zh": "结尾部分把演示提升到商业层面，讨论未来可能出现大量主要服务于 agent 的 API-first 公司，它们不需要复杂 UI，只需要高价值、可按需付费的接口。",
             "summary_en": "The closing argument moves from workflow to market structure, describing a future where many businesses are built primarily for agents through high-value, on-demand APIs instead of rich human-facing UIs."
-          }
-        ]
-      }
-    },
-    {
-      "title": "View Agentic Workflow configs in the Actions run summary",
-      "url": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
-      "summary": "GitHub 现在允许在 Actions run summary 中直接查看 Agentic Workflow 的 markdown 配置，减少页面跳转，并显式展示某次运行使用的精确配置。",
-      "published_date": "2026-03-26",
-      "source": "GitHub Changelog",
-      "added_from": "daily_digest",
-      "added_on": "2026-03-27"
-    },
-    {
-      "title": "GitHub Copilot for Jira — Public preview enhancements",
-      "url": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
-      "summary": "GitHub 更新了 Copilot coding agent for Jira：改进接入与报错提示、支持在 Jira 评论中指定模型、自动把 Jira ticket 号写入 PR 标题和分支名，并通过 Atlassian MCP server 把 Confluence 文档作为代理上下文接入。",
-      "published_date": "2026-03-25T00:00:00+00:00",
-      "source": "GitHub Changelog",
-      "added_from": "daily_digest",
-      "added_on": "2026-03-26"
-    },
-    {
-      "title": "Quantifying infrastructure noise in agentic coding evals",
-      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-      "summary": "从评测基础设施层面解释 harness engineering：容器资源、执行环境和 headroom 选择会显著影响 agentic coding benchmark，必须把 infra 当成一等实验变量。",
-      "published_date": "2026-03-25",
-      "source": "Anthropic Engineering",
-      "added_from": "seed",
-      "added_on": "2026-03-27",
-      "video": {
-        "video_id": "o5Mi5SYSDnY",
-        "youtube_url": "https://www.youtube.com/watch?v=o5Mi5SYSDnY&t=4s",
-        "embed_url": "https://www.youtube.com/embed/o5Mi5SYSDnY?rel=0",
-        "slug": "quantifying-infrastructure-noise-in-agentic-coding-evals-o5Mi5SYSDnY",
-        "overview_zh": "测试用手动视频挂载：这个页面用于验证文章旁的 YouTube 图标、视频详情页、以及右侧时间片段跳转交互是否正常。后续当流水线能成功抓到 transcript 并调用模型时，这里会被真实的视频总结覆盖。",
-        "overview_en": "Manual test video attachment. This lets us verify the article-level YouTube icon, the dedicated video page, and timestamp jump behavior before transcript-backed summaries are available in the pipeline.",
-        "summary_basis_zh": "这版是手动测试数据，用于验证站点交互，不代表真实 transcript 提炼结果。",
-        "summary_basis_en": "This is manual test data for validating the site interaction, not a real transcript-derived summary.",
-        "highlights": [
-          {
-            "start_seconds": 4,
-            "timecode": "0:04",
-            "title_zh": "测试起点",
-            "title_en": "Test start",
-            "summary_zh": "从这里开始验证视频页面是否能正确从指定时间播放。",
-            "summary_en": "Use this point to confirm the player starts from the requested timestamp."
-          },
-          {
-            "start_seconds": 60,
-            "timecode": "1:00",
-            "title_zh": "中段跳转",
-            "title_en": "Midpoint jump",
-            "summary_zh": "用于验证点击右侧摘要卡片后，左侧 iframe 是否会刷新并跳到对应时间。",
-            "summary_en": "Use this to verify that clicking a summary card reloads the iframe at the matching time."
-          },
-          {
-            "start_seconds": 180,
-            "timecode": "3:00",
-            "title_zh": "长距离跳转",
-            "title_en": "Long jump",
-            "summary_zh": "这个片段主要用于测试较远时间点的跳转是否稳定。",
-            "summary_en": "This jump is mainly for checking that larger seeks still work reliably."
           }
         ]
       }
