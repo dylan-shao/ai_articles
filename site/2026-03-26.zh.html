@@ -7,23 +7,84 @@
     <style>
       :root {
         color-scheme: light;
+        --font-body: Georgia, "Times New Roman", serif;
+        --font-display: Georgia, "Times New Roman", serif;
         --bg: #f3efe6;
         --panel: #fffdf7;
         --sidebar: #f7f1e5;
+        --nav: rgba(255, 250, 242, 0.86);
         --ink: #1d232b;
         --muted: #606a78;
         --accent: #9f3f14;
         --accent-soft: #f5e4d8;
         --line: #e3d6bf;
+        --shadow: 0 12px 30px rgba(58, 43, 21, 0.06);
+        --panel-radius: 20px;
+        --chip-bg: #fffaf2;
+        --hero-glow: radial-gradient(circle at top left, #fff9ef 0%, transparent 35%);
+        --page-gradient: linear-gradient(180deg, #fbf6ed 0%, var(--bg) 100%);
+        --sidebar-gradient: linear-gradient(180deg, #fbf5ea 0%, var(--sidebar) 100%);
+        --panel-padding: 30px;
+        --sidebar-width: 280px;
+        --nav-border: 1px solid rgba(227, 214, 191, 0.8);
+      }
+      body[data-theme="neo"] {
+        --font-body: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+        --font-display: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+        --bg: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.88);
+        --sidebar: rgba(232, 242, 255, 0.92);
+        --nav: rgba(249, 252, 255, 0.82);
+        --ink: #10233f;
+        --muted: #4d6484;
+        --accent: #0c63ff;
+        --accent-soft: rgba(12, 99, 255, 0.12);
+        --line: rgba(115, 154, 220, 0.28);
+        --shadow: 0 24px 60px rgba(33, 71, 132, 0.16);
+        --panel-radius: 28px;
+        --chip-bg: rgba(255, 255, 255, 0.72);
+        --hero-glow:
+          radial-gradient(circle at 10% 10%, rgba(108, 160, 255, 0.38) 0%, transparent 28%),
+          radial-gradient(circle at 92% 14%, rgba(94, 214, 202, 0.22) 0%, transparent 20%);
+        --page-gradient: linear-gradient(180deg, #f8fbff 0%, #edf4ff 52%, #e5efff 100%);
+        --sidebar-gradient: linear-gradient(180deg, rgba(245, 250, 255, 0.95) 0%, rgba(230, 240, 255, 0.92) 100%);
+        --panel-padding: 36px;
+        --sidebar-width: 300px;
+        --nav-border: 1px solid rgba(115, 154, 220, 0.2);
+      }
+      body[data-theme="bulletin"] {
+        --font-body: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        --font-display: "Impact", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        --bg: #efe0c9;
+        --panel: #fffaf1;
+        --sidebar: #f5e7cf;
+        --nav: rgba(255, 247, 232, 0.86);
+        --ink: #241810;
+        --muted: #70584c;
+        --accent: #b43a24;
+        --accent-soft: rgba(180, 58, 36, 0.13);
+        --line: #d5ba95;
+        --shadow: 0 18px 44px rgba(77, 43, 22, 0.12);
+        --panel-radius: 16px;
+        --chip-bg: #fff3df;
+        --hero-glow:
+          radial-gradient(circle at top left, rgba(255, 236, 196, 0.85) 0%, transparent 32%),
+          linear-gradient(135deg, transparent 0%, transparent 68%, rgba(180, 58, 36, 0.06) 68%, rgba(180, 58, 36, 0.06) 71%, transparent 71%);
+        --page-gradient: linear-gradient(180deg, #f6ebd8 0%, #eee0c9 100%);
+        --sidebar-gradient: linear-gradient(180deg, #f9edda 0%, #f0dec1 100%);
+        --panel-padding: 32px;
+        --sidebar-width: 292px;
+        --nav-border: 1px solid rgba(122, 83, 56, 0.24);
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: var(--font-body);
         background:
-          radial-gradient(circle at top left, #fff9ef 0%, transparent 35%),
-          linear-gradient(180deg, #fbf6ed 0%, var(--bg) 100%);
+          var(--hero-glow),
+          var(--page-gradient);
         color: var(--ink);
+        transition: background 220ms ease, color 220ms ease;
       }
       a { color: var(--accent); }
       .wrap {
@@ -33,34 +94,66 @@
       }
       .nav {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         gap: 16px;
         flex-wrap: wrap;
         margin-bottom: 18px;
         color: var(--muted);
+        padding: 14px 16px;
+        border: var(--nav-border);
+        border-radius: calc(var(--panel-radius) - 2px);
+        background: var(--nav);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
       }
-      .nav a {
+      .nav-links, .theme-switch {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .nav a, .theme-switch button {
         text-decoration: none;
         font-weight: 700;
+        color: var(--ink);
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius: 999px;
+        padding: 10px 14px;
+        cursor: pointer;
+        font: inherit;
+        transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+      }
+      .nav a:hover, .theme-switch button:hover {
+        transform: translateY(-1px);
+        background: var(--chip-bg);
+        border-color: var(--line);
+      }
+      .theme-switch button.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
       }
       .layout {
         display: grid;
-        grid-template-columns: 280px minmax(0, 1fr);
+        grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
         gap: 18px;
         align-items: start;
       }
       .sidebar, .panel {
         border: 1px solid var(--line);
-        border-radius: 20px;
-        box-shadow: 0 12px 30px rgba(58, 43, 21, 0.06);
+        border-radius: var(--panel-radius);
+        box-shadow: var(--shadow);
       }
       .sidebar {
         position: sticky;
         top: 18px;
         padding: 20px;
-        background: linear-gradient(180deg, #fbf5ea 0%, var(--sidebar) 100%);
+        background: var(--sidebar-gradient);
       }
       .panel {
-        padding: 30px;
+        padding: var(--panel-padding);
         background: var(--panel);
       }
       .sidebar h2, .sidebar h3 {
@@ -69,6 +162,8 @@
       }
       .sidebar h2 {
         font-size: 1.1rem;
+        font-family: var(--font-display);
+        letter-spacing: 0.02em;
       }
       .sidebar h3 {
         margin-top: 22px;
@@ -106,7 +201,7 @@
       .lang-switch a {
         text-align: center;
         border: 1px solid var(--line);
-        background: #fffaf2;
+        background: var(--chip-bg);
       }
       .meta-note {
         margin: 14px 0 0;
@@ -115,10 +210,12 @@
       }
       .panel h1, .panel h2, .panel h3 {
         line-height: 1.2;
+        font-family: var(--font-display);
       }
       .panel h1 {
         margin-top: 0;
-        font-size: 2rem;
+        font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+        letter-spacing: 0.02em;
       }
       .panel h2 {
         margin-top: 2rem;
@@ -128,14 +225,67 @@
         padding-left: 1.25rem;
       }
       .panel code {
-        background: #f4ecdf;
+        background: var(--chip-bg);
         border-radius: 4px;
         padding: 0.1em 0.3em;
+      }
+      .panel p, .panel li {
+        font-size: 1.02rem;
+        line-height: 1.72;
+      }
+      .panel p {
+        margin: 0.9rem 0 1rem;
+      }
+      .panel h2[id="selected-items"] {
+        padding-top: 0.4rem;
+        border-top: 1px solid var(--line);
       }
       .priority-note {
         margin: -0.2rem 0 1.2rem;
         color: var(--muted);
         font-size: 0.95rem;
+      }
+      .theme-note {
+        margin-top: 18px;
+        padding: 12px 14px;
+        border: 1px dashed var(--line);
+        border-radius: 14px;
+        background: var(--chip-bg);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      body[data-theme="neo"] .panel {
+        backdrop-filter: blur(16px);
+      }
+      body[data-theme="neo"] .panel h2 {
+        display: inline-block;
+        padding: 0.2rem 0.8rem 0.28rem;
+        border-radius: 999px;
+        background: rgba(12, 99, 255, 0.08);
+      }
+      body[data-theme="neo"] .sidebar a.current {
+        box-shadow: inset 0 0 0 1px rgba(12, 99, 255, 0.14);
+      }
+      body[data-theme="bulletin"] .panel {
+        position: relative;
+      }
+      body[data-theme="bulletin"] .panel::before {
+        content: "FIELD REPORT";
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.3rem 0.55rem;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        font: 700 0.78rem/1 var(--font-display);
+        letter-spacing: 0.14em;
+      }
+      body[data-theme="bulletin"] .panel h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      body[data-theme="bulletin"] .panel h2 {
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 0.35rem;
       }
       @media (max-width: 900px) {
         .layout {
@@ -144,21 +294,34 @@
         .sidebar {
           position: static;
         }
+        .nav {
+          padding: 12px;
+        }
+        .nav-links, .theme-switch {
+          width: 100%;
+        }
       }
     </style>
   </head>
-  <body>
+  <body data-theme="classic">
     <div class="wrap">
       <div class="nav">
-        <a href="index.html">Latest</a>
-        <a href="archive.html">Archive</a>
-        <a href="harness.html">Harness Library</a>
-        <a href="latest.zh.html">中文</a>
-        <a href="latest.en.html">English</a>
+        <div class="nav-links">
+          <a href="index.html">Latest</a>
+          <a href="archive.html">Archive</a>
+          <a href="harness.html">Harness Library</a>
+          <a href="latest.zh.html">中文</a>
+          <a href="latest.en.html">English</a>
+        </div>
+        <div class="theme-switch" aria-label="Theme switcher">
+          <button type="button" data-theme-option="classic">Classic</button>
+          <button type="button" data-theme-option="neo">Neo</button>
+          <button type="button" data-theme-option="bulletin">Bulletin</button>
+        </div>
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-03-26.zh.html'>中文</a><a class="" href='2026-03-26.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='current' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-03-26.zh.html'>中文</a><a class="" href='2026-03-26.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='current' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
           <h1 id="ai-coding-daily-digest-2026-03-26">AI Coding Daily Digest - 2026-03-26</h1>
@@ -316,5 +479,42 @@ Scores: signal 7/5, novelty 6/5, actionability 7/5</p>
         </main>
       </div>
     </div>
+    <script>
+      (function () {
+        var key = "ai-digest-theme";
+        var allowed = ["classic", "neo", "bulletin"];
+        var body = document.body;
+        var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-theme-option]"));
+
+        function setTheme(theme) {
+          var nextTheme = allowed.indexOf(theme) >= 0 ? theme : "classic";
+          body.setAttribute("data-theme", nextTheme);
+          buttons.forEach(function (button) {
+            button.classList.toggle("active", button.getAttribute("data-theme-option") === nextTheme);
+          });
+          try {
+            window.localStorage.setItem(key, nextTheme);
+          } catch (err) {
+          }
+        }
+
+        var initialTheme = "classic";
+        try {
+          var stored = window.localStorage.getItem(key);
+          if (stored && allowed.indexOf(stored) >= 0) {
+            initialTheme = stored;
+          }
+        } catch (err) {
+        }
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            setTheme(button.getAttribute("data-theme-option"));
+          });
+        });
+
+        setTheme(initialTheme);
+      })();
+    </script>
   </body>
 </html>

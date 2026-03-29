@@ -89,7 +89,7 @@ Official GitHub references:
 - improve each source parser instead of relying on generic landing-page extraction
 - add retries and partial-failure reporting
 - add a monthly archive page and RSS/JSON feed
-- persist per-source dedupe state
+- extend cross-day URL dedupe beyond the recent digest window if longer suppression becomes useful
 - optionally add Slack or email delivery
 # ai_articles
 # ai_articles

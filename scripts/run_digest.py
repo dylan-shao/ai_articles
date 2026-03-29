@@ -30,6 +30,7 @@ HARNESS_LIBRARY_PATH = DATA_COLLECTIONS_DIR / "harness_articles.json"
 DEFAULT_TIMEOUT = 20
 MAX_LINKS_PER_SOURCE = 16
 MIN_KEYWORD_HITS = 2
+RECENT_DIGEST_DEDUPE_DAYS = 3
 KEYWORDS = [
     "ai coding",
     "coding agent",
@@ -175,6 +176,26 @@ def slug_date(dt: datetime) -> str:
 def ensure_dirs() -> None:
     for directory in [CONTENT_DIR, DATA_RAW_DIR, DATA_PROCESSED_DIR, DATA_COLLECTIONS_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
+
+
+def load_recent_digest_urls(today: str, lookback_days: int = RECENT_DIGEST_DEDUPE_DAYS) -> set[str]:
+    today_dt = datetime.strptime(today, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    seen_urls: set[str] = set()
+    for offset in range(1, lookback_days + 1):
+        day = slug_date(today_dt - timedelta(days=offset))
+        path = DATA_PROCESSED_DIR / f"{day}.json"
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except json.JSONDecodeError as exc:
+            print(f"[warn] failed to parse historical digest {path.name}: {exc}", file=sys.stderr)
+            continue
+        for item in payload.get("items", []):
+            url = item.get("url")
+            if url:
+                seen_urls.add(url)
+    return seen_urls
 
 
 def clean_text(value: str) -> str:
@@ -366,12 +387,14 @@ def extract_candidate(session: requests.Session, source: dict, article_url: str,
     )
 
 
-def collect_candidates(now: datetime) -> list[Candidate]:
+def collect_candidates(now: datetime, today: str) -> list[Candidate]:
     since = now - timedelta(hours=30)
+    recent_digest_urls = load_recent_digest_urls(today)
     session = requests.Session()
     candidates: list[Candidate] = []
     for source in load_sources():
         source_hits = 0
+        skipped_for_history = 0
         try:
             links = extract_links(session, source)
         except requests.RequestException as exc:
@@ -395,9 +418,15 @@ def collect_candidates(now: datetime) -> list[Candidate]:
                 print(f"[warn] failed to parse article {link}: {exc}", file=sys.stderr)
                 continue
             if candidate:
+                if candidate.url in recent_digest_urls:
+                    skipped_for_history += 1
+                    continue
                 candidates.append(candidate)
                 source_hits += 1
-        print(f"[info] {source['name']}: kept {source_hits} candidates from {len(links)} links")
+        print(
+            f"[info] {source['name']}: kept {source_hits} candidates from {len(links)} links"
+            f" ({skipped_for_history} skipped as recent digest repeats)"
+        )
     deduped: dict[str, Candidate] = {}
     for item in candidates:
         deduped[item.url] = item
@@ -622,7 +651,7 @@ def main() -> int:
 
     ensure_dirs()
     today_dt = datetime.strptime(args.today, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-    candidates = collect_candidates(today_dt)
+    candidates = collect_candidates(today_dt, args.today)
     print(f"[info] collected {len(candidates)} total candidates")
     if not candidates:
         raise RuntimeError("No candidates collected. Check source fetchers or network access.")
