@@ -35,5 +35,12 @@
     "allowed_domains": ["github.blog"],
     "allowed_path_prefixes": ["/changelog/"],
     "priority": 2
+  },
+  {
+    "name": "ChatPRD Blog",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "allowed_domains": ["www.chatprd.ai", "chatprd.ai"],
+    "allowed_path_prefixes": ["/blog"],
+    "priority": 2
   }
 ]
