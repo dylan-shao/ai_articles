@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-30T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available projects & issues Mar.12 Release Issue fields: Structured issue metadata is in public preview projects & issues Mar.05 Improvement Hierarchy view improvements and file uploads in issue forms projects & issues February Feb 2026 February Feb 2026 Feb.26 Improvement Improved search on the issues dashboard projects & issues Feb.19 Release GitHub Projects: Import items based on a query and hierarchy view improvements projects & issues Feb.13 Improvement Updated GitHub status page experience actions collaboration tools copilot platform governance projects & issues ... +4 Feb.13 Release GitHub Agentic Workflows are now in technical preview actions collaboration tools copilot projects & issues ... +3 Feb.05 Release Pinned comments on GitHub Issues projects & issues January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my informa",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-30T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Retired Gemini 3 Pro deprecated copilot Mar.26 Improvement Credential revocation API now supports GitHub OAuth and GitHub app credentials application security Mar.26 Improvement Ask @copilot to resolve merge conflicts on pull requests copilot Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.26 Improvement View Agentic Workflow configs in the Actions run summary actions Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.26 Release Custom images for GitHub-hosted runners are now generally available actions Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.24 Retired Upcoming deprecation of security-related organization API fields application security supply chain security ... +1 Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot coding agent repository a",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: March 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/03/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-30T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: March 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Retired Gemini 3 Pro deprecated copilot Mar.26 Improvement Credential revocation API now supports GitHub OAuth and GitHub app credentials application security Mar.26 Improvement Ask @copilot to resolve merge conflicts on pull requests copilot Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.26 Improvement View Agentic Workflow configs in the Actions run summary actions Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.26 Release Custom images for GitHub-hosted runners are now generally available actions Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement Copilot usage metrics now identify active Copilot coding agent users copilot Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.24 Retired Upcoming deprecation of security-related organization API fields application security supply chain security ... +1 Mar.24 Improvement Ask @copilot to make changes to a pull request copilot Mar.24 Release Manage Copilot cod",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Create issues from Slack with Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-30T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now create GitHub Issues directly from Slack using natural language with the GitHub app for Slack. Mention @GitHub in any channel, describe the work you need to track,…",
+    "body_excerpt": "Create issues from Slack with Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release March 30, 2026 • 1 minute read Create issues from Slack with Copilot Table of Contents Key capabilities Try it out Menu. Currently selected: Key capabilities Key capabilities Try it out You can now create GitHub Issues directly from Slack using natural language with the GitHub app for Slack. Mention @GitHub in any channel, describe the work you need to track, and the app creates structured issues in your repository. The app can even create sub-issues with proper hierarchy. Building on the Copilot coding agent integration , the Slack app now brings issue creation into the chat context where teams already discuss their work. Key capabilities Natural language issue creation : Describe work in plain language and @GitHub creates structured issues with titles, bodies, assignees, labels, and milestones. Sub-issue support : Break down work into parent and child issues from a single message. Conversation mode : Iterate on issues in a Slack thread with @GitHub to refine details before creation. Issue flex pane : You can view the issues you’ve created directly from Slack by clicking on the title. Channel-level instructions : By running the command @GitHub settings , you can now set default working repositories for the issues and pull requests the GitHub app creates in your channel. Try it out Make sure GitHub Copilot is enabled for your account. This feature is available with all Copilot plans. Install or upgrade the GitHub app in your Slack workspace. Mention @GitHub in any Slack channel with a prompt like Create an issue in my-org/my-repo to add dark mode support for the settings page and follow along as the issue is created. Join the discussion in the GitHub Community . Table of Contents Key capabilities Try it out Me",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

@@ -511,11 +511,69 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-03-30">AI Coding Daily Digest - 2026-03-30</h1>
-<p>Today has no high-signal AI coding updates worth a full digest.</p>
+          <h1 id="ai-coding-daily-digest-2026-03-31">AI Coding Daily Digest - 2026-03-31</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<ul>
+<li>今天候选内容几乎全部来自 GitHub Changelog，且大多是聚合页；真正可单独成条且与工程管理/开发流程相关的高信号内容只有一项：Copilot 已可直接在 Slack 中通过自然语言创建 GitHub Issues。</li>
+<li>这条更新的核心价值不在模型能力突破，而在把工单生成、层级拆解与仓库默认配置前移到团队真实协作入口，反映 AI coding 正从 IDE 内助手扩展为跨沟通与项目管理的工作流代理。</li>
+<li>由于缺少更深入的原始技术材料（如评测、agent harness、MCP、仓库理解或组织部署细节），今天不适合做完整日报。</li>
+</ul>
+<h2 id="selected-items">Selected Items</h2>
+<h2 id="create-issues-from-slack-with-copilot">Create issues from Slack with Copilot</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-03-30</li>
+<li>URL: <a href="https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/">https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/</a></li>
+</ul>
+<p>GitHub 宣布 Slack 集成新增 Copilot 驱动的 Issue 创建能力：团队成员可在 Slack 频道中 @GitHub，用自然语言直接生成结构化 GitHub Issues，并支持 assignee、labels、milestones 以及父子 issue 层级。用户还可在 Slack 线程中继续迭代需求细节，并通过频道级设置指定默认仓库。</p>
+<p>Why it matters: 对平台和工程负责人而言，这代表 AI coding agent 正在从“写代码助手”演进为“团队工作流入口代理”。需求捕获不再局限于开发者手工把聊天内容搬运到 issue tracker，而是直接在协作上下文中生成可执行工单，这会影响需求吞吐、任务结构化质量、项目可追踪性，以及后续 agent 自动接单/生成 PR 的闭环设计。</p>
+<p>Key takeaways:
+- 自然语言到结构化 issue 的转换被前移到 Slack，对跨职能团队更友好。
+- 支持子任务层级与线程内迭代，说明 GitHub 正把 agent 能力嵌入项目管理而非只停留在代码编辑层。
+- 频道级默认仓库设置降低了多仓库组织中的操作摩擦，是实际落地而非演示型功能。</p>
+<p>Tags: GitHub Copilot, Slack, Issue Management, Agentic Workflow, Developer Tooling
+Scores: signal 7/5, novelty 5/5, actionability 7/5</p>
+<h2 id="top-items">Top Items</h2>
+<ul>
+<li>Create issues from Slack with Copilot</li>
+</ul>
+<h2 id="new-terms">New Terms</h2>
+<ul>
+<li>Conversation mode：在 Slack 线程中与 @GitHub 往返迭代 issue 内容后再落库。</li>
+<li>Channel-level instructions：为某个 Slack 频道设置默认工作仓库，影响后续 issue/PR 创建目标。</li>
+</ul>
+<h2 id="themes">Themes</h2>
+<ul>
+<li>AI coding 从 IDE 内助手扩展到聊天与项目管理入口。</li>
+<li>工单 intake 自动化成为 agent 工作流的重要前置层。</li>
+<li>开发工具竞争正在转向跨系统编排，而不只是代码补全质量。</li>
+</ul>
+<h2 id="implications">Implications</h2>
+<ul>
+<li>组织应开始定义‘聊天到工单’的质量门槛，例如标签策略、模板规范、默认仓库映射和审计要求。</li>
+<li>如果后续再接上 agent 自动实现 issue、生成 PR、更新状态，Slack 可能成为开发工作流的新控制面。</li>
+<li>平台团队需要考虑权限边界：谁能在聊天里触发 issue 创建、写入哪些仓库、是否需要审批与可追踪日志。</li>
+</ul>
+<h2 id="recommended-reading-order">Recommended Reading Order</h2>
+<ul>
+<li>Create issues from Slack with Copilot</li>
+</ul>
+<h2 id="what-to-ignore">What to Ignore</h2>
+<ul>
+<li>GitHub Changelog 的聚合页与月度归档页本身不应单独纳入日报，它们只是目录，不提供额外技术细节。</li>
+<li>今天没有足够信息支撑对‘GitHub Agentic Workflows’等更大主题作深入判断；不要仅凭 changelog 标题推断能力边界。</li>
+</ul>
+<h2 id="sources-checked">Sources Checked</h2>
+<ul>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+</ul>
         </main>
       </div>
     </div>
