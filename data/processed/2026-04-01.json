@@ -1,0 +1,119 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容里，唯一明显高信号的是 Anthropic 关于 agentic coding eval 基础设施噪声的技术分析：它指出运行时资源、限额和执行环境配置本身就足以让 SWE-bench/Terminal-Bench 一类评测波动数个百分点，甚至超过模型排行榜差距。",
+    "其核心价值不在模型发布，而在评测方法学：对工程负责人而言，这意味着内部选型、A/B 对比和供应商评估如果不控制 infra 变量，结论可能是伪精确的。",
+    "其余 GitHub Changelog 项大多是产品更新或合规变更，缺少足够深入的技术细节；除非你的团队正在建设 Copilot 采用度量体系，否则不值得进入完整日报。"
+  ],
+  "executive_summary_en": [
+    "The only clearly high-signal item today is Anthropic’s technical write-up on infrastructure noise in agentic coding evals: runtime resources, limits, and environment configuration alone can shift benchmark scores by multiple points—sometimes more than the gap between top models.",
+    "The key value is methodological, not launch-related: for engineering leaders, this means internal model selection, vendor comparisons, and agent A/B tests can be falsely precise unless infra variables are controlled.",
+    "The remaining GitHub Changelog entries are mostly product or compliance updates without enough technical depth; unless you are actively building Copilot adoption telemetry, they do not justify a full digest."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 分析了 agentic coding benchmark 中由基础设施配置引入的方差，指出在 Terminal-Bench 2.0 上，仅资源配置差异就可带来约 6 个百分点的成绩波动，而且这种波动足以超过模型之间常见的 leaderboard 差距。文章强调，agentic eval 与静态基准不同，运行时环境本身是问题求解的一部分，因此 CPU、RAM、超时、容器调度、依赖安装和错误恢复机制都会改变“被测对象”。",
+      "summary_en": "Anthropic examines variance introduced by infrastructure configuration in agentic coding benchmarks, showing that on Terminal-Bench 2.0, resource setup alone can produce roughly a 6-point score swing—large enough to exceed typical leaderboard gaps between models. The post argues that unlike static benchmarks, agentic evals make the runtime part of the task itself, so CPU, RAM, time limits, container scheduling, dependency installation, and error handling all materially affect what is being measured.",
+      "why_it_matters_zh": "这直接影响企业如何解读 coding-agent 评测结果。若运行环境没有严格标准化，那么“模型更强”可能只是“给了更多时间、更多内存、不同的 sandbox 策略”。对于内部基准、采购评估和 agent harness 设计，这篇文章提供了比单纯看 leaderboard 更重要的方法论提醒。",
+      "why_it_matters_en": "This directly changes how enterprises should interpret coding-agent benchmarks. If runtime conditions are not tightly standardized, 'the better model' may simply be 'the model with more time, more memory, or a different sandbox policy.' For internal evals, vendor selection, and harness design, this methodological warning matters more than leaderboard deltas.",
+      "key_takeaways_zh": [
+        "Agentic coding eval 不是纯模型测试，运行环境是测量系统的一部分；infra 变量必须被显式控制和记录。",
+        "小幅 leaderboard 差距可能没有统计意义，尤其当资源预算、执行策略和失败恢复路径不一致时。"
+      ],
+      "key_takeaways_en": [
+        "Agentic coding evals are not pure model tests; the runtime environment is part of the measurement system and infra variables must be explicitly controlled and logged.",
+        "Small leaderboard gaps may be meaningless when resource budgets, execution policies, and failure-recovery behavior differ across setups."
+      ],
+      "tags": [
+        "agentic-evals",
+        "benchmarking",
+        "harness-design",
+        "infra",
+        "Terminal-Bench",
+        "SWE-bench"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "Copilot usage metrics now includes organization-level GitHub Copilot CLI activity",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-03-17T00:00:00+00:00",
+      "url": "https://github.blog/2026/",
+      "summary_zh": "GitHub 在企业级 Copilot 指标中纳入了 organization-level 的 Copilot CLI 活动，可用于更完整地观测团队在终端环境中的 AI 使用情况。候选信息来自汇总式 changelog 页面，技术细节有限，但它表明 GitHub 正在把 AI 编码采用度量从 IDE 扩展到 CLI 与更广泛的 agent surface。",
+      "summary_en": "GitHub has added organization-level Copilot CLI activity to enterprise Copilot metrics, enabling a more complete view of team AI usage in terminal workflows. The candidate comes from an aggregate changelog page with limited technical detail, but it signals GitHub’s continued expansion of AI coding adoption telemetry beyond IDE usage into CLI and broader agent surfaces.",
+      "why_it_matters_zh": "这对平台团队有一定参考价值，因为组织采用 AI coding 之后，真正难的是治理和度量，而不是开通许可证。CLI 指标意味着企业开始能把命令行场景纳入使用分析、ROI 评估和合规审计。",
+      "why_it_matters_en": "This matters somewhat for platform teams because after enabling AI coding tools, the harder problem is governance and measurement rather than license rollout. CLI metrics suggest enterprises can increasingly include terminal usage in adoption analysis, ROI tracking, and compliance review.",
+      "key_takeaways_zh": [
+        "AI coding 采用度量正在从编辑器扩展到终端与 agent workflow。",
+        "对企业而言，观测层建设正成为 AI coding 规模化落地的必要条件。"
+      ],
+      "key_takeaways_en": [
+        "AI coding telemetry is expanding from editors into terminal and agent workflows.",
+        "For enterprises, observability is becoming a prerequisite for scaling AI coding adoption."
+      ],
+      "tags": [
+        "Copilot",
+        "adoption-metrics",
+        "CLI",
+        "enterprise-governance"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Copilot usage metrics now includes organization-level GitHub Copilot CLI activity"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）",
+    "agentic coding eval",
+    "Terminal-Bench 2.0",
+    "评测 harness 标准化"
+  ],
+  "new_terms_en": [
+    "infrastructure noise",
+    "agentic coding eval",
+    "Terminal-Bench 2.0",
+    "eval harness standardization"
+  ],
+  "themes_zh": [
+    "AI 编码评测正在从“比模型”转向“比模型+运行环境+执行框架”的联合系统评估。",
+    "组织层面的 AI coding 落地重点逐步转向治理、指标与可观测性。"
+  ],
+  "themes_en": [
+    "AI coding evaluation is shifting from 'comparing models' to evaluating the combined system of model, runtime environment, and execution harness.",
+    "At the organizational level, AI coding adoption is increasingly about governance, metrics, and observability."
+  ],
+  "implications_zh": [
+    "如果你的团队在做内部 coding-agent bakeoff，应冻结容器镜像、资源配额、超时、网络策略和重试逻辑，否则结果不具可比性。",
+    "采购或切换模型时，不应只看公开 benchmark 排名；应要求供应商披露 harness、预算和失败处理细节。",
+    "平台团队可以开始把 CLI/terminal 使用纳入 AI 采用度量，但需要结合质量、成功率和成本，而不是只看活跃度。"
+  ],
+  "implications_en": [
+    "If your team is running internal coding-agent bakeoffs, freeze container images, resource quotas, timeouts, network policies, and retry logic or the results will not be comparable.",
+    "When selecting or switching models, do not rely on public benchmark ranks alone; require vendors to disclose harness, budget, and failure-handling details.",
+    "Platform teams can start incorporating CLI/terminal usage into AI adoption telemetry, but should pair it with quality, success-rate, and cost signals rather than activity alone."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Copilot usage metrics now includes organization-level GitHub Copilot CLI activity"
+  ],
+  "what_to_ignore_zh": [
+    "泛化的 GitHub Changelog 聚合页：信息过于碎片化，缺少可执行的技术细节。",
+    "EU data residency/EFTA 这类合规边界更新：对 AI coding 技术栈建设帮助有限，除非你正负责特定区域合规。"
+  ],
+  "what_to_ignore_en": [
+    "Generic GitHub Changelog aggregate pages: too fragmented and lacking actionable technical detail.",
+    "EU data residency / EFTA boundary updates: low relevance to AI coding stack design unless you specifically own regional compliance."
+  ]
+}

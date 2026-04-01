@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+    "source": "Anthropic Engineering",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "landing_url": "https://www.anthropic.com/engineering",
+    "priority": 1,
+    "publish_date": null,
+    "author": null,
+    "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "body_excerpt": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Engineering at Anthropic Quantifying infrastructure noise in agentic coding evals Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models. Agentic coding benchmarks like SWE-bench and Terminal-Bench are commonly used to compare the software engineering capabilities of frontier models—with top spots on leaderboards often separated by just a few percentage points. These scores are often treated as precise measurements of relative model capability and increasingly inform decisions about which models to deploy. However, we’ve found that infrastructure configuration alone can produce differences that exceed those margins. In internal experiments, the gap between the most- and least-resourced setups on Terminal-Bench 2.0 was 6 percentage points (p < 0.01). Static benchmarks score a model's output directly—the runtime environment doesn’t factor into the result. Agentic coding evals are different: models are given a full environment where they write programs, run tests, install dependencies, and iterate over multiple turns. The runtime is no longer a passive container, but an integral component of the problem-solving process. Two agents with different resource budgets and time limits aren't taking the same test. Eval developers have begun accounting for this. Terminal-Bench 2.0, for instance, specifies recommended CPU and RAM on a per-task basis in their latest 2.0 release. However, specifying resources isn't the same as enforcing them consistently. Moreover, we discovered that enforcement methodology can change what the benchmark ends up actually measuring. How we got here We run Terminal-Bench 2.0 on a Google Kubernetes Engine cluster. While calibrating the setup, we noticed our scores didn't match the benchmark’s official leaderboard, and infra error rates were surprisingly high: a",
+    "keyword_hits": 6,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-31T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.31 Upcoming deprecation of Claude Sonnet 4 in GitHub Copilot copilot Mar.31 Improvement GitHub secret scanning — coverage update application security Mar.31 Improvement CodeQL 2.25.0 adds Swift 6.2.4 support application security Mar.31 Improvement CodeQL pull requests insights on security overview now cover all protected branches application security Mar.31 Improvement EU data residency region expanding to include EFTA countries enterprise management tools Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Retired Gemini 3 Pro deprecated copilot Mar.26 Improvement Credential revocation API now supports GitHub OAuth and GitHub app credentials application security Mar.26 Improvement Ask @copilot to resolve merge conflicts on pull requests copilot Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.26 Improvement View Agentic Workflow configs in the Actions run summary actions Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.26 Release Custom images for GitHub-hosted runners are now generally available actions Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management cop",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: March 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/03/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-31T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: March 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.31 Improvement GitHub secret scanning — coverage update application security Mar.31 Improvement CodeQL 2.25.0 adds Swift 6.2.4 support application security Mar.31 Improvement CodeQL pull requests insights on security overview now cover all protected branches application security Mar.31 Improvement EU data residency region expanding to include EFTA countries enterprise management tools Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Retired Gemini 3 Pro deprecated copilot Mar.26 Improvement Credential revocation API now supports GitHub OAuth and GitHub app credentials application security Mar.26 Improvement Ask @copilot to resolve merge conflicts on pull requests copilot Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.26 Improvement View Agentic Workflow configs in the Actions run summary actions Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.26 Release Custom images for GitHub-hosted runners are now generally available actions Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Release Updates to our Privacy Statement and Terms of Service: How we use your data account management copilot platform governance ... +2 Mar.25 Improvement ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-31T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Enterprise management tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply March Mar 2026 March Mar 2026 Mar.31 Improvement EU data residency region expanding to include EFTA countries enterprise management tools Mar.17 Improvement Copilot usage metrics now includes organization-level GitHub Copilot CLI activity account management copilot enterprise management tools ... +2 Mar.05 Improvement Discover and manage agent activity with new session filters copilot enterprise management tools ... +1 Mar.05 Release Copilot usage metrics now includes user-level GitHub Copilot CLI activity account management copilot enterprise management tools ... +2 Mar.03 Release GitHub Code Quality enterprise policy application security enterprise management tools platform governance ... +2 Mar.02 Release Copilot metrics now includes plan mode account management copilot enterprise management tools ... +2 Mar.02 Improvement Copilot metrics reports now return consistent usernames for Enterprise Managed Users account management copilot enterprise management tools ... +2 February Feb 2026 February Feb 2026 Feb.27 Release Copilot usage metrics now includes enterprise-level GitHub Copilot CLI activity account management copilot enterprise management tools ... +2 Feb.27 Release Copilot metrics is now generally available account management copilot enterprise management tools ... +2 Feb.26 Improvement Copilot metrics report URLs update account m",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "EU data residency region expanding to include EFTA countries - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-03-31-eu-data-residency-region-expanding-to-include-efta-countries/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-03-31T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Starting May 1, 2026, the EU data residency region for GitHub Enterprise Cloud on ghe.com will include Azure infrastructure in EFTA (European Free Trade Association) countries—specifically Norway and Switzerland—in addition…",
+    "body_excerpt": "EU data residency region expanding to include EFTA countries - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement March 31, 2026 • 1 minute read EU data residency region expanding to include EFTA countries Starting May 1, 2026 , the EU data residency region for GitHub Enterprise Cloud on ghe.com will include Azure infrastructure in EFTA (European Free Trade Association) countries—specifically Norway and Switzerland —in addition to existing EU member state locations. This aligns GitHub’s EU data residency boundaries with Microsoft’s EU Data Boundary , which covers both EU and EFTA member states. EFTA countries operate under GDPR-equivalent data protection frameworks through the EEA Agreement. What’s changing: Data for EU-region enterprises may be stored and processed in Azure regions in Norway and Switzerland, in addition to existing EU member state regions (i.e., France, Sweden, Germany, Netherlands). What’s unchanged: All compliance certifications (ISO 27001, SOC 2), security controls, and encryption remain in effect. No customer action is required. If your organization requires data to remain exclusively within EU member states, please contact your GitHub account team or GitHub Support before May 1, 2026. For full details, see About storage of your data with data residency and Network details for GHE.com . enterprise management tools Share Copied Shared Back to changelog Related Posts Mar.17 Improvement Copilot usage metrics now includes organization-level GitHub Copilot CLI activity account management copilot enterprise management tools ... +2 Mar.05 Improvement Discover and manage agent activity with new session filters copilot enterprise management tools ... +1 Mar.05 Release Copilot usage metrics now includes user-level GitHub Copilot CLI activity account management copilot enterprise mana",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

@@ -511,64 +511,81 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-03-31">AI Coding Daily Digest - 2026-03-31</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-01">AI Coding Daily Digest - 2026-04-01</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>Today’s candidate set is dominated by GitHub Changelog index pages; only one standalone item is strong enough for an experienced backend/platform engineering audience: Copilot can now create GitHub Issues from Slack using natural language.</li>
-<li>The significance is less about model novelty and more about workflow placement: issue creation, hierarchy decomposition, and repo defaults are moving into the team’s communication surface, showing AI coding expanding from IDE assistance into cross-tool work orchestration.</li>
-<li>Because there is no deeper original technical material today on evals, harness design, MCP, repo understanding, or organizational rollout mechanics, this is not a full-digest day.</li>
+<li>The only clearly high-signal item today is Anthropic’s technical write-up on infrastructure noise in agentic coding evals: runtime resources, limits, and environment configuration alone can shift benchmark scores by multiple points—sometimes more than the gap between top models.</li>
+<li>The key value is methodological, not launch-related: for engineering leaders, this means internal model selection, vendor comparisons, and agent A/B tests can be falsely precise unless infra variables are controlled.</li>
+<li>The remaining GitHub Changelog entries are mostly product or compliance updates without enough technical depth; unless you are actively building Copilot adoption telemetry, they do not justify a full digest.</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="create-issues-from-slack-with-copilot">Create issues from Slack with Copilot</h2>
+<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
+<ul>
+<li>Source: Anthropic Engineering</li>
+<li>Author: N/A</li>
+<li>Publish date: N/A</li>
+<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
+</ul>
+<p>Anthropic examines variance introduced by infrastructure configuration in agentic coding benchmarks, showing that on Terminal-Bench 2.0, resource setup alone can produce roughly a 6-point score swing—large enough to exceed typical leaderboard gaps between models. The post argues that unlike static benchmarks, agentic evals make the runtime part of the task itself, so CPU, RAM, time limits, container scheduling, dependency installation, and error handling all materially affect what is being measured.</p>
+<p>Why it matters: This directly changes how enterprises should interpret coding-agent benchmarks. If runtime conditions are not tightly standardized, 'the better model' may simply be 'the model with more time, more memory, or a different sandbox policy.' For internal evals, vendor selection, and harness design, this methodological warning matters more than leaderboard deltas.</p>
+<p>Key takeaways:
+- Agentic coding evals are not pure model tests; the runtime environment is part of the measurement system and infra variables must be explicitly controlled and logged.
+- Small leaderboard gaps may be meaningless when resource budgets, execution policies, and failure-recovery behavior differ across setups.</p>
+<p>Tags: agentic-evals, benchmarking, harness-design, infra, Terminal-Bench, SWE-bench
+Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+<h2 id="copilot-usage-metrics-now-includes-organization-level-github-copilot-cli-activity">Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: 2026-03-30</li>
-<li>URL: <a href="https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/">https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/</a></li>
+<li>Publish date: 2026-03-17T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/2026/">https://github.blog/2026/</a></li>
 </ul>
-<p>GitHub added Copilot-powered issue creation to its Slack integration. Users can @GitHub in a Slack channel, describe work in natural language, and generate structured GitHub Issues with titles, bodies, assignees, labels, milestones, and parent/child issue hierarchy. Teams can refine the issue in-thread and set channel-level default repositories.</p>
-<p>Why it matters: For platform and engineering leads, this shows AI coding agents evolving from code-generation assistants into workflow entry-point agents. Requirement capture no longer depends on humans manually translating chat into tickets; work can be structured directly in the collaboration context. That has implications for intake throughput, issue quality, project traceability, and eventual closed-loop flows where agents pick up tickets and produce code changes.</p>
+<p>GitHub has added organization-level Copilot CLI activity to enterprise Copilot metrics, enabling a more complete view of team AI usage in terminal workflows. The candidate comes from an aggregate changelog page with limited technical detail, but it signals GitHub’s continued expansion of AI coding adoption telemetry beyond IDE usage into CLI and broader agent surfaces.</p>
+<p>Why it matters: This matters somewhat for platform teams because after enabling AI coding tools, the harder problem is governance and measurement rather than license rollout. CLI metrics suggest enterprises can increasingly include terminal usage in adoption analysis, ROI tracking, and compliance review.</p>
 <p>Key takeaways:
-- Natural-language-to-structured-issue conversion is moving into Slack, making intake friendlier for cross-functional teams.
-- Support for sub-issue hierarchy and in-thread refinement shows GitHub embedding agent behavior into project management, not just code editing.
-- Channel-level default repository settings reduce friction in multi-repo organizations, indicating a deployable workflow feature rather than a demo-only capability.</p>
-<p>Tags: GitHub Copilot, Slack, Issue Management, Agentic Workflow, Developer Tooling
-Scores: signal 7/5, novelty 5/5, actionability 7/5</p>
+- AI coding telemetry is expanding from editors into terminal and agent workflows.
+- For enterprises, observability is becoming a prerequisite for scaling AI coding adoption.</p>
+<p>Tags: Copilot, adoption-metrics, CLI, enterprise-governance
+Scores: signal 5/5, novelty 4/5, actionability 6/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Create issues from Slack with Copilot</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>Conversation mode: refining an issue with @GitHub inside a Slack thread before committing it to GitHub.</li>
-<li>Channel-level instructions: per-channel default repository settings that steer where issues or PRs get created.</li>
+<li>infrastructure noise</li>
+<li>agentic coding eval</li>
+<li>Terminal-Bench 2.0</li>
+<li>eval harness standardization</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>AI coding is expanding from IDE assistance into chat and project-management entry points.</li>
-<li>Automated work intake is becoming a key upstream layer of agentic development workflows.</li>
-<li>Developer-tool competition is shifting toward cross-system orchestration, not just code-completion quality.</li>
+<li>AI coding evaluation is shifting from 'comparing models' to evaluating the combined system of model, runtime environment, and execution harness.</li>
+<li>At the organizational level, AI coding adoption is increasingly about governance, metrics, and observability.</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>Organizations should start defining quality gates for chat-to-ticket flows: labeling policy, templates, default-repo mapping, and audit requirements.</li>
-<li>If this is later connected to agents that implement issues, open PRs, and update status, Slack could become a new control plane for development workflow.</li>
-<li>Platform teams need to think about permission boundaries: who can trigger issue creation from chat, which repos can be targeted, and what approval or logging is required.</li>
+<li>If your team is running internal coding-agent bakeoffs, freeze container images, resource quotas, timeouts, network policies, and retry logic or the results will not be comparable.</li>
+<li>When selecting or switching models, do not rely on public benchmark ranks alone; require vendors to disclose harness, budget, and failure-handling details.</li>
+<li>Platform teams can start incorporating CLI/terminal usage into AI adoption telemetry, but should pair it with quality, success-rate, and cost signals rather than activity alone.</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>Create issues from Slack with Copilot</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>Do not treat GitHub Changelog index/archive pages as separate digest items; they are navigational aggregations without incremental technical detail.</li>
-<li>There is not enough detail today to draw strong conclusions about broader topics like GitHub Agentic Workflows; avoid over-interpreting changelog headlines without primary technical writeups.</li>
+<li>Generic GitHub Changelog aggregate pages: too fragmented and lacking actionable technical detail.</li>
+<li>EU data residency / EFTA boundary updates: low relevance to AI coding stack design unless you specifically own regional compliance.</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
+<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2026-03-27.en</title>
+    <title>2026-04-01.en</title>
     <style>
       :root {
         color-scheme: light;
@@ -511,16 +511,15 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='2026-03-27.zh.html'>中文</a><a class="current" href='2026-03-27.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='current' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='2026-04-01.zh.html'>中文</a><a class="current" href='2026-04-01.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-03-27">AI Coding Daily Digest - 2026-03-27</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-01">AI Coding Daily Digest - 2026-04-01</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>The strongest signal today is Anthropic’s quantification of infrastructure noise in agentic coding evals: the same model can swing by 6 percentage points on Terminal-Bench 2.0 purely from runtime configuration, enough to invalidate leaderboard-style comparisons.</li>
-<li>A second high-value theme is that code search/repo understanding is becoming an incident-response and governance tool: Sourcegraph used Deep Search to trace LiteLLM supply-chain exposure and showed a reproducible cross-repo dependency audit workflow.</li>
-<li>GitHub continues embedding coding agents into core developer flow and project management, including PR conflict resolution, agent-session visibility in Issues/Projects, and better auditability of Agentic Workflow configs in Actions run summaries.</li>
-<li>For backend/platform engineering leaders, the question is no longer whether agents exist, but how to build comparable eval environments, traceable execution surfaces, and repo-wide search/remediation capabilities for security incidents.</li>
+<li>The only clearly high-signal item today is Anthropic’s technical write-up on infrastructure noise in agentic coding evals: runtime resources, limits, and environment configuration alone can shift benchmark scores by multiple points—sometimes more than the gap between top models.</li>
+<li>The key value is methodological, not launch-related: for engineering leaders, this means internal model selection, vendor comparisons, and agent A/B tests can be falsely precise unless infra variables are controlled.</li>
+<li>The remaining GitHub Changelog entries are mostly product or compliance updates without enough technical depth; unless you are actively building Copilot adoption telemetry, they do not justify a full digest.</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
 <h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
@@ -530,126 +529,63 @@
 <li>Publish date: N/A</li>
 <li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
 </ul>
-<p>Anthropic argues that agentic coding benchmarks differ fundamentally from static benchmarks because the runtime environment is part of the task. In internal experiments on Terminal-Bench 2.0, infrastructure resources and execution configuration alone caused a 6-point score swing with statistical significance (p &lt; 0.01).</p>
-<p>Why it matters: This is one of the most important evaluation-methodology signals right now. Many teams are using SWE-bench- and Terminal-Bench-style results to drive model selection, budget, and integration decisions; if infra setup alone can exceed leaderboard gaps, then benchmark harnesses, resource budgets, timeouts, and isolation policies must be treated as first-class variables rather than invisible defaults.</p>
+<p>Anthropic examines variance introduced by infrastructure configuration in agentic coding benchmarks, showing that on Terminal-Bench 2.0, resource setup alone can produce roughly a 6-point score swing—large enough to exceed typical leaderboard gaps between models. The post argues that unlike static benchmarks, agentic evals make the runtime part of the task itself, so CPU, RAM, time limits, container scheduling, dependency installation, and error handling all materially affect what is being measured.</p>
+<p>Why it matters: This directly changes how enterprises should interpret coding-agent benchmarks. If runtime conditions are not tightly standardized, 'the better model' may simply be 'the model with more time, more memory, or a different sandbox policy.' For internal evals, vendor selection, and harness design, this methodological warning matters more than leaderboard deltas.</p>
 <p>Key takeaways:
-- Agentic coding evals measure not just the model, but also the runtime environment, resource limits, and execution policy.
-- Without strict control and logging of CPU/RAM/timeout/enforcement methodology, cross-team and cross-vendor scores are not directly comparable.
-- Benchmark harnesses need production-grade reproducibility, observability, and auditability.</p>
-<p>Tags: agentic-evals, benchmark-harness, terminal-bench, reproducibility
+- Agentic coding evals are not pure model tests; the runtime environment is part of the measurement system and infra variables must be explicitly controlled and logged.
+- Small leaderboard gaps may be meaningless when resource budgets, execution policies, and failure-recovery behavior differ across setups.</p>
+<p>Tags: agentic-evals, benchmarking, harness-design, infra, Terminal-Bench, SWE-bench
 Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
-<h2 id="detecting-supply-chain-attacks-at-scale-with-deep-search">Detecting supply chain attacks at scale with Deep Search</h2>
-<ul>
-<li>Source: Sourcegraph Blog</li>
-<li>Author: Stephanie Jarmak, Travis Lyons</li>
-<li>Publish date: 2026-03-26</li>
-<li>URL: <a href="https://sourcegraph.com/blog/detecting-supply-chain-attacks-at-scale-with-deep-search">https://sourcegraph.com/blog/detecting-supply-chain-attacks-at-scale-with-deep-search</a></li>
-</ul>
-<p>Using the poisoned LiteLLM releases on PyPI as a case study, Sourcegraph shows how Deep Search and Code Search can quickly identify which public repositories are protected by strict version pinning and which are exposed through unpinned or range-based dependencies, with a reproducible investigation workflow.</p>
-<p>Why it matters: This is more than a product post; it is a realistic repo-understanding and code-search operations scenario. For platform teams, the immediate value of AI-assisted search is not just asking questions about code, but doing cross-repo exposure analysis during supply-chain incidents, generating remediation lists, and shrinking time-to-response.</p>
-<p>Key takeaways:
-- The difference between strict pinning and range-based dependency specs directly determines exposure during incidents.
-- Cross-repo semantic/code search is useful for rapid triage, not just SBOMs or per-repo grep.
-- Reproducible query and export workflows should become part of incident response playbooks.</p>
-<p>Tags: repo-understanding, supply-chain-security, code-search, incident-response
-Scores: signal 8/5, novelty 7/5, actionability 9/5</p>
-<h2 id="ask-copilot-to-resolve-merge-conflicts-on-pull-requests">Ask @copilot to resolve merge conflicts on pull requests</h2>
+<h2 id="copilot-usage-metrics-now-includes-organization-level-github-copilot-cli-activity">Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: 2026-03-26</li>
-<li>URL: <a href="https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests">https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests</a></li>
+<li>Publish date: 2026-03-17T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/2026/">https://github.blog/2026/</a></li>
 </ul>
-<p>GitHub Copilot coding agent can now resolve PR merge conflicts by mentioning @copilot in a comment. The agent operates in its own cloud development environment, makes the changes, runs builds and tests, and pushes the result back; the same mechanism also supports fixing failing workflows, addressing review comments, and adding tests.</p>
-<p>Why it matters: This shows the shift from IDE-side suggestion tools to delegable asynchronous execution units. For engineering management and platform governance, that creates a new control plane: who can invoke the agent, where it runs, how it is constrained by repo permissions and auditability, and which automated actions are safe to introduce into protected-branch workflows.</p>
+<p>GitHub has added organization-level Copilot CLI activity to enterprise Copilot metrics, enabling a more complete view of team AI usage in terminal workflows. The candidate comes from an aggregate changelog page with limited technical detail, but it signals GitHub’s continued expansion of AI coding adoption telemetry beyond IDE usage into CLI and broader agent surfaces.</p>
+<p>Why it matters: This matters somewhat for platform teams because after enabling AI coding tools, the harder problem is governance and measurement rather than license rollout. CLI metrics suggest enterprises can increasingly include terminal usage in adoption analysis, ROI tracking, and compliance review.</p>
 <p>Key takeaways:
-- PR comments are becoming a task-ingress surface for agents, merging collaboration UI with execution UI.
-- A cloud execution environment plus build/test validation is key to moving from suggestion to committed change.
-- Enterprises need explicit policies for agent permissions, invocation rules, and auditing.</p>
-<p>Tags: github-copilot, coding-agent, pull-requests, workflow-automation
-Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
-<h2 id="agent-activity-in-github-issues-and-projects">Agent activity in GitHub Issues and Projects</h2>
-<ul>
-<li>Source: GitHub Changelog</li>
-<li>Author: N/A</li>
-<li>Publish date: 2026-03-26</li>
-<li>URL: <a href="https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects">https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects</a></li>
-</ul>
-<p>GitHub now surfaces coding-agent session states directly in Issues and Projects, including queued, working, waiting for review, and completed, with links into session logs. This integrates agent workflows into the same planning and execution-tracking surfaces used for human work.</p>
-<p>Why it matters: This is an important organizational-adoption signal: agents are no longer just personal tools but observable work entities inside the project system. For engineering leaders, that means you can start thinking in terms of agent WIP, queue state, review handoff, retry/failure modes, and throughput, and how to incorporate agents into existing delivery governance.</p>
-<p>Key takeaways:
-- Agent sessions are being productized as manageable, trackable work items rather than hidden background actions.
-- Project tooling will increasingly need to manage both human and agent allocation/state.
-- Session logs are likely to become important inputs for audit, retrospectives, and evaluation.</p>
-<p>Tags: organizational-adoption, agent-ops, github-projects, observability
-Scores: signal 7/5, novelty 8/5, actionability 7/5</p>
-<h2 id="view-agentic-workflow-configs-in-the-actions-run-summary">View Agentic Workflow configs in the Actions run summary</h2>
-<ul>
-<li>Source: GitHub Changelog</li>
-<li>Author: N/A</li>
-<li>Publish date: 2026-03-26</li>
-<li>URL: <a href="https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary">https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary</a></li>
-</ul>
-<p>GitHub now shows Agentic Workflow markdown configs directly in the Actions run summary, reducing context switching and exposing the exact configuration used for a given run.</p>
-<p>Why it matters: While small, this matters for harness design and production governance. One core problem in agent systems is knowing exactly which prompt/rules/steps were used for a run; surfacing config in the run summary materially improves reproducibility, auditability, and postmortem attribution.</p>
-<p>Key takeaways:
-- Agent workflow configuration needs to become a traceable artifact, like CI configuration.
-- Showing config in run summaries reduces debugging and retrospective overhead.
-- These details are foundational for bringing agent automation under compliance and governance controls.</p>
-<p>Tags: agentic-workflows, actions, auditability, harness-design
-Scores: signal 6/5, novelty 6/5, actionability 8/5</p>
+- AI coding telemetry is expanding from editors into terminal and agent workflows.
+- For enterprises, observability is becoming a prerequisite for scaling AI coding adoption.</p>
+<p>Tags: Copilot, adoption-metrics, CLI, enterprise-governance
+Scores: signal 5/5, novelty 4/5, actionability 6/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>Detecting supply chain attacks at scale with Deep Search</li>
-<li>Ask @copilot to resolve merge conflicts on pull requests</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
 <li>infrastructure noise</li>
-<li>agent session</li>
-<li>Agentic Workflow</li>
-<li>cloud-based development environment</li>
+<li>agentic coding eval</li>
+<li>Terminal-Bench 2.0</li>
+<li>eval harness standardization</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>Comparability of agentic coding evals is being challenged by runtime-environment variance</li>
-<li>Repo understanding and code search are moving from developer assistance into security response and governance</li>
-<li>Coding agents are being embedded into PR, Issue, Project, and Actions system-of-work surfaces</li>
-<li>Auditability and reproducibility are becoming core requirements for production agent adoption</li>
+<li>AI coding evaluation is shifting from 'comparing models' to evaluating the combined system of model, runtime environment, and execution harness.</li>
+<li>At the organizational level, AI coding adoption is increasingly about governance, metrics, and observability.</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>If you run internal coding-agent evaluations, resource budgets, timeouts, sandboxing, and retry policy must be part of the benchmark protocol, with full run metadata retained.</li>
-<li>You should build cross-repo dependency and code-search capability for supply-chain triage, blast-radius analysis, and bulk remediation.</li>
-<li>PR-driven agent execution needs explicit policy around permissions, invocation paths, audit logs, and human review gates.</li>
-<li>Project management systems will increasingly need to track both human work and agent work, and team metrics should evolve accordingly.</li>
+<li>If your team is running internal coding-agent bakeoffs, freeze container images, resource quotas, timeouts, network policies, and retry logic or the results will not be comparable.</li>
+<li>When selecting or switching models, do not rely on public benchmark ranks alone; require vendors to disclose harness, budget, and failure-handling details.</li>
+<li>Platform teams can start incorporating CLI/terminal usage into AI adoption telemetry, but should pair it with quality, success-rate, and cost signals rather than activity alone.</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
 <li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>View Agentic Workflow configs in the Actions run summary</li>
-<li>Ask @copilot to resolve merge conflicts on pull requests</li>
-<li>Agent activity in GitHub Issues and Projects</li>
-<li>Detecting supply chain attacks at scale with Deep Search</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>The GitHub notice about Gemini 3 Pro deprecation is mostly model-catalog maintenance, not a high-signal technical item.</li>
-<li>The new pull requests dashboard is primarily a collaboration UX update with limited relevance to AI coding or agent infrastructure.</li>
-<li>Generic GitHub Changelog index/archive pages are aggregation surfaces and should not replace reading the original item pages.</li>
+<li>Generic GitHub Changelog aggregate pages: too fragmented and lacking actionable technical detail.</li>
+<li>EU data residency / EFTA boundary updates: low relevance to AI coding stack design unless you specifically own regional compliance.</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
 <li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
-<li><a href="https://sourcegraph.com/blog">Sourcegraph Blog</a></li>
-<li><a href="https://sourcegraph.com/blog">Sourcegraph Blog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>

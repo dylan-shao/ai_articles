@@ -511,64 +511,81 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-03-31">AI Coding Daily Digest - 2026-03-31</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-01">AI Coding Daily Digest - 2026-04-01</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>今天候选内容几乎全部来自 GitHub Changelog，且大多是聚合页；真正可单独成条且与工程管理/开发流程相关的高信号内容只有一项：Copilot 已可直接在 Slack 中通过自然语言创建 GitHub Issues。</li>
-<li>这条更新的核心价值不在模型能力突破，而在把工单生成、层级拆解与仓库默认配置前移到团队真实协作入口，反映 AI coding 正从 IDE 内助手扩展为跨沟通与项目管理的工作流代理。</li>
-<li>由于缺少更深入的原始技术材料（如评测、agent harness、MCP、仓库理解或组织部署细节），今天不适合做完整日报。</li>
+<li>今天候选内容里，唯一明显高信号的是 Anthropic 关于 agentic coding eval 基础设施噪声的技术分析：它指出运行时资源、限额和执行环境配置本身就足以让 SWE-bench/Terminal-Bench 一类评测波动数个百分点，甚至超过模型排行榜差距。</li>
+<li>其核心价值不在模型发布，而在评测方法学：对工程负责人而言，这意味着内部选型、A/B 对比和供应商评估如果不控制 infra 变量，结论可能是伪精确的。</li>
+<li>其余 GitHub Changelog 项大多是产品更新或合规变更，缺少足够深入的技术细节；除非你的团队正在建设 Copilot 采用度量体系，否则不值得进入完整日报。</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="create-issues-from-slack-with-copilot">Create issues from Slack with Copilot</h2>
+<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
+<ul>
+<li>Source: Anthropic Engineering</li>
+<li>Author: N/A</li>
+<li>Publish date: N/A</li>
+<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
+</ul>
+<p>Anthropic 分析了 agentic coding benchmark 中由基础设施配置引入的方差，指出在 Terminal-Bench 2.0 上，仅资源配置差异就可带来约 6 个百分点的成绩波动，而且这种波动足以超过模型之间常见的 leaderboard 差距。文章强调，agentic eval 与静态基准不同，运行时环境本身是问题求解的一部分，因此 CPU、RAM、超时、容器调度、依赖安装和错误恢复机制都会改变“被测对象”。</p>
+<p>Why it matters: 这直接影响企业如何解读 coding-agent 评测结果。若运行环境没有严格标准化，那么“模型更强”可能只是“给了更多时间、更多内存、不同的 sandbox 策略”。对于内部基准、采购评估和 agent harness 设计，这篇文章提供了比单纯看 leaderboard 更重要的方法论提醒。</p>
+<p>Key takeaways:
+- Agentic coding eval 不是纯模型测试，运行环境是测量系统的一部分；infra 变量必须被显式控制和记录。
+- 小幅 leaderboard 差距可能没有统计意义，尤其当资源预算、执行策略和失败恢复路径不一致时。</p>
+<p>Tags: agentic-evals, benchmarking, harness-design, infra, Terminal-Bench, SWE-bench
+Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+<h2 id="copilot-usage-metrics-now-includes-organization-level-github-copilot-cli-activity">Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: 2026-03-30</li>
-<li>URL: <a href="https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/">https://github.blog/changelog/2026-03-30-create-issues-from-slack-with-copilot/</a></li>
+<li>Publish date: 2026-03-17T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/2026/">https://github.blog/2026/</a></li>
 </ul>
-<p>GitHub 宣布 Slack 集成新增 Copilot 驱动的 Issue 创建能力：团队成员可在 Slack 频道中 @GitHub，用自然语言直接生成结构化 GitHub Issues，并支持 assignee、labels、milestones 以及父子 issue 层级。用户还可在 Slack 线程中继续迭代需求细节，并通过频道级设置指定默认仓库。</p>
-<p>Why it matters: 对平台和工程负责人而言，这代表 AI coding agent 正在从“写代码助手”演进为“团队工作流入口代理”。需求捕获不再局限于开发者手工把聊天内容搬运到 issue tracker，而是直接在协作上下文中生成可执行工单，这会影响需求吞吐、任务结构化质量、项目可追踪性，以及后续 agent 自动接单/生成 PR 的闭环设计。</p>
+<p>GitHub 在企业级 Copilot 指标中纳入了 organization-level 的 Copilot CLI 活动，可用于更完整地观测团队在终端环境中的 AI 使用情况。候选信息来自汇总式 changelog 页面，技术细节有限，但它表明 GitHub 正在把 AI 编码采用度量从 IDE 扩展到 CLI 与更广泛的 agent surface。</p>
+<p>Why it matters: 这对平台团队有一定参考价值，因为组织采用 AI coding 之后，真正难的是治理和度量，而不是开通许可证。CLI 指标意味着企业开始能把命令行场景纳入使用分析、ROI 评估和合规审计。</p>
 <p>Key takeaways:
-- 自然语言到结构化 issue 的转换被前移到 Slack，对跨职能团队更友好。
-- 支持子任务层级与线程内迭代，说明 GitHub 正把 agent 能力嵌入项目管理而非只停留在代码编辑层。
-- 频道级默认仓库设置降低了多仓库组织中的操作摩擦，是实际落地而非演示型功能。</p>
-<p>Tags: GitHub Copilot, Slack, Issue Management, Agentic Workflow, Developer Tooling
-Scores: signal 7/5, novelty 5/5, actionability 7/5</p>
+- AI coding 采用度量正在从编辑器扩展到终端与 agent workflow。
+- 对企业而言，观测层建设正成为 AI coding 规模化落地的必要条件。</p>
+<p>Tags: Copilot, adoption-metrics, CLI, enterprise-governance
+Scores: signal 5/5, novelty 4/5, actionability 6/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Create issues from Slack with Copilot</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>Conversation mode：在 Slack 线程中与 @GitHub 往返迭代 issue 内容后再落库。</li>
-<li>Channel-level instructions：为某个 Slack 频道设置默认工作仓库，影响后续 issue/PR 创建目标。</li>
+<li>基础设施噪声（infrastructure noise）</li>
+<li>agentic coding eval</li>
+<li>Terminal-Bench 2.0</li>
+<li>评测 harness 标准化</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>AI coding 从 IDE 内助手扩展到聊天与项目管理入口。</li>
-<li>工单 intake 自动化成为 agent 工作流的重要前置层。</li>
-<li>开发工具竞争正在转向跨系统编排，而不只是代码补全质量。</li>
+<li>AI 编码评测正在从“比模型”转向“比模型+运行环境+执行框架”的联合系统评估。</li>
+<li>组织层面的 AI coding 落地重点逐步转向治理、指标与可观测性。</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>组织应开始定义‘聊天到工单’的质量门槛，例如标签策略、模板规范、默认仓库映射和审计要求。</li>
-<li>如果后续再接上 agent 自动实现 issue、生成 PR、更新状态，Slack 可能成为开发工作流的新控制面。</li>
-<li>平台团队需要考虑权限边界：谁能在聊天里触发 issue 创建、写入哪些仓库、是否需要审批与可追踪日志。</li>
+<li>如果你的团队在做内部 coding-agent bakeoff，应冻结容器镜像、资源配额、超时、网络策略和重试逻辑，否则结果不具可比性。</li>
+<li>采购或切换模型时，不应只看公开 benchmark 排名；应要求供应商披露 harness、预算和失败处理细节。</li>
+<li>平台团队可以开始把 CLI/terminal 使用纳入 AI 采用度量，但需要结合质量、成功率和成本，而不是只看活跃度。</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>Create issues from Slack with Copilot</li>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>GitHub Changelog 的聚合页与月度归档页本身不应单独纳入日报，它们只是目录，不提供额外技术细节。</li>
-<li>今天没有足够信息支撑对‘GitHub Agentic Workflows’等更大主题作深入判断；不要仅凭 changelog 标题推断能力边界。</li>
+<li>泛化的 GitHub Changelog 聚合页：信息过于碎片化，缺少可执行的技术细节。</li>
+<li>EU data residency/EFTA 这类合规边界更新：对 AI coding 技术栈建设帮助有限，除非你正负责特定区域合规。</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
+<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
