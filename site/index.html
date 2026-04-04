@@ -511,81 +511,98 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-04.zh.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-04-01">AI Coding Daily Digest - 2026-04-01</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-04">AI Coding Daily Digest - 2026-04-04</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>今天候选内容里，唯一明显高信号的是 Anthropic 关于 agentic coding eval 基础设施噪声的技术分析：它指出运行时资源、限额和执行环境配置本身就足以让 SWE-bench/Terminal-Bench 一类评测波动数个百分点，甚至超过模型排行榜差距。</li>
-<li>其核心价值不在模型发布，而在评测方法学：对工程负责人而言，这意味着内部选型、A/B 对比和供应商评估如果不控制 infra 变量，结论可能是伪精确的。</li>
-<li>其余 GitHub Changelog 项大多是产品更新或合规变更，缺少足够深入的技术细节；除非你的团队正在建设 Copilot 采用度量体系，否则不值得进入完整日报。</li>
+<li>今天最有信号的是 GitHub 正在把 Copilot cloud agent 从“单仓库试验功能”推进为“可被组织级治理的执行主体”：运行器、网络边界、提交可信性都开始具备企业级控制面。</li>
+<li>这组更新的重点不在模型能力本身，而在 agent 真正进入受控工程环境所需的基础设施：统一 runner 策略、统一防火墙策略、以及满足 signed-commit 分支保护。</li>
+<li>对平台与工程效能负责人而言，含义是 AI coding agent 的落地瓶颈正从“能不能写代码”转向“能不能在组织安全、合规、网络与 CI 约束下可靠运行”。</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2>
-<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
-<ul>
-<li>Source: Anthropic Engineering</li>
-<li>Author: N/A</li>
-<li>Publish date: N/A</li>
-<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
-</ul>
-<p>Anthropic 分析了 agentic coding benchmark 中由基础设施配置引入的方差，指出在 Terminal-Bench 2.0 上，仅资源配置差异就可带来约 6 个百分点的成绩波动，而且这种波动足以超过模型之间常见的 leaderboard 差距。文章强调，agentic eval 与静态基准不同，运行时环境本身是问题求解的一部分，因此 CPU、RAM、超时、容器调度、依赖安装和错误恢复机制都会改变“被测对象”。</p>
-<p>Why it matters: 这直接影响企业如何解读 coding-agent 评测结果。若运行环境没有严格标准化，那么“模型更强”可能只是“给了更多时间、更多内存、不同的 sandbox 策略”。对于内部基准、采购评估和 agent harness 设计，这篇文章提供了比单纯看 leaderboard 更重要的方法论提醒。</p>
-<p>Key takeaways:
-- Agentic coding eval 不是纯模型测试，运行环境是测量系统的一部分；infra 变量必须被显式控制和记录。
-- 小幅 leaderboard 差距可能没有统计意义，尤其当资源预算、执行策略和失败恢复路径不一致时。</p>
-<p>Tags: agentic-evals, benchmarking, harness-design, infra, Terminal-Bench, SWE-bench
-Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
-<h2 id="copilot-usage-metrics-now-includes-organization-level-github-copilot-cli-activity">Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</h2>
+<h2 id="organization-runner-controls-for-copilot-cloud-agent">Organization runner controls for Copilot cloud agent</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: 2026-03-17T00:00:00+00:00</li>
-<li>URL: <a href="https://github.blog/2026/">https://github.blog/2026/</a></li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent/">https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent/</a></li>
 </ul>
-<p>GitHub 在企业级 Copilot 指标中纳入了 organization-level 的 Copilot CLI 活动，可用于更完整地观测团队在终端环境中的 AI 使用情况。候选信息来自汇总式 changelog 页面，技术细节有限，但它表明 GitHub 正在把 AI 编码采用度量从 IDE 扩展到 CLI 与更广泛的 agent surface。</p>
-<p>Why it matters: 这对平台团队有一定参考价值，因为组织采用 AI coding 之后，真正难的是治理和度量，而不是开通许可证。CLI 指标意味着企业开始能把命令行场景纳入使用分析、ROI 评估和合规审计。</p>
+<p>GitHub 为 Copilot cloud agent 增加了组织级 runner 控制。此前 agent 的执行环境主要在仓库级通过 copilot-setup-steps.yml 配置；现在组织管理员可以为全组织设置默认 runner，并可锁定该设置，禁止仓库覆盖。agent 仍然基于 GitHub Actions 启动临时开发环境，但现在可以统一指定标准托管 runner、大型 runner 或 self-hosted runner。</p>
+<p>Why it matters: 这是 agent 进入企业平台治理的关键一步。runner 决定了性能、成本、网络可达性、凭据边界与内部资源访问方式。把配置从 repo 级提升到 org 级，意味着平台团队终于可以像管理 CI 执行面一样管理 AI agent 的执行面，降低碎片化配置和安全漂移。</p>
 <p>Key takeaways:
-- AI coding 采用度量正在从编辑器扩展到终端与 agent workflow。
-- 对企业而言，观测层建设正成为 AI coding 规模化落地的必要条件。</p>
-<p>Tags: Copilot, adoption-metrics, CLI, enterprise-governance
-Scores: signal 5/5, novelty 4/5, actionability 6/5</p>
+- Copilot cloud agent 的执行环境现在可由组织统一设定默认 runner，而不再依赖每个仓库单独配置。
+- 组织可以锁定 runner 策略，确保 agent 始终运行在指定的 GitHub-hosted、large runner 或 self-hosted 环境中。</p>
+<p>Tags: Copilot cloud agent, GitHub Actions, runner governance, enterprise controls
+Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="organization-firewall-settings-for-copilot-cloud-agent">Organization firewall settings for Copilot cloud agent</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent/">https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent/</a></li>
+</ul>
+<p>GitHub 为 Copilot cloud agent 增加了组织级防火墙设置。该 agent 内置 firewall，用于限制互联网访问并降低 prompt injection 与数据外泄风险。现在组织管理员可以统一控制全组织范围内是否启用防火墙、是否启用推荐 allowlist、维护组织级自定义 allowlist，以及决定仓库管理员能否额外添加 allowlist 条目。</p>
+<p>Why it matters: 这直接回应了 agent 落地中的核心安全顾虑：一旦 agent 能自主浏览、检索、拉依赖、访问外部资源，就必须有明确的网络边界与默认 deny/allow 策略。把这些能力上收到组织层，说明 GitHub 正把 AI coding agent 视为需要零信任治理的执行体，而非普通 IDE 助手。</p>
+<p>Key takeaways:
+- 组织管理员可统一控制 agent 是否能联网、用什么推荐 allowlist，以及是否允许仓库自行扩展规则。
+- 该功能的目标是缓解 prompt injection 和数据外泄风险，并让 agent 在大规模组织内可控上线。</p>
+<p>Tags: Copilot cloud agent, agent firewall, prompt injection, security governance
+Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="copilot-cloud-agent-signs-its-commits">Copilot cloud agent signs its commits</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/">https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/</a></li>
+</ul>
+<p>Copilot cloud agent 现在会对其生成的每个 commit 进行签名，并在 GitHub 上显示为 Verified。这样一来，启用了“Require signed commits”分支保护规则的仓库也可以使用该 agent；此前这类规则会直接阻止 agent 提交。</p>
+<p>Why it matters: 这是一个小更新，但对企业落地极其关键。很多受监管或高安全团队默认启用签名提交策略；如果 agent 不满足这一基础门槛，就无法进入主流受控仓库。提交签名使 agent 生成的变更首次真正融入现有供应链可信与审计链条。</p>
+<p>Key takeaways:
+- agent 生成的提交现在具备可验证身份，能与 GitHub 的 Verified 提交机制对接。
+- 启用 signed-commit 分支保护的仓库不再天然排斥 Copilot cloud agent。</p>
+<p>Tags: Copilot cloud agent, signed commits, branch protection, supply chain trust
+Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
+<li>Organization runner controls for Copilot cloud agent</li>
+<li>Organization firewall settings for Copilot cloud agent</li>
+<li>Copilot cloud agent signs its commits</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>基础设施噪声（infrastructure noise）</li>
-<li>agentic coding eval</li>
-<li>Terminal-Bench 2.0</li>
-<li>评测 harness 标准化</li>
+<li>agent firewall（代理防火墙）</li>
+<li>organization-level runner policy（组织级运行器策略）</li>
+<li>Verified agent commits（已验证的代理提交）</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>AI 编码评测正在从“比模型”转向“比模型+运行环境+执行框架”的联合系统评估。</li>
-<li>组织层面的 AI coding 落地重点逐步转向治理、指标与可观测性。</li>
+<li>AI coding agent 的组织级治理正在成型</li>
+<li>agent 落地重心从模型能力转向执行环境、安全边界与审计可信</li>
+<li>GitHub 正把 Copilot cloud agent 嵌入现有 CI/CD 与仓库治理体系</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>如果你的团队在做内部 coding-agent bakeoff，应冻结容器镜像、资源配额、超时、网络策略和重试逻辑，否则结果不具可比性。</li>
-<li>采购或切换模型时，不应只看公开 benchmark 排名；应要求供应商披露 harness、预算和失败处理细节。</li>
-<li>平台团队可以开始把 CLI/terminal 使用纳入 AI 采用度量，但需要结合质量、成功率和成本，而不是只看活跃度。</li>
+<li>平台团队应开始把 AI agent 视为新的执行平面，纳入 runner、网络、凭据、审计和策略管理。</li>
+<li>是否具备组织级默认值与强制策略，将成为评估 AI coding 平台能否大规模落地的关键标准。</li>
+<li>短期内最值得投入的是 guardrails 与集成控制，而不是频繁追逐模型切换。</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
+<li>Organization runner controls for Copilot cloud agent</li>
+<li>Organization firewall settings for Copilot cloud agent</li>
+<li>Copilot cloud agent signs its commits</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>泛化的 GitHub Changelog 聚合页：信息过于碎片化，缺少可执行的技术细节。</li>
-<li>EU data residency/EFTA 这类合规边界更新：对 AI coding 技术栈建设帮助有限，除非你正负责特定区域合规。</li>
+<li>GitHub Changelog 首页与月度归档页本身只是聚合入口，信息重复，不应单独纳入摘要。</li>
+<li>GPT-5.1 Codex 系列弃用虽然需要运维层面留意，但今天更高信号的是 agent 可治理性的组织级控制，而非单纯模型替换。</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
-<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>

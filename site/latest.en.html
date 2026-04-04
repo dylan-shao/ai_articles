@@ -511,81 +511,98 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-04.en.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-04-01">AI Coding Daily Digest - 2026-04-01</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-04">AI Coding Daily Digest - 2026-04-04</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>The only clearly high-signal item today is Anthropic’s technical write-up on infrastructure noise in agentic coding evals: runtime resources, limits, and environment configuration alone can shift benchmark scores by multiple points—sometimes more than the gap between top models.</li>
-<li>The key value is methodological, not launch-related: for engineering leaders, this means internal model selection, vendor comparisons, and agent A/B tests can be falsely precise unless infra variables are controlled.</li>
-<li>The remaining GitHub Changelog entries are mostly product or compliance updates without enough technical depth; unless you are actively building Copilot adoption telemetry, they do not justify a full digest.</li>
+<li>The highest-signal development today is GitHub turning Copilot cloud agent from a repo-level experiment into an organization-governable execution surface: runner policy, network boundary controls, and commit trust are now getting enterprise-grade controls.</li>
+<li>The key story is not model capability but operationalization: standardized runners, centralized agent firewall policy, and compatibility with signed-commit branch protection.</li>
+<li>For platform and engineering leaders, this signals that AI coding adoption bottlenecks are shifting from raw coding quality to whether agents can operate safely and compliantly inside real CI, security, and network constraints.</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
-<ul>
-<li>Source: Anthropic Engineering</li>
-<li>Author: N/A</li>
-<li>Publish date: N/A</li>
-<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
-</ul>
-<p>Anthropic examines variance introduced by infrastructure configuration in agentic coding benchmarks, showing that on Terminal-Bench 2.0, resource setup alone can produce roughly a 6-point score swing—large enough to exceed typical leaderboard gaps between models. The post argues that unlike static benchmarks, agentic evals make the runtime part of the task itself, so CPU, RAM, time limits, container scheduling, dependency installation, and error handling all materially affect what is being measured.</p>
-<p>Why it matters: This directly changes how enterprises should interpret coding-agent benchmarks. If runtime conditions are not tightly standardized, 'the better model' may simply be 'the model with more time, more memory, or a different sandbox policy.' For internal evals, vendor selection, and harness design, this methodological warning matters more than leaderboard deltas.</p>
-<p>Key takeaways:
-- Agentic coding evals are not pure model tests; the runtime environment is part of the measurement system and infra variables must be explicitly controlled and logged.
-- Small leaderboard gaps may be meaningless when resource budgets, execution policies, and failure-recovery behavior differ across setups.</p>
-<p>Tags: agentic-evals, benchmarking, harness-design, infra, Terminal-Bench, SWE-bench
-Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
-<h2 id="copilot-usage-metrics-now-includes-organization-level-github-copilot-cli-activity">Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</h2>
+<h2 id="organization-runner-controls-for-copilot-cloud-agent">Organization runner controls for Copilot cloud agent</h2>
 <ul>
 <li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: 2026-03-17T00:00:00+00:00</li>
-<li>URL: <a href="https://github.blog/2026/">https://github.blog/2026/</a></li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent/">https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent/</a></li>
 </ul>
-<p>GitHub has added organization-level Copilot CLI activity to enterprise Copilot metrics, enabling a more complete view of team AI usage in terminal workflows. The candidate comes from an aggregate changelog page with limited technical detail, but it signals GitHub’s continued expansion of AI coding adoption telemetry beyond IDE usage into CLI and broader agent surfaces.</p>
-<p>Why it matters: This matters somewhat for platform teams because after enabling AI coding tools, the harder problem is governance and measurement rather than license rollout. CLI metrics suggest enterprises can increasingly include terminal usage in adoption analysis, ROI tracking, and compliance review.</p>
+<p>GitHub added organization-level runner controls for Copilot cloud agent. Previously, the agent environment was mainly configured per repository through copilot-setup-steps.yml; now org admins can set a default runner across repositories and optionally lock it so repos cannot override it. The agent still spins up ephemeral development environments via GitHub Actions, but teams can now standardize on hosted, larger, or self-hosted runners centrally.</p>
+<p>Why it matters: This is a foundational step in making agents governable like CI infrastructure. Runner choice determines performance, cost, network reachability, credential boundaries, and access to internal systems. Moving configuration from repo scope to org scope lets platform teams manage the agent execution plane the same way they manage CI, reducing fragmentation and security drift.</p>
 <p>Key takeaways:
-- AI coding telemetry is expanding from editors into terminal and agent workflows.
-- For enterprises, observability is becoming a prerequisite for scaling AI coding adoption.</p>
-<p>Tags: Copilot, adoption-metrics, CLI, enterprise-governance
-Scores: signal 5/5, novelty 4/5, actionability 6/5</p>
+- Copilot cloud agent environments can now be standardized with an org-wide default runner instead of per-repo setup.
+- Organizations can lock runner policy so the agent always runs on the intended GitHub-hosted, large, or self-hosted execution environment.</p>
+<p>Tags: Copilot cloud agent, GitHub Actions, runner governance, enterprise controls
+Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="organization-firewall-settings-for-copilot-cloud-agent">Organization firewall settings for Copilot cloud agent</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent/">https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent/</a></li>
+</ul>
+<p>GitHub added organization-wide firewall controls for Copilot cloud agent. The agent includes a built-in firewall to restrict internet access and mitigate prompt injection and data exfiltration risks. Org admins can now centrally decide whether the firewall is enabled, whether the recommended allowlist is used, maintain an org-wide custom allowlist, and control whether repo admins may add their own allowlist entries.</p>
+<p>Why it matters: This addresses one of the main blockers to production agent adoption: once an agent can browse, fetch dependencies, and access external resources autonomously, it needs explicit network boundaries and sane default deny/allow policies. Elevating this to the org layer shows GitHub is treating coding agents as governable execution entities, not just IDE assistants.</p>
+<p>Key takeaways:
+- Org admins can centrally govern whether the agent has internet access, which allowlists apply, and whether repos may extend those rules.
+- The feature is explicitly aimed at reducing prompt injection and data exfiltration risk while enabling broader enterprise rollout.</p>
+<p>Tags: Copilot cloud agent, agent firewall, prompt injection, security governance
+Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+<h2 id="copilot-cloud-agent-signs-its-commits">Copilot cloud agent signs its commits</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-03</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/">https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/</a></li>
+</ul>
+<p>Copilot cloud agent now signs every commit it creates, causing those commits to appear as Verified on GitHub. This means the agent can now operate in repositories that enforce the 'Require signed commits' branch protection rule, which previously blocked agent usage entirely.</p>
+<p>Why it matters: This looks small but is operationally critical. Many regulated or security-conscious teams already require signed commits by policy; if agents cannot satisfy that baseline, they are excluded from serious repositories. Commit signing brings agent-authored changes into existing trust, audit, and supply-chain integrity workflows.</p>
+<p>Key takeaways:
+- Agent-authored commits now carry verifiable identity and integrate with GitHub's Verified commit workflow.
+- Repositories enforcing signed-commit protection no longer automatically exclude Copilot cloud agent.</p>
+<p>Tags: Copilot cloud agent, signed commits, branch protection, supply chain trust
+Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
+<li>Organization runner controls for Copilot cloud agent</li>
+<li>Organization firewall settings for Copilot cloud agent</li>
+<li>Copilot cloud agent signs its commits</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>infrastructure noise</li>
-<li>agentic coding eval</li>
-<li>Terminal-Bench 2.0</li>
-<li>eval harness standardization</li>
+<li>agent firewall</li>
+<li>organization-level runner policy</li>
+<li>Verified agent commits</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>AI coding evaluation is shifting from 'comparing models' to evaluating the combined system of model, runtime environment, and execution harness.</li>
-<li>At the organizational level, AI coding adoption is increasingly about governance, metrics, and observability.</li>
+<li>Organization-level governance for AI coding agents is taking shape</li>
+<li>Operational adoption is shifting from model quality to execution environment, safety boundaries, and auditability</li>
+<li>GitHub is embedding Copilot cloud agent into existing CI/CD and repository governance systems</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>If your team is running internal coding-agent bakeoffs, freeze container images, resource quotas, timeouts, network policies, and retry logic or the results will not be comparable.</li>
-<li>When selecting or switching models, do not rely on public benchmark ranks alone; require vendors to disclose harness, budget, and failure-handling details.</li>
-<li>Platform teams can start incorporating CLI/terminal usage into AI adoption telemetry, but should pair it with quality, success-rate, and cost signals rather than activity alone.</li>
+<li>Platform teams should treat AI agents as a new execution plane subject to runner, network, credential, audit, and policy management.</li>
+<li>Support for org-wide defaults and enforceable controls will become a key evaluation criterion for enterprise coding-agent platforms.</li>
+<li>Near-term leverage is likely to come more from guardrails and systems integration than from constantly chasing model swaps.</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
-<li>Copilot usage metrics now includes organization-level GitHub Copilot CLI activity</li>
+<li>Organization runner controls for Copilot cloud agent</li>
+<li>Organization firewall settings for Copilot cloud agent</li>
+<li>Copilot cloud agent signs its commits</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>Generic GitHub Changelog aggregate pages: too fragmented and lacking actionable technical detail.</li>
-<li>EU data residency / EFTA boundary updates: low relevance to AI coding stack design unless you specifically own regional compliance.</li>
+<li>The GitHub Changelog landing page and monthly archive are just aggregation pages and should not be treated as standalone items.</li>
+<li>The GPT-5.1 Codex deprecation matters operationally, but today's higher-signal story is organization-level agent governability rather than a routine model swap.</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
-<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>

@@ -1,0 +1,147 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最有信号的是 GitHub 正在把 Copilot cloud agent 从“单仓库试验功能”推进为“可被组织级治理的执行主体”：运行器、网络边界、提交可信性都开始具备企业级控制面。",
+    "这组更新的重点不在模型能力本身，而在 agent 真正进入受控工程环境所需的基础设施：统一 runner 策略、统一防火墙策略、以及满足 signed-commit 分支保护。",
+    "对平台与工程效能负责人而言，含义是 AI coding agent 的落地瓶颈正从“能不能写代码”转向“能不能在组织安全、合规、网络与 CI 约束下可靠运行”。"
+  ],
+  "executive_summary_en": [
+    "The highest-signal development today is GitHub turning Copilot cloud agent from a repo-level experiment into an organization-governable execution surface: runner policy, network boundary controls, and commit trust are now getting enterprise-grade controls.",
+    "The key story is not model capability but operationalization: standardized runners, centralized agent firewall policy, and compatibility with signed-commit branch protection.",
+    "For platform and engineering leaders, this signals that AI coding adoption bottlenecks are shifting from raw coding quality to whether agents can operate safely and compliantly inside real CI, security, and network constraints."
+  ],
+  "items": [
+    {
+      "title": "Organization runner controls for Copilot cloud agent",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-03",
+      "url": "https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent/",
+      "summary_zh": "GitHub 为 Copilot cloud agent 增加了组织级 runner 控制。此前 agent 的执行环境主要在仓库级通过 copilot-setup-steps.yml 配置；现在组织管理员可以为全组织设置默认 runner，并可锁定该设置，禁止仓库覆盖。agent 仍然基于 GitHub Actions 启动临时开发环境，但现在可以统一指定标准托管 runner、大型 runner 或 self-hosted runner。",
+      "summary_en": "GitHub added organization-level runner controls for Copilot cloud agent. Previously, the agent environment was mainly configured per repository through copilot-setup-steps.yml; now org admins can set a default runner across repositories and optionally lock it so repos cannot override it. The agent still spins up ephemeral development environments via GitHub Actions, but teams can now standardize on hosted, larger, or self-hosted runners centrally.",
+      "why_it_matters_zh": "这是 agent 进入企业平台治理的关键一步。runner 决定了性能、成本、网络可达性、凭据边界与内部资源访问方式。把配置从 repo 级提升到 org 级，意味着平台团队终于可以像管理 CI 执行面一样管理 AI agent 的执行面，降低碎片化配置和安全漂移。",
+      "why_it_matters_en": "This is a foundational step in making agents governable like CI infrastructure. Runner choice determines performance, cost, network reachability, credential boundaries, and access to internal systems. Moving configuration from repo scope to org scope lets platform teams manage the agent execution plane the same way they manage CI, reducing fragmentation and security drift.",
+      "key_takeaways_zh": [
+        "Copilot cloud agent 的执行环境现在可由组织统一设定默认 runner，而不再依赖每个仓库单独配置。",
+        "组织可以锁定 runner 策略，确保 agent 始终运行在指定的 GitHub-hosted、large runner 或 self-hosted 环境中。"
+      ],
+      "key_takeaways_en": [
+        "Copilot cloud agent environments can now be standardized with an org-wide default runner instead of per-repo setup.",
+        "Organizations can lock runner policy so the agent always runs on the intended GitHub-hosted, large, or self-hosted execution environment."
+      ],
+      "tags": [
+        "Copilot cloud agent",
+        "GitHub Actions",
+        "runner governance",
+        "enterprise controls"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Organization firewall settings for Copilot cloud agent",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-03",
+      "url": "https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent/",
+      "summary_zh": "GitHub 为 Copilot cloud agent 增加了组织级防火墙设置。该 agent 内置 firewall，用于限制互联网访问并降低 prompt injection 与数据外泄风险。现在组织管理员可以统一控制全组织范围内是否启用防火墙、是否启用推荐 allowlist、维护组织级自定义 allowlist，以及决定仓库管理员能否额外添加 allowlist 条目。",
+      "summary_en": "GitHub added organization-wide firewall controls for Copilot cloud agent. The agent includes a built-in firewall to restrict internet access and mitigate prompt injection and data exfiltration risks. Org admins can now centrally decide whether the firewall is enabled, whether the recommended allowlist is used, maintain an org-wide custom allowlist, and control whether repo admins may add their own allowlist entries.",
+      "why_it_matters_zh": "这直接回应了 agent 落地中的核心安全顾虑：一旦 agent 能自主浏览、检索、拉依赖、访问外部资源，就必须有明确的网络边界与默认 deny/allow 策略。把这些能力上收到组织层，说明 GitHub 正把 AI coding agent 视为需要零信任治理的执行体，而非普通 IDE 助手。",
+      "why_it_matters_en": "This addresses one of the main blockers to production agent adoption: once an agent can browse, fetch dependencies, and access external resources autonomously, it needs explicit network boundaries and sane default deny/allow policies. Elevating this to the org layer shows GitHub is treating coding agents as governable execution entities, not just IDE assistants.",
+      "key_takeaways_zh": [
+        "组织管理员可统一控制 agent 是否能联网、用什么推荐 allowlist，以及是否允许仓库自行扩展规则。",
+        "该功能的目标是缓解 prompt injection 和数据外泄风险，并让 agent 在大规模组织内可控上线。"
+      ],
+      "key_takeaways_en": [
+        "Org admins can centrally govern whether the agent has internet access, which allowlists apply, and whether repos may extend those rules.",
+        "The feature is explicitly aimed at reducing prompt injection and data exfiltration risk while enabling broader enterprise rollout."
+      ],
+      "tags": [
+        "Copilot cloud agent",
+        "agent firewall",
+        "prompt injection",
+        "security governance"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Copilot cloud agent signs its commits",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-03",
+      "url": "https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/",
+      "summary_zh": "Copilot cloud agent 现在会对其生成的每个 commit 进行签名，并在 GitHub 上显示为 Verified。这样一来，启用了“Require signed commits”分支保护规则的仓库也可以使用该 agent；此前这类规则会直接阻止 agent 提交。",
+      "summary_en": "Copilot cloud agent now signs every commit it creates, causing those commits to appear as Verified on GitHub. This means the agent can now operate in repositories that enforce the 'Require signed commits' branch protection rule, which previously blocked agent usage entirely.",
+      "why_it_matters_zh": "这是一个小更新，但对企业落地极其关键。很多受监管或高安全团队默认启用签名提交策略；如果 agent 不满足这一基础门槛，就无法进入主流受控仓库。提交签名使 agent 生成的变更首次真正融入现有供应链可信与审计链条。",
+      "why_it_matters_en": "This looks small but is operationally critical. Many regulated or security-conscious teams already require signed commits by policy; if agents cannot satisfy that baseline, they are excluded from serious repositories. Commit signing brings agent-authored changes into existing trust, audit, and supply-chain integrity workflows.",
+      "key_takeaways_zh": [
+        "agent 生成的提交现在具备可验证身份，能与 GitHub 的 Verified 提交机制对接。",
+        "启用 signed-commit 分支保护的仓库不再天然排斥 Copilot cloud agent。"
+      ],
+      "key_takeaways_en": [
+        "Agent-authored commits now carry verifiable identity and integrate with GitHub's Verified commit workflow.",
+        "Repositories enforcing signed-commit protection no longer automatically exclude Copilot cloud agent."
+      ],
+      "tags": [
+        "Copilot cloud agent",
+        "signed commits",
+        "branch protection",
+        "supply chain trust"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Organization runner controls for Copilot cloud agent",
+    "Organization firewall settings for Copilot cloud agent",
+    "Copilot cloud agent signs its commits"
+  ],
+  "new_terms_zh": [
+    "agent firewall（代理防火墙）",
+    "organization-level runner policy（组织级运行器策略）",
+    "Verified agent commits（已验证的代理提交）"
+  ],
+  "new_terms_en": [
+    "agent firewall",
+    "organization-level runner policy",
+    "Verified agent commits"
+  ],
+  "themes_zh": [
+    "AI coding agent 的组织级治理正在成型",
+    "agent 落地重心从模型能力转向执行环境、安全边界与审计可信",
+    "GitHub 正把 Copilot cloud agent 嵌入现有 CI/CD 与仓库治理体系"
+  ],
+  "themes_en": [
+    "Organization-level governance for AI coding agents is taking shape",
+    "Operational adoption is shifting from model quality to execution environment, safety boundaries, and auditability",
+    "GitHub is embedding Copilot cloud agent into existing CI/CD and repository governance systems"
+  ],
+  "implications_zh": [
+    "平台团队应开始把 AI agent 视为新的执行平面，纳入 runner、网络、凭据、审计和策略管理。",
+    "是否具备组织级默认值与强制策略，将成为评估 AI coding 平台能否大规模落地的关键标准。",
+    "短期内最值得投入的是 guardrails 与集成控制，而不是频繁追逐模型切换。"
+  ],
+  "implications_en": [
+    "Platform teams should treat AI agents as a new execution plane subject to runner, network, credential, audit, and policy management.",
+    "Support for org-wide defaults and enforceable controls will become a key evaluation criterion for enterprise coding-agent platforms.",
+    "Near-term leverage is likely to come more from guardrails and systems integration than from constantly chasing model swaps."
+  ],
+  "reading_order": [
+    "Organization runner controls for Copilot cloud agent",
+    "Organization firewall settings for Copilot cloud agent",
+    "Copilot cloud agent signs its commits"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 首页与月度归档页本身只是聚合入口，信息重复，不应单独纳入摘要。",
+    "GPT-5.1 Codex 系列弃用虽然需要运维层面留意，但今天更高信号的是 agent 可治理性的组织级控制，而非单纯模型替换。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog landing page and monthly archive are just aggregation pages and should not be treated as standalone items.",
+    "The GPT-5.1 Codex deprecation matters operationally, but today's higher-signal story is organization-level agent governability rather than a routine model swap."
+  ]
+}
