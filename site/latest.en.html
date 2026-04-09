@@ -511,11 +511,128 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-06.en.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.en.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.en.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='latest.zh.html'>中文</a><a class="current" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-09.en.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.en.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.en.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.en.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-04-06">AI Coding Daily Digest - 2026-04-06</h1>
-<p>Today has no high-signal AI coding updates worth a full digest.</p>
+          <h1 id="ai-coding-daily-digest-2026-04-09">AI Coding Daily Digest - 2026-04-09</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<ul>
+<li>The strongest signal today is Anthropic’s quantitative study on infrastructure noise in agentic coding evals: runtime configuration alone can move benchmark scores by more than the gap between top models, challenging the comparability of current SWE-bench and Terminal-Bench results.</li>
+<li>From GitHub’s updates, the high-signal pieces are in two buckets: org-level telemetry for AI coding impact via the usage metrics API, and continued productization of agent execution controls such as Autopilot, subagents, and integrated debugging.</li>
+<li>The broader theme is that AI coding has moved into the phase of evaluation reliability, production governance, and organizational observability; model scores and flashy demos alone are no longer enough.</li>
+</ul>
+<h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
+<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
+<ul>
+<li>Source: Anthropic Engineering</li>
+<li>Author: N/A</li>
+<li>Publish date: N/A</li>
+<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
+</ul>
+<p>Anthropic examines an underappreciated variable in agentic coding benchmarks: infrastructure configuration. In internal Terminal-Bench 2.0 experiments, differences in CPU/RAM/time limits and enforcement methodology alone produced a 6-point score swing, larger than many leaderboard gaps between models. The key argument is that in agentic coding evals, the runtime is not a neutral container but part of the task itself, so agents with different resource budgets are effectively not taking the same test.</p>
+<p>Why it matters: This matters to any team using SWE-bench, Terminal-Bench, or internal coding harnesses for model selection. It implies benchmark scores cannot be interpreted independently of infra setup; the eval system itself needs versioning, resource normalization, and error analysis, or organizations risk making deployment decisions based on environment variance rather than model capability.</p>
+<p>Key takeaways:
+- In agentic coding evals, resource budgets and execution limits materially affect scores, sometimes more than model differences do.
+- Eval builders must not only specify recommended resources but also define and consistently enforce the enforcement mechanism, or the benchmark drifts in what it measures.
+- For internal enterprise evals, infra noise should be treated as a first-class metric, with explicit tracking of infra failure rate, timeouts, retry policy, and scheduling differences.</p>
+<p>Tags: agentic-coding, evals, benchmarking, harness-design, infrastructure
+Scores: signal 10/5, novelty 9/5, actionability 9/5</p>
+<h2 id="github-copilot-in-visual-studio-code-march-releases">GitHub Copilot in Visual Studio Code, March Releases</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-08T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-08-github-copilot-in-visual-studio-code-march-releases/">https://github.blog/changelog/2026-04-08-github-copilot-in-visual-studio-code-march-releases/</a></li>
+</ul>
+<p>GitHub summarized a significant set of Copilot agent updates in VS Code: public-preview Autopilot, per-session permission modes (Default/Bypass Approvals/Autopilot), configurable thinking effort, integrated browser debugging, nested subagents, and a unified editor for chat customization. Taken together, these changes show AI coding evolving from single-turn assistance into configurable, debuggable, multi-step agent systems.</p>
+<p>Why it matters: For engineering leaders, the important part is not feature count but the emergence of a governance model: agents now have permission modes, autonomy levels, debugging loops, and task decomposition. Teams need to define which repos/tasks can use Autopilot, which require human approval, and how to observe reliability and cost across subagent chains.</p>
+<p>Key takeaways:
+- Agent execution control is becoming standardized; permission and autonomy modes will become default governance surfaces in enterprises.
+- Integrated debugging and subagents indicate AI coding is increasingly covering complex end-to-end fix workflows, not just code generation snippets.
+- Internal platforms should evolve in parallel with policies for approval thresholds, sandbox boundaries, cost budgets, and failure replay.</p>
+<p>Tags: github-copilot, vscode, agents, autopilot, developer-tooling
+Scores: signal 8/5, novelty 8/5, actionability 8/5</p>
+<h2 id="copilot-reviewed-pull-request-merge-metrics-now-in-the-usage-metrics-api">Copilot-reviewed pull request merge metrics now in the usage metrics API</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-08T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-08-copilot-reviewed-pull-request-merge-metrics-now-in-the-usage-metrics-api/">https://github.blog/changelog/2026-04-08-copilot-reviewed-pull-request-merge-metrics-now-in-the-usage-metrics-api/</a></li>
+</ul>
+<p>GitHub added two organization-level metrics to the Copilot usage metrics API for code review workflows: the total number of PRs that were both reviewed by Copilot and merged, and the median time from PR creation to merge for those PRs. This extends earlier metrics focused on Copilot-authored PRs and starts measuring how Copilot-assisted review affects delivery flow.</p>
+<p>Why it matters: This is foundational for organizational AI coding adoption, not just a minor product update. Many enterprises are stuck with usage but weak proof of value; these API metrics let platform teams integrate Copilot review into DORA/engineering effectiveness dashboards for adoption, cycle-time, and workflow bottleneck analysis.</p>
+<p>Key takeaways:
+- Governance of AI coding is moving beyond seat counts and active-user metrics toward PR lifecycle outcome metrics.
+- Platform teams can compare merge speed for Copilot-reviewed PRs against overall baselines to test whether automated review actually shortens delivery time.
+- This data is well suited for team-by-team rollout analysis, A/B comparisons, and internal ROI reviews.</p>
+<p>Tags: github-copilot, metrics, organizational-adoption, developer-productivity, code-review
+Scores: signal 8/5, novelty 7/5, actionability 9/5</p>
+<h2 id="github-mobile-research-and-code-with-copilot-cloud-agent-anywhere">GitHub Mobile: Research and code with Copilot cloud agent anywhere</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-04-08T00:00:00+00:00</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-08-github-mobile-research-and-code-with-copilot-cloud-agent-anywhere/">https://github.blog/changelog/2026-04-08-github-mobile-research-and-code-with-copilot-cloud-agent-anywhere/</a></li>
+</ul>
+<p>GitHub expanded Copilot cloud agent on mobile beyond PR workflows into broader repo research, implementation planning, branch-based code changes, and diff iteration. Users can now ask the agent to first understand the codebase, propose a plan, and modify a branch before deciding whether to open a PR.</p>
+<p>Why it matters: This is not just 'coding on mobile'; the real signal is that cloud agent workflows are decoupling from the IDE and becoming asynchronous execution surfaces available from anywhere. For platform teams, that means agents increasingly resemble remote execution planes rather than local editor plugins, with corresponding needs for identity, audit, and execution boundary design.</p>
+<p>Key takeaways:
+- AI coding interfaces are expanding beyond desktop IDEs, while execution is becoming more centralized in cloud agents.
+- The 'research codebase, plan, then edit branch' workflow shows repo understanding becoming an explicit product capability rather than a hidden prerequisite.
+- Enterprises should pay attention to audit, approval, and secrets risks introduced by mobile or remote agent triggering.</p>
+<p>Tags: github-copilot, cloud-agent, repo-understanding, mobile, workflow
+Scores: signal 7/5, novelty 7/5, actionability 7/5</p>
+<h2 id="top-items">Top Items</h2>
+<ul>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Copilot-reviewed pull request merge metrics now in the usage metrics API</li>
+<li>GitHub Copilot in Visual Studio Code, March Releases</li>
+</ul>
+<h2 id="new-terms">New Terms</h2>
+<ul>
+<li>infrastructure noise</li>
+<li>Autopilot</li>
+<li>Copilot-reviewed PR merge metrics</li>
+<li>nested subagents</li>
+</ul>
+<h2 id="themes">Themes</h2>
+<ul>
+<li>Reliability of agentic coding evaluation is becoming a first-order concern</li>
+<li>Organizational observability and ROI measurement for AI coding are maturing</li>
+<li>Agent permissioning, autonomy modes, and debugging are becoming productized</li>
+<li>Repo understanding is shifting from implicit capability to explicit workflow</li>
+</ul>
+<h2 id="implications">Implications</h2>
+<ul>
+<li>If you compare coding models, you must track benchmark harness, resource budgets, and timeout policy alongside model version, or your conclusions will be unstable.</li>
+<li>If you are rolling out Copilot/agents internally, integrate usage metrics API into engineering effectiveness dashboards rather than relying on seat consumption and chat counts.</li>
+<li>As Autopilot and cloud agents expand, platform teams need explicit policies for approval boundaries, runtime isolation, and audit logging.</li>
+</ul>
+<h2 id="recommended-reading-order">Recommended Reading Order</h2>
+<ul>
+<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>GitHub Copilot in Visual Studio Code, March Releases</li>
+<li>Copilot-reviewed pull request merge metrics now in the usage metrics API</li>
+<li>GitHub Mobile: Research and code with Copilot cloud agent anywhere</li>
+</ul>
+<h2 id="what-to-ignore">What to Ignore</h2>
+<ul>
+<li>Ignore GitHub changelog index pages, archive pages, and RSS feed entries; they do not add technical substance.</li>
+<li>The new GitHub CLI Linux PGP signing key is operationally useful but weakly related to the high-signal AI coding/agent themes.</li>
+<li>Do not overread generic product release noise; prioritize eval methodology, agent control planes, and org-level measurement.</li>
+</ul>
+<h2 id="sources-checked">Sources Checked</h2>
+<ul>
+<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+</ul>
         </main>
       </div>
     </div>

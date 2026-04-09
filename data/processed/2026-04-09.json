@@ -1,0 +1,194 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最强信号来自 Anthropic 对 agentic coding eval 基础设施噪声的定量研究：运行环境配置本身就能带来超过模型排行榜差距的分数波动，直接挑战了当前 SWE-bench/Terminal-Bench 结果的可比性。",
+    "GitHub 这批更新里，真正值得关注的是两类能力：一类是把 AI coding 的组织级度量接入 API（用于评估 PR review 与 merge 效率）；另一类是把代理执行控制、Autopilot、子代理与调试能力进一步产品化，说明企业正在从“试用助手”转向“治理代理工作流”。",
+    "整体主题是：AI coding 已经进入“评测可信度 + 生产治理 + 组织观测性”阶段，单纯看模型分数或演示功能已不够，团队需要同时建设 eval harness、执行权限边界和 adoption metrics。"
+  ],
+  "executive_summary_en": [
+    "The strongest signal today is Anthropic’s quantitative study on infrastructure noise in agentic coding evals: runtime configuration alone can move benchmark scores by more than the gap between top models, challenging the comparability of current SWE-bench and Terminal-Bench results.",
+    "From GitHub’s updates, the high-signal pieces are in two buckets: org-level telemetry for AI coding impact via the usage metrics API, and continued productization of agent execution controls such as Autopilot, subagents, and integrated debugging.",
+    "The broader theme is that AI coding has moved into the phase of evaluation reliability, production governance, and organizational observability; model scores and flashy demos alone are no longer enough."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 讨论了 agentic coding benchmark 中被低估的变量：基础设施配置。文章指出，在 Terminal-Bench 2.0 的内部实验中，仅 CPU/RAM/时间限制及其执行方式不同，就可造成 6 个百分点的成绩差异，而且这一幅度已超过很多模型之间的排行榜差距。核心论点是：对代理式编码评测而言，运行时环境不是中立容器，而是问题求解过程的一部分，因此不同资源预算下的 agent 实际上并不在参加同一场考试。",
+      "summary_en": "Anthropic examines an underappreciated variable in agentic coding benchmarks: infrastructure configuration. In internal Terminal-Bench 2.0 experiments, differences in CPU/RAM/time limits and enforcement methodology alone produced a 6-point score swing, larger than many leaderboard gaps between models. The key argument is that in agentic coding evals, the runtime is not a neutral container but part of the task itself, so agents with different resource budgets are effectively not taking the same test.",
+      "why_it_matters_zh": "这对任何在用 SWE-bench、Terminal-Bench 或内部 coding harness 做模型选型的团队都非常关键。它意味着 benchmark 分数不能脱离 infra 配置解释，评测系统本身需要版本化、资源标准化和误差分析，否则组织可能基于“环境差异”而不是“模型能力差异”做错误决策。",
+      "why_it_matters_en": "This matters to any team using SWE-bench, Terminal-Bench, or internal coding harnesses for model selection. It implies benchmark scores cannot be interpreted independently of infra setup; the eval system itself needs versioning, resource normalization, and error analysis, or organizations risk making deployment decisions based on environment variance rather than model capability.",
+      "key_takeaways_zh": [
+        "在 agentic coding eval 中，资源配额和执行限制会显著影响最终成绩，且影响量级可超过模型差异。",
+        "评测开发者不仅要规定推荐资源，还要严格定义和一致执行资源限制方式，否则 benchmark 测量目标会漂移。",
+        "对企业内部 eval 来说，infra noise 应被视为一等公民指标，需单独监控 infra failure rate、timeout、重试策略和容器调度差异。"
+      ],
+      "key_takeaways_en": [
+        "In agentic coding evals, resource budgets and execution limits materially affect scores, sometimes more than model differences do.",
+        "Eval builders must not only specify recommended resources but also define and consistently enforce the enforcement mechanism, or the benchmark drifts in what it measures.",
+        "For internal enterprise evals, infra noise should be treated as a first-class metric, with explicit tracking of infra failure rate, timeouts, retry policy, and scheduling differences."
+      ],
+      "tags": [
+        "agentic-coding",
+        "evals",
+        "benchmarking",
+        "harness-design",
+        "infrastructure"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "Copilot-reviewed pull request merge metrics now in the usage metrics API",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-08T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-04-08-copilot-reviewed-pull-request-merge-metrics-now-in-the-usage-metrics-api/",
+      "summary_zh": "GitHub 在 Copilot usage metrics API 中新增两项面向代码审查场景的组织级指标：被 Copilot review 且成功 merged 的 PR 总数，以及这些 PR 从创建到合并的中位耗时。该更新补足了此前仅关注“Copilot 帮助生成 PR”的度量，开始让团队能够衡量“Copilot 帮助 review PR”对交付节奏的影响。",
+      "summary_en": "GitHub added two organization-level metrics to the Copilot usage metrics API for code review workflows: the total number of PRs that were both reviewed by Copilot and merged, and the median time from PR creation to merge for those PRs. This extends earlier metrics focused on Copilot-authored PRs and starts measuring how Copilot-assisted review affects delivery flow.",
+      "why_it_matters_zh": "这是组织落地 AI coding 的关键基础设施，而不仅是一个产品小更新。很多企业目前卡在“有使用量，但难证明价值”，而这类 API 指标使平台团队能把 Copilot review 纳入 DORA/工程效率仪表盘，做出 adoption、cycle time 和流程瓶颈分析。",
+      "why_it_matters_en": "This is foundational for organizational AI coding adoption, not just a minor product update. Many enterprises are stuck with usage but weak proof of value; these API metrics let platform teams integrate Copilot review into DORA/engineering effectiveness dashboards for adoption, cycle-time, and workflow bottleneck analysis.",
+      "key_takeaways_zh": [
+        "AI coding 的组织治理正在从 seat/活跃用户计数，走向 PR 生命周期层面的结果度量。",
+        "平台团队可以将 Copilot-reviewed PR 的 merge 速度与整体基线对比，评估自动化 review 是否真正缩短交付时间。",
+        "这类数据适合作为分团队 rollout、A/B 对照和内部 ROI 复盘的基础。"
+      ],
+      "key_takeaways_en": [
+        "Governance of AI coding is moving beyond seat counts and active-user metrics toward PR lifecycle outcome metrics.",
+        "Platform teams can compare merge speed for Copilot-reviewed PRs against overall baselines to test whether automated review actually shortens delivery time.",
+        "This data is well suited for team-by-team rollout analysis, A/B comparisons, and internal ROI reviews."
+      ],
+      "tags": [
+        "github-copilot",
+        "metrics",
+        "organizational-adoption",
+        "developer-productivity",
+        "code-review"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Copilot in Visual Studio Code, March Releases",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-08T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-04-08-github-copilot-in-visual-studio-code-march-releases/",
+      "summary_zh": "GitHub 汇总了 VS Code 中 Copilot 的一组重要代理能力更新：Autopilot 公测、会话级权限控制（Default/Bypass Approvals/Autopilot）、可配置 thinking effort、集成浏览器调试、嵌套 subagents，以及统一的 chat customization 编辑器。其共同指向是：AI coding 正从单轮建议进化为可配置、可调试、可分工的多步代理系统。",
+      "summary_en": "GitHub summarized a significant set of Copilot agent updates in VS Code: public-preview Autopilot, per-session permission modes (Default/Bypass Approvals/Autopilot), configurable thinking effort, integrated browser debugging, nested subagents, and a unified editor for chat customization. Taken together, these changes show AI coding evolving from single-turn assistance into configurable, debuggable, multi-step agent systems.",
+      "why_it_matters_zh": "对工程负责人而言，值得关注的不只是功能多了，而是治理模型成型了：代理现在有权限模式、自治程度、调试闭环和任务分解能力。团队需要开始定义哪些仓库/任务可以启用 Autopilot，哪些必须保留人工审批，以及如何观察子代理链路的可靠性与成本。",
+      "why_it_matters_en": "For engineering leaders, the important part is not feature count but the emergence of a governance model: agents now have permission modes, autonomy levels, debugging loops, and task decomposition. Teams need to define which repos/tasks can use Autopilot, which require human approval, and how to observe reliability and cost across subagent chains.",
+      "key_takeaways_zh": [
+        "代理执行控制正在标准化，权限和自治模式会成为企业默认需要治理的配置面。",
+        "集成调试和子代理能力意味着 AI coding 正逐步覆盖更复杂的端到端修复流程，而不是只生成代码片段。",
+        "未来内部平台应同步建设策略：审批门槛、沙箱边界、成本预算和失败回放。"
+      ],
+      "key_takeaways_en": [
+        "Agent execution control is becoming standardized; permission and autonomy modes will become default governance surfaces in enterprises.",
+        "Integrated debugging and subagents indicate AI coding is increasingly covering complex end-to-end fix workflows, not just code generation snippets.",
+        "Internal platforms should evolve in parallel with policies for approval thresholds, sandbox boundaries, cost budgets, and failure replay."
+      ],
+      "tags": [
+        "github-copilot",
+        "vscode",
+        "agents",
+        "autopilot",
+        "developer-tooling"
+      ],
+      "signal_score": 8,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub Mobile: Research and code with Copilot cloud agent anywhere",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-08T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-04-08-github-mobile-research-and-code-with-copilot-cloud-agent-anywhere/",
+      "summary_zh": "GitHub 将 Copilot cloud agent 从移动端 PR 工作流扩展到更完整的代码库研究、实现计划生成、分支修改与 diff 迭代。用户可以在手机上要求代理先理解代码库、提出计划、修改分支，并在准备好时再创建 PR，而不是一开始就进入固定的 PR 流程。",
+      "summary_en": "GitHub expanded Copilot cloud agent on mobile beyond PR workflows into broader repo research, implementation planning, branch-based code changes, and diff iteration. Users can now ask the agent to first understand the codebase, propose a plan, and modify a branch before deciding whether to open a PR.",
+      "why_it_matters_zh": "这不是“手机上也能写代码”的噱头，真正的信号是云端代理工作流正在脱离 IDE，进入随时随地可触发的异步执行模式。对平台团队来说，这意味着代理会越来越像一个远程执行面，而非单机 IDE 插件，需要对应的身份、审计和执行边界设计。",
+      "why_it_matters_en": "This is not just 'coding on mobile'; the real signal is that cloud agent workflows are decoupling from the IDE and becoming asynchronous execution surfaces available from anywhere. For platform teams, that means agents increasingly resemble remote execution planes rather than local editor plugins, with corresponding needs for identity, audit, and execution boundary design.",
+      "key_takeaways_zh": [
+        "AI coding 的交互入口正在从桌面 IDE 扩展到多终端，但执行本体更集中在云端代理。",
+        "“先研究代码库、再出计划、再改分支”的流程说明 repo understanding 已成为产品化能力，而非隐藏前置步骤。",
+        "企业应关注移动/远程触发代理所带来的审计、审批与 secrets 风险。"
+      ],
+      "key_takeaways_en": [
+        "AI coding interfaces are expanding beyond desktop IDEs, while execution is becoming more centralized in cloud agents.",
+        "The 'research codebase, plan, then edit branch' workflow shows repo understanding becoming an explicit product capability rather than a hidden prerequisite.",
+        "Enterprises should pay attention to audit, approval, and secrets risks introduced by mobile or remote agent triggering."
+      ],
+      "tags": [
+        "github-copilot",
+        "cloud-agent",
+        "repo-understanding",
+        "mobile",
+        "workflow"
+      ],
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "Copilot-reviewed pull request merge metrics now in the usage metrics API",
+    "GitHub Copilot in Visual Studio Code, March Releases"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）",
+    "Autopilot",
+    "Copilot-reviewed PR merge metrics",
+    "嵌套子代理（nested subagents）"
+  ],
+  "new_terms_en": [
+    "infrastructure noise",
+    "Autopilot",
+    "Copilot-reviewed PR merge metrics",
+    "nested subagents"
+  ],
+  "themes_zh": [
+    "代理式编码评测的可信度正在成为核心议题",
+    "AI coding 的组织级观测性和 ROI 度量加速成熟",
+    "代理权限控制、自治模式与调试能力正在产品化",
+    "repo understanding 正从隐式能力转成显式工作流"
+  ],
+  "themes_en": [
+    "Reliability of agentic coding evaluation is becoming a first-order concern",
+    "Organizational observability and ROI measurement for AI coding are maturing",
+    "Agent permissioning, autonomy modes, and debugging are becoming productized",
+    "Repo understanding is shifting from implicit capability to explicit workflow"
+  ],
+  "implications_zh": [
+    "如果你在比较 coding models，必须把 benchmark harness、资源配额和 timeout 策略与模型版本一并记录，否则结论不稳健。",
+    "如果你在推进企业内 Copilot/agent rollout，应尽快把 usage metrics API 接入工程效能仪表盘，而不是只看许可证消耗和聊天次数。",
+    "随着 Autopilot 和云端代理扩张，平台团队需要定义清晰的审批边界、运行环境隔离和审计日志策略。"
+  ],
+  "implications_en": [
+    "If you compare coding models, you must track benchmark harness, resource budgets, and timeout policy alongside model version, or your conclusions will be unstable.",
+    "If you are rolling out Copilot/agents internally, integrate usage metrics API into engineering effectiveness dashboards rather than relying on seat consumption and chat counts.",
+    "As Autopilot and cloud agents expand, platform teams need explicit policies for approval boundaries, runtime isolation, and audit logging."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "GitHub Copilot in Visual Studio Code, March Releases",
+    "Copilot-reviewed pull request merge metrics now in the usage metrics API",
+    "GitHub Mobile: Research and code with Copilot cloud agent anywhere"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub changelog 聚合页、月度归档页和 RSS feed 本身没有新增技术内容，可忽略。",
+    "New PGP signing key for GitHub CLI Linux packages 虽然对运维有用，但与 AI coding/agent 高信号主题关联较弱。",
+    "泛化的产品发布噪音不要过度解读，优先关注 eval 方法学、代理控制面和组织级度量。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore GitHub changelog index pages, archive pages, and RSS feed entries; they do not add technical substance.",
+    "The new GitHub CLI Linux PGP signing key is operationally useful but weakly related to the high-signal AI coding/agent themes.",
+    "Do not overread generic product release noise; prioritize eval methodology, agent control planes, and org-level measurement."
+  ]
+}
