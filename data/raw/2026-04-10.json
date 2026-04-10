@@ -1,0 +1,72 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.09 Improvement Ask Copilot in security assessments now available application security Apr.09 Improvement New Low Quality option in the Hide comment menu platform governance Apr.09 Improvement New Sort by control added to Notifications collaboration tools Apr.09 Improvement Repository member role labels now in pull request list view collaboration tools Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.08 Release Copilot-reviewed pull request merge metrics now in the usage metrics API account management copilot enterprise management tools ... +2 Apr.08 Improvement Secret scanning improvements to alert APIs, webhooks, and delegated workflows application security Apr.08 Improvement GitHub Mobile: Research and code with Copilot cloud agent anywhere client apps copilot ... +1 Apr.08 Release Code Security risk assessment available for organizations application security Apr.08 Improvement New PGP signing key for GitHub CLI Linux packages client apps Apr.08 Release GitHub Copilot in Visual Studio Code, March Releases copilot Apr.07 Release Prioritize security alerts with runtime context from Dynatrace application security supply chain security ... +1 Apr.07 Release Copilot CLI now supports BYOK and local models client apps copilot ... +1 Apr.07 Improvement Dependabot alerts are",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: April 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/04/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: April 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.09 Improvement Ask Copilot in security assessments now available application security Apr.09 Improvement New Low Quality option in the Hide comment menu platform governance Apr.09 Improvement New Sort by control added to Notifications collaboration tools Apr.09 Improvement Repository member role labels now in pull request list view collaboration tools Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.08 Release Copilot-reviewed pull request merge metrics now in the usage metrics API account management copilot enterprise management tools ... +2 Apr.08 Improvement Secret scanning improvements to alert APIs, webhooks, and delegated workflows application security Apr.08 Improvement GitHub Mobile: Research and code with Copilot cloud agent anywhere client apps copilot ... +1 Apr.08 Release Code Security risk assessment available for organizations application security Apr.08 Improvement New PGP signing key for GitHub CLI Linux packages client apps Apr.08 Release GitHub Copilot in Visual Studio Code, March Releases copilot Apr.07 Release Prioritize security alerts with runtime context from Dynatrace application security supply chain security ... +1 Apr.07 Release Copilot CLI now supports BYOK and local models client apps copilot ... +1 Apr.07 Improvement",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.02 Improvement Improved search for GitHub Issues is now generally available projects & issues March Mar 2026 March Mar 2026 Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available projects & issues Mar.12 Release Issue fields: Structured issue metadata is in public preview projects & issues Mar.05 Improvement Hierarchy view improvements and file uploads in issue forms projects & issues February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electro",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "New Sort by control added to Notifications - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-09-new-sort-by-control-added-to-notifications/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "A new “Sort by” control appears on the Notifications page, with two options: Newest to oldest (which matches the previous behavior) and Oldest to newest. The selected sort order applies…",
+    "body_excerpt": "New Sort by control added to Notifications - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement April 9, 2026 • 1 minute read New Sort by control added to Notifications A new “Sort by” control appears on the Notifications page, with two options: Newest to oldest (which matches the previous behavior) and Oldest to newest . The selected sort order applies across every view and it persists across sessions. When notifications are grouped by repository, sorting affects the order of groups themselves and the order of items within each group. This means you can work through your backlog methodically, without having to navigate to the last page and work backwards to find your oldest notifications. Drop your feedback in our Community discussion . collaboration tools Share Copied Shared Back to changelog Related Posts Apr.09 Improvement Repository member role labels now in pull request list view collaboration tools Apr.01 Improvement Codespaces is now generally available for GitHub Enterprise with data residency collaboration tools Mar.26 Release New pull requests dashboard is in public preview collaboration tools Mar.25 Improvement GitHub Copilot for Jira — Public preview enhancements collaboration tools copilot ... +1 Mar.25 Improvement Disable comments on individual commits collaboration tools Mar.19 Improvement Codespaces with data residency now available in Japan collaboration tools Mar.19 Improvement View code and comments side-by-side in pull request Files changed page collaboration tools Mar.17 Release GitHub Enterprise Server 3.20 is now generally available collaboration tools Mar.05 Release GitHub Copilot coding agent for Jira is now in public preview collaboration tools copilot ... +1 Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsl",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Release information in issue sidebar and default values for project fields - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-09-release-info-in-issue-sidebar-and-project-defaults/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "This update brings release tracking closer to your issues, configurable defaults for project fields, and faster navigation across related issues. Release information in the issue sidebar When an issue is…",
+    "body_excerpt": "Release information in issue sidebar and default values for project fields - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement April 9, 2026 • 1 minute read Release information in issue sidebar and default values for project fields This update brings release tracking closer to your issues, configurable defaults for project fields, and faster navigation across related issues. Release information in the issue sidebar When an issue is linked by a pull request, the “Development” section now shows the first release that shipped that pull request, directly beneath the pull request reference. Where available, linked pull request includes the release tag and one of the following badges: Latest : Available in a stable release. Pre-release : Included in a pre-release and not yet stable. Instantly see when a fix shipped, right from the issue page. Default values for project fields You can now set default values for text, number, and single select project fields. These values are automatically applied when new items are added to a project. Other improvements You can now open issue references in the issue viewer. Clicking an issue reference now opens the issue in the issue viewer so you can quickly view related issues without losing your place. This works from comments or timeline activity, including mentions, cross-references, sub-issues, and parent issues. Share your feedback in the GitHub Community . projects & issues Share Copied Shared Back to changelog Related Posts Apr.02 Improvement Improved search for GitHub Issues is now generally available projects & issues Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
