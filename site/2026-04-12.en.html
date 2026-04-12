@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2026-04-10.en</title>
+    <title>2026-04-12.en</title>
     <style>
       :root {
         color-scheme: light;
@@ -511,83 +511,11 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='2026-04-10.zh.html'>中文</a><a class="current" href='2026-04-10.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-12.en.html'>2026-04-12</a></li><li><a class='current' href='2026-04-10.en.html'>2026-04-10</a></li><li><a class='' href='2026-04-09.en.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.en.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.en.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.en.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="" href='2026-04-12.zh.html'>中文</a><a class="current" href='2026-04-12.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.en.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-04-12.en.html'>2026-04-12</a></li><li><a class='' href='2026-04-10.en.html'>2026-04-10</a></li><li><a class='' href='2026-04-09.en.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.en.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.en.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.en.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.en.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.en.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.en.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.en.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.en.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.en.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.en.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.en.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-04-10">AI Coding Daily Digest - 2026-04-10</h1>
-<h2 id="executive-summary">Executive Summary</h2>
-<ul>
-<li>The candidate set is weak today: mostly routine GitHub changelog entries without deep technical detail, evaluation methodology, architecture insight, or organizational adoption lessons.</li>
-<li>The two borderline-worth-tracking items are Copilot-reviewed pull request merge metrics in the usage metrics API and Copilot CLI support for BYOK and local models, as both touch enterprise observability and model governance.</li>
-</ul>
-<h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="copilot-cli-now-supports-byok-and-local-models">Copilot CLI now supports BYOK and local models</h2>
-<ul>
-<li>Source: GitHub Changelog</li>
-<li>Author: N/A</li>
-<li>Publish date: 2026-04-07</li>
-<li>URL: <a href="https://github.blog/changelog/">https://github.blog/changelog/</a></li>
-</ul>
-<p>GitHub announced that Copilot CLI now supports BYOK and local models, allowing developers and enterprises to choose model backends and credential control more flexibly in command-line agent workflows.</p>
-<p>Why it matters: Even as a short changelog note, it touches two of the most important directions in AI coding infrastructure: model substitutability and data-boundary control. For organizations constrained by compliance, cost, latency, or IP concerns, this is a prerequisite for moving AI tooling from vendor-managed convenience into an enterprise platform standard.</p>
-<p>Key takeaways:
-- CLI-level AI assistants are beginning to support bring-your-own-key and local-model execution, signaling a more open control plane.
-- Enterprises can use this to explore private models, cost-tiered routing, or offline/internal development setups.</p>
-<p>Tags: Copilot CLI, BYOK, local models, enterprise governance
-Scores: signal 7/5, novelty 7/5, actionability 7/5</p>
-<h2 id="copilot-reviewed-pull-request-merge-metrics-now-in-the-usage-metrics-api">Copilot-reviewed pull request merge metrics now in the usage metrics API</h2>
-<ul>
-<li>Source: GitHub Changelog</li>
-<li>Author: N/A</li>
-<li>Publish date: 2026-04-08</li>
-<li>URL: <a href="https://github.blog/changelog/">https://github.blog/changelog/</a></li>
-</ul>
-<p>GitHub added merge metrics for Copilot-reviewed pull requests to the usage metrics API, giving enterprise admins an API-level way to track outcomes for PRs that involved Copilot review.</p>
-<p>Why it matters: This is one of the few updates that directly matters for organizational AI coding adoption because it links AI-assisted review activity to downstream merge outcomes inside enterprise observability workflows. For platform teams, it creates an automatable input for ROI analysis, team comparisons, policy experiments, and governance reporting, even if quality signals are still limited.</p>
-<p>Key takeaways:
-- AI code review is starting to surface in enterprise usage APIs, not just product UI.
-- Platform teams can pipe this metric into internal BI, cost analysis, or Copilot adoption dashboards.</p>
-<p>Tags: Copilot, usage metrics API, engineering management, AI code review
-Scores: signal 7/5, novelty 6/5, actionability 8/5</p>
-<h2 id="top-items">Top Items</h2>
-<ul>
-<li>Copilot-reviewed pull request merge metrics now in the usage metrics API</li>
-<li>Copilot CLI now supports BYOK and local models</li>
-</ul>
-<h2 id="new-terms">New Terms</h2>
-<ul>
-<li>BYOK (bring your own key)</li>
-<li>usage metrics API</li>
-<li>Copilot-reviewed pull request merge metrics</li>
-</ul>
-<h2 id="themes">Themes</h2>
-<ul>
-<li>Enterprise observability for AI coding</li>
-<li>Model governance and backend substitutability</li>
-</ul>
-<h2 id="implications">Implications</h2>
-<ul>
-<li>Platform teams should start integrating AI coding usage and outcome metrics into shared data pipelines rather than tracking only license allocation.</li>
-<li>Competitive differentiation in AI coding platforms is shifting from single-model capability toward model interchangeability, credential governance, and deployment-boundary control.</li>
-</ul>
-<h2 id="recommended-reading-order">Recommended Reading Order</h2>
-<ul>
-<li>Copilot CLI now supports BYOK and local models</li>
-<li>Copilot-reviewed pull request merge metrics now in the usage metrics API</li>
-</ul>
-<h2 id="what-to-ignore">What to Ignore</h2>
-<ul>
-<li>Routine collaboration UX changes like notification sorting and issue sidebar release info have limited strategic value for AI coding.</li>
-<li>Duplicate GitHub Changelog index/archive pages add no new information and should be ignored.</li>
-</ul>
-<h2 id="sources-checked">Sources Checked</h2>
-<ul>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
-</ul>
+          <h1 id="ai-coding-daily-digest-2026-04-12">AI Coding Daily Digest - 2026-04-12</h1>
+<p>Today has no high-signal AI coding updates worth a full digest.</p>
         </main>
       </div>
     </div>
