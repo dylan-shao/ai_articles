@@ -1,0 +1,87 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天只有一篇明显高信号内容，且其技术含量足够高，但数量不足以构成完整日报。",
+    "Anthropic 的工程文章指出：在 agentic coding eval 中，基础设施配置本身就能带来 6 个百分点级别的分数波动，足以改变模型排名与选型判断。",
+    "对评测设计者和平台团队而言，这意味着应把 CPU、内存、超时、容器隔离与资源执行方式视为 benchmark 定义的一部分，而不是实验细节。"
+  ],
+  "executive_summary_en": [
+    "There is only one clearly high-signal item today, so this is not a full digest day.",
+    "Anthropic shows that infrastructure configuration alone can move agentic coding eval scores by around 6 percentage points, enough to change leaderboard interpretations and deployment choices.",
+    "For eval builders and platform teams, CPU, memory, time limits, container isolation, and enforcement methods should be treated as part of the benchmark definition rather than incidental setup details."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 工程团队分析了 agentic coding benchmarks（如 SWE-bench、Terminal-Bench）中的“基础设施噪声”问题，指出运行环境并非中性容器，而是评测的一部分。文章称，在 Terminal-Bench 2.0 的内部实验中，仅资源配置差异就可带来约 6 个百分点的分数差距，而且这种差距甚至可能超过排行榜上领先模型之间的差值。",
+      "summary_en": "Anthropic Engineering analyzes “infrastructure noise” in agentic coding benchmarks such as SWE-bench and Terminal-Bench, arguing that the runtime environment is not a neutral container but part of the test itself. In internal Terminal-Bench 2.0 experiments, resource configuration alone shifted scores by about 6 percentage points—larger than the gap between some top leaderboard entries.",
+      "why_it_matters_zh": "这篇文章直接挑战了业界对 coding-agent leaderboard 的常见解读方式：如果不同团队的 CPU/RAM 配额、超时策略、调度与资源隔离不一致，那么他们并没有在做同一场测试。对负责模型评测、采购、平台治理和内部基准体系的工程负责人来说，这会影响模型对比、公平性、回归判断以及预算配置。",
+      "why_it_matters_en": "This piece directly challenges how the industry interprets coding-agent leaderboards: if teams run with different CPU/RAM budgets, timeout policies, scheduling, and isolation behavior, they are not taking the same test. For engineering leaders responsible for model evaluation, procurement, platform governance, and internal benchmark design, this affects comparability, fairness, regression detection, and budget planning.",
+      "key_takeaways_zh": [
+        "Agentic coding eval 与静态 benchmark 不同，运行时环境会改变模型可完成的任务空间，因此 infra 不是附属变量。",
+        "即使 benchmark 文档给出推荐资源，若缺少一致且可验证的 enforcement，结果仍可能测到“环境优势”而非“模型能力”。",
+        "评测平台需要记录并公开资源预算、超时、失败类型、调度策略与重试机制，否则 leaderboard 的可比性有限。"
+      ],
+      "key_takeaways_en": [
+        "Unlike static benchmarks, agentic coding evals are shaped by the runtime environment, so infra is not a secondary variable.",
+        "Even if a benchmark specifies recommended resources, without consistent and auditable enforcement the result may measure environment advantage rather than model capability.",
+        "Eval platforms should log and publish resource budgets, timeouts, failure modes, scheduling policy, and retry behavior; otherwise leaderboard comparability is weak."
+      ],
+      "tags": [
+        "agentic-coding",
+        "benchmarking",
+        "eval-harness",
+        "infrastructure",
+        "Terminal-Bench",
+        "SWE-bench"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）：由资源配置、调度、超时和隔离机制引入的评测方差。",
+    "资源执行一致性（resource enforcement consistency）：对 CPU、内存、时限等限制进行一致且可审计实施的能力。"
+  ],
+  "new_terms_en": [
+    "Infrastructure noise: benchmark variance introduced by resource configuration, scheduling, timeout, and isolation behavior.",
+    "Resource enforcement consistency: the ability to apply CPU, memory, and time constraints uniformly and auditably across runs."
+  ],
+  "themes_zh": [
+    "Agentic coding 评测正在从“模型输出评测”转向“模型+执行环境联合评测”。",
+    "评测框架的工程实现细节正成为排行榜可信度的核心变量。"
+  ],
+  "themes_en": [
+    "Agentic coding evaluation is shifting from pure model-output scoring to joint evaluation of model plus execution environment.",
+    "Engineering details of the eval harness are becoming central to leaderboard credibility."
+  ],
+  "implications_zh": [
+    "内部评测体系应把容器规格、并发、缓存、网络权限、安装策略和超时配置纳入 benchmark metadata，并做版本化管理。",
+    "在比较供应商模型或 agent 框架时，团队需要先做 infra normalization，否则容易把平台调优误判为模型进步。",
+    "下一阶段高质量 benchmark 的竞争点，将是可复现 harness、资源配额标准化和 failure taxonomy，而不只是题库本身。"
+  ],
+  "implications_en": [
+    "Internal eval systems should version benchmark metadata for container shape, concurrency, caching, network access, install policy, and timeout configuration.",
+    "When comparing vendor models or agent frameworks, teams should normalize infra first; otherwise platform tuning can be mistaken for model progress.",
+    "The next quality frontier for benchmarks will be reproducible harnesses, standardized resource budgets, and failure taxonomies—not just better task sets."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals"
+  ],
+  "what_to_ignore_zh": [
+    "不要只看 leaderboard 百分比差距而忽略运行环境差异。",
+    "不要把 benchmark 文档中的“推荐资源”误认为已经实现了强约束和可重复执行。"
+  ],
+  "what_to_ignore_en": [
+    "Do not read leaderboard percentage gaps without accounting for runtime environment differences.",
+    "Do not assume that “recommended resources” in benchmark docs means strong enforcement and reproducible execution."
+  ]
+}
