@@ -1,0 +1,72 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.15 Improvement CodeQL 2.25.2 adds Kotlin 2.3.20 support and other updates application security Apr.15 Improvement Enable Copilot cloud agent via custom properties copilot enterprise management tools ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Release Deployment context in repository properties and alerts application security platform governance ... +1 Apr.14 Release Link code scanning alerts to GitHub Issues application security Apr.14 Improvement Dependabot and code scanning: Org-level private registries supply chain security Apr.14 Improvement Secret scanning pattern updates and product improvements application security Apr.14 Improvement SBOM exports are now computed asynchronously supply chain security Apr.14 Improvement Model selection for Claude and Codex agents on github.com copilot Apr.14 Improvement GitHub Code Quality: Improvements to standard findings in public preview application security platform governance ... +1 Apr.13 Release Copilot data residency in US + EU and FedRAMP compliance now available copilot platform governance ... +1 Apr.13 Improvement Fix merge conflicts in three clicks with Copilot cloud agent copilot Apr.13 Release Remote control CLI sessions on web and mobile in public preview copilot Apr.10 Retired Enforcing new limi",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Wed, 15 Apr 2026 22:09:42 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 CodeQL 2.25.2 adds Kotlin 2.3.20 support and other updates https://github.blog/changelog/2026-04-15-codeql-2-25-2-adds-kotlin-2-3-20-support-and-other-updates Allison Wed, 15 Apr 2026 22:05:52 +0000 https://github.blog/changelog/2026-04-15-codeql-2-25-2-adds-kotlin-2-3-20-support-and-other-updates <p>CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We&#8217;ve recently released CodeQL 2.25.2, which brings a new Kotlin version&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-04-15-codeql-2-25-2-adds-kotlin-2-3-20-support-and-other-updates\">CodeQL 2.25.2 adds Kotlin 2.3.20 support and other updates</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>CodeQL is the static analysis engine behind <a href=\"https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql\">GitHub code scanning</a>, which finds and remediates security issues in your code. We&rsquo;ve recently released <a href=\"https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.25.2/\">CodeQL 2.25.2</a>, which brings a new Kotlin version update, various accuracy improvements, and a set of security severity score adjustments across multiple languages.</p> <h2 id=\"language-and-framework-support\" id=\"language-and-framework-support\" ><a class=\"heading-link\" href=\"#language-and-framework-support\">Language and fram",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: April 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/04/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: April 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.15 Improvement CodeQL 2.25.2 adds Kotlin 2.3.20 support and other updates application security Apr.15 Improvement Enable Copilot cloud agent via custom properties copilot enterprise management tools ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Release Deployment context in repository properties and alerts application security platform governance ... +1 Apr.14 Release Link code scanning alerts to GitHub Issues application security Apr.14 Improvement Dependabot and code scanning: Org-level private registries supply chain security Apr.14 Improvement Secret scanning pattern updates and product improvements application security Apr.14 Improvement SBOM exports are now computed asynchronously supply chain security Apr.14 Improvement Model selection for Claude and Codex agents on github.com copilot Apr.14 Improvement GitHub Code Quality: Improvements to standard findings in public preview application security platform governance ... +1 Apr.13 Release Copilot data residency in US + EU and FedRAMP compliance now available copilot platform governance ... +1 Apr.13 Improvement Fix merge conflicts in three clicks with Copilot cloud agent copilot Apr.13 Release Remote control CLI sessions on web and mobile in public preview copilot Apr.10 Reti",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enable Copilot cloud agent via custom properties - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now selectively enable GitHub Copilot cloud agent (CCA) access on a per-organization basis. Previously, enterprise admins and AI managers could only enable the agent everywhere, disable it everywhere,…",
+    "body_excerpt": "Enable Copilot cloud agent via custom properties - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement April 15, 2026 • 1 minute read Enable Copilot cloud agent via custom properties Table of Contents New API endpoints to manage CCA Manage CCA for organizations from the AI controls page Menu. Currently selected: New API endpoints to manage CCA New API endpoints to manage CCA Manage CCA for organizations from the AI controls page You can now selectively enable GitHub Copilot cloud agent (CCA) access on a per-organization basis. Previously, enterprise admins and AI managers could only enable the agent everywhere, disable it everywhere, or let each organization decide. With this release, you can selectively enable CCA for specific organizations, individually or by using organization custom properties . You can manage this policy setting using the new API endpoints or directly in the AI Controls page. Please note that using custom properties to enable CCA is evaluated once at the time of configuration. Organizations will not be automatically enabled or disabled for CCA if the custom property is added, removed, or modified later. This new capability provides the flexibility to pilot CCA with select teams, progressively expand access, and manage adoption at your own pace. New API endpoints to manage CCA You can use three new API endpoints to manage CCA: PUT : Set the policy state: decided by organization, enabled everywhere, disabled everywhere, or enabled for selected organizations. POST : Add organizations to the CCA enabled list. DELETE : Disable CCA for organizations. To learn more, visit our REST API documentation . Manage CCA for organizations from the AI controls page In the AI Controls settings page, you can now create policies that selectively enable CCA for a subset of your organizations. No ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Enterprise management tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.15 Improvement Enable Copilot cloud agent via custom properties copilot enterprise management tools ... +1 Apr.10 Improvement Copilot usage metrics now aggregate Copilot cloud agent active user counts account management copilot enterprise management tools ... +2 Apr.10 Improvement Copilot CLI activity now included in usage metrics totals and feature breakdowns account management copilot enterprise management tools ... +2 Apr.08 Release Copilot-reviewed pull request merge metrics now in the usage metrics API account management copilot enterprise management tools ... +2 Apr.06 Release Copilot usage metrics now identify active and passive Copilot code review users account management copilot enterprise management tools ... +2 Apr.02 Improvement Copilot usage metrics now includes per-user GitHub Copilot CLI activity in organization reports account management copilot enterprise management tools ... +2 Apr.02 Improvement The Security tab is now Security & quality application security enterprise management tools platform governance ... +2 March Mar 2026 March Mar 2026 Mar.31 Improvement EU data residency region expanding to include EFTA countries enterprise management tools Mar.17 Improvement Copilot usage metrics now includes organization-level GitHub Copilot CLI activity account management copilot enterprise man",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

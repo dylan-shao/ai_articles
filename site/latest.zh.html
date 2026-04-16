@@ -511,64 +511,70 @@
       </div>
       <div class="layout">
         <aside class="sidebar">
-          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-13.zh.html'>2026-04-13</a></li><li><a class='' href='2026-04-12.zh.html'>2026-04-12</a></li><li><a class='' href='2026-04-10.zh.html'>2026-04-10</a></li><li><a class='' href='2026-04-09.zh.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.zh.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.zh.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.zh.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='latest.zh.html'>中文</a><a class="" href='latest.en.html'>English</a></div><h3>Views</h3><ul><li><a class='current' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='' href='2026-04-16.zh.html'>2026-04-16</a></li><li><a class='' href='2026-04-13.zh.html'>2026-04-13</a></li><li><a class='' href='2026-04-12.zh.html'>2026-04-12</a></li><li><a class='' href='2026-04-10.zh.html'>2026-04-10</a></li><li><a class='' href='2026-04-09.zh.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.zh.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.zh.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.zh.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
         </aside>
         <main class="panel">
-          <h1 id="ai-coding-daily-digest-2026-04-13">AI Coding Daily Digest - 2026-04-13</h1>
+          <h1 id="ai-coding-daily-digest-2026-04-16">AI Coding Daily Digest - 2026-04-16</h1>
 <h2 id="executive-summary">Executive Summary</h2>
 <ul>
-<li>今天只有一篇明显高信号内容，且其技术含量足够高，但数量不足以构成完整日报。</li>
-<li>Anthropic 的工程文章指出：在 agentic coding eval 中，基础设施配置本身就能带来 6 个百分点级别的分数波动，足以改变模型排名与选型判断。</li>
-<li>对评测设计者和平台团队而言，这意味着应把 CPU、内存、超时、容器隔离与资源执行方式视为 benchmark 定义的一部分，而不是实验细节。</li>
+<li>今天候选内容整体偏弱，主要是 GitHub Changelog 的产品更新；其中真正对工程负责人有较高信号的是 Copilot cloud agent 的企业级灰度控制能力。</li>
+<li>这次更新的核心价值不在模型能力，而在组织采用路径：GitHub 现在支持按组织选择性启用 cloud agent，并提供 API，便于做试点、分阶段推广与治理。</li>
+<li>其余候选多为聚合页或通用更新列表，技术深度和新增信息有限，不足以构成完整日报。</li>
 </ul>
 <h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
-<h2 id="quantifying-infrastructure-noise-in-agentic-coding-evals">Quantifying infrastructure noise in agentic coding evals</h2>
+<h2 id="enable-copilot-cloud-agent-via-custom-properties-github-changelog">Enable Copilot cloud agent via custom properties - GitHub Changelog</h2>
 <ul>
-<li>Source: Anthropic Engineering</li>
+<li>Source: GitHub Changelog</li>
 <li>Author: N/A</li>
-<li>Publish date: N/A</li>
-<li>URL: <a href="https://www.anthropic.com/engineering/infrastructure-noise">https://www.anthropic.com/engineering/infrastructure-noise</a></li>
+<li>Publish date: 2026-04-15</li>
+<li>URL: <a href="https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties/">https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties/</a></li>
 </ul>
-<p>Anthropic 工程团队分析了 agentic coding benchmarks（如 SWE-bench、Terminal-Bench）中的“基础设施噪声”问题，指出运行环境并非中性容器，而是评测的一部分。文章称，在 Terminal-Bench 2.0 的内部实验中，仅资源配置差异就可带来约 6 个百分点的分数差距，而且这种差距甚至可能超过排行榜上领先模型之间的差值。</p>
-<p>Why it matters: 这篇文章直接挑战了业界对 coding-agent leaderboard 的常见解读方式：如果不同团队的 CPU/RAM 配额、超时策略、调度与资源隔离不一致，那么他们并没有在做同一场测试。对负责模型评测、采购、平台治理和内部基准体系的工程负责人来说，这会影响模型对比、公平性、回归判断以及预算配置。</p>
+<p>GitHub 允许企业管理员按组织选择性启用 Copilot cloud agent，而不再只能全开、全关或完全下放给组织自行决定。新功能支持通过 AI Controls 页面或 REST API 管理，并可结合 organization custom properties 进行初始筛选。</p>
+<p>Why it matters: 这类能力直接影响 AI coding agent 在大企业中的落地速度。对平台与工程治理负责人来说，真正的难点通常不是“能不能用”，而是如何安全地做试点、限定范围、逐步扩张，并保留审计与策略控制。这次更新提供了一个更实际的 adoption control plane。</p>
 <p>Key takeaways:
-- Agentic coding eval 与静态 benchmark 不同，运行时环境会改变模型可完成的任务空间，因此 infra 不是附属变量。
-- 即使 benchmark 文档给出推荐资源，若缺少一致且可验证的 enforcement，结果仍可能测到“环境优势”而非“模型能力”。
-- 评测平台需要记录并公开资源预算、超时、失败类型、调度策略与重试机制，否则 leaderboard 的可比性有限。</p>
-<p>Tags: agentic-coding, benchmarking, eval-harness, infrastructure, Terminal-Bench, SWE-bench
-Scores: signal 9/5, novelty 8/5, actionability 9/5</p>
+- 新增策略模式：可只对选定组织启用 Copilot cloud agent，支持渐进式 rollout。
+- 提供 3 个 REST API 端点用于设定策略、加入启用列表、移出启用列表，便于平台自动化接入。
+- custom properties 只在配置时评估一次，后续属性变化不会自动重新计算启用状态，这对治理自动化设计很关键。</p>
+<p>Tags: GitHub Copilot, Cloud Agent, Enterprise Governance, Rollout Control, Developer Tooling
+Scores: signal 8/5, novelty 7/5, actionability 9/5</p>
 <h2 id="top-items">Top Items</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Enable Copilot cloud agent via custom properties - GitHub Changelog</li>
 </ul>
 <h2 id="new-terms">New Terms</h2>
 <ul>
-<li>基础设施噪声（infrastructure noise）：由资源配置、调度、超时和隔离机制引入的评测方差。</li>
-<li>资源执行一致性（resource enforcement consistency）：对 CPU、内存、时限等限制进行一致且可审计实施的能力。</li>
+<li>Copilot cloud agent (CCA)</li>
+<li>AI Controls</li>
+<li>organization custom properties</li>
 </ul>
 <h2 id="themes">Themes</h2>
 <ul>
-<li>Agentic coding 评测正在从“模型输出评测”转向“模型+执行环境联合评测”。</li>
-<li>评测框架的工程实现细节正成为排行榜可信度的核心变量。</li>
+<li>AI 编程代理的企业级灰度发布</li>
+<li>平台治理先于全面采用</li>
+<li>开发者工具正在补齐组织控制面</li>
 </ul>
 <h2 id="implications">Implications</h2>
 <ul>
-<li>内部评测体系应把容器规格、并发、缓存、网络权限、安装策略和超时配置纳入 benchmark metadata，并做版本化管理。</li>
-<li>在比较供应商模型或 agent 框架时，团队需要先做 infra normalization，否则容易把平台调优误判为模型进步。</li>
-<li>下一阶段高质量 benchmark 的竞争点，将是可复现 harness、资源配额标准化和 failure taxonomy，而不只是题库本身。</li>
+<li>如果你在推动 AI coding agent 落地，组织级选择性启用会比全局开关更适合先做高信任团队试点。</li>
+<li>平台团队应把该能力接入内部自动化与审批流，而不是仅依赖控制台手工配置。</li>
+<li>由于 custom properties 不是持续动态求值，若要实现真正的策略即代码，需要额外的同步与校验机制。</li>
 </ul>
 <h2 id="recommended-reading-order">Recommended Reading Order</h2>
 <ul>
-<li>Quantifying infrastructure noise in agentic coding evals</li>
+<li>Enable Copilot cloud agent via custom properties - GitHub Changelog</li>
 </ul>
 <h2 id="what-to-ignore">What to Ignore</h2>
 <ul>
-<li>不要只看 leaderboard 百分比差距而忽略运行环境差异。</li>
-<li>不要把 benchmark 文档中的“推荐资源”误认为已经实现了强约束和可重复执行。</li>
+<li>GitHub Changelog 的聚合页、年度归档页和月度归档页基本是索引，不提供额外技术信息。</li>
+<li>同一批 changelog 中的通用产品更新若没有实现细节、接口变化或治理意义，可暂时忽略。</li>
 </ul>
 <h2 id="sources-checked">Sources Checked</h2>
 <ul>
-<li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
 </ul>
         </main>
       </div>
