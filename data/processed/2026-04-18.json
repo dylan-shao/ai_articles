@@ -1,0 +1,123 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天只有一篇高信号内容：Anthropic 量化了 agentic coding benchmark 中由基础设施配置带来的测量噪声，证明评测分差可能主要来自运行环境而非模型能力。",
+    "对于负责平台、评测与模型选型的工程负责人，这篇文章直接影响 benchmark 复现、采购决策、以及内部 AI coding harness 的设计与治理。",
+    "其余 GitHub Changelog 条目更多是产品发布信息，缺少足够新的技术细节，不建议纳入完整日报。"
+  ],
+  "executive_summary_en": [
+    "Only one strong item stands out today: Anthropic quantified how infrastructure configuration injects noise into agentic coding benchmarks, showing that score deltas can come more from runtime setup than model capability.",
+    "For backend/platform leaders responsible for evals, model selection, and internal AI coding harnesses, this directly affects benchmark reproducibility, vendor comparisons, and deployment decisions.",
+    "The GitHub Changelog items are mostly product-release updates with limited technical depth and are not strong enough for a full digest."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 展示了在 SWE-bench、Terminal-Bench 一类 agentic coding 评测中，CPU、RAM、时间预算、容器调度方式与资源 enforcement 方法本身，会显著改变最终得分。在其 Terminal-Bench 2.0 内部实验里，最佳与最差基础设施配置之间可出现 6 个百分点的差距，甚至超过模型榜单之间常见的胜负差。",
+      "summary_en": "Anthropic shows that in agentic coding evals such as SWE-bench and Terminal-Bench, factors like CPU, RAM, time budget, container scheduling, and the exact resource-enforcement method can materially shift benchmark scores. In their internal Terminal-Bench 2.0 experiments, the gap between the best- and worst-resourced setups reached 6 percentage points—larger than many leaderboard margins between top models.",
+      "why_it_matters_zh": "这不是一篇泛泛而谈的“评测不完美”文章，而是把 infra 变成一等变量来分析。对任何正在比较模型、构建内部 coding eval、或把 benchmark 分数用于采购与 rollout 决策的团队而言，文章的核心信息是：如果 runtime 条件没有被严格标准化并可复现，那么你测到的可能是 harness 与平台工程能力，而不是模型能力。",
+      "why_it_matters_en": "This is not a generic 'benchmarks are noisy' take; it elevates infrastructure to a first-class experimental variable. For teams comparing models, building internal coding evals, or using benchmark scores for procurement and rollout decisions, the key message is that without tightly standardized and reproducible runtime conditions, you may be measuring harness/platform engineering quality more than model capability.",
+      "key_takeaways_zh": [
+        "Agentic coding eval 与静态基准不同，运行环境是问题求解过程的一部分，因此资源预算差异会改变“考试本身”。",
+        "仅给出推荐资源规格并不足够；资源限制如何被 enforced、容器如何被调度、超时如何设置，都会改变 benchmark 实际测量的对象。",
+        "对于内部评测体系，必须把 infra config、调度策略、失败分类与 error budget 纳入 eval 元数据，否则跨团队、跨时间的结果不可比较。"
+      ],
+      "key_takeaways_en": [
+        "Unlike static benchmarks, agentic coding evals embed the runtime environment into the task itself, so differences in resource budgets effectively change the exam.",
+        "Publishing recommended resource specs is not enough; the way limits are enforced, containers are scheduled, and timeouts are configured changes what the benchmark actually measures.",
+        "For internal eval systems, infra config, scheduling policy, failure taxonomy, and error budgets must be captured as eval metadata, or results will not be comparable across teams or over time."
+      ],
+      "tags": [
+        "agentic-coding-evals",
+        "benchmarking",
+        "evaluation-harness",
+        "infrastructure",
+        "Terminal-Bench",
+        "SWE-bench"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Copilot CLI now supports Copilot auto model selection",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-17T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection/",
+      "summary_zh": "GitHub 在 Copilot CLI 中正式提供自动模型选择，系统会根据套餐、策略与限流情况，在 GPT-5.4、GPT-5.3-Codex、Sonnet 4.6、Haiku 4.5 等模型之间动态路由，并在 CLI 中显示最终使用的模型。",
+      "summary_en": "GitHub has made auto model selection generally available in Copilot CLI. The system dynamically routes across models such as GPT-5.4, GPT-5.3-Codex, Sonnet 4.6, and Haiku 4.5 based on plan, policy, and rate-limit conditions, while exposing the selected model in the CLI.",
+      "why_it_matters_zh": "这是一个值得关注但技术含量有限的产品变化：它反映 CLI 级 agent tooling 正在从“用户手选模型”转向“按策略自动路由模型”。对企业平台团队而言，重点不在功能本身，而在可观测性、成本归因、以及策略控制是否足够细。",
+      "why_it_matters_en": "This is worth noting but is still a relatively shallow product update: CLI agent tooling is shifting from explicit model choice toward policy-driven auto-routing. For enterprise platform teams, the real question is not the feature itself but whether observability, cost attribution, and policy controls are granular enough.",
+      "key_takeaways_zh": [
+        "CLI 代理正在引入与聊天产品相同的自动路由层，模型选择越来越像平台策略而非用户界面设置。",
+        "当前披露的信息主要集中在可用性与计费折扣，缺少关于路由逻辑、任务类型适配和效果评测的技术细节。"
+      ],
+      "key_takeaways_en": [
+        "CLI agents are adopting the same automatic routing layer seen in chat products, making model selection increasingly a platform-policy concern rather than a user setting.",
+        "The announcement mostly covers availability and billing discounts, with little technical detail on routing logic, task adaptation, or quality evaluation."
+      ],
+      "tags": [
+        "copilot-cli",
+        "model-routing",
+        "developer-tooling",
+        "enterprise-controls"
+      ],
+      "signal_score": 4,
+      "novelty_score": 5,
+      "actionability_score": 4
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "GitHub Copilot CLI now supports Copilot auto model selection"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）",
+    "资源 enforcement 方法",
+    "agentic coding eval",
+    "评测元数据治理"
+  ],
+  "new_terms_en": [
+    "infrastructure noise",
+    "resource enforcement methodology",
+    "agentic coding eval",
+    "eval metadata governance"
+  ],
+  "themes_zh": [
+    "AI coding 评测正在从模型比较转向“模型 + runtime + harness”的系统比较。",
+    "平台与基础设施细节已成为 benchmark 可复现性的核心变量。",
+    "开发者工具开始默认采用自动模型路由，但技术透明度仍不足。"
+  ],
+  "themes_en": [
+    "AI coding evaluation is shifting from pure model comparison to system-level comparison of model plus runtime plus harness.",
+    "Platform and infrastructure details are becoming primary determinants of benchmark reproducibility.",
+    "Developer tools are moving toward default auto-routing across models, but technical transparency remains limited."
+  ],
+  "implications_zh": [
+    "如果你的组织用外部榜单做模型采购或上线决策，应要求 benchmark 提供完整 runtime 配置、失败分类、资源限制和复现实验脚本。",
+    "内部 AI coding eval 平台应把 infra 版本、容器规格、调度机制、超时策略与重试策略写入实验记录，并区分模型失败与基础设施失败。",
+    "对于 CLI/IDE agent 产品，接下来需要重点审查自动路由带来的成本波动、可解释性和审计能力，而不是只看是否“支持更多模型”。"
+  ],
+  "implications_en": [
+    "If your organization uses external leaderboards for model procurement or rollout decisions, require full disclosure of runtime configs, failure taxonomy, resource limits, and reproduction scripts.",
+    "Internal AI coding eval platforms should log infra versions, container specs, scheduling behavior, timeout policy, and retry policy, while separating model failures from infrastructure failures.",
+    "For CLI/IDE agent products, the next review focus should be cost variance, explainability, and auditability under automatic routing—not just whether more models are supported."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "GitHub Copilot CLI now supports Copilot auto model selection"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 首页与 feed 聚合页，它们只是索引，不是独立高信号内容。",
+    "把 Copilot 自动选模解读为重大技术突破；当前公开信息更接近产品包装而非可复用的工程方法。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog homepage and feed archive, which are index pages rather than standalone high-signal items.",
+    "Any framing of Copilot auto model selection as a major technical breakthrough; the public details are closer to product packaging than reusable engineering insight."
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+    "source": "Anthropic Engineering",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "landing_url": "https://www.anthropic.com/engineering",
+    "priority": 1,
+    "publish_date": null,
+    "author": null,
+    "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "body_excerpt": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Engineering at Anthropic Quantifying infrastructure noise in agentic coding evals Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models. Agentic coding benchmarks like SWE-bench and Terminal-Bench are commonly used to compare the software engineering capabilities of frontier models—with top spots on leaderboards often separated by just a few percentage points. These scores are often treated as precise measurements of relative model capability and increasingly inform decisions about which models to deploy. However, we’ve found that infrastructure configuration alone can produce differences that exceed those margins. In internal experiments, the gap between the most- and least-resourced setups on Terminal-Bench 2.0 was 6 percentage points (p < 0.01). Static benchmarks score a model's output directly—the runtime environment doesn’t factor into the result. Agentic coding evals are different: models are given a full environment where they write programs, run tests, install dependencies, and iterate over multiple turns. The runtime is no longer a passive container, but an integral component of the problem-solving process. Two agents with different resource budgets and time limits aren't taking the same test. Eval developers have begun accounting for this. Terminal-Bench 2.0, for instance, specifies recommended CPU and RAM on a per-task basis in their latest 2.0 release. However, specifying resources isn't the same as enforcing them consistently. Moreover, we discovered that enforcement methodology can change what the benchmark ends up actually measuring. How we got here We run Terminal-Bench 2.0 on a Google Kubernetes Engine cluster. While calibrating the setup, we noticed our scores didn't match the benchmark’s official leaderboard, and infra error rates were surprisingly high: a",
+    "keyword_hits": 6,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.17 Release GitHub Copilot CLI now supports Copilot auto model selection copilot Apr.16 Release Manage agent skills with GitHub CLI copilot Apr.16 Improvement Rule insights dashboard and unified filter bar platform governance Apr.16 Release Claude Opus 4.7 is generally available copilot Apr.15 Improvement CodeQL 2.25.2 adds Kotlin 2.3.20 support and other updates application security Apr.15 Improvement Enable Copilot cloud agent via custom properties copilot enterprise management tools ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Release Deployment context in repository properties and alerts application security platform governance ... +1 Apr.14 Release Link code scanning alerts to GitHub Issues application security Apr.14 Improvement Dependabot and code scanning: Org-level private registries supply chain security Apr.14 Improvement Secret scanning pattern updates and product improvements application security Apr.14 Improvement SBOM exports are now computed asynchronously supply chain security Apr.14 Improvement Model selection for Claude and Codex agents on github.com copilot Apr.14 Improvement GitHub Code Quality: Improvements to standard findings in public preview application security platform governance ... +1 Apr.13 Release Copilot data residency ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 17 Apr 2026 22:56:29 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 GitHub Copilot CLI now supports Copilot auto model selection https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection Allison Fri, 17 Apr 2026 22:32:41 +0000 https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection <p>Copilot auto model selection is now generally available in GitHub Copilot CLI for all Copilot plans. With auto, Copilot chooses the most efficient model on your behalf. How it works&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection\">GitHub Copilot CLI now supports Copilot auto model selection</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p><a href=\"https://docs.github.com/copilot/concepts/auto-model-selection\">Copilot auto model selection</a> is now generally available in GitHub Copilot CLI for all Copilot plans. With auto, Copilot chooses the most efficient model on your behalf.</p> <h2 id=\"how-it-works\" id=\"how-it-works\" ><a class=\"heading-link\" href=\"#how-it-works\">How it works<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h2> <p>Auto is dynamic, giving you reliable access to your favorite models while mitigating rate limits. It routes to models like GPT-5.4, GPT-5.3-Codex, Sonnet 4.6, and Haiku 4.5 based on your plan and policies. The models auto will route to will change over time.</p> <ul> <li><",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Copilot CLI now supports Copilot auto model selection - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot auto model selection is now generally available in GitHub Copilot CLI for all Copilot plans. With auto, Copilot chooses the most efficient model on your behalf. How it works…",
+    "body_excerpt": "GitHub Copilot CLI now supports Copilot auto model selection - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release April 17, 2026 • 1 minute read GitHub Copilot CLI now supports Copilot auto model selection Table of Contents How it works Premium request use Menu. Currently selected: How it works How it works Premium request use Copilot auto model selection is now generally available in GitHub Copilot CLI for all Copilot plans. With auto, Copilot chooses the most efficient model on your behalf. How it works Auto is dynamic, giving you reliable access to your favorite models while mitigating rate limits. It routes to models like GPT-5.4, GPT-5.3-Codex, Sonnet 4.6, and Haiku 4.5 based on your plan and policies. The models auto will route to will change over time. Transparency : See which model was used directly in the Copilot CLI. Stay in control : Switch between auto and any specific model at any time. Respects your policies : Auto honors all administrator model settings. Premium request use Premium request use for auto is billed based on the model it selects, which is currently limited to models with 0x to 1x multipliers like those listed above. All paid subscribers get a 10% discount on the model multiplier when using auto. For example, when auto uses a model that has a 1x multiplier, you’ll draw down 0.9 premium requests instead of 1. Join the discussion within GitHub Community . Table of Contents How it works Premium request use Menu. Currently selected: How it works How it works Premium request use copilot Share Copied Shared Back to changelog Related Posts Apr.16 Release Manage agent skills with GitHub CLI copilot Apr.16 Release Claude Opus 4.7 is generally available copilot Apr.15 Improvement Enable Copilot cloud agent via custom properties copilot enterprise management tools ... +1 Apr.14 Impro",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
