@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Changes to GitHub Copilot plans for individuals - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-20-changes-to-github-copilot-plans-for-individuals/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "As shared in our recent blog post, we’re making the following changes to Copilot plans for individuals as part of our ongoing efforts to ensure service reliability and a sustainable…",
+    "body_excerpt": "Changes to GitHub Copilot plans for individuals - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Retired April 20, 2026 • 1 minute read Changes to GitHub Copilot plans for individuals Table of Contents New signups paused for Pro, Pro+, and Student Tighter usage limits for individual plans Opus models removed from Pro If these changes don't work for you Learn More Menu. Currently selected: New signups paused for Pro, Pro+, and Student New signups paused for Pro, Pro+, and Student Tighter usage limits for individual plans Opus models removed from Pro If these changes don't work for you Learn More As shared in our recent blog post , we’re making the following changes to Copilot plans for individuals as part of our ongoing efforts to ensure service reliability and a sustainable Copilot experience for all users. New signups paused for Pro, Pro+, and Student To prioritize service quality for existing paying customers, we will be pausing new signups for our Student, Pro, and Pro+ plans. Copilot Free remains open for new signups, and existing users can still upgrade between plans. Tighter usage limits for individual plans Pro+ plans offer more than 5X the limits of Pro. Users on the Pro plan who need higher limits can upgrade to Pro+. Users will see warning notifications in VS Code and Copilot CLI as they approach their limit, and usage progress tracking is coming soon. For more details on how usage limits work, see our documentation on rate limits . Opus models removed from Pro Opus models are no longer available on Copilot Pro. Opus 4.7 remains available on Pro+. As previously announced , Opus 4.5 and 4.6 will also be removed from Pro+. If these changes don’t work for you These changes are necessary to ensure we can serve existing customers with a predictable experience. If you hit unexpected limits or these ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Sunsetting SHA-1 in HTTPS on GitHub - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-20-sunsetting-sha-1-in-https-on-github/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "What’s changing We’re going to remove the use of SHA-1 in HTTPS for GitHub and our CDNs. This impacts browsers that are used to view the GitHub website, any software…",
+    "body_excerpt": "Sunsetting SHA-1 in HTTPS on GitHub - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Retired April 20, 2026 • 1 minute read Sunsetting SHA-1 in HTTPS on GitHub Table of Contents What's changing Deprecation schedule Preparing for removal Menu. Currently selected: What's changing What's changing Deprecation schedule Preparing for removal What’s changing We’re going to remove the use of SHA-1 in HTTPS for GitHub and our CDNs. This impacts browsers that are used to view the GitHub website, any software that uses the GitHub API, and Git clients that push and pull over HTTPS. These changes will be made to github.com, including GitHub Enterprise Cloud and GitHub Enterprise Cloud with Data Residency. GitHub Enterprise Server will not be affected. Deprecation schedule We will conduct a brownout, where we temporarily disable SHA-1 to raise awareness around the deprecation. If you are impacted by the brownout, you will need to plan to add support for more modern TLS algorithms. Our planned schedule for SHA-1 deprecation and removal is as follows: July 14th, 2026: Brownout. We will run a brownout from 00:00 to 18:00 UTC that will disable SHA-1. The brownout will not impact CDNs. September 15th, 2026: SHA-1 in HTTPS / TLS will be completely disabled for GitHub and partner CDNs. Preparing for removal For browsers, using a modern and up-to-date browser will ensure your browser supports algorithms newer than SHA-1. Consult your browser’s documentation for more information about the algorithms it supports. You can test your browser by visiting https://github.dev, where SHA-1 is already disabled. If you can successfully load that site without a connection issue, then your browser supports modern HTTPS configurations. Similarly, for the API, ensure you are using a modern framework or library to connect to the API. Finally",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Ecosystem & accessibility Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.20 Retired Sunsetting SHA-1 in HTTPS on GitHub ecosystem & accessibility March Mar 2026 March Mar 2026 Mar.12 Release REST API version 2026-03-10 is now available ecosystem & accessibility February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status Contact Company About Blog Careers Press Shop © 2026 GitHub, Inc. Terms Privacy Manage Cookies Do not share my personal information LinkedIn icon GitHub on LinkedIn Instagram icon GitHub on Instagram YouTube icon GitHub on YouTube X icon GitHub on X TikTok icon GitHub on TikTok Twitch icon GitHub on Twitch GitHub icon GitHub’s organization on GitHub",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
