@@ -1,0 +1,127 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天的高信号内容集中在两个方向：第一，Anthropic 用实验证明 agentic coding benchmark 的分数会被基础设施配置显著扭曲；第二，Sourcegraph 系统性拆解了“自建代码智能平台”的真实工程范围与成本。",
+    "对后端、平台和工程效率负责人来说，这两篇内容共同指向一个核心结论：AI 编码能力的评估与落地，已经不只是模型问题，而是评测环境、检索/索引基础设施、权限与多租户治理、以及运营可靠性的系统工程问题。",
+    "如果你的团队正在比较模型、建设内部 coding agent 平台，或评估 buy-vs-build，这两篇都值得优先阅读；其中 Anthropic 的文章技术信号更强，适合作为评测方法学的直接输入。"
+  ],
+  "executive_summary_en": [
+    "Today’s strongest signal clusters around two topics: Anthropic shows that infrastructure configuration can materially distort agentic coding benchmark scores, and Sourcegraph breaks down the real engineering scope and cost of running code intelligence in-house.",
+    "For backend, platform, and engineering productivity leaders, the shared takeaway is that AI coding capability is no longer just a model problem; it is a systems problem spanning eval environments, retrieval/indexing infrastructure, multi-tenant controls, and operational reliability.",
+    "If your team is comparing models, building an internal coding-agent platform, or evaluating buy-vs-build, both pieces are worth reading; the Anthropic post is the more technically novel and immediately useful for eval methodology."
+  ],
+  "items": [
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "source": "Anthropic Engineering",
+      "author": "",
+      "publish_date": "",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary_zh": "Anthropic 通过在 Terminal-Bench 2.0 上的内部实验指出，agentic coding eval 的结果会被运行时基础设施配置显著影响：不同资源预算与执行环境之间可产生约 6 个百分点的分差，甚至超过模型排行榜之间的常见差距。文章强调，这类评测不是静态打分，而是把运行环境本身变成了解题过程的一部分，因此不同 CPU、RAM、时间限制和资源执行策略，实质上让模型参加了不同的“考试”。",
+      "summary_en": "Anthropic reports that agentic coding evals are highly sensitive to runtime infrastructure. In internal Terminal-Bench 2.0 experiments, the difference between the most- and least-resourced setups was about 6 percentage points, large enough to exceed typical leaderboard gaps between top models. The core argument is that these are not static benchmarks: because models write code, run tests, install dependencies, and iterate in an environment, the runtime becomes part of the task itself, meaning different resource budgets and enforcement strategies effectively create different tests.",
+      "why_it_matters_zh": "这是少见直接挑战 AI 编码榜单可比性的原始技术文章。对于用 SWE-bench、Terminal-Bench 或内部 harness 做模型选型的团队，它提醒你：如果没有把资源配额、超时策略、容器调度与错误归因标准化，评测结果可能更多是在测基础设施而不是测模型。",
+      "why_it_matters_en": "This is a rare primary-source technical post that directly questions the comparability of AI coding leaderboards. For teams using SWE-bench, Terminal-Bench, or internal harnesses to choose models, the message is clear: unless you standardize resource budgets, timeout policy, container scheduling, and infra-failure attribution, your eval may be measuring infrastructure more than model capability.",
+      "key_takeaways_zh": [
+        "在 agentic coding eval 中，运行时环境不是中立容器，而是能力测试的一部分；资源差异会显著改变得分。",
+        "即使 benchmark 提供推荐 CPU/RAM，如果执行层没有一致、可审计地强制这些约束，结果仍然不可比。",
+        "对内部 eval 平台而言，应该把 infra error、资源配额、时间预算和重试策略纳入报告，而不是只看最终 pass rate。"
+      ],
+      "key_takeaways_en": [
+        "In agentic coding evals, the runtime is not a neutral container; it is part of the capability test, and resource differences can materially shift scores.",
+        "Even when a benchmark specifies recommended CPU/RAM, results remain non-comparable unless those constraints are enforced consistently and auditably.",
+        "Internal eval platforms should report infra errors, resource budgets, time limits, and retry policy alongside pass rates rather than treating benchmark score as a standalone metric."
+      ],
+      "tags": [
+        "agentic-coding-evals",
+        "benchmark-methodology",
+        "harness-design",
+        "Terminal-Bench",
+        "infrastructure"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "What it actually takes to run code intelligence in-house",
+      "source": "Sourcegraph Blog",
+      "author": "Stephanie Jarmak",
+      "publish_date": "2026-04-21T00:00:00+00:00",
+      "url": "https://sourcegraph.com/blog/what-it-actually-takes-to-run-code-intelligence-in-house",
+      "summary_zh": "Sourcegraph 从“如果 2026 年从零开始重建一个 Sourcegraph 级别平台，需要什么”这一问题出发，把自建代码智能平台拆成 10 个类别、90 项工程要求，并尝试估算不同环境规模下的三年成本。文章强调，大家通常只看到搜索框与代码浏览器，但真正困难且与 AI coding agent 最相关的部分在于大规模索引、低延迟检索、默认分支与全量历史的不同搜索路径、权限模型、多语言语义索引、以及持续运营。",
+      "summary_en": "Sourcegraph asks what it would take to rebuild a Sourcegraph-equivalent platform from scratch in 2026, mapping the work to 90 engineering requirements across 10 categories and modeling three-year costs at different scales. The post argues that the visible UI is only the tip of the iceberg; the hard parts, especially for AI coding-agent workflows, are large-scale indexing, low-latency retrieval, dual-path search across default branches versus broader history, permissions, semantic indexing, and long-term operations.",
+      "why_it_matters_zh": "虽然这是厂商视角内容，但它提供了一个相对结构化的 buy-vs-build 框架，特别适合正在建设内部代码检索、repo understanding 或 agent context 平台的团队。它的价值不在于结论本身，而在于把“代码智能”从一个功能点还原成一个平台能力集合，帮助工程负责人更现实地评估人力、SRE、权限治理和演进成本。",
+      "why_it_matters_en": "Although this comes from a vendor, it offers a useful and fairly structured buy-vs-build framework for teams considering internal code search, repo-understanding, or agent-context infrastructure. Its value is less the conclusion than the decomposition: it reframes 'code intelligence' from a single feature into a platform capability set, helping engineering leaders estimate staffing, SRE overhead, permission governance, and long-tail maintenance costs more realistically.",
+      "key_takeaways_zh": [
+        "对 AI coding agent 而言，代码智能的关键不只是搜索，而是可扩展索引、权限过滤、语义理解与稳定运营的组合能力。",
+        "开源组件可降低起步门槛，但距离“可在企业内长期运行”的平台仍有显著工程鸿沟。",
+        "做 buy-vs-build 决策时，应把三年期的人力、基础设施、可靠性和合规成本纳入，而不是只比较原型可行性。"
+      ],
+      "key_takeaways_en": [
+        "For AI coding agents, code intelligence is not just search; it is the combination of scalable indexing, permission-aware retrieval, semantic understanding, and reliable operations.",
+        "Open-source components can lower the initial barrier, but there is still a substantial engineering gap between a prototype and an enterprise-grade long-lived platform.",
+        "Buy-vs-build decisions should include three-year staffing, infrastructure, reliability, and compliance costs rather than comparing only prototype feasibility."
+      ],
+      "tags": [
+        "code-intelligence",
+        "repo-understanding",
+        "developer-tooling",
+        "buy-vs-build",
+        "organizational-adoption"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "What it actually takes to run code intelligence in-house"
+  ],
+  "new_terms_zh": [
+    "基础设施噪声（infrastructure noise）",
+    "agentic coding eval",
+    "资源约束强制执行",
+    "代码智能平台"
+  ],
+  "new_terms_en": [
+    "infrastructure noise",
+    "agentic coding eval",
+    "resource-constraint enforcement",
+    "code intelligence platform"
+  ],
+  "themes_zh": [
+    "AI 编码评测正在从模型比较转向系统级测量问题",
+    "repo understanding 与代码检索基础设施成为 agent 平台的关键底座",
+    "工程组织在 AI coding 上的核心决策正转向平台化与 buy-vs-build"
+  ],
+  "themes_en": [
+    "AI coding evaluation is shifting from model comparison to system-level measurement",
+    "Repo understanding and code-retrieval infrastructure are becoming core foundations for agent platforms",
+    "Organizational AI coding decisions are increasingly about platform strategy and buy-vs-build"
+  ],
+  "implications_zh": [
+    "如果你在做内部 benchmark，必须把机器规格、调度策略、超时、重试、缓存和 infra failure taxonomy 固化到 harness 里，否则结论不稳。",
+    "如果你在建设 coding agent 平台，检索、索引、权限和上下文供给层的成熟度，可能比继续微调 prompt 更影响最终效果。",
+    "对企业团队而言，‘能否自建’不再是主要问题，‘能否长期稳定、安全、低延迟地运营’才是主要问题。"
+  ],
+  "implications_en": [
+    "If you run internal benchmarks, machine specs, scheduling policy, timeouts, retries, caching, and infra-failure taxonomy need to be encoded into the harness or your conclusions will be unstable.",
+    "If you are building a coding-agent platform, the maturity of retrieval, indexing, permissions, and context-supply layers may matter more than additional prompt tweaking.",
+    "For enterprise teams, the main question is no longer whether they can build it, but whether they can operate it safely, reliably, and with low latency over time."
+  ],
+  "reading_order": [
+    "Quantifying infrastructure noise in agentic coding evals",
+    "What it actually takes to run code intelligence in-house"
+  ],
+  "what_to_ignore_zh": [
+    "不要把 agentic coding leaderboard 上的细小分差直接解释为模型能力差距，尤其是在基础设施细节未披露时。",
+    "不要把‘开源组件可用’等同于‘企业级代码智能平台已经基本完成’。",
+    "不要只看 demo 或 UI 体验，而忽视权限、索引更新、容量规划与故障处理等长期成本。"
+  ],
+  "what_to_ignore_en": [
+    "Do not treat small leaderboard deltas in agentic coding benchmarks as pure model capability differences, especially when infrastructure details are undisclosed.",
+    "Do not equate 'open-source components exist' with 'an enterprise-grade code intelligence platform is basically solved.'",
+    "Do not over-index on demos or UI while ignoring permissions, index freshness, capacity planning, and failure handling."
+  ]
+}

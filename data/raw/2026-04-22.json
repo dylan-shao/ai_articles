@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Quantifying infrastructure noise in agentic coding evals \\ Anthropic",
+    "source": "Anthropic Engineering",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "landing_url": "https://www.anthropic.com/engineering",
+    "priority": 1,
+    "publish_date": null,
+    "author": null,
+    "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "body_excerpt": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Engineering at Anthropic Quantifying infrastructure noise in agentic coding evals Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models. Agentic coding benchmarks like SWE-bench and Terminal-Bench are commonly used to compare the software engineering capabilities of frontier models—with top spots on leaderboards often separated by just a few percentage points. These scores are often treated as precise measurements of relative model capability and increasingly inform decisions about which models to deploy. However, we’ve found that infrastructure configuration alone can produce differences that exceed those margins. In internal experiments, the gap between the most- and least-resourced setups on Terminal-Bench 2.0 was 6 percentage points (p < 0.01). Static benchmarks score a model's output directly—the runtime environment doesn’t factor into the result. Agentic coding evals are different: models are given a full environment where they write programs, run tests, install dependencies, and iterate over multiple turns. The runtime is no longer a passive container, but an integral component of the problem-solving process. Two agents with different resource budgets and time limits aren't taking the same test. Eval developers have begun accounting for this. Terminal-Bench 2.0, for instance, specifies recommended CPU and RAM on a per-task basis in their latest 2.0 release. However, specifying resources isn't the same as enforcing them consistently. Moreover, we discovered that enforcement methodology can change what the benchmark ends up actually measuring. How we got here We run Terminal-Bench 2.0 on a Google Kubernetes Engine cluster. While calibrating the setup, we noticed our scores didn't match the benchmark’s official leaderboard, and infra error rates were surprisingly high: a",
+    "keyword_hits": 6,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "What it actually takes to run code intelligence in-house | Sourcegraph",
+    "source": "Sourcegraph Blog",
+    "url": "https://sourcegraph.com/blog/what-it-actually-takes-to-run-code-intelligence-in-house",
+    "landing_url": "https://sourcegraph.com/blog",
+    "priority": 1,
+    "publish_date": "2026-04-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We audited what it would take to build a Sourcegraph equivalent internally, mapped the platform to 90 engineering requirements across 10 categories, and modeled 3-year costs for different environment sizes.",
+    "body_excerpt": "What it actually takes to run code intelligence in-house | Sourcegraph Blog Changelog Documentation About Sourcegraph BLOG What it actually takes to run code intelligence in-house April 21, 2026 Stephanie Jarmak What it actually takes to run code intelligence in-house We audited what it would take to build a Sourcegraph equivalent internally, mapped the platform to 90 engineering requirements across 10 categories, and modeled 3-year costs for different environment sizes. People ask us some version of the same question a lot: what would it take to build a Sourcegraph equivalent internally? It's a fair thing to ask right now. Several core components of what we do are open source, like Zoekt, SCIP, and language indexers. AI coding agents write more code every month. Engineering teams build more internal tooling than they used to. The question comes down to: is code intelligence something your company should own, or something you should buy? So we ran the exercise on ourselves. We audited the platform as if we were starting from zero in 2026, mapped it to 90 engineering requirements across 10 categories, and modeled 3-year costs for different environment sizes. Before the numbers, we'll zoom out to look at the shape of the problem. The iceberg When someone says \"build code search,\" they picture a search box, a results list, and a code viewer. That's the 10% above the waterline. Below it, the work is larger than you might expect. The hardest parts to build are also the parts that matter most for the AI agent workflows everyone is investing in right now. Search. Code search isn't web search. Engineers need to find exact strings, regular expressions, and structural patterns across millions of files, with results streaming back fast enough to feel interactive. Doing this well means running two different search engines in parallel (one for code on default branches, one for everything else), coordinating them when a query spans both, and ranking results so the most useful mat",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
