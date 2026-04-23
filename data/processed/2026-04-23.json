@@ -1,0 +1,150 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏产品更新，真正高信号的技术信息主要集中在 GitHub Copilot CLI 与 VS Code 的可配置模型、代码语义理解以及开发者工具治理上。",
+    "最值得关注的是：Copilot CLI 将 C++ 语义级代码智能带到命令行，说明 AI coding agent 正在从文本检索转向语言服务器驱动的仓库理解。",
+    "其次，VS Code 中的 BYOK 扩展了企业模型接入路径，而 GitHub CLI 遥测 opt-out 说明开发者工具开始更明确地处理可观测性、隐私与组织治理。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is mostly product-changelog material, with the highest-signal technical updates centered on GitHub Copilot CLI and VS Code model configurability, semantic code understanding, and developer-tool governance.",
+    "The strongest item is Copilot CLI adding C++ semantic code intelligence, signaling that AI coding agents are moving from text search toward language-server-backed repository understanding.",
+    "Secondarily, BYOK in VS Code expands enterprise model-routing options, while GitHub CLI telemetry opt-out reflects a growing need for observability, privacy, and governance in developer tooling."
+  ],
+  "items": [
+    {
+      "title": "C++ code intelligence for GitHub Copilot CLI in public preview",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-22",
+      "url": "https://github.blog/changelog/2026-04-22-c-code-intelligence-for-github-copilot-cli-in-public-preview/",
+      "summary_zh": "GitHub 为 Copilot CLI 提供了基于 Microsoft C++ Language Server 的 C++ 代码智能预览版，把 IDE 中的语义级理解能力扩展到命令行代理工作流。相比仅靠 grep 的检索方式，新方案可为 Copilot 提供符号定义、引用、调用层级与类型信息，并依赖 compile_commands.json 与项目配置来获得准确上下文。",
+      "summary_en": "GitHub introduced public-preview C++ code intelligence for Copilot CLI via the Microsoft C++ Language Server, extending IDE-grade semantic understanding into command-line agent workflows. Instead of relying only on grep-style search, Copilot can use symbol definitions, references, call hierarchies, and type information, with accuracy depending on compile_commands.json and project setup.",
+      "why_it_matters_zh": "这说明命令行 coding agent 的核心能力正在从“字符串检索+推理”升级为“语言服务器+语义导航”。对维护大型 C++/系统软件代码库的团队来说，这类基础设施直接决定 agent 在复杂宏、模板和构建配置下是否能可靠定位上下文，也提示未来评测基准应区分文本搜索能力与语义理解能力。",
+      "why_it_matters_en": "This shows command-line coding agents are evolving from 'string search plus reasoning' toward 'language-server-backed semantic navigation.' For teams maintaining large C++ or systems codebases, this infrastructure directly affects whether an agent can reliably locate context amid macros, templates, and build-specific configuration; it also suggests future evaluations should separate text-search ability from semantic understanding.",
+      "key_takeaways_zh": [
+        "Copilot CLI 已开始显式接入语言服务器，而非仅依赖 grep/全文检索。",
+        "对复杂语言与大仓库，构建产物和索引配置正在成为 agent 效果的前置条件。"
+      ],
+      "key_takeaways_en": [
+        "Copilot CLI is now explicitly integrating language-server capabilities rather than depending only on grep/full-text search.",
+        "For complex languages and large repositories, build artifacts and indexing configuration are becoming prerequisites for agent quality."
+      ],
+      "tags": [
+        "AI coding agents",
+        "repo understanding",
+        "language server",
+        "C++",
+        "developer tooling"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Bring your own language model key in VS Code now available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-22",
+      "url": "https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available/",
+      "summary_zh": "GitHub 在 VS Code 中为 Copilot Business/Enterprise 用户开放了 BYOK，允许组织复用自有 API key 接入 Anthropic、Gemini、OpenAI、OpenRouter、Azure，以及通过 Ollama 和 Foundry Local 接入本地模型。BYOK 模型可用于 VS Code Chat、内置 plan agent 与自定义 agent，但不用于代码补全，计费直接走所选模型提供方。",
+      "summary_en": "GitHub added BYOK support in VS Code for Copilot Business and Enterprise users, allowing organizations to reuse their own API keys for Anthropic, Gemini, OpenAI, OpenRouter, Azure, and local models via Ollama and Foundry Local. These BYOK models are available in VS Code Chat, the built-in plan agent, and custom agents, but not for code completions, with billing handled directly by the chosen provider.",
+      "why_it_matters_zh": "这不是简单的模型扩容，而是企业 AI coding 组织架构变化的信号：模型路由、成本归属、合规边界和本地模型接入开始下沉到 IDE 层。对平台团队来说，这意味着要重新设计默认模型策略、审计边界、代理能力兼容性以及不同模型在 agent/human-in-the-loop 场景中的分工。",
+      "why_it_matters_en": "This is more than a model catalog expansion; it signals a shift in enterprise AI coding architecture, where model routing, cost ownership, compliance boundaries, and local-model access are moving into the IDE layer. For platform teams, that means revisiting default model policies, audit boundaries, agent compatibility, and how different models are assigned across agentic and human-in-the-loop workflows.",
+      "key_takeaways_zh": [
+        "企业可在 GitHub Copilot 体验内直接接入自带模型与本地模型，弱化单一托管模型绑定。",
+        "BYOK 目前覆盖聊天与 agent，不覆盖代码补全，说明不同开发辅助模式仍在分层治理。"
+      ],
+      "key_takeaways_en": [
+        "Enterprises can now plug self-managed and local models directly into the GitHub Copilot experience, reducing dependence on a single hosted model path.",
+        "BYOK currently covers chat and agents but not code completion, indicating separate governance layers for different coding-assistance modes."
+      ],
+      "tags": [
+        "BYOK",
+        "VS Code",
+        "enterprise adoption",
+        "model routing",
+        "developer tooling"
+      ],
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub CLI: Opt-out usage telemetry",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-22",
+      "url": "https://github.blog/changelog/2026-04-22-github-cli-opt-out-usage-telemetry/",
+      "summary_zh": "GitHub CLI 从 v2.91.0 开始默认发送化名化使用遥测，并提供 opt-out 与 log 模式。用户既可以在开源仓库中审查遥测实现，也可以通过 GH_TELEMETRY=log 或 gh config set telemetry log 查看当前命令会发送的 JSON 负载而不真正上报。",
+      "summary_en": "Starting in v2.91.0, GitHub CLI sends pseudonymous usage telemetry by default and provides both opt-out and log modes. Users can inspect the open-source telemetry implementation and preview the exact JSON payload for a given command via GH_TELEMETRY=log or gh config set telemetry log without actually sending it.",
+      "why_it_matters_zh": "对开发者工具与 AI coding 基础设施来说，遥测越来越关键，因为产品团队需要知道哪些命令、agent 流程和上下文入口真正被使用。但默认采集也会直接触碰企业隐私和合规边界。GitHub 这次把“可审查实现+可本地预览负载+可退出”组合在一起，提供了一个较成熟的工具治理范式。",
+      "why_it_matters_en": "Telemetry is increasingly critical for developer tools and AI coding infrastructure because product teams need to know which commands, agent flows, and context-entry points are actually used. But default collection also directly hits enterprise privacy and compliance boundaries. GitHub's combination of 'auditable implementation + local payload preview + opt-out' offers a relatively mature governance pattern for developer tooling.",
+      "key_takeaways_zh": [
+        "开发者工具的遥测设计开始强调可验证性与可解释性，而不仅是开关选项。",
+        "平台团队可借鉴这种模式，为内部 agent/CLI 设计审计友好的数据采集机制。"
+      ],
+      "key_takeaways_en": [
+        "Telemetry design for developer tools is starting to emphasize verifiability and explainability, not just an on/off switch.",
+        "Platform teams can borrow this pattern when designing audit-friendly data collection for internal agents and CLIs."
+      ],
+      "tags": [
+        "telemetry",
+        "GitHub CLI",
+        "governance",
+        "developer tooling",
+        "privacy"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "C++ code intelligence for GitHub Copilot CLI in public preview",
+    "Bring your own language model key in VS Code now available",
+    "GitHub CLI: Opt-out usage telemetry"
+  ],
+  "new_terms_zh": [
+    "BYOK（Bring Your Own Language Model Key）",
+    "compile_commands.json",
+    "语言服务器驱动的仓库理解"
+  ],
+  "new_terms_en": [
+    "BYOK (Bring Your Own Language Model Key)",
+    "compile_commands.json",
+    "language-server-backed repository understanding"
+  ],
+  "themes_zh": [
+    "AI coding agent 从文本检索走向语义级仓库理解",
+    "企业开发环境中的模型路由与本地模型接入",
+    "开发者工具的遥测、审计与治理机制"
+  ],
+  "themes_en": [
+    "AI coding agents moving from text retrieval to semantic repository understanding",
+    "Model routing and local-model access inside enterprise developer environments",
+    "Telemetry, auditability, and governance for developer tools"
+  ],
+  "implications_zh": [
+    "如果你在评估 coding agent，应该把语言服务器、索引质量和构建配置纳入基线，而不是只看模型本身。",
+    "平台团队需要准备多模型接入策略，包括默认模型、成本归属、数据边界与本地推理路径。",
+    "内部 CLI/agent 设计应尽早考虑可审查遥测与 opt-out 机制，否则组织采用会受阻。"
+  ],
+  "implications_en": [
+    "If you are evaluating coding agents, include language servers, index quality, and build configuration in the baseline rather than judging only the model.",
+    "Platform teams should prepare for multi-model access policies covering defaults, cost ownership, data boundaries, and local inference paths.",
+    "Internal CLI and agent design should consider auditable telemetry and opt-out mechanisms early, or organizational adoption will slow."
+  ],
+  "reading_order": [
+    "C++ code intelligence for GitHub Copilot CLI in public preview",
+    "Bring your own language model key in VS Code now available",
+    "GitHub CLI: Opt-out usage telemetry"
+  ],
+  "what_to_ignore_zh": [
+    "忽略 GitHub Changelog 总览页本身，它只是索引页，没有独立技术增量。",
+    "不要把这些短 changelog 误判为完整架构文档；除 C++ 语义智能外，其余大多是产品能力开放而非深度技术披露。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the GitHub Changelog index page itself; it is only a listing page with no standalone technical signal.",
+    "Do not overread these short changelog posts as full architecture documents; aside from the C++ semantic-intelligence item, most are feature-availability updates rather than deep technical disclosures."
+  ]
+}

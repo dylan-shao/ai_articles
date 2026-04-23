@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Client apps Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.22 Release GitHub CLI: Opt-out usage telemetry client apps Apr.08 Improvement GitHub Mobile: Research and code with Copilot cloud agent anywhere client apps copilot ... +1 Apr.08 Improvement New PGP signing key for GitHub CLI Linux packages client apps Apr.07 Release Copilot CLI now supports BYOK and local models client apps copilot ... +1 Apr.01 Release GitHub Mobile: Stay in flow with a refreshed Copilot tab and native session logs client apps copilot ... +1 Apr.01 Improvement GitHub Mobile: Faster, more flexible agent assignment from issues client apps copilot ... +1 March Mar 2026 March Mar 2026 Mar.20 Improvement A smoother navigation experience in GitHub Mobile for Android client apps Mar.11 Improvement Request Copilot code review from GitHub CLI client apps copilot ... +1 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Secu",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub CLI: Opt-out usage telemetry - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-22-github-cli-opt-out-usage-telemetry/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "With the release of v2.91.0, GitHub CLI sends pseudonymous usage telemetry to help us improve the product. We want you to understand what we send and why. Why we collect…",
+    "body_excerpt": "GitHub CLI: Opt-out usage telemetry - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release April 22, 2026 • 2 minute read GitHub CLI: Opt-out usage telemetry Table of Contents Why we collect telemetry Review what GitHub CLI would send How to opt out Where GitHub CLI sends data Additional information Menu. Currently selected: Why we collect telemetry Why we collect telemetry Review what GitHub CLI would send How to opt out Where GitHub CLI sends data Additional information With the release of v2.91.0 , GitHub CLI sends pseudonymous usage telemetry to help us improve the product. We want you to understand what we send and why. Why we collect telemetry As adoption of GitHub CLI grows, we need visibility into how you use features in practice. We use this data to prioritize work and confirm whether features meet real user needs. For example, when we ship a new subcommand, we want to know whether you’re using it and how. If adoption is low, we’ll revisit the subcommand’s discoverability or design. If a subcommand sees high usage with specific flags, that helps us focus on improving those workflows. Review what GitHub CLI would send GitHub CLI is open source, so you can review the telemetry implementation in the cli/cli repository . If you want to see exactly what GitHub CLI would send without sending it , enable logging mode using an environment variable or a configuration option. Environment variable: export GH_TELEMETRY=log CLI config: gh config set telemetry log In logging mode, GitHub CLI prints the JSON payload (that it would normally send) to stderr. This lets you inspect every field before deciding whether to keep telemetry enabled. Note that this command can only log telemetry for the exact command and context in which it ran. For example, changing environment variables or authenticated accounts may",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Bring your own language model key in VS Code now available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot Business and Enterprise users can now use bring your own language model key (BYOK) in Visual Studio Code. BYOK lets teams reuse their API keys to access models from…",
+    "body_excerpt": "Bring your own language model key in VS Code now available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement April 22, 2026 • 1 minute read Bring your own language model key in VS Code now available Copilot Business and Enterprise users can now use bring your own language model key (BYOK) in Visual Studio Code. BYOK lets teams reuse their API keys to access models from providers like Anthropic, Gemini, OpenAI, OpenRouter, and Azure, as well as locally running models through Ollama and Foundry Local. Once configured, BYOK models are available anywhere in VS Code Chat, including the built-in plan agent and custom agents. BYOK does not apply to code completions. Usage is billed directly by your chosen provider and does not count against GitHub Copilot request quotas. Get started The policy is enabled by default. Organization members can add models from built-in providers or install language model provider extensions . To disable BYOK for your organization, an administrator must disable the “Bring Your Own Language Model Key in VS Code” policy in the Copilot policy settings on github.com. Join the discussion within GitHub Community . copilot Share Copied Shared Back to changelog Related Posts Apr.22 Improvement GitHub Copilot for Jira: Our latest enhancements collaboration tools copilot ... +1 Apr.22 Improvement Copilot code review user counts now aggregate in usage metrics API account management copilot enterprise management tools ... +2 Apr.22 Release C++ code intelligence for GitHub Copilot CLI in public preview copilot Apr.20 Retired Changes to GitHub Copilot plans for individuals copilot Apr.17 Release GitHub Copilot CLI now supports Copilot auto model selection copilot Apr.16 Release Manage agent skills with GitHub CLI copilot Apr.16 Release Claude Opus 4.7 is generally available copilot Ap",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "C++ code intelligence for GitHub Copilot CLI in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-22-c-code-intelligence-for-github-copilot-cli-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The Microsoft C++ Language Server is now available in public preview for the Copilot CLI. Powered by the same IntelliSense engine used in Visual Studio and VS Code, it extends…",
+    "body_excerpt": "C++ code intelligence for GitHub Copilot CLI in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release April 22, 2026 • 1 minute read C++ code intelligence for GitHub Copilot CLI in public preview Table of Contents Why this matters Getting started Feedback Menu. Currently selected: Why this matters Why this matters Getting started Feedback The Microsoft C++ Language Server is now available in public preview for the Copilot CLI. Powered by the same IntelliSense engine used in Visual Studio and VS Code, it extends precise, semantic C++ code intelligence beyond the IDE to the command line. Why this matters C++ is uniquely difficult for tools to reason about. Complex include hierarchies, macros, templates, and build-system-dependent configurations mean text search alone gives incomplete results. The C++ Language Server provides Copilot with precise semantic data (i.e., symbol definitions, references, call hierarchies, and type information) to complement grep-style search. For example, with the language server, Copilot uses workspace symbol search and go-to-definition to find and understand relevant code directly. Without it, Copilot falls back to iterative grep searches, which can return irrelevant results across the codebase. Getting started The Microsoft C++ Language Server is available in preview as an npm package. Check out the quick start guide in the README of our corresponding issue-only GitHub repository to get started. An active GitHub Copilot subscription is required. The Microsoft C++ Language Server requires: Authenticating with the GitHub Copilot CLI Creating a compile_commands.json for your project Configuring your project for use with the CLI Our issue-only GitHub repository contains a skill that automatically handles the second and third requirement for CMake projects , as w",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
