@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Copilot Chat improvements for pull requests - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-23-copilot-chat-improvements-for-pull-requests/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot Chat now provides richer context and new capabilities when you’re working with diffs and pull requests. You can access this functionality by asking a question about a pull…",
+    "body_excerpt": "Copilot Chat improvements for pull requests - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Improvement April 23, 2026 • 1 minute read Copilot Chat improvements for pull requests Table of Contents New abilities Give feedback Menu. Currently selected: New abilities New abilities Give feedback GitHub Copilot Chat now provides richer context and new capabilities when you’re working with diffs and pull requests. You can access this functionality by asking a question about a pull request in github.com/copilot, or via the global Copilot navigation, which allows you to open chat over any GitHub surface. Public-preview-enabled users can also click the Copilot button on a diff to ask a series of questions to better understand the changes or the related pull request. New abilities Three new abilities improve how Copilot Chat responds to pull request questions. These work in both on-page and immersive (github.com/copilot) chat: Pull request understanding: When a pull request is given as context, Copilot Chat now includes data like comments, file changes, commits, and reviews. Pull request review: Ask Copilot Chat to help review a pull request, and it’ll provide a structured review. Pull request summary: Ask Copilot Chat to summarize a pull request, and it’ll provide a concise overview of the changes. We’ve updated the suggested prompts for chat (e.g., “Help review this pull request”) to guide you through the relevant functionality. Give feedback Join the discussion within GitHub Community . Table of Contents New abilities Give feedback Menu. Currently selected: New abilities New abilities Give feedback copilot Share Copied Shared Back to changelog Related Posts Apr.23 Release Copilot cloud agent fields added to usage metrics account management copilot enterprise management tools ... +2 Apr.23 Improvement Better d",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply April Apr 2026 April Apr 2026 Apr.23 Release View and manage agent sessions from issues and projects copilot projects & issues ... +1 Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.02 Improvement Improved search for GitHub Issues is now generally available projects & issues March Mar 2026 March Mar 2026 Mar.30 Release Create issues from Slack with Copilot copilot projects & issues ... +1 Mar.26 Release Agent activity in GitHub Issues and Projects projects & issues Mar.19 Improvement Hierarchy view in GitHub Projects is now generally available projects & issues Mar.12 Release Issue fields: Structured issue metadata is in public preview projects & issues Mar.05 Improvement Hierarchy view improvements and file uploads in issue forms projects & issues February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Feat",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Copilot cloud agent fields added to usage metrics - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-23-copilot-cloud-agent-fields-added-to-usage-metrics/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Following the Copilot coding agent to Copilot cloud agent rename, the Copilot usage metrics API now includes a new used_copilot_cloud_agent field in user-level reports. This boolean field mirrors the existing…",
+    "body_excerpt": "Copilot cloud agent fields added to usage metrics - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release April 23, 2026 • 1 minute read Copilot cloud agent fields added to usage metrics Table of Contents What's new Why this matters Important notes Menu. Currently selected: What's new What's new Why this matters Important notes Following the Copilot coding agent to Copilot cloud agent rename , the Copilot usage metrics API now includes a new used_copilot_cloud_agent field in user-level reports. This boolean field mirrors the existing used_copilot_coding_agent flag under the updated product name. What’s new Field Description used_copilot_cloud_agent Whether the user had Copilot cloud agent activity during the reporting period (boolean, nullable) The field is available in single-day and 28-day rolling window reports at both the enterprise and organization user levels. It returns the same value as the existing used_copilot_coding_agent field, which will be preserved for backward compatibility until August 1, 2026. Why this matters Integrations and dashboards can adopt the new field name to match the Copilot cloud agent branding without waiting for the legacy field to be removed. Both fields coexist and return the same value, so you can transition at your own pace. The new field appears in enterprise user and organization user reports for both 1-day and 28-day windows. Important notes These metrics are available to enterprise administrators and organization owners who have access to Copilot usage metrics through the REST API. The existing used_copilot_coding_agent field continues to work and will not be deprecated until August 1, 2026. Join the discussion within GitHub Community . Table of Contents What's new Why this matters Important notes Menu. Currently selected: What's new What's new Why this matters ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "View and manage agent sessions from issues and projects - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-04-23-view-and-manage-agent-sessions-from-issues-and-projects/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-04-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now view and steer cloud agent sessions directly from issues and projects, giving you better visibility into agent activity without leaving your workflow. What’s new Session pill on…",
+    "body_excerpt": "View and manage agent sessions from issues and projects - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot Back to changelog Release April 23, 2026 • 1 minute read View and manage agent sessions from issues and projects Table of Contents What's new Additional improvements Menu. Currently selected: What's new What's new Additional improvements You can now view and steer cloud agent sessions directly from issues and projects, giving you better visibility into agent activity without leaving your workflow. What’s new Session pill on issues: A new header pill on issues shows all active and completed agent sessions at a glance. Session side panel on issues: Click any session from the pill or assignee area to open it in the sidebar, where you can view progress, review logs, or steer the agent. Agent sessions enabled by default in projects: “Show agent sessions” is now enabled by default for both new and existing project views, so you can see agent activity without any additional configuration. Session side panel in projects: Click on an agent session from your project board to open it directly in the sidebar. View session details, check progress, or provide guidance to the agent without navigating away from your project. Join the discussion within GitHub Community . Additional improvements Smarter label suggestions: The label picker now remembers your most frequently used labels and surfaces them at the top, so you can apply labels faster without searching. Table of Contents What's new Additional improvements Menu. Currently selected: What's new What's new Additional improvements copilot projects & issues Share Copied Shared Back to changelog Related Posts Apr.23 Improvement Copilot Chat improvements for pull requests copilot Apr.23 Release Copilot cloud agent fields added to usage metrics account management copilot enterprise ma",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-01T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Thu, 23 Apr 2026 19:58:48 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Copilot Chat improvements for pull requests https://github.blog/changelog/2026-04-23-copilot-chat-improvements-for-pull-requests Allison Thu, 23 Apr 2026 19:58:34 +0000 https://github.blog/changelog/2026-04-22-copilot-chat-improvements-for-pull-requests <p>GitHub Copilot Chat now provides richer context and new capabilities when you&#8217;re working with diffs and pull requests. You can access this functionality by asking a question about a pull&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-04-23-copilot-chat-improvements-for-pull-requests\">Copilot Chat improvements for pull requests</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>GitHub Copilot Chat now provides richer context and new capabilities when you&rsquo;re working with diffs and pull requests.</p> <p><video src=\"https://github.com/user-attachments/assets/f75b223b-09e8-4306-8aab-4b07500fcc1c\" autoplay loop width=\"100%\" muted title=\"Click on the Copilot icon then the Chat on page button to view contextual chat\"></video></p> <p>You can access this functionality by asking a question about a pull request in github.com/copilot, or via the global Copilot navigation, which allows you to open chat over any GitHub surface.</p> <p>Public-preview-enabled users can also click the Copilot button on a diff to ask a series of questions to better understand the changes or the related pull request.</p> <p><video src=\"https://github.com/user-attachments/assets/2",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
