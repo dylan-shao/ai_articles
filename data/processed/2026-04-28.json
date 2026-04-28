@@ -1,0 +1,83 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号偏弱，主要来自 GitHub Changelog 的增量更新，缺少深度技术文章、评测方法或原创架构解读。",
+    "唯一相对值得关注的是 Copilot cloud agent 启动性能继续优化：通过 GitHub Actions custom images 预构建运行环境，云端 agent 启动再提升 20%，说明托管编码代理正在走向更重视冷启动、环境复现和反馈回路的工程化阶段。",
+    "对平台与工程效率负责人而言，这更像是一个产品运行机制信号，而不是可直接复用的技术方案公布。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today: it is mostly incremental GitHub Changelog updates, with no deep technical post, eval methodology, harness design, or original architecture write-up.",
+    "The only borderline high-signal item is the continued startup optimization of Copilot cloud agent: GitHub says agent startup is 20% faster by prebuilding runner environments with GitHub Actions custom images, signaling increasing engineering focus on cold-start latency, environment reproducibility, and tighter feedback loops for hosted coding agents.",
+    "For backend/platform/engineering leaders, this is more of a product-operating signal than a directly reusable technical disclosure."
+  ],
+  "items": [
+    {
+      "title": "Copilot cloud agent starts 20% faster with Actions custom images",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-04-27",
+      "url": "https://github.blog/changelog/2026-04-27-copilot-cloud-agent-starts-20-faster-with-actions-custom-images/",
+      "summary_zh": "GitHub 表示 Copilot cloud agent 通过采用 GitHub Actions custom images 预构建运行环境，使云端 agent 启动时间进一步缩短 20% 以上。该 agent 在 issue 分配、Agents tab 任务启动或 PR 中 @copilot 时会拉起云端环境执行工作；这次优化延续了其 3 月份已宣布的 50% 启动提速。",
+      "summary_en": "GitHub says Copilot cloud agent now starts more than 20% faster by using GitHub Actions custom images to prebuild the runner environment. The cloud agent spins up when users assign an issue to Copilot, start a task from the Agents tab, or mention @copilot in a pull request; this follows a previously announced 50% startup improvement in March.",
+      "why_it_matters_zh": "对工程平台负责人而言，这揭示了托管式编码代理的一个关键基础设施方向：用户体验并不只取决于模型能力，还取决于环境冷启动、镜像预热、依赖复用和任务调度。随着 agent 越来越多地在云端执行真实仓库任务，运行环境工程会成为竞争核心。",
+      "why_it_matters_en": "For platform and engineering leaders, this highlights a key infrastructure truth about hosted coding agents: user experience depends not just on model quality, but on cold-start latency, image prewarming, dependency reuse, and task scheduling. As agents increasingly execute real repo tasks in the cloud, runtime environment engineering becomes a core differentiator.",
+      "key_takeaways_zh": [
+        "GitHub 将 Actions custom images 用于 Copilot cloud agent，说明编码 agent 与 CI 基础设施正在进一步收敛。",
+        "持续披露启动时间优化，表明 cloud agent 的实际可用性瓶颈之一是环境准备开销，而非单纯推理速度。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is using Actions custom images for Copilot cloud agent, indicating further convergence between coding agents and CI infrastructure.",
+        "The repeated focus on startup improvements suggests that a major bottleneck for cloud agents is environment preparation overhead, not just model inference speed."
+      ],
+      "tags": [
+        "AI coding agents",
+        "GitHub Copilot",
+        "Cloud agent",
+        "Developer tooling",
+        "CI/CD",
+        "Runtime environments"
+      ],
+      "signal_score": 6,
+      "novelty_score": 4,
+      "actionability_score": 5
+    }
+  ],
+  "top_items": [
+    "Copilot cloud agent starts 20% faster with Actions custom images"
+  ],
+  "new_terms_zh": [
+    "Actions custom images",
+    "Copilot cloud agent"
+  ],
+  "new_terms_en": [
+    "Actions custom images",
+    "Copilot cloud agent"
+  ],
+  "themes_zh": [
+    "托管式编码代理的冷启动优化",
+    "AI agent 运行时与 CI 基础设施融合"
+  ],
+  "themes_en": [
+    "Cold-start optimization for hosted coding agents",
+    "Convergence of AI agent runtime and CI infrastructure"
+  ],
+  "implications_zh": [
+    "如果你在内部部署编码 agent，需要优先衡量环境启动时间、仓库预取、依赖缓存和镜像分层，而不是只比较模型基准分数。",
+    "未来 agent 平台的差异化可能更多体现在任务执行环境、权限隔离、缓存命中率和可观测性，而不只是聊天体验。"
+  ],
+  "implications_en": [
+    "If you are deploying coding agents internally, prioritize measuring environment startup time, repo prefetching, dependency caching, and image layering rather than comparing only model benchmark scores.",
+    "Future agent platform differentiation may come more from task execution environments, permission isolation, cache hit rates, and observability than from chat UX alone."
+  ],
+  "reading_order": [
+    "Copilot cloud agent starts 20% faster with Actions custom images"
+  ],
+  "what_to_ignore_zh": [
+    "聚合式 GitHub Changelog 首页与月归档页面，信息重复且缺少额外技术细节。",
+    "没有展开实现细节、评测方法或架构数据的零散功能更新，不足以支持今天的完整技术情报摘要。"
+  ],
+  "what_to_ignore_en": [
+    "The aggregate GitHub Changelog homepage and monthly archive pages, which are duplicative and add no technical detail.",
+    "Scattered feature updates that do not include implementation details, evaluation methods, or architectural data; they are insufficient for a full technical digest today."
+  ]
+}
