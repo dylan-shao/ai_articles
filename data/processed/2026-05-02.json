@@ -1,0 +1,79 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容信号较弱，只有一条与 GitHub Copilot 模型生命周期管理直接相关的官方变更通知值得保留。",
+    "该更新的核心价值不在模型能力本身，而在于提醒平台团队处理 Copilot 模型切换、企业策略配置和集成兼容性风险。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is weak; only one official GitHub Copilot model lifecycle update is worth keeping.",
+    "The main value is not new model capability, but the operational implication for Copilot model migration, enterprise policy configuration, and integration compatibility."
+  ],
+  "items": [
+    {
+      "title": "Upcoming deprecation of GPT-5.2 and GPT-5.2-Codex - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-01T00:00:00+00:00",
+      "url": "https://github.blog/changelog/2026-05-01-upcoming-deprecation-of-gpt-5-2-and-gpt-5-2-codex/",
+      "summary_zh": "GitHub 宣布将于 2026-06-01 在大多数 Copilot 体验中弃用 GPT-5.2 与 GPT-5.2-Codex，并分别建议迁移到 GPT-5.5 与 GPT-5.3-Codex。例外是 GPT-5.2-Codex 在 Copilot Code Review 中暂时保留。企业管理员还需要确认替代模型已通过模型策略开放给用户与团队。",
+      "summary_en": "GitHub announced that GPT-5.2 and GPT-5.2-Codex will be deprecated across most Copilot experiences on 2026-06-01, with recommended migrations to GPT-5.5 and GPT-5.3-Codex respectively. The exception is that GPT-5.2-Codex remains temporarily available in Copilot Code Review. Enterprise admins may need to explicitly enable the replacement models through Copilot model policies.",
+      "why_it_matters_zh": "对工程平台团队而言，这是一条典型但高影响的供应商模型生命周期事件。凡是依赖 Copilot 指定模型、做了内部提示词调优、评测基线、开发者培训或合规审批的组织，都需要提前验证替代模型在聊天、补全、agent 模式与代码审查中的行为差异，避免开发体验、成本与输出质量发生隐性回归。",
+      "why_it_matters_en": "For engineering platform teams, this is a standard but high-impact vendor model lifecycle event. Any organization that depends on specific Copilot models for prompts, eval baselines, developer workflows, or governance needs to validate replacement behavior across chat, completions, agent mode, and code review before the cutoff to avoid silent regressions in quality, UX, or cost.",
+      "key_takeaways_zh": [
+        "模型弃用不仅影响交互式聊天，也影响 inline edits、ask/agent modes、code completions 等多种 Copilot 工作流。",
+        "企业管理员需要检查 Copilot model policies，确保 GPT-5.5 与 GPT-5.3-Codex 已对目标用户开放，否则迁移会在组织层面被策略阻断。"
+      ],
+      "key_takeaways_en": [
+        "The deprecation affects not just chat, but also inline edits, ask/agent modes, and code completions across Copilot workflows.",
+        "Enterprise admins should verify Copilot model policies so GPT-5.5 and GPT-5.3-Codex are actually available to target users; otherwise migration can fail at the policy layer."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Model lifecycle",
+        "Enterprise policy",
+        "Developer tooling"
+      ],
+      "signal_score": 6,
+      "novelty_score": 3,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Upcoming deprecation of GPT-5.2 and GPT-5.2-Codex - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "Copilot model policies（Copilot 模型策略）",
+    "Code Review 模型例外保留"
+  ],
+  "new_terms_en": [
+    "Copilot model policies",
+    "Code Review exception retention"
+  ],
+  "themes_zh": [
+    "AI 编码工具的模型生命周期管理",
+    "企业级 AI 开发工具的策略配置与迁移治理"
+  ],
+  "themes_en": [
+    "Model lifecycle management for AI coding tools",
+    "Policy configuration and migration governance for enterprise AI developer tooling"
+  ],
+  "implications_zh": [
+    "如果你的组织对 Copilot 输出质量有内部基线，应把这类供应商模型替换纳入回归评测与变更管理流程。",
+    "平台团队需要把“模型可见性/策略配置”视为生产依赖项，而不是单纯的产品设置。"
+  ],
+  "implications_en": [
+    "If your organization maintains internal quality baselines for Copilot, vendor model replacements should be part of your regression-eval and change-management process.",
+    "Platform teams should treat model availability and policy configuration as production dependencies, not merely product settings."
+  ],
+  "reading_order": [
+    "Upcoming deprecation of GPT-5.2 and GPT-5.2-Codex - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的整月归档页只是索引页，本身没有额外技术信息。",
+    "不要把这条更新误判为新的模型能力发布；它更像是运维/治理层面的迁移通知。"
+  ],
+  "what_to_ignore_en": [
+    "The monthly GitHub Changelog archive page is only an index and adds no extra technical substance.",
+    "Do not treat this as a new-model capability launch; it is primarily an operational and governance migration notice."
+  ]
+}
