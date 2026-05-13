@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Copilot code review: Comment experience improvements - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot code review comments are now easier to scan and act on. Available to all users opted into the new pull requests experience, grouped suggestions, severity levels, and an updated…",
+    "body_excerpt": "Copilot code review: Comment experience improvements - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 12, 2026 • 1 minute read Copilot code review: Comment experience improvements Table of Contents Severity levels to help you prioritize Grouped comments to reduce noise Menu. Currently selected: Severity levels to help you prioritize Severity levels to help you prioritize Grouped comments to reduce noise Copilot code review comments are now easier to scan and act on. Available to all users opted into the new pull requests experience , grouped suggestions, severity levels, and an updated suggested changeset UI will reduce noise and help you prioritize suggestions from Copilot. Severity levels to help you prioritize Comments now include severity labels, so you can prioritize which suggestions to address and when. You can find severity labels on the top-right corner of Copilot code review comments. Comments will be categorized as High , Medium , or Low severity. Grouped comments to reduce noise Copilot code review now groups like comments together, so feedback is easier to review and less repetitive, especially on larger pull requests. For example, if Copilot has a suggestion for a better variable name for all of its occurrences in the pull request, Copilot will only point this out once. Join the discussion within GitHub Community . Table of Contents Severity levels to help you prioritize Grouped comments to reduce noise Menu. Currently selected: Severity levels to help you prioritize Severity levels to help you prioritize Grouped comments to reduce noise copilot Share Copied Shared Back to changelog Related Posts May.12 Improvement April reports are now available to prepare for usage-based billing copilot May.08 Retired Upcoming deprecation of Grok Code Fast 1 copilot May.08 Release",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "April reports are now available to prepare for usage-based billing - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Starting today, you can download your usage report to see how April’s GitHub Copilot activity translates into AI credits. The new billing unit of AI credits is going live on…",
+    "body_excerpt": "April reports are now available to prepare for usage-based billing - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 12, 2026 • 1 minute read April reports are now available to prepare for usage-based billing Starting today, you can download your usage report to see how April’s GitHub Copilot activity translates into AI credits. The new billing unit of AI credits is going live on June 1. Copilot Business and Copilot Enterprise admins can download the report for their enterprise. Copilot Pro and Pro+ users can download the report for their personal usage. You can use the report to plan: identify your top consumers, see which models and surfaces drive the most consumption, and get a working sense of monthly AI credit ranges before June 1. A couple of things to know: 0x model usage from April 1–24 is not in the report. Across paid plans, this is roughly 2% of activity at scale, so it won’t materially shift most totals. If your team relies primarily on 0x models, look at data from April 24 onwards to inform your estimates. Duplicate entries may appear for April 24–30 due to a data backfill gap. Some code review entries are missing AI credit estimations. Copilot code reviews charged directly to organizations via automation or from a user without a Copilot license will reflect 0 AI credits due to a data issue. The report is a directional signal, useful for understanding cost shape, top consumers, and model usage. It’s not a recalculated bill. Treat the totals as an estimated range, monitor patterns for May, and plan budget updates accordingly. Join the discussion within GitHub Community . copilot Share Copied Shared Back to changelog Related Posts May.12 Improvement Copilot code review: Comment experience improvements copilot May.08 Retired Upcoming deprecation of Grok Code Fast 1 copil",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "CodeQL 2.25.4 adds Swift 6.3.1 support, improvements to C# and Java, and more - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-12-codeql-2-25-4-adds-swift-6-3-1-support-improvements-to-c-and-java-and-more/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "CodeQL 2.25.4 release includes new Swift support, C# and Java improvements, and other query changes.",
+    "body_excerpt": "CodeQL 2.25.4 adds Swift 6.3.1 support, improvements to C# and Java, and more - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 12, 2026 • 2 minute read CodeQL 2.25.4 adds Swift 6.3.1 support, improvements to C# and Java, and more Table of Contents Language and framework support Query changes New features Menu. Currently selected: Language and framework support Language and framework support Query changes New features CodeQL is the static analysis engine behind GitHub code scanning , which finds and remediates security issues in your code. We’ve recently released CodeQL 2.25.4 , which adds Swift 6.3.1 support, improves accuracy of C# analysis, extends security analysis to Vercel serverless functions, and introduces data flow barrier extensions across nearly every supported language. Language and framework support Swift CodeQL now supports analysis of apps built with Swift 6.3.1. C# We’ve expanded ASP and ASP.NET remote source modeling to cover additional sources, including fields of tainted parameters as well as properties and fields that become tainted transitively. This improves detection coverage for taint flows in ASP.NET applications. We’ve added support for C# 14 user-defined compound assignment operators. When resolving dependencies in build-mode: none , dotnet restore now explicitly uses reachable NuGet feeds configured in nuget.config and any private registries directly, improving reliability when default feeds are unavailable or restricted. JavaScript/TypeScript We’ve added support for @vercel/node Vercel serverless functions. Handlers are recognized via VercelRequest / VercelResponse TypeScript parameter types, so standard security queries (e.g., js/reflected-xss , js/request-forgery , js/sql-injection , and js/command-line-injection ) now detect vulnerabilities in Verc",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.12 Retired Synchronous SBOM API deprecated supply chain security May.11 Improvement Cross-org Dependabot access for internal repositories supply chain security May.06 Release Search and filter bar for repository security advisories supply chain security May.05 Release Dependency scanning with GitHub MCP Server is in public preview supply chain security May.05 Release Code-to-cloud risk visibility with Microsoft Defender for Cloud is now generally available application security supply chain security ... +1 April Apr 2026 April Apr 2026 Apr.23 Improvement Dependabot-based dependency graphs for Python supply chain security Apr.21 Retired Deprecation of security-related organization API fields application security supply chain security ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Improvement Dependabot and code scanning: Org-level private registries supply chain security Apr.14 Improvement SBOM exports are now computed asynchronously supply chain security Apr.07 Release Prioritize security alerts with runtime context from Dynatrace application security supply chain security ... +1 Apr.07 Improvement Dependabot alerts are now assignable to AI agents for remediation supply chain security Apr.07 Release Dependabot version updates no",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Synchronous SBOM API deprecated - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-12-synchronous-sbom-api-deprecated/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Following the recent release of the new Asynchronous SBOM REST API, the older, synchronous API is deprecated and slated for removal in six months, on November 13, 2026. If your…",
+    "body_excerpt": "Synchronous SBOM API deprecated - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Retired May 12, 2026 • 1 minute read Synchronous SBOM API deprecated Following the recent release of the new Asynchronous SBOM REST API , the older, synchronous API is deprecated and slated for removal in six months, on November 13, 2026. If your scripts or integrations are currently using the REST endpoint at /{owner}/{repo}/dependency-graph/sbom , please update them to use the new /{owner}/{repo}/dependency-graph/sbom/generate-report instead. This request will return a URL which you then poll for completion. Once the SBOM is computed, it will be cached and available for download, providing better performance and reliability than the previous method. Visit the API documentation for more details on the API usage. supply chain security Share Copied Shared Back to changelog Related Posts May.11 Improvement Cross-org Dependabot access for internal repositories supply chain security May.06 Release Search and filter bar for repository security advisories supply chain security May.05 Release Dependency scanning with GitHub MCP Server is in public preview supply chain security May.05 Release Code-to-cloud risk visibility with Microsoft Defender for Cloud is now generally available application security supply chain security ... +1 Apr.23 Improvement Dependabot-based dependency graphs for Python supply chain security Apr.21 Retired Deprecation of security-related organization API fields application security supply chain security ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Improvement Dependabot and code scanning: Org-level private registries supply chain security Apr.14 Improvement SBOM exports are now computed asynchronously supply chain se",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
