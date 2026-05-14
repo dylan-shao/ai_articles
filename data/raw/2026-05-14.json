@@ -1,0 +1,58 @@
+[
+  {
+    "title": "New enterprise installation API now in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-13-new-enterprise-installation-api-now-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We’re filling an API gap for GitHub App developers based on community feedback. Enterprise Installation API We’ve added a new API that lets a GitHub App find out if it’s…",
+    "body_excerpt": "New enterprise installation API now in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 13, 2026 • 1 minute read New enterprise installation API now in public preview Table of Contents Enterprise Installation API We'd love to hear your feedback Menu. Currently selected: Enterprise Installation API Enterprise Installation API We'd love to hear your feedback We’re filling an API gap for GitHub App developers based on community feedback. Enterprise Installation API We’ve added a new API that lets a GitHub App find out if it’s installed on an enterprise and what its installation ID is. This matches the existing APIs that do the same for organizations, repositories, and users. These APIs help apps get an installation token for an enterprise faster, rather than paginating through a list of all installations to find the right target. Thank you to the broader GitHub Actions community and Enterprise Apps preview participants for calling out this gap so that we could solve it. To learn more about the API, see the REST API documentation . We’d love to hear your feedback If you have any questions or thoughts, drop a comment in our Community discussion . Table of Contents Enterprise Installation API We'd love to hear your feedback Menu. Currently selected: Enterprise Installation API Enterprise Installation API We'd love to hear your feedback ecosystem & accessibility Share Copied Shared Back to changelog Related Posts Apr.20 Retired Sunsetting SHA-1 in HTTPS on GitHub ecosystem & accessibility Mar.12 Release REST API version 2026-03-10 is now available ecosystem & accessibility Feb.03 Release The Dependabot Proxy is now open source with an MIT license ecosystem & accessibility supply chain security ... +1 Jan.12 Improvement Selectively showing \"act on your behalf\" warning for ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.13 Release GitHub Enterprise Server 3.21 release candidate is available collaboration tools May.08 Improvement Disable commit comments on the user level collaboration tools April Apr 2026 April Apr 2026 Apr.23 Improvement Global pull requests dashboard moves to opt-out public preview collaboration tools Apr.23 Improvement Disable commit comments across your organization collaboration tools Apr.22 Improvement GitHub Copilot for Jira: Our latest enhancements collaboration tools copilot ... +1 Apr.09 Improvement New Sort by control added to Notifications collaboration tools Apr.09 Improvement Repository member role labels now in pull request list view collaboration tools Apr.01 Improvement Codespaces is now generally available for GitHub Enterprise with data residency collaboration tools March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. B",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Start Copilot cloud agent tasks via the REST API - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-13-start-copilot-cloud-agent-tasks-via-the-rest-api/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot Business and Copilot Enterprise users can programmatically start Copilot cloud agent tasks with the new Agent tasks REST API, available in public preview. Copilot cloud agent works in the…",
+    "body_excerpt": "Start Copilot cloud agent tasks via the REST API - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 13, 2026 • 1 minute read Start Copilot cloud agent tasks via the REST API Copilot Business and Copilot Enterprise users can programmatically start Copilot cloud agent tasks with the new Agent tasks REST API, available in public preview. Copilot cloud agent works in the background in its own development environment, where it can make and validate code changes, then open a pull request. The new API makes it easy to weave Copilot cloud agent into custom automations. For example, you could: Fan out refactors or migrations across many repositories from a simple script. Set up new repositories in one click from your company’s internal developer portal. Automatically prepare a new release each week, including release notes. Once you’ve started a task, you can also track progress through the API. The Agent tasks API supports authentication with personal access tokens (classic and fine-grained) and OAuth tokens. Support for GitHub App installation access tokens, plus access for Copilot Pro and Pro+ users, is coming soon. To learn more, head to our agents tasks REST API documentation . copilot Share Copied Shared Back to changelog Related Posts May.12 Improvement Copilot code review: Comment experience improvements copilot May.12 Improvement April reports are now available to prepare for usage-based billing copilot May.08 Retired Upcoming deprecation of Grok Code Fast 1 copilot May.08 Release Copilot code review comment types now in usage metrics API account management copilot enterprise management tools ... +2 May.08 Release More flexible secrets and variables for Copilot cloud agent copilot May.07 Retired Upcoming deprecation of GPT-4.1 copilot May.07 Retired Claude Sonnet 4 deprecated copilot M",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Enterprise Server 3.21 release candidate is available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-13-github-enterprise-server-3-21-release-candidate-is-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Enterprise Server (GHES) 3.21 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.21 release: Organization custom properties are now generally…",
+    "body_excerpt": "GitHub Enterprise Server 3.21 release candidate is available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 13, 2026 • 2 minute read GitHub Enterprise Server 3.21 release candidate is available GitHub Enterprise Server (GHES) 3.21 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.21 release: Organization custom properties are now generally available, giving enterprise administrators a way to tag organizations with metadata and automatically target enterprise rulesets. For more information, see organization custom properties . Hierarchy view for GitHub Projects is now generally available. You can now view your full issue hierarchy directly in project table views, giving you clear visibility into complex work breakdowns without losing context or switching views. For more information, see hierarchy view . REST API version 2026-03-10 is now available and introduces breaking changes. Existing integrations on version 2022-11-28 will continue to be fully supported for at least 24 months from the 3.21 release date. For more information, see REST API version 2026-03-10 . GitHub Actions workflow pages now successfully render workflows with more than 300 jobs. We’ve implemented lazy loading to smoothly handle large workflows. In addition, you can now filter jobs based on status (for example, failed or in-progress) directly from the workflow pages. For more information, see improved performance for GitHub Actions workflows page . This version includes improvements to alert-level and enterprise-level permissions for secret scanning. You can now more easily manage secret scanning alerts, custom patterns, and push protection bypasses. For more information, see enterprise governance and policy improvements for secret s",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
