@@ -1,0 +1,140 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容几乎全部来自 GitHub Changelog，且多为短更新；真正对后端/平台/工程负责人有持续价值的高信号项很少。",
+    "最值得关注的是 Copilot Memory 从仓库级扩展到用户级偏好，这预示编码代理开始积累跨仓库的个人工作记忆与行为定制能力。",
+    "其余条目更多属于运维与治理层面的边际变化，例如模型退役与 Projects 时间戳字段，信息有效但技术深度有限。"
+  ],
+  "executive_summary_en": [
+    "Today's candidates are almost entirely GitHub Changelog snippets, and most are short product updates; there are very few truly high-signal items for backend/platform/engineering leaders.",
+    "The strongest item is Copilot Memory expanding from repo-level memory to user-level preferences, signaling that coding agents are moving toward cross-repo personal working memory and behavior customization.",
+    "The remaining items are mostly operational or governance-adjacent changes, such as model deprecation and Project timestamp fields, useful but limited in technical depth."
+  ],
+  "items": [
+    {
+      "title": "Copilot Memory supports user preferences for Pro, Pro+ users - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-15",
+      "url": "https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users/",
+      "summary_zh": "GitHub 将 Copilot Memory 从仅支持仓库级记忆，扩展到用户级偏好记忆。系统可保存用户显式声明或隐式推断的个人偏好，并在未来跨仓库、跨 Copilot 体验复用，例如提交风格、PR 结构和沟通语气。",
+      "summary_en": "GitHub expanded Copilot Memory from repo-level memory to user-level preference memory. The system can store explicitly stated or inferred personal preferences and reuse them across future interactions, repositories, and Copilot experiences, including commit style, PR structure, and communication tone.",
+      "why_it_matters_zh": "这比普通“个性化”更重要：它意味着编码代理开始形成长期、跨上下文的个人工作模型，而不是每次会话都重新学习。对工程组织而言，这会直接影响提示工程、代码审查一致性、代理权限边界、隐私治理与团队标准如何和个人偏好共存。",
+      "why_it_matters_en": "This matters beyond simple personalization: it means coding agents are beginning to build durable, cross-context models of how an individual works instead of relearning preferences every session. For engineering orgs, this has direct implications for prompt design, review consistency, agent permission boundaries, privacy governance, and how team standards coexist with personal preferences.",
+      "key_takeaways_zh": [
+        "记忆层从“仓库上下文”扩展到“用户画像”，说明代理正在向长期个体适配演进。",
+        "用户可查看和删除个人记忆，表明产品已开始正视可控性与隐私治理问题。"
+      ],
+      "key_takeaways_en": [
+        "The memory layer is expanding from repository context to user profile, indicating a shift toward durable individual adaptation.",
+        "Users can review and delete personal memories, showing that controllability and privacy governance are becoming first-class product concerns."
+      ],
+      "tags": [
+        "copilot",
+        "agent-memory",
+        "developer-tooling",
+        "personalization"
+      ],
+      "signal_score": 8,
+      "novelty_score": 8,
+      "actionability_score": 7
+    },
+    {
+      "title": "Grok Code Fast 1 deprecated - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-15",
+      "url": "https://github.blog/changelog/2026-05-15-grok-code-fast-1-deprecated/",
+      "summary_zh": "GitHub 已在所有 Copilot 体验中弃用 Grok Code Fast 1，并建议迁移到 GPT-5 mini 或 Claude Haiku 4.5。企业管理员需通过模型策略确认替代模型可用，工作流与集成也需要同步更新。",
+      "summary_en": "GitHub has deprecated Grok Code Fast 1 across all Copilot experiences and recommends moving to GPT-5 mini or Claude Haiku 4.5. Enterprise admins may need to enable the replacement models via policy, and workflows/integrations should be updated accordingly.",
+      "why_it_matters_zh": "这不是单纯的模型下线通知，而是提醒组织：AI 编码平台的供应层是动态变化的。若你的 IDE、CLI、代码审查或 agent 流程绑定特定模型，就需要建立模型替换、兼容性测试和管理员策略变更的治理机制。",
+      "why_it_matters_en": "This is more than a simple model retirement notice: it highlights that the model supply layer behind AI coding platforms is fluid. If your IDE, CLI, code review, or agent workflows depend on specific models, you need governance for model substitution, compatibility testing, and admin policy changes.",
+      "key_takeaways_zh": [
+        "编码代理栈中的底层模型不是稳定依赖项，企业需要把模型替换纳入变更管理。",
+        "管理员模型策略已成为可用性与团队体验的关键控制面。"
+      ],
+      "key_takeaways_en": [
+        "Foundation models in the coding-agent stack are not stable dependencies; enterprises should treat model replacement as a formal change-management concern.",
+        "Admin model policy is now a key control plane for both availability and developer experience."
+      ],
+      "tags": [
+        "copilot",
+        "model-governance",
+        "enterprise-adoption",
+        "change-management"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 8
+    },
+    {
+      "title": "Timestamp fields in GitHub Projects - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-15",
+      "url": "https://github.blog/changelog/2026-05-15-timestamp-fields-in-github-projects/",
+      "summary_zh": "GitHub Projects 新增内建时间戳字段 Created、Updated、Closed，可用于排序和筛选 issue、draft issue 与 pull request。Updated 还会反映项目字段变更，因此同一条目在不同项目中的时间戳可能不同。",
+      "summary_en": "GitHub Projects now includes built-in timestamp fields for Created, Updated, and Closed, enabling sorting and filtering across issues, draft issues, and pull requests. The Updated field also reflects project field changes, so the same item can show different timestamps across projects.",
+      "why_it_matters_zh": "单看功能不大，但对平台团队与工程效能团队有用：这些字段能更方便地构建“最近完成”“卡住未更新”“状态刚变化”的视图，也为 agent 驱动的项目自动化和流程度量提供更清晰的数据基础。",
+      "why_it_matters_en": "The feature is modest on its own, but useful for platform and engineering productivity teams: these fields make it easier to build views like 'recently completed,' 'stale work,' or 'recent status changes,' and provide cleaner data for agent-driven project automation and workflow metrics.",
+      "key_takeaways_zh": [
+        "Projects 正在变成更适合自动化与流程分析的数据面板，而不只是手工看板。",
+        "Updated 字段包含项目字段变更，适合用来监控流程流转，而不仅是代码对象本身变化。"
+      ],
+      "key_takeaways_en": [
+        "Projects is becoming a more automation-friendly workflow data surface, not just a manual board.",
+        "Because Updated includes project field changes, it is useful for tracking process movement rather than only code-object activity."
+      ],
+      "tags": [
+        "github-projects",
+        "workflow-automation",
+        "engineering-metrics"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Copilot Memory supports user preferences for Pro, Pro+ users - GitHub Changelog",
+    "Grok Code Fast 1 deprecated - GitHub Changelog",
+    "Timestamp fields in GitHub Projects - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "用户级记忆：代理在仓库之外保存针对个人的长期偏好。",
+    "模型策略：企业管理员控制哪些模型可在 Copilot 体验中使用的配置层。"
+  ],
+  "new_terms_en": [
+    "User-level memory: an agent capability to retain durable preferences about an individual beyond a single repository.",
+    "Model policy: the enterprise control layer that determines which models are available in Copilot experiences."
+  ],
+  "themes_zh": [
+    "编码代理从会话式助手转向长期记忆型助手。",
+    "AI 编码平台的企业治理重点从启用功能转向控制模型、记忆与流程数据。"
+  ],
+  "themes_en": [
+    "Coding agents are shifting from session-based assistants toward assistants with durable memory.",
+    "Enterprise AI coding governance is moving from simple enablement toward control of models, memory, and workflow data."
+  ],
+  "implications_zh": [
+    "团队应尽快区分个人偏好、仓库规范和组织级编码标准，避免代理学习到冲突行为。",
+    "平台团队需要为模型退役、策略切换和行为回归测试建立轻量治理流程。"
+  ],
+  "implications_en": [
+    "Teams should explicitly separate personal preferences, repository conventions, and org-level coding standards to avoid agents learning conflicting behaviors.",
+    "Platform teams need lightweight governance for model retirement, policy changes, and behavioral regression testing."
+  ],
+  "reading_order": [
+    "Copilot Memory supports user preferences for Pro, Pro+ users - GitHub Changelog",
+    "Grok Code Fast 1 deprecated - GitHub Changelog",
+    "Timestamp fields in GitHub Projects - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "整页 GitHub Changelog 或月份归档页本身没有新增分析价值，属于索引页而不是独立信号。",
+    "单纯的产品小改动若无架构、评测、代理能力或组织治理含义，可暂时忽略。"
+  ],
+  "what_to_ignore_en": [
+    "The generic GitHub Changelog landing pages and archive pages add no analytical value; they are indexes, not independent signals.",
+    "Minor product tweaks without implications for architecture, evaluation, agent capability, or organizational governance can be safely ignored."
+  ]
+}
