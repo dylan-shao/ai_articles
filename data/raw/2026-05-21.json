@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Copilot usage metrics reports now use GitHub-owned download URLs - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-20-copilot-usage-metrics-reports-now-use-github-owned-download-urls/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "As previously announced, the download URLs for Copilot usage metrics reports have migrated from Azure Front Door domains to a stable, GitHub-owned custom domain. This change improves URL stability and…",
+    "body_excerpt": "Copilot usage metrics reports now use GitHub-owned download URLs - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 20, 2026 • 2 minute read Copilot usage metrics reports now use GitHub-owned download URLs Table of Contents What's changed What you need to do Why we made this change Menu. Currently selected: What's changed What's changed What you need to do Why we made this change As previously announced , the download URLs for Copilot usage metrics reports have migrated from Azure Front Door domains to a stable, GitHub-owned custom domain. This change improves URL stability and makes firewall and proxy allowlist management easier for enterprise customers. What’s changed Starting today, Copilot usage metrics report download links, which are returned by the Copilot Usage Metrics API , use the new domain copilot-reports.github.com instead of the previous copilot-reports-*.b01.azurefd.net pattern. github.com (GHEC) customers: Previous New Report download URL pattern https://copilot-reports-*.b01.azurefd.net/... https://copilot-reports.github.com/... ghe.com customers: Previous New Report download URL pattern https://copilot-reports-*.b01.azurefd.net/... https://copilot-reports.*.ghe.com/... What you need to do If your organization uses a firewall or proxy allowlist, add the following domain: github.com: https://copilot-reports.github.com ghe.com: https://copilot-reports.SUBDOMAIN.ghe.com , where SUBDOMAIN is your enterprise’s dedicated subdomain on GHE.com The legacy copilot-reports-*.b01.azurefd.net pattern will continue to work during a transition period, but will eventually be deprecated. We recommend updating your allowlists as soon as possible. Note: In rare cases where Azure Front Door is unavailable, report downloads may fall back to direct Azure Blob Storage URLs ( *.blob.core.",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.20 Release Semantic issue search in Copilot Chat copilot projects & issues ... +1 May.15 Improvement Timestamp fields in GitHub Projects projects & issues April Apr 2026 April Apr 2026 Apr.23 Release View and manage agent sessions from issues and projects copilot projects & issues ... +1 Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.02 Improvement Improved search for GitHub Issues is now generally available projects & issues March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status Contact Company About Blog Careers Press Shop © 2026 GitHub, Inc. Terms Privacy Manage Cookies",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Updates to available models in Copilot on web - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-20-updates-to-available-models-in-copilot-on-web/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We have updated our available model selection for Copilot Chat on the web to deliver more consistent, high-quality responses. What’s changed While model choice is valuable, we are limiting the…",
+    "body_excerpt": "Updates to available models in Copilot on web - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Retired May 20, 2026 • 1 minute read Updates to available models in Copilot on web Table of Contents What's changed Available models list Key benefits Menu. Currently selected: What's changed What's changed Available models list Key benefits We have updated our available model selection for Copilot Chat on the web to deliver more consistent, high-quality responses. What’s changed While model choice is valuable, we are limiting the list of available models on github.com so that we can consistently ensure reliable responses. All Gemini models and several other models (e.g., GPT-5.2 Codex and GPT-5.4 nano) have been removed from Copilot Chat on the web. OpenAI and Claude models across price points are still available across Copilot plans. Available models list For the most recent list of models available on your plan, check the model picker in github.com/copilot or our documented list of models . Moving forward, web chat will support a more limited set of new model rollouts as we work to ensure optimal performance. Key benefits Simplified experience focused on our recommended models More consistent response quality across all interactions Table of Contents What's changed Available models list Key benefits Menu. Currently selected: What's changed What's changed Available models list Key benefits copilot Share Copied Shared Back to changelog Related Posts May.20 Improvement Copilot usage metrics reports now use GitHub-owned download URLs account management copilot ... +1 May.20 Improvement Auto model selection now routes based on your task in VS Code copilot May.20 Release Semantic issue search in Copilot Chat copilot projects & issues ... +1 May.19 Improvement Easily apply Copilot code review feedback with",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Semantic issue search in Copilot Chat - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-20-semantic-issue-search-in-copilot-chat/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can use natural language in GitHub Copilot Chat on web to quickly find, group, and analyze issues, with context-aware results powered by a new semantic issues index. What’s new…",
+    "body_excerpt": "Semantic issue search in Copilot Chat - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 20, 2026 • 1 minute read Semantic issue search in Copilot Chat Table of Contents What's new Try it out and share feedback Menu. Currently selected: What's new What's new Try it out and share feedback You can use natural language in GitHub Copilot Chat on web to quickly find, group, and analyze issues, with context-aware results powered by a new semantic issues index. What’s new Instead of relying only on exact matches and manual filters, Copilot Chat can now understand the intent of your query and surface issues that are semantically related even when they are worded differently. You can use this capability to help you find an issue in a repository using natural language when you don’t remember the exact title or keywords, or to quickly filter issues related to a specific platform or environment. Try it out and share feedback Head to Copilot Chat to see how semantic issues search can help with planning, triaging, and discovery. This feature is generally available to users on all Copilot plans. Join the discussion . Table of Contents What's new Try it out and share feedback Menu. Currently selected: What's new What's new Try it out and share feedback copilot projects & issues Share Copied Shared Back to changelog Related Posts May.20 Retired Updates to available models in Copilot on web copilot May.20 Improvement Auto model selection now routes based on your task in VS Code copilot May.19 Improvement Easily apply Copilot code review feedback with Copilot cloud agent copilot May.19 Release Gemini 3.5 Flash is generally available for GitHub Copilot copilot May.18 Improvement One-click fixes for failing Actions with Copilot cloud agent copilot May.18 Release Copilot cloud agent: Fast, cost-efficient mo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Auto model selection now routes based on your task in VS Code - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-20-auto-model-selection-now-routes-based-on-your-task-in-vs-code/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot auto model selection now routes to the best model for your task, using utilization and model health metrics for a high quality, reliable, and token-efficient experience. How it…",
+    "body_excerpt": "Auto model selection now routes based on your task in VS Code - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 20, 2026 • 1 minute read Auto model selection now routes based on your task in VS Code Table of Contents How it works Premium request use Getting more out of Copilot Menu. Currently selected: How it works How it works Premium request use Getting more out of Copilot GitHub Copilot auto model selection now routes to the best model for your task, using utilization and model health metrics for a high quality, reliable, and token-efficient experience. How it works Auto weighs real-time model availability and reliability signals, then evaluates your task across several dimensions like reasoning, code generation complexity, bug diagnosis difficulty, and tool orchestration needs to select the optimal model. Transparency : You can see which model was used by hovering over the model response. Stay in control : Switch between Auto and any specific model at any time. Respects your policies : Auto honors all model policies set by admins. Diverse model access : Auto leverages models from multiple model families , depending on subscription type and policies. Models will change over time. Premium request use Auto is billed based on the model it selects, which is currently limited to models with 0x to 1x multipliers . Paid subscribers get a 10% discount on the model multiplier when using auto (e.g., when auto uses a model that has a 1x multiplier, you will draw down 0.9 premium requests instead of 1). Getting more out of Copilot Auto routes along natural cache boundaries to avoid unnecessary cache related costs. Our evaluations show gains in token efficiencies with no quality regression, as not all tasks require a high reasoning or token-intensive model. No setup is required. Head to VS ",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

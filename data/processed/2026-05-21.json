@@ -1,0 +1,154 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最有信号的更新集中在 GitHub Copilot 的“编排层”而不是底层模型本身：系统开始按任务类型、实时可用性与模型健康状况自动路由模型，说明 AI 编码产品竞争正从“接入更多模型”转向“任务级调度、成本控制与稳定性工程”。",
+    "GitHub 同时把语义检索能力嵌入 issue 工作流，表明代码助手正在向仓库理解、项目分诊和工程管理场景延展，不再局限于补全和问答。",
+    "对工程平台负责人而言，这些变化的核心意义在于：后续需要重点评估模型路由策略、治理策略可继承性、使用度量可观测性，以及 AI 助手是否真正进入团队的 issue triage 与开发运营闭环。"
+  ],
+  "executive_summary_en": [
+    "The strongest signal today is in GitHub Copilot’s orchestration layer rather than base models: Copilot now auto-routes by task type, real-time availability, and model health, showing that AI coding products are shifting from 'more model choice' to task-aware routing, cost control, and reliability engineering.",
+    "GitHub also embedded semantic retrieval into issue workflows, indicating that coding assistants are expanding from completion/chat into repo understanding, triage, and project operations.",
+    "For backend/platform engineering leaders, the practical takeaway is to evaluate routing policy, policy inheritance, usage observability, and whether AI assistants are becoming part of issue triage and engineering operations—not just IDE assistance."
+  ],
+  "items": [
+    {
+      "title": "Auto model selection now routes based on your task in VS Code - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-20",
+      "url": "https://github.blog/changelog/2026-05-20-auto-model-selection-now-routes-based-on-your-task-in-vs-code/",
+      "summary_zh": "GitHub Copilot 在 VS Code 中的 Auto 模式现在会依据任务类型自动选择模型，输入信号包括实时模型可用性、可靠性、推理强度、代码生成复杂度、缺陷诊断难度以及工具编排需求。GitHub 还披露了计费与优化细节：Auto 当前只会选用 0x 到 1x multiplier 的模型，付费用户使用 Auto 有 10% 的 premium request 折扣，并沿“自然缓存边界”路由以减少不必要的缓存成本。",
+      "summary_en": "GitHub Copilot’s Auto mode in VS Code now selects models based on task characteristics, using signals such as real-time availability, reliability, reasoning intensity, code generation complexity, bug diagnosis difficulty, and tool orchestration needs. GitHub also exposed billing and optimization details: Auto currently limits itself to 0x–1x multiplier models, gives paid users a 10% premium-request discount, and routes along 'natural cache boundaries' to reduce unnecessary cache-related cost.",
+      "why_it_matters_zh": "这是少见直接公开“任务级模型路由”机制与计费约束的产品更新，对构建企业级 AI 编码平台很有参考价值。它表明高质量体验不再只是模型能力问题，而是调度层、缓存策略、预算控制和管理员策略一致性的综合工程问题。",
+      "why_it_matters_en": "This is one of the clearest product disclosures on task-level model routing and billing constraints in an AI coding system. It matters because user experience is increasingly determined not just by model quality, but by orchestration, caching strategy, budget control, and policy consistency.",
+      "key_takeaways_zh": [
+        "AI 编码产品开始把“任务识别 + 模型路由 + 成本优化”作为核心能力公开化，调度层正在成为差异化壁垒。",
+        "管理员模型策略会被 Auto 继承，说明企业治理与动态路由并不冲突，后续平台团队可把策略控制放在路由层之上。"
+      ],
+      "key_takeaways_en": [
+        "AI coding products are making 'task classification + model routing + cost optimization' a first-class capability; the orchestration layer is becoming a competitive moat.",
+        "Admin model policies are honored by Auto, showing that enterprise governance can coexist with dynamic routing rather than being bypassed by it."
+      ],
+      "tags": [
+        "model-routing",
+        "copilot",
+        "vs-code",
+        "cost-optimization",
+        "enterprise-governance"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Semantic issue search in Copilot Chat - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-20",
+      "url": "https://github.blog/changelog/2026-05-20-semantic-issue-search-in-copilot-chat/",
+      "summary_zh": "GitHub 在 Copilot Chat Web 中上线了 issue 的语义搜索能力，底层依赖新的 semantic issues index。用户可以用自然语言查找、分组与分析 issue，不再依赖精确标题或关键词匹配，适用于忘记 issue 标题、按平台/环境筛选问题、规划和分诊等场景。",
+      "summary_en": "GitHub launched semantic issue search in Copilot Chat on the web, backed by a new semantic issues index. Users can find, group, and analyze issues using natural language rather than exact-title or keyword matching, helping with issue recall, platform/environment filtering, planning, and triage.",
+      "why_it_matters_zh": "这说明 Copilot 正在从代码生成助手向“工程工作项理解层”扩展。对于平台和研发效率团队，这类能力一旦和 repo、PR、incident、project metadata 结合，会成为工程知识检索与分诊自动化的重要基础设施。",
+      "why_it_matters_en": "This shows Copilot expanding from code generation into an 'engineering work-item understanding layer.' For platform and productivity teams, this kind of semantic retrieval can become core infrastructure for engineering knowledge discovery and triage automation when combined with repos, PRs, incidents, and project metadata.",
+      "key_takeaways_zh": [
+        "语义索引正在进入开发协作对象层，AI 助手的价值开始覆盖 issue triage 与项目管理，而不仅是写代码。",
+        "若 GitHub 后续把 issue 语义索引与 PR、代码搜索、agent session 连接，仓库理解和跨工件推理能力会显著增强。"
+      ],
+      "key_takeaways_en": [
+        "Semantic indexing is moving into developer collaboration artifacts, extending AI assistant value into issue triage and project management, not just coding.",
+        "If GitHub later connects semantic issue indexing with PRs, code search, and agent sessions, repo understanding and cross-artifact reasoning will materially improve."
+      ],
+      "tags": [
+        "semantic-search",
+        "issue-triage",
+        "repo-understanding",
+        "copilot-chat",
+        "developer-workflow"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 7
+    },
+    {
+      "title": "Copilot usage metrics reports now use GitHub-owned download URLs - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-20",
+      "url": "https://github.blog/changelog/2026-05-20-copilot-usage-metrics-reports-now-use-github-owned-download-urls/",
+      "summary_zh": "GitHub 将 Copilot usage metrics report 的下载链接从 Azure Front Door 域名迁移到了 GitHub 自有域名。对 github.com 客户变为 copilot-reports.github.com，对 ghe.com 客户变为各自子域下的新地址。GitHub 建议企业尽快更新防火墙和代理 allowlist，但保留旧域名一段过渡期；极少数情况下若 AFD 不可用，仍可能回退到 Azure Blob Storage URL。",
+      "summary_en": "GitHub migrated Copilot usage metrics report download links from Azure Front Door domains to GitHub-owned domains. For github.com customers the new host is copilot-reports.github.com; for ghe.com customers it is an enterprise subdomain-based URL. Enterprises are advised to update firewall/proxy allowlists soon, while legacy URLs remain during a transition period; in rare AFD outages, downloads may still fall back to Azure Blob Storage URLs.",
+      "why_it_matters_zh": "虽然这是基础设施变更，但对正在做 Copilot 组织级采用度量、合规网络策略和使用数据管道的企业非常实际。AI 编码平台要进入大企业，稳定的可观测接口与网络治理细节往往比新模型更决定落地速度。",
+      "why_it_matters_en": "While operational rather than flashy, this is highly relevant for enterprises building Copilot adoption analytics, network controls, and reporting pipelines. In large-scale AI coding rollouts, stable observability endpoints and network-governance details often matter more than new models.",
+      "key_takeaways_zh": [
+        "AI 编码采用正在进入平台化运营阶段，usage metrics API 与稳定下载域名是组织级治理的关键配套。",
+        "企业若依赖代理、DLP 或防火墙策略，需要把 AI 工具的域名变更纳入变更管理和可用性演练。"
+      ],
+      "key_takeaways_en": [
+        "AI coding adoption is moving into an operational platform phase, where usage metrics APIs and stable report endpoints are key governance primitives.",
+        "Enterprises relying on proxies, DLP, or firewall rules need to treat AI-tool domain changes as part of normal change management and resilience testing."
+      ],
+      "tags": [
+        "observability",
+        "enterprise-adoption",
+        "copilot-metrics",
+        "network-governance",
+        "platform-operations"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Auto model selection now routes based on your task in VS Code - GitHub Changelog",
+    "Semantic issue search in Copilot Chat - GitHub Changelog",
+    "Copilot usage metrics reports now use GitHub-owned download URLs - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "任务级模型路由",
+    "模型健康信号",
+    "自然缓存边界",
+    "语义 issue 索引",
+    "Premium request multiplier"
+  ],
+  "new_terms_en": [
+    "task-level model routing",
+    "model health signals",
+    "natural cache boundaries",
+    "semantic issues index",
+    "premium request multiplier"
+  ],
+  "themes_zh": [
+    "AI 编码平台的竞争焦点转向路由编排、成本控制与可靠性，而非单纯模型数量。",
+    "语义检索能力开始深入 issue 与项目协作层，仓库理解范围正在扩展到工程管理对象。",
+    "组织级 AI 采用进入运营化阶段，度量、网络治理和策略继承能力变得更关键。"
+  ],
+  "themes_en": [
+    "Competition in AI coding platforms is shifting toward orchestration, cost control, and reliability rather than just model count.",
+    "Semantic retrieval is moving deeper into issue and project collaboration layers, expanding repo understanding into engineering management artifacts.",
+    "Organizational AI adoption is entering an operational phase where metrics, network governance, and policy inheritance matter more."
+  ],
+  "implications_zh": [
+    "内部自建或采购 AI 编码平台时，应把“路由器”作为独立评估对象：是否能按任务分流、是否继承治理策略、是否可解释且可控。",
+    "团队应开始衡量 AI 工具是否能减少 issue triage 和知识检索时间，而不只是统计代码补全接受率。",
+    "若企业已接入 Copilot 使用报表，需检查下载域名 allowlist、ETL 作业和异常回退逻辑，避免运营报表中断。"
+  ],
+  "implications_en": [
+    "When building or buying AI coding platforms, evaluate the router as a separate layer: can it route by task, inherit governance, and remain explainable and controllable?",
+    "Teams should start measuring whether AI tools reduce issue triage and knowledge-retrieval time, not just code-completion acceptance rates.",
+    "If your organization already ingests Copilot usage reports, verify allowlists, ETL jobs, and fallback handling to avoid analytics interruptions."
+  ],
+  "reading_order": [
+    "Auto model selection now routes based on your task in VS Code - GitHub Changelog",
+    "Semantic issue search in Copilot Chat - GitHub Changelog",
+    "Copilot usage metrics reports now use GitHub-owned download URLs - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "“Updates to available models in Copilot on web” 信号较弱，更多是产品收敛与模型下线公告，缺少实现细节或平台级启发。",
+    "泛化的 GitHub Changelog 首页聚合页无需阅读，没有新增技术信息。"
+  ],
+  "what_to_ignore_en": [
+    "\"Updates to available models in Copilot on web\" is lower-signal; it is mainly a product-pruning notice with little implementation or platform insight.",
+    "The generic GitHub Changelog landing page can be ignored since it adds no new technical information."
+  ]
+}
