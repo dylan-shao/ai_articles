@@ -1,0 +1,117 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号偏弱，真正值得工程负责人关注的只有一项：GitHub 将 Copilot for Eclipse 插件开源，并公开了聊天、补全、NES 与 agentic workflow 的实现细节。",
+    "这类“把 IDE 内 AI 助手实现公开出来”的动作，比普通产品发布更有价值，因为它让团队可以直接研究上下文处理、提示词设计、UI 集成与代理式交互的真实工程做法。",
+    "其余候选项更偏项目管理与工作项结构化，不属于今天最强的 AI coding 技术信号。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is relatively weak overall; the one clearly high-signal item is GitHub open-sourcing the Copilot for Eclipse plugin, exposing implementation details for chat, completions, NES, and agentic workflows.",
+    "This matters more than a routine product announcement because it gives engineering teams a concrete reference for how AI coding assistance is implemented inside an IDE, including context handling, prompts, UI wiring, and agent-style interactions.",
+    "The remaining candidates are more about issue/project management structure than core AI coding infrastructure or evaluation insight."
+  ],
+  "items": [
+    {
+      "title": "GitHub Copilot for Eclipse is open source - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-21",
+      "url": "https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source/",
+      "summary_zh": "GitHub 宣布 Copilot for Eclipse 插件以 MIT 协议开源，公开仓库包含聊天、代码补全、Next Edit Suggestions（NES）以及 agentic workflow 的实现。公告特别强调开发者现在可以查看系统提示词、架构决策与上下文处理方式，从而理解 AI 编码能力如何嵌入 Eclipse IDE。",
+      "summary_en": "GitHub has open-sourced the Copilot for Eclipse plugin under the MIT license. The repository exposes implementation details for chat, code completion, Next Edit Suggestions (NES), and agentic workflows, explicitly including system prompts, architectural decisions, and context handling inside the Eclipse IDE.",
+      "why_it_matters_zh": "对后端/平台/开发工具负责人来说，这不是简单的“又一个插件开源”，而是少见的可直接审阅的生产级 AI coding IDE 集成样本。团队可以从中学习上下文采集边界、交互式聊天与补全共存的架构、代理式工作流的宿主侧设计，以及在传统 IDE 生态中落地 AI 功能的工程取舍。",
+      "why_it_matters_en": "For backend, platform, and devtools leads, this is more than another open-source plugin. It is a rare, inspectable, production-grade example of AI coding assistance embedded in a real IDE. Teams can study context collection boundaries, coexistence of chat and inline completion, host-side design for agentic workflows, and implementation tradeoffs for bringing AI features into a mature IDE ecosystem.",
+      "key_takeaways_zh": [
+        "开源内容不仅有 UI 层，还包括系统提示词、上下文处理与 agentic workflow 相关实现，适合作为 IDE AI 助手参考架构。",
+        "Eclipse 生态的开源化意味着 Copilot 正把实现透明度作为 adoption 策略的一部分，这可能推动更多企业要求可审计的 IDE AI 集成。"
+      ],
+      "key_takeaways_en": [
+        "The release exposes more than UI code: it includes system prompts, context handling, and agentic workflow implementation details, making it a useful reference architecture for IDE-based AI assistants.",
+        "Open-sourcing in the Eclipse ecosystem suggests transparency is becoming part of Copilot’s adoption strategy, which may increase enterprise demand for auditable IDE AI integrations."
+      ],
+      "tags": [
+        "AI coding agents",
+        "IDE integration",
+        "Eclipse",
+        "Copilot",
+        "Open source",
+        "Developer tooling"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Issue fields are now in public preview for all organizations - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-21",
+      "url": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations/",
+      "summary_zh": "GitHub 面向所有组织开放 Issue Fields 公测，支持组织级 typed metadata、REST/GraphQL API、webhook 与搜索过滤。公告中提到迁移工具包含 Copilot skill，但核心仍是把 issue 元数据从 label 体系升级为结构化 schema。",
+      "summary_en": "GitHub has expanded Issue Fields to public preview for all organizations, adding org-level typed metadata, REST/GraphQL API support, webhooks, and search/filtering. Although the post mentions a Copilot skill for migration, the main substance is the shift from label-heavy issue management to structured schema-based metadata.",
+      "why_it_matters_zh": "这是偏边缘但仍有一定价值的条目：如果你的团队正在把 AI 用于工单分类、项目自动化、或代理式开发流程，统一的结构化 issue schema 能成为更可靠的上下文源，比松散标签更适合自动化和智能体消费。",
+      "why_it_matters_en": "This is borderline but still relevant: if your teams use AI for triage, project automation, or agentic engineering workflows, a consistent structured issue schema is a better context substrate than ad hoc labels and may improve downstream automation reliability.",
+      "key_takeaways_zh": [
+        "组织级 typed issue metadata 能减少跨仓库标签漂移，为 AI 自动化提供更稳定的语义输入。",
+        "虽然不是 AI coding 核心发布，但它补强了工程组织把工作项数据结构化、可查询、可自动化的基础设施。"
+      ],
+      "key_takeaways_en": [
+        "Org-wide typed issue metadata reduces label drift across repositories and provides more stable semantic inputs for AI-driven automation.",
+        "It is not a core AI coding release, but it strengthens the structured, queryable workflow substrate that engineering organizations can build automation on top of."
+      ],
+      "tags": [
+        "GitHub Issues",
+        "Structured metadata",
+        "Developer workflow",
+        "Automation"
+      ],
+      "signal_score": 5,
+      "novelty_score": 5,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "GitHub Copilot for Eclipse is open source - GitHub Changelog",
+    "Issue fields are now in public preview for all organizations - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "NES（Next Edit Suggestions）",
+    "agentic workflows",
+    "Issue Fields"
+  ],
+  "new_terms_en": [
+    "Next Edit Suggestions (NES)",
+    "agentic workflows",
+    "Issue Fields"
+  ],
+  "themes_zh": [
+    "IDE 内 AI 编码助手实现透明化",
+    "开发工作流元数据结构化，便于自动化与智能体消费"
+  ],
+  "themes_en": [
+    "Greater implementation transparency for IDE-embedded AI coding assistants",
+    "More structured workflow metadata for automation and agent consumption"
+  ],
+  "implications_zh": [
+    "工程平台团队可以把 Copilot for Eclipse 仓库当作研究样本，评估自研 IDE 插件、上下文注入与代理式交互的设计模式。",
+    "随着实现细节与提示词公开，企业可能会更频繁地要求 AI coding 工具具备可审计性、可扩展性与宿主侧控制能力。",
+    "如果组织计划让 AI 参与缺陷分流、需求执行或项目自动化，先把 issue 元数据结构化会比继续堆标签更划算。"
+  ],
+  "implications_en": [
+    "Platform teams can use the Copilot for Eclipse repository as a reference when evaluating in-house IDE plugins, context injection, and agent-style interaction patterns.",
+    "As implementation details and prompts become inspectable, enterprises may increasingly expect AI coding tools to offer auditability, extensibility, and stronger host-side control.",
+    "If an organization wants AI involved in triage, execution, or project automation, investing first in structured issue metadata will likely pay off more than expanding label taxonomies."
+  ],
+  "reading_order": [
+    "GitHub Copilot for Eclipse is open source - GitHub Changelog",
+    "Issue fields are now in public preview for all organizations - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "忽略 GitHub Changelog 年度归档页与 RSS feed 这类索引项，它们不是独立新闻。",
+    "不要把 Issue Fields 误判为 AI coding 重大突破；它更像工作流数据建模能力升级。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the GitHub Changelog archive and RSS feed entries; they are index artifacts, not standalone news.",
+    "Do not overread Issue Fields as a major AI coding breakthrough; it is primarily a workflow data-modeling enhancement."
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Copilot for Eclipse is open source - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Following our previous updates, GitHub Copilot for Eclipse is open source, with the code available on GitHub under the MIT license. This marks an important milestone for GitHub Copilot in…",
+    "body_excerpt": "GitHub Copilot for Eclipse is open source - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 21, 2026 • 2 minute read GitHub Copilot for Eclipse is open source Table of Contents ✨ What's new Contributing and feedback Community contributions Menu. Currently selected: ✨ What's new ✨ What's new Contributing and feedback Community contributions Following our previous updates , GitHub Copilot for Eclipse is open source, with the code available on GitHub under the MIT license. This marks an important milestone for GitHub Copilot in the Eclipse ecosystem. By open sourcing the plugin, we’re inviting the community to explore, learn from, and contribute to how AI-powered developer experiences are built inside Eclipse. ✨ What’s new Why open source? Our primary motivation is community-driven innovation and increased transparency. Eclipse has thrived for decades thanks to its open ecosystem, and we believe AI tooling should be developed in that same spirit (i.e., openly and alongside the IDE itself). Putting the Copilot for Eclipse source in the open lets developers see exactly how the plugin works, reason about what it does, and help shape where it goes next. What’s open today? The GitHub Copilot for Eclipse repository is publicly available here: https://github.com/microsoft/copilot-for-eclipse With the code now open, you can see exactly how Copilot works. Explore the implementation behind chat, code completions, and agentic workflows. Review system prompts, architectural decisions, and how context is handled. You can dig into the codebase and learn how Copilot for Eclipse is built end-to-end, including: Code completion : How inline code completions are produced and rendered. Next Edit Suggestions (NES) : How next-edit suggestions are surfaced as you work. Chat : How the chat view, conversation fl",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Issue fields are now in public preview for all organizations - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Issue fields are now available in public preview to all GitHub organizations on github.com and GitHub Enterprise Cloud with data residency. When you define typed metadata like Priority, Effort, or…",
+    "body_excerpt": "Issue fields are now in public preview for all organizations - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 21, 2026 • 2 minute read Issue fields are now in public preview for all organizations Issue fields are now available in public preview to all GitHub organizations on github.com and GitHub Enterprise Cloud with data residency. When you define typed metadata like Priority , Effort , or any custom field at the org level, and it automatically shows up on every issue, in every repository. Fields support four types (i.e., single select, text, number, and date), can be pinned to specific issue types, and work across the platform. You can search and filter issues by field value, add fields as columns in project views, track changes in the timeline, and automate via REST and GraphQL APIs or webhook events. Since the initial preview in March , over 1,000 organizations have adopted issue fields, including some of the largest enterprises and open source projects on GitHub. Teams are building fields into their creation workflows and using bots, GitHub Actions, and integrations to keep field values consistent without manual effort. The most common themes from early adopters include: Replacing sprawling label systems with structured, queryable metadata unifying priority and effort tracking across hundreds of repositories without manual syncing. Giving automation a consistent schema to build on. Teams describe it as the missing link between issues and projects. Based on that usage, we shipped several improvements and will continue iterating based on feedback: Public repository visibility controls : Orgs can decide which fields are visible to nonmembers. REST API parity : Set field values when creating issues via the REST API, matching existing GraphQL support. Migration tool : A Copilot skil",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Projects & Issues Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.21 Release Issue fields are now in public preview for all organizations projects & issues May.20 Release Semantic issue search in Copilot Chat copilot projects & issues ... +1 May.15 Improvement Timestamp fields in GitHub Projects projects & issues April Apr 2026 April Apr 2026 Apr.23 Release View and manage agent sessions from issues and projects copilot projects & issues ... +1 Apr.09 Improvement Release information in issue sidebar and default values for project fields projects & issues Apr.02 Improvement Improved search for GitHub Issues is now generally available projects & issues March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 22 May 2026 00:23:25 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 GitHub Copilot for Eclipse is open source https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source Allison Thu, 21 May 2026 23:50:38 +0000 https://github.blog/changelog/2026-05-19-github-copilot-for-eclipse-is-open-source <p>Following our previous updates, GitHub Copilot for Eclipse is open source, with the code available on GitHub under the MIT license. This marks an important milestone for GitHub Copilot in&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source\">GitHub Copilot for Eclipse is open source</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Following <a href=\"https://devblogs.microsoft.com/java/ghc-eclipse-is-going-open-source/\">our previous updates</a>, <a href=\"https://marketplace.eclipse.org/content/github-copilot\">GitHub Copilot for Eclipse</a> is open source, with <a href=\"https://github.com/microsoft/copilot-for-eclipse\">the code available on GitHub</a> under the MIT license.</p> <p>This marks an important milestone for GitHub Copilot in the Eclipse ecosystem. By open sourcing the plugin, we&rsquo;re inviting the community to explore, learn from, and contribute to how AI-powered developer experiences are built inside Eclipse.</p> <h2 id=\"%e2%9c%a8-whats-new\" id=\"%e2%9c%a8-whats-new\" ><a class=\"heading-link\" href=\"#%e2%9c%a8-whats-new\">&#10024; What&rsquo;s new<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidd",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
