@@ -1,0 +1,82 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，只有一条与工程平台团队直接相关的高信号更新：npm 引入 staged publishing 与更细粒度的 install 来源控制，核心价值在于强化 CI/CD 发布链路中的人工审批与安装源限制。",
+    "这不是 AI coding agent 本身的进展，但对采用 AI 生成代码、自动化依赖变更与代理式发布流程的团队很重要，因为它提供了更实用的供应链防护控制点。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with only one high-signal item relevant to platform and engineering leaders: npm staged publishing plus finer-grained install source controls.",
+    "This is not directly about AI coding agents, but it matters for teams adopting AI-assisted coding and automated release workflows because it adds practical control points to the software supply chain."
+  ],
+  "items": [
+    {
+      "title": "Staged publishing and new install-time controls for npm",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-22",
+      "url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm/",
+      "summary_zh": "GitHub 宣布 npm staged publishing 正式可用：包先上传到 stage 队列，需维护者完成显式批准和 2FA 挑战后才会对外可安装。同时，npm CLI 11.15.0 新增 --allow-file、--allow-remote、--allow-directory 安装来源标志，与既有 --allow-git 一起让团队更精细地限制安装时可接受的来源。",
+      "summary_en": "GitHub announced general availability of npm staged publishing: package tarballs are first uploaded into a staging queue and become installable only after explicit maintainer approval with a 2FA challenge. npm CLI 11.15.0 also adds --allow-file, --allow-remote, and --allow-directory flags, complementing --allow-git for tighter control over accepted install sources.",
+      "why_it_matters_zh": "对平台团队而言，这是把“发布权限”从纯 CI 凭证控制提升为“机器提交 + 人工到场批准”的双层机制，尤其适合防御被劫持的流水线、OIDC trusted publishing 滥用、以及 AI/自动化代理发起的大规模依赖与发版操作。安装来源白名单也为构建环境收紧依赖解析路径提供了更现实的执行手段。",
+      "why_it_matters_en": "For platform teams, this upgrades publishing from pure CI credential control to a two-layer model: machine-generated publish intent plus human presence at release time. That is especially useful against compromised pipelines, abuse of trusted publishing with OIDC, and large-scale dependency or release actions triggered by AI or automation agents. The install-source allowlists also provide a practical mechanism to tighten dependency resolution in build environments.",
+      "key_takeaways_zh": [
+        "staged publishing 要求发布后再由维护者审批，且审批需要 2FA，可显著降低非交互式 CI/CD 直接把恶意版本推到 registry 的风险。",
+        "新的 --allow-* 标志让组织可以更细粒度地限制 npm install 可接受的来源，适合纳入企业构建基线与受控开发容器。"
+      ],
+      "key_takeaways_en": [
+        "Staged publishing inserts a post-upload approval step backed by 2FA, reducing the chance that non-interactive CI/CD can immediately push a malicious version live.",
+        "The new --allow-* flags make npm install source policy more granular, which is useful for enterprise build baselines and controlled dev containers."
+      ],
+      "tags": [
+        "npm",
+        "software-supply-chain",
+        "CI/CD",
+        "developer-tooling",
+        "security-controls"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "new_terms_zh": [
+    "Staged publishing：先上传到暂存队列、经维护者审批后才正式发布的 npm 发布模式。",
+    "Install source allow flags：通过 --allow-file/--allow-remote/--allow-directory/--allow-git 限制 npm 安装可接受来源的策略控制。"
+  ],
+  "new_terms_en": [
+    "Staged publishing: an npm release mode where artifacts are uploaded to a staging queue and only become publicly installable after maintainer approval.",
+    "Install source allow flags: npm policy controls such as --allow-file, --allow-remote, --allow-directory, and --allow-git that restrict acceptable install sources."
+  ],
+  "themes_zh": [
+    "面向自动化与代理式开发流程的供应链防护前移",
+    "将人工批准重新引入高风险软件发布路径",
+    "开发工具层面的默认最小权限化"
+  ],
+  "themes_en": [
+    "Shifting supply-chain defenses earlier for automated and agent-driven workflows",
+    "Reintroducing human approval into high-risk software release paths",
+    "Moving developer tooling toward least-privilege defaults"
+  ],
+  "implications_zh": [
+    "若团队已使用 AI 代理、自动依赖升级机器人或全自动发版，应评估是否把 npm publish 切换为 npm stage publish，并把审批纳入变更管理流程。",
+    "平台团队可以开始为 CI、构建镜像和开发容器定义 npm install 来源白名单，减少来自 file、remote 或目录引用的意外风险。"
+  ],
+  "implications_en": [
+    "Teams using AI agents, dependency bots, or fully automated release pipelines should evaluate replacing npm publish with npm stage publish and wiring approval into change management.",
+    "Platform teams can begin defining npm install source allowlists for CI, build images, and dev containers to reduce risk from file, remote, or directory-based package inputs."
+  ],
+  "reading_order": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 首页与 RSS feed 归档只是导航/聚合页，没有新增技术细节。",
+    "不要把这条更新误读为 AI coding 能力发布；它的价值主要在开发平台安全控制，而非模型或代理能力本身。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog landing page and RSS archive are just aggregation/navigation pages with no additional technical substance.",
+    "Do not misclassify this as an AI coding capability launch; the value is primarily in platform security controls, not model or agent capability."
+  ]
+}

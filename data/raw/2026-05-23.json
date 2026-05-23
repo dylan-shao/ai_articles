@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Staged publishing and new install-time controls for npm - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Today we’re shipping two updates focused on supply-chain security for npm: Staged publishing is generally available. New --allow-* install source flags (--allow-file, --allow-remote, --allow-directory) complement the existing --allow-git flag. Both…",
+    "body_excerpt": "Staged publishing and new install-time controls for npm - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 22, 2026 • 2 minute read Staged publishing and new install-time controls for npm Table of Contents Staged publishing is generally available New install source flags Join the discussion Menu. Currently selected: Staged publishing is generally available Staged publishing is generally available New install source flags Join the discussion Today we’re shipping two updates focused on supply-chain security for npm: Staged publishing is generally available. New --allow-* install source flags ( --allow-file , --allow-remote , --allow-directory ) complement the existing --allow-git flag. Both are available in npm CLI 11.15.0 or newer. Staged publishing is generally available Staged publishing is now generally available on npm. Instead of a direct publish that immediately makes a package version available to consumers, the prebuilt tarball is uploaded to a stage queue where a maintainer must explicitly approve it before it becomes installable. The queue is visible both on npmjs.com and in the npm CLI. Staged publishing reinforces proof of presence on every publish, including those that originate from non-interactive CI/CD workflows and those using trusted publishing with OIDC. A human maintainer with a 2FA challenge is required to approve a staged package before it is released to the registry. Staged publishing is live today, and so are the docs. Overview and getting started CLI reference and permissions Trusted publishers (updated) Requirements npm CLI 11.15.0 or newer is required to use npm stage . Update CI/CD workflows to use npm stage publish instead of npm publish where you want staged behavior. Recommended setup We recommend pairing staged publishing with trusted publishing (OIDC) . ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.22 Release Staged publishing and new install-time controls for npm supply chain security May.19 Retired Upcoming deprecation of Python 3.9 for Dependabot supply chain security May.19 Improvement Expanded OIDC support for Dependabot and code scanning application security supply chain security ... +1 May.19 Improvement Start a GitHub Advanced Security trial from a risk assessment application security supply chain security ... +1 May.12 Retired Synchronous SBOM API deprecated supply chain security May.11 Improvement Cross-org Dependabot access for internal repositories supply chain security May.06 Release Search and filter bar for repository security advisories supply chain security May.05 Release Dependency scanning with GitHub MCP Server is in public preview supply chain security May.05 Release Code-to-cloud risk visibility with Microsoft Defender for Cloud is now generally available application security supply chain security ... +1 April Apr 2026 April Apr 2026 Apr.23 Improvement Dependabot-based dependency graphs for Python supply chain security Apr.21 Retired Deprecation of security-related organization API fields application security supply chain security ... +1 Apr.14 Improvement OIDC support for Dependabot and code scanning application security supply chain security ... +1 Apr.14 Improvement Dependabot ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 22 May 2026 18:33:46 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Staged publishing and new install-time controls for npm https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm Allison Fri, 22 May 2026 18:27:12 +0000 https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm <p>Today we&#8217;re shipping two updates focused on supply-chain security for npm: Staged publishing is generally available. New --allow-* install source flags (--allow-file, --allow-remote, --allow-directory) complement the existing --allow-git flag. Both&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm\">Staged publishing and new install-time controls for npm</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Today we&rsquo;re shipping two updates focused on supply-chain security for npm:</p> <ol> <li>Staged publishing is generally available.</li> <li>New <code>--allow-*</code> install source flags (<code>--allow-file</code>, <code>--allow-remote</code>, <code>--allow-directory</code>) complement the existing <code>--allow-git</code> flag.</li> </ol> <p>Both are available in npm CLI <strong>11.15.0</strong> or newer.</p> <hr> <h2 id=\"staged-publishing-is-generally-available\" id=\"staged-publishing-is-generally-available\" ><a class=\"heading-link\" href=\"#staged-publishing-is-generally-available\">Staged publishing is generally available<span class=\"heading-hash pl-2",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
