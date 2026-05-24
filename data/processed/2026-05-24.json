@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，只有一条具备一定工程信号的 npm 供应链安全更新，且与 AI coding/agent 主题并不直接相关。",
+    "该更新仍值得平台与开发者体验负责人关注，因为它提供了更细粒度的安装源控制与 staged publishing，能改善 CI/CD、内部包治理与供应链风险管理。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today; only one item carries meaningful engineering signal, and it is adjacent rather than central to AI coding/agent workflows.",
+    "It is still relevant for platform and developer-experience leads because it adds finer-grained install-source controls and staged publishing for npm, improving CI/CD, internal package governance, and supply-chain risk management."
+  ],
+  "items": [
+    {
+      "title": "Staged publishing and new install-time controls for npm",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-22",
+      "url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm",
+      "summary_zh": "GitHub 宣布 npm CLI 11.15.0 提供两项供应链安全能力：staged publishing 正式可用，以及新增更细粒度的安装来源白名单参数，包括 --allow-file、--allow-remote、--allow-directory，并与既有 --allow-git 配合使用。",
+      "summary_en": "GitHub announced two supply-chain security features in npm CLI 11.15.0: staged publishing is now generally available, and new fine-grained install-source allowlist flags have been added, including --allow-file, --allow-remote, and --allow-directory, complementing the existing --allow-git flag.",
+      "why_it_matters_zh": "对负责开发平台、构建系统和内部包生态的团队来说，这类控制能把“依赖可以从哪里安装”变成可策略化的约束，降低 CI、agent 执行环境和自动化代码修改流程中被意外拉取本地/远程内容的风险。staged publishing 也适合高影响包的渐进发布与回滚治理。",
+      "why_it_matters_en": "For teams running developer platforms, build systems, and internal package ecosystems, these controls make dependency source policy enforceable. That reduces the risk of CI, agent execution environments, and automated code-change pipelines pulling unexpected local or remote content. Staged publishing also supports safer rollout and rollback for high-impact packages.",
+      "key_takeaways_zh": [
+        "npm 现在支持更细粒度的安装来源控制，可在自动化环境中限制 file、remote、directory、git 等来源。",
+        "staged publishing 有助于在关键包发布中实施渐进式发布、观测与回滚，降低供应链和运维风险。"
+      ],
+      "key_takeaways_en": [
+        "npm now supports finer-grained install-source controls, enabling automation environments to restrict file, remote, directory, and git-based sources.",
+        "Staged publishing helps implement progressive rollout, observation, and rollback for critical package releases, reducing supply-chain and operational risk."
+      ],
+      "tags": [
+        "npm",
+        "supply-chain-security",
+        "developer-tooling",
+        "package-management",
+        "ci-cd"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "new_terms_zh": [
+    "staged publishing：先分阶段向部分用户或范围发布包，再逐步扩大发布面的机制。",
+    "install-source allowlist flags：通过命令行参数限制依赖安装来源类型的机制。"
+  ],
+  "new_terms_en": [
+    "staged publishing: a package release mechanism that rolls out to a limited scope first, then expands progressively.",
+    "install-source allowlist flags: command-line controls that restrict which source types dependencies may be installed from."
+  ],
+  "themes_zh": [
+    "开发工具链的默认安全边界正在变得更细粒度。",
+    "包管理器开始提供更适合企业治理与自动化执行环境的策略控制。"
+  ],
+  "themes_en": [
+    "Default security boundaries in the developer toolchain are becoming more fine-grained.",
+    "Package managers are adding policy controls better suited to enterprise governance and automated execution environments."
+  ],
+  "implications_zh": [
+    "如果你的 CI、代码代理或内部构建系统会执行 npm install，应评估是否默认禁用不必要的来源类型，并只对白名单场景放开。",
+    "对高价值内部包，可以把 staged publishing 纳入发布流水线，结合监控和回滚门禁。"
+  ],
+  "implications_en": [
+    "If your CI, coding agents, or internal build systems run npm install, evaluate whether unnecessary source types should be disabled by default and only enabled for allowlisted cases.",
+    "For high-value internal packages, staged publishing should be considered as part of the release pipeline, paired with monitoring and rollback gates."
+  ],
+  "reading_order": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新误读为 AI coding 能力发布；它更偏向包管理与供应链安全。",
+    "无需关注 GitHub Changelog 的归档页本身，重点只看具体 npm 更新条目。"
+  ],
+  "what_to_ignore_en": [
+    "Do not treat this as an AI coding feature launch; it is primarily a package-management and supply-chain security update.",
+    "Ignore the GitHub Changelog archive page itself and focus only on the specific npm update entry."
+  ]
+}
