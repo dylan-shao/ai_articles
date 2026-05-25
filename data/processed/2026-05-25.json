@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容很弱，只有一条相对有用的工程向更新可保留：npm 发布了分阶段发布与更细粒度的安装源控制，重点落在软件供应链安全而非 AI coding 本身。",
+    "对后端与平台团队而言，这条更新的价值在于降低恶意依赖、误发布和非预期安装来源的风险，可纳入 CI/CD、制品治理和开发者工作站默认策略。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today. Only one engineering-relevant item is worth keeping: npm introduced staged publishing and more granular install-source controls, focused on software supply-chain security rather than AI coding directly.",
+    "For backend and platform teams, the practical value is reduced risk from malicious dependencies, accidental publishes, and unexpected install sources; this can be folded into CI/CD, artifact governance, and developer workstation defaults."
+  ],
+  "items": [
+    {
+      "title": "Staged publishing and new install-time controls for npm",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-22",
+      "url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm",
+      "summary_zh": "GitHub 在 npm CLI 11.15.0+ 中推出两项供应链安全改进：分阶段发布（staged publishing）正式可用，以及新的安装来源控制参数 --allow-file、--allow-remote、--allow-directory，与既有的 --allow-git 配合使用。核心目标是让包发布更可控、让依赖安装来源更显式，从而减少误发布与高风险来源被默认接受的情况。",
+      "summary_en": "GitHub shipped two npm supply-chain security improvements in npm CLI 11.15.0+: staged publishing is now generally available, and new install-source controls --allow-file, --allow-remote, and --allow-directory complement the existing --allow-git flag. The goal is to make package release flows more controllable and dependency source acceptance more explicit, reducing accidental publishes and risky install paths.",
+      "why_it_matters_zh": "虽然这不是 AI coding 主题，但它与平台工程和开发者工具治理高度相关。随着 AI 生成代码和自动化代理越来越频繁地引入依赖、修改构建脚本或触发发布流程，安装来源白名单与渐进式发布机制会成为防止供应链事故的重要护栏。",
+      "why_it_matters_en": "This is not an AI-coding story, but it is highly relevant to platform engineering and developer-tooling governance. As AI-generated code and automation agents increasingly add dependencies, modify build scripts, or trigger releases, install-source allowlists and progressive publishing become important guardrails against supply-chain incidents.",
+      "key_takeaways_zh": [
+        "npm 现在支持更细粒度的安装来源许可控制，团队可以显式限制 file、remote、directory、git 等来源。",
+        "分阶段发布适合接入内部发布治理流程，在全量公开前增加验证、观察或审批环节。"
+      ],
+      "key_takeaways_en": [
+        "npm now supports more granular allow controls over install sources, enabling teams to explicitly restrict file, remote, directory, and git-based installs.",
+        "Staged publishing fits well into internal release-governance workflows by adding validation, observation, or approval before full public rollout."
+      ],
+      "tags": [
+        "npm",
+        "supply-chain-security",
+        "package-management",
+        "developer-tooling",
+        "release-engineering"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "new_terms_zh": [
+    "分阶段发布（staged publishing）",
+    "安装来源许可参数（--allow-file / --allow-remote / --allow-directory）"
+  ],
+  "new_terms_en": [
+    "staged publishing",
+    "install-source allow flags (--allow-file / --allow-remote / --allow-directory)"
+  ],
+  "themes_zh": [
+    "软件供应链安全前移到包管理默认配置",
+    "开发者工具开始提供更显式的来源控制与发布护栏"
+  ],
+  "themes_en": [
+    "Software supply-chain security is moving into default package-management controls",
+    "Developer tooling is adding more explicit source restrictions and release guardrails"
+  ],
+  "implications_zh": [
+    "平台团队应评估在 CI、构建容器和开发机模板中默认收紧 npm 安装来源策略。",
+    "如果团队正在引入 AI 编码代理，应把依赖安装来源控制和发布分阶段化纳入代理可执行权限边界。"
+  ],
+  "implications_en": [
+    "Platform teams should evaluate tightening npm install-source policy by default in CI, build containers, and developer workstation baselines.",
+    "If the organization is adopting AI coding agents, dependency-source controls and staged publishing should be part of the agent permission boundary."
+  ],
+  "reading_order": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新误解为 AI coding 能力突破；它本质上是供应链与发布治理改进。",
+    "今天没有足够强的 AI coding agent、评测框架、MCP 或仓库理解类原始技术内容，不值得凑成完整日报。"
+  ],
+  "what_to_ignore_en": [
+    "Do not mistake this for an AI-coding capability breakthrough; it is fundamentally a supply-chain and release-governance update.",
+    "There is not enough strong original material today on AI coding agents, evals, MCP, or repo understanding to justify a full digest."
+  ]
+}

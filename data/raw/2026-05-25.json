@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-23T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 22 May 2026 18:33:46 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Staged publishing and new install-time controls for npm https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm Allison Fri, 22 May 2026 18:27:12 +0000 https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm <p>Today we&#8217;re shipping two updates focused on supply-chain security for npm: Staged publishing is generally available. New --allow-* install source flags (--allow-file, --allow-remote, --allow-directory) complement the existing --allow-git flag. Both&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm\">Staged publishing and new install-time controls for npm</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Today we&rsquo;re shipping two updates focused on supply-chain security for npm:</p> <ol> <li>Staged publishing is generally available.</li> <li>New <code>--allow-*</code> install source flags (<code>--allow-file</code>, <code>--allow-remote</code>, <code>--allow-directory</code>) complement the existing <code>--allow-git</code> flag.</li> </ol> <p>Both are available in npm CLI <strong>11.15.0</strong> or newer.</p> <hr> <h2 id=\"staged-publishing-is-generally-available\" id=\"staged-publishing-is-generally-available\" ><a class=\"heading-link\" href=\"#staged-publishing-is-generally-available\">Staged publishing is generally available<span class=\"heading-hash pl-2",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
