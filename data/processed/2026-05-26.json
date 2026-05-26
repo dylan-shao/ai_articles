@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，仅有一条较有操作性的官方更新，主题集中在 npm 供应链安全而非 AI coding 本身。",
+    "唯一值得关注的是 GitHub 发布的 npm staged publishing 与新的安装来源白名单参数，这对依赖治理、CI 安装策略和内部包发布流程有直接影响。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with only one actionable official update and little directly about AI coding systems.",
+    "The only notable item is GitHub's npm update adding staged publishing and new install-source allowlist flags, which has direct implications for dependency governance, CI install policy, and internal package release workflows."
+  ],
+  "items": [
+    {
+      "title": "Staged publishing and new install-time controls for npm",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-22",
+      "url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm",
+      "summary_zh": "GitHub 宣布 npm CLI 11.15.0 提供两项面向供应链安全的更新：staged publishing 正式可用，以及新增安装来源控制参数 --allow-file、--allow-remote、--allow-directory，用于补充已有的 --allow-git。整体方向是把包发布与安装阶段的信任边界做得更细。",
+      "summary_en": "GitHub announced two supply-chain security updates in npm CLI 11.15.0: staged publishing is now generally available, and new install-source control flags --allow-file, --allow-remote, and --allow-directory complement the existing --allow-git flag. The overall direction is finer-grained trust boundaries for both package publishing and installation.",
+      "why_it_matters_zh": "虽然这不是 AI coding 直接进展，但对使用代理编程、自动依赖修改、CI 自动构建的团队很相关。随着代码代理越来越频繁地生成 package.json 变更、拉取依赖并触发发布流程，安装来源限制和分阶段发布可以降低恶意依赖、错误发布和内部包扩散风险。",
+      "why_it_matters_en": "While not directly about AI coding, this matters for teams using coding agents, automated dependency edits, and CI-driven builds. As agents increasingly modify package manifests, pull dependencies, and trigger release workflows, install-source restrictions and staged publishing help reduce the blast radius of malicious dependencies, accidental releases, and unintended propagation of internal packages.",
+      "key_takeaways_zh": [
+        "npm 开始把“能从哪里安装”变成显式策略，适合在 CI、受控构建环境和企业开发镜像中启用。",
+        "staged publishing 让包发布从一次性全量暴露，转向更可控的渐进式发布流程，适合高风险或高影响依赖。"
+      ],
+      "key_takeaways_en": [
+        "npm is making install provenance a first-class policy surface, which is useful for CI, locked-down build environments, and enterprise developer images.",
+        "Staged publishing shifts package release from an all-at-once exposure model to a more controlled progressive rollout, which is valuable for high-risk or high-impact dependencies."
+      ],
+      "tags": [
+        "npm",
+        "supply-chain-security",
+        "developer-tooling",
+        "ci-cd",
+        "dependency-management"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "new_terms_zh": [
+    "Staged publishing（分阶段发布）",
+    "install source allowlist flags（安装来源白名单参数）"
+  ],
+  "new_terms_en": [
+    "Staged publishing",
+    "Install source allowlist flags"
+  ],
+  "themes_zh": [
+    "开发工具链的供应链安全前移",
+    "面向自动化与代理执行环境的依赖安装约束"
+  ],
+  "themes_en": [
+    "Shifting supply-chain security earlier into the developer toolchain",
+    "Dependency installation constraints for automated and agent-driven environments"
+  ],
+  "implications_zh": [
+    "如果团队正在引入 AI coding agent，应同步收紧 npm 安装来源策略，避免代理在构建过程中引入不受控来源。",
+    "内部平台团队可以评估将 staged publishing 纳入标准发布流程，尤其适用于核心 SDK、CLI 和共享库。"
+  ],
+  "implications_en": [
+    "Teams adopting AI coding agents should tighten npm install-source policies in parallel to prevent agents from pulling dependencies from uncontrolled origins during builds.",
+    "Platform teams should evaluate making staged publishing part of the default release process, especially for core SDKs, CLIs, and shared libraries."
+  ],
+  "reading_order": [
+    "Staged publishing and new install-time controls for npm"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新误读为 AI coding 能力发布；它更偏向基础设施与供应链控制。",
+    "不必关注 GitHub Changelog 的归档页本身，只有具体 npm 更新条目有价值。"
+  ],
+  "what_to_ignore_en": [
+    "Do not interpret this as an AI coding capability launch; it is primarily an infrastructure and supply-chain control update.",
+    "Ignore the GitHub Changelog archive page itself; only the specific npm update entry is worth reading."
+  ]
+}
