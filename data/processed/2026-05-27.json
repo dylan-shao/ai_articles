@@ -1,0 +1,178 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最有价值的信号集中在 GitHub 对 AI 编码治理与平台化落地的几个关键控制面：Copilot Memory 的作用域/删除/CLI 控制、组织级模型规则，以及可编程启用 Code Quality 与 PR 覆盖率。",
+    "这些更新的共同方向不是“更强模型”，而是把 AI 编码与代码质量能力纳入企业级治理、仓库级策略、CI 工作流与开发者日常界面。",
+    "对后端、平台和工程效率负责人而言，重点不是单个功能本身，而是它们已经开始形成可自动化配置、可分层授权、可嵌入开发流程的统一控制面。"
+  ],
+  "executive_summary_en": [
+    "The strongest signal today is GitHub tightening the operational control plane around AI coding and code quality: Copilot Memory controls, org-targeted model rules, and programmable Code Quality plus PR coverage.",
+    "The common theme is not better raw models, but enterprise-grade governance: repo-level policy, scoped memory, API-driven enablement, and quality signals embedded directly into the developer workflow.",
+    "For backend, platform, and engineering leads, the takeaway is that AI coding is becoming administrable infrastructure rather than an isolated assistant feature."
+  ],
+  "items": [
+    {
+      "title": "Copilot Memory has more controls for deletion, scope, and the Copilot CLI - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-26",
+      "url": "https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli/",
+      "summary_zh": "GitHub 为 Copilot Memory 增加了更明确的删除指引、仓库级关闭开关，以及 CLI 中的 /memory on|off|show 控制。同时在记忆写入时更清楚地区分“用户级偏好”和“仓库级事实”的作用域。",
+      "summary_en": "GitHub added clearer deletion guidance, a repository-level off switch, and CLI support via /memory on|off|show for Copilot Memory. It also makes memory scope explicit at capture time, distinguishing user-level preferences from repository-level facts.",
+      "why_it_matters_zh": "这不是简单的 UX 修补，而是 AI 编码“上下文持久化层”的治理增强。对于担心跨仓库泄露、错误长期记忆、以及开发者难以理解 AI 使用了哪些持久上下文的团队，这些控制直接影响企业是否敢大规模开启 memory 功能。",
+      "why_it_matters_en": "This is more than UX polish; it is governance for the persistence layer behind AI coding. For teams worried about cross-repo leakage, stale/incorrect memory, and opaque long-lived context, these controls materially affect whether memory can be enabled at scale.",
+      "key_takeaways_zh": [
+        "仓库管理员现在可以在仓库层面关闭 Copilot Memory，阻止新的仓库级事实被读取或写入。",
+        "CLI 级 memory 控制说明 GitHub 正把 AI 行为配置从 Web UI 延伸到开发者本地工作流与自动化环境。"
+      ],
+      "key_takeaways_en": [
+        "Repository admins can now disable Copilot Memory at the repo level, preventing new repo-level facts from being stored or read.",
+        "CLI-level memory control shows GitHub is extending AI behavior configuration beyond the web UI into local developer workflows and automation surfaces."
+      ],
+      "tags": [
+        "copilot-memory",
+        "ai-governance",
+        "developer-tooling",
+        "repo-policy"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Target Copilot models to organizations with model rules - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-26",
+      "url": "https://github.blog/changelog/2026-05-26-target-copilot-models-to-organizations-with-model-rules/",
+      "summary_zh": "GitHub 现在允许企业所有者按组织粒度配置 Copilot 可用模型，而不再只能使用企业级统一默认设置。新的 targeted model rules 让不同组织使用不同模型集合，并配套改进了默认模型可见性管理界面。",
+      "summary_en": "GitHub now lets enterprise owners control Copilot model availability per organization instead of relying only on enterprise-wide defaults. Targeted model rules allow different orgs to use different model sets, with a refreshed interface for managing default model availability.",
+      "why_it_matters_zh": "这是 AI 编码平台进入“多模型治理”阶段的明确信号。大型企业往往需要根据业务敏感度、成本、区域合规、团队成熟度或评测结果，给不同组织分配不同模型；该能力使模型选择开始像权限和策略一样被治理。",
+      "why_it_matters_en": "This is a clear signal that AI coding platforms are entering a multi-model governance phase. Large enterprises often need different models by business sensitivity, cost profile, region, team maturity, or eval results; this capability turns model choice into an administrable policy surface.",
+      "key_takeaways_zh": [
+        "模型可用性从“全企业一刀切”转向“组织级分层策略”，更适合真实企业结构。",
+        "这为内部模型评测、灰度发布、成本控制和合规分区提供了实际落地点。"
+      ],
+      "key_takeaways_en": [
+        "Model availability is moving from one enterprise-wide setting to org-level segmented policy, which better matches real enterprise structures.",
+        "This creates a practical rollout path for internal evals, phased deployments, cost control, and compliance-based segmentation."
+      ],
+      "tags": [
+        "copilot",
+        "model-governance",
+        "enterprise-adoption",
+        "policy-control"
+      ],
+      "signal_score": 9,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Code Quality: Repository Enablement API - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-26",
+      "url": "https://github.blog/changelog/2026-05-26-github-code-quality-repository-enablement-api/",
+      "summary_zh": "GitHub 发布了 Code Quality 的仓库启用 API（公开预览），支持通过 PATCH/GET 接口按仓库启用或禁用默认配置、指定分析语言、runner 类型，并读取当前状态与调度信息。",
+      "summary_en": "GitHub released a public preview Repository Enablement API for Code Quality. The new PATCH/GET endpoints allow repo-level enable/disable, language selection, runner type configuration, and retrieval of current setup and schedule.",
+      "why_it_matters_zh": "相比手工点选 UI，可编程启用是平台化落地的关键一步。它意味着代码质量能力可以批量铺开、与仓库模板/引导流程集成，并纳入平台团队的 IaC 或治理自动化体系。",
+      "why_it_matters_en": "Programmable enablement is a key step from feature to platform capability. It means code quality can be rolled out in bulk, integrated with repo bootstrapping/templates, and managed through platform-team automation or IaC-style governance.",
+      "key_takeaways_zh": [
+        "GitHub 正把代码质量控制面 API 化，这对大规模仓库治理和标准化接入尤其重要。",
+        "支持语言、runner 类型和配置读取，说明它不仅是开关 API，而是可观测、可配置的管理接口。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is API-enabling the code quality control plane, which is especially important for fleet-scale repo governance and standardized onboarding.",
+        "Support for languages, runner type, and config retrieval means this is more than a toggle API; it is a manageable and observable interface."
+      ],
+      "tags": [
+        "code-quality",
+        "api",
+        "platform-engineering",
+        "automation"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "Code coverage on pull requests is now in public preview - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-26",
+      "url": "https://github.blog/changelog/2026-05-26-code-coverage-in-pull-requests-is-now-in-public-preview/",
+      "summary_zh": "GitHub Code Quality 现已在 PR 中直接展示聚合代码覆盖率百分比。团队可通过上传 Cobertura 报告，将覆盖率信号嵌入 PR 审查流程；上传需要新的 code-quality:write 细粒度权限。",
+      "summary_en": "GitHub Code Quality now shows aggregate code coverage percentages directly in pull requests. Teams can upload Cobertura reports to bring coverage signals into PR review, using the new fine-grained code-quality:write permission.",
+      "why_it_matters_zh": "这让测试完整性信号更靠近合并决策点。虽然覆盖率本身并不新，但将其放进 PR 原生界面并与 GitHub Code Quality 结合，意味着质量门禁开始更紧密地嵌入开发流程，而不是停留在外部报告系统。",
+      "why_it_matters_en": "This moves test-completeness signals closer to the merge decision. Coverage itself is not new, but surfacing it natively in PRs and tying it into GitHub Code Quality means quality gates are becoming more embedded in the developer workflow instead of living in separate reporting tools.",
+      "key_takeaways_zh": [
+        "质量信号正从 CI 附属产物转向 PR 内联决策输入。",
+        "新的细粒度权限也提醒平台团队要重新审视 Actions/GitHub App 的最小权限配置。"
+      ],
+      "key_takeaways_en": [
+        "Quality signals are shifting from CI byproducts to first-class inputs in the PR decision loop.",
+        "The new fine-grained permission is also a reminder for platform teams to revisit least-privilege settings for Actions and GitHub Apps."
+      ],
+      "tags": [
+        "code-coverage",
+        "pull-requests",
+        "developer-workflow",
+        "quality-gates"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Copilot Memory has more controls for deletion, scope, and the Copilot CLI - GitHub Changelog",
+    "Target Copilot models to organizations with model rules - GitHub Changelog",
+    "GitHub Code Quality: Repository Enablement API - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "Targeted model rules（按组织定向的模型规则）",
+    "Repository-level facts（仓库级事实）",
+    "code-quality:write（代码质量上传细粒度权限）",
+    "Repository Enablement API（仓库启用 API）"
+  ],
+  "new_terms_en": [
+    "Targeted model rules",
+    "Repository-level facts",
+    "code-quality:write",
+    "Repository Enablement API"
+  ],
+  "themes_zh": [
+    "AI 编码从单点助手走向企业治理控制面",
+    "代码质量能力开始 API 化并嵌入仓库/PR 工作流",
+    "模型选择、记忆作用域和质量信号正在被统一纳入平台治理"
+  ],
+  "themes_en": [
+    "AI coding is moving from assistant UX to enterprise governance control planes",
+    "Code quality is becoming API-driven and embedded in repo/PR workflows",
+    "Model choice, memory scope, and quality signals are converging into one platform-governance layer"
+  ],
+  "implications_zh": [
+    "平台团队应开始把 AI 编码配置视为可策略化资产：模型白名单、memory 作用域、仓库默认配置都需要版本化与审计。",
+    "如果你在推进内部 AI coding rollout，现在应补上组织级模型路由、repo 级 memory 风险控制，以及批量启用质量能力的自动化方案。",
+    "后续值得关注的是：这些治理能力是否会进一步开放到更完整的 API、策略即代码和审计日志体系。"
+  ],
+  "implications_en": [
+    "Platform teams should start treating AI coding configuration as a governed asset: model allowlists, memory scope, and repo defaults should be versioned and auditable.",
+    "If you are rolling out AI coding internally, this is the time to add org-level model routing, repo-level memory risk controls, and automation for bulk quality enablement.",
+    "The next thing to watch is whether these governance surfaces expand into fuller APIs, policy-as-code, and audit-log integration."
+  ],
+  "reading_order": [
+    "Target Copilot models to organizations with model rules - GitHub Changelog",
+    "Copilot Memory has more controls for deletion, scope, and the Copilot CLI - GitHub Changelog",
+    "GitHub Code Quality: Repository Enablement API - GitHub Changelog",
+    "Code coverage on pull requests is now in public preview - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "聚合页、RSS feed、或重复的 GitHub Changelog 索引页没有新增技术信息。",
+    "Secret scanning 过滤、Dependabot sbt 支持、Classroom 下线等更新虽有用，但与今天的 AI 编码治理/平台化主线关联较弱。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the aggregate changelog index and RSS/archive entries; they add no new technical information.",
+    "The secret scanning filter update, Dependabot sbt support, and Classroom retirement may be useful, but they are weaker fits for today’s AI coding governance and platform-adoption theme."
+  ]
+}
