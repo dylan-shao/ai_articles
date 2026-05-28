@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-28T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Tue, 26 May 2026 21:36:49 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Copilot Memory has more controls for deletion, scope, and the Copilot CLI https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli Allison Tue, 26 May 2026 21:05:28 +0000 https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli <p>Copilot Memory now includes improved memory deletion, adds a repository-level off switch, and brings further memory controls into the Copilot CLI. Copilot Memory is in public preview and available to&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli\">Copilot Memory has more controls for deletion, scope, and the Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Copilot Memory now includes improved memory deletion, adds a repository-level off switch, and brings further memory controls into the Copilot CLI. Copilot Memory is in public preview and available to all paid Copilot plans.</p> <h2 id=\"whats-changing\" id=\"whats-changing\" ><a class=\"heading-link\" href=\"#whats-changing\">What&rsquo;s changing<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h2> <ul> <li><strong>Deletion guidance:</strong> When you ask Copilot to forget something, it now points you to the right place to remove the memory and down-votes the memory where voting is available.</li> <l",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

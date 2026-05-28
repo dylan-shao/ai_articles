@@ -1,0 +1,88 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容里只有一条相对有信号的技术更新：GitHub Copilot Memory 增加了删除、作用域与 CLI 侧控制。",
+    "这不是能力边界的大跃迁，但对企业落地 AI 编码助手很关键：它直接回应了记忆可控性、仓库级禁用、以及开发者工作流可审计性的问题。",
+    "如果你负责平台工程或开发者体验，这条更新值得关注；其余泛化信息不足以构成完整日报。"
+  ],
+  "executive_summary_en": [
+    "Only one candidate stands out today: GitHub Copilot Memory added more controls for deletion, scope, and CLI access.",
+    "This is not a frontier-model leap, but it is important for enterprise AI coding adoption because it addresses controllability, repo-level disablement, and workflow-level governance.",
+    "If you own platform engineering or developer experience, this is worth tracking; the rest is not strong enough for a full digest."
+  ],
+  "items": [
+    {
+      "title": "Copilot Memory has more controls for deletion, scope, and the Copilot CLI",
+      "source": "GitHub Changelog",
+      "author": "Allison",
+      "publish_date": "2026-05-26T21:05:28+00:00",
+      "url": "https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli",
+      "summary_zh": "GitHub 更新了 Copilot Memory：当用户要求遗忘某些信息时，系统会引导到正确的删除入口；新增仓库级关闭开关；并把更多记忆控制能力带到 Copilot CLI。该功能仍处于 public preview，面向所有付费 Copilot 计划开放。",
+      "summary_en": "GitHub updated Copilot Memory with better deletion guidance, a repository-level off switch, and additional memory controls in the Copilot CLI. The feature remains in public preview and is available to all paid Copilot plans.",
+      "why_it_matters_zh": "对工程组织而言，AI 编码助手能否长期进入真实开发流程，取决于“记住什么、在哪个范围记住、如何删除与审计”。这次更新虽然偏产品控制面，但它触及企业采用的核心阻力：隐私、仓库边界、团队治理和 CLI 工作流的一致性。",
+      "why_it_matters_en": "For engineering orgs, long-term adoption of AI coding assistants depends on what gets remembered, where memory applies, and how it can be deleted or audited. This update is mostly control-plane work, but it hits core enterprise blockers: privacy, repo boundaries, team governance, and consistency in CLI-based workflows.",
+      "key_takeaways_zh": [
+        "“记忆”正在从单纯的个性化能力，转向需要明确边界、删除语义和仓库级治理的企业功能。",
+        "CLI 纳入记忆控制意味着 AI 助手不再只服务于 IDE 内交互，而是在终端与自动化脚本链路中也需要一致的治理模型。"
+      ],
+      "key_takeaways_en": [
+        "Memory is evolving from a personalization feature into an enterprise capability that needs explicit boundaries, deletion semantics, and repo-level governance.",
+        "Bringing memory controls into the CLI signals that AI assistant governance must extend beyond the IDE into terminal and automation workflows."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Memory",
+        "Developer Tooling",
+        "CLI",
+        "Enterprise Governance"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Copilot Memory has more controls for deletion, scope, and the Copilot CLI"
+  ],
+  "new_terms_zh": [
+    "仓库级关闭开关",
+    "Copilot Memory 删除引导",
+    "CLI 侧记忆控制"
+  ],
+  "new_terms_en": [
+    "repository-level off switch",
+    "memory deletion guidance",
+    "CLI-side memory controls"
+  ],
+  "themes_zh": [
+    "AI 编码助手的治理与可控性",
+    "记忆机制的作用域管理",
+    "终端工作流中的 AI 管控"
+  ],
+  "themes_en": [
+    "Governance and controllability for AI coding assistants",
+    "Scope management for assistant memory",
+    "AI controls in terminal-native workflows"
+  ],
+  "implications_zh": [
+    "若你在评估企业级 AI coding rollout，应把“记忆删除、作用域、仓库级禁用、CLI 审计”列为采购与平台接入清单中的必选项。",
+    "平台团队可以据此设计统一策略：哪些仓库允许记忆、哪些环境默认禁用，以及如何让开发者自助清理上下文痕迹。",
+    "这类更新也说明，未来 AI 编码工具的差异化不只在模型能力，还在治理面、可观测性与组织控制面。"
+  ],
+  "implications_en": [
+    "If you are evaluating enterprise AI coding rollout, memory deletion, scope, repo-level disablement, and CLI auditability should be mandatory checklist items.",
+    "Platform teams can use this pattern to define unified policy: which repos allow memory, which environments disable it by default, and how developers can self-serve context cleanup.",
+    "This also shows that differentiation in AI coding tools will increasingly come not just from model quality, but from governance, observability, and organizational control surfaces."
+  ],
+  "reading_order": [
+    "Copilot Memory has more controls for deletion, scope, and the Copilot CLI"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新解读为模型能力或代码生成质量的重大突破；它更像是企业可用性的控制面补强。",
+    "候选中的 GitHub Changelog 归档页本身不是信息源，应聚焦具体 changelog 条目而不是 feed/archive 页面。"
+  ],
+  "what_to_ignore_en": [
+    "Do not read this as a major leap in model capability or code generation quality; it is primarily a control-plane improvement for enterprise usability.",
+    "The GitHub Changelog archive/feed page itself is not the signal; focus on the specific changelog entry instead."
+  ]
+}
