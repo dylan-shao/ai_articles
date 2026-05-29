@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Hard budget limits now available for GitHub Advanced Security - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-28-hard-budget-limits-now-available-for-github-advanced-security/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-28T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Enterprise administrators and billing managers can now set hard budget limits for GitHub Advanced Security (GHAS) SKUs, preventing teams from exceeding their allocated license budgets. Previously, license-based products like GHAS…",
+    "body_excerpt": "Hard budget limits now available for GitHub Advanced Security - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 28, 2026 • 2 minute read Hard budget limits now available for GitHub Advanced Security Table of Contents What's new Getting started Menu. Currently selected: What's new What's new Getting started Enterprise administrators and billing managers can now set hard budget limits for GitHub Advanced Security (GHAS) SKUs, preventing teams from exceeding their allocated license budgets. Previously, license-based products like GHAS only supported soft budgets. Admins could set a spending target and receive email notifications at 75%, 90%, and 100% thresholds, but the product did not enforce the limit. This could lead to accidental overspending, especially during user onboarding flows such as IdP group provisioning where licenses are automatically assigned. With hard budget limits, once a GHAS budget threshold is reached, additional license usage is blocked, and GHAS won’t be enabled on new repositories until the budget is increased or licenses are freed. This gives enterprises precise control over their security spending at the organization level. What’s new Enforceable license limits for GHAS : Set a hard budget in license count and GitHub will prevent new license assignments once the limit is met. License-to-cost transparency : When configuring a budget, a real-time estimate shows the dollar equivalent (e.g., X licenses ≈ ~$Y/month ), so admins always know their remaining capacity, even for mid-month additions. Smart defaults for existing usage : If your enterprise already has active GHAS licenses, the new budget floor will be set to at least your current billable license count to avoid disruption. Continued alerting : Email notifications at 75%, 90%, and 100% thresholds remain acti",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-28T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Application Security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply May May 2026 May May 2026 May.28 Release Hard budget limits now available for GitHub Advanced Security application security May.28 Improvement CodeQL 2.25.5 improves query accuracy for GitHub Actions application security May.26 Release GitHub Code Quality: Repository Enablement API application security enterprise management tools ... +1 May.26 Improvement Filter secret scanning approval requests by sort order and bypass status application security May.26 Release Code coverage on pull requests is now in public preview application security platform governance ... +1 May.19 Improvement Expanded OIDC support for Dependabot and code scanning application security supply chain security ... +1 May.19 Improvement Start a GitHub Advanced Security trial from a risk assessment application security supply chain security ... +1 May.19 Retired Removal of code_scanning_upload field from rate_limit API endpoint application security May.12 Improvement CodeQL 2.25.4 adds Swift 6.3.1 support, improvements to C# and Java, and more application security May.08 Improvement CodeQL 2.25.3 adds Swift 6.3 support application security May.05 Release Secret scanning with GitHub MCP Server is now generally available application security May.05 Release Code-to-cloud risk visibility with Microsoft Defender for Cloud is now generally available application security supply ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "CodeQL 2.25.5 improves query accuracy for GitHub Actions - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-28-codeql-2-25-5-improves-query-accuracy-for-github-actions/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-28T00:00:00+00:00",
+    "author": null,
+    "excerpt": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.25.5, which includes accuracy improvements across C/C++,…",
+    "body_excerpt": "CodeQL 2.25.5 improves query accuracy for GitHub Actions - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Improvement May 28, 2026 • 1 minute read CodeQL 2.25.5 improves query accuracy for GitHub Actions Table of Contents Language and framework support Query changes Menu. Currently selected: Language and framework support Language and framework support Query changes CodeQL is the static analysis engine behind GitHub code scanning , which finds and remediates security issues in your code. We’ve recently released CodeQL 2.25.5 , which includes accuracy improvements across C/C++, Java/Kotlin, and GitHub Actions queries. Language and framework support Java/Kotlin We’ve introduced a new sink kind, path-injection[read] , for Models-as-Data rows that only read from a path (such as ClassLoader.getResource , FileInputStream , and FileReader ). This helps queries distinguish read-only path sinks from more dangerous ones. GitHub Actions We’ve extended the poisonable_steps modeling to detect additional sinks, including scripts executed via Python modules and go run in directories. Query changes C/C++ The cpp/cleartext-transmission query no longer raises an alert on calls to fscanf (and variants) when the call reads from an input that isn’t a socket, reducing false positives. Java/Kotlin The java/zipslip query no longer reports archive entry names that flow only to read-only path sinks such as ClassLoader.getResource , FileInputStream , and FileReader , reducing false positives. GitHub Actions The actions/unpinned-tag query now analyzes composite action metadata ( action.yml and action.yaml files) in addition to workflow files, providing more comprehensive detection. We’ve fixed the help file descriptions for the actions/untrusted-checkout/critical , actions/untrusted-checkout/high , and actions/untrusted-ch",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Claude Opus 4.8 is generally available for GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-05-28T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Claude Opus 4.8, Anthropic’s latest Opus model, is now available in GitHub Copilot. In our early testing, Opus 4.8 demonstrates a clear step forward in code understanding and generation across…",
+    "body_excerpt": "Claude Opus 4.8 is generally available for GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release May 28, 2026 • 1 minute read Claude Opus 4.8 is generally available for GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more Share your feedback Claude Opus 4.8 , Anthropic’s latest Opus model, is now available in GitHub Copilot. In our early testing, Opus 4.8 demonstrates a clear step forward in code understanding and generation across a range of real-world coding tasks. It also handles complex problem-solving and large-codebase navigation with notable improvement to previous versions. This model is launching with a 15X premium request multiplier until Usage Based Billing launches on June 1, 2026. Availability in GitHub Copilot Claude Opus 4.8 will be available to Copilot Pro+ , Business , and Enterprise users. You’ll be able to select the model in the model picker in: Visual Studio Code in all modes (i.e., chat, ask, edit, and agent) Visual Studio Copilot CLI GitHub Copilot cloud agent GitHub Copilot App github.com GitHub Mobile iOS and Android JetBrains Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators must enable the Claude Opus 4.8 policy in Copilot settings. Learn more To explore all models available in GitHub Copilot, see our documentation on models and get started with Copilot. Share your feedback Join the GitHub Community to share your feedback. Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Avai",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

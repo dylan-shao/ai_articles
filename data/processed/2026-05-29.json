@@ -1,0 +1,149 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选里高信号内容偏少，最值得关注的是 CodeQL 2.25.5 对 GitHub Actions 与 Java/Kotlin 查询精度的改进，因为它直接影响安全扫描误报/漏报与 CI 安全治理质量。",
+    "其余条目大多属于产品可用性或商业配置更新；其中 Claude Opus 4.8 进入 GitHub Copilot 具有一定组织采用价值，但缺少实测、评测方法或技术细节，因此只算边缘入选。"
+  ],
+  "executive_summary_en": [
+    "Today is a relatively weak day for high-signal technical updates. The strongest item is CodeQL 2.25.5, because its query-modeling and false-positive reductions directly affect CI security scanning quality and developer trust.",
+    "Most other candidates are product availability or billing-control updates. Claude Opus 4.8 in GitHub Copilot has some org-adoption relevance, but lacks benchmark, harness, or implementation detail, so it is only borderline."
+  ],
+  "items": [
+    {
+      "title": "CodeQL 2.25.5 improves query accuracy for GitHub Actions - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-28",
+      "url": "https://github.blog/changelog/2026-05-28-codeql-2-25-5-improves-query-accuracy-for-github-actions/",
+      "summary_zh": "CodeQL 2.25.5 发布了多项精度改进，重点覆盖 GitHub Actions、Java/Kotlin 和 C/C++。其中最有价值的是扩展了 GitHub Actions 的 sink 建模，新增对通过 Python 模块执行脚本以及在目录中使用 go run 的检测；同时 actions/unpinned-tag 现在也分析 composite action 的 action.yml/action.yaml。Java/Kotlin 方面引入 path-injection[read] 这类只读路径 sink，并据此降低 ZipSlip 等规则的误报。",
+      "summary_en": "CodeQL 2.25.5 ships several precision improvements across GitHub Actions, Java/Kotlin, and C/C++. The most relevant change is expanded sink modeling for GitHub Actions, including scripts executed via Python modules and go run in directories; actions/unpinned-tag now also analyzes composite action metadata files. On Java/Kotlin, a new path-injection[read] sink kind helps distinguish read-only path sinks and reduces false positives in queries such as ZipSlip.",
+      "why_it_matters_zh": "对平台与安全工程团队来说，这类“规则建模层”的改进比普通功能发布更重要：它决定了扫描结果是否可信、是否能进入默认门禁，以及 GitHub Actions 供应链风险能否被更完整地覆盖。误报下降通常直接决定开发者是否继续保留扫描。",
+      "why_it_matters_en": "For platform and security engineering teams, modeling-layer improvements matter more than surface-level feature launches: they determine whether scan results are trustworthy enough for default enforcement and whether GitHub Actions supply-chain risks are covered comprehensively. Lower false positives often directly determine whether developers keep scanners enabled.",
+      "key_takeaways_zh": [
+        "GitHub Actions 查询覆盖面扩大到 composite action 元数据，以及更多脚本执行 sink，意味着 workflow 之外的风险面也开始被静态分析纳入。",
+        "通过引入 read-only path sink，CodeQL 在 Java/Kotlin 路径注入与 ZipSlip 场景中更细粒度地区分风险强弱，有助于降低误报并提升规则可执行性。"
+      ],
+      "key_takeaways_en": [
+        "GitHub Actions analysis now extends beyond workflow files into composite action metadata and additional execution sinks, broadening static coverage of CI attack surface.",
+        "The new read-only path sink category gives Java/Kotlin analysis finer-grained risk semantics, helping reduce false positives and making rules more enforceable in practice."
+      ],
+      "tags": [
+        "CodeQL",
+        "GitHub Actions",
+        "Static Analysis",
+        "DevSecOps",
+        "CI Security"
+      ],
+      "signal_score": 9,
+      "novelty_score": 7,
+      "actionability_score": 8
+    },
+    {
+      "title": "Claude Opus 4.8 is generally available for GitHub Copilot - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-28",
+      "url": "https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/",
+      "summary_zh": "Claude Opus 4.8 已在 GitHub Copilot 中正式可用，可在 VS Code、Visual Studio、Copilot CLI、云端 agent、JetBrains、Xcode 等多个入口选择。GitHub 声称该模型在代码理解、生成、复杂问题求解和大代码库导航上优于前代，但本文未给出公开评测数据。当前该模型以 15X premium request multiplier 计费，且企业管理员需要显式开启策略。",
+      "summary_en": "Claude Opus 4.8 is now generally available in GitHub Copilot across multiple surfaces including VS Code, Visual Studio, Copilot CLI, cloud agent, JetBrains, and Xcode. GitHub claims improved code understanding, generation, complex reasoning, and large-codebase navigation versus prior models, but the post provides no public benchmark details. The model launches with a 15x premium request multiplier, and enterprise admins must explicitly enable the policy.",
+      "why_it_matters_zh": "这条更新的价值主要在组织采用层面：模型选择正在从“单一默认模型”转向“按任务和成本分层路由”。对工程管理者而言，关键不是新模型上线本身，而是如何建立模型准入、预算控制与任务分配策略。",
+      "why_it_matters_en": "The main value here is organizational adoption: model selection is shifting from a single default to task- and cost-aware routing. For engineering leaders, the key issue is not the launch itself, but how to build model admission, budget control, and task allocation policies.",
+      "key_takeaways_zh": [
+        "GitHub Copilot 的多模型化继续深化，且覆盖 chat/edit/agent/CLI 等多个执行面，说明实际工作流中的模型路由会越来越常见。",
+        "15X 的 premium multiplier 提醒团队必须把模型效果评测与成本治理绑定，否则高端模型很容易只带来账单增长而非生产力提升。"
+      ],
+      "key_takeaways_en": [
+        "GitHub Copilot is becoming increasingly multi-model across chat, edit, agent, and CLI surfaces, indicating model routing will become a normal part of developer workflows.",
+        "The 15x premium multiplier is a reminder that model evaluation must be tied to cost governance; otherwise premium models can inflate spend without proportional productivity gains."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Claude Opus",
+        "Model Routing",
+        "AI Coding",
+        "Enterprise Adoption"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 6
+    },
+    {
+      "title": "Hard budget limits now available for GitHub Advanced Security - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-05-28",
+      "url": "https://github.blog/changelog/2026-05-28-hard-budget-limits-now-available-for-github-advanced-security/",
+      "summary_zh": "GitHub Advanced Security 现在支持硬预算上限，企业管理员可按 license 数设定不可超出的预算；达到阈值后，新的许可证分配会被阻止，GHAS 也不会在新仓库上继续启用。相比过去仅提供 75/90/100% 的软预算提醒，这次更新把预算从“告警”变成了“强制执行”。",
+      "summary_en": "GitHub Advanced Security now supports hard budget limits. Enterprise admins can set an enforceable license-count cap; once reached, new license assignments are blocked and GHAS will not be enabled on additional repositories. Previously, budgets were soft notifications only at 75/90/100% thresholds, so this change turns budget control from alerting into enforcement.",
+      "why_it_matters_zh": "这不是 AI 编码技术更新，但对平台治理有现实意义：安全与 AI 工具都在走向 seat/usage 双重成本结构，组织需要可执行的预算护栏，避免自动化开通与群组同步导致失控扩张。",
+      "why_it_matters_en": "This is not an AI-coding technical update, but it matters for platform governance: both security and AI tooling are moving toward seat- plus usage-based cost structures, and organizations need enforceable guardrails to prevent uncontrolled expansion from automated provisioning and group sync.",
+      "key_takeaways_zh": [
+        "从软预算到硬预算，意味着 GitHub 开始提供更适合大组织治理的成本控制原语。",
+        "如果你的团队正在推广 Copilot、GHAS 或其他按席位/用量收费的开发工具，这类预算开关值得纳入统一 FinOps/PlatOps 策略。"
+      ],
+      "key_takeaways_en": [
+        "The move from soft budgets to hard budgets signals GitHub is adding governance primitives better suited to large organizations.",
+        "If your org is rolling out Copilot, GHAS, or other seat/usage-priced developer tools, features like this belong in a unified FinOps/PlatOps control plane."
+      ],
+      "tags": [
+        "GitHub Advanced Security",
+        "Platform Governance",
+        "FinOps",
+        "Developer Tooling"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "CodeQL 2.25.5 improves query accuracy for GitHub Actions - GitHub Changelog",
+    "Claude Opus 4.8 is generally available for GitHub Copilot - GitHub Changelog",
+    "Hard budget limits now available for GitHub Advanced Security - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "path-injection[read]",
+    "poisonable_steps modeling",
+    "composite action metadata",
+    "premium request multiplier"
+  ],
+  "new_terms_en": [
+    "path-injection[read]",
+    "poisonable_steps modeling",
+    "composite action metadata",
+    "premium request multiplier"
+  ],
+  "themes_zh": [
+    "静态分析从规则数量竞争转向建模精度与误报治理",
+    "AI 编码平台进入多模型与成本分层治理阶段",
+    "开发者平台工具开始补齐企业级预算与策略控制原语"
+  ],
+  "themes_en": [
+    "Static analysis is shifting from rule-count competition toward modeling precision and false-positive control.",
+    "AI coding platforms are entering a multi-model, cost-tiered governance phase.",
+    "Developer platforms are adding enterprise-grade budget and policy control primitives."
+  ],
+  "implications_zh": [
+    "如果你在内部维护 Actions 安全基线，应尽快验证新版 CodeQL 对 composite actions 与脚本执行路径的新增检测，并评估是否能提升默认门禁覆盖率。",
+    "如果你在试点高端编码模型，需要建立任务级评测与预算策略，而不是让开发者随意切换到最贵模型。",
+    "平台团队可以把安全工具和 AI 工具一起纳入统一预算、配额和策略框架，因为两者正在共享相似的治理问题。"
+  ],
+  "implications_en": [
+    "If you maintain an internal Actions security baseline, validate the new CodeQL coverage for composite actions and script execution paths and assess whether it justifies broader default enforcement.",
+    "If you are piloting premium coding models, put task-level evaluation and budget policy in place rather than allowing unconstrained switching to the most expensive model.",
+    "Platform teams should consider managing security tools and AI tools under a shared budget/quota/policy framework, because they are increasingly presenting similar governance problems."
+  ],
+  "reading_order": [
+    "CodeQL 2.25.5 improves query accuracy for GitHub Actions - GitHub Changelog",
+    "Claude Opus 4.8 is generally available for GitHub Copilot - GitHub Changelog",
+    "Hard budget limits now available for GitHub Advanced Security - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "忽略 GitHub Changelog 总览页，它只是索引，不是独立高信号内容。",
+    "不要把 Claude Opus 4.8 上线本身误认为模型能力已被充分证明；没有公开评测、基准或 harness 细节时，只能视作供应可用性更新。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the generic GitHub Changelog index page; it is just a listing, not a standalone high-signal source.",
+    "Do not over-interpret the Claude Opus 4.8 availability post as proof of superior capability; without public evals, benchmarks, or harness details, it is primarily a supply/availability update."
+  ]
+}
