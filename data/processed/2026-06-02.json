@@ -1,0 +1,142 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，只有 GitHub Copilot 的两项官方变更具有较高运营与平台治理信号，但技术深度有限。",
+    "最值得关注的是 Copilot 全面转向按 AI Credits 计费、代码审查开始消耗 GitHub Actions minutes，以及个人版自动模型选择引入 evaluation models。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today; only two official GitHub Copilot updates carry meaningful platform and governance signal, though neither is deeply technical.",
+    "The most relevant developments are Copilot’s full shift to AI Credits-based billing, code review consuming GitHub Actions minutes, and evaluation models being included in auto model selection for individual users."
+  ],
+  "items": [
+    {
+      "title": "Updates to GitHub Copilot billing and plans",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-01",
+      "url": "https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/",
+      "summary_zh": "GitHub 宣布自 6 月 1 日起所有 Copilot 方案全面启用按 AI Credits 消耗计费；Copilot code review 除消耗 AI Credits 外，还会消耗 GitHub Actions minutes。同时新增用户级预算控制，并支持升级到 Copilot Max。",
+      "summary_en": "GitHub announced that as of June 1, all Copilot plans now use AI Credits-based usage billing. Copilot code review consumes both AI Credits and GitHub Actions minutes, with new user-level budget controls and upgrades to Copilot Max also introduced.",
+      "why_it_matters_zh": "这不是单纯定价新闻，而是 AI 编码能力从“席位制工具”转向“可计量基础设施消耗”的明确信号。对平台团队而言，预算、配额、Runner 规划、组织内归因和成本治理将成为 AI coding rollout 的核心工作。",
+      "why_it_matters_en": "This is more than pricing news; it signals a transition from seat-based AI tooling to metered infrastructure consumption. For platform teams, budget controls, runner planning, chargeback, and usage governance become core parts of AI coding adoption.",
+      "key_takeaways_zh": [
+        "Copilot 的组织采纳将越来越像云资源治理：需要预算、额度、默认 runner 和使用策略。",
+        "如果团队启用 Copilot code review，需要把 Actions capacity 与 AI 成本一起纳入容量规划。"
+      ],
+      "key_takeaways_en": [
+        "Copilot adoption will increasingly resemble cloud resource governance, requiring budgets, quotas, default runners, and usage policy.",
+        "Teams enabling Copilot code review should plan for Actions capacity alongside direct AI spend."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "AI billing",
+        "platform governance",
+        "developer tooling"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    },
+    {
+      "title": "Evaluation models in auto for individual plans",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-01",
+      "url": "https://github.blog/changelog/2026-06-01-evaluation-models-in-auto-for-individual-plans/",
+      "summary_zh": "GitHub Copilot 开始向个人非企业用户开放 evaluation models，这些模型也可能被纳入 Copilot 的 auto model selection。用户可以在设置中关闭通过自动模型选择使用 evaluation models。",
+      "summary_en": "GitHub Copilot is now exposing evaluation models to individual non-enterprise users, and those models may be used by Copilot’s auto model selection. Users can opt out in settings.",
+      "why_it_matters_zh": "这反映出 Copilot 的模型路由层正在持续实验化和动态化。对工程负责人而言，这意味着开发体验、输出稳定性和可复现性会越来越依赖模型选择策略，而不仅是单一模型能力。",
+      "why_it_matters_en": "This shows Copilot’s routing layer becoming more experimental and dynamic. For engineering leaders, developer experience, output stability, and reproducibility will depend increasingly on model selection policy rather than any single model.",
+      "key_takeaways_zh": [
+        "自动模型选择已不再只是在固定已发布模型之间切换，也可能纳入评估阶段模型。",
+        "如果团队关心可预测性、合规或回归排查，需要明确模型路由与 opt-out 策略。"
+      ],
+      "key_takeaways_en": [
+        "Auto model selection is no longer limited to a stable set of generally available models and may include evaluation-stage models.",
+        "Teams that care about predictability, compliance, or regression analysis should define routing and opt-out expectations."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "model routing",
+        "evaluation models",
+        "AI governance"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 6
+    },
+    {
+      "title": "How I AI: My First Impressions of Claude Opus 4.8 – Coding, Strategy, and Where It Shines",
+      "source": "ChatPRD Blog",
+      "author": "Claire Vo",
+      "publish_date": "2026-06-01",
+      "url": "https://www.chatprd.ai/how-i-ai/claude-opus-4-8-review",
+      "summary_zh": "这篇文章分享了作者对 Claude Opus 4.8 在复杂编码任务和策略任务上的初步体验，并引用了 SWE-Bench Pro 等基准成绩。但内容主要是早期印象与主观评测，缺少方法、实验设计和可复现实验细节。",
+      "summary_en": "This post offers an early hands-on impression of Claude Opus 4.8 across coding and strategy tasks and cites benchmark results such as SWE-Bench Pro. However, it is mostly a subjective review without rigorous methodology or reproducible evaluation detail.",
+      "why_it_matters_zh": "可作为模型市场动向的弱信号参考，但不足以支撑技术决策、选型或评估体系设计。",
+      "why_it_matters_en": "It may serve as a weak signal on model positioning, but it is not strong enough to drive technical decisions, model selection, or evaluation design.",
+      "key_takeaways_zh": [
+        "如果关注 Claude Code 生态，可把它当作补充感知，而非正式证据。",
+        "缺少公开 harness、任务集、失败案例拆解，因此技术信号有限。"
+      ],
+      "key_takeaways_en": [
+        "If you track the Claude Code ecosystem, treat this as directional color rather than evidence.",
+        "It lacks a public harness, task set, and failure analysis, so the technical signal is limited."
+      ],
+      "tags": [
+        "Claude Opus 4.8",
+        "model evaluation",
+        "borderline"
+      ],
+      "signal_score": 3,
+      "novelty_score": 4,
+      "actionability_score": 2
+    }
+  ],
+  "top_items": [
+    "Updates to GitHub Copilot billing and plans",
+    "Evaluation models in auto for individual plans",
+    "How I AI: My First Impressions of Claude Opus 4.8 – Coding, Strategy, and Where It Shines"
+  ],
+  "new_terms_zh": [
+    "AI Credits",
+    "evaluation models",
+    "user-level budgets",
+    "auto model selection"
+  ],
+  "new_terms_en": [
+    "AI Credits",
+    "evaluation models",
+    "user-level budgets",
+    "auto model selection"
+  ],
+  "themes_zh": [
+    "AI 编码工具从席位授权走向按量计费与预算治理",
+    "模型路由层变成开发体验与稳定性的关键控制面"
+  ],
+  "themes_en": [
+    "AI coding tools are moving from seat licensing to metered usage and budget governance",
+    "The model routing layer is becoming a key control plane for developer experience and stability"
+  ],
+  "implications_zh": [
+    "平台团队需要把 Copilot 纳入 FinOps、Runner 容量和内部成本归因体系。",
+    "工程组织需要为自动模型选择建立变更可见性、回归排查和可预测性策略。"
+  ],
+  "implications_en": [
+    "Platform teams should incorporate Copilot into FinOps, runner capacity planning, and internal chargeback processes.",
+    "Engineering orgs need visibility, regression handling, and predictability policies around automatic model selection."
+  ],
+  "reading_order": [
+    "Updates to GitHub Copilot billing and plans",
+    "Evaluation models in auto for individual plans",
+    "How I AI: My First Impressions of Claude Opus 4.8 – Coding, Strategy, and Where It Shines"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的归档页与 feed 汇总页，它们是重复入口，不是独立信息源。",
+    "偏主观的早期模型体验文，若没有公开评测方法、任务集和失败分析，可暂不纳入正式情报。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog archive and feed pages; they are duplicate entry points, not distinct sources.",
+    "Subjective first-impression model reviews without public methodology, task sets, or failure analysis should not drive formal intelligence."
+  ]
+}
