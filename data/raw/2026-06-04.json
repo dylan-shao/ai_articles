@@ -1,0 +1,44 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.03 Release GitHub Copilot in Visual Studio Code, May releases copilot Jun.02 Retired GPT-4.1 deprecated copilot Jun.02 Improvement Expanded technical preview availability for the GitHub Copilot app client apps copilot ... +1 Jun.02 Release Copilot SDK is now generally available copilot Jun.02 Release Copilot CLI: Improved UI, rubber duck, prompt scheduling, and voice input client apps copilot ... +1 Jun.02 Release Cloud and local sandboxes for GitHub Copilot now in public preview application security copilot platform governance ... +2 Jun.02 Improvement Shape Copilot code review around your team copilot Jun.02 Release GitHub Copilot code review for Azure Repos is now in technical preview copilot Jun.02 Release Extend GitHub with agent apps copilot Jun.02 Improvement Introducing Copilot CLI and agentic capabilities enhancements in JetBrains IDEs copilot Jun.02 Release Gemini models in Copilot CLI, cloud agent, and the Copilot app copilot Jun.02 Release Gain insights across your agent sessions with /chronicle copilot Jun.02 Release Schedule and automate tasks with Copilot cloud agent copilot Jun.02 Release Copilot Memory supports user preferences for Business, Enterprise copilot enterprise management tools ... +1 Jun.02 Release MAI-Code-1-Flash is now available for GitHub Copilot copilot Jun.02 Release GitHub Copilot in Eclipse: ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: June 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/06/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: June 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.03 Release GitHub Copilot in Visual Studio Code, May releases copilot Jun.02 Retired GPT-4.1 deprecated copilot Jun.02 Improvement Expanded technical preview availability for the GitHub Copilot app client apps copilot ... +1 Jun.02 Release Copilot SDK is now generally available copilot Jun.02 Release Copilot CLI: Improved UI, rubber duck, prompt scheduling, and voice input client apps copilot ... +1 Jun.02 Release Cloud and local sandboxes for GitHub Copilot now in public preview application security copilot platform governance ... +2 Jun.02 Improvement Shape Copilot code review around your team copilot Jun.02 Release GitHub Copilot code review for Azure Repos is now in technical preview copilot Jun.02 Release Extend GitHub with agent apps copilot Jun.02 Improvement Introducing Copilot CLI and agentic capabilities enhancements in JetBrains IDEs copilot Jun.02 Release Gemini models in Copilot CLI, cloud agent, and the Copilot app copilot Jun.02 Release Gain insights across your agent sessions with /chronicle copilot Jun.02 Release Schedule and automate tasks with Copilot cloud agent copilot Jun.02 Release Copilot Memory supports user preferences for Business, Enterprise copilot enterprise management tools ... +1 Jun.02 Release MAI-Code-1-Flash is now available for GitHub Copilot copilot Jun.02 Release GitHub",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Copilot in Visual Studio Code, May releases - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-03-github-copilot-in-visual-studio-code-may-releases/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "VS Code continues with weekly stable releases. This changelog covers releases v1.120 through v1.123, the releases we shipped throughout May and early June 2026. In May, we made the Agents…",
+    "body_excerpt": "GitHub Copilot in Visual Studio Code, May releases - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot CLI Back to changelog Release June 3, 2026 • 3 minute read GitHub Copilot in Visual Studio Code, May releases Table of Contents Agents window Language models and BYOK Terminal safety and efficiency Also new Menu. Currently selected: Agents window Agents window Language models and BYOK Terminal safety and efficiency Also new VS Code continues with weekly stable releases. This changelog covers releases v1.120 through v1.123 , the releases we shipped throughout May and early June 2026. In May, we made the Agents window available in VS Code Stable as a preview, giving users an agent-first experience focused on completing tasks rather than editing code. We also improved support for remotely controlling longer-running, more complex agent sessions. VS Code supports bring-your-own-key (BYOK) models, letting you use your own language model API keys. This month, we expanded BYOK to air-gapped environments and added controls to specify which models handle utility tasks like commit message generation. Agents window Agents window in Stable (preview) : Work agent-first across multiple projects with a dedicated surface for faster navigation and change review. Remote agents (preview) : Run sessions on remote machines over SSH or Dev Tunnels, with sessions continuing even when the client disconnects. Agent Host Protocol (AHP) : Continued investment in an open protocol for synchronizing agent session state across multiple clients. Session preferences persist in new sessions : New sessions keep your recent choices, including agent harness and isolation mode. Sessions and Git flow improvements : New sessions can pull base branch updates before the agent starts edits, the Agents window refreshes Git state automatically after commits, syncs",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

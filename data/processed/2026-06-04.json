@@ -1,0 +1,92 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选源高度集中在 GitHub Copilot/VS Code 更新，真正有技术信号的是 VS Code 月度发布说明：它把“代理式开发”的几个关键基础设施公开化了，包括 Agents window、远程长会话、BYOK 扩展到隔离环境，以及 Agent Host Protocol。",
+    "对后端/平台负责人而言，这不是单纯产品功能堆叠，而是在逐步形成可治理的 agent runtime：会话状态同步、远端执行、模型路由、隔离模式与 Git 工作流耦合，说明企业级 AI coding 正在从聊天补全转向可持续运行的任务执行系统。"
+  ],
+  "executive_summary_en": [
+    "Today's candidate set is narrow and mostly GitHub Copilot changelog noise; the strongest technical signal is the VS Code monthly release note, which exposes core building blocks for agentic development: an Agents window, remote long-running sessions, BYOK in constrained environments, and the Agent Host Protocol.",
+    "For backend/platform leaders, this matters less as feature news and more as evidence of an emerging governable agent runtime: session state sync, remote execution, model routing, isolation modes, and tighter Git workflow integration are becoming first-class parts of enterprise AI coding systems."
+  ],
+  "items": [
+    {
+      "title": "GitHub Copilot in Visual Studio Code, May releases",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-03",
+      "url": "https://github.blog/changelog/2026-06-03-github-copilot-in-visual-studio-code-may-releases/",
+      "summary_zh": "这篇月度更新最有价值的部分不是零散新功能，而是把 VS Code/Copilot 的 agent 执行面逐渐产品化：Agents window 进入 Stable 预览，支持跨项目任务导向操作；远程 agent 可通过 SSH 或 Dev Tunnels 在远端机器上持续运行；BYOK 扩展到 air-gapped 环境，并允许为不同辅助任务指定模型；同时继续推进 Agent Host Protocol，用于跨客户端同步 agent 会话状态。",
+      "summary_en": "The important signal in this monthly release is not individual feature churn, but the productization of an agent execution surface inside VS Code/Copilot: the Agents window is now in Stable preview for task-oriented, multi-project work; remote agents can run over SSH or Dev Tunnels and continue when the client disconnects; BYOK now extends to air-gapped environments with model controls for utility tasks; and GitHub is continuing investment in the Agent Host Protocol for synchronizing agent session state across clients.",
+      "why_it_matters_zh": "这说明 IDE 内的 AI coding 正在从“本地交互式助手”演进为“可托管、可远程、可同步、可治理”的 agent 系统。对平台团队来说，AHP、远程会话和 BYOK/隔离能力比单个模型升级更关键，因为它们直接决定企业是否能把 agent 接入内网、受控执行环境和现有开发治理流程。",
+      "why_it_matters_en": "This shows AI coding in the IDE moving from a local interactive assistant to a managed, remote-capable, stateful, and governable agent system. For platform teams, AHP, remote sessions, and BYOK/isolation features matter more than model swaps because they determine whether agents can operate inside enterprise networks, controlled execution environments, and existing engineering governance.",
+      "key_takeaways_zh": [
+        "Agents window 把任务执行、跨项目导航和变更审查整合成 agent-first 工作台，意味着 IDE 正在重新围绕代理工作流设计。",
+        "远程 agent 与断线后继续运行的能力，指向长期任务、后台执行和更接近 CI/开发容器的执行模型。",
+        "BYOK 进入 air-gapped 环境并支持按任务路由模型，反映企业部署对合规、成本与模型控制的要求正在成为核心能力。",
+        "Agent Host Protocol 是最值得跟踪的底层信号之一：它可能成为多客户端、多宿主之间共享 agent 会话状态的关键接口层。"
+      ],
+      "key_takeaways_en": [
+        "The Agents window consolidates task execution, multi-project navigation, and change review into an agent-first workspace, signaling IDE redesign around agent workflows.",
+        "Remote agents plus disconnected session continuity point toward long-running tasks, background execution, and a model closer to CI/dev container execution than local chat.",
+        "BYOK in air-gapped environments with per-task model routing reflects rising enterprise demand for compliance, cost control, and model governance.",
+        "Agent Host Protocol is the most important lower-level signal to track: it could become the interface layer for sharing agent session state across clients and hosts."
+      ],
+      "tags": [
+        "AI coding agents",
+        "VS Code",
+        "GitHub Copilot",
+        "Agent Host Protocol",
+        "BYOK",
+        "remote execution",
+        "developer tooling"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "GitHub Copilot in Visual Studio Code, May releases"
+  ],
+  "new_terms_zh": [
+    "Agent Host Protocol (AHP)：用于在多个客户端之间同步代理会话状态的开放协议方向。",
+    "BYOK in air-gapped environments：在隔离/内网环境中使用自带模型密钥的企业部署模式。",
+    "Remote agents：通过 SSH 或 Dev Tunnels 在远端机器持续运行的编码代理会话。"
+  ],
+  "new_terms_en": [
+    "Agent Host Protocol (AHP): an open protocol direction for synchronizing agent session state across multiple clients.",
+    "BYOK in air-gapped environments: an enterprise deployment mode where teams use their own model keys inside isolated networks.",
+    "Remote agents: coding agent sessions that run persistently on remote machines over SSH or Dev Tunnels."
+  ],
+  "themes_zh": [
+    "AI coding 从聊天式补全转向任务式、长会话、远程执行的 agent runtime。",
+    "企业采用的关键约束正从模型能力转向协议、隔离、会话持久化和治理控制。",
+    "IDE、远程宿主与 Git 工作流正在被整合为统一的代理执行面。"
+  ],
+  "themes_en": [
+    "AI coding is moving from chat-style assistance to task-oriented, long-running, remote-executed agent runtimes.",
+    "Enterprise adoption constraints are shifting from raw model quality to protocol design, isolation, session persistence, and governance.",
+    "The IDE, remote host, and Git workflow are being fused into a unified agent execution surface."
+  ],
+  "implications_zh": [
+    "如果你在建设内部编码代理平台，应优先评估会话状态模型、远程执行宿主、断线恢复以及与 Git/代码评审的耦合点，而不是只比较模型排行榜。",
+    "需要尽早定义模型路由与权限边界：哪些任务可走外部模型，哪些必须在内网/沙箱执行。",
+    "值得持续关注 AHP 或类似协议是否开放成熟，因为这会影响多 IDE、CLI、Web 端统一代理体验的可行性。"
+  ],
+  "implications_en": [
+    "If you are building an internal coding-agent platform, prioritize session state architecture, remote execution hosts, disconnect recovery, and Git/code-review integration over model leaderboard comparisons.",
+    "Model routing and permission boundaries need to be defined early: which tasks may use external models, and which must run in internal or sandboxed environments.",
+    "Track whether AHP or similar protocols mature openly, since that will shape the feasibility of a unified agent experience across IDE, CLI, and web surfaces."
+  ],
+  "reading_order": [
+    "GitHub Copilot in Visual Studio Code, May releases"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 首页与月度归档页只是聚合入口，信息重复且缺少额外技术细节。",
+    "本轮候选里其余内容基本属于产品发布流，不足以单独进入高信号摘要。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog homepage and monthly archive are just aggregation pages with duplicated information and no added technical detail.",
+    "The rest of this candidate set is mostly product-release stream noise and does not justify separate inclusion in a high-signal digest."
+  ]
+}
