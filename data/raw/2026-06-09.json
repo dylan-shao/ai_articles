@@ -1,0 +1,16 @@
+[
+  {
+    "title": "IP allow list coverage for EMU namespaces in general availability - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-08-ip-allow-list-coverage-for-emu-namespaces-in-general-availability/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-08T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Enterprise Cloud with Enterprise Managed Users (EMUs) can now enforce GitHub’s native IP allow list configuration across user namespaces. This feature is now generally available. EMUs allow the enterprise…",
+    "body_excerpt": "IP allow list coverage for EMU namespaces in general availability - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement June 8, 2026 • 1 minute read IP allow list coverage for EMU namespaces in general availability GitHub Enterprise Cloud with Enterprise Managed Users (EMUs) can now enforce GitHub’s native IP allow list configuration across user namespaces. This feature is now generally available. EMUs allow the enterprise to own the user accounts within their enterprise. Often, enterprises want all repositories to adhere to their enterprise’s network access policies, including those owned by the user namespace associated to their EMUs. This feature ensures that EMU users can only access their account’s repositories from an allowed IP address. Access through the web UI, Git protocol, and APIs is filtered by the IP allow list. All credentials, including personal access tokens, app tokens, and SSH keys, are covered by this policy. To learn more, read about configuring IP allow lists on GitHub . enterprise management tools Share Copied Shared Back to changelog Related Posts Jun.05 Improvement Enterprise-managed plugins in VS Code in public preview client apps copilot enterprise management tools ... +2 Jun.04 Release Budget and usage management APIs now generally available account management enterprise management tools ... +1 Jun.04 Release API access to billing usage reports now generally available enterprise management tools Jun.04 Release Enterprise Teams is now generally available enterprise management tools Jun.02 Release Copilot Memory supports user preferences for Business, Enterprise copilot enterprise management tools ... +1 May.29 Improvement Copilot usage metrics API adds cohorts for AI adoption account management copilot enterprise management tools ... +2 May.26 Re",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

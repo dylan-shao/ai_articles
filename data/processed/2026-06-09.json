@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号较弱，只有一条与工程治理相关但不属于 AI 编码核心主题的 GitHub 企业功能更新。",
+    "该更新强调对 Enterprise Managed Users 命名空间施加统一 IP allow list，可提升企业在仓库访问、API、Git 协议与令牌层面的网络边界控制。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with only one enterprise-governance update that is relevant but not central to AI coding.",
+    "The update extends IP allow list enforcement to Enterprise Managed Users namespaces, strengthening network-boundary controls across repos, APIs, Git access, and credentials."
+  ],
+  "items": [
+    {
+      "title": "IP allow list coverage for EMU namespaces in general availability - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-08",
+      "url": "https://github.blog/changelog/2026-06-08-ip-allow-list-coverage-for-emu-namespaces-in-general-availability/",
+      "summary_zh": "GitHub 宣布 Enterprise Managed Users（EMU）命名空间的 IP allow list 覆盖进入 GA。企业现在可以把原生 IP allow list 策略统一施加到 EMU 用户命名空间下的仓库访问，覆盖 Web UI、Git 协议、API，以及 PAT、应用令牌和 SSH key 等凭据。",
+      "summary_en": "GitHub announced GA for IP allow list coverage on Enterprise Managed Users (EMU) namespaces. Enterprises can now apply native IP allow list policy consistently to repository access within EMU user namespaces, covering the web UI, Git protocol, APIs, and credentials such as PATs, app tokens, and SSH keys.",
+      "why_it_matters_zh": "虽然这不是 AI 编码能力本身，但对大规模企业导入 Copilot、编码代理和自动化开发工作流很关键：当开发活动越来越多地通过 API、CLI、代理和服务账号执行时，网络边界与凭据使用范围必须能被统一治理。该能力降低了“用户个人命名空间成为治理盲区”的风险。",
+      "why_it_matters_en": "While not an AI-coding capability itself, this matters for enterprise rollout of Copilot, coding agents, and automated developer workflows: as more development activity happens through APIs, CLIs, agents, and service credentials, network boundaries and credential usage need centralized enforcement. This closes a governance gap around user-owned EMU namespaces.",
+      "key_takeaways_zh": [
+        "EMU 用户命名空间现在可受企业级 IP allow list 统一约束，不再只局限于组织层或部分资源。",
+        "控制面覆盖 Web、Git、API 与多类凭据，意味着对代理式开发和自动化工具链的访问路径也能纳入同一网络策略。"
+      ],
+      "key_takeaways_en": [
+        "EMU user namespaces can now be governed by enterprise-wide IP allow lists rather than leaving user-owned areas as exceptions.",
+        "Coverage spans web, Git, APIs, and multiple credential types, bringing agentic development and automation access paths under the same network policy."
+      ],
+      "tags": [
+        "GitHub Enterprise",
+        "EMU",
+        "Access Control",
+        "Developer Governance",
+        "Security"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "IP allow list coverage for EMU namespaces in general availability - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "Enterprise Managed Users（EMU）",
+    "IP allow list"
+  ],
+  "new_terms_en": [
+    "Enterprise Managed Users (EMU)",
+    "IP allow list"
+  ],
+  "themes_zh": [
+    "企业开发治理正在向用户命名空间与自动化凭据延伸",
+    "AI 编码落地的配套需求是更细粒度的访问边界与审计控制"
+  ],
+  "themes_en": [
+    "Enterprise developer governance is extending into user namespaces and automated credentials",
+    "AI coding adoption increases demand for finer-grained access boundaries and auditable controls"
+  ],
+  "implications_zh": [
+    "若你的组织正在推动 Copilot、CLI agent 或基于 GitHub API 的自动化，应检查 EMU 命名空间是否曾绕过既有网络边界策略。",
+    "平台团队可把该能力纳入 AI 开发治理基线：统一限制凭据来源网络、减少个人空间中的合规例外。"
+  ],
+  "implications_en": [
+    "If your organization is rolling out Copilot, CLI agents, or GitHub API-based automation, verify whether EMU namespaces previously sat outside existing network-boundary policy.",
+    "Platform teams can incorporate this into AI development governance baselines by restricting credential use to approved networks and reducing compliance exceptions in user-owned spaces."
+  ],
+  "reading_order": [
+    "IP allow list coverage for EMU namespaces in general availability - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新误判为 AI 编码能力突破；它更偏向企业治理与访问控制。",
+    "如果你只关注模型、评测或代理框架，这条内容优先级较低。"
+  ],
+  "what_to_ignore_en": [
+    "Do not mistake this for an AI coding capability breakthrough; it is primarily an enterprise governance and access-control update.",
+    "If your focus is strictly on models, evals, or agent frameworks, this should be considered lower priority."
+  ]
+}
