@@ -1,0 +1,180 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最有信号的更新集中在 GitHub 将更多“代理友好”的工作流下沉到 CLI 与 Chat：任务结构化、会话可追溯，以及本地变更的按需安全审查。",
+    "对后端/平台负责人来说，这些变化说明 AI coding 正在从“补全工具”转向“可编排的工程接口”：issue 结构、agent 日志、session 检索和终端安全检查都开始可被自动化消费。",
+    "值得优先关注的是 gh issue 新增层级/依赖/JSON 字段，以及 Copilot Chat 对 agent session 的可查询可解释支持，它们直接影响多代理协作、审计与内部开发平台集成。"
+  ],
+  "executive_summary_en": [
+    "The highest-signal updates today show GitHub pushing more agent-friendly workflows into CLI and Chat: structured work management, session traceability, and on-demand security review of local changes.",
+    "For backend/platform leaders, this signals a shift from AI coding as autocomplete to AI coding as an orchestratable engineering interface: issue structure, agent logs, session search, and terminal-native security checks are becoming automatable primitives.",
+    "The most important items are the new gh issue hierarchy/dependency/JSON support and Copilot Chat's ability to query agent sessions, because they directly affect multi-agent coordination, auditability, and internal developer platform integration."
+  ],
+  "items": [
+    {
+      "title": "Manage sub-issues, types, and dependencies from GitHub CLI",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-10",
+      "url": "https://github.blog/changelog/2026-06-10-manage-sub-issues-types-and-dependencies-from-github-cli/",
+      "summary_zh": "GitHub CLI v2.94.0 现在直接支持 issue type、父/子 issue 关系和 blocked-by/blocking 依赖，并在 gh issue view/list 中暴露新的 JSON 字段，方便自动化和代理读取任务结构。",
+      "summary_en": "GitHub CLI v2.94.0 now supports issue types, parent/sub-issue relationships, and blocked-by/blocking dependencies directly in gh issue, with new JSON fields in view/list for automation and agents.",
+      "why_it_matters_zh": "这不是普通 CLI 补功能，而是在把“任务图谱”正式变成可编程接口。对依赖 GitHub 作为系统边界的 AI coding agent 而言，结构化 issue 元数据决定了它们能否稳定理解任务拆解、依赖约束和执行顺序。",
+      "why_it_matters_en": "This is more than a CLI convenience update; it turns work structure into a programmable interface. For AI coding agents that use GitHub as their operating surface, structured issue metadata determines whether they can reliably understand decomposition, dependency constraints, and execution order.",
+      "key_takeaways_zh": [
+        "gh issue 可直接读写类型、父子关系和依赖，减少使用 gh api 或网页操作的胶水层。",
+        "新增 JSON 字段意味着内部自动化、代理编排器和评测/回放系统可以稳定消费任务结构。"
+      ],
+      "key_takeaways_en": [
+        "gh issue can now directly read/write types, parent-child relationships, and dependencies, reducing the need for raw gh api calls or browser automation.",
+        "The new JSON fields make issue structure consumable by internal automation, agent orchestrators, and evaluation/replay systems."
+      ],
+      "tags": [
+        "github-cli",
+        "agent-workflows",
+        "issue-graph",
+        "automation"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Copilot Chat now sees your agent sessions",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-10",
+      "url": "https://github.blog/changelog/2026-06-10-copilot-chat-now-sees-your-agent-sessions/",
+      "summary_zh": "Copilot Chat 现在可感知并展示云端 agent session 状态，并新增两类能力：拉取 agent 日志进行问答，以及按主题/标题/时间检索历史 session。",
+      "summary_en": "Copilot Chat can now surface the status of cloud agent sessions and adds two capabilities: pulling agent logs into chat for Q&A and searching past sessions by topic, title, or recency.",
+      "why_it_matters_zh": "AI coding 落地的核心瓶颈之一不是生成代码，而是会话可追踪性与交接。把 session 日志和检索能力拉进 Chat，意味着 GitHub 在构建 agent work 的可解释层与记忆层，这对审计、复盘、团队接力和失败诊断都很关键。",
+      "why_it_matters_en": "One of the biggest bottlenecks in production AI coding is not generation but traceability and handoff. Bringing session logs and retrieval into Chat means GitHub is building an interpretability and memory layer for agent work, which matters for audit, retrospection, team handoff, and failure analysis.",
+      "key_takeaways_zh": [
+        "agent 不再是一次性黑盒执行；历史会话开始成为可搜索、可追问的工程资产。",
+        "对平台团队来说，可把 agent log/sessions 视为新的可观测性对象，用于治理、合规与效果评估。"
+      ],
+      "key_takeaways_en": [
+        "Agent work is becoming less of a one-shot black box; past sessions are turning into searchable, queryable engineering artifacts.",
+        "For platform teams, agent logs and sessions can now be treated as observability objects for governance, compliance, and effectiveness analysis."
+      ],
+      "tags": [
+        "copilot",
+        "agent-observability",
+        "session-memory",
+        "developer-workflow"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Dedicated security review command now available in Copilot CLI",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-10",
+      "url": "https://github.blog/changelog/2026-06-10-dedicated-security-review-command-now-available-in-copilot-cli/",
+      "summary_zh": "Copilot CLI 新增实验性 /security-review 命令，可直接在终端对本地代码变更做 AI 驱动的安全审查，输出高置信问题、严重度/置信度评分和修复建议。",
+      "summary_en": "Copilot CLI adds an experimental /security-review command that performs AI-driven security review on local code changes in the terminal, returning high-confidence findings, severity/confidence scores, and actionable fixes.",
+      "why_it_matters_zh": "它把安全审查前移到 commit 前、且独立于 Code Scanning/Dependabot/Secret Scanning，这代表 AI coding 工具开始承担“轻量即刻验证器”的角色。对采用代理写码的团队，关键不是替代现有 AppSec，而是在最早反馈环节降低明显漏洞流入仓库的概率。",
+      "why_it_matters_en": "It moves security review earlier, before commit, and operates independently of Code Scanning, Dependabot, or Secret Scanning. That signals AI coding tools taking on the role of lightweight immediate validators. For teams using coding agents, the value is not replacing AppSec, but reducing the chance of obvious vulnerabilities entering the repo at the earliest feedback point.",
+      "key_takeaways_zh": [
+        "这是终端内、按需、面向 diff 的安全检查，更适合代理生成代码后的快速 gate。",
+        "若效果足够稳定，可将其纳入 pre-commit、sandbox review 或 agent self-check 流程。"
+      ],
+      "key_takeaways_en": [
+        "This is an in-terminal, on-demand, diff-oriented security check, well suited as a fast gate after agent-generated changes.",
+        "If reliable enough, it could be integrated into pre-commit, sandbox review, or agent self-check workflows."
+      ],
+      "tags": [
+        "security-review",
+        "copilot-cli",
+        "appsec",
+        "agent-validation"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "List, view, and create discussions in GitHub CLI",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-10",
+      "url": "https://github.blog/changelog/2026-06-10-list-view-and-create-discussions-in-github-cli/",
+      "summary_zh": "GitHub CLI 新增 gh discussion 命令组，支持在终端中浏览、查看、创建、编辑和评论 Discussions，避免依赖 gh api 或浏览器。",
+      "summary_en": "GitHub CLI adds a gh discussion command group for browsing, viewing, creating, editing, and commenting on Discussions directly from the terminal, without raw gh api calls or browser use.",
+      "why_it_matters_zh": "单看是小功能，但对代理和自动化来说，它让设计讨论、RFC、Q&A 等非代码上下文更容易进入终端工作流。如果后续暴露更多结构化输出，discussion 也可能成为 agent 可读写的知识与协作面。",
+      "why_it_matters_en": "On its own this is a smaller update, but for agents and automation it makes design discussions, RFCs, and Q&A more accessible from terminal-native workflows. If more structured output follows, Discussions could become another writable/readable surface for agent collaboration and knowledge capture.",
+      "key_takeaways_zh": [
+        "GitHub 正持续把更多协作对象下沉到 gh，降低代理依赖网页自动化的需要。",
+        "适合把支持/设计讨论与代码工作流串起来，但当前技术深度和可编排性仍弱于 issue 结构更新。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is steadily moving more collaboration surfaces into gh, reducing agent dependence on browser automation.",
+        "Useful for linking support/design conversations into code workflows, though currently less technically deep and less orchestratable than the issue-structure update."
+      ],
+      "tags": [
+        "github-cli",
+        "discussions",
+        "collaboration",
+        "agent-interface"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Manage sub-issues, types, and dependencies from GitHub CLI",
+    "Copilot Chat now sees your agent sessions",
+    "Dedicated security review command now available in Copilot CLI"
+  ],
+  "new_terms_zh": [
+    "Agent session search：在聊天界面按主题、标题或时间检索历史代理会话的能力。",
+    "Agent logs as context：把代理执行日志拉入对话上下文，用于解释、追问和审计。",
+    "Issue graph in CLI：通过 gh 原生操作任务层级与依赖，把工作项图谱暴露给自动化。",
+    "Terminal-native AI security review：在终端对本地 diff 做 AI 驱动安全审查的工作流。"
+  ],
+  "new_terms_en": [
+    "Agent session search: the ability to retrieve past agent sessions in chat by topic, title, or recency.",
+    "Agent logs as context: pulling execution logs into conversational context for explanation, follow-up, and audit.",
+    "Issue graph in CLI: exposing work-item hierarchy and dependency graphs through native gh operations.",
+    "Terminal-native AI security review: AI-driven security review of local diffs directly inside the terminal."
+  ],
+  "themes_zh": [
+    "AI coding 正在获得可编排的工程控制面，而不只是生成能力。",
+    "GitHub 将任务结构、协作上下文和验证环节统一进 CLI/Chat 界面。",
+    "代理采用的下一阶段重点转向可观测性、治理与自动化集成。"
+  ],
+  "themes_en": [
+    "AI coding is gaining an orchestratable engineering control plane, not just generation features.",
+    "GitHub is unifying work structure, collaboration context, and validation loops into CLI/Chat surfaces.",
+    "The next phase of agent adoption is shifting toward observability, governance, and automation integration."
+  ],
+  "implications_zh": [
+    "内部开发平台可开始把 gh issue 的结构化字段作为代理任务编排的标准接口，而非自建元数据层。",
+    "需要为 agent session/log 制定保留、索引和权限策略，因为这些记录会逐渐变成审计与知识资产。",
+    "可评估将 AI 安全审查插入本地开发和代理提交前流程，但应与现有 SAST/secret scanning 明确分层。"
+  ],
+  "implications_en": [
+    "Internal developer platforms can start treating structured gh issue fields as a standard interface for agent task orchestration instead of inventing separate metadata layers.",
+    "Teams should define retention, indexing, and access policies for agent sessions/logs, as they are becoming both audit artifacts and knowledge assets.",
+    "It is worth evaluating AI security review in local development and pre-submit agent flows, while keeping a clear separation from existing SAST and secret-scanning controls."
+  ],
+  "reading_order": [
+    "Manage sub-issues, types, and dependencies from GitHub CLI",
+    "Copilot Chat now sees your agent sessions",
+    "Dedicated security review command now available in Copilot CLI",
+    "List, view, and create discussions in GitHub CLI"
+  ],
+  "what_to_ignore_zh": [
+    "成本中心上限提升属于企业管理改进，但对 AI coding、代理编排或开发者工具链没有足够技术信号。",
+    "归档页和总览页是重复入口，不应替代具体 changelog 条目阅读。",
+    "今天没有看到关于 MCP、代码评测基准、repo understanding 或 harness 设计的原创深度资料，因此不要过度扩展解读。"
+  ],
+  "what_to_ignore_en": [
+    "The cost center limit increase is an enterprise admin update, but it has little technical signal for AI coding, agent orchestration, or developer tooling.",
+    "Archive and index pages are duplicate entry points and should not be treated as primary reads over the individual changelog items.",
+    "There is no original deep material today on MCP, coding eval benchmarks, repo understanding, or harness design, so avoid over-interpreting the day."
+  ]
+}
