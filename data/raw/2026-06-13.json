@@ -1,0 +1,44 @@
+[
+  {
+    "title": "My Honest Review of Claude Fable 5 | ChatPRD Blog",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/how-i-ai/claude-fable-5-review",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-06-11T22:39:02.010000+00:00",
+    "author": "Claire Vo",
+    "excerpt": "Anthropic's first Mythos-class model is finally here. I got early access to Claude Fable 5 and tested it across coding, writing, design, vision, and multi-agent workflows. Here's what actually impressed me, what disappointed me, and where this model belongs in your AI stack.",
+    "body_excerpt": "My Honest Review of Claude Fable 5 | ChatPRD Blog ChatPRD Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free ← All articles Back / How I AI / My Honest Review of Claude Fable 5 How I AI My Honest Review of Claude Fable 5 Anthropic's first Mythos-class model is finally here. I got early access to Claude Fable 5 and tested it across coding, writing, design, vision, and multi-agent workflows. Here's what actually impressed me, what disappointed me, and where this model belongs in your AI stack. Claire Vo June 11, 2026 · 8 min read Mythos Has Arrived (Sort Of) The model, the myth, the legend…Anthropic's Mythos intelligence class has finally dropped. Well, baby Mythos. We're calling it Fable 5, and this new model is crushing benchmarks. But the question is: can it crush my backlog? I got early access to the model, and of course I have my own opinions on where it does really well, where it needs a little work, and the question on everyone's mind: does it live up to the terrifying marketing hype? This review is really going to focus on what the everyday user, what the everyday software engineer is going to think about when they're using this model. What Anthropic Is Telling Us Fable 5 is a completely new model class . We had Sonnet, we had Opus, and now we have Mythos, the first of which is Fable 5. It's completely state of the art, exceeding every benchmark Anthropic tested by a significant amount. Quick pricing note: it's not cheap. $10 per million input tokens and $50 per million output tokens . It's a new tier above Opus. If you're going to use this model, you're going to pay the price. What Anthropic says it can do that earlier models couldn't: Very autonomous — including running days-long, asynchronous tasks An engineer's engineer — and that's both the upside and downside I experienced Proactive — it doesn't wait for you to spell everything out Exceptionally good at vision — this is where I actually really loved the",
+    "keyword_hits": 2,
+    "youtube_url": "https://www.youtube.com/watch?v=IREnr4I89Ho",
+    "youtube_video_id": "IREnr4I89Ho"
+  },
+  {
+    "title": "Copilot code review: New configurations and controls - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "With new organization runner controls, Copilot content exclusion support, and the removal of the character limit on repository custom instructions, Copilot code review is now easier to tailor to your…",
+    "body_excerpt": "Copilot code review: New configurations and controls - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement June 12, 2026 • 2 minute read Copilot code review: New configurations and controls Table of Contents ⚙️ Organization runner controls 🛡️ Content exclusion support 📝 Custom instructions character limits have been removed Menu. Currently selected: ⚙️ Organization runner controls ⚙️ Organization runner controls 🛡️ Content exclusion support 📝 Custom instructions character limits have been removed With new organization runner controls, Copilot content exclusion support, and the removal of the character limit on repository custom instructions, Copilot code review is now easier to tailor to your needs within your repository and organization. ⚙️ Organization runner controls With the release of Copilot code review’s agentic architecture , we announced that Copilot code review is powered by GitHub Actions. By default, Copilot code review runs on the standard GitHub-hosted runner, but teams can configure self-hosted or large runners for more control over the runner type. To support ease of setup of custom runners, Copilot code review’s runner type can now be configured at the organization-level, meaning that one configuration can apply to all repositories within the organization. Organization admins can now: Set Copilot code review’s default runner to be automatically used across all repositories, without requiring each repository to be individually configured. Lock the runner setting so the organization default overrides any individual repository configurations. To set this up, navigate to your organization, then go to Copilot -> Runner type -> Runner type configuration . Your configuration will apply to both Copilot code review and Copilot cloud agent if both are enabled. 🛡️ Co",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Actions: Minimum version enforcement timeline for self-hosted runners - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-12-github-actions-minimum-version-enforcement-timeline-for-self-hosted-runners/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Actions is resuming enforcement of version requirements for self-hosted runners on github.com and GitHub Enterprise Cloud with Data Residency. This change is part of a broader effort to rebuild…",
+    "body_excerpt": "GitHub Actions: Minimum version enforcement timeline for self-hosted runners - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Retired June 12, 2026 • 4 minute read GitHub Actions: Minimum version enforcement timeline for self-hosted runners Table of Contents Enforcement timeline What you'll see before enforcement Identify runners that need upgrading What you need to do Share your feedback Menu. Currently selected: Enforcement timeline Enforcement timeline What you'll see before enforcement Identify runners that need upgrading What you need to do Share your feedback GitHub Actions is resuming enforcement of version requirements for self-hosted runners on github.com and GitHub Enterprise Cloud with Data Residency. This change is part of a broader effort to rebuild the core of GitHub Actions to increase our reliability and availability. In early 2024, the Actions team began rearchitecting the backend services that power job execution and runner communication—a foundational investment in the reliability, availability, and performance our customers depend on. The new architecture now handles over 120 million jobs per day, more than three times the volume before the migration, and enables enterprises to start seven times more jobs per minute than previously possible. Resuming version enforcement is the next step in completing this migration: as all runners move onto the new platform, older runner versions that are incompatible with the updated infrastructure can no longer be supported. There are two requirements that together keep a runner compatible with the new platform: To configure or (re)register a runner: The runner must be on version 2.329.0 or later. This is the minimum version required for the new architecture to recognize the runner and allow it to connect. To continue execut",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

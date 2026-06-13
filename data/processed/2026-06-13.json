@@ -1,0 +1,123 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天高信号内容主要集中在 GitHub 对 AI 代码审查与执行基础设施的企业级控制增强，而不是模型评测或营销型发布。",
+    "最值得关注的是 Copilot code review 的组织级 runner 控制、内容排除策略与自定义指令放宽，这直接影响企业如何安全、统一地部署代理式代码审查。",
+    "GitHub Actions 对自托管 runner 的最低版本强制执行时间线也值得纳入，因为 AI 代码审查与 cloud agent 已绑定 Actions 执行面，底层 runner 合规性会变成 AI 开发工作流的前置条件。"
+  ],
+  "executive_summary_en": [
+    "Today’s strongest signals are about GitHub’s enterprise controls for AI code review and the execution substrate behind agentic workflows, not model reviews or launch hype.",
+    "The top item is Copilot code review’s new org-level runner controls, content exclusion support, and removal of custom-instruction limits, all of which materially affect secure and standardized deployment of agentic review.",
+    "GitHub Actions’ self-hosted runner version enforcement also matters because AI code review and cloud agents now ride on the Actions execution plane, making runner compliance a prerequisite for AI-enabled developer workflows."
+  ],
+  "items": [
+    {
+      "title": "Copilot code review: New configurations and controls - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-12",
+      "url": "https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/",
+      "summary_zh": "GitHub 为 Copilot code review 增加了三项关键企业控制：组织级 runner 类型配置、内容排除支持，以及仓库自定义指令字符限制取消。由于 Copilot code review 采用基于 GitHub Actions 的 agentic 架构，这些能力本质上是在给 AI 代码审查的执行环境、可见数据范围和行为约束提供集中化治理入口。",
+      "summary_en": "GitHub added three important enterprise controls to Copilot code review: organization-level runner type configuration, content exclusion support, and removal of the character limit for repository custom instructions. Because Copilot code review uses an agentic architecture powered by GitHub Actions, these changes effectively add centralized governance over execution environment, visible data scope, and behavioral guidance for AI review.",
+      "why_it_matters_zh": "这不是普通功能小更新，而是 AI 代码审查开始进入“平台治理”阶段的明确信号。对平台团队而言，真正难点不是让 agent 能跑，而是让它在合规、隔离、性能、成本和组织一致性约束下可规模化运行。组织级 runner 锁定意味着企业可以统一把 AI 审查流量导向自托管或大规格 runner；内容排除意味着可以更现实地处理敏感代码与合规边界；更长的自定义指令则让团队把审查规范、架构约束和语言风格固化为可执行策略。",
+      "why_it_matters_en": "This is more than a minor feature update; it is a clear signal that AI code review is entering a platform-governance phase. For platform teams, the hard problem is no longer getting an agent to run, but scaling it under compliance, isolation, performance, cost, and org-wide consistency constraints. Org-level runner locking lets enterprises route AI review workloads onto self-hosted or larger runners by default; content exclusion enables practical handling of sensitive code and policy boundaries; and longer custom instructions allow teams to encode review norms, architectural constraints, and style rules as operational policy.",
+      "key_takeaways_zh": [
+        "Copilot code review 的执行面与 GitHub Actions 深度绑定，runner 选择已成为 AI 审查架构设计的一部分。",
+        "组织级默认值与锁定能力，说明企业采用焦点正从“给开发者一个 AI 功能”转向“为整个组织定义受控默认行为”。",
+        "内容排除与更长指令窗口，使 AI 审查更接近可治理的内部平台能力，而非单点插件。"
+      ],
+      "key_takeaways_en": [
+        "Copilot code review is now tightly coupled to the GitHub Actions execution plane, making runner selection part of AI review architecture.",
+        "Org-level defaults and locking show the adoption focus shifting from giving developers an AI feature to defining controlled behavior for the whole organization.",
+        "Content exclusion and larger instruction budgets make AI review look more like a governable internal platform capability than a point feature."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Code Review",
+        "Agentic Workflows",
+        "GitHub Actions",
+        "Enterprise Governance"
+      ],
+      "signal_score": 10,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Actions: Minimum version enforcement timeline for self-hosted runners - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-12",
+      "url": "https://github.blog/changelog/2026-06-12-github-actions-minimum-version-enforcement-timeline-for-self-hosted-runners/",
+      "summary_zh": "GitHub 恢复对自托管 Actions runner 最低版本的强制执行，并给出了时间线与兼容性要求。文章还披露了底层架构迁移背景：新的 Actions 基础设施已支撑每天超过 1.2 亿个 job，并显著提升企业作业启动吞吐。随着旧 runner 无法兼容新平台，升级 runner 版本将不只是 CI 维护事项，也会直接影响依赖 Actions 的 Copilot code review 和 cloud agent。",
+      "summary_en": "GitHub is resuming minimum version enforcement for self-hosted Actions runners and provided a timeline plus compatibility requirements. The post also reveals the infrastructure context: the new Actions architecture now handles more than 120 million jobs per day and materially improves enterprise job-start throughput. As older runners become incompatible with the new platform, upgrading runner versions becomes not just a CI maintenance task but a direct dependency for Copilot code review and cloud agents that rely on Actions.",
+      "why_it_matters_zh": "对工程平台负责人来说，这条信息的价值在于它把“AI 开发工具可用性”与“CI/CD 基础设施卫生”连接起来了。既然 GitHub 把更多 agentic 能力放在 Actions 执行平面上，那么 runner 生命周期、版本漂移、网络出口、隔离等级与自动升级策略都会变成 AI 采用的关键阻塞项。很多团队会先采购 AI，再发现真正卡点是老旧 runner 池与平台治理缺口。",
+      "why_it_matters_en": "For platform leaders, the key value here is that it ties AI developer-tool availability to CI/CD infrastructure hygiene. If GitHub is placing more agentic capabilities on the Actions execution plane, then runner lifecycle management, version drift, network egress, isolation levels, and auto-upgrade policy all become gating factors for AI adoption. Many teams will buy the AI capability first and only later discover that the real blocker is an aging runner fleet and weak platform governance.",
+      "key_takeaways_zh": [
+        "自托管 runner 版本管理正在从可靠性问题升级为 AI 工作流可用性问题。",
+        "GitHub 明确展示了其将 agentic 开发体验建立在大规模 Actions 基础设施上的方向。",
+        "平台团队应尽快盘点 runner 版本、注册流程和升级自动化，避免 AI 代码审查或 agent 执行被基础设施门槛阻断。"
+      ],
+      "key_takeaways_en": [
+        "Self-hosted runner version management is evolving from a reliability concern into an AI workflow availability concern.",
+        "GitHub is signaling that agentic developer experiences will increasingly be built on top of large-scale Actions infrastructure.",
+        "Platform teams should audit runner versions, registration flows, and upgrade automation now to avoid AI review or agent execution being blocked by infra prerequisites."
+      ],
+      "tags": [
+        "GitHub Actions",
+        "Self-hosted Runners",
+        "Infrastructure",
+        "Agentic Execution",
+        "Platform Operations"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 9
+    }
+  ],
+  "top_items": [
+    "Copilot code review: New configurations and controls - GitHub Changelog",
+    "GitHub Actions: Minimum version enforcement timeline for self-hosted runners - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "组织级 runner 锁定：在组织层统一指定并强制 Copilot code review / cloud agent 使用某类 runner。",
+    "内容排除支持：为 AI 审查定义不可见或不参与处理的内容范围，以满足安全与合规要求。",
+    "agentic architecture powered by GitHub Actions：AI 代码审查通过 Actions 作为执行平面运行，而非仅是静态模型调用。"
+  ],
+  "new_terms_en": [
+    "Organization-level runner locking: setting and enforcing a default runner class for Copilot code review / cloud agent at the org layer.",
+    "Content exclusion support: defining content scopes that AI review should not access or process for security and compliance.",
+    "Agentic architecture powered by GitHub Actions: AI code review operating on an execution plane via Actions rather than as a pure stateless model call."
+  ],
+  "themes_zh": [
+    "AI 代码审查从功能发布走向企业治理与执行面控制。",
+    "开发者 AI 工具正在与 CI/CD 基础设施深度耦合。",
+    "组织采用的真正挑战转向默认配置、合规边界与平台可运维性。"
+  ],
+  "themes_en": [
+    "AI code review is moving from feature rollout to enterprise governance and execution-plane control.",
+    "Developer AI tooling is becoming tightly coupled with CI/CD infrastructure.",
+    "The real adoption challenge is shifting toward safe defaults, compliance boundaries, and platform operability."
+  ],
+  "implications_zh": [
+    "如果你在评估或推广 AI 代码审查，下一步不应只看模型效果，还要审查 runner 拓扑、网络隔离、日志策略和敏感内容边界。",
+    "平台团队需要把 Copilot/agent 能力纳入现有 Actions 平台治理，而不是把它当作独立 SaaS 功能采购。",
+    "更长的自定义指令空间意味着团队可以开始系统化沉淀审查 rubric、架构禁区和语言规范。"
+  ],
+  "implications_en": [
+    "If you are evaluating or scaling AI code review, the next step is not just model quality but runner topology, network isolation, logging policy, and sensitive-content boundaries.",
+    "Platform teams should govern Copilot/agent capabilities as part of the existing Actions platform rather than treating them as a standalone SaaS purchase.",
+    "A larger custom-instruction budget means teams can start formalizing review rubrics, architectural no-go zones, and language-specific standards."
+  ],
+  "reading_order": [
+    "Copilot code review: New configurations and controls - GitHub Changelog",
+    "GitHub Actions: Minimum version enforcement timeline for self-hosted runners - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "ChatPRD 对 Claude Fable 5 的主观体验评测：缺少原始技术细节、方法学和可复现评估设计，不足以支撑工程管理决策。",
+    "任何仅讨论“新模型是否更强”的营销型内容，如果没有 harness、eval、可靠性或组织落地细节，可暂时降权。"
+  ],
+  "what_to_ignore_en": [
+    "The ChatPRD subjective review of Claude Fable 5: it lacks primary technical detail, methodology, and reproducible evaluation design, so it is weak input for engineering-management decisions.",
+    "Any launch-style content focused only on whether a new model is better should be deprioritized unless it includes harness, eval, reliability, or organizational rollout details."
+  ]
+}
