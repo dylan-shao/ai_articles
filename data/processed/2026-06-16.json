@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容信号较弱，只有一条与工程管理相关的高可用性度量更新值得关注。",
+    "GitHub 将 Copilot 使用报表从纯客户端遥测扩展到结合服务端遥测，这对企业级 AI 编码工具采用率统计、许可证治理和 ROI 评估更可靠。"
+  ],
+  "executive_summary_en": [
+    "The day is weak: only one materially relevant item stands out for engineering leaders.",
+    "GitHub expanded Copilot usage reporting from client-only telemetry to include server-side signals, improving enterprise adoption measurement, license governance, and ROI tracking."
+  ],
+  "items": [
+    {
+      "title": "Copilot usage metrics now include more of your active users",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-15",
+      "url": "https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users/",
+      "summary_zh": "GitHub 更新了 Copilot 企业使用报表与 API，除了 IDE 等客户端上报的遥测外，也开始纳入服务端可确认的活动信号，因此此前因网络、代理、配置等原因未被客户端上报覆盖的活跃付费用户，现在会出现在单日和 28 天活跃报表中。",
+      "summary_en": "GitHub updated Copilot enterprise usage reports and API to incorporate server-side confirmed activity in addition to client telemetry. Active paid users previously missed due to network, proxy, or client reporting gaps will now appear in single-day and 28-day active user reports.",
+      "why_it_matters_zh": "这不是功能层面的新能力，而是组织采纳度量基础设施的修正。对平台团队和工程管理者而言，AI 编码工具的推广、续费、席位回收、团队对比和 ROI 分析，长期都依赖活跃用户数据；如果底层统计偏低，所有治理决策都会失真。该更新提升了 DAU 覆盖率，但也提醒团队：服务端补充信号无法提供与客户端同等丰富的 IDE、功能、模型和代码产出细节，因此高层采用率与细粒度行为分析仍需分开看待。",
+      "why_it_matters_en": "This is less about product capability and more about fixing the measurement substrate for organizational adoption. Platform and engineering leaders rely on active-user metrics for rollout tracking, renewals, seat reclamation, team benchmarking, and ROI analysis; if the underlying telemetry undercounts usage, governance decisions are distorted. The update improves DAU coverage, but it also highlights that server-side augmentation does not carry the same rich IDE/feature/model/LOC detail as client telemetry, so top-line adoption and granular behavior analysis should be treated separately.",
+      "key_takeaways_zh": [
+        "企业 Copilot 活跃用户统计将更接近真实使用情况，尤其在受代理、网络或客户端设置影响的环境中。",
+        "新增的服务端信号补足覆盖率，但不能完全替代客户端遥测的细粒度分析字段。"
+      ],
+      "key_takeaways_en": [
+        "Enterprise Copilot active-user reporting should better reflect real usage, especially in environments affected by proxies, networking, or client settings.",
+        "Server-side signals improve coverage but do not fully replace the granular analytical fields available from client telemetry."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Telemetry",
+        "Enterprise Adoption",
+        "Developer Tooling",
+        "Usage Analytics"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Copilot usage metrics now include more of your active users"
+  ],
+  "new_terms_zh": [
+    "服务端遥测补充",
+    "28 天活跃用户报表"
+  ],
+  "new_terms_en": [
+    "server-side telemetry augmentation",
+    "28-day active user report"
+  ],
+  "themes_zh": [
+    "AI 编码工具的企业级度量修正",
+    "采用率统计与细粒度行为分析分层"
+  ],
+  "themes_en": [
+    "Enterprise measurement corrections for AI coding tools",
+    "Separation of adoption metrics from granular behavior analytics"
+  ],
+  "implications_zh": [
+    "若你在做 Copilot 推广复盘，应重新基线化历史采用率趋势，避免把本次统计口径变化误判为真实增长。",
+    "应在内部报表中区分“活跃用户覆盖率”与“功能/模型使用深度”，以免单一指标误导治理决策。"
+  ],
+  "implications_en": [
+    "If you are reviewing Copilot rollout performance, re-baseline historical adoption trends so this methodology change is not mistaken for organic growth.",
+    "Separate 'active-user coverage' from 'feature/model usage depth' in internal dashboards to avoid governance decisions driven by a single blended metric."
+  ],
+  "reading_order": [
+    "Copilot usage metrics now include more of your active users"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的 2026 年归档 feed 只是聚合页面，不是独立内容来源。",
+    "不要把这条更新解读为 Copilot 能力提升；它本质上是企业度量口径修正。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog 2026 archive feed is just an aggregator page, not a distinct source item.",
+    "Do not interpret this as a Copilot capability improvement; it is primarily a correction to enterprise measurement methodology."
+  ]
+}

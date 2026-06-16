@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Copilot usage metrics now include more of your active users - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot usage metrics reports now draw on server-side telemetry in addition to client signals, so more of your active Copilot users show up in reports. Enterprise usage reports returned by…",
+    "body_excerpt": "Copilot usage metrics now include more of your active users - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement June 15, 2026 • 2 minute read Copilot usage metrics now include more of your active users Table of Contents What's new What you'll see in a typical report Why this matters Menu. Currently selected: What's new What's new What you'll see in a typical report Why this matters Copilot usage metrics reports now draw on server-side telemetry in addition to client signals, so more of your active Copilot users show up in reports. Enterprise usage reports returned by the Copilot usage metrics API now surface active users that client-side telemetry alone would have missed, giving you a more complete and consistent picture of who is using Copilot. What’s new Copilot usage reports have historically been built from client-side telemetry emitted by IDEs and other clients. That telemetry is the richest source we have, but it does not always reach us. Network conditions, proxy configurations, client settings, and other factors outside of your control or ours can prevent a client from reporting activity. When that happened, an active, billed user could be absent from your reports. This update incorporates additional server-side telemetry to identify active users. Any active user we can confirm from the server side who was not already captured from client telemetry is now included in your enterprise single-day and 28-day reports, increasing your daily active user (DAU) coverage. These newly surfaced users are fully identified and counted toward your active user totals. What server-side telemetry does not yet carry is the rich, per-interaction detail that client telemetry provides (i.e., the specific IDE, feature, model, and lines-of-code activity). So for these users, the high-le",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-31T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Mon, 15 Jun 2026 21:32:38 +0000 en-US hourly 1 https://wordpress.org/?v=6.9.4 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Copilot usage metrics now include more of your active users https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users Allison Mon, 15 Jun 2026 21:30:13 +0000 https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users <p>Copilot usage metrics reports now draw on server-side telemetry in addition to client signals, so more of your active Copilot users show up in reports. Enterprise usage reports returned by&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users\">Copilot usage metrics now include more of your active users</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>Copilot usage metrics reports now draw on server-side telemetry in addition to client signals, so more of your active Copilot users show up in reports. Enterprise usage reports returned by the <a href=\"https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10\">Copilot usage metrics API</a> now surface active users that client-side telemetry alone would have missed, giving you a more complete and consistent picture of who is using Copilot.</p> <h3 id=\"whats-new\" id=\"whats-new\" ><a class=\"heading-link\" href=\"#whats-new\">What&rsquo;s new<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h3> <p>Copilot usage reports have hist",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
