@@ -1,0 +1,148 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，只有 GitHub Code Quality 相关更新对工程管理和平台治理有一定实操价值。",
+    "最有信号的是 GitHub Code Quality 即将 GA 并转为付费，且新增组织级启用、质量仪表盘、规则集覆盖率强制和 API，这表明代码质量检查正被产品化为可规模化治理层。",
+    "GitHub Models 停止向新客户开放更像产品收缩信号，提示团队应避免把模型访问层深度绑定在单一代码托管平台能力上。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak overall; only the GitHub Code Quality updates have meaningful operational value for engineering leads.",
+    "The highest-signal item is GitHub Code Quality moving to GA as a paid product with org-wide rollout, dashboards, coverage enforcement, and APIs, signaling that code quality is becoming a governable platform layer.",
+    "GitHub Models being closed to new customers is mostly a product-retirement signal, reminding teams not to couple model access too tightly to a source-hosting vendor surface."
+  ],
+  "items": [
+    {
+      "title": "GitHub Code Quality generally available July 20, 2026",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-16",
+      "url": "https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/",
+      "summary_zh": "GitHub 宣布 Code Quality 将于 2026-07-20 从公测转为 GA 并开始收费。产品形态包括每活跃提交者订阅费、AI 能力按量计费，以及 CodeQL 消耗 Actions 分钟；同时新增组织级部署、组织质量仪表盘、基于 rulesets 的覆盖率强制、仓库与组织级评分，以及启用和发现管理 API。",
+      "summary_en": "GitHub announced that Code Quality will become generally available on 2026-07-20 and transition to a paid product. The package combines per-active-committer pricing, usage-based billing for AI features, and Actions-minute consumption for deterministic CodeQL, while adding org-wide deployment, quality dashboards, coverage enforcement via rulesets, repository/org scoring, and APIs for enablement and findings management.",
+      "why_it_matters_zh": "这不是单纯定价新闻，而是一个重要平台信号：代码质量检查、AI 审查、覆盖率门禁和发现管理正在被整合成统一治理面。对平台团队而言，这意味着质量控制将更像安全治理一样进入预算、策略、API 自动化和组织级 rollout 流程。",
+      "why_it_matters_en": "This is more than pricing news; it is a platform signal that code quality checks, AI review, coverage gates, and findings management are being consolidated into a single governance surface. For platform teams, quality control starts to look like security governance: budgeted, policy-driven, API-automated, and rolled out organization-wide.",
+      "key_takeaways_zh": [
+        "质量能力开始按“平台产品”而非“单仓插件”售卖，适合纳入集中治理和成本核算。",
+        "新增 API、组织级评分和规则集覆盖率强制，意味着可与现有 SDLC 门禁、报告和内部开发者平台集成。"
+      ],
+      "key_takeaways_en": [
+        "Quality capabilities are being sold as a platform product rather than a repo-by-repo add-on, making them suitable for centralized governance and cost allocation.",
+        "New APIs, org-level scoring, and ruleset-based coverage enforcement make it easier to integrate with existing SDLC gates, reporting, and internal developer platforms."
+      ],
+      "tags": [
+        "GitHub",
+        "Code Quality",
+        "Engineering Governance",
+        "Developer Tooling",
+        "Quality Gates"
+      ],
+      "signal_score": 8,
+      "novelty_score": 6,
+      "actionability_score": 8
+    },
+    {
+      "title": "Organization-level enablement for GitHub Code Quality",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-16",
+      "url": "https://github.blog/changelog/2026-06-16-organization-level-enablement-for-github-code-quality/",
+      "summary_zh": "GitHub 为 Code Quality 增加组织级启用开关，管理员可在组织设置中一次性对所有现有仓库启用或禁用该能力，而不再逐仓配置。",
+      "summary_en": "GitHub added organization-level enablement for Code Quality, allowing admins to turn the capability on or off across all existing repositories from a single organization setting instead of configuring each repository individually.",
+      "why_it_matters_zh": "虽然是小更新，但它解决了企业落地中的关键摩擦点：从 repo-by-repo 试点转向集中 rollout。任何想把质量检查、AI 发现或覆盖率门禁规模化到数百仓库的团队，都需要这种组织级控制面。",
+      "why_it_matters_en": "Although small, this removes a critical enterprise adoption bottleneck: moving from repo-by-repo pilots to centralized rollout. Any team trying to scale quality checks, AI findings, or coverage gates across hundreds of repos needs this kind of org-level control plane.",
+      "key_takeaways_zh": [
+        "组织级开关是平台化 adoption 的前提，降低了大规模启用的运维成本。",
+        "与 GA 定价和 API 能力结合后，Code Quality 更接近可统一治理的企业标准层。"
+      ],
+      "key_takeaways_en": [
+        "An org-level switch is foundational for platform-style adoption and lowers the operational cost of broad rollout.",
+        "Combined with GA pricing and APIs, Code Quality is becoming closer to an enterprise-standard governance layer."
+      ],
+      "tags": [
+        "GitHub",
+        "Code Quality",
+        "Org Rollout",
+        "Platform Governance"
+      ],
+      "signal_score": 6,
+      "novelty_score": 4,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub Models is no longer available to new customers",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-16",
+      "url": "https://github.blog/changelog/2026-06-16-github-models-is-no-longer-available-to-new-customers/",
+      "summary_zh": "GitHub 宣布 GitHub Models 进入退役流程，第一步是停止向新组织和企业开放；已有活跃使用客户暂不受影响，后续会公布完整下线时间表。",
+      "summary_en": "GitHub announced the retirement path for GitHub Models, starting with closing access for new organizations and enterprises; existing active customers are unaffected for now, with a fuller retirement timeline to come.",
+      "why_it_matters_zh": "这说明代码托管平台内置“模型接入层”并未形成稳定长期产品。对工程领导者而言，关键信号不是功能变化，而是架构选择：模型路由、评测和权限控制应尽量放在可替换层，而不是深绑某个开发平台的实验性抽象。",
+      "why_it_matters_en": "This suggests that an in-platform model access layer did not solidify into a durable long-term product. For engineering leaders, the key signal is architectural rather than functional: model routing, evaluation, and access control should live in a replaceable layer rather than being tightly coupled to an experimental developer-platform abstraction.",
+      "key_takeaways_zh": [
+        "避免把 AI 模型接入策略锁定在单一 SCM/DevEx 平台附属能力上。",
+        "若团队仍需多模型目录，应该优先选择可替换、可审计、可迁移的接入层。"
+      ],
+      "key_takeaways_en": [
+        "Avoid locking AI model access strategy into an ancillary capability of a single SCM/DevEx platform.",
+        "If a team still needs a multi-model catalog, prefer an access layer that is replaceable, auditable, and portable."
+      ],
+      "tags": [
+        "GitHub",
+        "Model Access",
+        "Platform Strategy",
+        "Vendor Risk"
+      ],
+      "signal_score": 5,
+      "novelty_score": 5,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "GitHub Code Quality generally available July 20, 2026",
+    "Organization-level enablement for GitHub Code Quality",
+    "GitHub Models is no longer available to new customers"
+  ],
+  "new_terms_zh": [
+    "组织级质量启用",
+    "规则集覆盖率强制",
+    "质量发现管理 API"
+  ],
+  "new_terms_en": [
+    "organization-level quality enablement",
+    "ruleset-based coverage enforcement",
+    "findings management API"
+  ],
+  "themes_zh": [
+    "代码质量能力正从功能点演变为组织级治理产品",
+    "AI 辅助质量检查开始与传统静态分析和覆盖率门禁融合",
+    "模型接入层的产品稳定性与供应商锁定风险值得重新评估"
+  ],
+  "themes_en": [
+    "Code quality is evolving from a feature into an organization-level governance product.",
+    "AI-assisted quality checks are converging with traditional static analysis and coverage gates.",
+    "The stability of model access layers and vendor lock-in risk deserve renewed scrutiny."
+  ],
+  "implications_zh": [
+    "平台团队应评估是否把质量门禁、发现聚合和 org rollout 统一纳入内部工程治理框架。",
+    "预算模型需要区分 seat 费用、AI 按量费用和 CI 分钟消耗，避免质量平台使用失控。",
+    "在 AI coding 基础设施上，应优先采用可迁移的模型网关与评测体系，而不是依赖实验性托管入口。"
+  ],
+  "implications_en": [
+    "Platform teams should assess whether to unify quality gates, findings aggregation, and org rollout inside their internal engineering governance framework.",
+    "Budget models need to separate seat costs, AI usage costs, and CI-minute consumption to avoid uncontrolled spend from quality tooling.",
+    "For AI coding infrastructure, prefer portable model gateways and evaluation systems over experimental hosted entry points."
+  ],
+  "reading_order": [
+    "GitHub Code Quality generally available July 20, 2026",
+    "Organization-level enablement for GitHub Code Quality",
+    "GitHub Models is no longer available to new customers"
+  ],
+  "what_to_ignore_zh": [
+    "可忽略 GitHub Changelog 的索引页，它不提供额外技术信息。",
+    "不要把 GitHub Models 退役解读为 AI coding 基础能力整体退潮；它更像特定产品线收缩，而非核心开发代理能力判断。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the generic GitHub Changelog index page; it adds no technical information.",
+    "Do not overread the GitHub Models retirement as a broad retreat from AI coding infrastructure; it is more likely a product-line contraction than a verdict on core coding-agent capabilities."
+  ]
+}

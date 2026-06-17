@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Models is no longer available to new customers - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-16-github-models-is-no-longer-available-to-new-customers/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We are retiring GitHub Models. As a first step, new customers can no longer use it. If your organization or enterprise have not previously used GitHub Models, you won’t see…",
+    "body_excerpt": "GitHub Models is no longer available to new customers - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Retired June 16, 2026 • 1 minute read GitHub Models is no longer available to new customers We are retiring GitHub Models. As a first step, new customers can no longer use it. If your organization or enterprise have not previously used GitHub Models, you won’t see it and can’t start new usage. If you are an existing GitHub Models customer, nothing changes today. You can continue using the playground, API, and models as usual. We will share more details, including timelines, as we move toward full retirement. What’s changing New organizations and enterprises without existing GitHub Models usage no longer have access to GitHub Models, on both free and paid plans. Existing customers with active usage are not impacted by this change and can continue using GitHub Models for now. For new projects that need AI model access, Azure AI Foundry offers a broad model catalog. To learn more, check out our docs about GitHub Models . You can also join our community discussions to ask questions and share feedback. ecosystem & accessibility Share Copied Shared Back to changelog Related Posts May.15 Improvement GitHub App installation tokens: Per-request override header ecosystem & accessibility May.13 Improvement New enterprise installation API now in public preview ecosystem & accessibility Apr.20 Retired Sunsetting SHA-1 in HTTPS on GitHub ecosystem & accessibility Mar.12 Release REST API version 2026-03-10 is now available ecosystem & accessibility Feb.03 Release The Dependabot Proxy is now open source with an MIT license ecosystem & accessibility supply chain security ... +1 Jan.12 Improvement Selectively showing \"act on your behalf\" warning for GitHub Apps is in public preview ecosystem & ac",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Code Quality generally available July 20, 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "More than 10,000 enterprises have used the GitHub Code Quality public preview to detect maintainability and reliability issues, enforce quality gates, and track code coverage. On July 20, 2026, Code…",
+    "body_excerpt": "GitHub Code Quality generally available July 20, 2026 - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release June 16, 2026 • 2 minute read GitHub Code Quality generally available July 20, 2026 Table of Contents What's changing on July 20, 2026 What you pay for Availability Menu. Currently selected: What's changing on July 20, 2026 What's changing on July 20, 2026 What you pay for Availability More than 10,000 enterprises have used the GitHub Code Quality public preview to detect maintainability and reliability issues, enforce quality gates, and track code coverage. On July 20, 2026 , Code Quality moves from public preview to general availability as a purchasable product. We understand that any change is significant to our customers, especially when it relates to billing, so we are sharing this update early to help you plan and prepare. What’s changing on July 20, 2026 GitHub Code Quality will become a paid product. Pricing will be $10 per active committer per month on enabled repositories, plus usage-based consumption for AI-powered capabilities (e.g., Copilot code review, AI-assisted detection, and Copilot Autofix). Deterministic CodeQL analysis will consume GitHub Actions minutes. New capabilities will be available. Code Quality will support organization-wide deployment, organization-level quality dashboards, code coverage enforcement via rulesets, repository- and organization-level quality scoring, and APIs for both enablement and findings management. What you pay for GitHub Code Quality will be priced as a base subscription plus metered usage. There are three components: Per-committer license, $10 per active committer per month: Covers your access to Code Quality on enabled repositories, including findings, scoring, rulesets integration, security and quality overview integr",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Platform governance Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.16 Release GitHub Code Quality generally available July 20, 2026 application security platform governance ... +1 Jun.02 Release Cloud and local sandboxes for GitHub Copilot now in public preview application security copilot platform governance ... +2 May May 2026 May May 2026 May.26 Release Code coverage on pull requests is now in public preview application security platform governance ... +1 May.07 Improvement Repository rulesets: User bypass and branch renaming platform governance April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status Contact Company About Blog Careers Press Shop © 2026 Gi",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Organization-level enablement for GitHub Code Quality - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-16-organization-level-enablement-for-github-code-quality/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Organization administrators can now enable or disable GitHub Code Quality across all repositories in their organization with a single toggle, instead of configuring each repository individually. What’s new A new…",
+    "body_excerpt": "Organization-level enablement for GitHub Code Quality - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release June 16, 2026 • 1 minute read Organization-level enablement for GitHub Code Quality Table of Contents What's new Who this is for Availability Menu. Currently selected: What's new What's new Who this is for Availability Organization administrators can now enable or disable GitHub Code Quality across all repositories in their organization with a single toggle, instead of configuring each repository individually. What’s new A new “Code quality” section is available in your organization settings under Security . From this page, you can turn GitHub Code Quality on or off for all existing repositories in your organization in one action. Who this is for Organization administrators on GitHub Enterprise Cloud and GitHub Team plans who want to quickly roll out Code Quality across their organization. Availability This feature is available in public preview for GitHub Enterprise Cloud and GitHub Team plans. GitHub Code Quality is not available on GitHub Enterprise Server. For more information, see our docs about GitHub Code Quality . Table of Contents What's new Who this is for Availability Menu. Currently selected: What's new What's new Who this is for Availability application security enterprise management tools Share Copied Shared Back to changelog Related Posts Jun.16 Release GitHub Code Quality generally available July 20, 2026 application security platform governance ... +1 Jun.15 Improvement Copilot usage metrics now include more of your active users account management copilot enterprise management tools ... +2 Jun.11 Improvement AI usage report updates enterprise management tools Jun.10 Improvement Enterprises can now create up to 500 cost centers account management enterpri",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
