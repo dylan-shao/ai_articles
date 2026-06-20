@@ -1,0 +1,44 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.19 Release AI credits consumed per user now in the Copilot usage metrics API account management copilot enterprise management tools ... +2 Jun.18 Retired Upcoming deprecation of Opus 4.6 (fast) copilot Jun.18 Release MAI-Code-1-Flash available on more Copilot surfaces copilot Jun.18 Improvement Copilot code review: AGENTS.md support and UI improvements copilot Jun.18 Release Detecting Duplicate Issues – Public Preview and issue fields MCP support for GitHub Issues projects & issues Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.18 Improvement Actions: Build custom images from custom images actions Jun.18 Release Safer pull_request_target defaults for GitHub Actions checkout actions supply chain security ... +1 Jun.18 Release Control who and what triggers GitHub Actions workflows actions supply chain security ... +1 Jun.18 Improvement Generated release notes credit you for Copilot pull requests copilot Jun.17 Release Read remote repository content with GitHub CLI client apps Jun.17 Improvement Secret scanning updates – June 2026 application security Jun.17 Improvement Enterprise-managed settings now support bypass permission contr",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: June 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/06/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: June 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.19 Release AI credits consumed per user now in the Copilot usage metrics API account management copilot enterprise management tools ... +2 Jun.18 Retired Upcoming deprecation of Opus 4.6 (fast) copilot Jun.18 Release MAI-Code-1-Flash available on more Copilot surfaces copilot Jun.18 Improvement Copilot code review: AGENTS.md support and UI improvements copilot Jun.18 Release Detecting Duplicate Issues – Public Preview and issue fields MCP support for GitHub Issues projects & issues Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.18 Improvement Actions: Build custom images from custom images actions Jun.18 Release Safer pull_request_target defaults for GitHub Actions checkout actions supply chain security ... +1 Jun.18 Release Control who and what triggers GitHub Actions workflows actions supply chain security ... +1 Jun.18 Improvement Generated release notes credit you for Copilot pull requests copilot Jun.17 Release Read remote repository content with GitHub CLI client apps Jun.17 Improvement Secret scanning updates – June 2026 application security Jun.17 Improvement Enterprise-managed settings now support by",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "AI credits consumed per user now in the Copilot usage metrics API - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The Copilot usage metrics API now reports how many AI credits each user consumed per day, derived from the same AI credits consumption data used in the usage-based billing API.…",
+    "body_excerpt": "AI credits consumed per user now in the Copilot usage metrics API - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release June 19, 2026 • 1 minute read AI credits consumed per user now in the Copilot usage metrics API Table of Contents What's new Why this matters Important notes Menu. Currently selected: What's new What's new Why this matters Important notes The Copilot usage metrics API now reports how many AI credits each user consumed per day, derived from the same AI credits consumption data used in the usage-based billing API . What’s new A new ai_credits_used field is now included for each user in the user-level reports and indicates the total AI credits a user consumed. This is an overall per-user total across all of that user’s Copilot activity. The field is available in both the single-day ( users-1-day ) and 28-day ( users-28-day ) user-level reports at the enterprise and organization levels. Why this matters Connect consumption to value: ai_credits_used sits in the same reports you already track for usage, so you can see consumption next to the work that drove it. Understand adoption across your teams: See how AI credit usage is distributed across your enterprise or organization to recognize where Copilot is delivering the most value. Plan for usage-based billing: Monitor day-over-day consumption patterns to anticipate AI credit ranges and inform budget decisions. Important notes These metrics are available to enterprise administrators and organization owners who have access to Copilot usage metrics through the REST API. ai_credits_used is an overall per-user total. It is not currently broken down by feature, model, or surface. The field is available in the user-level reports. It is a metrics signal for analyzing consumption, not a billed total—refer to billing for in",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，绝大多数是 GitHub Changelog 汇总页而非独立高信号技术文章。",
+    "唯一值得保留的是 GitHub Copilot usage metrics API 新增按用户统计 AI credits 消耗，这对企业级 AI 编码治理、预算监控与组织采用度分析有直接价值。",
+    "但该更新仍停留在度量层，没有按功能、模型或 surface 细分，因此更适合平台治理与 FinOps 观察，而不是工程实现层面的深度研判。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with most entries being generic GitHub Changelog index pages rather than standalone high-signal technical sources.",
+    "The only item worth keeping is the Copilot usage metrics API update that adds per-user AI credit consumption, which is directly relevant to enterprise AI coding governance, budgeting, and adoption analysis.",
+    "However, the update is still metric-layer only and lacks breakdown by feature, model, or surface, making it more useful for platform governance and FinOps than deep engineering implementation analysis."
+  ],
+  "items": [
+    {
+      "title": "AI credits consumed per user now in the Copilot usage metrics API",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-19",
+      "url": "https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/",
+      "summary_zh": "GitHub 在 Copilot usage metrics API 中新增 ai_credits_used 字段，可在企业和组织级的 1 天与 28 天用户报表中查看每个用户每日消耗的 AI credits 总量。该指标与现有使用报表放在一起，便于把消耗、活跃度和采用情况关联分析，但目前仍是用户总量口径，不能按功能、模型或交互 surface 拆分。",
+      "summary_en": "GitHub added an ai_credits_used field to the Copilot usage metrics API, exposing total AI credits consumed per user in 1-day and 28-day user-level reports at the enterprise and organization levels. The metric sits alongside existing usage reporting, making it easier to correlate spend with activity and adoption, but it is currently only an overall user total and cannot be broken down by feature, model, or surface.",
+      "why_it_matters_zh": "对负责平台、开发效率和预算控制的团队来说，这是把 AI 编码从“是否有人在用”推进到“谁在消耗、消耗是否匹配价值”的关键观测点。它使组织能够开始做 Copilot 成本归因、团队采用差异分析、异常消耗监控，以及 usage-based billing 的预算预测。",
+      "why_it_matters_en": "For platform, developer productivity, and budget owners, this is a key observability step from 'is anyone using it' to 'who is consuming it and is the consumption justified by value.' It enables early cost attribution for Copilot, team-level adoption comparisons, abnormal usage monitoring, and more grounded planning for usage-based billing.",
+      "key_takeaways_zh": [
+        "新增 ai_credits_used 字段，覆盖 enterprise/org 级 users-1-day 与 users-28-day 用户报表。",
+        "该指标基于 AI credits consumption 数据，但不是计费账单明细，不能直接当作 billed total 使用。",
+        "当前只提供每用户总量，尚未细分到具体功能、模型或使用入口，这限制了精细化优化。"
+      ],
+      "key_takeaways_en": [
+        "A new ai_credits_used field is available in enterprise/org-level users-1-day and users-28-day user reports.",
+        "The metric is derived from AI credit consumption data but is not the billing ledger and should not be treated as a billed total.",
+        "It currently exposes only a per-user aggregate, with no breakdown by feature, model, or surface, limiting fine-grained optimization."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Usage Metrics API",
+        "AI FinOps",
+        "Developer Productivity",
+        "Enterprise Governance"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "AI credits consumed per user now in the Copilot usage metrics API"
+  ],
+  "new_terms_zh": [
+    "ai_credits_used",
+    "usage-based billing",
+    "users-28-day report"
+  ],
+  "new_terms_en": [
+    "ai_credits_used",
+    "usage-based billing",
+    "users-28-day report"
+  ],
+  "themes_zh": [
+    "AI 编码工具的企业级成本可观测性",
+    "从采用度统计转向价值与消耗联动分析",
+    "开发者工具治理与 FinOps 收敛"
+  ],
+  "themes_en": [
+    "Enterprise cost observability for AI coding tools",
+    "Shifting from adoption counts to value-versus-consumption analysis",
+    "Convergence of developer tooling governance and FinOps"
+  ],
+  "implications_zh": [
+    "如果你的组织已大规模部署 Copilot，现在可以把用户级 credits 消耗接入内部指标仓库，与 PR、review、merge lead time、incident 等工程指标联表分析。",
+    "短期内更适合做团队级预算预警和异常检测；由于缺少 feature/model 维度，暂不适合做精细的 prompt surface ROI 优化。",
+    "未来若 GitHub 继续开放按模型或功能拆分的消耗数据，组织将能建立更成熟的 AI 编码成本分摊与工具选型机制。"
+  ],
+  "implications_en": [
+    "If your organization has Copilot deployed at scale, you can now ingest per-user credit consumption into internal metrics stores and correlate it with PRs, reviews, merge lead time, and incident-related engineering signals.",
+    "In the near term, this is best suited for team-level budget alerting and anomaly detection; without feature/model granularity, it is not yet enough for fine-grained ROI optimization by interaction surface.",
+    "If GitHub later exposes model- or feature-level breakdowns, organizations will be able to build much more mature chargeback, benchmarking, and AI tooling portfolio decisions."
+  ],
+  "reading_order": [
+    "AI credits consumed per user now in the Copilot usage metrics API"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 总览页和月归档页，本身不是独立高信号内容。",
+    "任何只是在索引页中出现、但没有提供足够技术细节或原始内容上下文的条目。"
+  ],
+  "what_to_ignore_en": [
+    "The generic GitHub Changelog landing page and archive page, which are not standalone high-signal items.",
+    "Any entries that appear only as index snippets without enough technical detail or original-source context."
+  ]
+}
