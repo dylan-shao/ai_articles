@@ -1,0 +1,58 @@
+[
+  {
+    "title": "New features and Claude as agent provider preview in JetBrains IDEs - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-06-22-new-features-and-claude-as-agent-provider-preview-in-jetbrains-ides/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "This update adds support for organization and enterprise agents from GitHub, lets you queue and steer messages in Copilot CLI sessions, introduces a new agent debug logs summary view, and…",
+    "body_excerpt": "New features and Claude as agent provider preview in JetBrains IDEs - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement June 22, 2026 • 3 minute read New features and Claude as agent provider preview in JetBrains IDEs Table of Contents New features User experience Bug fixes Availability updates Try it out Share your feedback Menu. Currently selected: New features New features User experience Bug fixes Availability updates Try it out Share your feedback This update adds support for organization and enterprise agents from GitHub, lets you queue and steer messages in Copilot CLI sessions, introduces a new agent debug logs summary view, and brings Claude as agent provider into public preview in GitHub Copilot for JetBrains IDEs. It also includes model picker enhancements, a per-turn AI credits indicator, and a set of user experience and reliability improvements. Cloud agent is now generally available. New features Support for organization and enterprise agents from GitHub You can now use custom agents defined at the GitHub organization and enterprise level directly inside JetBrains IDEs. Administrators can publish a curated set of agents that are automatically available to everyone in the organization or enterprise. This makes it easier to share, standardize, and govern agent workflows across your team. In order to use it: Administrators define agents in GitHub: An organization or enterprise admin creates custom agents and publishes them so they are available to members. Once published, these agents are automatically distributed to all eligible users. Open the agent picker in Copilot Chat: In your JetBrains IDE, open the Copilot Chat panel and click the agent picker. Select an organization or enterprise agent: Available agents are grouped and you can choose the one that fits",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.22 Improvement New features and Claude as agent provider preview in JetBrains IDEs copilot Jun.19 Release AI credits consumed per user now in the Copilot usage metrics API account management copilot enterprise management tools ... +2 Jun.18 Retired Upcoming deprecation of Opus 4.6 (fast) copilot Jun.18 Release MAI-Code-1-Flash available on more Copilot surfaces copilot Jun.18 Improvement Copilot code review: AGENTS.md support and UI improvements copilot Jun.18 Release Detecting Duplicate Issues – Public Preview and issue fields MCP support for GitHub Issues projects & issues Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.18 Improvement Actions: Build custom images from custom images actions Jun.18 Release Safer pull_request_target defaults for GitHub Actions checkout actions supply chain security ... +1 Jun.18 Release Control who and what triggers GitHub Actions workflows actions supply chain security ... +1 Jun.18 Improvement Generated release notes credit you for Copilot pull requests copilot Jun.17 Release Read remote repository content with GitHub CLI client apps Jun.17 Improvement Secret scanning updates – June 2026 applicat",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: June 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/06/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-06-22T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: June 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply June Jun 2026 June Jun 2026 Jun.22 Improvement New features and Claude as agent provider preview in JetBrains IDEs copilot Jun.19 Release AI credits consumed per user now in the Copilot usage metrics API account management copilot enterprise management tools ... +2 Jun.18 Retired Upcoming deprecation of Opus 4.6 (fast) copilot Jun.18 Release MAI-Code-1-Flash available on more Copilot surfaces copilot Jun.18 Improvement Copilot code review: AGENTS.md support and UI improvements copilot Jun.18 Release Detecting Duplicate Issues – Public Preview and issue fields MCP support for GitHub Issues projects & issues Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.18 Improvement Actions: Build custom images from custom images actions Jun.18 Release Safer pull_request_target defaults for GitHub Actions checkout actions supply chain security ... +1 Jun.18 Release Control who and what triggers GitHub Actions workflows actions supply chain security ... +1 Jun.18 Improvement Generated release notes credit you for Copilot pull requests copilot Jun.17 Release Read remote repository content with GitHub CLI client apps Jun.17 Improvement Secret scanning updates",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Mon, 22 Jun 2026 16:48:07 +0000 en-US hourly 1 https://wordpress.org/?v=7.0 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 New features and Claude as agent provider preview in JetBrains IDEs https://github.blog/changelog/2026-06-22-new-features-and-claude-as-agent-provider-preview-in-jetbrains-ides Allison Mon, 22 Jun 2026 15:34:00 +0000 https://github.blog/changelog/2026-06-19-new-features-and-claude-as-agent-provider-preview-in-jetbrains-ides <p>This update adds support for organization and enterprise agents from GitHub, lets you queue and steer messages in Copilot CLI sessions, introduces a new agent debug logs summary view, and&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-06-22-new-features-and-claude-as-agent-provider-preview-in-jetbrains-ides\">New features and Claude as agent provider preview in JetBrains IDEs</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>This update adds support for organization and enterprise agents from GitHub, lets you queue and steer messages in Copilot CLI sessions, introduces a new agent debug logs summary view, and brings Claude as agent provider into public preview in GitHub Copilot for JetBrains IDEs.</p> <p>It also includes model picker enhancements, a per-turn AI credits indicator, and a set of user experience and reliability improvements. Cloud agent is now generally available.</p> <h2 id=\"new-features\" id=\"new-features\" ><a class=\"heading-link\" href=\"#new-features\">New features<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h2> <h3 id=\"support-for-o",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
