@@ -1,0 +1,112 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，真正高信号且与工程负责人相关的只有 1 条：GitHub Copilot 引入 Claude Opus 4.8 fast mode 预览，反映出 AI 编码工作流正在从“模型能力竞争”转向“延迟/成本/交互体验”优化。",
+    "其余候选要么是通用产品更新，要么缺少原创技术细节、评测方法或可复用的工程实践，因此不建议纳入完整日报。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today; only one item clearly stands out for backend/platform engineering leads: GitHub Copilot previewing Claude Opus 4.8 fast mode, signaling a shift from raw model capability to latency/cost/interactive UX optimization in AI coding workflows.",
+    "The remaining candidates are either generic product updates or lack original technical detail, evaluation methodology, or reusable engineering practices, so they do not justify a full digest."
+  ],
+  "items": [
+    {
+      "title": "Claude Opus 4.8 (fast mode) is now in preview for GitHub Copilot - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-06-29",
+      "url": "https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot/",
+      "summary_zh": "GitHub 宣布在 Copilot 中预览提供 Claude Opus 4.8 fast mode。该模式主打更高输出速度，面向交互式编码与 agentic workflow，并将在 VS Code、Visual Studio、Copilot CLI、cloud agent、JetBrains、Xcode、Eclipse 等多端可选。",
+      "summary_en": "GitHub announced a preview of Claude Opus 4.8 fast mode in Copilot. The mode emphasizes faster output token speed for interactive coding and agentic workflows, and will be selectable across VS Code, Visual Studio, Copilot CLI, cloud agent, JetBrains, Xcode, Eclipse, and other Copilot surfaces.",
+      "why_it_matters_zh": "这条更新虽短，但信号明确：一线 AI 编码产品开始把“高能力模型的低延迟变体”作为独立产品层提供，并且覆盖 IDE、CLI 与 cloud agent。对平台团队而言，这意味着模型路由、预算治理、默认策略、以及不同任务类型的模型分层将越来越重要。",
+      "why_it_matters_en": "Despite being brief, this is a strong product signal: leading AI coding platforms are turning low-latency variants of frontier models into a distinct product tier, spanning IDE, CLI, and cloud agents. For platform teams, this raises the importance of model routing, budget governance, default policies, and task-specific model tiering.",
+      "key_takeaways_zh": [
+        "GitHub 将 fast mode 明确定位到交互式编码和 agentic workflows，说明响应时间已成为开发者体验的一等指标。",
+        "企业与业务版默认关闭，需要管理员启用，表明高成本/高速模型将进入更细粒度的组织治理与预算控制。"
+      ],
+      "key_takeaways_en": [
+        "GitHub explicitly positions fast mode for interactive coding and agentic workflows, showing that responsiveness is now a first-class developer experience metric.",
+        "Business and Enterprise plans require admin enablement by default, indicating that higher-cost, higher-speed models are moving into stricter organizational governance and budget control."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Claude",
+        "AI coding agents",
+        "Model routing",
+        "Developer tooling"
+      ],
+      "signal_score": 8,
+      "novelty_score": 6,
+      "actionability_score": 7
+    },
+    {
+      "title": "How I AI | ChatPRD — AI Workflows & Productivity Tips",
+      "source": "ChatPRD Blog",
+      "author": "",
+      "publish_date": "2026-06-29",
+      "url": "https://www.chatprd.ai/how-i-ai",
+      "summary_zh": "这是一个聚合式栏目页，汇总了多篇关于 AI 工作流、Claude Code、Codex、基准测试与安全修复案例的采访和经验文章。页面本身未提供足够技术细节，不是单篇高信号原创技术来源。",
+      "summary_en": "This is an aggregation page collecting multiple interviews and workflow stories about AI usage, Claude Code, Codex, benchmarking, and security remediation. The page itself does not contain enough technical detail to qualify as a high-signal original technical source.",
+      "why_it_matters_zh": "从选题上看，里面可能藏有值得后续单独追踪的案例，例如 agent-driven benchmarking、安全缺陷修复和 AI 原生组织流程。但当前给出的链接不是具体文章，无法判断方法论、数据、评测设计或可复用实践的质量。",
+      "why_it_matters_en": "The topics suggest there may be follow-up value in individual pieces, especially around agent-driven benchmarking, security remediation, and AI-native org workflows. But the provided link is not a specific article, so it is impossible to assess methodology, data, evaluation design, or reusable engineering practices.",
+      "key_takeaways_zh": [
+        "可作为后续选题线索池，而不是今天的正式高信号条目。",
+        "若要纳入日报，应改抓具体单篇文章并验证其技术原创性。"
+      ],
+      "key_takeaways_en": [
+        "Useful as a lead-generation source for future tracking, not as a high-signal digest item for today.",
+        "To include it in a digest, the workflow should fetch specific articles and verify technical originality."
+      ],
+      "tags": [
+        "Borderline",
+        "AI workflows",
+        "Claude Code",
+        "Evals",
+        "Org adoption"
+      ],
+      "signal_score": 4,
+      "novelty_score": 5,
+      "actionability_score": 3
+    }
+  ],
+  "top_items": [
+    "Claude Opus 4.8 (fast mode) is now in preview for GitHub Copilot - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "fast mode：在保持接近同级能力前提下，针对输出速度优化的模型服务层。",
+    "Usage Based Billing：按模型与请求实际用量计费的 Copilot 成本模型。"
+  ],
+  "new_terms_en": [
+    "fast mode: a model service tier optimized for higher output speed while aiming to preserve near-equivalent capability.",
+    "Usage Based Billing: Copilot cost accounting based on actual model and request consumption."
+  ],
+  "themes_zh": [
+    "AI 编码产品从能力竞赛转向延迟、成本与交互体验分层。",
+    "企业开始把高性能模型接入纳入管理员策略与预算治理。"
+  ],
+  "themes_en": [
+    "AI coding products are shifting from raw capability competition toward latency, cost, and interaction-tier optimization.",
+    "Enterprises are treating access to high-performance models as an admin policy and budget governance concern."
+  ],
+  "implications_zh": [
+    "平台团队应为不同开发任务建立模型分层策略，例如补全、问答、长链代理、批量重构分别绑定不同延迟/成本档位。",
+    "需要在组织层面补齐模型使用可观测性，跟踪单位任务成本、等待时间、接受率与完成率，而不是只看模型品牌。"
+  ],
+  "implications_en": [
+    "Platform teams should define task-specific model tiering, such as separate latency/cost profiles for autocomplete, Q&A, long-running agents, and bulk refactors.",
+    "Organizations need better observability for model usage, tracking cost per task, wait time, acceptance rate, and completion rate rather than focusing only on model brand."
+  ],
+  "reading_order": [
+    "Claude Opus 4.8 (fast mode) is now in preview for GitHub Copilot - GitHub Changelog",
+    "How I AI | ChatPRD — AI Workflows & Productivity Tips"
+  ],
+  "what_to_ignore_zh": [
+    "“Restrict issue creation to collaborators only” 与 AI 编码、评测、代理设计无关，属于常规仓库权限更新。",
+    "GitHub Changelog 年度索引页不是具体内容；不要把导航页当作技术条目。",
+    "聚合页或播客入口页若没有单篇技术细节、数据或方法，不应作为正式高信号来源。"
+  ],
+  "what_to_ignore_en": [
+    "\"Restrict issue creation to collaborators only\" is unrelated to AI coding, evals, or agent design; it is a routine repository permission update.",
+    "The GitHub Changelog yearly index is not a substantive article and should not be treated as a technical item.",
+    "Aggregation pages or podcast hubs without concrete technical detail, data, or methodology should not be included as high-signal sources."
+  ]
+}
