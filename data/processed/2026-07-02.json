@@ -1,0 +1,213 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最强信号集中在 GitHub Copilot 的企业治理与代理运行控制：managed-settings.json 正式可用、企业可默认启用自动选模，以及 CLI/SDK 新增会话级 AI credit 限额。",
+    "这些更新说明 AI coding 正在从“个人助手”走向“可治理、可预算、可标准化的企业代理平台”，对平台团队和工程效率负责人尤其重要。",
+    "次强信号包括 Copilot CLI 的插件化仓库理解能力增强（C++ language server setup skill）以及多模态输入正式普及，表明代码代理正在补齐真实工程上下文接入能力。"
+  ],
+  "executive_summary_en": [
+    "The highest-signal updates today are around GitHub Copilot enterprise governance and agent runtime control: managed-settings.json is GA, enterprises can default to auto model selection, and Copilot CLI/SDK now support session-level AI credit limits.",
+    "Together, these changes show AI coding shifting from a personal assistant into a governable, budgetable, standardized enterprise agent platform—highly relevant for platform teams and engineering productivity leaders.",
+    "Secondary but meaningful signals include stronger repo-understanding via a pluginized C++ language-server setup skill and broader multimodal input support, both of which improve real-world coding-agent context access."
+  ],
+  "items": [
+    {
+      "title": "Enterprise managed-settings.json is generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-01",
+      "url": "https://github.blog/changelog/2026-07-01-enterprise-managed-settings-json-is-generally-available/",
+      "summary_zh": "GitHub Enterprise Cloud 现已正式支持通过 .github-private 仓库中的 managed-settings.json 对 Copilot 客户端进行集中治理。该配置可覆盖用户本地文件级设置，当前适用于 VS Code 与 Copilot CLI，并会在用户认证时拉取、按小时刷新。",
+      "summary_en": "GitHub Enterprise Cloud now generally supports centralized Copilot governance via managed-settings.json stored in a .github-private repository. The config overrides user file-based settings, currently applies to VS Code and Copilot CLI, and is fetched at auth time with hourly refresh.",
+      "why_it_matters_zh": "这是 AI coding 在企业内走向“策略即配置”的关键一步。它把模型选择、插件市场白名单/黑名单、绕过权限等控制从文档规范变成可执行治理层，意味着平台团队终于可以像管理 CI、依赖源和开发者工作站一样管理 AI 助手与代理能力。",
+      "why_it_matters_en": "This is a key step toward policy-as-config for enterprise AI coding. It turns model selection, plugin marketplace controls, and bypass permissions from informal guidance into enforceable governance, giving platform teams a way to manage AI assistants and agents like CI, package registries, or developer workstations.",
+      "key_takeaways_zh": [
+        "配置项包括 model、enabledPlugins、strictKnownMarketplaces、disableBypassPermissionsMode 等，覆盖治理与扩展入口。",
+        "managed-settings.json 优先级高于用户本地配置，且基于服务端分发，适合企业统一标准化。"
+      ],
+      "key_takeaways_en": [
+        "Supported keys include model, enabledPlugins, strictKnownMarketplaces, and disableBypassPermissionsMode, covering both governance and extensibility.",
+        "managed-settings.json takes precedence over local user config and is distributed server-side, making it suitable for enterprise standardization."
+      ],
+      "tags": [
+        "copilot",
+        "enterprise-governance",
+        "developer-tooling",
+        "policy-as-code"
+      ],
+      "signal_score": 10,
+      "novelty_score": 8,
+      "actionability_score": 10
+    },
+    {
+      "title": "Set AI credit session limits in Copilot CLI and SDK",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-01",
+      "url": "https://github.blog/changelog/2026-07-01-set-ai-credit-session-limits-in-copilot-cli-and-sdk/",
+      "summary_zh": "Copilot CLI 与 GitHub Copilot SDK 新增会话级 AI credit 限额，可通过 /limits 或 --max-ai-credits 控制单次交互或自动化任务的成本上限。达到限额后代理会收尾并停止，适用于无人值守的脚本、批处理与自动修复任务。",
+      "summary_en": "Copilot CLI and the GitHub Copilot SDK now support session-level AI credit caps via /limits or --max-ai-credits, allowing teams to bound the cost of interactive sessions or unattended automation. When the cap is reached, the agent wraps up and stops.",
+      "why_it_matters_zh": "这解决了代码代理进入生产自动化时最现实的问题之一：成本失控。对内部平台、批量迁移、自动修复、CI 代理任务来说，预算护栏是大规模采用前提；而且它把“token/cost budget”提升为运行时一等控制面。",
+      "why_it_matters_en": "This addresses one of the most practical blockers to production agent use: runaway cost. For internal platforms, bulk migrations, autofix flows, and CI agent jobs, budget guardrails are prerequisite to scale, and this elevates token/cost budgets into a first-class runtime control.",
+      "key_takeaways_zh": [
+        "限额覆盖模型调用、子代理与后台 compaction，说明 GitHub 已把代理执行视作多步骤 runtime，而非单次 prompt。",
+        "这是软上限而非硬上限，团队在自动化场景中仍需结合全局预算、告警和作业级策略。"
+      ],
+      "key_takeaways_en": [
+        "The limit spans model calls, subagents, and background compaction, signaling that GitHub is treating agent execution as a multi-step runtime rather than a single prompt.",
+        "It is a soft cap rather than a strict one, so teams still need global budgets, alerting, and job-level policies for automation."
+      ],
+      "tags": [
+        "copilot-cli",
+        "agent-runtime",
+        "cost-control",
+        "automation"
+      ],
+      "signal_score": 10,
+      "novelty_score": 9,
+      "actionability_score": 10
+    },
+    {
+      "title": "Enterprises can default to auto model selection",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-01",
+      "url": "https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection/",
+      "summary_zh": "企业管理员现在可以在 managed-settings.json 中将 Copilot 的默认模型设置为 auto，使新会话默认使用自动选模，但仍允许用户按会话切换模型。",
+      "summary_en": "Enterprise admins can now set Copilot’s default model to auto in managed-settings.json, making automatic model selection the default for new conversations while still allowing per-conversation overrides.",
+      "why_it_matters_zh": "这不是简单 UI 选项，而是企业在“模型策略运营化”上的重要动作。它把模型路由从用户个人偏好，转向由平台统一定义的默认策略，有利于在质量、成本、时延之间做全局优化，也为后续基于任务类型的动态路由打基础。",
+      "why_it_matters_en": "This is more than a UI tweak; it operationalizes model strategy at the enterprise layer. It shifts routing from individual preference toward centrally defined defaults, enabling portfolio-level optimization across quality, cost, and latency, and setting the stage for task-aware dynamic routing.",
+      "key_takeaways_zh": [
+        "自动选模已可作为企业默认值下发，说明模型编排开始成为 Copilot 的核心控制面。",
+        "用户仍可按会话覆盖默认值，体现了治理与开发者自主性的折中。"
+      ],
+      "key_takeaways_en": [
+        "Auto model selection can now be pushed as an enterprise default, showing that model orchestration is becoming a core Copilot control plane.",
+        "Users can still override per conversation, balancing governance with developer autonomy."
+      ],
+      "tags": [
+        "model-routing",
+        "copilot",
+        "enterprise-governance",
+        "developer-experience"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "New C++ language server config skill for Copilot CLI",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-01",
+      "url": "https://github.blog/changelog/2026-07-01-new-c-language-server-config-skill-for-copilot-cli/",
+      "summary_zh": "Copilot CLI 现在可通过插件市场安装 Microsoft C++ Language Server，并附带生成/刷新 compile_commands.json 的内置 setup skill，支持 CMake、MSBuild 及自定义构建模式。",
+      "summary_en": "Copilot CLI can now install the Microsoft C++ Language Server from the plugin marketplace and includes a built-in setup skill to generate or refresh compile_commands.json for CMake, MSBuild, and custom build setups.",
+      "why_it_matters_zh": "这是“代理如何理解真实仓库”的高信号案例。对 C/C++ 这类高度依赖构建系统语义的语言，仅靠文本检索远远不够；通过 language server + setup skill，Copilot 开始把仓库语义接入、环境准备和工具调用流程产品化。",
+      "why_it_matters_en": "This is a high-signal example of how agents gain real repo understanding. For languages like C/C++ that depend heavily on build-system semantics, text retrieval alone is insufficient; by combining a language server with a setup skill, Copilot is productizing semantic repo access, environment prep, and tool invocation.",
+      "key_takeaways_zh": [
+        "插件化安装替代 npm 方式，意味着 Copilot CLI 的扩展生态和分发路径正在标准化。",
+        "自动生成 compile_commands.json 解决了代理接入大型原生代码库时最常见的上下文缺失问题。"
+      ],
+      "key_takeaways_en": [
+        "Plugin-based installation replaces the previous npm path, indicating a more standardized extension ecosystem and distribution model for Copilot CLI.",
+        "Automatic compile_commands.json generation tackles one of the biggest context gaps when agents operate on large native codebases."
+      ],
+      "tags": [
+        "repo-understanding",
+        "copilot-cli",
+        "language-server",
+        "plugins"
+      ],
+      "signal_score": 8,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Copilot vision is generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-01",
+      "url": "https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available/",
+      "summary_zh": "Copilot vision 正式可用，用户可在 VS Code、github.com 与 Copilot CLI 中向聊天附加图片和 PDF，让 Copilot 联合视觉材料与代码进行推理。",
+      "summary_en": "Copilot vision is now generally available, allowing users across VS Code, github.com, and Copilot CLI to attach images and PDFs so Copilot can reason over visual materials alongside code.",
+      "why_it_matters_zh": "虽然不像治理能力那样关键，但它拓宽了代码代理的上下文边界：架构图、报错截图、设计文档、PDF 规范都可直接进入交互闭环。对平台团队来说，这会改变 incident triage、文档驱动开发和遗留系统理解的工作流。",
+      "why_it_matters_en": "While less critical than governance controls, this expands the context boundary of coding agents: architecture diagrams, error screenshots, design docs, and PDF specs can now enter the same loop as code. For platform teams, this affects incident triage, doc-driven development, and legacy-system understanding workflows.",
+      "key_takeaways_zh": [
+        "多模态输入已覆盖 ask、plan、agent 等模式，说明其正从实验能力转向主线交互能力。",
+        "企业版默认开启且附件保留约 24 小时，团队需要重新评估文档与截图的敏感数据治理。"
+      ],
+      "key_takeaways_en": [
+        "Multimodal input now spans ask, plan, and agent modes, showing it is moving from experimental feature to core interaction primitive.",
+        "It is enabled by default for enterprise users with roughly 24-hour attachment retention, so teams should revisit governance for sensitive docs and screenshots."
+      ],
+      "tags": [
+        "multimodal",
+        "copilot",
+        "developer-workflow",
+        "enterprise-adoption"
+      ],
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Enterprise managed-settings.json is generally available",
+    "Set AI credit session limits in Copilot CLI and SDK",
+    "Enterprises can default to auto model selection"
+  ],
+  "new_terms_zh": [
+    "managed-settings.json",
+    "AI credit session limits",
+    "auto model selection",
+    "compile_commands.json setup skill"
+  ],
+  "new_terms_en": [
+    "managed-settings.json",
+    "AI credit session limits",
+    "auto model selection",
+    "compile_commands.json setup skill"
+  ],
+  "themes_zh": [
+    "AI coding 的企业治理正在配置化、集中化",
+    "代码代理的运行时控制开始覆盖成本与模型路由",
+    "仓库语义理解正通过插件与 language server 深度集成",
+    "多模态上下文成为主流开发工作流的一部分"
+  ],
+  "themes_en": [
+    "Enterprise governance for AI coding is becoming centralized and configuration-driven",
+    "Agent runtime controls are expanding to cost management and model routing",
+    "Repo-semantic understanding is deepening through plugins and language servers",
+    "Multimodal context is becoming part of mainstream developer workflows"
+  ],
+  "implications_zh": [
+    "平台团队应尽快评估是否用 managed-settings.json 统一模型策略、插件白名单和权限边界。",
+    "对任何无人值守代理任务，应将会话级 credit 限额、作业预算和告警纳入默认模板。",
+    "原生代码库或复杂 monorepo 团队应关注 language server 驱动的代理上下文接入，而不是仅依赖向量检索。",
+    "多模态默认开启后，截图、架构图和 PDF 文档将进入代码助手上下文，需要同步更新数据分类与保留策略。"
+  ],
+  "implications_en": [
+    "Platform teams should evaluate managed-settings.json as the default mechanism for model policy, plugin allowlists, and permission boundaries.",
+    "Any unattended agent workflow should adopt session credit caps, job budgets, and alerting as standard templates.",
+    "Teams with native codebases or complex monorepos should pay attention to language-server-backed agent context, not just vector retrieval.",
+    "With multimodal support enabled by default, screenshots, diagrams, and PDFs now enter coding-assistant context and require updated data classification and retention policies."
+  ],
+  "reading_order": [
+    "Enterprise managed-settings.json is generally available",
+    "Enterprises can default to auto model selection",
+    "Set AI credit session limits in Copilot CLI and SDK",
+    "New C++ language server config skill for Copilot CLI",
+    "Copilot vision is generally available"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Models 退役是产品路线调整，但对 AI coding 技术栈本身的新增信息有限。",
+    "Kimi K2.7 Code 上架 Copilot 有一定市场信号，但缺少评测、路由策略或工程集成细节，优先级低于治理与 runtime 控制类更新。",
+    "Secret scanning 相关更新对安全团队有价值，但与 AI coding agents、评测、MCP、仓库理解的主线关联较弱。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Models retirement is a product-line change, but it adds limited new technical insight for AI coding workflows.",
+    "Kimi K2.7 Code arriving in Copilot has some market signal, but lacks evaluation, routing, or engineering-integration depth compared with governance and runtime-control updates.",
+    "The secret-scanning updates matter to security teams, but are less connected to today’s core thread around AI coding agents, evals, MCP, and repo understanding."
+  ]
+}
