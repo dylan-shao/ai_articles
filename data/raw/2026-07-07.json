@@ -1,0 +1,30 @@
+[
+  {
+    "title": "How I AI | ChatPRD — AI Workflows & Productivity Tips",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/how-i-ai",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-07-05T21:03:03.175000+00:00",
+    "author": null,
+    "excerpt": "Discover how product managers and teams are using AI to transform their workflows. Real stories, practical tips, and AI-native strategies from expert interviews.",
+    "body_excerpt": "How I AI | ChatPRD — AI Workflows & Productivity Tips ChatPRD Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free AI PM by ChatPRD How I AI Product Releases Video How I AI AI Workflows & Stories from the Experts Discover how experts are using AI to transform their workflows. Real stories, practical tips, and step-by-step guides. YouTube Spotify Apple Podcasts Browse Workflows Sponsor offer: How I AI listeners are eligible for $50 in free Cursor credit (limited supply) . Claim code Featured How Alessio Fanelli uses Open AI Symphony for Autonomous Coding and Pokémon Card Trading Workflows Alessio Fanelli, founder of Kernel Labs and co-host of the Latent Space podcast, reveals two powerful AI workflows: managing autonomous coding agents with OpenAI Symphony and Linear, and using Codex to find and buy underpriced Pokémon cards on eBay. Claire Vo Jul 5, 2026 · 8 min read Read article 01 All Episodes 87 episodes Building a Custom Benchmark for Sonnet 5, and Why the Results Surprised Me I'm moving beyond simple vibe checks to test new models. This post details how I built the repeatable 'How I AI Bench' using Claude Code, used it to score models like Sonnet 5 on PRDs and prototypes, and reveal the surprising final leaderboard. Claire Vo Jun 30, 2026 · 9 min How Gusto Built a New Product Line in 10 Weeks with Claude Code, No Jira, and No Docs I sat down with Gusto's CTO Eddie Kim to learn how a tiny team of five shipped the new Gusto Co-founder product in just 10 weeks, throwing out all the standard product development rules and replacing them with a 24/7 Zoom room and AI. Claire Vo Jun 29, 2026 · 8 min GLM 5.2: A Live Review of an Opus-Level Open-Weights Model I put the new GLM 5.2 open-weights model to the test, setting it up in Cursor and Claude Code to tackle a codebase audit, a live redesign, and a 45-minute autonomous bug hunt. Here's how it performed—and what it cost. Claire Vo Jun 24, 2026 · 9 min How Mozilla Fixed ",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Blog | ChatPRD — Product Management Insights & AI Tips",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/blog",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-07-05T21:03:03.175000+00:00",
+    "author": null,
+    "excerpt": "Expert insights on product management, AI workflows, spec-driven development, and becoming an AI-native PM. From the ChatPRD team.",
+    "body_excerpt": "Blog | ChatPRD — Product Management Insights & AI Tips ChatPRD Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free AI PM by ChatPRD How I AI Product Releases Video Blog AI Product Management by ChatPRD Expert insights on product management, AI workflows, spec-driven development, and becoming an AI-native PM. Featured How I AI How Alessio Fanelli uses Open AI Symphony for Autonomous Coding and Pokémon Card Trading Workflows Alessio Fanelli, founder of Kernel Labs and co-host of the Latent Space podcast, reveals two powerful AI workflows: managing autonomous coding agents with OpenAI Symphony and Linear, and using Codex to find and buy underpriced Pokémon cards on eBay. Claire Vo Jul 5, 2026 · 8 min read Read article 01 Latest Articles 160 articles How I AI Building a Custom Benchmark for Sonnet 5, and Why the Results Surprised Me I'm moving beyond simple vibe checks to test new models. This post details how I built the repeatable 'How I AI Bench' using Claude Code, used it to score models like Sonnet 5 on PRDs and prototypes, and reveal the surprising final leaderboard. Claire Vo Jun 30, 2026 · 9 min How I AI How Gusto Built a New Product Line in 10 Weeks with Claude Code, No Jira, and No Docs I sat down with Gusto's CTO Eddie Kim to learn how a tiny team of five shipped the new Gusto Co-founder product in just 10 weeks, throwing out all the standard product development rules and replacing them with a 24/7 Zoom room and AI. Claire Vo Jun 29, 2026 · 8 min The New PM - What It Means When Anyone Can Build Anything (Cursor Compile 2026) In this post, I break down the fundamental shift in product management, moving from gatekeeping engineering to a new framework focused on finding money, manifesting novel ideas, and bringing people along. Claire Vo Jun 26, 2026 · 6 min How I AI GLM 5.2: A Live Review of an Opus-Level Open-Weights Model I put the new GLM 5.2 open-weights model to the test, setting it up in Cursor and Claud",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

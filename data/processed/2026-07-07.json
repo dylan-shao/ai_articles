@@ -1,0 +1,79 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容信号偏弱，主要是聚合页与访谈式内容，缺少一手技术细节、可复现实验、系统设计或工程数据。",
+    "唯一相对值得关注的是一篇关于自定义模型基准的文章线索，但候选中未提供该单篇正文与充分技术细节，因此仅列为边缘关注项。"
+  ],
+  "executive_summary_en": [
+    "Today's candidate set is weak: mostly index/landing pages and interview-style content, with limited original technical detail, reproducible methodology, system design, or engineering data.",
+    "The only borderline-relevant signal is a referenced post about building a custom benchmark, but the candidate does not include the standalone article or enough technical substance, so it remains a borderline item."
+  ],
+  "items": [
+    {
+      "title": "Building a Custom Benchmark for Sonnet 5, and Why the Results Surprised Me",
+      "source": "ChatPRD Blog",
+      "author": "Claire Vo",
+      "publish_date": "2026-06-30T00:00:00+00:00",
+      "url": "https://www.chatprd.ai/blog",
+      "summary_zh": "该候选并非文章正文，而是博客聚合页中提到的一篇帖子。摘要显示作者尝试从主观“vibe check”转向可重复的基准测试，使用 Claude Code 对 PRD 与原型任务进行打分并比较模型表现。",
+      "summary_en": "This candidate is not the standalone article but a blog index reference to a post. The excerpt suggests a shift from subjective vibe checks to a repeatable benchmark, using Claude Code to score models on PRD and prototype tasks.",
+      "why_it_matters_zh": "对工程负责人而言，模型评测从感性试用转向任务化、可重复、可对比的内部基准，是 AI 编码采购、路由与回归验证的核心能力。可惜当前候选缺乏基准构成、评分规则、任务集和误差控制等关键细节。",
+      "why_it_matters_en": "For engineering leaders, moving from subjective trials to task-based, repeatable internal benchmarks is core to model selection, routing, and regression control in AI coding workflows. However, the candidate lacks key details on benchmark composition, scoring, task set, and error controls.",
+      "key_takeaways_zh": [
+        "方向是对的：建立面向真实开发工件的可重复评测，比通用排行榜更贴近团队决策。",
+        "信息不足：没有看到具体 harness 设计、评分 rubric、样本规模、成本/时延数据或失败案例。"
+      ],
+      "key_takeaways_en": [
+        "The direction is sound: building repeatable evaluations around real development artifacts is more decision-relevant than generic leaderboards.",
+        "The information is insufficient: no visible harness design, scoring rubric, sample size, cost/latency data, or failure analysis."
+      ],
+      "tags": [
+        "model-evals",
+        "benchmarking",
+        "claude-code",
+        "borderline"
+      ],
+      "signal_score": 5,
+      "novelty_score": 5,
+      "actionability_score": 4
+    }
+  ],
+  "top_items": [
+    "Building a Custom Benchmark for Sonnet 5, and Why the Results Surprised Me"
+  ],
+  "new_terms_zh": [
+    "vibe check（主观试用式评估）",
+    "可重复内部基准"
+  ],
+  "new_terms_en": [
+    "vibe check",
+    "repeatable internal benchmark"
+  ],
+  "themes_zh": [
+    "从主观试用转向工程化评测",
+    "博客聚合页与访谈内容缺乏技术深度"
+  ],
+  "themes_en": [
+    "Shift from subjective testing to engineered evaluation",
+    "Index pages and interviews lack technical depth"
+  ],
+  "implications_zh": [
+    "如果你在搭建 AI 编码评测体系，应优先寻找包含任务集、评分标准、成本时延和回归机制的一手文章，而非经验分享聚合页。",
+    "今天不建议基于这些候选调整模型选型或组织流程，除非拿到原文与更完整实验设计。"
+  ],
+  "implications_en": [
+    "If you're building an AI coding evaluation program, prioritize primary writeups with task sets, scoring rules, cost/latency measurements, and regression mechanics rather than workflow roundups.",
+    "Do not change model strategy or org process based on today's candidates unless you obtain the full article and underlying experimental design."
+  ],
+  "reading_order": [
+    "Building a Custom Benchmark for Sonnet 5, and Why the Results Surprised Me"
+  ],
+  "what_to_ignore_zh": [
+    "“How I AI” 这类访谈/工作流合集页面，本身不是一手技术文档。",
+    "泛化的 AI 生产力与 PM 叙事，缺少对编码代理、MCP、repo 理解或评测 harness 的具体实现。"
+  ],
+  "what_to_ignore_en": [
+    "\"How I AI\"-style interview/workflow roundup pages are not primary technical documents.",
+    "Generic AI productivity and PM narratives without concrete implementation details on coding agents, MCP, repo understanding, or eval harnesses."
+  ]
+}
