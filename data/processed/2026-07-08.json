@@ -1,0 +1,147 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天高信号内容偏弱，主要集中在 GitHub Copilot 的企业治理与成本控制，而非新的代理架构、评测方法或开发者工作流突破。",
+    "最值得关注的是企业级 AI 编码的“可控采用”能力在增强：开放权重模型可选、按用户预算下沉到 UI、以及桌面端代理入口全面开放。",
+    "对后端/平台负责人而言，这些更新的价值更多在于上线治理、模型准入和预算分配，而不是直接改变编码代理的技术栈。"
+  ],
+  "executive_summary_en": [
+    "Signal is relatively weak today; the strongest items are about GitHub Copilot enterprise governance and spend control rather than new agent architectures, eval methods, or harness design.",
+    "The most relevant theme is controlled organizational adoption of AI coding: selectable open-weight models, per-user budget controls in the UI, and broader access to the desktop Copilot app.",
+    "For backend/platform leaders, the value is primarily in rollout governance, model admission policy, and cost allocation rather than immediate changes to core coding-agent infrastructure."
+  ],
+  "items": [
+    {
+      "title": "Kimi K2.7 now available for Copilot Business and Enterprise - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-07",
+      "url": "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/",
+      "summary_zh": "GitHub 将 Kimi K2.7 Code 扩展到 Copilot Business 与 Enterprise。该模型是 Copilot 中首个可选的开放权重模型，由 GitHub 托管在 Azure 上，并按 provider list pricing 进行 usage-based billing。对企业而言默认关闭，需管理员显式开启策略后组织成员才能使用。",
+      "summary_en": "GitHub expanded Kimi K2.7 Code to Copilot Business and Enterprise. It is the first open-weight model selectable in Copilot, hosted by GitHub on Azure and billed via usage-based pricing at provider list rates. For enterprises it is off by default and must be explicitly enabled by admins.",
+      "why_it_matters_zh": "这不是单纯的模型上新，而是企业 AI 编码平台开始把“开放权重模型准入”纳入正式治理面。对于平台团队，这意味着模型选择、数据治理、合规评估和成本分层将从例外流程转为标准化能力。",
+      "why_it_matters_en": "This matters less as a model launch and more as a governance milestone: enterprise AI coding platforms are now treating open-weight model admission as a first-class policy surface. Platform teams should expect model choice, data governance, compliance review, and cost tiering to become standardized controls.",
+      "key_takeaways_zh": [
+        "开放权重模型首次进入 Copilot 企业模型选择器，说明企业级 AI 编码正在从单一托管模型走向多模型治理。",
+        "默认关闭并要求管理员显式启用，反映出开放权重模型在安全、合规与数据边界上的审查要求仍高于默认模型。"
+      ],
+      "key_takeaways_en": [
+        "The first open-weight model in Copilot’s enterprise model picker signals a shift from single-model usage to multi-model governance in enterprise coding AI.",
+        "Being off by default and admin-gated underscores that open-weight models still require explicit security, compliance, and data-governance review."
+      ],
+      "tags": [
+        "Copilot",
+        "open-weight models",
+        "enterprise governance",
+        "model policy"
+      ],
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 7
+    },
+    {
+      "title": "Per-user budgets for cost centers in the billing UI - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-07",
+      "url": "https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui/",
+      "summary_zh": "GitHub Enterprise Cloud 现已支持在 Billing UI 中直接为 cost center 设置按用户预算。此前相同能力仅通过 REST API 提供。管理员可以把团队或个人加入某个 cost center，定义统一的 per-user budget，并随成员变动自动保持同步。",
+      "summary_en": "GitHub Enterprise Cloud now supports setting per-user budgets for cost centers directly in the billing UI. The same control was previously available only through the REST API. Admins can attach teams or individuals to a cost center, define a single per-user budget, and keep budget coverage automatically synced as membership changes.",
+      "why_it_matters_zh": "这项更新虽然不“炫”，但对组织级 AI 编码落地非常关键。很多团队卡在不是模型效果，而是无法把 AI 成本映射到团队、个人与预算责任中心。该能力降低了从试点走向规模化采用的运营阻力。",
+      "why_it_matters_en": "This is operationally important even if not flashy. Many organizations are blocked less by model quality than by inability to map AI spend to teams, users, and budget owners. This feature reduces the friction between pilot usage and scaled adoption.",
+      "key_takeaways_zh": [
+        "GitHub 正在把原本偏 API/平台工程的成本治理能力下放到 UI，降低企业运维门槛。",
+        "按用户预算与 cost center 绑定，意味着 Copilot/代理使用将更容易被纳入常规 FinOps 与内部成本分摊体系。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is moving cost-governance controls from API-only workflows into the UI, lowering the operational bar for enterprise rollout.",
+        "Binding per-user budgets to cost centers makes Copilot and agent usage easier to integrate into normal FinOps and chargeback models."
+      ],
+      "tags": [
+        "Copilot",
+        "FinOps",
+        "enterprise adoption",
+        "budget controls"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub Copilot app available to all - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-07",
+      "url": "https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all/",
+      "summary_zh": "GitHub Copilot 桌面应用现已向所有 Copilot 计划开放，覆盖 macOS、Windows 与 Linux。GitHub 还支持 BYOK，无需 Copilot 订阅即可接入自有模型提供方运行会话。Business/Enterprise 用户仍需管理员启用相关策略。",
+      "summary_en": "The GitHub Copilot desktop app is now available across all Copilot plans on macOS, Windows, and Linux. GitHub also supports BYOK, allowing sessions against a user’s own model provider without a Copilot subscription. Business and Enterprise access still requires admin policy enablement.",
+      "why_it_matters_zh": "它意味着 AI 编码入口正在从 IDE 插件扩大到独立桌面代理环境，并且允许 BYOK。对平台团队来说，这会带来新的接入问题：身份、策略、审计、终端分发和与内部模型网关的整合。",
+      "why_it_matters_en": "This suggests the AI coding entry point is expanding from IDE plugins into a standalone desktop agent environment, with BYOK as a notable enterprise hook. For platform teams, that introduces new integration questions around identity, policy, audit, endpoint distribution, and internal model gateways.",
+      "key_takeaways_zh": [
+        "独立桌面应用正在成为代理式开发的新分发面，而不再局限于编辑器内嵌体验。",
+        "BYOK 让企业有机会把 GitHub 的交互层与自有模型策略、供应商选择和网关体系结合起来。"
+      ],
+      "key_takeaways_en": [
+        "A standalone desktop app is emerging as a new distribution surface for agent-driven development, beyond embedded editor experiences.",
+        "BYOK creates a path to combine GitHub’s interaction layer with enterprise-owned model policy, provider choice, and gateway infrastructure."
+      ],
+      "tags": [
+        "Copilot app",
+        "agent-driven development",
+        "BYOK",
+        "enterprise tooling"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Kimi K2.7 now available for Copilot Business and Enterprise - GitHub Changelog",
+    "Per-user budgets for cost centers in the billing UI - GitHub Changelog",
+    "GitHub Copilot app available to all - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "开放权重模型准入治理",
+    "按用户预算的 cost center",
+    "BYOK 桌面代理入口"
+  ],
+  "new_terms_en": [
+    "open-weight model admission governance",
+    "per-user budgeted cost centers",
+    "BYOK desktop agent entrypoint"
+  ],
+  "themes_zh": [
+    "企业级 AI 编码治理开始覆盖模型选择、预算控制与终端入口",
+    "组织采用的重点正从“能不能用”转向“谁能用、花多少钱、用哪个模型”"
+  ],
+  "themes_en": [
+    "Enterprise AI coding governance is expanding across model selection, budget control, and client entry points.",
+    "The organizational focus is shifting from 'can we use it' to 'who can use it, how much can they spend, and which model is allowed'."
+  ],
+  "implications_zh": [
+    "平台团队应建立模型准入清单，尤其为开放权重模型定义数据处理、日志、保留和合规边界。",
+    "若要规模化部署编码代理，预算、成本归属和团队级限制应与 SSO、团队目录和内部 chargeback 流程联动。",
+    "桌面代理客户端会把终端治理带回议程，需要重新审视设备策略、审计和模型出口控制。"
+  ],
+  "implications_en": [
+    "Platform teams should define a model admission catalog, especially with explicit data handling, logging, retention, and compliance boundaries for open-weight models.",
+    "To scale coding-agent deployment, budgets, cost attribution, and team-level caps should integrate with SSO, directory groups, and internal chargeback processes.",
+    "Desktop agent clients reintroduce endpoint governance concerns, requiring renewed attention to device policy, auditability, and model egress controls."
+  ],
+  "reading_order": [
+    "Kimi K2.7 now available for Copilot Business and Enterprise - GitHub Changelog",
+    "Per-user budgets for cost centers in the billing UI - GitHub Changelog",
+    "GitHub Copilot app available to all - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "Secret scanning、rulesets 等更新本身有价值，但与今天面向 AI 编码代理/评测/开发者工具主题的相关性较弱。",
+    "Copilot Billing Preview app 退役更多是产品整合信号，不是新的技术能力。",
+    "单纯的目录页或 changelog 聚合页没有新增信息量。"
+  ],
+  "what_to_ignore_en": [
+    "The secret scanning and ruleset items are useful but weakly aligned with today’s AI coding agent / eval / developer tooling focus.",
+    "The Copilot Billing Preview retirement is mostly a product consolidation signal, not a new technical capability.",
+    "Generic changelog index pages add no new information."
+  ]
+}
