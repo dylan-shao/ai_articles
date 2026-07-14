@@ -1,0 +1,44 @@
+[
+  {
+    "title": "GitHub Code Quality license estimate in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now see the number of active committers on repositories using GitHub Code Quality across your enterprise, giving you an estimate of your Code Quality license cost before it…",
+    "body_excerpt": "GitHub Code Quality license estimate in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release July 13, 2026 • 1 minute read GitHub Code Quality license estimate in public preview Table of Contents Where to find it What the estimate includes Availability and pricing Learn more Menu. Currently selected: Where to find it Where to find it What the estimate includes Availability and pricing Learn more You can now see the number of active committers on repositories using GitHub Code Quality across your enterprise, giving you an estimate of your Code Quality license cost before it becomes a paid product on July 20, 2026. Code Quality is free during the public preview, so this usage isn’t billed today. The estimate helps you understand the per-committer license impact on your bill so you can decide whether to keep Code Quality enabled for your organizations ahead of general availability. Where to find it To view your estimate, go to your billing entity’s Billing and licensing page and open Licensing . The Code Quality card shows your consumed licenses and estimated monthly payment. What the estimate includes The estimate only reflects the per-committer license cost. It doesn’t include the GitHub Actions minutes that CodeQL analysis consumes or the usage-based charges for AI-powered capabilities such as GitHub Copilot Autofix. It also reflects standard list pricing, so it doesn’t account for any discounts that may apply to your account. Availability and pricing GitHub Code Quality is available on GitHub Enterprise Cloud and GitHub Team but isn’t available on GitHub Enterprise Server. When Code Quality becomes generally available on July 20, 2026, it will be priced at $10 per active committer per month. The preview estimates will reflect the committers you will be billed ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Application Security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply July Jul 2026 July Jul 2026 Jul.13 Release GitHub Code Quality license estimate in public preview account management application security ... +1 Jul.10 Improvement CodeQL 2.26.0 adds Kotlin 2.4.0 support and AI prompt injection detection application security Jul.10 Improvement Clearer names for secret scanning detector types application security Jul.09 Release Organization-level targeting for GitHub Code Quality application security enterprise management tools platform governance ... +2 Jul.07 Release Secret scanning extended metadata and multipart validation application security Jul.01 Release Secret scanning public monitoring for enterprises application security Jul.01 Improvement Secret scanning adds validators for Asana, IBM, and MessageBird application security June Jun 2026 June Jun 2026 Jun.30 Improvement GitHub code coverage merge protection for pull requests application security Jun.30 Improvement Upcoming cloud data retention policy for closed security alerts application security supply chain security ... +1 Jun.30 Retired Upcoming access restrictions to public API endpoints and UI views application security Jun.24 Improvement Self-service credential revocation for incident response application security enterprise management tools ... +1 Jun.23 Improvement Secret scanning adds extended metadata for Replicate secr",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Separate SSO and Organizations pages in Settings - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-13-separate-sso-and-organizations-pages-in-settings/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We’ve separated the combined SSO & Organizations page in your user settings into two distinct pages: SSO and Organizations. This update makes it easier to find and manage these settings…",
+    "body_excerpt": "Separate SSO and Organizations pages in Settings - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 13, 2026 • 1 minute read Separate SSO and Organizations pages in Settings We’ve separated the combined SSO & Organizations page in your user settings into two distinct pages: SSO and Organizations . This update makes it easier to find and manage these settings independently, with a clearer experience in your account settings. If you use SSO or belong to organizations on GitHub, you’ll now see these options on separate pages instead of in a single combined view. Join the discussion within GitHub Community to leave your feedback. account management Share Copied Shared Back to changelog Related Posts Jul.13 Release GitHub Code Quality license estimate in public preview account management application security ... +1 Jul.10 Release Per-user states for multi-user budgets in the REST API account management enterprise management tools ... +1 Jul.07 Improvement Add review cycles and time to adoption phases in the usage API account management copilot enterprise management tools ... +2 Jul.02 Improvement Improved accuracy and coverage in Copilot usage metrics reports account management copilot enterprise management tools ... +2 Jul.02 Release Cost centers now support AI credit pools account management copilot ... +1 Jun.26 Improvement Track total merges by adoption phase in enterprise and organization reports account management copilot enterprise management tools ... +2 Jun.25 Improvement Cost centers now support enterprise teams account management enterprise management tools ... +1 Jun.19 Release AI credits consumed per user now in the Copilot usage metrics API account management copilot enterprise management tools ... +2 Jun.15 Improvement Copilot usage metrics now include mo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

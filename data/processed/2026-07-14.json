@@ -1,0 +1,79 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号偏弱，只有一条与工程管理相关且具一定可操作性的 GitHub 官方更新值得保留。",
+    "该更新的核心价值不在 AI 编码能力本身，而在于为平台团队提供 GitHub Code Quality 商业化前的席位/活跃提交者成本预估，可用于预算、试点范围控制与治理决策。"
+  ],
+  "executive_summary_en": [
+    "Today's candidate set is weak overall, with only one GitHub update offering moderate value for engineering/platform leaders.",
+    "The main value is not new AI coding capability, but pre-GA cost visibility for GitHub Code Quality, which helps platform teams plan budget, scope pilots, and make governance decisions."
+  ],
+  "items": [
+    {
+      "title": "GitHub Code Quality license estimate in public preview - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-13",
+      "url": "https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview/",
+      "summary_zh": "GitHub 在 Code Quality 正式收费前推出许可证费用预估功能，企业可在 Billing and licensing 页面查看基于 active committers 的预计月度成本。该预估仅覆盖每位活跃提交者的许可费用，不包含 CodeQL 所消耗的 GitHub Actions 分钟，也不包含 Copilot Autofix 等 AI 能力的用量费用。",
+      "summary_en": "GitHub added a license cost estimate for Code Quality ahead of paid GA, letting enterprises view projected monthly spend based on active committers. The estimate only covers per-committer license cost and excludes GitHub Actions minutes consumed by CodeQL as well as usage-based charges for AI features such as Copilot Autofix.",
+      "why_it_matters_zh": "对平台负责人而言，这是一条预算与治理信号：GitHub 正把代码质量/安全能力进一步产品化并按活跃提交者收费。即使技术深度有限，该更新能直接支持是否在全组织开启、只对核心仓库启用，或在 GA 前收缩试点范围等决策。",
+      "why_it_matters_en": "For platform and engineering leads, this is primarily a budgeting and governance signal: GitHub is productizing code quality/security workflows with per-active-committer pricing. While technically shallow, it directly informs whether to enable it org-wide, restrict it to critical repos, or narrow pilots before GA.",
+      "key_takeaways_zh": [
+        "GA 定价为每位活跃提交者每月 10 美元，且预估值以标准标价计算，不含折扣。",
+        "总成本不能只看许可证：还要额外核算 CodeQL 的 Actions 分钟和 AI 修复类能力的用量费用。"
+      ],
+      "key_takeaways_en": [
+        "GA pricing is $10 per active committer per month, and the estimate uses standard list pricing without discounts.",
+        "Total cost should not be inferred from license alone: teams must also model CodeQL Actions minutes and usage-based AI remediation charges."
+      ],
+      "tags": [
+        "GitHub",
+        "Code Quality",
+        "Engineering Management",
+        "Cost Governance"
+      ],
+      "signal_score": 5,
+      "novelty_score": 3,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "GitHub Code Quality license estimate in public preview - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "active committers（活跃提交者计费口径）",
+    "Code Quality license estimate（代码质量许可证费用预估）"
+  ],
+  "new_terms_en": [
+    "active committers",
+    "Code Quality license estimate"
+  ],
+  "themes_zh": [
+    "AI/代码质量能力的商业化与成本可观测性",
+    "平台治理从功能试用转向席位与用量精细化管理"
+  ],
+  "themes_en": [
+    "Commercialization and cost visibility for AI/code-quality capabilities",
+    "Platform governance shifting from feature trials to seat and usage management"
+  ],
+  "implications_zh": [
+    "如果你的组织正在评估 GitHub Code Quality，应立即按仓库与提交者分层做成本建模，而不是默认全量开启。",
+    "平台团队需要把许可证费用、CI 计算成本和 AI 增量费用拆开跟踪，否则容易低估真实 TCO。"
+  ],
+  "implications_en": [
+    "If your organization is evaluating GitHub Code Quality, model cost by repository tier and committer population rather than enabling it by default everywhere.",
+    "Platform teams should track license cost, CI compute cost, and AI add-on usage separately, or they will underestimate true TCO."
+  ],
+  "reading_order": [
+    "GitHub Code Quality license estimate in public preview - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 首页聚合页，不是独立高信号内容。",
+    "Separate SSO and Organizations pages in Settings：纯设置页信息架构调整，与 AI 编码、开发工具链或平台治理关联很弱。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog landing page, which is only an index and not a standalone high-signal item.",
+    "Separate SSO and Organizations pages in Settings: a basic settings IA change with little relevance to AI coding, developer tooling, or platform governance."
+  ]
+}
