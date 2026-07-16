@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Improvements to secret scanning and public monitoring - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "This week, we’re rolling out several improvements to secret scanning and public monitoring: Resend is now a GitHub secret scanning partner. Secret scanning now detects new secret types from APIclub…",
+    "body_excerpt": "Improvements to secret scanning and public monitoring - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 15, 2026 • 2 minute read Improvements to secret scanning and public monitoring Table of Contents GitHub secret scanning partnership program Detectors added Push protection defaults expanded Distinguish secret categories in the webhook payload New insights on the public monitoring alert list Learn more Menu. Currently selected: GitHub secret scanning partnership program GitHub secret scanning partnership program Detectors added Push protection defaults expanded Distinguish secret categories in the webhook payload New insights on the public monitoring alert list Learn more This week, we’re rolling out several improvements to secret scanning and public monitoring: Resend is now a GitHub secret scanning partner. Secret scanning now detects new secret types from APIclub and Resend. Secret scanning now blocks VolcEngine secrets with push protection by default. The secret_scanning_alert webhook now includes a secret_category field (i.e., default or generic ) so you can distinguish between specific and generic types. The public monitoring alert list now surfaces insight cards at the top of the page, including a breakdown of associated leaks by attribution, your enterprise member count, and your verified domains. GitHub secret scanning partnership program GitHub secret scanning protects users by searching repositories for known types of secrets such as tokens and private keys. By identifying and flagging these secrets, our scans help prevent data leaks and fraud. We have partnered with Resend to scan for their tokens to help secure the development community. GitHub will forward any exposed secrets found in public repositories to Resend, who will take appropriate action, ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

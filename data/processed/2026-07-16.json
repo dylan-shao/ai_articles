@@ -1,0 +1,82 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体较弱，只有一条与开发平台安全自动化相关的增量更新，缺少关于 AI 编码代理、评测、MCP、仓库理解或组织落地的高信号原创技术内容。",
+    "GitHub 对 secret scanning 的改进有一定工程价值，尤其是 webhook 中新增 secret_category 字段，以及 public monitoring 的可视化洞察增强，适合负责平台安全与治理的团队关注。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today: only one incremental platform-security update stands out, and there is no strong original technical content on AI coding agents, evals, MCP, repo understanding, or organizational adoption.",
+    "GitHub’s secret scanning changes still have some engineering value, especially the new secret_category field in webhooks and the added public monitoring insights, which are relevant to platform security and governance teams."
+  ],
+  "items": [
+    {
+      "title": "Improvements to secret scanning and public monitoring - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-15",
+      "url": "https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring/",
+      "summary_zh": "GitHub 发布了 secret scanning 和 public monitoring 的一组小幅增强：新增 Resend 与 APIclub 的 secret detector，VolcEngine secrets 默认启用 push protection，secret_scanning_alert webhook 增加 secret_category 字段，并在 public monitoring 告警列表中加入泄露归因、企业成员数和验证域名等洞察卡片。",
+      "summary_en": "GitHub shipped a set of incremental improvements to secret scanning and public monitoring: new detectors for Resend and APIclub secrets, default push protection for VolcEngine secrets, a new secret_category field in the secret_scanning_alert webhook, and insight cards in the public monitoring alert list showing leak attribution, enterprise member count, and verified domains.",
+      "why_it_matters_zh": "这不是 AI 编码主题的核心进展，但对负责开发平台、安全治理和自动化响应的团队有实际价值。尤其是 webhook 分类字段可直接改善告警路由、优先级策略和后续自动修复流程设计。",
+      "why_it_matters_en": "This is not a core AI coding development, but it matters for teams running developer platforms, security governance, and automated response pipelines. The webhook classification field is especially useful for improving alert routing, prioritization, and remediation automation.",
+      "key_takeaways_zh": [
+        "secret_scanning_alert webhook 新增 secret_category，可区分 default 与 generic 类型，便于下游系统按风险等级和可信度分流。",
+        "public monitoring 页面新增洞察卡片，说明 GitHub 正把秘密泄露检测从“发现问题”推进到“支持治理与归因分析”。",
+        "默认 push protection 覆盖更多 secret 类型，意味着平台安全基线正逐步从告警转向提交前阻断。"
+      ],
+      "key_takeaways_en": [
+        "The secret_scanning_alert webhook now includes secret_category, enabling downstream systems to distinguish default vs. generic secret types for risk-based routing.",
+        "New public monitoring insight cards show GitHub is moving from pure detection toward governance and attribution support.",
+        "Default push protection for more secret types reflects a broader shift from post hoc alerting to pre-commit/pre-push prevention."
+      ],
+      "tags": [
+        "GitHub",
+        "secret-scanning",
+        "platform-security",
+        "developer-tooling",
+        "governance"
+      ],
+      "signal_score": 5,
+      "novelty_score": 3,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Improvements to secret scanning and public monitoring - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "secret_category：GitHub 在 secret_scanning_alert webhook 中新增的字段，用于区分默认规则与通用型 secrets。",
+    "public monitoring insight cards：在公开泄露监控页面顶部展示的治理洞察卡片，用于帮助组织理解泄露归因与覆盖范围。"
+  ],
+  "new_terms_en": [
+    "secret_category: A new field in GitHub’s secret_scanning_alert webhook that distinguishes default vs. generic secret detections.",
+    "public monitoring insight cards: Summary cards added to GitHub’s public monitoring UI to help organizations interpret leak attribution and coverage."
+  ],
+  "themes_zh": [
+    "开发平台安全能力继续向自动化治理与策略执行演进。",
+    "告警系统的数据结构增强，正在提升下游编排、分类与自动处置能力。"
+  ],
+  "themes_en": [
+    "Developer platform security is continuing to evolve from detection toward automated governance and policy enforcement.",
+    "Richer alert schemas are improving downstream orchestration, classification, and automated remediation."
+  ],
+  "implications_zh": [
+    "如果你的团队已接入 GitHub secret scanning webhook，应评估是否利用 secret_category 重构告警分级、值班路由和自动封禁策略。",
+    "对于建设内部开发者平台的团队，这类小变更提示应把安全事件模型设计为可扩展结构，而不是仅依赖静态规则。"
+  ],
+  "implications_en": [
+    "If your team already consumes GitHub secret scanning webhooks, review whether secret_category should drive new alert severity, on-call routing, and auto-containment policies.",
+    "For internal developer platform teams, this is a reminder to model security events with extensible schemas rather than hard-coded static rules."
+  ],
+  "reading_order": [
+    "Improvements to secret scanning and public monitoring - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这条更新误判为 AI 编码能力的重要进展；它主要是平台安全与治理层面的增量优化。",
+    "新增 detector 合作伙伴本身信号有限，真正更值得关注的是 webhook 字段扩展和默认阻断策略的变化。"
+  ],
+  "what_to_ignore_en": [
+    "Do not overread this as a meaningful AI coding advancement; it is primarily an incremental platform security and governance update.",
+    "The new detector partnerships are low-signal by themselves; the more important changes are the webhook schema extension and default prevention behavior."
+  ]
+}
