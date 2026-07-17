@@ -1,0 +1,72 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply July Jul 2026 July Jul 2026 Jul.16 Release Repository admins can archive pull requests collaboration tools Jul.09 Release New pull requests dashboard is now generally available collaboration tools June Jun 2026 June Jun 2026 Jun.30 Improvement Releases: Sidebar navigation and per-asset download counts collaboration tools Jun.29 Improvement Restrict issue creation to collaborators only collaboration tools Jun.25 Improvement GitHub Copilot for Jira is now generally available collaboration tools copilot ... +1 Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.17 Improvement Limit open pull requests for users without write access collaboration tools Jun.11 Release GitHub Enterprise Server 3.21 is now generally available collaboration tools May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHu",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Repository admins can archive pull requests - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-16-repository-admins-can-archive-pull-requests/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Repository admins can now archive pull requests to remove them from public view without permanently deleting them. When a pull request is archived, it is closed and locked. Pull requests…",
+    "body_excerpt": "Repository admins can archive pull requests - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release July 16, 2026 • 1 minute read Repository admins can archive pull requests Repository admins can now archive pull requests to remove them from public view without permanently deleting them. When a pull request is archived, it is closed and locked. Pull requests can be archived in bulk or on an individual basis. Archived pull requests are only visible to repository admins, and non-admin visitors to the URL receive a 404 response. If you unarchive a pull request, it becomes visible again and remains closed and locked. This gives you a moderation-focused option for handling spammy or abusive pull requests, supporting legal or policy requirements where deletion is not preferred, and preserving historical context for administrators. You can also find archived pull requests using the is:archived filter to support triage workflows. We’d love to hear your feedback. Drop any questions or comments within our Community discussion . collaboration tools Share Copied Shared Back to changelog Related Posts Jul.09 Release New pull requests dashboard is now generally available collaboration tools Jun.30 Improvement Releases: Sidebar navigation and per-asset download counts collaboration tools Jun.29 Improvement Restrict issue creation to collaborators only collaboration tools Jun.25 Improvement GitHub Copilot for Jira is now generally available collaboration tools copilot ... +1 Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Jun.18 Improvement Repository switcher generally available in global navigation collaboration tools Jun.17 Improvement Limit open pull requests for users without write access collaboration tools J",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "REST API endpoints for Visual Studio Subscription management - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-16-rest-api-endpoints-for-visual-studio-subscription-management/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Enterprise Cloud admins can now use the following REST API endpoints to programmatically manage Visual Studio Subscription (VSS) assignments: GET /enterprises/{enterprise}/visual-studio-subscriptions: Returns all VSS assignments for an enterprise, including…",
+    "body_excerpt": "REST API endpoints for Visual Studio Subscription management - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 16, 2026 • 1 minute read REST API endpoints for Visual Studio Subscription management GitHub Enterprise Cloud admins can now use the following REST API endpoints to programmatically manage Visual Studio Subscription (VSS) assignments: GET /enterprises/{enterprise}/visual-studio-subscriptions : Returns all VSS assignments for an enterprise, including whether each assignment has been matched to a GitHub user. PUT /enterprises/{enterprise}/visual-studio-subscriptions : Maps a VSS UPN to a GitHub handle, enabling bulk programmatic matching. DELETE /enterprises/{enterprise}/visual-studio-subscriptions/{visual_studio_subscription_id} : Removes a manual match between a Visual Studio subscription and a GitHub user, allowing admins to correct mistaken assignments or programmatically rematch subscriptions. These endpoints are especially useful for organizations where VSS UPN formats do not align with SCIM identities, a scenario that prevents automatic matching and previously required tedious manual resolution in the UI. Admins can now supply a UPN-to-GitHub-handle crosswalk and script bulk-matching operations. enterprise management tools Share Copied Shared Back to changelog Related Posts Jul.10 Release Per-user states for multi-user budgets in the REST API account management enterprise management tools ... +1 Jul.09 Release Organization-level targeting for GitHub Code Quality application security enterprise management tools platform governance ... +2 Jul.08 Release Enterprise-managed OpenTelemetry export for VS Code and CLI client apps copilot enterprise management tools ... +2 Jul.08 Release Deploy managed Copilot settings via MDM in VS Code and CLI client apps c",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Xcode 27 runner image now in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-16-xcode-27-runner-image-now-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now build and test your Apple applications against Xcode 27 on GitHub-hosted macOS runners. This is now available in public preview. With early access to the latest Xcode…",
+    "body_excerpt": "Xcode 27 runner image now in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release July 16, 2026 • 1 minute read Xcode 27 runner image now in public preview Table of Contents A new support model for macOS images Get started today Limitations Menu. Currently selected: A new support model for macOS images A new support model for macOS images Get started today Limitations You can now build and test your Apple applications against Xcode 27 on GitHub-hosted macOS runners. This is now available in public preview. With early access to the latest Xcode toolchain and Apple SDKs, you can validate your apps against the newest tools, catch compatibility issues sooner, and keep your CI/CD pipelines current. A new support model for macOS images With this release, we are moving to a new support model for our macOS images. Each image is based on a major Xcode version rather than the underlying operating system, and we will support one major Xcode version per image. This makes it easier to target the exact toolchain your project needs and to know what each runner provides. Get started today To use Xcode 27 in your GitHub Actions workflows, update the runs-on: value to one of the supported labels. The following labels are supported for the new image: xcode-27 xcode-27-xlarge Limitations This image is only available on our arm64 macOS runners and is not supported on Intel runners. The runner image includes different tools and tool versions than earlier images. To view the full list of installed software or report an issue, visit the runner-images repository . Table of Contents A new support model for macOS images Get started today Limitations Menu. Currently selected: A new support model for macOS images A new support model for macOS images Get started today Limitations actions Sh",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Advanced search for Projects is generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The filter bar in GitHub Projects views now supports advanced search, so you can build the exact view you need with logical AND and OR instead of maintaining a separate…",
+    "body_excerpt": "Advanced search for Projects is generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 16, 2026 • 1 minute read Advanced search for Projects is generally available The filter bar in GitHub Projects views now supports advanced search, so you can build the exact view you need with logical AND and OR instead of maintaining a separate view for every question. Just type an expression using OR , AND in the filter bar of any project view. Other improvements You can now filter pull request items in your projects views by their review state using the new reviews: search filter. This is backed by the Reviewers field that tracks who’s been requested to review and the latest review submitted by each person. We’ve implemented a new 90-day retention policy for deployment statuses. Statuses older than 90 days are automatically deleted and no longer appear in the REST or GraphQL API. A deployment’s current state is unaffected. Share your feedback in the GitHub Community . projects & issues Share Copied Shared Back to changelog Related Posts Jul.02 Release Issue fields are now generally available projects & issues Jun.25 Release Saved views for repository issues – Public Preview and adjustable row heights in projects projects & issues Jun.18 Release Detecting Duplicate Issues – Public Preview and issue fields MCP support for GitHub Issues projects & issues May.21 Release Issue fields are now in public preview for all organizations projects & issues May.20 Release Semantic issue search in Copilot Chat copilot projects & issues ... +1 May.15 Improvement Timestamp fields in GitHub Projects projects & issues Apr.23 Release View and manage agent sessions from issues and projects copilot projects & issues ... +1 Apr.09 Improvement Release information in issue sidebar and ",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

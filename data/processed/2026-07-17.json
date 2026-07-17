@@ -1,0 +1,145 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，主要是 GitHub Changelog 的产品更新，缺少关于 AI coding agents、评测、harness、MCP 或组织级采用的深度技术信息。",
+    "相对更有价值的是少数与工程平台治理、CI 工具链稳定性和项目检索能力相关的更新，但它们更适合作为团队运维备注，而不是完整情报摘要主轴。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is weak overall: mostly GitHub changelog items with limited depth on AI coding agents, evals, harness design, MCP, or org-level AI coding adoption.",
+    "The most useful items are operationally relevant updates around platform governance, CI toolchain targeting, and project searchability, but they are better treated as tactical notes than a full intelligence digest."
+  ],
+  "items": [
+    {
+      "title": "REST API endpoints for Visual Studio Subscription management - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-16",
+      "url": "https://github.blog/changelog/2026-07-16-rest-api-endpoints-for-visual-studio-subscription-management/",
+      "summary_zh": "GitHub Enterprise Cloud 新增用于管理 Visual Studio Subscription 分配的 REST API，支持查询企业级分配、批量将 VSS UPN 映射到 GitHub 账号，以及删除手动匹配关系。它主要解决 UPN 格式与 SCIM 身份不一致时无法自动匹配、只能在 UI 中手工修复的问题。",
+      "summary_en": "GitHub Enterprise Cloud added REST APIs for Visual Studio Subscription assignment management, including listing enterprise assignments, bulk mapping VSS UPNs to GitHub handles, and deleting manual matches. The update mainly addresses cases where UPN formats do not align with SCIM identities and auto-matching fails.",
+      "why_it_matters_zh": "这不是 AI coding 本身，但对大型工程平台团队有直接操作价值：它把原本脆弱的手工许可匹配流程转成可脚本化、可审计的身份治理工作流，适合与企业 IAM、SCIM 以及开发者入离职自动化集成。",
+      "why_it_matters_en": "This is not directly about AI coding, but it is operationally meaningful for platform teams: it turns a brittle manual license-matching process into a scriptable, auditable identity-governance workflow that can be integrated with enterprise IAM, SCIM, and joiner/mover/leaver automation.",
+      "key_takeaways_zh": [
+        "新增 GET/PUT/DELETE 接口，允许批量管理 VSS 与 GitHub 用户的映射关系。",
+        "对身份格式不一致的企业环境尤其有用，可减少 UI 手工修复和错配风险。"
+      ],
+      "key_takeaways_en": [
+        "New GET/PUT/DELETE endpoints allow bulk management of VSS-to-GitHub user mappings.",
+        "Especially useful in enterprises with identity-format mismatches, reducing manual UI work and assignment errors."
+      ],
+      "tags": [
+        "GitHub Enterprise",
+        "identity governance",
+        "REST API",
+        "platform operations"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 8
+    },
+    {
+      "title": "Xcode 27 runner image now in public preview - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-16",
+      "url": "https://github.blog/changelog/2026-07-16-xcode-27-runner-image-now-in-public-preview/",
+      "summary_zh": "GitHub Actions 提供 Xcode 27 的托管 macOS runner 预览版，并将 macOS 镜像支持模型改为按 Xcode 主版本划分，而不是按底层操作系统划分。新标签包括 xcode-27 和 xcode-27-xlarge，仅支持 arm64 macOS runner。",
+      "summary_en": "GitHub Actions introduced a public preview of hosted macOS runners for Xcode 27 and shifted its macOS image support model to be organized by major Xcode version rather than underlying OS version. New labels include xcode-27 and xcode-27-xlarge, with support limited to arm64 macOS runners.",
+      "why_it_matters_zh": "对维护 Apple 构建流水线的平台团队来说，这个变化降低了 toolchain 漂移带来的不确定性。按 Xcode 主版本建模 runner，有助于把 CI 环境与本地开发、发布验证和兼容性测试更明确地对齐。",
+      "why_it_matters_en": "For teams maintaining Apple build pipelines, this reduces uncertainty from toolchain drift. Modeling runners by major Xcode version helps align CI environments more explicitly with local development, release validation, and compatibility testing.",
+      "key_takeaways_zh": [
+        "runner 标签现在更直接表达工具链版本，而不是隐式依赖 macOS 镜像。",
+        "仅支持 arm64，意味着仍依赖 Intel runner 的遗留流水线需要提前迁移评估。"
+      ],
+      "key_takeaways_en": [
+        "Runner labels now map more directly to toolchain versions instead of implicitly depending on macOS image lineage.",
+        "Arm64-only support means legacy pipelines still relying on Intel runners need migration planning."
+      ],
+      "tags": [
+        "GitHub Actions",
+        "CI/CD",
+        "Apple toolchain",
+        "runner images"
+      ],
+      "signal_score": 6,
+      "novelty_score": 6,
+      "actionability_score": 7
+    },
+    {
+      "title": "Advanced search for Projects is generally available - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-16",
+      "url": "https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/",
+      "summary_zh": "GitHub Projects 的过滤栏现已 GA 支持高级搜索，可用 AND/OR 构建更复杂的视图；同时新增 reviews: 过滤器以按 PR review state 检索项目项。更新还宣布 deployment statuses 采用 90 天保留策略，超期状态将从 REST 和 GraphQL API 中删除。",
+      "summary_en": "GitHub Projects filter bars now generally support advanced search with AND/OR expressions, and add a new reviews: filter for pull-request review state. The update also introduces a 90-day retention policy for deployment statuses, removing older statuses from REST and GraphQL APIs.",
+      "why_it_matters_zh": "这对工程管理和平台可观测性有一定影响：前者提升了项目级 triage 与执行面板的表达能力，后者则可能悄悄影响依赖 deployment status 历史数据的内部报表、治理脚本或 API 集成。",
+      "why_it_matters_en": "This matters modestly for engineering management and platform observability: the search additions improve project-level triage views, while the 90-day deployment-status retention change can quietly break internal reporting, governance scripts, or API integrations that rely on long-lived history.",
+      "key_takeaways_zh": [
+        "Projects 视图表达能力增强，可减少为不同问题维护大量静态视图的成本。",
+        "deployment status 的 90 天保留策略更值得注意，相关数据消费方应检查历史依赖。"
+      ],
+      "key_takeaways_en": [
+        "Projects views are more expressive, reducing the need to maintain many static views for different questions.",
+        "The 90-day deployment-status retention policy is the more consequential change; downstream consumers should audit historical dependencies."
+      ],
+      "tags": [
+        "GitHub Projects",
+        "search",
+        "developer workflow",
+        "API retention"
+      ],
+      "signal_score": 5,
+      "novelty_score": 5,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "REST API endpoints for Visual Studio Subscription management - GitHub Changelog",
+    "Xcode 27 runner image now in public preview - GitHub Changelog",
+    "Advanced search for Projects is generally available - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "VSS UPN-to-GitHub-handle crosswalk",
+    "按 Xcode 主版本建模的 macOS runner 支持模型",
+    "reviews: 项目搜索过滤器"
+  ],
+  "new_terms_en": [
+    "VSS UPN-to-GitHub-handle crosswalk",
+    "Xcode-major-version-based macOS runner support model",
+    "reviews: project search filter"
+  ],
+  "themes_zh": [
+    "工程平台中的身份与许可自动化",
+    "CI 工具链版本显式化与构建环境治理",
+    "项目检索能力提升与历史 API 数据保留收紧"
+  ],
+  "themes_en": [
+    "Identity and license automation in engineering platforms",
+    "Explicit CI toolchain versioning and build-environment governance",
+    "Improved project search with tighter historical API data retention"
+  ],
+  "implications_zh": [
+    "平台团队应优先关注会影响自动化和治理脚本的变更，而不是 UI 层面的轻量功能更新。",
+    "如果组织内部把 GitHub 当作工程系统记录源，数据保留策略变化需要尽早纳入兼容性测试和报表审计。"
+  ],
+  "implications_en": [
+    "Platform teams should prioritize changelog items that affect automation and governance scripts rather than lightweight UI enhancements.",
+    "If GitHub is used as a system of record for engineering workflows, retention-policy changes need to be included early in compatibility testing and reporting audits."
+  ],
+  "reading_order": [
+    "REST API endpoints for Visual Studio Subscription management - GitHub Changelog",
+    "Xcode 27 runner image now in public preview - GitHub Changelog",
+    "Advanced search for Projects is generally available - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 总览页本身，没有单独分析价值。",
+    "Repository admins can archive pull requests：更偏社区治理/内容审核，不是 AI coding 或平台技术深水区。",
+    "单纯的 Projects 搜索 GA 若不涉及 API 保留策略影响，可降级处理为普通产品更新。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog index page itself; it has no standalone analytical value.",
+    "Repository admins can archive pull requests: mostly moderation and abuse-handling, not core AI coding or platform depth.",
+    "The Projects search GA change alone can be treated as a routine product update unless the API retention change affects your systems."
+  ]
+}
