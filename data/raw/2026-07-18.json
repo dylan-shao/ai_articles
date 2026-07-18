@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 17 Jul 2026 22:06:39 +0000 en-US hourly 1 https://wordpress.org/?v=7.0.2 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Repository-level GitHub Copilot usage metrics generally available https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available Allison Fri, 17 Jul 2026 22:05:18 +0000 https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available <p>The Copilot usage metrics REST API now reports repository-level activity. Two new endpoints return a daily, per-repository breakdown of pull request activity for Copilot coding agent and Copilot code review.&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available\">Repository-level GitHub Copilot usage metrics generally available</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>The Copilot usage metrics REST API now reports repository-level activity. Two new endpoints return a daily, per-repository breakdown of pull request activity for Copilot coding agent and Copilot code review. They do this for both enterprise and organization reports.</p> <h3 id=\"whats-new\" id=\"whats-new\" ><a class=\"heading-link\" href=\"#whats-new\">What&rsquo;s new<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h3> <p>Two new endpoints return a per-repository report for a single day:</p> <ul> <li><code>GET /enterprises/{enterprise}/copilot/metrics/reports/repos-1-day?day=YYYY-MM-DD</code></li> <li><code>GET /orgs/{org}/",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Copilot code review: Customization and configurability improvements - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Copilot code review now utilizes a firewall, custom setup steps, and independent runner configurations. It now reads custom instructions from the head branch to allow for easy testing and validation…",
+    "body_excerpt": "Copilot code review: Customization and configurability improvements - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 17, 2026 • 2 minute read Copilot code review: Customization and configurability improvements Table of Contents Expanding custom instructions, now easier to validate 🔧 Custom setup steps 🛡️ Firewall support ⚙️ Organization runner configuration updates for Copilot code review Menu. Currently selected: Expanding custom instructions, now easier to validate Expanding custom instructions, now easier to validate 🔧 Custom setup steps 🛡️ Firewall support ⚙️ Organization runner configuration updates for Copilot code review Copilot code review now utilizes a firewall, custom setup steps, and independent runner configurations. It now reads custom instructions from the head branch to allow for easy testing and validation of custom instructions. These changes give administrators and developers more control over how Copilot code review runs in their environment. Expanding custom instructions, now easier to validate 📝 Custom instructions now read from the head branch Custom instructions are now read from the head branch of the pull request instead of the base branch. This includes copilot-instructions.md , *.instructions.md , agent skills, and AGENTS.md . This means you can iterate on and test custom instructions in a feature branch without needing to merge them first. 📄 Expanded custom instructions file support Copilot code review now reads REVIEW.md , GEMINI.md , and CLAUDE.md files from your repository, so your customizations are understood regardless of where they live. If your team already maintains review guidelines or model-specific instructions in these files, Copilot code review will automatically pick them up and incorporate them into its review process.",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Mobile: Fix pull request comments with Copilot cloud agent - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now select Fix with Copilot directly from Copilot code review pull request comments in GitHub Mobile. The button is available both on the pull request’s main view and…",
+    "body_excerpt": "GitHub Mobile: Fix pull request comments with Copilot cloud agent - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 17, 2026 • 1 minute read GitHub Mobile: Fix pull request comments with Copilot cloud agent You can now select Fix with Copilot directly from Copilot code review pull request comments in GitHub Mobile. The button is available both on the pull request’s main view and on individual review comments, giving you multilpe ways to start a Copilot-assisted fix. Copilot cloud agent helps you respond to review feedback without requiring you to manually compose a prompt, making it easier to get started in one tap. Whether you’re away from your desk or reviewing changes on the go, this new entry point helps you address comments more quickly and keep pull requests moving forward. This is now available on the latest production build of GitHub Mobile on iOS and Android . Join the discussion within GitHub Community . client apps Share Copied Shared Back to changelog Related Posts Jul.10 Improvement GitHub Mobile: Improved filters and sorting for Copilot sessions client apps Jul.08 Release Enterprise-managed OpenTelemetry export for VS Code and CLI client apps copilot enterprise management tools ... +2 Jul.08 Release Deploy managed Copilot settings via MDM in VS Code and CLI client apps copilot enterprise management tools ... +2 Jul.08 Release GitHub Mobile: Fix merge conflicts with Copilot cloud agent client apps Jul.08 Release GitHub Mobile: Live notifications for Copilot CLI sessions client apps Jul.01 Improvement Enterprises can default to auto model selection client apps copilot enterprise management tools ... +2 Jul.01 Release Enterprise managed-settings.json is generally available client apps copilot enterprise management tools ... +2 Jul.01 Release Set AI cred",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Repository-level GitHub Copilot usage metrics generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The Copilot usage metrics REST API now reports repository-level activity. Two new endpoints return a daily, per-repository breakdown of pull request activity for Copilot coding agent and Copilot code review.…",
+    "body_excerpt": "Repository-level GitHub Copilot usage metrics generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release July 17, 2026 • 1 minute read Repository-level GitHub Copilot usage metrics generally available Table of Contents What's new Why this matters Important notes Menu. Currently selected: What's new What's new Why this matters Important notes The Copilot usage metrics REST API now reports repository-level activity. Two new endpoints return a daily, per-repository breakdown of pull request activity for Copilot coding agent and Copilot code review. They do this for both enterprise and organization reports. What’s new Two new endpoints return a per-repository report for a single day: GET /enterprises/{enterprise}/copilot/metrics/reports/repos-1-day?day=YYYY-MM-DD GET /orgs/{org}/copilot/metrics/reports/repos-1-day?day=YYYY-MM-DD Each response returns the following activity: Pull requests created and merged by Copilot coding agent. Pull requests reviewed by Copilot code review, with suggestion counts broken down by comment type. Why this matters Until now, Copilot usage metrics stopped at the organization and user level. Repository-level reporting lets you see exactly where Copilot coding agent and Copilot code review are driving pull request activity across your codebase. This is the foundation for repository insights and AI-readiness reporting, so you can target enablement at the repositories that stand to benefit most. Important notes Enterprise owners and billing managers, organization owners, and anyone with a custom organization or enterprise role that grants the View Copilot Metrics permission can access these reports. The Copilot usage metrics policy must be enabled to support this functionality. Visit the Copilot usage metrics API documentation to get starte",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Copilot app now available in the usage metrics API - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-17T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The Copilot usage metrics API now reports the GitHub Copilot app usage in the enterprise and organization 1-day and 28-day reports. This gives enterprise and organization admins visibility into the…",
+    "body_excerpt": "GitHub Copilot app now available in the usage metrics API - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 17, 2026 • 1 minute read GitHub Copilot app now available in the usage metrics API Table of Contents What's new Why this matters Important notes Menu. Currently selected: What's new What's new Why this matters Important notes The Copilot usage metrics API now reports the GitHub Copilot app usage in the enterprise and organization 1-day and 28-day reports. This gives enterprise and organization admins visibility into the app’s activity alongside the IDE, chat, code review, and coding agent metrics they already retrieve. What’s new The enterprise and organization reports now include two new fields: daily_active_copilot_app_users : The number of distinct users active in the Copilot app on a given day. totals_by_copilot_app : A dedicated GitHub Copilot app section reporting session_count , request_count , prompt_count , and a token_usage breakdown (i.e., output_tokens_sum , prompt_tokens_sum , and avg_tokens_per_request ). Why this matters The GitHub Copilot app activity was not previously represented in usage reporting. With these fields, enterprise and organization admins can see how broadly the app is being adopted (e.g., distinct active users, session and request volume, and token consumption) in the same API they already use for the rest of their Copilot usage metrics. Important notes These fields appear in the enterprise and organization 1-day and 28-day reports. The GitHub Copilot app usage is reported in its own totals_by_copilot_app section and is kept separate from the generic feature, model, and language totals, as well as from lines-of-code metrics. Enterprises or organizations with no GitHub Copilot app activity report null for both daily_active_cop",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

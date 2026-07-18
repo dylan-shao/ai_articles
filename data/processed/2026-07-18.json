@@ -1,0 +1,150 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天的高信号更新集中在 GitHub Copilot 的企业治理层：一类是把 AI 编码与代码审查活动下钻到仓库级别的可观测性，另一类是让 Copilot code review 更容易在真实企业环境中被定制、验证与落地。",
+    "对后端/平台/工程效能负责人而言，最重要的变化不是单个新入口，而是开始具备按仓库衡量 AI 产出、按分支迭代审查指令、并在防火墙与自定义 runner 约束下运行 AI 审查流程的能力。",
+    "相比面向移动端或浅层交互的更新，这批变化更直接影响组织级 rollout、政策控制、实验设计和 ROI 归因。"
+  ],
+  "executive_summary_en": [
+    "Today’s highest-signal updates are about GitHub Copilot governance at enterprise scale: one set adds repo-level observability for AI coding and review activity, and another makes Copilot code review more customizable and deployable in real enterprise environments.",
+    "For backend/platform/engineering effectiveness leads, the key shift is not a new UI entry point but the ability to measure AI impact per repository, iterate review instructions per branch, and run review workflows under firewall and runner constraints.",
+    "Compared with mobile or lightweight UX updates, these changes more directly affect org-wide rollout, policy control, experiment design, and ROI attribution."
+  ],
+  "items": [
+    {
+      "title": "Copilot code review: Customization and configurability improvements",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-17",
+      "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/",
+      "summary_zh": "GitHub 更新了 Copilot code review 的可配置能力：审查指令现在从 PR 的 head branch 读取，支持在功能分支中直接测试和验证 instructions；同时扩展识别 REVIEW.md、GEMINI.md、CLAUDE.md 等文件，并增加自定义 setup steps、防火墙支持以及独立 runner 配置。",
+      "summary_en": "GitHub expanded Copilot code review configurability: review instructions are now read from the PR head branch, enabling branch-local testing and validation; it also recognizes REVIEW.md, GEMINI.md, and CLAUDE.md, and adds custom setup steps, firewall support, and independent runner configuration.",
+      "why_it_matters_zh": "这是 AI 代码审查从“能用”走向“可治理、可迭代、可嵌入企业环境”的关键一步。平台团队终于可以像维护 CI policy 一样维护审查指令，并在未合并前验证效果；防火墙与 runner 支持则降低了在受限网络、合规环境和定制构建上下文中部署 AI 审查的摩擦。",
+      "why_it_matters_en": "This is a meaningful step from AI code review being merely available to being governable, iteratable, and enterprise-deployable. Platform teams can now manage review instructions more like CI policy and validate them before merge, while firewall and runner support reduce friction in constrained networks, regulated environments, and customized build contexts.",
+      "key_takeaways_zh": [
+        "审查规则从 base branch 改为 head branch 读取，使 prompt/policy 的试验与回归验证可以在 PR 内完成。",
+        "支持更多约定文件与企业环境控制项，说明 GitHub 正在把 code review agent 做成可被现有工程治理体系吸收的基础设施。"
+      ],
+      "key_takeaways_en": [
+        "Reading review instructions from the head branch enables prompt/policy experimentation and regression validation inside the PR itself.",
+        "Support for more convention files and enterprise controls suggests GitHub is turning the review agent into infrastructure that fits existing engineering governance."
+      ],
+      "tags": [
+        "code-review-agent",
+        "copilot",
+        "enterprise-controls",
+        "runner",
+        "prompt-governance"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Repository-level GitHub Copilot usage metrics generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-17",
+      "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/",
+      "summary_zh": "GitHub Copilot usage metrics API 现已提供仓库级日报，新增 enterprise 和 org 两个 repos-1-day endpoint，可按仓库查看 Copilot coding agent 创建/合并的 PR，以及 Copilot code review 的审查量和建议类型分布。",
+      "summary_en": "The GitHub Copilot usage metrics API now exposes repo-level daily reports via new enterprise and org repos-1-day endpoints, showing per-repository PRs created/merged by the Copilot coding agent and code review activity with suggestion counts by comment type.",
+      "why_it_matters_zh": "这是组织采用 AI 编码后最缺的一层观测：从用户/组织级指标下钻到代码资产级别。对工程效能负责人来说，这使得 AI 使用不再只是 seat utilization，而可以和仓库健康度、语言栈、服务关键性、团队成熟度、review throughput 等维度做关联分析，支持更精细的 rollout、培训和投资归因。",
+      "why_it_matters_en": "This fills a major observability gap in AI coding adoption by moving from user/org-level metrics down to code-asset-level visibility. For engineering effectiveness leaders, AI usage is no longer just about seat utilization; it can now be correlated with repository health, stack, service criticality, team maturity, and review throughput to drive more targeted rollout, enablement, and ROI attribution.",
+      "key_takeaways_zh": [
+        "新增 repos-1-day API，使 Copilot coding agent 与 code review 的效果可以按仓库切片分析。",
+        "这为后续 AI-readiness、重点仓库扶持、试点评估和内部指标体系建设提供了基础数据面。"
+      ],
+      "key_takeaways_en": [
+        "The new repos-1-day API enables per-repo analysis of Copilot coding agent and code review activity.",
+        "This creates a data foundation for AI-readiness scoring, priority repo enablement, pilot evaluation, and internal metrics programs."
+      ],
+      "tags": [
+        "copilot-metrics",
+        "repository-analytics",
+        "engineering-effectiveness",
+        "enterprise-adoption",
+        "governance"
+      ],
+      "signal_score": 9,
+      "novelty_score": 7,
+      "actionability_score": 10
+    },
+    {
+      "title": "GitHub Copilot app now available in the usage metrics API",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-17",
+      "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api/",
+      "summary_zh": "GitHub 将 Copilot app 的使用情况纳入企业与组织级 usage metrics API，在 1-day 和 28-day 报表中新增 daily_active_copilot_app_users 和 totals_by_copilot_app，覆盖 session、request、prompt 与 token 用量。",
+      "summary_en": "GitHub added Copilot app usage to the enterprise and org usage metrics API, with new daily_active_copilot_app_users and totals_by_copilot_app fields in 1-day and 28-day reports covering sessions, requests, prompts, and token usage.",
+      "why_it_matters_zh": "虽然不如仓库级指标深，但它补齐了跨入口统一度量的问题。很多组织正在同时使用 IDE、chat、review、coding agent 和独立 app；如果无法统一观察不同入口的活跃度与 token 消耗，就很难做预算管理、入口治理和工作流优化。",
+      "why_it_matters_en": "While less strategic than repo-level reporting, this closes an important cross-surface measurement gap. Many organizations are now using IDE, chat, review, coding agents, and standalone app experiences in parallel; without unified visibility into activity and token consumption across these surfaces, budgeting, governance, and workflow optimization stay incomplete.",
+      "key_takeaways_zh": [
+        "Copilot app 被纳入现有 metrics API，便于把多入口使用统一接入企业 BI 或 FinOps 仪表盘。",
+        "token 与请求量可帮助平台团队识别高消耗入口，并评估默认入口策略是否需要调整。"
+      ],
+      "key_takeaways_en": [
+        "The Copilot app is now included in the existing metrics API, making it easier to unify multi-surface usage in enterprise BI or FinOps dashboards.",
+        "Token and request volume can help platform teams identify high-consumption surfaces and revisit default entry-point strategy."
+      ],
+      "tags": [
+        "copilot-metrics",
+        "finops",
+        "token-usage",
+        "enterprise-adoption",
+        "analytics"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Copilot code review: Customization and configurability improvements",
+    "Repository-level GitHub Copilot usage metrics generally available",
+    "GitHub Copilot app now available in the usage metrics API"
+  ],
+  "new_terms_zh": [
+    "repos-1-day endpoint：按天返回仓库级 Copilot 活动的 API 端点。",
+    "head-branch instructions：从 PR 源分支读取 AI 审查指令，便于在合并前验证。",
+    "totals_by_copilot_app：在 usage metrics 中单独统计 Copilot app 会话、请求与 token 消耗的字段。"
+  ],
+  "new_terms_en": [
+    "repos-1-day endpoint: an API endpoint returning per-repository Copilot activity for a single day.",
+    "head-branch instructions: AI review instructions read from the PR source branch so they can be validated before merge.",
+    "totals_by_copilot_app: a dedicated metrics section for Copilot app sessions, requests, and token usage."
+  ],
+  "themes_zh": [
+    "AI 编码从功能发布转向组织级治理与可观测性。",
+    "代码审查 agent 正在吸收 CI/CD、策略文件和受限企业网络环境的运行约束。",
+    "AI 采用评估开始从 seat 数和活跃用户，进化到仓库级与入口级的精细化度量。"
+  ],
+  "themes_en": [
+    "AI coding is shifting from feature rollout toward org-level governance and observability.",
+    "Code review agents are increasingly absorbing CI/CD-style policy files and enterprise runtime constraints.",
+    "AI adoption measurement is evolving from seats and active users toward repo-level and surface-level instrumentation."
+  ],
+  "implications_zh": [
+    "平台团队可以建立“仓库级 AI 采用地图”，把关键服务、语言栈、PR 吞吐和 Copilot 活动关联起来，识别最值得继续投资或重点治理的代码库。",
+    "审查指令应像测试基线一样纳入版本化管理，并在功能分支中做 A/B 或回归验证，避免把未验证的 AI 审查策略直接推向主干。",
+    "企业若有防火墙、私有 runner 或合规隔离要求，现在更有条件把 AI code review 纳入标准 PR 流水线。"
+  ],
+  "implications_en": [
+    "Platform teams can build a repo-level AI adoption map by joining critical services, language stacks, PR throughput, and Copilot activity to identify where to invest or tighten governance.",
+    "Review instructions should be versioned like test baselines and validated in feature branches with A/B or regression-style workflows before being pushed to the main branch.",
+    "Organizations with firewall, private runner, or compliance isolation requirements now have a more practical path to integrating AI code review into standard PR pipelines."
+  ],
+  "reading_order": [
+    "Repository-level GitHub Copilot usage metrics generally available",
+    "Copilot code review: Customization and configurability improvements",
+    "GitHub Copilot app now available in the usage metrics API"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Mobile 上的“Fix with Copilot”属于交互入口扩展，对平台治理、评测设计和组织采用框架影响较小。",
+    "候选中的 Archive/feed 聚合页不是原始单条更新来源，不应作为阅读对象。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Mobile 'Fix with Copilot' update is mainly an interaction-surface expansion and has limited impact on platform governance, evaluation design, or org adoption strategy.",
+    "The archive/feed aggregate page is not the original update source and should not be treated as a primary read."
+  ]
+}
