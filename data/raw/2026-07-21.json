@@ -1,0 +1,30 @@
+[
+  {
+    "title": "AI credit pools for cost centers in the billing UI - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now manage a cost center’s AI credit pool directly in the billing UI where you create and edit cost centers. Previously, you could only manage this through the…",
+    "body_excerpt": "AI credit pools for cost centers in the billing UI - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Improvement July 20, 2026 • 1 minute read AI credit pools for cost centers in the billing UI You can now manage a cost center’s AI credit pool directly in the billing UI where you create and edit cost centers. Previously, you could only manage this through the GitHub REST API. This feature is available for Copilot Business and Copilot Enterprise on GitHub Enterprise Cloud. Toggle the AI credit pool on when you create or edit a cost center. GitHub automatically calculates the pool limit from the assigned licenses and adjusts it as you add or remove them. Because of this, you never set a number yourself. You can also choose what happens at the limit: block further included usage or let it continue as additional spend if your enterprise allows overages. An AI credit pool keeps a cost center from using more included AI credits than its own Copilot licenses fund, so each group stays within what it paid for. It’s separate from a cost center budget, which caps metered charges after the pool is exhausted. You can set both on the same cost center. To learn more, see Control GitHub costs at scale . copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Jul.17 Release Repository-level GitHub Copilot usage metrics generally available account management copilot enterprise management tools ... +2 Jul.17 Improvement GitHub Copilot app now available in the usage metrics API account management copilot enterprise management tools ... +2 Jul.17 Improvement Copilot code review: Customization and configurability improvements copilot Jul.16 Improvement REST API endpoints for Visual Studio Subscription management enterprise management tools Jul.14 Release GitHub Copilot i",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Code Quality is now generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-07-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Code Quality is now generally available on GitHub Enterprise Cloud and GitHub Team. It solves an emerging challenge for software development: AI accelerates code output, and Code Quality helps…",
+    "body_excerpt": "GitHub Code Quality is now generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot CLI Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot CLI Back to changelog Release July 20, 2026 • 2 minute read GitHub Code Quality is now generally available Table of Contents New at general availability What it costs If you used Code Quality in public preview Menu. Currently selected: New at general availability New at general availability What it costs If you used Code Quality in public preview GitHub Code Quality is now generally available on GitHub Enterprise Cloud and GitHub Team. It solves an emerging challenge for software development: AI accelerates code output, and Code Quality helps teams ship code they trust. Code Quality pairs CodeQL’s deterministic analysis with AI-assisted detection to catch maintainability and reliability issues in your pull requests, and Copilot Autofix suggests fixes for you to review before you merge. In GitHub’s own engineering organization, teams resolve 67.3% of Code Quality findings before merging pull requests. New at general availability Since the public preview, Code Quality has added: Organization-wide enablement, with org-level dashboards that show maintainability and reliability scores across your repositories. Code coverage metrics rendered from your existing test reports (in Cobertura XML format) directly on pull requests. Quality gates through GitHub rulesets, including coverage thresholds, with an evaluate mode for gradual rollout. APIs to manage repository enablement and fetch findings. What it costs Code Quality is a standalone paid product, complementary to GitHub Advanced Security rather than bundled with it. It isn’t available on GitHub Enterprise Server at launch. You pay a predictable base license plus metered usage: $10 per active committer, per month. A committer is considered active when they’ve pus",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
