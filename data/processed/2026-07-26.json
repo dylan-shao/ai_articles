@@ -1,0 +1,79 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号偏弱，缺少来自原始技术来源的深入方法、评测设计、系统架构或可复现实验细节。",
+    "唯一相对值得关注的是一篇关于本地多机 AI 编程流水线的采访型文章，但其信息仍以经验分享为主，技术细节和验证数据有限。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with no deeply technical primary-source writeups on agent architecture, eval harnesses, MCP, or organizational deployment.",
+    "The only borderline-relevant item is an interview-style piece on a local multi-machine AI coding setup, but it remains anecdotal and lacks enough implementation detail or rigorous validation."
+  ],
+  "items": [
+    {
+      "title": "How I AI: Alex Finn's Local AI Fleet and Automated Software Factory",
+      "source": "ChatPRD Blog",
+      "author": "Claire Vo",
+      "publish_date": "2026-07-11T00:00:00+00:00",
+      "url": "https://www.chatprd.ai/how-i-ai",
+      "summary_zh": "这是一篇访谈/案例型文章，介绍受访者使用五台本地机器组成的 AI 工作站，以及基于 Claude Code 的“从想法到合并代码”自动化软件工厂流程。文章更偏 workflow 展示，而不是底层实现、评测框架或工程控制面的详细拆解。",
+      "summary_en": "This interview-style article describes a five-machine local AI setup and a Claude Code-driven 'software factory' workflow that aims to go from idea to merged code with minimal human intervention. It is more of a workflow showcase than a deep technical breakdown of implementation, evaluation, or control-plane design.",
+      "why_it_matters_zh": "对工程负责人而言，这类案例能帮助判断个人级或小团队级 AI 编程流水线正在如何向“半自动交付”演进，尤其是本地部署、多机协同、以及 agent 驱动开发流程的组织形态。但由于缺乏可复现细节，它更适合作为趋势信号，而不是直接落地指南。",
+      "why_it_matters_en": "For engineering leaders, this is a useful signal of how individual or small-team AI coding workflows are evolving toward semi-automated delivery, especially around local deployment, multi-machine orchestration, and agent-driven development. However, the lack of reproducible technical detail makes it more of a directional signal than a practical implementation guide.",
+      "key_takeaways_zh": [
+        "本地多机 AI 运行环境正在成为重度使用者追求吞吐、隔离和成本控制的一种形态。",
+        "“从需求到合并代码”的软件工厂叙事正在流行，但多数公开内容仍缺少评测、回滚、权限控制与质量门禁等关键工程细节。"
+      ],
+      "key_takeaways_en": [
+        "Local multi-machine AI environments are emerging as a pattern for power users seeking throughput, isolation, and cost control.",
+        "The 'idea-to-merged-code' software factory narrative is gaining traction, but most public writeups still omit critical engineering details such as evals, rollback, permissions, and quality gates."
+      ],
+      "tags": [
+        "AI coding agents",
+        "local AI",
+        "developer workflows",
+        "automation"
+      ],
+      "signal_score": 5,
+      "novelty_score": 6,
+      "actionability_score": 3
+    }
+  ],
+  "top_items": [
+    "How I AI: Alex Finn's Local AI Fleet and Automated Software Factory"
+  ],
+  "new_terms_zh": [
+    "本地 AI 舰队",
+    "软件工厂"
+  ],
+  "new_terms_en": [
+    "local AI fleet",
+    "software factory"
+  ],
+  "themes_zh": [
+    "AI 编程从单助手走向多机流水线",
+    "公开案例越来越强调自动化叙事，但缺少严谨评测与治理细节"
+  ],
+  "themes_en": [
+    "AI coding is moving from single-assistant usage toward multi-machine pipelines",
+    "Public examples increasingly emphasize automation narratives while lacking rigorous eval and governance detail"
+  ],
+  "implications_zh": [
+    "如果团队正在探索 agentic coding，不应只关注演示级 workflow，而要优先补齐代码评测、沙箱隔离、权限边界和合并门禁。",
+    "本地部署可能在数据敏感、长时任务和高并发试验中更有吸引力，但其运维复杂度需要单独评估。"
+  ],
+  "implications_en": [
+    "Teams exploring agentic coding should not focus only on demo-friendly workflows; they should prioritize code evals, sandboxing, permission boundaries, and merge gates.",
+    "Local deployment may be attractive for sensitive data, long-running tasks, and high-concurrency experimentation, but its operational complexity needs explicit evaluation."
+  ],
+  "reading_order": [
+    "How I AI: Alex Finn's Local AI Fleet and Automated Software Factory"
+  ],
+  "what_to_ignore_zh": [
+    "泛化的 AI 生产力故事、播客式经验分享和人格/主观模型点评",
+    "没有公开方法学、基准、架构图或可复现实验设置的 workflow 文章"
+  ],
+  "what_to_ignore_en": [
+    "Generic AI productivity stories, podcast-style anecdotes, and personality-driven model commentary",
+    "Workflow articles without public methodology, benchmarks, architecture details, or reproducible setup"
+  ]
+}
