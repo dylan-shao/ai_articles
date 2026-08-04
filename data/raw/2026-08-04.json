@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Archive: August 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/08/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: August 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.03 Improvement Triage role can bypass issue creation restrictions collaboration tools Aug.03 Release Migrate from GitLab to GitHub with GitHub Enterprise Importer enterprise management tools Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status Contact Company About Blog Careers Press Shop © 2026 GitHub, Inc. Terms Privacy Manage Cookies Do not share my personal information LinkedIn icon GitHub on LinkedIn Instagram icon GitHub on Instagram YouTube icon GitHub on YouTube X icon GitHub on X TikTok icon GitHub on TikTok Twitch icon GitHub on Twitch GitHub icon GitHub’s organization on GitHub",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Trigger Copilot automations with comments - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now create Copilot cloud agent automations that run when an issue comment or pull request comment is created. Common use cases include: Generate documentation: Comment on a pull…",
+    "body_excerpt": "Trigger Copilot automations with comments - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 3, 2026 • 1 minute read Trigger Copilot automations with comments You can now create Copilot cloud agent automations that run when an issue comment or pull request comment is created. Common use cases include: Generate documentation : Comment on a pull request to automatically generate or update documentation based on your code changes. Investigate errors : Comment on an issue to trigger an automation that investigates stack traces or error logs. Create follow-up tasks : Comment on a pull request to have an automation automatically create follow-up issues for refactoring or technical debt. When configuring an automation, specify the comment text that should trigger it. To get started, click through to the Agents tab in your repository, then pick Automations in the sidebar. Automations are available for existing Copilot Pro, Pro+, Max, Business, and Enterprise users. Copilot Business and Copilot Enterprise users need the Copilot cloud agent policy enabled by an administrator. Learn more in About Copilot automations in the GitHub Docs. copilot Share Copied Shared Back to changelog Related Posts Aug.03 Release Customize the reasoning level for Copilot cloud agent copilot Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Jul.31 Retired Upcoming August 2026 model deprecations in GitHub Copilot copilot Jul.31 Retired Gemini 2.5 Pro and Gemini 3 Flash deprecated copilot Jul.31 Improvement Enterprise teams model policy targeting in public preview copilot enterprise management tools ... +1 Jul.30 Release GitHub Copilot in Visual Studio — July update copilot Jul.30 Improvement Limit remote control to managed device",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Triage role can bypass issue creation restrictions - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-03-triage-role-can-bypass-issue-creation-restrictions/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "If your repository restricts issue creation to collaborators only, users with the triage role can now create issues. Previously, the restricted setting only allowed users with write access to create…",
+    "body_excerpt": "Triage role can bypass issue creation restrictions - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement August 3, 2026 • 1 minute read Triage role can bypass issue creation restrictions If your repository restricts issue creation to collaborators only, users with the triage role can now create issues. Previously, the restricted setting only allowed users with write access to create issues. With this update, trusted contributors with the triage role are also included. This helps teams keep issue creation restricted while still enabling triage-role users to more effectively support intake and repository maintenance. Drop your questions or feedback in our Community discussion . collaboration tools Share Copied Shared Back to changelog Related Posts Jul.30 Release Stacked pull requests are now in public preview collaboration tools Jul.23 Release Agent automation controls in GitHub Issues in public preview collaboration tools copilot projects & issues ... +2 Jul.22 Retired Upcoming GHES change impacting uploading support bundles collaboration tools Jul.16 Release Repository admins can archive pull requests collaboration tools Jul.09 Release New pull requests dashboard is now generally available collaboration tools Jun.30 Improvement Releases: Sidebar navigation and per-asset download counts collaboration tools Jun.29 Improvement Restrict issue creation to collaborators only collaboration tools Jun.25 Improvement GitHub Copilot for Jira is now generally available collaboration tools copilot ... +1 Jun.18 Improvement Copilot-authored pull requests now included in author searches client apps collaboration tools copilot ... +2 Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subsc",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Migrate from GitLab to GitHub with GitHub Enterprise Importer - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-03-migrate-from-gitlab-to-github-with-github-enterprise-importer/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Migrations from gitlab.com and GitLab Self-Managed to GitHub Enterprise Cloud with GitHub Enterprise Importer (GEI) are now generally available. You can now self-serve these migrations using GEI and the gh…",
+    "body_excerpt": "Migrate from GitLab to GitHub with GitHub Enterprise Importer - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 3, 2026 • 1 minute read Migrate from GitLab to GitHub with GitHub Enterprise Importer Migrations from gitlab.com and GitLab Self-Managed to GitHub Enterprise Cloud with GitHub Enterprise Importer (GEI) are now generally available. You can now self-serve these migrations using GEI and the gh gl2gh command-line extension. With this release, you can now: Migrate repositories from gitlab.com and currently maintained versions of GitLab Self-Managed. Run single-repository migrations or scripted bulk migrations with the gh gl2gh extension. Stage migration archives in GitHub-owned blob storage ( --use-github-storage ) or your own AWS S3 or Azure Blob storage account. This capability supports migrations into organizations on GitHub Enterprise Cloud on github.com and ghe.com. Migrations from GitLab to GitHub Enterprise Server are not supported. To start migrating your GitLab repositories, check out our documentation on migrating from GitLab to GitHub , and if you’d like help planning your migration, contact our Expert Services team. enterprise management tools Share Copied Shared Back to changelog Related Posts Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Jul.31 Improvement Enterprise teams model policy targeting in public preview copilot enterprise management tools ... +1 Jul.28 Improvement GitHub Copilot app usage metrics now expand across report rollups account management copilot enterprise management tools ... +2 Jul.27 Release GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management copilot enterprise management tools ... +1 Jul.27 Release Manage GitH",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Customize the reasoning level for Copilot cloud agent - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-03T00:00:00+00:00",
+    "author": null,
+    "excerpt": "When you delegate a task to GitHub Copilot cloud agent, you can now set the reasoning level for models that support it. This allows you to control how much the…",
+    "body_excerpt": "Customize the reasoning level for Copilot cloud agent - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 3, 2026 • 1 minute read Customize the reasoning level for Copilot cloud agent When you delegate a task to GitHub Copilot cloud agent, you can now set the reasoning level for models that support it. This allows you to control how much the model reasons before it responds. A higher level can improve answers to complex problems, but it consumes more tokens, and therefore more credits. Pick a reasoning level alongside the model when you start a task, and Copilot cloud agent will use it for the run. This is available on all paid Copilot plans that include Copilot cloud agent (i.e., Copilot Pro, Pro+, Business, Enterprise, and Max). To learn more, see our documentation on choosing the right AI model for your task . copilot Share Copied Shared Back to changelog Related Posts Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Aug.03 Release Trigger Copilot automations with comments copilot Jul.31 Retired Upcoming August 2026 model deprecations in GitHub Copilot copilot Jul.31 Retired Gemini 2.5 Pro and Gemini 3 Flash deprecated copilot Jul.31 Improvement Enterprise teams model policy targeting in public preview copilot enterprise management tools ... +1 Jul.30 Release GitHub Copilot in Visual Studio — July update copilot Jul.30 Improvement Limit remote control to managed devices copilot Jul.30 Release GitHub Copilot in Visual Studio Code, July 2026 releases copilot Jul.29 Improvement Copilot code review: Agent skills and MCP now generally available copilot Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
