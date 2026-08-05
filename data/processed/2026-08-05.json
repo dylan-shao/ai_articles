@@ -1,0 +1,147 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，主要是 GitHub Changelog 级别的小幅产品更新与退役通知，缺少深度技术论文、评测、基准或架构细节。",
+    "相对更有信号的是 GitHub 将 agent 能力下沉到开发与治理流程中：一是可调节 Copilot cloud agent 的 reasoning level，二是用 AI 自动生成代码覆盖率工作流 PR，反映出“代理生成 + 人工审阅合并”的默认交付模式。",
+    "另一条值得注意的是 GitHub Spark 退役，说明独立式 AI 应用生成体验正在让位于 IDE、CLI 与仓库内嵌代理工作流。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak overall: mostly GitHub changelog snippets and retirement notices, with little deep technical detail on evals, harnesses, repo understanding, or MCP.",
+    "The strongest signal is GitHub pushing agent capabilities deeper into dev workflows and governance: customizable reasoning levels for the Copilot cloud agent, and AI-generated code coverage workflows submitted as reviewable PRs.",
+    "GitHub Spark’s deprecation is also noteworthy because it signals a shift away from standalone app-generation surfaces toward IDE/CLI/repo-native agent workflows."
+  ],
+  "items": [
+    {
+      "title": "Customize the reasoning level for Copilot cloud agent",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-03",
+      "url": "https://github.blog/changelog/",
+      "summary_zh": "GitHub 发布了 Copilot cloud agent 的 reasoning level 可调能力。尽管候选中只有归档摘要，但该更新意味着组织或开发者可以按任务复杂度、延迟与成本目标，调节云端代理的推理强度。",
+      "summary_en": "GitHub released a setting to customize the reasoning level for the Copilot cloud agent. Although only visible in the changelog archive here, the update suggests users can tune cloud-agent inference depth based on task complexity, latency, and cost goals.",
+      "why_it_matters_zh": "对平台与工程效率负责人而言，这类“推理预算可控”能力是 AI coding 从试玩走向生产治理的关键一步：它把模型选择问题进一步抽象成策略配置，可用于区分快速补全、PR 生成、重构建议和复杂问题调查等不同场景。",
+      "why_it_matters_en": "For platform and engineering leaders, controllable reasoning budgets are a key step from experimentation to production governance. It turns model behavior into policy: lightweight settings for fast assist, heavier settings for PR generation, refactors, or complex debugging.",
+      "key_takeaways_zh": [
+        "AI coding 代理开始暴露“推理强度”这一可治理参数，便于在成本、时延、质量之间做策略分层。",
+        "后续值得关注是否可按仓库、团队、工作流或自动化任务类型分别设定 reasoning policy。"
+      ],
+      "key_takeaways_en": [
+        "AI coding agents are starting to expose reasoning depth as a governable control surface for balancing cost, latency, and quality.",
+        "The next important question is whether reasoning policies can be scoped by repo, team, workflow, or automation type."
+      ],
+      "tags": [
+        "Copilot",
+        "Agent Controls",
+        "Cost Governance",
+        "Developer Tooling"
+      ],
+      "signal_score": 7,
+      "novelty_score": 7,
+      "actionability_score": 7
+    },
+    {
+      "title": "Code coverage automatic enablement in Code Quality settings",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-04",
+      "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/",
+      "summary_zh": "GitHub 在 Code Quality 设置中加入 AI 自动启用代码覆盖率的能力。系统会启动一个 agent，为仓库生成覆盖率工作流并提交为 PR；该工作流会构建代码、执行测试、生成 coverage 报告并上传到 GitHub，默认采用最小权限。",
+      "summary_en": "GitHub added AI-based automatic code coverage setup in Code Quality settings. An agent generates a repository-specific coverage workflow and opens it as a pull request; the workflow builds the code, runs tests, produces coverage output, and uploads results to GitHub with least-privilege permissions by default.",
+      "why_it_matters_zh": "这比普通“AI 帮你写 YAML”更有意义：它把代理产物放进可审阅、可审计、可回滚的 PR 流程，并直接瞄准工程平台里长期高摩擦的 bootstrap 问题。对内部开发平台团队来说，这是一个明确范式：让代理提交基础设施变更，但由现有代码审查与权限模型兜底。",
+      "why_it_matters_en": "This is more meaningful than generic 'AI writes YAML.' It places agent output inside a reviewable, auditable, reversible PR workflow and targets a persistent platform-engineering bootstrap problem. For internal developer platform teams, it’s a clear pattern: let agents draft infra changes, while existing code review and permission controls remain the safety layer.",
+      "key_takeaways_zh": [
+        "高价值 AI coding 体验正在从聊天建议转向“生成变更 + 提交 PR + 人工审核”的可治理闭环。",
+        "最小权限默认值很重要，说明 GitHub 在把 agent 自动化与安全边界一起产品化。"
+      ],
+      "key_takeaways_en": [
+        "High-value AI coding UX is shifting from chat assistance to a governed loop of 'generate change + open PR + human review.'",
+        "The least-privilege default matters: GitHub is productizing agent automation together with security boundaries."
+      ],
+      "tags": [
+        "Code Quality",
+        "Coverage",
+        "Agent Workflow",
+        "DevEx"
+      ],
+      "signal_score": 8,
+      "novelty_score": 6,
+      "actionability_score": 8
+    },
+    {
+      "title": "Upcoming deprecation of GitHub Spark on github.com",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-04",
+      "url": "https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/",
+      "summary_zh": "GitHub 宣布停止 Spark 新用户接入与新应用创建，现有用户需在 2026-08-31 前导出代码。公告明确指出，随着 AI 模型与 agentic development 工具进步，开发者更倾向于在 VS Code、Copilot CLI 和 GitHub Copilot app 等已有工作环境中完成构建与迭代；同时 Spark 依赖的 GitHub Models 已于 2026-07-30 退役，使用 llm() 的应用需替换自有推理提供方。",
+      "summary_en": "GitHub announced the deprecation of Spark on github.com: no new users or apps from 2026-08-04, and existing users must export code by 2026-08-31. The notice explicitly says that advances in AI models and agentic development tools have pushed builders toward existing environments such as VS Code, Copilot CLI, and the GitHub Copilot app; meanwhile, GitHub Models—used by Spark’s llm() function—was retired on 2026-07-30, so apps using llm() must switch to another inference provider.",
+      "why_it_matters_zh": "这是一条产品退役消息，但背后有清晰平台信号：独立式“idea-to-app”入口没有成为长期主战场，真正留存的工作流是贴近代码库、IDE、CLI 与 PR 的代理协作模式。对于自建内部 AI 开发平台的团队，这提醒你优先投资嵌入式工作流，而不是另起一个孤立的生成式入口。",
+      "why_it_matters_en": "This is a retirement notice, but the platform signal is strong: standalone 'idea-to-app' surfaces did not become the enduring control point. Repo-native, IDE-native, CLI-native, and PR-native agent workflows are where usage is consolidating. For teams building internal AI dev platforms, that argues for embedded workflows over separate greenfield generation portals.",
+      "key_takeaways_zh": [
+        "AI coding 产品正在从独立应用生成器回归到开发者已有工具链与仓库上下文中。",
+        "如果你的平台依赖托管推理接口或专有 helper API，Spark/Models 退役也提示要提前做 provider 抽象与迁移预案。"
+      ],
+      "key_takeaways_en": [
+        "AI coding products are consolidating around existing developer toolchains and repository context rather than standalone app generators.",
+        "If your platform depends on hosted inference helpers or proprietary APIs, Spark/Models retirement is a reminder to build provider abstraction and migration plans early."
+      ],
+      "tags": [
+        "GitHub Spark",
+        "Agentic Development",
+        "Workflow Consolidation",
+        "Platform Strategy"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Code coverage automatic enablement in Code Quality settings",
+    "Customize the reasoning level for Copilot cloud agent",
+    "Upcoming deprecation of GitHub Spark on github.com"
+  ],
+  "new_terms_zh": [
+    "reasoning level（推理强度级别）",
+    "agent-generated reviewable PR（代理生成且可审阅的拉取请求）",
+    "least-privilege workflow generation（最小权限工作流生成）"
+  ],
+  "new_terms_en": [
+    "reasoning level",
+    "agent-generated reviewable PR",
+    "least-privilege workflow generation"
+  ],
+  "themes_zh": [
+    "AI coding 从聊天助手转向可治理的代理工作流",
+    "成本、权限与审计开始成为代理能力的一等配置面",
+    "独立式生成入口退潮，仓库/IDE/CLI 原生集成上升"
+  ],
+  "themes_en": [
+    "AI coding is shifting from chat assistance to governable agent workflows",
+    "Cost, permissions, and auditability are becoming first-class control surfaces",
+    "Standalone generation surfaces are fading while repo/IDE/CLI-native integration rises"
+  ],
+  "implications_zh": [
+    "内部平台团队应优先设计“代理起草变更、PR 审阅合并、策略控制成本与权限”的标准交付路径。",
+    "应建立按任务类型分层的 agent 配置：轻量补全、重型推理、自动化修复、CI/bootstrap 生成等分别治理。",
+    "任何依赖单一模型托管层或专有 AI helper 的系统，都应尽快增加 provider abstraction 与导出/迁移能力。"
+  ],
+  "implications_en": [
+    "Platform teams should standardize on a delivery pattern where agents draft changes, humans review PRs, and policy controls cost and permissions.",
+    "Agent settings should be tiered by task type: lightweight completion, heavy reasoning, automated fixes, and CI/bootstrap generation need different governance.",
+    "Any system tied to a single hosted model layer or proprietary AI helper should add provider abstraction and export/migration paths soon."
+  ],
+  "reading_order": [
+    "Code coverage automatic enablement in Code Quality settings",
+    "Customize the reasoning level for Copilot cloud agent",
+    "Upcoming deprecation of GitHub Spark on github.com"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub 月度/年度 changelog 归档页本身信息密度低，且含大量无关条目。",
+    "Copilot Billing Preview app 退役更多是管理入口整合，对技术栈与工程实践影响有限。"
+  ],
+  "what_to_ignore_en": [
+    "The monthly/yearly GitHub changelog archive pages themselves are low-density and contain many irrelevant entries.",
+    "The Copilot Billing Preview app retirement is mainly an admin-surface consolidation with limited technical impact on engineering practice."
+  ]
+}

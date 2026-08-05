@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Archive: August 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/08/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-04T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: August 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.04 Release Customize code scanning default setup at scale application security Aug.04 Retired Retiring the Copilot Billing Preview app copilot enterprise management tools ... +1 Aug.04 Retired Upcoming deprecation of GitHub Spark on github.com copilot ecosystem & accessibility ... +1 Aug.04 Improvement Customize Dependabot pull request branch names supply chain security Aug.04 Improvement Code coverage automatic enablement in Code Quality settings application security Aug.04 Improvement CodeQL 2.26.2 adds Swift 6.3.3 and Kotlin 2.4.10 support application security Aug.03 Release Customize the reasoning level for Copilot cloud agent copilot Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Aug.03 Release Trigger Copilot automations with comments copilot Aug.03 Improvement Triage role can bypass issue creation restrictions collaboration tools Aug.03 Release Migrate from GitLab to GitHub with GitHub Enterprise Importer enterprise management tools Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affilia",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Retiring the Copilot Billing Preview app - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-04T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We’ve retired the GitHub Copilot Billing Preview app, and it’s no longer available. You can review and manage your Copilot spend directly in your GitHub billing settings. The app helped…",
+    "body_excerpt": "Retiring the Copilot Billing Preview app - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Retired August 4, 2026 • 1 minute read Retiring the Copilot Billing Preview app We’ve retired the GitHub Copilot Billing Preview app, and it’s no longer available. You can review and manage your Copilot spend directly in your GitHub billing settings. The app helped you understand your bill during the move to usage-based billing. Your billing settings now give you a more complete view that the app’s underlying reports couldn’t show, including user-level budgets, cost centers, and usage pool allocation. What to use instead You can review and manage your Copilot spend in your billing settings: See your AI usage on the AI usage page in your billing settings , where you can group, filter, and export your AI credit data. Set budgets to cap your spend. For more information, see our docs about how to set up budgets . If you’re an organization or enterprise, user-level budgets help you control and track spend at an individual level. Pull raw usage data anytime from your usage reports and the billing API. To learn more, see GitHub Copilot billing . copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Aug.04 Retired Upcoming deprecation of GitHub Spark on github.com copilot ecosystem & accessibility ... +1 Aug.03 Release Customize the reasoning level for Copilot cloud agent copilot Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Aug.03 Release Trigger Copilot automations with comments copilot Aug.03 Release Migrate from GitLab to GitHub with GitHub Enterprise Importer enterprise management tools Jul.31 Retired Upcoming August 2026 model deprecations in GitHub Copilot copilot Jul.31 Retired Gemin",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Upcoming deprecation of GitHub Spark on github.com - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-04T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Beginning August 4, 2026, GitHub Spark no longer accepts new users or allows the creation of new apps. Existing users can continue to access GitHub Spark until August 31, 2026…",
+    "body_excerpt": "Upcoming deprecation of GitHub Spark on github.com - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Retired August 4, 2026 • 2 minute read Upcoming deprecation of GitHub Spark on github.com Beginning August 4, 2026, GitHub Spark no longer accepts new users or allows the creation of new apps. Existing users can continue to access GitHub Spark until August 31, 2026 to export apps they’ve already created. Apps you’ve already deployed will continue to work after GitHub Spark is retired. GitHub Spark was created to help people quickly move from an idea to a working application. Since its launch, AI models and agentic development tools have advanced significantly. Builders can now build and refine these experiences through GitHub Copilot in the environments where they already work, including VS Code, Copilot CLI, and the GitHub Copilot app. We’ve seen builders increasingly choose these integrated workflows for application development, and we’re aligning our experiences accordingly. This change applies specifically to the current GitHub Spark experience on github.com. Separately, GitHub Models, the inference service used by Spark’s llm() function, retired on July 30, 2026 . As of that date, calls to llm() no longer work. Apps that don’t use llm() aren’t affected by the GitHub Models retirement. What this means for you Existing apps you’ve already deployed will continue to work after GitHub Spark shuts down. Export your app code before August 31, 2026 if you want to keep editing your app in the future. To do this, open the Spark workbench for your app, select … , then select Create repository . If your app uses llm() , replace it with your own inference provider to keep AI features working. Not all Spark apps use AI inferencing. To check whether an app is affected by the GitHub Models re",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-04T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.04 Improvement Customize Dependabot pull request branch names supply chain security July Jul 2026 July Jul 2026 Jul.31 Retired Restricting npm bypass-2FA granular access tokens supply chain security Jul.28 Release npm publish-time malware scanning and dual-use metadata supply chain security Jul.28 Improvement Dependabot alerts on malicious packages across more ecosystems supply chain security Jul.28 Improvement GitHub Actions holds potentially malicious workflows for approval actions supply chain security ... +1 Jul.14 Improvement Dependabot version updates introduce default package cooldown supply chain security Jul.08 Release Innersource security advisories are generally available supply chain security Jul.08 Retired npm install-time security and GAT bypass2fa deprecation supply chain security June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Code coverage automatic enablement in Code Quality settings - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-04T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We’re making code coverage setup faster and simpler. You’ll now see a new option in your repository’s Code Quality settings that lets GitHub generate your coverage workflow automatically with AI.…",
+    "body_excerpt": "Code coverage automatic enablement in Code Quality settings - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement August 4, 2026 • 1 minute read Code coverage automatic enablement in Code Quality settings Table of Contents How it works Who can use it Learn more Menu. Currently selected: How it works How it works Who can use it Learn more We’re making code coverage setup faster and simpler. You’ll now see a new option in your repository’s Code Quality settings that lets GitHub generate your coverage workflow automatically with AI. We’ll open a pull request so you can review the changes before you merge them. Setting up code coverage has traditionally felt disconnected and manual. Now, you can get contextual help right in settings and create a working pipeline with a single click. You won’t need to author the workflow yourself, which cuts down setup time and removes guesswork. How it works Code Quality can now generate a pull request for a coverage workflow. From the Code Quality settings page, you can start an agent that creates a pull request with a coverage workflow configured for your repository. The workflow builds your code, runs tests, generates a coverage report, and uploads it to GitHub, using least-privilege permissions by default. Who can use it Code coverage automatic enablement is now in public preview for all GitHub Code Quality users on github.com. GitHub Code Quality is available today for GitHub Enterprise Cloud and Team, but isn’t yet available on GitHub Enterprise Server. Learn more Learn more about Code coverage in our documentation . Check out our GitHub Code Quality documentation . Join the discussion and leave feedback on the Code Coverage announcement in the GitHub Community . Table of Contents How it works Who can use it Learn more Menu. Currently se",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
