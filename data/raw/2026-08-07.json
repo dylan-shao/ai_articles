@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Archive: August 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/08/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-06T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: August 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.06 Release Kimi K3 is now available in GitHub Copilot copilot Aug.04 Release Customize code scanning default setup at scale application security Aug.04 Retired Retiring the Copilot Billing Preview app copilot enterprise management tools ... +1 Aug.04 Retired Upcoming deprecation of GitHub Spark on github.com copilot ecosystem & accessibility ... +1 Aug.04 Improvement Customize Dependabot pull request branch names supply chain security Aug.04 Improvement Code coverage automatic enablement in Code Quality settings application security Aug.04 Improvement CodeQL 2.26.2 adds Swift 6.3.3 and Kotlin 2.4.10 support application security Aug.03 Release Customize the reasoning level for Copilot cloud agent copilot Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 Aug.03 Release Trigger Copilot automations with comments copilot Aug.03 Improvement Triage role can bypass issue creation restrictions collaboration tools Aug.03 Release Migrate from GitLab to GitHub with GitHub Enterprise Importer enterprise management tools Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your emai",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Kimi K3 is now available in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-06T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Editor’s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing…",
+    "body_excerpt": "Kimi K3 is now available in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 6, 2026 • 2 minute read Kimi K3 is now available in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access for Copilot Business and Copilot Enterprise Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access for Copilot Business and Copilot Enterprise Learn more Share your feedback Editor’s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing for models and requests for details. Editor’s note (August 6, 2026): We have temporarily paused the roll-out of Kimi K3 while we mitigate an incident with GitHub Actions. We will resume the roll-out as soon as possible and update docs with Kimi K3 pricing, which will be $3 per 1M input tokens, $15 per 1M output tokens, and $0.30 per 1M cached input tokens. Kimi K3, an open-weight model, is now generally available in GitHub Copilot. The model shows frontier-level abilities on agentic coding with highly cost-effective pricing. Kimi K3 is hosted by GitHub on Fireworks AI. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing for models and requests for details. Availability in GitHub Copilot Kimi K3 is beginning to roll out to Copilot Pro, Pro+, Max, Business, and Enterprise plans. You’ll be able to select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot cloud agent GitHub Copilot app github.com GitHub Mobile iOS and Android Jetbrains XCode Eclipse Rollout will be gradual and we’ll continue to monitor the model’s quality a",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
