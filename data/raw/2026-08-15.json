@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Multiple redirect URIs and token refresh for OAuth apps - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-14T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We’ve released multiple updates to the OAuth app and GitHub App platforms to support more secure app development: OAuth apps can opt in to expiring access tokens and refresh tokens.…",
+    "body_excerpt": "Multiple redirect URIs and token refresh for OAuth apps - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement August 14, 2026 • 2 minute read Multiple redirect URIs and token refresh for OAuth apps Table of Contents Rotating tokens for OAuth apps Multiple redirect URI support for OAuth apps Wildcard matching for redirect URIs Menu. Currently selected: Rotating tokens for OAuth apps Rotating tokens for OAuth apps Multiple redirect URI support for OAuth apps Wildcard matching for redirect URIs We’ve released multiple updates to the OAuth app and GitHub App platforms to support more secure app development: OAuth apps can opt in to expiring access tokens and refresh tokens. OAuth apps can have multiple redirect URIs. Both GitHub Apps and OAuth apps can enable wildcard matching for redirect URIs if needed. Rotating tokens for OAuth apps OAuth apps can now request a short-lived token during the user authentication flow. If an app opts in, they get an access token that lives for eight hours and a refresh token that’s valid for six months. When the access token expires, the app uses the refresh token to get a new token pair. Developers can add refresh token support to their app in two ways: Include the offline_access scope in their authentication request, which triggers the short-lived token pattern. This is how developers should test and roll out this change in their app. Set their app registration to always use short-lived tokens. This can be used to force old clients to update and ensure that all clients are getting short-lived tokens. Short-lived tokens are enabled by default for all new applications. If your authentication SDK doesn’t support the refresh token flow, you can disable this while updating the SDK. For more details on how to use expiring tokens with an OAuth app, ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Grok 4.6 is now available in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-14T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Grok 4.6, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. It is designed for agentic coding and complex multi-step workflows. In our internal testing, Grok 4.6 showed…",
+    "body_excerpt": "Grok 4.6 is now available in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 14, 2026 • 1 minute read Grok 4.6 is now available in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more Share your feedback Grok 4.6, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. It is designed for agentic coding and complex multi-step workflows. In our internal testing, Grok 4.6 showed strong results across terminal-based coding tasks in Visual Studio Code and Copilot CLI. It performed especially well on longer-horizon tasks requiring sustained reasoning and tool use, making it a strong fit for complex coding workflows. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot’s pricing for models and requests for details. Availability in GitHub Copilot Grok 4.6 will be available to Copilot Pro, Pro+, Max, Business, and Enterprise SKUs. You’ll be able to select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot cloud agent GitHub Copilot app JetBrains Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators must enable the Grok 4.6 policy in Copilot settings. The policy is off by default. Learn more To explore all models available in GitHub Copilot, see our documentation on models and get started with Copilot. Share your feedback Join the GitHub Community to share your feedback. Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availa",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

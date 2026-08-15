@@ -1,0 +1,85 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，只有一条与平台工程和开发者工具基础设施直接相关的高信号更新值得关注。",
+    "最有价值的内容来自 GitHub OAuth 应用与 GitHub App 安全能力升级：短期访问令牌、刷新令牌、多重 redirect URI 与通配匹配，将直接影响内部开发者平台、CLI、IDE 插件与 AI 编码代理的认证设计。"
+  ],
+  "executive_summary_en": [
+    "The day is relatively weak overall, with only one clearly high-signal item for backend/platform and developer-tooling leaders.",
+    "The strongest update is GitHub’s OAuth/GitHub App platform security upgrade: short-lived access tokens, refresh tokens, multiple redirect URIs, and wildcard redirect support, all of which directly affect auth design for internal developer platforms, CLIs, IDE extensions, and AI coding agents."
+  ],
+  "items": [
+    {
+      "title": "Multiple redirect URIs and token refresh for OAuth apps - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-14",
+      "url": "https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps/",
+      "summary_zh": "GitHub 为 OAuth Apps 和 GitHub Apps 推出了多项认证与重定向安全增强：OAuth 应用可启用 8 小时有效的短期 access token 与 6 个月 refresh token；OAuth 应用支持多个 redirect URI；GitHub Apps 与 OAuth Apps 均可按需启用 redirect URI 通配匹配。新应用默认启用短期令牌模式，也可通过 offline_access scope 渐进式接入刷新流程。",
+      "summary_en": "GitHub introduced several authentication and redirect security upgrades for OAuth Apps and GitHub Apps: OAuth apps can opt into 8-hour short-lived access tokens with 6-month refresh tokens; OAuth apps now support multiple redirect URIs; and both GitHub Apps and OAuth Apps can enable wildcard redirect matching when needed. New apps default to short-lived tokens, and developers can roll out refresh support gradually via the offline_access scope.",
+      "why_it_matters_zh": "对构建 AI 编码代理、CLI、IDE 扩展、内部开发者门户和多环境集成平台的团队来说，这不是普通安全公告，而是认证架构层面的变更。过去很多开发者工具依赖长期 token、单一回调 URI 或手工例外配置；现在 GitHub 官方能力更适合支持本地开发、预览环境、云端 agent、桌面客户端与企业网关等多入口场景，同时降低长期凭证泄露风险。",
+      "why_it_matters_en": "For teams building AI coding agents, CLIs, IDE extensions, internal developer portals, and multi-environment integrations, this is more than a routine security note—it changes auth architecture assumptions. Many developer tools historically relied on long-lived tokens, a single callback URI, or ad hoc exceptions; GitHub now provides first-class support for local development, preview environments, cloud agents, desktop clients, and enterprise gateways while reducing long-lived credential exposure.",
+      "key_takeaways_zh": [
+        "GitHub 正在把 OAuth 集成默认推向短期 access token + refresh token 模式，说明开发者工具生态将逐步告别长期静态令牌。",
+        "多个 redirect URI 与通配匹配显著降低多环境、多客户端和 agent 场景下的集成摩擦，但也要求团队重新审视 redirect 白名单与回调安全边界。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is pushing OAuth integrations toward a default model of short-lived access tokens plus refresh tokens, signaling a broader move away from long-lived static tokens in developer tooling.",
+        "Multiple redirect URIs and wildcard matching reduce integration friction across multi-environment, multi-client, and agent-based setups, but teams must re-evaluate redirect allowlists and callback security boundaries."
+      ],
+      "tags": [
+        "OAuth",
+        "GitHub Apps",
+        "Developer Tooling",
+        "Security",
+        "Auth Infrastructure",
+        "AI Coding Agents"
+      ],
+      "signal_score": 9,
+      "novelty_score": 7,
+      "actionability_score": 9
+    }
+  ],
+  "top_items": [
+    "Multiple redirect URIs and token refresh for OAuth apps - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "短期访问令牌（short-lived access token）",
+    "刷新令牌轮换（refresh token flow）",
+    "multiple redirect URIs",
+    "redirect URI 通配匹配"
+  ],
+  "new_terms_en": [
+    "short-lived access token",
+    "refresh token flow",
+    "multiple redirect URIs",
+    "redirect URI wildcard matching"
+  ],
+  "themes_zh": [
+    "AI 开发者工具认证基础设施正在向短期凭证和可续期会话迁移",
+    "多环境与多客户端集成成为一等公民，适配云端 agent、CLI、IDE 与预览环境"
+  ],
+  "themes_en": [
+    "Auth infrastructure for AI developer tooling is shifting toward short-lived credentials and renewable sessions",
+    "Multi-environment and multi-client integration is becoming first-class, covering cloud agents, CLIs, IDEs, and preview environments"
+  ],
+  "implications_zh": [
+    "如果你的 Copilot 插件、代码代理、CLI 或内部平台仍依赖长期 GitHub token，应尽快规划 refresh token 支持与凭证轮换策略。",
+    "平台团队应统一梳理 redirect URI 管理模型，避免为了适配多环境而引入过宽的通配配置。"
+  ],
+  "implications_en": [
+    "If your Copilot extension, coding agent, CLI, or internal platform still depends on long-lived GitHub tokens, you should prioritize refresh-token support and credential rotation.",
+    "Platform teams should standardize redirect URI management to support multi-environment delivery without introducing overly broad wildcard configurations."
+  ],
+  "reading_order": [
+    "Multiple redirect URIs and token refresh for OAuth apps - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "Grok 4.6 接入 GitHub Copilot 这条更多是模型可用性/分发更新，缺少公开评测方法、技术细节或组织落地经验，不足以进入高信号摘要。",
+    "不要把这类“模型已上线某平台”的 changelog 当作能力证明；除非伴随 eval、基准、成本/延迟数据或 agent harness 设计细节。"
+  ],
+  "what_to_ignore_en": [
+    "The Grok 4.6 in GitHub Copilot item is primarily a model-availability/distribution update and lacks public eval methodology, technical depth, or operational adoption lessons, so it does not merit inclusion as a high-signal item.",
+    "Do not over-index on changelog-style 'model now available in platform X' announcements unless they include evals, benchmarks, cost/latency data, or agent harness design details."
+  ]
+}
