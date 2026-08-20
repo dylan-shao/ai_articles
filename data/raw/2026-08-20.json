@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-19-codeql-2-26-3-improves-github-actions-queries-and-javascript-modeling/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "CodeQL 2.26.3 adds JavaScript, TypeScript, and Vue source modeling and improves the accuracy of several GitHub Actions queries. CodeQL is the static analysis engine behind GitHub code scanning, which helps…",
+    "body_excerpt": "CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement August 19, 2026 • 2 minute read CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling Table of Contents Language and framework support Query changes Menu. Currently selected: Language and framework support Language and framework support Query changes CodeQL 2.26.3 adds JavaScript, TypeScript, and Vue source modeling and improves the accuracy of several GitHub Actions queries. CodeQL is the static analysis engine behind GitHub code scanning , which helps you find and remediate security issues in your code. Language and framework support GitHub Actions Analysis now recognizes untrusted data in github.event.merge_group for workflows triggered by the merge_group event. Breaking change: We’ve removed the codeql.actions.security.SelfHostedQuery module because runner labels don’t reliably distinguish self-hosted runners from managed runners. You’ll need to update any custom queries that rely on this module. JavaScript/TypeScript Custom models can now reference specific files using a package name in the form file:<path> . This lets you define sources and sinks based on a file’s public exports. We’ve added flow models for Vue’s ref , shallowRef , toRef , reactive , and computed Composition API helpers. CodeQL now recognizes Vue Router’s useRoute() Composition API as a client-side remote flow source, including its query , params , path , fullPath , and hash members. CodeQL now treats declared inputs properties in Sails Action2 controller files as remote flow sources. This may improve results for queries such as js/path-injection . Queries using the response threat model now track promise-wrapped client response data into promise fulfillment valu",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Platform governance Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.19 Improvement Track organization code quality trends application security platform governance ... +1 Aug.12 Improvement Rule insights for organizations in public preview platform governance Aug.11 Release Automatically migrate branch protection rules to repository rulesets platform governance July Jul 2026 July Jul 2026 Jul.09 Release Organization-level targeting for GitHub Code Quality application security enterprise management tools platform governance ... +2 Jul.07 Release Restrict who can dismiss reviews in rulesets platform governance June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electro",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
