@@ -1,0 +1,86 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号较弱，只有一条与 AI 编码代理工作流相关的原始产品更新值得关注。",
+    "最有价值的信息是 GitHub 将 Copilot 的代理式能力带入 Slack，对“在协作对话中发起、监督并交接编码任务”的组织级工作流有直接参考意义。",
+    "其余候选主要是归档页或低密度更新，不足以构成完整日报。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today, with only one original product update standing out for AI coding workflow relevance.",
+    "The key item is GitHub bringing Copilot's agentic workflow into Slack, which matters for organization-level patterns around initiating, supervising, and handing off coding tasks from team conversations.",
+    "The remaining candidate is mostly an archive page and does not add enough technical density for a full digest."
+  ],
+  "items": [
+    {
+      "title": "The new GitHub Copilot experience in Slack",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-21",
+      "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/",
+      "summary_zh": "GitHub 在 Slack 中发布新的 Copilot 体验（公开预览），把 Copilot CLI 与 Copilot app 的代理式能力带入团队对话。用户可在 DM、频道或线程中通过 @GitHub 发起 agent 会话，让其结合对话上下文和授权的 GitHub 上下文来答疑、分诊 bug、更新或创建 issue、调查失败、在安全云沙箱中实施修改并验证结果，最终提交 PR，并把对话链路带入审查流程。",
+      "summary_en": "GitHub released a new Copilot experience in Slack in public preview, bringing the agentic capabilities of Copilot CLI and the Copilot app into team conversations. Users can invoke @GitHub in DMs, channels, or threads to start an agent session that uses conversation context plus permitted GitHub context to answer questions, triage bugs, update or create issues, investigate failures, make and validate changes in a secure cloud sandbox, and finally open a PR linked back to the discussion.",
+      "why_it_matters_zh": "这不是简单的聊天入口扩展，而是把编码代理嵌入到团队协作主干中：需求澄清、问题分诊、异步执行、PR 交接都可发生在同一协作面。对后端/平台负责人而言，这直接关系到团队如何管理上下文传递、权限边界、审计链路，以及“人类在回路中”的代理治理方式。",
+      "why_it_matters_en": "This is more than a chat surface expansion: it embeds a coding agent into the team's primary coordination loop, where scoping, bug triage, asynchronous execution, and PR handoff happen in one place. For backend/platform leaders, it raises practical questions about context transfer, permission boundaries, auditability, and how to run human-in-the-loop governance for coding agents.",
+      "key_takeaways_zh": [
+        "Slack 对话可直接成为代理任务入口，减少从讨论到实现之间的上下文丢失。",
+        "GitHub 明确强调安全云沙箱、异步执行与 PR 交付，说明其目标是可监督的代理执行链，而非仅限问答助手。"
+      ],
+      "key_takeaways_en": [
+        "Slack conversations can now act as a direct entry point for agent tasks, reducing context loss between discussion and implementation.",
+        "GitHub explicitly highlights secure cloud sandbox execution, asynchronous progress, and PR delivery, signaling a supervised agent execution loop rather than a simple Q&A assistant."
+      ],
+      "tags": [
+        "AI coding agents",
+        "GitHub Copilot",
+        "Slack",
+        "developer workflow",
+        "organizational adoption"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "The new GitHub Copilot experience in Slack"
+  ],
+  "new_terms_zh": [
+    "Slack Code",
+    "shared intent to shippable work（从共享意图到可交付工作的代理式协作流）"
+  ],
+  "new_terms_en": [
+    "Slack Code",
+    "agent session in team conversation"
+  ],
+  "themes_zh": [
+    "编码代理从 IDE/CLI 扩展到团队协作层",
+    "异步代理执行与 PR 交接正在成为产品标准形态",
+    "组织级上下文、权限与审计成为采用关键"
+  ],
+  "themes_en": [
+    "Coding agents are expanding from IDE/CLI surfaces into team collaboration surfaces",
+    "Asynchronous agent execution plus PR handoff is becoming a standard product pattern",
+    "Org-level context, permissioning, and auditability are central to adoption"
+  ],
+  "implications_zh": [
+    "团队应开始设计“在哪些 Slack 线程可授权代理执行、哪些只能建议”的分层治理模型。",
+    "平台团队需要评估聊天上下文进入编码代理后的权限、日志保留、审计与合规要求。",
+    "如果你的组织已经在用 issue/PR 驱动开发，这类会话到 PR 的闭环可能比 IDE 内单兵提效更快显现 ROI。"
+  ],
+  "implications_en": [
+    "Teams should start defining tiered governance for which Slack threads can authorize agent execution versus suggestion-only usage.",
+    "Platform teams need to evaluate permissions, logging, retention, audit, and compliance when chat context becomes agent input.",
+    "If your org already runs on issue/PR-centric workflows, conversation-to-PR loops may show ROI faster than isolated IDE productivity gains."
+  ],
+  "reading_order": [
+    "The new GitHub Copilot experience in Slack"
+  ],
+  "what_to_ignore_zh": [
+    "忽略 GitHub Changelog 月度归档页本身；它只是目录，不提供额外技术细节。",
+    "不要把这条更新误判为普通 Slack 集成新闻，真正值得关注的是其代理执行链：会话上下文→任务执行→安全沙箱→PR 交付。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the monthly GitHub Changelog archive page itself; it is just an index without additional technical detail.",
+    "Do not treat this as a generic Slack integration announcement; the important part is the agent execution loop: conversation context -> task execution -> secure sandbox -> PR delivery."
+  ]
+}

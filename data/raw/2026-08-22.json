@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Archive: August 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/08/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: August 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.21 Improvement Better tools for managing blocked users collaboration tools Aug.21 Release The new GitHub Copilot experience in Slack collaboration tools copilot ... +1 Aug.21 Release Shared agentic work with GitHub Copilot in Microsoft Teams collaboration tools copilot ... +1 Aug.20 Improvement Pinning saved views to the repository issues sidebar is generally available and more projects & issues Aug.20 Improvement Windows 11 arm64 VS2026 image generally available actions Aug.20 Release Code scanning adds a mitigated alert dismissal reason application security Aug.20 Improvement Separate GitHub Actions path for GitHub Code Quality actions application security ... +1 Aug.20 Improvement Track GitHub Code Quality enablement changes in the audit log application security platform governance ... +1 Aug.19 Improvement CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling application security Aug.19 Improvement Track organization code quality trends application security platform governance ... +1 Aug.18 Release Enterprise managed settings in GitHub Copilot for JetBrains copilot enterprise management tools ... +1 Aug.18 Improvement Credential revocation and deauthorization by token type application security enterprise management tools ... +1 Aug.14 Improvement Multiple redirect U",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "The new GitHub Copilot experience in Slack - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to…",
+    "body_excerpt": "The new GitHub Copilot experience in Slack - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 21, 2026 • 2 minute read The new GitHub Copilot experience in Slack Table of Contents What you can now do with @GitHub Slack Code and GitHub Copilot The power of multiplayer Availability and getting started Menu. Currently selected: What you can now do with @GitHub What you can now do with @GitHub Slack Code and GitHub Copilot The power of multiplayer Availability and getting started The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to plan changes, investigate problems, and hand off coding tasks from the conversations where your team coordinates work. GitHub is also a launch partner for Slack Code, a new type of channel designed for agents. Bringing Copilot into the flow of conversation helps your team turn shared intent into shippable work. What you can now do with @GitHub Mention @GitHub in a direct message, channel, or thread to start an agent session. Copilot can use the conversation and permitted GitHub context to: Answer questions about your code and GitHub activity. Triage bug reports, update existing issues, or create and label new issues. Investigate failures, implement changes, and validate its work in a secure cloud sandbox. Open a pull request and provide a link to the conversation for review. GitHub Copilot continues working asynchronously while you’re in a meeting, commuting, or focused on something else. You can direct the session from Slack as it works, then continue from the pull request in your terminal, the GitHub Copilot app, or your IDE. Slack Code and GitHub Copilot GitHub Copilot can also create a dedicated code channel that keeps",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
