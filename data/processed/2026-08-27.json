@@ -1,0 +1,144 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，主要是 GitHub Changelog 级别的产品更新，缺少关于 AI 编码代理、评测框架、MCP、仓库理解或组织落地的深度技术文章。",
+    "唯一相对高信号的是 GitHub Apps 现可访问企业计费数据：它把企业级自动化从个人 PAT 迁移到 App 权限模型，降低人员变动带来的运维风险，并提升平台集成可持续性。",
+    "其余 Copilot 企业管理更新更偏治理与运维配置，适合作为平台团队关注的次级动态，但不足以构成完整日报。"
+  ],
+  "executive_summary_en": [
+    "The day is relatively weak: most candidates are GitHub Changelog product notes rather than deep technical write-ups on coding agents, evals, MCP, repo understanding, or org adoption.",
+    "The strongest item is GitHub Apps gaining access to enterprise billing data, because it shifts enterprise automation from user-bound PATs to app-scoped permissions and makes platform integrations more durable.",
+    "The remaining Copilot enterprise-management updates are relevant as governance and operations signals, but they are not strong enough to anchor a full digest."
+  ],
+  "items": [
+    {
+      "title": "GitHub Apps can now access enterprise billing data",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-26",
+      "url": "https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data/",
+      "summary_zh": "GitHub 现允许企业所有者为 GitHub App 授予 enterprise billing 权限，支持 read 或 read and write 两个级别。企业计费 REST API 过去通常依赖企业所有者或计费管理员的个人访问令牌，现在可改由 App installation token 调用，用于拉取用量、管理预算和成本中心，并获得高于 PAT 的速率限制。",
+      "summary_en": "GitHub now lets enterprise owners grant GitHub Apps an enterprise billing permission with read or read-and-write scopes. Enterprise billing REST APIs, which previously depended on a human user's personal access token, can now be accessed via app installation tokens for usage export, budget management, and cost-center workflows, with higher rate limits than PATs.",
+      "why_it_matters_zh": "对平台工程团队，这不是普通计费功能，而是企业自动化身份模型的改进：把关键财务/治理集成从“绑定某个人”转为“绑定应用”，减少人员离职、权限轮换和密钥治理带来的脆弱性。对推动 AI 编码与开发者平台采用的团队来说，这类权限模型完善是把 Copilot/平台数据接入内部 FinOps、BI 和治理系统的必要前提。",
+      "why_it_matters_en": "For platform teams, this is more than a billing feature: it improves the identity model for enterprise automation. Moving critical finance and governance integrations from person-bound tokens to app-bound credentials reduces fragility during role changes, offboarding, and secret rotation. For organizations operationalizing AI coding and internal developer platforms, this is foundational for wiring GitHub usage into FinOps, BI, and governance systems.",
+      "key_takeaways_zh": [
+        "企业计费 API 终于可以通过 GitHub App 调用，而不必依赖个人 PAT。",
+        "App token 带来更稳定的自动化身份边界和更高 API 速率限制，适合财务、预算、成本分摊与报表集成。"
+      ],
+      "key_takeaways_en": [
+        "Enterprise billing APIs can now be accessed through GitHub Apps instead of relying on personal access tokens.",
+        "App tokens provide a more durable automation boundary and higher API rate limits for finance, budgeting, cost allocation, and reporting workflows."
+      ],
+      "tags": [
+        "GitHub Apps",
+        "Enterprise Governance",
+        "FinOps",
+        "Platform Engineering"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 8
+    },
+    {
+      "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-26",
+      "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces/",
+      "summary_zh": "GitHub Copilot 企业托管设置现在支持在 extraKnownMarketplaces 条目上设置 autoUpdate: true，从而让受支持客户端自动检查并更新来自指定插件市场的已安装插件。该能力仍受 strictKnownMarketplaces 允许列表约束，适用于 GitHub Copilot app、Copilot CLI 和 VS Code。",
+      "summary_en": "GitHub Copilot enterprise-managed settings now support autoUpdate: true on extraKnownMarketplaces entries, allowing supported clients to automatically check and update installed plugins from approved marketplaces. The behavior still respects the strictKnownMarketplaces allowlist and applies across the GitHub Copilot app, Copilot CLI, and VS Code.",
+      "why_it_matters_zh": "这反映出 AI 编码工具正在进入更成熟的企业插件治理阶段：不仅要允许哪些扩展源，还要集中控制其升级节奏。对于担心提示注入、工具权限漂移或插件供应链风险的组织，这类集中式更新与白名单机制是大规模部署 agent/tooling 的关键基础设施。",
+      "why_it_matters_en": "This signals that AI coding tooling is moving into a more mature enterprise plugin-governance phase: not just controlling which extension sources are allowed, but also centrally managing update behavior. For organizations concerned about prompt injection, tool-permission drift, or plugin supply-chain risk, centralized updates plus allowlists are important prerequisites for broader agent/tool adoption.",
+      "key_takeaways_zh": [
+        "企业可以对白名单插件市场启用自动更新，减少手工维护成本。",
+        "自动更新并非完全开放，仍需配合 strictKnownMarketplaces 做来源治理。"
+      ],
+      "key_takeaways_en": [
+        "Enterprises can enable auto-updates for approved plugin marketplaces to reduce manual maintenance.",
+        "Auto-update remains gated by strictKnownMarketplaces, reinforcing source-control and governance."
+      ],
+      "tags": [
+        "Copilot Enterprise",
+        "Plugin Governance",
+        "Supply Chain",
+        "Developer Tooling"
+      ],
+      "signal_score": 5,
+      "novelty_score": 5,
+      "actionability_score": 7
+    },
+    {
+      "title": "Global model policy generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-08-26",
+      "url": "https://github.blog/changelog/",
+      "summary_zh": "GitHub Changelog 显示 Global model policy 已正式 GA，但候选信息未提供独立文章细节。已知这属于 Copilot/企业管理能力，面向组织级模型选择与策略控制。",
+      "summary_en": "The GitHub Changelog shows that Global model policy is now generally available, though the candidate set does not include a dedicated detail page. It appears to be a Copilot enterprise-management capability for organization-level model selection and policy control.",
+      "why_it_matters_zh": "即便缺少细节，这仍是值得留意的组织采用信号：企业级 AI 编码开始从“是否启用”转向“允许哪些模型、由谁控制、如何统一治理”。如果后续文档补全，平台团队应重点看其是否支持按组织/团队/场景进行策略分层。",
+      "why_it_matters_en": "Even without detail, this is an important adoption signal: enterprise AI coding is shifting from simple enablement to governed model choice, ownership, and centralized policy. If fuller docs appear, platform teams should evaluate whether policy can be layered by org, team, or use case.",
+      "key_takeaways_zh": [
+        "模型策略治理正在成为 Copilot 企业能力的一部分。",
+        "当前信号有限，需等待更完整文档后再评估其技术深度与落地方式。"
+      ],
+      "key_takeaways_en": [
+        "Model-policy governance is becoming part of the Copilot enterprise control plane.",
+        "The current signal is incomplete; stronger evaluation depends on fuller documentation."
+      ],
+      "tags": [
+        "Copilot Enterprise",
+        "Model Governance",
+        "Org Adoption"
+      ],
+      "signal_score": 4,
+      "novelty_score": 5,
+      "actionability_score": 4
+    }
+  ],
+  "top_items": [
+    "GitHub Apps can now access enterprise billing data",
+    "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+    "Global model policy generally available"
+  ],
+  "new_terms_zh": [
+    "enterprise billing permission：授予 GitHub App 调用企业计费 API 的权限模型。",
+    "strictKnownMarketplaces：用于限制允许插件市场来源的企业白名单机制。",
+    "autoUpdate（marketplace 级）：对指定插件市场启用集中式自动更新控制。"
+  ],
+  "new_terms_en": [
+    "enterprise billing permission: a GitHub App permission model for accessing enterprise billing APIs.",
+    "strictKnownMarketplaces: an enterprise allowlist mechanism that restricts which plugin marketplaces are permitted.",
+    "autoUpdate at marketplace level: centralized control for automatically updating plugins from specific approved marketplaces."
+  ],
+  "themes_zh": [
+    "企业级 AI 开发工具治理从功能可用性转向身份、策略与供应链控制。",
+    "GitHub 正在补齐可持续自动化所需的权限边界与集中管理能力。"
+  ],
+  "themes_en": [
+    "Enterprise AI developer tooling is moving from feature availability toward identity, policy, and supply-chain governance.",
+    "GitHub is filling in the permission boundaries and centralized controls needed for durable automation."
+  ],
+  "implications_zh": [
+    "平台团队应优先把关键 GitHub 自动化从个人 PAT 迁移到 GitHub App，以降低人员与凭据风险。",
+    "在放大 Copilot/代理工具部署前，组织需要同时建立模型策略、插件白名单与自动更新治理。",
+    "FinOps、BI、安全与开发者平台团队之间的协作会更紧密，因为 AI 工具成本与治理数据正在 API 化。"
+  ],
+  "implications_en": [
+    "Platform teams should prioritize migrating critical GitHub automations from personal PATs to GitHub Apps to reduce personnel and credential risk.",
+    "Before scaling Copilot or agent tooling, organizations need model policy, plugin allowlists, and update governance together.",
+    "FinOps, BI, security, and developer-platform teams will work more closely as AI tooling cost and governance data become API-addressable."
+  ],
+  "reading_order": [
+    "GitHub Apps can now access enterprise billing data",
+    "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+    "Global model policy generally available"
+  ],
+  "what_to_ignore_zh": [
+    "泛化的 GitHub Changelog 聚合页与月度归档页，没有新增技术细节。",
+    "与 AI 编码核心主题无关的普通平台更新，例如 blocked users、Windows image、security advisories 小改动。"
+  ],
+  "what_to_ignore_en": [
+    "Generic GitHub Changelog index and archive pages, which add no new technical detail.",
+    "Routine platform updates unrelated to AI coding priorities, such as blocked-user management, Windows images, or minor security advisory UX changes."
+  ]
+}

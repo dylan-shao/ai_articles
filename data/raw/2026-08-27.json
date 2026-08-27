@@ -1,0 +1,72 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.26 Improvement Enterprise-managed settings now support autoUpdate for plugin marketplaces client apps copilot enterprise management tools ... +2 Aug.26 Improvement Global model policy generally available copilot enterprise management tools ... +1 Aug.26 Release GitHub Apps can now access enterprise billing data account management ecosystem & accessibility enterprise management tools ... +2 Aug.25 Improvement Rule insights dashboard generally available platform governance Aug.25 Release GitHub Copilot app Customize tab is generally available copilot Aug.25 Improvement Block users directly from security advisories collaboration tools Aug.25 Improvement Push rules in rulesets now support path exceptions platform governance Aug.21 Improvement Better tools for managing blocked users collaboration tools Aug.21 Release The new GitHub Copilot experience in Slack collaboration tools copilot ... +1 Aug.21 Release Shared agentic work with GitHub Copilot in Microsoft Teams collaboration tools copilot ... +1 Aug.20 Improvement Pinning saved views to the repository issues sidebar is generally available and more projects & issues Aug.20 Improvement Windows 11 arm64 VS2026 image generally available actions Aug.20 Release Code scanning adds a mitigated alert dismissal reason application security Aug.20 Improvement Separate G",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: August 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/08/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: August 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.26 Improvement Enterprise-managed settings now support autoUpdate for plugin marketplaces client apps copilot enterprise management tools ... +2 Aug.26 Improvement Global model policy generally available copilot enterprise management tools ... +1 Aug.26 Release GitHub Apps can now access enterprise billing data account management ecosystem & accessibility enterprise management tools ... +2 Aug.25 Improvement Rule insights dashboard generally available platform governance Aug.25 Release GitHub Copilot app Customize tab is generally available copilot Aug.25 Improvement Block users directly from security advisories collaboration tools Aug.25 Improvement Push rules in rulesets now support path exceptions platform governance Aug.21 Improvement Better tools for managing blocked users collaboration tools Aug.21 Release The new GitHub Copilot experience in Slack collaboration tools copilot ... +1 Aug.21 Release Shared agentic work with GitHub Copilot in Microsoft Teams collaboration tools copilot ... +1 Aug.20 Improvement Pinning saved views to the repository issues sidebar is generally available and more projects & issues Aug.20 Improvement Windows 11 arm64 VS2026 image generally available actions Aug.20 Release Code scanning adds a mitigated alert dismissal reason application security Aug.20",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update…",
+    "body_excerpt": "Enterprise-managed settings now support autoUpdate for plugin marketplaces - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement August 26, 2026 • 1 minute read Enterprise-managed settings now support autoUpdate for plugin marketplaces You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update installed plugins sourced from it, reducing manual maintenance for organization customizations. The marketplace must still be permitted by the effective strictKnownMarketplaces allowlist. This capability is generally available with Copilot Business and Copilot Enterprise in the GitHub Copilot app, Copilot CLI, and Visual Studio Code. Learn more in our docs about enterprise managed settings , or join the discussion in the GitHub Community . client apps copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Aug.26 Improvement Global model policy generally available copilot enterprise management tools ... +1 Aug.26 Release GitHub Apps can now access enterprise billing data account management ecosystem & accessibility enterprise management tools ... +2 Aug.25 Release GitHub Copilot app Customize tab is generally available copilot Aug.21 Release The new GitHub Copilot experience in Slack collaboration tools copilot ... +1 Aug.21 Release Shared agentic work with GitHub Copilot in Microsoft Teams collaboration tools copilot ... +1 Aug.18 Release Enterprise managed settings in GitHub Copilot for JetBrains copilot enterprise management tools ... +1 Aug.18 Improvement Credential revocation and deauthorization by token type application security enterprise management tools ... +1 Aug.14 Improvem",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Apps can now access enterprise billing data - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose…",
+    "body_excerpt": "GitHub Apps can now access enterprise billing data - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release August 26, 2026 • 1 minute read GitHub Apps can now access enterprise billing data Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose one of two levels: read or read and write. Previously, the only way to read usage or manage budgets and cost centers through the API was a personal access token belonging to an enterprise owner or billing manager. That tied your billing automation to one person’s token, so it broke when that person changed roles or left. Now an app installation access token that carries the enterprise billing permission can call the enterprise billing REST API endpoints. Use it to pull usage data into your finance and BI systems, reconcile invoices, and manage budgets and cost centers, all without relying on an individual’s token. As an added benefit, you also get higher rate limits than a personal access token. The enterprise billing permission is available on GitHub Enterprise Cloud. To learn more, see Choosing permissions for a GitHub App . account management ecosystem & accessibility enterprise management tools Share Copied Shared Back to changelog Related Posts Aug.26 Improvement Enterprise-managed settings now support autoUpdate for plugin marketplaces client apps copilot enterprise management tools ... +2 Aug.26 Improvement Global model policy generally available copilot enterprise management tools ... +1 Aug.18 Release Enterprise managed settings in GitHub Copilot for JetBrains copilot enterprise management tools ... +1 Aug.18 Improvement Credential revocation and deauthorization by token type application security enterpr",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-08-26T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Ecosystem & accessibility Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply August Aug 2026 August Aug 2026 Aug.26 Release GitHub Apps can now access enterprise billing data account management ecosystem & accessibility enterprise management tools ... +2 Aug.07 Improvement Enterprises can now install third-party GitHub Apps ecosystem & accessibility enterprise management tools ... +1 Aug.04 Retired Upcoming deprecation of GitHub Spark on github.com copilot ecosystem & accessibility ... +1 July Jul 2026 July Jul 2026 Jul.30 Retired GitHub Models is now retired ecosystem & accessibility Jul.01 Retired GitHub Models is being fully retired on July 30, 2026 ecosystem & accessibility June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform De",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
