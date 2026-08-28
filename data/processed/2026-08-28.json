@@ -1,0 +1,77 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选源只有 GitHub Changelog 聚合页，缺少单篇高信号技术内容、实测数据或架构细节，不足以形成完整日报。",
+    "可勉强关注的一点是 GitHub Issues 中的 agent automation controls 预览，说明 AI 代理正继续嵌入开发协作流，但当前材料过于简略。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is weak: the only source is a generic GitHub Changelog index page, without enough technical depth, benchmarks, or implementation detail to justify a full digest.",
+    "The only borderline signal is the preview of agent automation controls in GitHub Issues, which hints at deeper AI-agent integration into developer workflows, but the available material is too shallow."
+  ],
+  "items": [
+    {
+      "title": "Agent automation controls in GitHub Issues in public preview",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-07-23T00:00:00+00:00",
+      "url": "https://github.blog/changelog/",
+      "summary_zh": "GitHub 在 Changelog 中提到 Issues 的 agent automation controls 进入 public preview，表明平台开始为 AI 代理在 issue 工作流中的触发、权限或自动化边界提供原生控制能力。但当前候选材料仅是索引页摘录，没有公开足够的设计细节、权限模型、事件触发方式或审计机制。",
+      "summary_en": "GitHub’s changelog notes that agent automation controls for GitHub Issues entered public preview, signaling native controls for how AI agents operate inside issue workflows. However, the candidate material is only an index-page mention and does not provide enough detail on the control model, triggers, permissions, or auditability.",
+      "why_it_matters_zh": "对平台和工程效率负责人而言，真正关键的不是“又一个 AI 功能上线”，而是 GitHub 是否开始把代理执行的治理面做成一等能力：谁可触发、在何处运行、是否可审计、如何限制副作用。如果后续细节充分，这会直接影响企业内部对 AI coding agent 的采用门槛。",
+      "why_it_matters_en": "For backend/platform and engineering leads, the key signal is not just another AI feature launch, but whether GitHub is turning agent governance into a first-class capability: who can trigger agents, where they can act, how actions are audited, and how side effects are constrained. If expanded, this could materially affect enterprise adoption of AI coding agents.",
+      "key_takeaways_zh": [
+        "边际信号在于“控制面”而非“能力面”：平台开始重视代理自动化的治理。",
+        "当前缺乏技术细节，暂时不能据此判断其对权限、安全、审计和流程编排的真实价值。"
+      ],
+      "key_takeaways_en": [
+        "The meaningful signal is the emergence of a control plane for agents, not merely more agent capability.",
+        "The available information lacks enough technical detail to assess real value around permissions, safety, auditability, and workflow orchestration."
+      ],
+      "tags": [
+        "GitHub",
+        "AI coding agents",
+        "Developer workflow",
+        "Agent governance"
+      ],
+      "signal_score": 4,
+      "novelty_score": 5,
+      "actionability_score": 3
+    }
+  ],
+  "top_items": [
+    "Agent automation controls in GitHub Issues in public preview"
+  ],
+  "new_terms_zh": [
+    "agent automation controls（代理自动化控制）"
+  ],
+  "new_terms_en": [
+    "agent automation controls"
+  ],
+  "themes_zh": [
+    "AI 代理正在从能力展示转向治理与控制",
+    "开发协作平台持续把代理能力嵌入 issue/work item 流程"
+  ],
+  "themes_en": [
+    "AI agents are shifting from raw capability toward governance and control surfaces",
+    "Developer collaboration platforms continue embedding agent behavior into issue and work-item workflows"
+  ],
+  "implications_zh": [
+    "后续应重点跟踪 GitHub 是否公开权限模型、审批流、执行日志、回滚与策略配置等细节。",
+    "企业在评估 AI coding agent 时，应把‘治理能力’与‘模型能力’分开打分。"
+  ],
+  "implications_en": [
+    "Watch for follow-up details from GitHub on permission models, approvals, execution logs, rollback, and policy configuration.",
+    "Enterprises evaluating AI coding agents should score governance capabilities separately from model capability."
+  ],
+  "reading_order": [
+    "Agent automation controls in GitHub Issues in public preview"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 聚合页中与 AI coding 无关的 Projects/Issues 常规 UI 改进。",
+    "没有独立技术说明、演示或文档支撑的泛化产品更新。"
+  ],
+  "what_to_ignore_en": [
+    "Routine Projects/Issues UI updates in the GitHub Changelog index that are unrelated to AI coding.",
+    "Generic product update mentions without standalone technical documentation, demos, or implementation detail."
+  ]
+}
