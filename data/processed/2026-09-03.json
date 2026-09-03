@@ -1,0 +1,113 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容信号较弱，主要是 GitHub Copilot 的企业治理与策略配置更新，没有新的评测方法、代理架构或仓库理解技术细节。",
+    "最值得关注的是 Copilot App/CLI 对内容排除策略的正式支持，以及企业可统一设置默认模型，这两项都直接影响大规模落地时的安全边界与模型治理。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is relatively weak: mostly GitHub Copilot enterprise-governance updates, with little new detail on evals, agent architecture, or repo-understanding techniques.",
+    "The strongest items are GA support for content exclusion policies in Copilot App/CLI and enterprise-managed default model selection, both of which matter for security boundaries and model governance at scale."
+  ],
+  "items": [
+    {
+      "title": "Content exclusions generally available in Copilot app and CLI - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-02",
+      "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/",
+      "summary_zh": "GitHub 宣布 Copilot App 与 Copilot CLI 正式支持企业、组织和仓库级别配置的内容排除策略。被排除的文件不会被 Copilot 作为上下文使用，从而在代理式工作流中减少敏感代码泄露风险。",
+      "summary_en": "GitHub announced general availability of content exclusion policies in Copilot App and Copilot CLI. Files excluded at the enterprise, org, or repo level will not be used as Copilot context, reducing sensitive-code exposure in agentic workflows.",
+      "why_it_matters_zh": "这不是新能力原型，而是治理能力落到 App 和 CLI 两个高风险入口，意味着企业终于可以把现有的代码隔离策略延伸到代理式开发链路。对于平台团队来说，这直接影响是否能在终端和多仓场景中放心放开 AI 编码权限。",
+      "why_it_matters_en": "This is not just a feature toggle; it extends governance controls into the App and CLI, two high-risk surfaces for agentic development. For platform teams, it directly affects whether AI coding can be enabled safely in terminal-driven and multi-repo workflows.",
+      "key_takeaways_zh": [
+        "内容排除策略已从管理面扩展到 Copilot App 和 CLI 的实际上下文检索路径。",
+        "其核心价值在于为代理式工作流建立更明确的敏感代码边界，而不是提升模型能力本身。"
+      ],
+      "key_takeaways_en": [
+        "Content exclusion policies now apply to the actual context-ingestion path in Copilot App and CLI.",
+        "The main value is stronger sensitive-code boundary enforcement for agentic workflows, not improved model capability."
+      ],
+      "tags": [
+        "Copilot",
+        "Enterprise Governance",
+        "CLI",
+        "Security",
+        "Context Control"
+      ],
+      "signal_score": 7,
+      "novelty_score": 5,
+      "actionability_score": 8
+    },
+    {
+      "title": "Enterprise-managed settings support any default model - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-02",
+      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model/",
+      "summary_zh": "GitHub 现在允许企业通过托管设置为新会话指定任意 Copilot 默认模型，并可按团队定制不同默认值。管理员还可以将该配置设为可覆盖，让团队在企业基线之上选择自己的默认模型。",
+      "summary_en": "GitHub now lets enterprises set any Copilot model as the default for new conversations via managed settings, with optional team-specific defaults. Admins can also make the setting overridable so teams can choose their own default model on top of the enterprise baseline.",
+      "why_it_matters_zh": "随着编码助手进入多模型时代，真正的运营难点不再是‘有没有模型’，而是‘谁默认用什么模型、在哪些团队可覆盖、如何形成可审计基线’。这项更新说明模型治理正在从个人偏好转向企业级策略编排。",
+      "why_it_matters_en": "In a multi-model coding-assistant world, the hard problem is no longer model availability but policy: which model is default, where overrides are allowed, and how to maintain an auditable baseline. This update shows model governance becoming an enterprise configuration problem rather than a personal preference issue.",
+      "key_takeaways_zh": [
+        "企业现在可以把默认模型选择纳入统一治理，并按团队映射差异化策略。",
+        "“可覆盖默认值”机制适合在统一合规基线和团队自主优化之间做平衡。"
+      ],
+      "key_takeaways_en": [
+        "Enterprises can now bring default-model selection under centralized governance with team-specific mappings.",
+        "The overridable-default mechanism is useful for balancing compliance baselines with team-level optimization."
+      ],
+      "tags": [
+        "Copilot",
+        "Model Governance",
+        "Enterprise",
+        "Developer Tooling",
+        "Policy"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Content exclusions generally available in Copilot app and CLI - GitHub Changelog",
+    "Enterprise-managed settings support any default model - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "内容排除策略",
+    "企业托管默认模型",
+    "团队级模型映射"
+  ],
+  "new_terms_en": [
+    "content exclusion policies",
+    "enterprise-managed default model",
+    "team-level model mapping"
+  ],
+  "themes_zh": [
+    "AI 编码工具的企业治理正在从插件设置走向上下文与模型策略控制。",
+    "组织采用的重点逐渐转向安全边界、默认模型编排和团队差异化配置。"
+  ],
+  "themes_en": [
+    "Enterprise governance for AI coding tools is shifting from simple settings toward context and model policy control.",
+    "Organizational adoption is increasingly about security boundaries, default-model orchestration, and team-specific configuration."
+  ],
+  "implications_zh": [
+    "平台团队应把“哪些文件禁止进入模型上下文”作为 AI 编码 rollout 的硬门槛，而不是事后审计项。",
+    "需要建立默认模型、团队例外、预算和审计日志之间的一体化治理流程。"
+  ],
+  "implications_en": [
+    "Platform teams should treat 'which files may never enter model context' as a hard rollout gate for AI coding, not a post-hoc audit concern.",
+    "Teams need an integrated governance workflow spanning default models, team exceptions, budgets, and audit logs."
+  ],
+  "reading_order": [
+    "Content exclusions generally available in Copilot app and CLI - GitHub Changelog",
+    "Enterprise-managed settings support any default model - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的月度归档页只是索引页，没有额外技术信息。",
+    "通用产品发布汇总没有提供实现、评测或架构层面的新增细节。"
+  ],
+  "what_to_ignore_en": [
+    "The monthly GitHub Changelog archive page is just an index and adds no extra technical detail.",
+    "Generic release listings here do not provide new implementation, evaluation, or architectural insight."
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Archive: September 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/09/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: September 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.02 Improvement Enterprise-managed settings support any default model client apps copilot enterprise management tools ... +2 Sep.02 Release Content exclusions generally available in Copilot app and CLI copilot Sep.01 Release Enterprise Live Migrations from GHES to ghe.com generally available enterprise management tools Sep.01 Improvement Set an expiration date for individual user budgets copilot enterprise management tools ... +1 Sep.01 Release Copilot code review can now approve pull requests copilot Sep.01 Improvement Block users from discussion comments in personal repositories collaboration tools Sep.01 Release Claude Fable 5.1 is generally available in GitHub Copilot copilot Sep.01 Release GitHub CLI: Media in issues, pull requests, and comments client apps Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing R",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enterprise-managed settings support any default model - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.…",
+    "body_excerpt": "Enterprise-managed settings support any default model - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement September 2, 2026 • 1 minute read Enterprise-managed settings support any default model You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows. You can also customize the default by enterprise team, assigning a different default model based on team membership. Set the model key as overridable and update team configuration files in team-mappings.json so that enterprise teams can choose their own preferred default model. All other users inherit your enterprise default. Model defaults in managed settings are generally available with Copilot Business and Copilot Enterprise in the GitHub Copilot app, Copilot CLI, and Visual Studio Code. Learn more in our docs about enterprise managed settings , or join the discussion in the GitHub Community . client apps copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Sep.02 Release Content exclusions generally available in Copilot app and CLI copilot Sep.01 Release Enterprise Live Migrations from GHES to ghe.com generally available enterprise management tools Sep.01 Improvement Set an expiration date for individual user budgets copilot enterprise management tools ... +1 Sep.01 Release Copilot code review can now approve pull requests copilot Sep.01 Release Claude Fable 5.1 is generally available in GitHub Copilot copilot Sep.01 Release GitHub CLI: Media in issues, pull requests, and comments client apps Aug.31 Improvement Copilot model access update for GitHub Team plans copilot enterprise management tools ... +1 Aug.31 Retired Selected GitHub Copilot models de",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Client apps Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.02 Improvement Enterprise-managed settings support any default model client apps copilot enterprise management tools ... +2 Sep.01 Release GitHub CLI: Media in issues, pull requests, and comments client apps August Aug 2026 August Aug 2026 Aug.26 Improvement Enterprise-managed settings now support autoUpdate for plugin marketplaces client apps copilot enterprise management tools ... +2 Aug.14 Improvement Multiple redirect URIs and token refresh for OAuth apps client apps Aug.03 Release Enterprise team specialization for managed settings client apps copilot enterprise management tools ... +2 July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Cu",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Content exclusions generally available in Copilot app and CLI - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators.",
+    "body_excerpt": "Content exclusions generally available in Copilot app and CLI - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 2, 2026 • 1 minute read Content exclusions generally available in Copilot app and CLI The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensitive code across agentic workflows. This is available for Copilot Business and Copilot Enterprise customers. To learn more, see our docs about content exclusion . copilot Share Copied Shared Back to changelog Related Posts Sep.02 Improvement Enterprise-managed settings support any default model client apps copilot enterprise management tools ... +2 Sep.01 Improvement Set an expiration date for individual user budgets copilot enterprise management tools ... +1 Sep.01 Release Copilot code review can now approve pull requests copilot Sep.01 Release Claude Fable 5.1 is generally available in GitHub Copilot copilot Aug.31 Improvement Copilot model access update for GitHub Team plans copilot enterprise management tools ... +1 Aug.31 Retired Selected GitHub Copilot models deprecated copilot Aug.31 Release GitHub Copilot in VS Code, August 2026 releases copilot Aug.28 Release GitHub Copilot in Visual Studio — August update copilot Aug.28 Release GitHub Copilot weekly releases — August 24 copilot Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Bac",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
