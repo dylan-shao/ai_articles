@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Want to test what's next in ChatPRD? | ChatPRD Blog",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/blog/want-to-test-whats-next-in-chatprd",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-09-04T21:30:00+00:00",
+    "author": "Claire Vo",
+    "excerpt": "Test ChatPRD’s Product Graph and prototypes, join Claire at Lenny’s Summit, meet CXO.dev, and explore new How I AI episodes.",
+    "body_excerpt": "Want to test what's next in ChatPRD? | ChatPRD Blog ChatPRD Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free ← All articles Back / Want to test what's next in ChatPRD? Want to test what's next in ChatPRD? Test ChatPRD’s Product Graph and prototypes, join Claire at Lenny’s Summit, meet CXO.dev, and explore new How I AI episodes. Claire Vo September 4, 2026 · 3 min read Happy Friday! We've been busy at ChatPRD! I have two new features I'd love your help testing, a happy hour next week, and a new business to tell you about. Plus, our October course for execs leading AI is coming up soon. Let's jump in 🥳 👀 Early Access: Product Graph + Prototypes I'm looking for beta testers for some new big features in ChatPRD! I have been loving using these new features internally, but want people who are willing to test the edges and give me feedback. Product Graph: less digging, more context Product context shouldn't be so hard to find. ChatPRD now connects your features, docs, and customer feedback to help you decide what to build. This includes a feature map (for you and your competitors), insights derived from customer signals, and an auto-generated wiki that can keep you and your agents up to date on the latest product development work. If you're drowning in features and trying to decide what's important (and let your agents do the same) - this is for you. Prototypes, right in ChatPRD Because, why not? We're making lots of progress on our embedded prototyping tool inside ChatPRD. Describe what you're building, get a clickable prototype next to your chat, and keep tweaking it in the same thread. Want to try either one? Email Claire with “graph,” “prototype,” or “both,” and tell her what you’re building. She’ll add you to the early access chat so you can give direct feedback. 🏕️ Who's coming to Lenny's Summit? I'll be speaking at Lenny & Friends Summit on Thursday, September 10, in San Francisco . If you'll be there, let me kno",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-05T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 04 Sep 2026 21:39:46 +0000 en-US hourly 1 https://wordpress.org/?v=7.1 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 GitHub Copilot weekly releases — August 31 https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31 Allison Fri, 04 Sep 2026 21:05:01 +0000 https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31 <p>This week, GitHub Copilot expands model choice and content protections, while VS Code adds new ways to manage agent sessions and get pull requests merge-ready. GitHub Copilot, general Claude Fable&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31\">GitHub Copilot weekly releases — August 31</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>This week, GitHub Copilot expands model choice and content protections, while VS Code adds new ways to manage agent sessions and get pull requests merge-ready.</p> <h3 id=\"github-copilot-general\" id=\"github-copilot-general\" ><a class=\"heading-link\" href=\"#github-copilot-general\">GitHub Copilot, general<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h3> <ul> <li>Claude Fable 5.1 is available to Copilot Pro+, Max, Business, and Enterprise users.</li> <li>Gemini 3.8 Flash is rolling out to Copilot Pro, Pro+, Max, Business, and Enterprise users.</li> </ul> <p>For more information, see <a href=\"https://docs.github.com/copilot/reference/ai-models/supported-models\">our list of all supported models</a>.</p> <h3 id=\"github-copilot-app-and-copilot-cli\" id=\"g",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
