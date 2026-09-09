@@ -1,0 +1,156 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天高信号内容主要集中在 GitHub 企业级 AI 编码治理与本地/隔离环境接入，而不是通用模型发布新闻。",
+    "最值得关注的是两个方向：其一，GHES 3.22 让 Copilot CLI 更可进入断网或气隙企业；其二，JetBrains 中的企业托管沙箱把 AI 编码代理的执行边界前移到 IDE 侧。",
+    "这说明 AI coding 正从“能不能用”转向“如何在企业策略、仓库治理、网络边界和开发者工作流中可控落地”。"
+  ],
+  "executive_summary_en": [
+    "Today’s highest-signal items are about enterprise control planes for AI coding, not generic model-release news.",
+    "The two key developments are: GHES 3.22 extending Copilot CLI into disconnected or air-gapped enterprise setups, and enterprise-managed sandboxing for Copilot in JetBrains.",
+    "The broader shift is from 'can we use AI coding?' to 'how do we govern execution boundaries, identity, repo access, and workflow integration at enterprise scale?'"
+  ],
+  "items": [
+    {
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-08",
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/",
+      "summary_zh": "GitHub 为 JetBrains 中的 Copilot 引入企业托管沙箱策略，可集中控制沙箱启用、文件系统与网络访问、代理设置、开发工具访问、macOS Keychain 访问等；同时加入跨文件 next edit suggestions、聊天中的全局项目上下文、企业策略诊断，以及终端 Copilot CLI 与 JetBrains IDE 会话联动。",
+      "summary_en": "GitHub added enterprise-managed sandbox policies for Copilot in JetBrains, enabling centralized control over sandbox enablement, filesystem and network access, proxy settings, developer-tool access, macOS Keychain access, and more. The update also adds cross-file next-edit cursor jumps, global project context in chat, enterprise policy diagnostics, and tighter linkage between terminal Copilot CLI sessions and JetBrains IDE sessions.",
+      "why_it_matters_zh": "这是 AI coding agent 从“建议生成”走向“受控执行环境”的重要信号。对于平台团队而言，真正的门槛不只是模型质量，而是能否把代理行为约束在企业允许的权限、网络和工具边界内。IDE 侧的集中式沙箱策略，意味着企业终于可以把代理执行安全策略与开发者体验统一起来。",
+      "why_it_matters_en": "This is a meaningful step from AI coding as 'suggestion generation' toward AI coding as 'governed execution.' For platform teams, the hard problem is not only model quality but constraining agent behavior within enterprise-approved filesystem, network, identity, and tool boundaries. Centralized IDE-side sandboxing makes that governance operational.",
+      "key_takeaways_zh": [
+        "企业可在 JetBrains 中集中下发 Copilot 沙箱策略，并覆盖用户本地设置。",
+        "更新不仅是安全控制，还强化了跨文件编辑、项目级上下文和 IDE/CLI 联动，说明 GitHub 正把 Copilot 做成持续会话式代理工作流。"
+      ],
+      "key_takeaways_en": [
+        "Enterprises can centrally enforce Copilot sandbox policy in JetBrains and override local user settings.",
+        "This is not only a security feature; it also strengthens cross-file editing, project-wide context, and IDE/CLI continuity, pointing to a more persistent agent workflow."
+      ],
+      "tags": [
+        "copilot",
+        "jetbrains",
+        "sandbox",
+        "enterprise-governance",
+        "developer-tooling",
+        "agent-runtime"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Enterprise Server 3.22 is now generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-08",
+      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available/",
+      "summary_zh": "GHES 3.22 正式发布，其中最关键的 AI coding 相关能力是：管理员可配置 Copilot CLI 与 GHES 配合使用，面向断网或气隙环境统一设置模型提供方，并让终端用户使用 GHES 凭证访问；此外企业级 teams 正式 GA，secret scanning 审批请求可按日期排序，rulesets 也支持按单个用户做 bypass。",
+      "summary_en": "GHES 3.22 is now GA. The most important AI-coding-related capability is that admins can configure Copilot CLI to work with GHES in disconnected or air-gapped environments, set up a model provider once, and let users access it with GHES credentials. The release also GA’s enterprise teams, improves secret-scanning review workflows, and adds per-user bypass support in rulesets.",
+      "why_it_matters_zh": "对很多大型金融、政企、基础设施团队来说，AI coding 的采用瓶颈不是 IDE 插件，而是身份、模型接入、仓库驻留和网络隔离。GHES 3.22 说明 GitHub 正在把 Copilot CLI 带入自托管控制面，这对受监管环境中的组织采用非常关键。",
+      "why_it_matters_en": "For many large regulated organizations, the bottleneck for AI coding adoption is not the IDE plugin but identity, model connectivity, repo residency, and network isolation. GHES 3.22 shows GitHub moving Copilot CLI into the self-hosted enterprise control plane, which is critical for adoption in regulated environments.",
+      "key_takeaways_zh": [
+        "Copilot CLI 开始支持 GHES 场景下的统一模型提供方配置和企业身份接入，尤其面向断网/气隙环境。",
+        "企业团队管理、规则绕过粒度、secret scanning 审批排序等配套治理能力同步增强，表明 AI coding 采用与仓库治理正在合流。"
+      ],
+      "key_takeaways_en": [
+        "Copilot CLI is gaining a path into GHES-managed enterprise environments, especially disconnected or air-gapped setups.",
+        "Adjacent governance features—enterprise teams, finer ruleset bypasses, and better secret-scanning review—show AI coding adoption converging with repository governance."
+      ],
+      "tags": [
+        "ghes",
+        "copilot-cli",
+        "air-gapped",
+        "enterprise-adoption",
+        "repo-governance",
+        "security"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-08",
+      "url": "https://github.blog/changelog/",
+      "summary_zh": "GitHub Changelog 首页本身不是单篇深度文章，但从 9 月初条目组合可以看出几个值得跟踪的趋势：Copilot 模型层持续扩容、企业默认模型可被统一管理、JetBrains 与 CLI 会话逐步打通，以及面向企业环境的治理开关持续增多。",
+      "summary_en": "The GitHub Changelog index is not a deep technical article by itself, but the early-September entries reveal important patterns: continued expansion of Copilot model options, centrally managed default models for enterprises, increasing continuity between JetBrains and CLI sessions, and a growing number of enterprise governance controls.",
+      "why_it_matters_zh": "对于工程负责人，单一发布不如路线图信号重要。GitHub 的近期节奏表明，竞争焦点已从“哪个模型更强”转向“多模型编排 + 企业策略治理 + 跨工具连续工作流”。",
+      "why_it_matters_en": "For engineering leaders, roadmap signals can matter more than any single release. GitHub’s recent cadence suggests the competitive frontier is shifting from 'which model is best' to 'multi-model orchestration + enterprise policy control + cross-tool workflow continuity.'",
+      "key_takeaways_zh": [
+        "应把 GitHub 的 Copilot 更新看成控制面和执行面的逐步完善，而非零散功能堆叠。",
+        "企业默认模型管理、沙箱策略、CLI/IDE 联动是值得建立内部评估清单的三个重点。"
+      ],
+      "key_takeaways_en": [
+        "Treat recent Copilot updates as progressive build-out of a control plane and execution plane, not isolated features.",
+        "Enterprise default-model management, sandbox policy, and CLI/IDE continuity are the three themes worth adding to internal evaluation checklists."
+      ],
+      "tags": [
+        "roadmap-signal",
+        "copilot",
+        "enterprise-platform",
+        "multi-model",
+        "developer-workflow"
+      ],
+      "signal_score": 6,
+      "novelty_score": 5,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "Enterprise-managed sandbox in Copilot for JetBrains",
+    "GitHub Enterprise Server 3.22 is now generally available",
+    "GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "企业托管沙箱策略",
+    "气隙环境 Copilot CLI 接入",
+    "跨文件 next edit suggestions",
+    "IDE 与 CLI 会话联动"
+  ],
+  "new_terms_en": [
+    "enterprise-managed sandbox policies",
+    "air-gapped Copilot CLI access",
+    "cross-file next edit suggestions",
+    "IDE/CLI session continuity"
+  ],
+  "themes_zh": [
+    "AI 编码代理的执行边界与企业治理",
+    "断网/自托管环境中的 Copilot 落地",
+    "IDE、终端与项目上下文的一体化工作流"
+  ],
+  "themes_en": [
+    "execution boundaries and enterprise governance for AI coding agents",
+    "Copilot adoption in disconnected and self-hosted environments",
+    "integrated workflows across IDE, terminal, and project context"
+  ],
+  "implications_zh": [
+    "如果你在评估企业级 AI coding，下一阶段不应只看接受率或补全质量，而要审查沙箱、网络边界、凭证继承和审计路径。",
+    "平台团队应把 IDE 插件策略、CLI 访问方式、模型路由和仓库规则集纳入同一治理设计。",
+    "受监管组织现在更接近试点条件成熟，特别是已有 GHES、自托管身份和严格网络分区的企业。"
+  ],
+  "implications_en": [
+    "If you are evaluating enterprise AI coding, the next phase should focus less on acceptance rate alone and more on sandboxing, network boundaries, credential inheritance, and audit paths.",
+    "Platform teams should design IDE policy, CLI access, model routing, and repository rules as one governance system rather than separate decisions.",
+    "Regulated organizations are getting closer to viable pilots, especially those already running GHES, self-hosted identity, and strict network segmentation."
+  ],
+  "reading_order": [
+    "Enterprise-managed sandbox in Copilot for JetBrains",
+    "GitHub Enterprise Server 3.22 is now generally available",
+    "GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "忽略 GitHub Changelog 的归档页和重复索引页，它们不提供新增技术信息。",
+    "忽略新客服门户这类体验型发布；虽有 Copilot 搜索，但对 AI coding agent、评测、治理和工程组织落地的技术价值较低。",
+    "也无需把单纯的模型上架新闻当成核心信号，除非伴随控制面、权限或工作流架构变化。"
+  ],
+  "what_to_ignore_en": [
+    "Ignore the archive and duplicate changelog index pages; they add no new technical information.",
+    "Ignore the new customer portal release; despite Copilot-powered search, it has limited relevance to AI coding agents, evals, governance, or engineering adoption.",
+    "Do not over-index on model-availability announcements unless they come with meaningful changes to control planes, permissions, or workflow architecture."
+  ]
+}
