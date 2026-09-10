@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Archive: September 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/09/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: September 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.09 Improvement CodeQL 2.27.0 adds support for Linux ARM64 application security Sep.09 Improvement Enterprise managed permissions for GitHub Copilot agent operations client apps copilot enterprise management tools ... +2 Sep.09 Improvement GitHub Advanced Security expands trial availability application security Sep.09 Improvement Block pull requests with exposed secrets from merging application security platform governance ... +1 Sep.09 Release Remediate Code Quality findings with agentic autofix application security Sep.08 Release Enterprise-managed sandbox in Copilot for JetBrains copilot enterprise management tools ... +1 Sep.08 Release GitHub Enterprise Server 3.22 is now generally available collaboration tools Sep.08 Release New customer portal help.github.com account management Sep.08 Improvement Automatic Dependabot access to GitHub-hosted registries supply chain security Sep.04 Release GitHub Copilot weekly releases — August 31 copilot Sep.04 Release GPT-6 Astra is generally available in GitHub Copilot copilot Sep.04 Release New API endpoint provides privacy-safe star history data collaboration tools Sep.03 Release Multiple trusted publishing configurations for npm supply chain security Sep.03 Improvement GitHub Actions: Early September 2026 updates actions Sep.03 Retir",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "CodeQL 2.27.0 adds support for Linux ARM64 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "CodeQL 2.27.0 is now available on Linux ARM64, adds a new Rust security query, expanded framework coverage for Java/Kotlin and C#, and analysis accuracy improvements across multiple languages. CodeQL is…",
+    "body_excerpt": "CodeQL 2.27.0 adds support for Linux ARM64 - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement September 9, 2026 • 2 minute read CodeQL 2.27.0 adds support for Linux ARM64 Table of Contents Language and framework support Query changes Menu. Currently selected: Language and framework support Language and framework support Query changes CodeQL 2.27.0 is now available on Linux ARM64, adds a new Rust security query, expanded framework coverage for Java/Kotlin and C#, and analysis accuracy improvements across multiple languages. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find and remediate security issues in your code. Language and framework support CodeQL CLI You can now run CodeQL natively on Linux arm64. Download the CodeQL CLI and CodeQL bundle from the linux-arm64 per-platform release assets . GitHub code scanning default setup can now use your organization’s private registry configurations to authenticate with container registries or the GitHub API when fetching custom queries or packs. This lets you use custom content from private Git sources and Docker registries. C# We’ve improved ASP.NET Core MVC controller and action discovery to more closely match runtime behavior. This improves coverage for application parts, endpoint mappings, inherited actions, as well as controller and action exclusions. We’ve added taint tracking support for OData action parameter binding. This improves detection coverage for vulnerabilities involving values extracted from ODataActionParameters and entities tracked by Delta . In build-mode: none , CodeQL now always attempts to restore projects and solutions using available NuGet feeds. CodeQL also reports explicitly configured feeds that aren’t reachable, making it easier to identify dependencies that ma",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enterprise managed permissions for GitHub Copilot agent operations - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed…",
+    "body_excerpt": "Enterprise managed permissions for GitHub Copilot agent operations - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement September 9, 2026 • 1 minute read Enterprise managed permissions for GitHub Copilot agent operations If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed permissions cover shell commands, file reads and edits, and network domains. This gives you fine-grained guardrails for sensitive operations without disabling agent workflows. Managed restrictions can’t be weakened by user or workspace settings, auto-approval, or previously saved approvals. You can also provide specialized policies for different enterprise teams. These controls are generally available in the GitHub Copilot app, GitHub Copilot CLI, and Visual Studio Code sessions that use Agent Host. Learn more about enterprise managed permissions . Share feedback and implementation questions in the GitHub Community discussion . client apps copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Sep.08 Release Enterprise-managed sandbox in Copilot for JetBrains copilot enterprise management tools ... +1 Sep.04 Release GitHub Copilot weekly releases — August 31 copilot Sep.04 Release GPT-6 Astra is generally available in GitHub Copilot copilot Sep.03 Retired Upcoming deprecation of selected GitHub Copilot models copilot Sep.03 Retired GitHub CLI Linux package signing key expires September 5 client apps Sep.03 Release Gemini 3.8 Flash is now available in GitHub Copilot copilot Sep.03 Release Reopening Copilot Business and Enterprise signups account management copilot ... +1 Sep.02 Improvement Enterprise-managed settings support",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Platform governance Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.09 Improvement Block pull requests with exposed secrets from merging application security platform governance ... +1 August Aug 2026 August Aug 2026 Aug.25 Improvement Rule insights dashboard generally available platform governance Aug.25 Improvement Push rules in rulesets now support path exceptions platform governance Aug.20 Improvement Track GitHub Code Quality enablement changes in the audit log application security platform governance ... +1 Aug.19 Improvement Track organization code quality trends application security platform governance ... +1 Aug.12 Improvement Rule insights for organizations in public preview platform governance Aug.11 Release Automatically migrate branch protection rules to repository rulesets platform governance July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Advanced Security expands trial availability - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up…",
+    "body_excerpt": "GitHub Advanced Security expands trial availability - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement September 9, 2026 • 1 minute read GitHub Advanced Security expands trial availability More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up to 100 licenses to enterprises with up to 300 licenses. To set up a GitHub Advanced Security trial, go to the Enterprise “Billing and licensing” page. For details, see self-serve GitHub Advanced Security trials . application security Share Copied Shared Back to changelog Related Posts Sep.09 Improvement CodeQL 2.27.0 adds support for Linux ARM64 application security Sep.09 Improvement Block pull requests with exposed secrets from merging application security platform governance ... +1 Sep.09 Release Remediate Code Quality findings with agentic autofix application security Sep.03 Improvement CodeQL 2.26.4 improves GitHub actions security detections application security Aug.20 Release Code scanning adds a mitigated alert dismissal reason application security Aug.20 Improvement Separate GitHub Actions path for GitHub Code Quality actions application security ... +1 Aug.20 Improvement Track GitHub Code Quality enablement changes in the audit log application security platform governance ... +1 Aug.19 Improvement CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling application security Aug.19 Improvement Track organization code quality trends application security platform governance ... +1 Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agr",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体偏弱，主要是 GitHub Changelog 的短更新，缺少深入技术设计、评测方法或原始研究。",
+    "最有信号的两项分别是 Copilot agent 的企业级权限治理，以及 CodeQL 2.27.0 对 Linux ARM64 与多语言分析能力的扩展。",
+    "对后端/平台负责人而言，今天的价值更多在于“可落地治理与基础设施兼容性”，而不是新的 AI coding 范式突破。"
+  ],
+  "executive_summary_en": [
+    "Today’s set is relatively weak overall, dominated by short GitHub Changelog entries rather than deep technical writeups, eval methodology, or original research.",
+    "The two strongest signals are enterprise-managed permissions for Copilot agent operations and CodeQL 2.27.0’s Linux ARM64 plus multi-language analysis improvements.",
+    "For backend/platform leaders, the main value today is practical governance and infrastructure compatibility, not a new breakthrough in AI coding workflows."
+  ],
+  "items": [
+    {
+      "title": "Enterprise managed permissions for GitHub Copilot agent operations - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-09",
+      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/",
+      "summary_zh": "GitHub 为 Copilot Business/Enterprise 提供企业集中式 agent 操作权限控制。管理员可按操作类别定义阻止、需人工审批、或可无提示执行的策略，覆盖 shell 命令、文件读取/修改和网络域访问，并且这些限制不能被用户、本地工作区配置、自动批准或历史批准所削弱。",
+      "summary_en": "GitHub added centrally managed permissions for Copilot Business/Enterprise agent operations. Admins can mark operation classes as blocked, human-approval-required, or allowed without prompting, covering shell commands, file reads/edits, and network domains; these restrictions cannot be weakened by user settings, workspace settings, auto-approval, or prior approvals.",
+      "why_it_matters_zh": "这是企业落地 AI coding agent 的关键控制面。相比单纯“开或关”Copilot，这一能力把治理粒度下沉到具体执行面，说明厂商开始把 agent 当作需要策略编排、审计与职责分离的自动化执行主体，而不仅是代码补全工具。",
+      "why_it_matters_en": "This is a meaningful control-plane step for enterprise adoption of AI coding agents. Rather than treating Copilot as an all-or-nothing assistant, GitHub is exposing policy at the execution layer, signaling that agents are now being managed more like operational automation with guardrails, approvals, and separation of duties.",
+      "key_takeaways_zh": [
+        "权限模型覆盖 shell、文件、网络三类高风险 agent 能力，已接近实际开发执行面的核心边界。",
+        "企业策略优先级高于用户和工作区设置，降低了“本地绕过治理”的风险。"
+      ],
+      "key_takeaways_en": [
+        "The permission model covers three core high-risk agent surfaces: shell, file, and network operations.",
+        "Enterprise policy overrides local/user settings, reducing the chance of governance being bypassed at the workstation level."
+      ],
+      "tags": [
+        "AI coding agents",
+        "governance",
+        "enterprise adoption",
+        "Copilot"
+      ],
+      "signal_score": 9,
+      "novelty_score": 7,
+      "actionability_score": 9
+    },
+    {
+      "title": "CodeQL 2.27.0 adds support for Linux ARM64 - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-09",
+      "url": "https://github.blog/changelog/2026-09-09-codeql-2-27-0-adds-support-for-linux-arm64/",
+      "summary_zh": "CodeQL 2.27.0 新增 Linux ARM64 原生支持，并扩展了 Rust、Java/Kotlin、C# 等语言与框架的检测能力。更新还包括更贴近运行时行为的 ASP.NET Core MVC 控制器/动作发现、OData 参数绑定污点追踪、以及 code scanning 默认配置对私有 registry 凭证的支持。",
+      "summary_en": "CodeQL 2.27.0 adds native Linux ARM64 support and expands detection capabilities across Rust, Java/Kotlin, and C#. It also improves ASP.NET Core MVC controller/action discovery, adds taint tracking for OData parameter binding, and allows code scanning default setup to use private registry configuration for fetching custom queries or packs.",
+      "why_it_matters_zh": "虽然它不是 AI coding agent 新闻，但对平台工程和安全工程是高信号更新：ARM64 原生支持减少了异构 CI 基础设施中的摩擦，而更准确的框架建模与私有查询分发能力，直接影响静态分析在大型企业代码库中的覆盖率与可运营性。",
+      "why_it_matters_en": "While not an AI-agent item, this is still strong signal for platform and security leaders: native ARM64 support lowers friction in heterogeneous CI environments, and improved framework modeling plus private query distribution directly affect static analysis coverage and operability in large enterprises.",
+      "key_takeaways_zh": [
+        "Linux ARM64 原生支持意味着安全扫描工具链开始更完整适配 ARM 构建与运行环境。",
+        "分析精度提升主要来自更贴近真实框架行为的建模，而不只是新增规则数量。"
+      ],
+      "key_takeaways_en": [
+        "Native Linux ARM64 support indicates the security scanning toolchain is catching up with ARM-based build and runtime environments.",
+        "The quality gains come from better runtime-faithful framework modeling, not just adding more rules."
+      ],
+      "tags": [
+        "CodeQL",
+        "static analysis",
+        "security tooling",
+        "ARM64"
+      ],
+      "signal_score": 8,
+      "novelty_score": 6,
+      "actionability_score": 8
+    },
+    {
+      "title": "Archive: September 2026 - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-09",
+      "url": "https://github.blog/2026/09/",
+      "summary_zh": "GitHub 9 月更新归档页汇总了若干与 Copilot、CodeQL、GitHub Advanced Security 和供应链安全相关的短公告，包括 agentic autofix、企业托管沙箱、模型可用性变化等。",
+      "summary_en": "The September GitHub Changelog archive aggregates short updates across Copilot, CodeQL, GitHub Advanced Security, and supply-chain/security features, including agentic autofix, enterprise-managed sandboxing, and model availability changes.",
+      "why_it_matters_zh": "它本身不是一篇高信息密度文章，但作为导航入口有助于快速发现后续值得深挖的技术更新，尤其适合负责工具链治理的人做周度巡检。",
+      "why_it_matters_en": "It is not high-density on its own, but it is a useful discovery hub for identifying which GitHub changes merit deeper follow-up, especially for leaders who run weekly tooling/governance reviews.",
+      "key_takeaways_zh": [
+        "作为索引页，它适合作为后续筛选技术信号的入口，而不是最终阅读对象。",
+        "从条目分布看，GitHub 正持续把 Copilot 从个人助手推进到企业治理化平台。"
+      ],
+      "key_takeaways_en": [
+        "As an index, it is better used for triage than as a primary reading target.",
+        "The item mix suggests GitHub is continuing to evolve Copilot from personal assistant toward an enterprise-governed platform."
+      ],
+      "tags": [
+        "GitHub",
+        "changelog",
+        "tooling radar",
+        "borderline"
+      ],
+      "signal_score": 5,
+      "novelty_score": 3,
+      "actionability_score": 4
+    }
+  ],
+  "top_items": [
+    "Enterprise managed permissions for GitHub Copilot agent operations - GitHub Changelog",
+    "CodeQL 2.27.0 adds support for Linux ARM64 - GitHub Changelog",
+    "Archive: September 2026 - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "企业托管 agent 权限",
+    "Agent Host",
+    "Linux ARM64 原生 CodeQL",
+    "OData 参数绑定污点追踪"
+  ],
+  "new_terms_en": [
+    "enterprise-managed agent permissions",
+    "Agent Host",
+    "native Linux ARM64 CodeQL",
+    "OData parameter-binding taint tracking"
+  ],
+  "themes_zh": [
+    "AI coding agent 的企业治理正在细化到执行权限层",
+    "开发安全工具链在适配 ARM 与私有依赖生态",
+    "平台团队需要同时管理 agent 能力与静态分析覆盖"
+  ],
+  "themes_en": [
+    "Enterprise governance for AI coding agents is moving down to execution-level permissions",
+    "Developer security toolchains are adapting to ARM and private dependency ecosystems",
+    "Platform teams increasingly need to manage both agent capability boundaries and static-analysis coverage"
+  ],
+  "implications_zh": [
+    "如果你正在试点 AI coding agent，应尽快设计按团队/仓库分层的 shell、文件、网络权限基线。",
+    "如果 CI/runner 正在向 ARM 迁移，需要检查安全扫描、定制查询包和私有 registry 认证链路是否已兼容。",
+    "对大型组织而言，真正的 adoption 门槛正从模型质量转向治理、合规和工具链可操作性。"
+  ],
+  "implications_en": [
+    "If you are piloting AI coding agents, you should define team/repo-tiered baselines for shell, file, and network permissions soon.",
+    "If your CI/runners are moving toward ARM, verify that scanning, custom query packs, and private registry authentication paths are fully compatible.",
+    "For large organizations, the real adoption bottleneck is shifting from model quality to governance, compliance, and toolchain operability."
+  ],
+  "reading_order": [
+    "Enterprise managed permissions for GitHub Copilot agent operations - GitHub Changelog",
+    "CodeQL 2.27.0 adds support for Linux ARM64 - GitHub Changelog",
+    "Archive: September 2026 - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Advanced Security trial 扩容只是销售/试用范围变化，技术含量有限。",
+    "泛化的 GitHub Changelog 首页与年度归档页不要当成核心阅读对象，只应作为索引。",
+    "没有深入设计细节的模型上架或可用性公告，今天不值得进入主 digest。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Advanced Security trial expansion is mostly a packaging/availability change with limited technical depth.",
+    "Generic GitHub Changelog home/archive pages should not be treated as primary reads; use them only as indexes.",
+    "Model availability announcements without architecture, eval, or workflow detail are not worth the main digest today."
+  ]
+}
