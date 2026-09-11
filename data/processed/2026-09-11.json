@@ -1,0 +1,111 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号较弱，主要是产品界面更新与模型下线通知，缺少关于 AI 编码代理、评测、harness 设计、MCP 或仓库理解的原创技术细节。",
+    "唯一相对值得关注的是 GitHub Copilot 中 MAI-Code-1-Flash 的弃用公告，因为它直接影响企业模型策略、集成兼容性与代理工作流的可用模型选择。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak overall: mostly UI refresh and model lifecycle notices, with little original technical depth on coding agents, evals, harness design, MCP, or repo understanding.",
+    "The only borderline-relevant item is the deprecation of MAI-Code-1-Flash in GitHub Copilot, because it has direct implications for enterprise model policy, integration compatibility, and agent workflow model selection."
+  ],
+  "items": [
+    {
+      "title": "MAI-Code-1-Flash deprecated - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-10",
+      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated/",
+      "summary_zh": "GitHub 宣布自 2026-09-10 起，在所有 GitHub Copilot 体验中弃用 MAI-Code-1-Flash，包括 Chat、inline edits、ask/agent modes 和代码补全，建议迁移到 MAI-Code-1.1-Flash。企业管理员可能需要在 Copilot 模型策略中显式启用替代模型。",
+      "summary_en": "GitHub deprecated MAI-Code-1-Flash across all GitHub Copilot surfaces on 2026-09-10, including Chat, inline edits, ask/agent modes, and code completions, with MAI-Code-1.1-Flash as the suggested replacement. Enterprise admins may need to explicitly enable the replacement model in Copilot model policies.",
+      "why_it_matters_zh": "这不是技术深文，但对已经把 Copilot 接入开发流程、编辑器与代理模式的团队是实际运维事件：模型切换会影响提示词稳定性、输出风格、性能预算、回归基线以及企业策略配置。",
+      "why_it_matters_en": "This is not a deep technical post, but it is an operationally relevant event for teams that have embedded Copilot into dev workflows, editors, and agent modes: a model swap can affect prompt stability, output behavior, latency/cost expectations, regression baselines, and enterprise policy setup.",
+      "key_takeaways_zh": [
+        "所有 Copilot 入口统一弃用同一模型，说明模型生命周期管理已成为平台能力而非单点功能更新。",
+        "企业团队应把“模型下线/替换”纳入 AI 开发工具治理流程，包括策略开关、回归测试与用户沟通。"
+      ],
+      "key_takeaways_en": [
+        "A single model is being retired across all Copilot surfaces, reinforcing that model lifecycle management is now a platform-wide concern rather than a feature-specific change.",
+        "Enterprise teams should treat model retirement/replacement as part of AI tooling governance, including policy toggles, regression checks, and end-user communication."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "model lifecycle",
+        "enterprise policy",
+        "agent mode"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 7
+    },
+    {
+      "title": "Refreshed repository pull requests page in public preview - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-10",
+      "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview/",
+      "summary_zh": "GitHub 公测新的仓库级 Pull Requests 列表页，新增内容辅助过滤、支持 AND/OR 与嵌套查询的高级搜索、折叠侧边栏、紧凑模式，以及状态检查数、stack 指示器和未读更新提示。",
+      "summary_en": "GitHub launched a public preview of a refreshed repository-level pull request listing page with content-assist filters, advanced search supporting AND/OR and nested queries, a collapsible sidebar, compact mode, and more context such as check counts, stack indicators, and unread update markers.",
+      "why_it_matters_zh": "对大型仓库和平台团队来说，PR 收敛效率会影响人机协作吞吐量；但这更偏 UI/工作流改进，而非 AI 编码或代理系统的技术突破。",
+      "why_it_matters_en": "For large repos and platform teams, PR triage efficiency affects human+AI throughput; however, this is primarily a workflow/UI improvement rather than a substantive advance in AI coding or agent systems.",
+      "key_takeaways_zh": [
+        "GitHub 正在强化复杂 PR 队列的筛选与信息密度能力，适合高并发审查场景。",
+        "如果团队依赖 stacked PR 或大量自动化变更，这个页面可能改善 reviewer 的操作效率。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is improving filtering and information density for complex PR queues, which helps high-volume review environments.",
+        "Teams relying on stacked PRs or many automated changes may see reviewer efficiency gains from the new page."
+      ],
+      "tags": [
+        "GitHub",
+        "pull requests",
+        "developer workflow",
+        "code review"
+      ],
+      "signal_score": 3,
+      "novelty_score": 3,
+      "actionability_score": 4
+    }
+  ],
+  "top_items": [
+    "MAI-Code-1-Flash deprecated - GitHub Changelog",
+    "Refreshed repository pull requests page in public preview - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "模型策略（model policies）",
+    "agent modes",
+    "stack 指示器"
+  ],
+  "new_terms_en": [
+    "model policies",
+    "agent modes",
+    "stack indicator"
+  ],
+  "themes_zh": [
+    "AI 编码平台的模型生命周期治理",
+    "代码审查工作流的人机协作效率"
+  ],
+  "themes_en": [
+    "Model lifecycle governance in AI coding platforms",
+    "Human-plus-tool efficiency in code review workflows"
+  ],
+  "implications_zh": [
+    "工程效能团队需要把 AI 模型版本漂移视为一类生产变更，建立回归验证和策略发布流程。",
+    "对真正高信号的 AI 编码观察，应继续关注评测基准、代理 harness、仓库理解与 MCP 生态，而不是仅看产品界面更新。"
+  ],
+  "implications_en": [
+    "Developer productivity teams should treat AI model version drift as a production change category, with regression validation and policy rollout procedures.",
+    "For genuinely high-signal AI coding intelligence, keep prioritizing evals, agent harnesses, repo understanding, and MCP ecosystem developments rather than product UI refreshes."
+  ],
+  "reading_order": [
+    "MAI-Code-1-Flash deprecated - GitHub Changelog",
+    "Refreshed repository pull requests page in public preview - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 年度索引页本身不是单条新闻，不应纳入摘要。",
+    "单纯的界面焕新或目录页更新，如果缺少技术机制、测量数据或组织采用细节，应降低优先级。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog yearly index page is not a standalone news item and should be ignored.",
+    "Pure UI refreshes or index-style posts without technical mechanism, measurement data, or adoption detail should be deprioritized."
+  ]
+}

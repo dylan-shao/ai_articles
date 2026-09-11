@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Refreshed repository pull requests page in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-10T00:00:00+00:00",
+    "author": null,
+    "excerpt": "A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes…",
+    "body_excerpt": "Refreshed repository pull requests page in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 10, 2026 • 1 minute read Refreshed repository pull requests page in public preview Table of Contents Highlights Known limitations We want to hear from you Menu. Currently selected: Highlights Highlights Known limitations We want to hear from you A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes it easier to find and act on pull requests in a repository, with new filtering and search options to help you find exactly what you’re looking for: Content assist helps you easily find and apply the correct filters. Advanced search supports AND and OR keywords as well as nested searches. Collapsible sidebar gives you quick access to common filters (e.g., “Authored by me” and “Involves me”). Compact presentation mode lets you fit more pull requests on the page. More context including status check counts, stack indicator, and indicators for unread updates. Known limitations There are some known issues and feature gaps we are working to address: Milestones currently not shown Bulk updates currently not available Emojis in labels do not always appear Saving custom views not currently supported We want to hear from you Your feedback helps us improve the experience during the public preview. Click the Preview badge at the top of the page, then select Give feedback to let us know what you think and how we can improve the experience. If you need to return to the classic experience, click the Preview badge at the top of page, and choose the Switch back option. Table of Contents Highlights Known limitations We want to hear from yo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-10T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.10 Improvement Control GitHub Actions cache access with cache-mode actions application security supply chain security ... +2 Sep.09 Improvement npm extends recovery-code security holds to all accounts supply chain security Sep.08 Improvement Automatic Dependabot access to GitHub-hosted registries supply chain security Sep.03 Release Multiple trusted publishing configurations for npm supply chain security August Aug 2026 August Aug 2026 Aug.13 Improvement License data quality improvements supply chain security Aug.04 Improvement Customize Dependabot pull request branch names supply chain security July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Securit",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "MAI-Code-1-Flash deprecated - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-10T00:00:00+00:00",
+    "author": null,
+    "excerpt": "We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alternative…",
+    "body_excerpt": "MAI-Code-1-Flash deprecated - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Retired September 10, 2026 • 1 minute read MAI-Code-1-Flash deprecated We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alternative MAI-Code-1-Flash 2026-09-10 MAI-Code-1.1-Flash Please update your workflows and integrations to use a supported model. Copilot Enterprise administrators may need to enable access to the alternative model through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the deprecated model. GitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance. Share your feedback To learn more about the models available in Copilot, see our documentation on models and get started with Copilot today. Join the GitHub Community Discussion to share your feedback. copilot Share Copied Shared Back to changelog Related Posts Sep.09 Improvement Enterprise managed permissions for GitHub Copilot agent operations client apps copilot enterprise management tools ... +2 Sep.08 Release Enterprise-managed sandbox in Copilot for JetBrains copilot enterprise management tools ... +1 Sep.04 Release GitHub Copilot weekly releases — August 31 copilot Sep.04 Release GPT-6 Astra is generally available in GitHub Copilot copilot Sep.03 Retired Upcoming deprecation of selected GitHub Copilot models copilot S",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
