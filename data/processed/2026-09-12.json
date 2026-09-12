@@ -1,0 +1,86 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容信号很弱，唯一条目是 GitHub Changelog 聚合页，而不是单篇具有明确技术细节的原始文章。",
+    "其中可见的高相关信息仅限于 Copilot 使用度量扩展，例如 VS Code Agents 进入使用指标、usage metrics API 增加 agent app activity、以及按模型的 token 拆分。",
+    "这些更新对平台治理、成本归因与组织级 AI 编码采用有一定操作价值，但不足以支撑完整日报。"
+  ],
+  "executive_summary_en": [
+    "Today’s candidate set is weak: the only item is the GitHub Changelog index rather than a specific primary technical post with clear implementation detail.",
+    "The most relevant signals are Copilot-related measurement updates: VS Code Agents appearing in usage metrics, agent app activity added to the usage metrics API, and per-model token breakdowns.",
+    "These updates matter for platform governance, cost attribution, and organizational AI-coding adoption, but they are not strong enough to justify a full digest."
+  ],
+  "items": [
+    {
+      "title": "GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-11",
+      "url": "https://github.blog/changelog/",
+      "summary_zh": "这是 GitHub 的变更聚合页，不是单篇深度技术文章。与 AI 编码较相关的近期条目包括：将 VS Code Agents 纳入 Copilot 使用指标、Copilot usage metrics API 新增 agent app activity，以及 usage report 提供按模型划分的 token 明细。",
+      "summary_en": "This is GitHub’s changelog index rather than a single deep technical article. The most relevant recent entries for AI coding are: adding VS Code Agents to Copilot usage metrics, adding agent app activity to the Copilot usage metrics API, and exposing per-model token breakdowns in usage reporting.",
+      "why_it_matters_zh": "对工程平台负责人而言，真正有价值的信号不在“功能发布”本身，而在 GitHub 正在把 AI 编码代理纳入企业级可观测与治理面板：组织开始需要区分人工 Copilot 交互、代理式活动、以及不同模型带来的成本和产出。",
+      "why_it_matters_en": "For engineering platform leaders, the real signal is not the feature launch itself but GitHub’s move to fold AI coding agents into enterprise observability and governance. Organizations increasingly need to distinguish human Copilot usage, agent-driven activity, and model-specific cost/output profiles.",
+      "key_takeaways_zh": [
+        "AI 编码代理正在从“个人效率工具”进入“企业治理对象”，度量面会覆盖代理活动而不只是聊天或补全。",
+        "按模型 token 拆分意味着后续可做更精细的成本归因、模型路由评估和 ROI 分析。"
+      ],
+      "key_takeaways_en": [
+        "AI coding agents are becoming a first-class enterprise governance object, with measurement extending beyond chat/completions to agent activity.",
+        "Per-model token breakdown enables finer-grained cost attribution, model-routing evaluation, and ROI analysis."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Usage Metrics",
+        "AI Coding Agents",
+        "Developer Tooling",
+        "Governance"
+      ],
+      "signal_score": 4,
+      "novelty_score": 4,
+      "actionability_score": 6
+    }
+  ],
+  "top_items": [
+    "GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "agent app activity",
+    "per-model token breakdown",
+    "VS Code Agents usage metrics"
+  ],
+  "new_terms_en": [
+    "agent app activity",
+    "per-model token breakdown",
+    "VS Code Agents usage metrics"
+  ],
+  "themes_zh": [
+    "AI 编码代理的企业级可观测性",
+    "模型级成本归因与治理",
+    "组织采用中的度量基础设施"
+  ],
+  "themes_en": [
+    "Enterprise observability for AI coding agents",
+    "Model-level cost attribution and governance",
+    "Measurement infrastructure for organizational adoption"
+  ],
+  "implications_zh": [
+    "如果你在内部推广 AI 编码工具，应尽快检查是否能区分用户交互、代理任务和模型消耗，否则很难做准确 ROI 评估。",
+    "平台团队可以开始设计统一的 AI 使用遥测层，把 IDE、代码代理和仓库自动化纳入同一报表口径。"
+  ],
+  "implications_en": [
+    "If you are rolling out AI coding tools internally, you should verify whether you can separate user interaction, agent tasks, and model consumption; otherwise ROI analysis will remain noisy.",
+    "Platform teams can start designing a unified AI telemetry layer that puts IDE usage, coding agents, and repo automation under one reporting model."
+  ],
+  "reading_order": [
+    "GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "不要把这个聚合页当作单篇高信号技术文章；它缺少实现细节、评测方法或架构说明。",
+    "与账单、门户、报名开放等偏行政/商业更新相关的条目可忽略，除非你正负责企业采购或治理报表。"
+  ],
+  "what_to_ignore_en": [
+    "Do not treat this index page as a high-signal technical article; it lacks implementation detail, evaluation methodology, or architectural insight.",
+    "Ignore billing, portal, and signup-related entries unless you specifically own enterprise procurement or governance reporting."
+  ]
+}
