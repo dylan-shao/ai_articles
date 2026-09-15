@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Introducing Agentic Batch Changes: the frontier agent for code change at scale | Sourcegraph",
+    "source": "Sourcegraph Blog",
+    "url": "https://sourcegraph.com/blog/introducing-agentic-batch-changes",
+    "landing_url": "https://sourcegraph.com/blog",
+    "priority": 1,
+    "publish_date": "2026-09-14T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Codebase-wide changes across hundreds or thousands of repositories can now be run by one engineer.",
+    "body_excerpt": "Introducing Agentic Batch Changes: the frontier agent for code change at scale | Sourcegraph Blog Changelog $ inbox subscribe --ai Subscribe for AI news & product updates Documentation About Sourcegraph Search blog Ctrl+K BLOG Introducing Agentic Batch Changes: the frontier agent for code change at scale September 14, 2026 Lauren Preston Introducing Agentic Batch Changes: the frontier agent for code change at scale Codebase-wide changes across hundreds or thousands of repositories can now be run by one engineer. Every large codebase has a list. The .NET upgrade that touches ten thousand repositories. The deprecated API that a dozen services still call. The CI config that was standardized years ago and has drifted in every direction since. Each one is manageable in a single repository. Across the whole codebase, the repositories are rarely identical, so the fix that works in one place breaks in the next, and there is no cost-effective way to roll the change out exhaustively. The list grows, and the bigger the change, the less anyone can vouch that it reached everywhere it needed to. One migration turns into hundreds of pull requests, and you still can't confidently say whether the work is done. We have been working on this problem for years. Batch Changes, our engine for coordinated change across a codebase, already runs these rollouts for some of the largest engineering organizations in the world. You program the change, it opens pull requests everywhere the change applies, and then tracks them until they merge. Customers have merged hundreds of thousands of changesets this way, tens of millions of lines of code. The largest single Batch Change we have seen merged more than 2,200 changesets from one change. The pressure is different now, and only getting worse. Coding agents write code faster than any team can read it. Nobody holds the whole codebase in their head anymore, so every change is a bet. The same agents that make one repository easy to change have made th",
+    "keyword_hits": 3,
+    "youtube_url": "https://www.youtube.com/watch?v=kY0_rRtJ8BM",
+    "youtube_video_id": "kY0_rRtJ8BM"
+  },
+  {
+    "title": "Configure cost and quality in Copilot auto model selection - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-14T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for…",
+    "body_excerpt": "Configure cost and quality in Copilot auto model selection - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 14, 2026 • 1 minute read Configure cost and quality in Copilot auto model selection GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for each prompt. Copilot will then optimize accordingly. Efficiency prioritizes keeping costs low and suits fast, straightforward tasks. Balance weighs cost, quality, and latency together, and is a good fit for everyday work. Intelligence prioritizes quality and is built for complex tasks. All three tiers use the same set of available models. Auto individually evaluates each prompt to select a best-suited model. For example, a simple task like adding a docstring to an existing function may use a small, efficient model even when auto is optimizing for intelligence. This feature is currently rolling out in Visual Studio Code, Copilot CLI, and GitHub Copilot app. Usage is charged based on the model auto selects, regardless of tier. Paid subscribers continue to receive a 10% discount on usage billed through auto. This is the first step in our journey toward letting you customize how model selection works for you, with more visibility into the tradeoffs you’re making. Learn more about Copilot Auto model selection , along with the updated selection of models available . copilot Share Copied Shared Back to changelog Related Posts Sep.11 Improvement Add VS Code Agents to Copilot usage metrics account management copilot enterprise management tools ... +2 Sep.11 Improvement Auto-resolution and analysis updates in Copilot code review copilot Sep.10 Release GitHub Copilot weekly releases — September ",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
