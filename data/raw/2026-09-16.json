@@ -1,0 +1,30 @@
+[
+  {
+    "title": "GitHub Copilot suggests custom properties definitions - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot…",
+    "body_excerpt": "GitHub Copilot suggests custom properties definitions - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 15, 2026 • 1 minute read GitHub Copilot suggests custom properties definitions GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot Enterprise plans. Custom properties let enterprise and organization admins attach governance metadata to repositories, which you can then use to target repositories with rulesets. Custom properties are one of the most popular ways to scope rulesets, but getting started has been a challenge. Admins often aren’t sure which properties to define or what allowed values to use, and inconsistent metadata makes it harder to apply governance consistently across a large fleet of repositories. With this release, when you create a new custom property definition at the enterprise or organization level, Copilot will suggest relevant allowed values based on the property you’re defining. For example: Creating a multi-select property like FedRAMP surfaces suggested compliance-related values. Creating a single-select property like internet-facing surfaces suggested values such as yes and no . You can accept a suggestion in one click, helping you stand up a meaningful custom property taxonomy faster. Enterprise and organization owners can now configure the Repository custom property suggestions Copilot policy to control feature availability. Learn more in our docs about managing custom properties for repositories in your organization . copilot platform governance Share Copied Shared Back to changelog Related Posts Sep.14 Release Configure cost and quality in Copilot auto model selection copilot Sep.11 Improvement",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-15T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Ecosystem & accessibility Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘25 Clear all Apply September Sep 2026 September Sep 2026 Sep.15 Retired SHA-1 in HTTPS on GitHub sunset ecosystem & accessibility August Aug 2026 August Aug 2026 Aug.26 Release GitHub Apps can now access enterprise billing data account management ecosystem & accessibility enterprise management tools ... +2 Aug.07 Improvement Enterprises can now install third-party GitHub Apps ecosystem & accessibility enterprise management tools ... +1 Aug.04 Retired Upcoming deprecation of GitHub Spark on github.com copilot ecosystem & accessibility ... +1 July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Supp",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
