@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Refreshed repository pull requests page generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a…",
+    "body_excerpt": "Refreshed repository pull requests page generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 21, 2026 • 1 minute read Refreshed repository pull requests page generally available Table of Contents Highlights Recent improvements Menu. Currently selected: Highlights Highlights Recent improvements The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a repository, with new filtering and search options to help you find exactly what you’re looking for: Content assist helps you easily find and apply the correct filters. Advanced search supports AND and OR keywords as well as nested searches. Collapsible sidebar gives you quick access to common filters (e.g., “Authored by me” and “Involves me”). Compact presentation mode lets you fit more pull requests on the page. More context including status check counts, stack indicator, and indicators for unread updates. Recent improvements Since the public preview, your feedback has helped us make several improvements. Now you can: Collapse the sidebar to make more room for the list. Take bulk actions on one or more pull requests, including closing, labeling, changing milestones, and more. See milestones, linked issues, and author badges. Click a review status to filter the list. See full profile names if they’re enabled for your enterprise. To learn more, see About pull requests . Table of Contents Highlights Recent improvements Menu. Currently selected: Highlights Highlights Recent improvements collaboration tools Share Copied Shared Back to changelog Related Posts Sep.10 Release Refreshed repository pull requests page in public preview collaboration tools Sep.08 Release GitHub Enterprise Server 3.22 is now",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Grok 4.7 is now available in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-21T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Grok 4.7, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. Building on Grok 4.6, it is designed for agentic coding and complex, multistep workflows. This model is…",
+    "body_excerpt": "Grok 4.7 is now available in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release September 21, 2026 • 1 minute read Grok 4.7 is now available in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Learn more Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more Grok 4.7, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. Building on Grok 4.6, it is designed for agentic coding and complex, multistep workflows. This model is billed at provider list pricing under usage-based billing. See Models and pricing for GitHub Copilot for details. Availability in GitHub Copilot Grok 4.7 will be available to Copilot Pro, Pro+, Max, Business, and Enterprise SKUs. You’ll be able to select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot cloud agent GitHub Copilot app JetBrains Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators can manage access to Grok 4.7 through the model policy in Copilot settings. Under default model enablement, new models are automatically enabled unless an administrator has turned off the global default or explicitly disables this model. Learn more To explore all models available in GitHub Copilot, see our documentation on models and get started with Copilot. Table of Contents Availability in GitHub Copilot Enabling access Learn more Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more copilot Share Copied Shared Back to changelog Related Posts Sep.18 Improvement Copilot code review: An improved review experience copilot Sep.18 Release GitHu",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
