@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Enterprise managed settings in-product validator - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-25T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent…",
+    "body_excerpt": "Enterprise managed settings in-product validator - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement September 25, 2026 • 1 minute read Enterprise managed settings in-product validator You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent policies from being enforced. Review and correct errors in the “Copilot settings validation” section of the enterprise AI controls page. Each issue identifies the affected file and JSON path, helping you make corrections to ensure that policies are enforced as intended. Validation covers: copilot/managed-settings.json copilot/team-mappings.json and any team settings files referenced by the team mappings file After correcting an issue, commit the change to the default branch of your .github-private repository, reload the Agents page, and review the validator results to confirm that your configuration is valid. To learn more, see our documentation on enterprise managed client settings . copilot enterprise management tools Share Copied Shared Back to changelog Related Posts Sep.25 Improvement Usage metrics API adds pull request review stages account management copilot enterprise management tools ... +2 Sep.25 Improvement Agentic autofix now uses Copilot Memory application security copilot ... +1 Sep.25 Release GitHub Copilot weekly releases — September 21 copilot Sep.25 Improvement Updates to GitHub Copilot for Slack and Microsoft Teams collaboration tools copilot ... +1 Sep.24 Improvement Default Enablement of Copilot features for Copilot Business and Enterprise copilot enterprise management tools ... +1 Sep.24 Release Require proof of presence for high-impact actions account mana",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-09-25T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply September Sep 2026 September Sep 2026 Sep.25 Improvement Updates to GitHub Copilot for Slack and Microsoft Teams collaboration tools copilot ... +1 Sep.21 Release Refreshed repository pull requests page generally available collaboration tools Sep.10 Release Refreshed repository pull requests page in public preview collaboration tools Sep.08 Release GitHub Enterprise Server 3.22 is now generally available collaboration tools Sep.04 Release New API endpoint provides privacy-safe star history data collaboration tools Sep.01 Improvement Block users from discussion comments in personal repositories collaboration tools August Aug 2026 August Aug 2026 Aug.27 Improvement Close all open contributions authored by a blocked user collaboration tools Aug.25 Improvement Block users directly from security advisories collaboration tools Aug.21 Improvement Better tools for managing blocked users collaboration tools Aug.21 Release The new GitHub Copilot experience in Slack collaboration tools copilot ... +1 Aug.21 Release Shared agentic work with GitHub Copilot in Microsoft Teams collaboration tools copilot ... +1 Aug.13 Improvement Block users from comments in personal repositories collaboration tools Aug.11 Release GitHub Enterprise Server 3.22 release candidate collaboration tools Aug.10 Retired Custom thread subscriptions are being deprecated collabo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]

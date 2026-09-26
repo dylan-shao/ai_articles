@@ -1,0 +1,79 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选源非常弱，只有一条与 AI 编码治理相关且具备一定实操价值的 GitHub Copilot 企业配置校验更新。",
+    "该更新的价值主要在于企业级 AI 工具落地中的配置正确性与策略可执行性，而非模型、评测、代理能力或开发者工作流本身的突破。"
+  ],
+  "executive_summary_en": [
+    "Today is a weak signal day: only one item has some practical relevance to AI coding governance, a GitHub Copilot enterprise settings validator update.",
+    "Its value is operational rather than foundational: it improves configuration correctness and policy enforcement for enterprise AI rollout, but does not advance agents, evals, harnesses, MCP, or developer workflows directly."
+  ],
+  "items": [
+    {
+      "title": "Enterprise managed settings in-product validator - GitHub Changelog",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-09-25",
+      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/",
+      "summary_zh": "GitHub 为 Copilot 企业托管设置增加了产品内校验器，可检查 malformed JSON、不支持的配置、无效 team mapping 以及其他会导致策略无法生效的问题。校验范围覆盖 managed-settings、team-mappings 及其引用的团队设置文件，并在界面中直接标出受影响文件与 JSON 路径。",
+      "summary_en": "GitHub added an in-product validator for Copilot enterprise managed settings. It detects malformed JSON, unsupported configurations, invalid team mappings, and other issues that can prevent policy enforcement, with UI feedback showing affected files and JSON paths.",
+      "why_it_matters_zh": "对正在大规模部署 AI 编码工具的工程组织来说，真正的难点常常不是“是否采购 Copilot”，而是“策略是否能稳定、可验证地生效”。这个更新说明企业 AI 治理开始从文档式配置转向内建可观测与可校验机制，可减少因配置错误导致的合规失效或能力漂移。",
+      "why_it_matters_en": "For engineering orgs rolling out AI coding at scale, the hard part is often not adoption but ensuring policies are actually enforced. This update signals a shift from documentation-driven config to built-in validation and observability, reducing silent policy failures and rollout drift.",
+      "key_takeaways_zh": [
+        "GitHub 把 Copilot 企业治理中的配置校验前移到产品内，而不是完全依赖离线文档与人工排错。",
+        "受影响文件和 JSON 路径级别的反馈，有助于平台团队将 AI 工具治理纳入标准配置管理与变更审查流程。"
+      ],
+      "key_takeaways_en": [
+        "GitHub is moving Copilot enterprise governance toward in-product validation instead of relying solely on docs and manual troubleshooting.",
+        "File- and JSON-path-level feedback makes it easier for platform teams to treat AI policy configuration like standard managed infrastructure config."
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Enterprise Governance",
+        "Policy Validation",
+        "Developer Tooling"
+      ],
+      "signal_score": 5,
+      "novelty_score": 4,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Enterprise managed settings in-product validator - GitHub Changelog"
+  ],
+  "new_terms_zh": [
+    "产品内配置校验器",
+    "team mappings"
+  ],
+  "new_terms_en": [
+    "in-product validator",
+    "team mappings"
+  ],
+  "themes_zh": [
+    "企业级 AI 编码治理正在走向可验证配置",
+    "AI 工具落地的重点从功能扩展转向策略执行可靠性"
+  ],
+  "themes_en": [
+    "Enterprise AI coding governance is moving toward verifiable configuration",
+    "Operational reliability of policy enforcement is becoming as important as feature rollout"
+  ],
+  "implications_zh": [
+    "平台团队应把 Copilot 等 AI 工具配置纳入 GitOps、变更审查和自动校验链路。",
+    "未来值得关注的是是否出现更细粒度的策略测试、预部署验证与审计 API，而不仅是 UI 级提示。"
+  ],
+  "implications_en": [
+    "Platform teams should treat Copilot and similar AI tooling configs as part of GitOps, change review, and automated validation workflows.",
+    "What matters next is whether vendors add deeper policy testing, pre-deploy validation, and audit APIs beyond UI-level checks."
+  ],
+  "reading_order": [
+    "Enterprise managed settings in-product validator - GitHub Changelog"
+  ],
+  "what_to_ignore_zh": [
+    "聚合型 GitHub Changelog 索引页本身不提供新增技术信息，可忽略。",
+    "不要把该更新误判为代理能力、代码评测或 MCP 层面的技术突破；它更接近企业运维改进。"
+  ],
+  "what_to_ignore_en": [
+    "The generic GitHub Changelog index page adds no new technical information and should be ignored.",
+    "Do not overread this as an agents, evals, or MCP breakthrough; it is primarily an enterprise operations improvement."
+  ]
+}
