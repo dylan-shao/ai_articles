@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.02 Improvement Stateless GitHub App installation tokens rolled out actions ecosystem & accessibility ... +1 Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.02 Retired Selected models in GitHub Copilot deprecated copilot Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain security Oct.01 Release Structured forms for private vulnerability reports supply chain security Oct.01 Release GitHub Copilot can now interact with desktop apps with computer use client apps copilot ... +1 Oct.01 Retired GitHub Actions: macOS 14 runner image retirement actions Oct.01 Release GitHub Copilot in VS Code, September 2026 releases copilot Oct.01 Improvement Accessibility statements highlighted on repository overview ecosystem & accessibility Oct.01 Retired Actions retention now covers checks, runs, and statuses actions Oct.01 Improvement Scheduled code scanning skips inactive repositories application security Oct.01 Improvement Code cov",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: October 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/10/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: October 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.02 Improvement Stateless GitHub App installation tokens rolled out actions ecosystem & accessibility ... +1 Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.02 Retired Selected models in GitHub Copilot deprecated copilot Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain security Oct.01 Release Structured forms for private vulnerability reports supply chain security Oct.01 Release GitHub Copilot can now interact with desktop apps with computer use client apps copilot ... +1 Oct.01 Retired GitHub Actions: macOS 14 runner image retirement actions Oct.01 Release GitHub Copilot in VS Code, September 2026 releases copilot Oct.01 Improvement Accessibility statements highlighted on repository overview ecosystem & accessibility Oct.01 Retired Actions retention now covers checks, runs, and statuses actions Oct.01 Improvement Scheduled code scanning skips inactive repositories application security Oct",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain security Oct.01 Release Structured forms for private vulnerability reports supply chain security September Sep 2026 September Sep 2026 Sep.30 Improvement Opt-in dist-tag permissions for npm trusted publishing supply chain security Sep.29 Improvement Repository custom runner settings for Dependabot supply chain security Sep.18 Improvement Stage-only npm tokens for safer automation supply chain security Sep.17 Release Workflow execution protections in GitHub Actions generally available actions supply chain security ... +1 Sep.10 Improvement Control GitHub Actions cache access with cache-mode actions application security supply chain security ... +2 Sep.09 Improvement npm extends recovery-code security holds to all accounts supply chain security Sep.08 Improvement Automatic Dependabot access to GitHub-hosted registries supply chain security Sep.03 Release Multiple trusted publishing configurat",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Selected models in GitHub Copilot deprecated - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-02T00:00:00+00:00",
+    "author": null,
+    "excerpt": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model…",
+    "body_excerpt": "Selected models in GitHub Copilot deprecated - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Retired October 2, 2026 • 1 minute read Selected models in GitHub Copilot deprecated As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model Deprecation date Suggested alternative Gemini 3.5 Flash 2026-10-02 Gemini 3.8 Flash Gemini 3.6 Flash 2026-10-02 Gemini 3.8 Flash Kimi K2.7 Code 2026-10-02 Kimi K3 Claude Opus 4.7 2026-10-02 Claude Opus 5.5 Please update your workflows and integrations to use supported models. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the deprecated models. GitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance. Share your feedback To learn more about the models available in Copilot, see our documentation on models and get started with Copilot today. Join the GitHub Community to share your feedback. copilot Share Copied Shared Back to changelog Related Posts Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.01 Release GitHub Copilot can now interact with desktop apps with computer use client apps copilot ... +1 Oct.01 Release GitHub Copilot in VS Code, September 2026 releases copilot Oct.01 Release Dynamic workflows in Copilot CLI and th",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
