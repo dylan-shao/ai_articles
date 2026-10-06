@@ -1,0 +1,16 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-05T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.05 Improvement Secret scanning adds detectors for Lovable, Supabase, and more application security Oct.02 Improvement Stateless GitHub App installation tokens rolled out actions ecosystem & accessibility ... +1 Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.02 Retired Unvalidated npm trusted publishing configurations now expire supply chain security Oct.02 Improvement npm staged publishing now supports creating new packages supply chain security Oct.02 Retired Selected models in GitHub Copilot deprecated copilot Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain security Oct.01 Release Structured forms for private vulnerability reports supply chain security Oct.01 Release GitHub Copilot can now interact with desktop apps with computer use client apps copilot ... +1 Oct.01 Retired GitHub Actions: macOS 14 runner image retirement actions Oct.01 Release GitHub Copilot in VS Code, September 2026 releases copilot Oct.",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
