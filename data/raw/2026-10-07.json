@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Archive: October 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/10/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-06T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: October 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.06 Improvement Update your IDE to restore agent activity in Copilot usage metrics account management copilot enterprise management tools ... +2 Oct.06 Release Stacked pull requests generally available collaboration tools Oct.06 Improvement Code scanning AI Scan enablement status in security overview application security Oct.05 Improvement Secret scanning adds detectors for Lovable, Supabase, and more application security Oct.02 Improvement Stateless GitHub App installation tokens rolled out actions ecosystem & accessibility ... +1 Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.02 Retired Unvalidated npm trusted publishing configurations now expire supply chain security Oct.02 Improvement npm staged publishing now supports creating new packages supply chain security Oct.02 Retired Selected models in GitHub Copilot deprecated copilot Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain securit",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Update your IDE to restore agent activity in Copilot usage metrics - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-06T00:00:00+00:00",
+    "author": null,
+    "excerpt": "If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we’ve found the cause, and a fix is rolling out…",
+    "body_excerpt": "Update your IDE to restore agent activity in Copilot usage metrics - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 6, 2026 • 3 minute read Update your IDE to restore agent activity in Copilot usage metrics Table of Contents Update your IDE What to expect in your reports Why client-side metrics can differ from other Copilot data Menu. Currently selected: Update your IDE Update your IDE What to expect in your reports Why client-side metrics can differ from other Copilot data If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we’ve found the cause, and a fix is rolling out to each IDE. Several IDEs recently moved Copilot agent sessions to the Copilot SDK. Those sessions didn’t identify which IDE they came from, so usage metrics couldn’t attribute them correctly. Most of that activity was left out of reports, and some was counted as Copilot CLI activity. Only IDE versions that use the Copilot SDK for agent mode are affected. Developers on earlier versions are still counted. The fix is available now in Visual Studio Code. Other IDEs will receive it in upcoming releases, which we expect to finish rolling out by November 2026. Once developers update, their agent activity is counted again in the Copilot usage metrics dashboard and API. Update your IDE Agent activity is counted again once developers are on these versions. If your developers are on an affected version, update as soon as the fixed version is available, because their activity can’t be recovered later. If you manage IDE versions centrally and rely on agent metrics, you can plan your rollout to move developers directly to these versions. IDE Version Availability Visual Studio Code 1.139.0 and later Available now Visual Studio 18.12 Not y",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-06T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Collaboration tools Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.06 Release Stacked pull requests generally available collaboration tools Oct.01 Improvement New dashboard experience now the default collaboration tools Oct.01 Release GitHub async merge API generally available collaboration tools September Sep 2026 September Sep 2026 Sep.25 Improvement Updates to GitHub Copilot for Slack and Microsoft Teams collaboration tools copilot ... +1 Sep.21 Release Refreshed repository pull requests page generally available collaboration tools Sep.10 Release Refreshed repository pull requests page in public preview collaboration tools Sep.08 Release GitHub Enterprise Server 3.22 is now generally available collaboration tools Sep.04 Release New API endpoint provides privacy-safe star history data collaboration tools Sep.01 Improvement Block users from discussion comments in personal repositories collaboration tools August Aug 2026 August Aug 2026 July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
