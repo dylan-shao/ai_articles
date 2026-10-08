@@ -1,0 +1,194 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最强信号集中在 GitHub Copilot 的“代理执行安全边界”和“本地/多模型运行面”两条主线，而不是单纯的模型上新。",
+    "本地沙箱正式 GA 是最值得关注的项：它把 agentic coding 从“能跑”推进到“可治理、可审计、可在企业内默认开启”。",
+    "GitHub 还在把上下文感知模型深入安全工作流：新的泄露密钥检测模型不仅做扫描告警，还将进入 push protection 与 Copilot security review。",
+    "Copilot CLI 对本地 Ollama 模型的发现与会话内切换，说明开发者工具正在把本地模型、云模型与工具调用统一到同一操作面。",
+    "Claude Haiku 5.5 接入 Copilot 有一定价值，但更偏成本/延迟优化，不如沙箱与安全检测两项具有平台级影响。"
+  ],
+  "executive_summary_en": [
+    "The strongest signal today is around GitHub Copilot’s execution safety boundaries and local/multi-model operating surface, not just another model launch.",
+    "Local sandboxing reaching GA is the most important item: it moves agentic coding from 'can run' to 'can be governed, audited, and enabled by default in enterprises.'",
+    "GitHub is also pushing context-aware models deeper into security workflows: its new leaked-secret model is expanding from scanning alerts into push protection and Copilot security review.",
+    "Copilot CLI’s discovery and in-session use of local Ollama models shows developer tooling converging local models, cloud models, and tool calling into one workflow surface.",
+    "Claude Haiku 5.5 in Copilot matters mainly as a latency/cost optimization; it is less strategically important than sandboxing and security detection."
+  ],
+  "items": [
+    {
+      "title": "Local sandboxing for GitHub Copilot now generally available",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-07",
+      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/",
+      "summary_zh": "GitHub 宣布 Copilot 本地沙箱正式 GA，覆盖 Copilot CLI、Copilot app，以及 VS Code 中使用 Agent Host 的会话。沙箱基于 Microsoft eXecution Container（MXC），可将统一策略映射到 Windows、macOS、Linux 的原生系统控制上，限制 agent 触发的工具与命令对文件系统、网络、凭据及其他系统能力的访问。",
+      "summary_en": "GitHub announced GA for local sandboxing in Copilot across Copilot CLI, the Copilot app, and VS Code sessions using Agent Host. It is powered by Microsoft eXecution Container (MXC), which maps a common policy model to native OS controls on Windows, macOS, and Linux to restrict agent-triggered tools and commands across filesystem, network, credentials, and other capabilities.",
+      "why_it_matters_zh": "这是 AI 编码代理从个人实验走向企业级落地的关键基础设施。真正阻碍 agent 大规模进入开发流程的，不是模型能力本身，而是执行边界、凭据暴露面、网络访问和组织可控性。GitHub 现在给出了统一且可强制执行的本地执行隔离层，使组织可以在不完全信任代理的前提下逐步放开更高自治度的工作流。",
+      "why_it_matters_en": "This is core infrastructure for moving AI coding agents from individual experimentation to enterprise deployment. The real blocker to wider agent adoption is not model quality alone, but execution boundaries, credential exposure, network access, and organizational control. GitHub now provides a unified, enforceable local isolation layer so teams can allow more autonomous workflows without fully trusting the agent.",
+      "key_takeaways_zh": [
+        "沙箱策略与模型选择解耦：无论 Copilot 使用哪种模型，工具执行都可被同一套策略约束。",
+        "企业可通过托管设置强制开启沙箱并禁止开发者弱化策略，这对平台治理与合规落地非常关键。"
+      ],
+      "key_takeaways_en": [
+        "Sandbox policy is decoupled from model choice: the same execution controls apply regardless of which model Copilot uses.",
+        "Enterprises can require sandboxing and enforce non-weakenable policies through managed settings, which is critical for governance and compliance."
+      ],
+      "tags": [
+        "agent-safety",
+        "sandboxing",
+        "copilot",
+        "enterprise-governance",
+        "developer-tooling"
+      ],
+      "signal_score": 10,
+      "novelty_score": 8,
+      "actionability_score": 9
+    },
+    {
+      "title": "Purpose-built model for leaked secret detection",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-07",
+      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+      "summary_zh": "GitHub 发布用于泄露密钥检测的专用模型，强调其为上下文感知的检测模型，而不是生成代码或文本的通用模型。该模型可根据周围代码识别可能的凭据，包括没有固定 token 格式的密码，并将逐步扩展到 secret scanning alerts、push protection，以及 Copilot CLI / Copilot app 的 /security-review 工作流。",
+      "summary_en": "GitHub introduced a purpose-built model for leaked-secret detection, emphasizing that it is a context-aware detection model rather than a general code/prose generator. It reads surrounding code to identify likely credentials, including passwords without recognizable token formats, and is being extended across secret scanning alerts, push protection, and Copilot CLI / Copilot app via /security-review workflows.",
+      "why_it_matters_zh": "这代表安全能力开始适配 AI coding 时代的新泄露面：不仅要扫描已知格式的密钥，还要识别代理生成、重构或复制粘贴过程中出现的非标准凭据。更重要的是，GitHub 把该能力嵌入提交前、扫描中、以及 agent 驱动的安全审查里，说明未来安全检测会从事后扫描转向开发流程内联化。",
+      "why_it_matters_en": "This reflects how security controls are adapting to AI coding-era leakage patterns: not just matching known token formats, but detecting non-standard credentials introduced through agent generation, refactoring, or copy/paste. More importantly, GitHub is embedding the capability before commit, during scanning, and inside agent-driven security review, signaling a shift from post-hoc scanning to in-flow security controls.",
+      "key_takeaways_zh": [
+        "检测面正在从静态模式匹配扩展到基于代码上下文的专用模型判断，适合识别非标准密码和隐式凭据。",
+        "同一能力将贯穿扫描告警、push protection 与 Copilot security review，表明安全与 AI 开发体验正在深度融合。"
+      ],
+      "key_takeaways_en": [
+        "Detection is expanding beyond static pattern matching into code-context-aware model inference, which is better suited for non-standard passwords and implicit credentials.",
+        "The same capability is being threaded through alerts, push protection, and Copilot security review, showing deep convergence between security workflows and AI-assisted development."
+      ],
+      "tags": [
+        "secret-scanning",
+        "application-security",
+        "ai-detection",
+        "copilot",
+        "secure-by-default"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "Discover local models in GitHub Copilot CLI",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-07",
+      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/",
+      "summary_zh": "GitHub Copilot CLI 现在可通过 /model 直接发现运行中的本地 Ollama 模型，并与现有配置模型、GitHub 提供的云模型一起展示。用户可在当前会话内添加并切换模型，无需重启 CLI；系统还会显示 provider、endpoint 与连接失败原因。GitHub 同时明确：选择本地模型不等于默认离线，离线模式需显式配置。",
+      "summary_en": "GitHub Copilot CLI now lets users discover supported local Ollama models via /model, alongside configured models and GitHub-hosted cloud models. Users can add and switch models within the current session without restarting the CLI, while also seeing provider, endpoint, and connection-failure details. GitHub also makes it explicit that choosing a local model does not automatically mean offline mode.",
+      "why_it_matters_zh": "这不是简单的“支持本地模型”，而是把本地模型纳入统一的代理工具链控制面。对平台团队来说，关键意义在于：模型选择、工具调用、provider 管理、离线语义和遥测边界开始被产品化。它预示未来开发环境将默认支持混合模型路由，而不是单一云端模型。",
+      "why_it_matters_en": "This is more than 'supporting local models'—it folds local models into a unified agent tooling control plane. For platform teams, the key significance is that model choice, tool calling, provider management, offline semantics, and telemetry boundaries are becoming first-class product concepts. It points toward hybrid model routing as the default developer experience rather than a single hosted model.",
+      "key_takeaways_zh": [
+        "本地模型与云模型开始在同一 CLI 交互面中被统一管理，这是多模型开发工作流的重要信号。",
+        "GitHub 特别澄清了“本地 ≠ 离线”，说明数据流、网络流和工具执行边界需要被显式治理，而不能靠部署位置想当然推断。"
+      ],
+      "key_takeaways_en": [
+        "Local and cloud models are now managed through the same CLI interaction surface, which is an important signal for multi-model developer workflows.",
+        "GitHub explicitly clarifies that 'local' does not equal 'offline,' underscoring that data flow, network flow, and tool-execution boundaries must be governed explicitly."
+      ],
+      "tags": [
+        "local-models",
+        "ollama",
+        "copilot-cli",
+        "model-routing",
+        "developer-tooling"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 8
+    },
+    {
+      "title": "Claude Haiku 5.5 in GitHub Copilot",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-07",
+      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+      "summary_zh": "Anthropic 的 Claude Haiku 5.5 已在 GitHub Copilot 中正式可用，面向高频低延迟场景，如 subagents、快速编辑和终端任务。GitHub 表示早期测试中，它在许多编码任务上可达到 Claude Sonnet 5 的效果，同时消耗更少 token 和步骤，并可由企业管理员通过模型策略控制启用。",
+      "summary_en": "Anthropic’s Claude Haiku 5.5 is now generally available in GitHub Copilot for high-volume, low-latency scenarios such as subagents, quick edits, and terminal tasks. GitHub says early testing showed performance comparable to Claude Sonnet 5 on many coding tasks while using fewer tokens and steps, and enterprise admins can control access via model policy.",
+      "why_it_matters_zh": "该更新的核心价值不在“又多了一个模型”，而在于 Copilot 正按任务类型做模型分层：把低成本、低延迟模型用于高频代理子任务。这会直接影响企业的 AI 成本结构与默认编排策略，尤其是在 agent 工作流把一次用户请求拆成多个子调用时。",
+      "why_it_matters_en": "The main value is not simply 'another model,' but that Copilot is increasingly stratifying models by task type—using lower-cost, lower-latency models for high-frequency agent subtasks. That has direct implications for enterprise AI cost structure and default orchestration strategies, especially when agent workflows decompose one user request into many subcalls.",
+      "key_takeaways_zh": [
+        "GitHub 明确把 Haiku 5.5 定位到 subagents、终端和快速编辑，说明代理系统正在按任务粒度优化模型选择。",
+        "如果轻量模型在大量编码任务上逼近更强模型效果，企业将更倾向采用分层路由而非统一默认大模型。"
+      ],
+      "key_takeaways_en": [
+        "GitHub explicitly positions Haiku 5.5 for subagents, terminal work, and quick edits, indicating model selection is being optimized at task granularity.",
+        "If lightweight models approach stronger models on many coding tasks, enterprises will increasingly prefer tiered routing over a single default premium model."
+      ],
+      "tags": [
+        "models",
+        "copilot",
+        "cost-optimization",
+        "agent-orchestration",
+        "latency"
+      ],
+      "signal_score": 7,
+      "novelty_score": 6,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "Local sandboxing for GitHub Copilot now generally available",
+    "Purpose-built model for leaked secret detection",
+    "Discover local models in GitHub Copilot CLI"
+  ],
+  "new_terms_zh": [
+    "本地沙箱（Local sandboxing）",
+    "Microsoft eXecution Container（MXC）",
+    "AI 检测型密钥扫描",
+    "Copilot /security-review",
+    "本地模型发现",
+    "混合模型路由"
+  ],
+  "new_terms_en": [
+    "Local sandboxing",
+    "Microsoft eXecution Container (MXC)",
+    "AI-detected secret scanning",
+    "Copilot /security-review",
+    "Local model discovery",
+    "Hybrid model routing"
+  ],
+  "themes_zh": [
+    "AI 编码代理的执行治理开始产品化",
+    "安全扫描从规则匹配走向上下文感知模型",
+    "本地模型、云模型与工具调用正汇聚到统一开发者界面",
+    "企业 AI 编码采用的关键瓶颈从模型能力转向控制面与策略面"
+  ],
+  "themes_en": [
+    "Execution governance for AI coding agents is becoming productized",
+    "Security scanning is moving from pattern rules to context-aware models",
+    "Local models, cloud models, and tool calling are converging into a unified developer surface",
+    "The key bottleneck for enterprise AI coding adoption is shifting from model capability to control planes and policy"
+  ],
+  "implications_zh": [
+    "平台团队应尽快定义 agent 工具执行策略：文件系统范围、网络策略、凭据注入和本地服务访问都需要明确默认值。",
+    "安全团队需要把 secret scanning 的关注点从“已知 token 格式”扩展到“上下文判断的非标准凭据”。",
+    "开发者体验团队可以开始评估混合模型策略：轻量模型跑子任务，强模型处理复杂规划与审查。",
+    "若组织正在推进 MCP、本地工具集成或 CLI agent，沙箱与 provider 治理将先于更大规模 rollout。"
+  ],
+  "implications_en": [
+    "Platform teams should define agent execution policies now: filesystem scope, network policy, credential injection, and local service access all need explicit defaults.",
+    "Security teams should expand secret-scanning thinking from known token formats to context-based detection of non-standard credentials.",
+    "Developer productivity teams can begin evaluating hybrid model strategies: lightweight models for subtasks, stronger models for planning and review.",
+    "If your org is adopting MCP, local tool integrations, or CLI agents, sandboxing and provider governance should come before broader rollout."
+  ],
+  "reading_order": [
+    "Local sandboxing for GitHub Copilot now generally available",
+    "Purpose-built model for leaked secret detection",
+    "Discover local models in GitHub Copilot CLI",
+    "Claude Haiku 5.5 in GitHub Copilot"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的月度归档页本身没有额外技术信息，直接看具体条目即可。",
+    "单纯把 Claude Haiku 5.5 视为“模型上新”会低估今天真正重要的治理与安全信号。"
+  ],
+  "what_to_ignore_en": [
+    "The monthly GitHub Changelog archive page adds no technical detail; read the individual entries instead.",
+    "Treating Claude Haiku 5.5 as just 'another model launch' misses the stronger governance and security signals today."
+  ]
+}

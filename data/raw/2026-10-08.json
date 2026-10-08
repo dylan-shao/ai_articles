@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Archive: October 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/10/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-07T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: October 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.07 Release Claude Haiku 5.5 in GitHub Copilot copilot Oct.07 Release Purpose-built model for leaked secret detection application security copilot ... +1 Oct.07 Release Local sandboxing for GitHub Copilot now generally available application security copilot platform governance ... +2 Oct.07 Improvement Discover local models in GitHub Copilot CLI copilot Oct.06 Improvement Update your IDE to restore agent activity in Copilot usage metrics account management copilot enterprise management tools ... +2 Oct.06 Release Stacked pull requests generally available collaboration tools Oct.06 Improvement Code scanning AI Scan enablement status in security overview application security Oct.05 Improvement Secret scanning adds detectors for Lovable, Supabase, and more application security Oct.02 Improvement Stateless GitHub App installation tokens rolled out actions ecosystem & accessibility ... +1 Oct.02 Improvement Copilot code review: API support and new default effort level copilot Oct.02 Retired Unvalidated npm trusted publishing configurations now expire supply chain security Oct.02 Improvement npm staged publishing now supports creating new packages supply chain security Oct.02 Retired Selected models in GitHub Copilot deprecated copilot Oct.02 Release GitHub Copilot weekly releases — September 28 copilo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Claude Haiku 5.5 in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-07T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early…",
+    "body_excerpt": "Claude Haiku 5.5 in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 7, 2026 • 1 minute read Claude Haiku 5.5 in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more Share your feedback Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early testing, Haiku 5.5 matched Claude Sonnet 5 on many coding tasks while using significantly fewer tokens and steps. This model is billed at provider list pricing under usage-based billing. See Models and pricing for GitHub Copilot for details. Availability in GitHub Copilot Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot cloud agent GitHub Copilot app github.com GitHub Mobile on iOS and Android JetBrains IDEs Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators can manage access to Claude Haiku 5.5 through the model policy in Copilot settings. Under default model enablement, new models are automatically enabled unless an administrator has turned off the global default or explicitly disables this model. Learn more To explore all models available in GitHub Copilot, see our documentation on models and get started with Copilot. Share your feedback Join the GitHub Community to share your feedback. Table of Contents Availability in GitHub Copilot Enabling acc",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Purpose-built model for leaked secret detection - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-07T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Secret protection should keep pace with the way you build software, whether you write code yourself or work with an AI agent. With our new purpose-built model, we’re bringing context-aware…",
+    "body_excerpt": "Purpose-built model for leaked secret detection - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 7, 2026 • 4 minute read Purpose-built model for leaked secret detection Table of Contents What's new Billing notice and availability AI-detected alerts remain included with Secret Protection AI-detected alerts are coming to GitHub Enterprise Server AI secret detection in push protection AI secret checks in GitHub Copilot /security-review Plans and platforms Manage access and spending Menu. Currently selected: What's new What's new Billing notice and availability AI-detected alerts remain included with Secret Protection AI-detected alerts are coming to GitHub Enterprise Server AI secret detection in push protection AI secret checks in GitHub Copilot /security-review Plans and platforms Manage access and spending Secret protection should keep pace with the way you build software, whether you write code yourself or work with an AI agent. With our new purpose-built model, we’re bringing context-aware detection into more developer workflows to help you catch secrets before they’re exposed. What’s new Today, we’re sharing plans for AI secret detection across secret scanning alerts, push protection, and GitHub Copilot security reviews. These features leverage GitHub’s fine-tuned model for secret detection. It reads surrounding code to identify likely credentials, including passwords without a recognizable token format, without generating code or prose. Model availability: Customers with AI-detected Password alerts have automatically been upgraded to the new model. AI-detected secrets in push protection is available in private preview. AI-based secret scanning with the GitHub Copilot /security-review command for the Copilot CLI and Copilot app available soon in private preview",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Discover local models in GitHub Copilot CLI - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-07T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running…",
+    "body_excerpt": "Discover local models in GitHub Copilot CLI - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 7, 2026 • 1 minute read Discover local models in GitHub Copilot CLI GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running local Ollama instance, alongside your configured models and cloud models provided by GitHub Copilot. Discovery doesn’t automatically add models. Choose a discovered model, review its provider and endpoint, then confirm Add and use for this session or Add without switching . You can use the model in your current session without restarting the CLI. Ollama and the model must already be installed—this flow doesn’t install a runtime or download models. Models must support tool calling and streaming. Provider connection failures appear in the picker with an explanation, helping you identify what needs attention. This CLI update builds on the same idea as the GitHub Copilot app’s provider experience: choose the model that fits your work. In the app, add a supported provider in Settings > Model providers . Choosing a local model doesn’t turn on offline mode or disable GitHub telemetry. In the CLI, offline mode remains an explicit choice through COPILOT_OFFLINE=true . A remote provider can still receive prompts and code context over the network, even in offline mode. Follow the CLI provider and offline-mode documentation for configuration and limits. We’re also announcing intelligent routing with local models. Read the announcement on the Microsoft Command Line blog and stay tuned for availability. Learn more about setting up your own model provider in the GitHub Copilot app . copilot Share Copied Shared Back to changelog Rela",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Local sandboxing for GitHub Copilot now generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-07T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. Local sandboxes give developers a secure…",
+    "body_excerpt": "Local sandboxing for GitHub Copilot now generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 7, 2026 • 1 minute read Local sandboxing for GitHub Copilot now generally available Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. Local sandboxes give developers a secure execution boundary for agentic workflows on their own machines. Tools and commands initiated by Copilot run with restricted access to the filesystem, network, credentials, and other system capabilities, based on policies defined by the developer or their organization. Local sandboxing is powered by Microsoft eXecution Container (MXC) , which translates a common sandbox policy into native operating-system controls across Windows, macOS, and Linux. With local sandboxing, developers and organizations can: Limit the files and directories that agent-run commands can read or modify. Control access to the internet, local networks, Git credentials, and GitHub CLI credentials. Apply sandboxing to local tools and services, including local MCP and language servers where supported. Use enterprise-managed settings to require sandboxing and enforce policies that developers cannot weaken. Adopt more autonomous agent workflows while maintaining clear boundaries around what Copilot can access. Model execution and tool isolation are separate concerns. Sandbox policies apply to tool execution regardless of which model Copilot uses. Local sandboxing is included with GitHub Copilot at no additional cost. To get started, see About cloud and local sandboxes for GitHub Copilot . application security copilot platform governance Share Copied Shared Back to changelog Related Posts Oct.07 Release Claude Haiku 5.5 in",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
