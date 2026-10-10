@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-10-10.zh</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --font-body: Georgia, "Times New Roman", serif;
+        --font-display: Georgia, "Times New Roman", serif;
+        --bg: #f3efe6;
+        --panel: #fffdf7;
+        --sidebar: #f7f1e5;
+        --nav: rgba(255, 250, 242, 0.86);
+        --ink: #1d232b;
+        --muted: #606a78;
+        --accent: #9f3f14;
+        --accent-soft: #f5e4d8;
+        --line: #e3d6bf;
+        --shadow: 0 12px 30px rgba(58, 43, 21, 0.06);
+        --panel-radius: 20px;
+        --chip-bg: #fffaf2;
+        --hero-glow: radial-gradient(circle at top left, #fff9ef 0%, transparent 35%);
+        --page-gradient: linear-gradient(180deg, #fbf6ed 0%, var(--bg) 100%);
+        --sidebar-gradient: linear-gradient(180deg, #fbf5ea 0%, var(--sidebar) 100%);
+        --panel-padding: 30px;
+        --sidebar-width: 280px;
+        --nav-border: 1px solid rgba(227, 214, 191, 0.8);
+      }
+      body[data-theme="neo"] {
+        --font-body: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+        --font-display: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+        --bg: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.88);
+        --sidebar: rgba(232, 242, 255, 0.92);
+        --nav: rgba(249, 252, 255, 0.82);
+        --ink: #10233f;
+        --muted: #4d6484;
+        --accent: #0c63ff;
+        --accent-soft: rgba(12, 99, 255, 0.12);
+        --line: rgba(115, 154, 220, 0.28);
+        --shadow: 0 24px 60px rgba(33, 71, 132, 0.16);
+        --panel-radius: 28px;
+        --chip-bg: rgba(255, 255, 255, 0.72);
+        --hero-glow:
+          radial-gradient(circle at 10% 10%, rgba(108, 160, 255, 0.38) 0%, transparent 28%),
+          radial-gradient(circle at 92% 14%, rgba(94, 214, 202, 0.22) 0%, transparent 20%);
+        --page-gradient: linear-gradient(180deg, #f8fbff 0%, #edf4ff 52%, #e5efff 100%);
+        --sidebar-gradient: linear-gradient(180deg, rgba(245, 250, 255, 0.95) 0%, rgba(230, 240, 255, 0.92) 100%);
+        --panel-padding: 36px;
+        --sidebar-width: 300px;
+        --nav-border: 1px solid rgba(115, 154, 220, 0.2);
+      }
+      body[data-theme="bulletin"] {
+        --font-body: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        --font-display: "Impact", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        --bg: #efe0c9;
+        --panel: #fffaf1;
+        --sidebar: #f5e7cf;
+        --nav: rgba(255, 247, 232, 0.86);
+        --ink: #241810;
+        --muted: #70584c;
+        --accent: #b43a24;
+        --accent-soft: rgba(180, 58, 36, 0.13);
+        --line: #d5ba95;
+        --shadow: 0 18px 44px rgba(77, 43, 22, 0.12);
+        --panel-radius: 16px;
+        --chip-bg: #fff3df;
+        --hero-glow:
+          radial-gradient(circle at top left, rgba(255, 236, 196, 0.85) 0%, transparent 32%),
+          linear-gradient(135deg, transparent 0%, transparent 68%, rgba(180, 58, 36, 0.06) 68%, rgba(180, 58, 36, 0.06) 71%, transparent 71%);
+        --page-gradient: linear-gradient(180deg, #f6ebd8 0%, #eee0c9 100%);
+        --sidebar-gradient: linear-gradient(180deg, #f9edda 0%, #f0dec1 100%);
+        --panel-padding: 32px;
+        --sidebar-width: 292px;
+        --nav-border: 1px solid rgba(122, 83, 56, 0.24);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        background:
+          var(--hero-glow),
+          var(--page-gradient);
+        color: var(--ink);
+        transition: background 220ms ease, color 220ms ease;
+      }
+      a { color: var(--accent); }
+      .video-icon-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-left: 0.45rem;
+        border-radius: 999px;
+        background: #ff0033;
+        color: #fff !important;
+        text-decoration: none;
+        vertical-align: middle;
+        box-shadow: 0 8px 18px rgba(255, 0, 51, 0.18);
+      }
+      .video-icon-link:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.03);
+      }
+      .wrap {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 24px 18px 48px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+        color: var(--muted);
+        padding: 14px 16px;
+        border: var(--nav-border);
+        border-radius: calc(var(--panel-radius) - 2px);
+        background: var(--nav);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+      .nav-links, .theme-switch {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .nav a, .theme-switch button {
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--ink);
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius: 999px;
+        padding: 10px 14px;
+        cursor: pointer;
+        font: inherit;
+        transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+      }
+      .nav a:hover, .theme-switch button:hover {
+        transform: translateY(-1px);
+        background: var(--chip-bg);
+        border-color: var(--line);
+      }
+      .theme-switch button.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      body.page-video .wrap {
+        max-width: min(1680px, 100vw);
+      }
+      body.page-video .layout {
+        grid-template-columns: 1fr;
+      }
+      body.page-video .sidebar {
+        display: none;
+      }
+      .sidebar, .panel {
+        border: 1px solid var(--line);
+        border-radius: var(--panel-radius);
+        box-shadow: var(--shadow);
+      }
+      .sidebar {
+        position: sticky;
+        top: 18px;
+        padding: 20px;
+        background: var(--sidebar-gradient);
+      }
+      .panel {
+        padding: var(--panel-padding);
+        background: var(--panel);
+      }
+      .sidebar h2, .sidebar h3 {
+        margin: 0 0 12px;
+        line-height: 1.15;
+      }
+      .sidebar h2 {
+        font-size: 1.1rem;
+        font-family: var(--font-display);
+        letter-spacing: 0.02em;
+      }
+      .sidebar h3 {
+        margin-top: 22px;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar li + li {
+        margin-top: 8px;
+      }
+      .sidebar a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+      .sidebar a:hover {
+        background: rgba(159, 63, 20, 0.08);
+      }
+      .sidebar a.current {
+        background: var(--accent-soft);
+        font-weight: 700;
+      }
+      .lang-switch {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .lang-switch a {
+        text-align: center;
+        border: 1px solid var(--line);
+        background: var(--chip-bg);
+      }
+      .meta-note {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .panel h1, .panel h2, .panel h3 {
+        line-height: 1.2;
+        font-family: var(--font-display);
+      }
+      .panel h1 {
+        margin-top: 0;
+        font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+        letter-spacing: 0.02em;
+      }
+      .panel h2 {
+        margin-top: 2rem;
+        font-size: 1.35rem;
+      }
+      .panel ul, .panel ol {
+        padding-left: 1.25rem;
+      }
+      .panel code {
+        background: var(--chip-bg);
+        border-radius: 4px;
+        padding: 0.1em 0.3em;
+      }
+      .video-detail {
+        display: grid;
+        grid-template-columns: minmax(280px, 3fr) minmax(0, 7fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .video-player-card, .video-summary-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--chip-bg);
+        padding: 18px;
+      }
+      body.page-video .panel {
+        padding: 22px;
+      }
+      body.page-video .video-player-card,
+      body.page-video .video-summary-card {
+        min-height: calc(100vh - 160px);
+      }
+      .video-embed {
+        width: 100%;
+        height: min(70vh, 860px);
+        border: 0;
+        border-radius: 14px;
+        background: #000;
+      }
+      .video-fallback {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: min(70vh, 860px);
+        border-radius: 18px;
+        padding: 28px;
+        color: #fff;
+        background:
+          linear-gradient(180deg, rgba(10, 15, 25, 0.12) 0%, rgba(10, 15, 25, 0.9) 100%),
+          linear-gradient(135deg, #8f1d13 0%, #c33b1f 38%, #1f2735 100%);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        overflow: hidden;
+      }
+      .video-fallback::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(10, 15, 25, 0.08) 0%, rgba(10, 15, 25, 0.88) 100%),
+          var(--video-poster, none);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+        pointer-events: none;
+      }
+      .video-fallback-content {
+        position: relative;
+        z-index: 1;
+      }
+      .video-fallback-kicker {
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: 14px;
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.14);
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .video-fallback h2 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 3vw, 3.4rem);
+        color: #fff;
+      }
+      .video-fallback p {
+        max-width: 42rem;
+        margin: 0 0 18px;
+        color: rgba(255,255,255,0.88);
+      }
+      .video-play-button {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        background: rgba(255,255,255,0.92);
+        color: #111827;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+      }
+      .video-play-button:hover {
+        transform: translateY(-1px);
+      }
+      .video-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .video-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .video-action-primary {
+        background: #fff;
+        color: #111827 !important;
+      }
+      .video-action-secondary {
+        background: rgba(255,255,255,0.12);
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,0.18);
+      }
+      .video-summary-card h2 {
+        margin-top: 0;
+      }
+      .video-overview {
+        margin-bottom: 18px;
+        color: var(--ink);
+      }
+      .video-highlights {
+        display: grid;
+        gap: 12px;
+      }
+      .video-highlight {
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        color: var(--ink);
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+      .video-highlight:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .video-timecode {
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .video-source-link {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .panel p, .panel li {
+        font-size: 1.02rem;
+        line-height: 1.72;
+      }
+      .panel p {
+        margin: 0.9rem 0 1rem;
+      }
+      .panel h2[id="selected-items"] {
+        padding-top: 0.4rem;
+        border-top: 1px solid var(--line);
+      }
+      .priority-note {
+        margin: -0.2rem 0 1.2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .theme-note {
+        margin-top: 18px;
+        padding: 12px 14px;
+        border: 1px dashed var(--line);
+        border-radius: 14px;
+        background: var(--chip-bg);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      body[data-theme="neo"] .panel {
+        backdrop-filter: blur(16px);
+      }
+      body[data-theme="neo"] .panel h2 {
+        display: inline-block;
+        padding: 0.2rem 0.8rem 0.28rem;
+        border-radius: 999px;
+        background: rgba(12, 99, 255, 0.08);
+      }
+      body[data-theme="neo"] .sidebar a.current {
+        box-shadow: inset 0 0 0 1px rgba(12, 99, 255, 0.14);
+      }
+      body[data-theme="bulletin"] .panel {
+        position: relative;
+      }
+      body[data-theme="bulletin"] .panel::before {
+        content: "FIELD REPORT";
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.3rem 0.55rem;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        font: 700 0.78rem/1 var(--font-display);
+        letter-spacing: 0.14em;
+      }
+      body[data-theme="bulletin"] .panel h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      body[data-theme="bulletin"] .panel h2 {
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 0.35rem;
+      }
+      @media (max-width: 900px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .video-detail {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+        }
+        .nav {
+          padding: 12px;
+        }
+        .nav-links, .theme-switch {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="" data-theme="classic">
+    <div class="wrap">
+      <div class="nav">
+        <div class="nav-links">
+          <a href="index.html">Latest</a>
+          <a href="archive.html">Archive</a>
+          <a href="harness.html">Harness Library</a>
+          <a href="latest.zh.html">中文</a>
+          <a href="latest.en.html">English</a>
+        </div>
+        <div class="theme-switch" aria-label="Theme switcher">
+          <button type="button" data-theme-option="classic">Classic</button>
+          <button type="button" data-theme-option="neo">Neo</button>
+          <button type="button" data-theme-option="bulletin">Bulletin</button>
+        </div>
+      </div>
+      <div class="layout">
+        <aside class="sidebar">
+          <h2>AI Coding Digest</h2><div class='lang-switch'><a class="current" href='2026-10-10.zh.html'>中文</a><a class="" href='2026-10-10.en.html'>English</a></div><h3>Views</h3><ul><li><a class='' href='latest.zh.html'>Latest digest</a></li><li><a class='' href='archive.html'>Archive index</a></li><li><a class='' href='harness.html'>Harness library</a></li></ul><h3>History</h3><ul><li><a class='current' href='2026-10-10.zh.html'>2026-10-10</a></li><li><a class='' href='2026-10-09.zh.html'>2026-10-09</a></li><li><a class='' href='2026-10-08.zh.html'>2026-10-08</a></li><li><a class='' href='2026-10-07.zh.html'>2026-10-07</a></li><li><a class='' href='2026-10-06.zh.html'>2026-10-06</a></li><li><a class='' href='2026-10-05.zh.html'>2026-10-05</a></li><li><a class='' href='2026-10-04.zh.html'>2026-10-04</a></li><li><a class='' href='2026-10-03.zh.html'>2026-10-03</a></li><li><a class='' href='2026-09-29.zh.html'>2026-09-29</a></li><li><a class='' href='2026-09-28.zh.html'>2026-09-28</a></li><li><a class='' href='2026-09-27.zh.html'>2026-09-27</a></li><li><a class='' href='2026-09-26.zh.html'>2026-09-26</a></li><li><a class='' href='2026-09-22.zh.html'>2026-09-22</a></li><li><a class='' href='2026-09-21.zh.html'>2026-09-21</a></li><li><a class='' href='2026-09-20.zh.html'>2026-09-20</a></li><li><a class='' href='2026-09-16.zh.html'>2026-09-16</a></li><li><a class='' href='2026-09-15.zh.html'>2026-09-15</a></li><li><a class='' href='2026-09-14.zh.html'>2026-09-14</a></li><li><a class='' href='2026-09-13.zh.html'>2026-09-13</a></li><li><a class='' href='2026-09-12.zh.html'>2026-09-12</a></li><li><a class='' href='2026-09-11.zh.html'>2026-09-11</a></li><li><a class='' href='2026-09-10.zh.html'>2026-09-10</a></li><li><a class='' href='2026-09-09.zh.html'>2026-09-09</a></li><li><a class='' href='2026-09-08.zh.html'>2026-09-08</a></li><li><a class='' href='2026-09-07.zh.html'>2026-09-07</a></li><li><a class='' href='2026-09-06.zh.html'>2026-09-06</a></li><li><a class='' href='2026-09-03.zh.html'>2026-09-03</a></li><li><a class='' href='2026-08-31.zh.html'>2026-08-31</a></li><li><a class='' href='2026-08-30.zh.html'>2026-08-30</a></li><li><a class='' href='2026-08-28.zh.html'>2026-08-28</a></li><li><a class='' href='2026-08-27.zh.html'>2026-08-27</a></li><li><a class='' href='2026-08-25.zh.html'>2026-08-25</a></li><li><a class='' href='2026-08-24.zh.html'>2026-08-24</a></li><li><a class='' href='2026-08-23.zh.html'>2026-08-23</a></li><li><a class='' href='2026-08-22.zh.html'>2026-08-22</a></li><li><a class='' href='2026-08-21.zh.html'>2026-08-21</a></li><li><a class='' href='2026-08-20.zh.html'>2026-08-20</a></li><li><a class='' href='2026-08-18.zh.html'>2026-08-18</a></li><li><a class='' href='2026-08-17.zh.html'>2026-08-17</a></li><li><a class='' href='2026-08-16.zh.html'>2026-08-16</a></li><li><a class='' href='2026-08-15.zh.html'>2026-08-15</a></li><li><a class='' href='2026-08-10.zh.html'>2026-08-10</a></li><li><a class='' href='2026-08-09.zh.html'>2026-08-09</a></li><li><a class='' href='2026-08-07.zh.html'>2026-08-07</a></li><li><a class='' href='2026-08-06.zh.html'>2026-08-06</a></li><li><a class='' href='2026-08-05.zh.html'>2026-08-05</a></li><li><a class='' href='2026-08-04.zh.html'>2026-08-04</a></li><li><a class='' href='2026-08-03.zh.html'>2026-08-03</a></li><li><a class='' href='2026-08-02.zh.html'>2026-08-02</a></li><li><a class='' href='2026-07-27.zh.html'>2026-07-27</a></li><li><a class='' href='2026-07-26.zh.html'>2026-07-26</a></li><li><a class='' href='2026-07-21.zh.html'>2026-07-21</a></li><li><a class='' href='2026-07-20.zh.html'>2026-07-20</a></li><li><a class='' href='2026-07-19.zh.html'>2026-07-19</a></li><li><a class='' href='2026-07-18.zh.html'>2026-07-18</a></li><li><a class='' href='2026-07-17.zh.html'>2026-07-17</a></li><li><a class='' href='2026-07-16.zh.html'>2026-07-16</a></li><li><a class='' href='2026-07-14.zh.html'>2026-07-14</a></li><li><a class='' href='2026-07-13.zh.html'>2026-07-13</a></li><li><a class='' href='2026-07-09.zh.html'>2026-07-09</a></li><li><a class='' href='2026-07-08.zh.html'>2026-07-08</a></li><li><a class='' href='2026-07-07.zh.html'>2026-07-07</a></li><li><a class='' href='2026-07-06.zh.html'>2026-07-06</a></li><li><a class='' href='2026-07-05.zh.html'>2026-07-05</a></li><li><a class='' href='2026-07-04.zh.html'>2026-07-04</a></li><li><a class='' href='2026-07-02.zh.html'>2026-07-02</a></li><li><a class='' href='2026-06-30.zh.html'>2026-06-30</a></li><li><a class='' href='2026-06-29.zh.html'>2026-06-29</a></li><li><a class='' href='2026-06-28.zh.html'>2026-06-28</a></li><li><a class='' href='2026-06-25.zh.html'>2026-06-25</a></li><li><a class='' href='2026-06-23.zh.html'>2026-06-23</a></li><li><a class='' href='2026-06-22.zh.html'>2026-06-22</a></li><li><a class='' href='2026-06-21.zh.html'>2026-06-21</a></li><li><a class='' href='2026-06-20.zh.html'>2026-06-20</a></li><li><a class='' href='2026-06-17.zh.html'>2026-06-17</a></li><li><a class='' href='2026-06-16.zh.html'>2026-06-16</a></li><li><a class='' href='2026-06-15.zh.html'>2026-06-15</a></li><li><a class='' href='2026-06-14.zh.html'>2026-06-14</a></li><li><a class='' href='2026-06-13.zh.html'>2026-06-13</a></li><li><a class='' href='2026-06-12.zh.html'>2026-06-12</a></li><li><a class='' href='2026-06-11.zh.html'>2026-06-11</a></li><li><a class='' href='2026-06-09.zh.html'>2026-06-09</a></li><li><a class='' href='2026-06-08.zh.html'>2026-06-08</a></li><li><a class='' href='2026-06-07.zh.html'>2026-06-07</a></li><li><a class='' href='2026-06-05.zh.html'>2026-06-05</a></li><li><a class='' href='2026-06-04.zh.html'>2026-06-04</a></li><li><a class='' href='2026-06-02.zh.html'>2026-06-02</a></li><li><a class='' href='2026-06-01.zh.html'>2026-06-01</a></li><li><a class='' href='2026-05-31.zh.html'>2026-05-31</a></li><li><a class='' href='2026-05-29.zh.html'>2026-05-29</a></li><li><a class='' href='2026-05-28.zh.html'>2026-05-28</a></li><li><a class='' href='2026-05-27.zh.html'>2026-05-27</a></li><li><a class='' href='2026-05-26.zh.html'>2026-05-26</a></li><li><a class='' href='2026-05-25.zh.html'>2026-05-25</a></li><li><a class='' href='2026-05-24.zh.html'>2026-05-24</a></li><li><a class='' href='2026-05-23.zh.html'>2026-05-23</a></li><li><a class='' href='2026-05-22.zh.html'>2026-05-22</a></li><li><a class='' href='2026-05-21.zh.html'>2026-05-21</a></li><li><a class='' href='2026-05-18.zh.html'>2026-05-18</a></li><li><a class='' href='2026-05-17.zh.html'>2026-05-17</a></li><li><a class='' href='2026-05-16.zh.html'>2026-05-16</a></li><li><a class='' href='2026-05-14.zh.html'>2026-05-14</a></li><li><a class='' href='2026-05-13.zh.html'>2026-05-13</a></li><li><a class='' href='2026-05-11.zh.html'>2026-05-11</a></li><li><a class='' href='2026-05-10.zh.html'>2026-05-10</a></li><li><a class='' href='2026-05-04.zh.html'>2026-05-04</a></li><li><a class='' href='2026-05-03.zh.html'>2026-05-03</a></li><li><a class='' href='2026-05-02.zh.html'>2026-05-02</a></li><li><a class='' href='2026-05-01.zh.html'>2026-05-01</a></li><li><a class='' href='2026-04-30.zh.html'>2026-04-30</a></li><li><a class='' href='2026-04-29.zh.html'>2026-04-29</a></li><li><a class='' href='2026-04-28.zh.html'>2026-04-28</a></li><li><a class='' href='2026-04-27.zh.html'>2026-04-27</a></li><li><a class='' href='2026-04-26.zh.html'>2026-04-26</a></li><li><a class='' href='2026-04-24.zh.html'>2026-04-24</a></li><li><a class='' href='2026-04-23.zh.html'>2026-04-23</a></li><li><a class='' href='2026-04-22.zh.html'>2026-04-22</a></li><li><a class='' href='2026-04-21.zh.html'>2026-04-21</a></li><li><a class='' href='2026-04-20.zh.html'>2026-04-20</a></li><li><a class='' href='2026-04-19.zh.html'>2026-04-19</a></li><li><a class='' href='2026-04-18.zh.html'>2026-04-18</a></li><li><a class='' href='2026-04-16.zh.html'>2026-04-16</a></li><li><a class='' href='2026-04-13.zh.html'>2026-04-13</a></li><li><a class='' href='2026-04-12.zh.html'>2026-04-12</a></li><li><a class='' href='2026-04-10.zh.html'>2026-04-10</a></li><li><a class='' href='2026-04-09.zh.html'>2026-04-09</a></li><li><a class='' href='2026-04-06.zh.html'>2026-04-06</a></li><li><a class='' href='2026-04-05.zh.html'>2026-04-05</a></li><li><a class='' href='2026-04-04.zh.html'>2026-04-04</a></li><li><a class='' href='2026-04-01.zh.html'>2026-04-01</a></li><li><a class='' href='2026-03-31.zh.html'>2026-03-31</a></li><li><a class='' href='2026-03-30.zh.html'>2026-03-30</a></li><li><a class='' href='2026-03-29.zh.html'>2026-03-29</a></li><li><a class='' href='2026-03-28.zh.html'>2026-03-28</a></li><li><a class='' href='2026-03-27.zh.html'>2026-03-27</a></li><li><a class='' href='2026-03-26.zh.html'>2026-03-26</a></li><li><a class='' href='2026-03-25.zh.html'>2026-03-25</a></li></ul><p class='meta-note'>Left column keeps every archived day. The main column keeps today's items sorted by score priority.</p><div class='theme-note'>Theme switcher keeps the classic layout and adds two alternate views. Your choice is remembered on this device.</div>
+        </aside>
+        <main class="panel">
+          <h1 id="ai-coding-daily-digest-2026-10-10">AI Coding Daily Digest - 2026-10-10</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<ul>
+<li>今天候选内容整体偏弱，主要来自 GitHub Changelog，信息密度最高的是两条：Copilot 本地沙箱正式可用，以及 CodeQL 2.27.2 对多语言分析能力的增量改进。</li>
+<li>对后端/平台负责人而言，最值得关注的是 agent 执行隔离、企业账号与仓库账号分离、Copilot CLI 发现本地模型，以及静态分析规则库对 C++/Go/Rust/JavaScript 的持续补强。</li>
+<li>其余内容多为周更汇总或产品级小更新，不足以构成完整高质量日报。</li>
+</ul>
+<h2 id="selected-items">Selected Items</h2><p class='priority-note'>Items below are automatically sorted by signal, novelty, and actionability.</p>
+<h2 id="github-copilot-weekly-releases-october-5">GitHub Copilot weekly releases — October 5</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-10-09</li>
+<li>URL: <a href="https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/">https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/</a></li>
+</ul>
+<p>本周 Copilot 更新里，最重要的是本地沙箱（local sandboxing）在 Copilot CLI、Copilot app 和 VS Code Agent Host 会话中正式 GA，可限制 agent 对文件、网络和凭据的访问。其他值得注意的点包括：Copilot app 支持将 Copilot 许可证账号与代码仓库访问账号分离；Copilot CLI 可通过 /model 发现本地 Ollama 模型；VS Code 支持并排查看多个 agent 会话并清理 worktree 占用。</p>
+<p>Why it matters: 这条更新直接触及企业落地 AI coding agent 的核心阻力：执行隔离、身份边界和本地/云模型混合工作流。对于平台团队，这些能力决定了是否能在受控环境中更大规模开放 agent 能力，而不是只停留在个人补全工具阶段。</p>
+<p>Key takeaways:
+- 本地沙箱 GA 是最强信号，说明 agent 安全边界正从概念走向默认能力。
+- 账号分离与本地模型发现降低了企业身份治理和混合部署的摩擦成本。</p>
+<p>Tags: AI coding agents, sandboxing, developer tooling, enterprise adoption, local models
+Scores: signal 8/5, novelty 7/5, actionability 8/5</p>
+<h2 id="codeql-2272-improves-c-go-rust-and-javascript-analysis">CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-10-09</li>
+<li>URL: <a href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/</a></li>
+</ul>
+<p>CodeQL 2.27.2 发布，增强了 C++、Go、Rust 和 JavaScript/TypeScript 的分析能力。更新包括：C++ 对 std::regex 的 ECMAScript 语法解析支持、更多 SQL 注入 sink 与流摘要；Go 增加对 github.com/coder/websocket 的建模；Rust 改进 async/await 数据流并增加 TLS 相关库摘要；JavaScript/TypeScript 增强对 Workflow SDK 指令和 Hapi 路由辅助模式的数据流识别。</p>
+<p>Why it matters: 虽然不是 AI coding 直接更新，但这是高价值的工程信号：静态分析的真实能力来自持续补齐框架语义、库模型和数据流边界。对平台/安全负责人而言，这类增量决定了代码扫描误报、漏报和多语言覆盖的实际质量，也影响 AI 生成代码进入 CI 后的治理能力。</p>
+<p>Key takeaways:
+- 高质量代码安全工具的护城河在于持续建模真实生态，而不是一次性发布。
+- 如果团队大量使用 Rust async、Go websocket 或 JS 工作流框架，应评估新版扫描覆盖提升。</p>
+<p>Tags: static analysis, CodeQL, application security, CI, multi-language
+Scores: signal 7/5, novelty 5/5, actionability 7/5</p>
+<h2 id="github-changelog">GitHub Changelog</h2>
+<ul>
+<li>Source: GitHub Changelog</li>
+<li>Author: N/A</li>
+<li>Publish date: 2026-10-09</li>
+<li>URL: <a href="https://github.blog/changelog/">https://github.blog/changelog/</a></li>
+</ul>
+<p>GitHub Changelog 首页本身不是单篇技术文章，但它帮助确认本周 GitHub 在 Copilot、CodeQL、堆叠 PR、本地模型和安全扫描上的连续更新节奏。对读者而言，它更像导航页而非独立高信号来源。</p>
+<p>Why it matters: 仅作上下文参考即可，不值得单独深读。</p>
+<p>Key takeaways:
+- 可用来发现值得点开的原始条目。
+- 不应把聚合索引页当作独立情报来源。</p>
+<p>Tags: navigation, changelog, low priority
+Scores: signal 3/5, novelty 2/5, actionability 2/5</p>
+<h2 id="top-items">Top Items</h2>
+<ul>
+<li>GitHub Copilot weekly releases — October 5</li>
+<li>CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis</li>
+</ul>
+<h2 id="new-terms">New Terms</h2>
+<ul>
+<li>本地沙箱（local sandboxing）</li>
+<li>Agent Host</li>
+<li>worktree cleanup</li>
+<li>流摘要（flow summaries）</li>
+</ul>
+<h2 id="themes">Themes</h2>
+<ul>
+<li>AI coding agent 的执行隔离与权限收敛</li>
+<li>本地模型与云模型混合开发工作流</li>
+<li>静态分析对真实框架/库语义的持续建模</li>
+</ul>
+<h2 id="implications">Implications</h2>
+<ul>
+<li>如果你在评估企业级 agent 落地，应优先关注沙箱能力是否可默认启用、是否支持网络/文件/凭据分级限制。</li>
+<li>平台团队可以开始把本地模型发现纳入开发者工作站策略，尤其是在数据主权或成本敏感场景下。</li>
+<li>安全团队应把 CodeQL 这类规则与建模更新纳入例行基线升级，而不是只关注大版本。</li>
+</ul>
+<h2 id="recommended-reading-order">Recommended Reading Order</h2>
+<ul>
+<li>GitHub Copilot weekly releases — October 5</li>
+<li>CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis</li>
+<li>GitHub Changelog</li>
+</ul>
+<h2 id="what-to-ignore">What to Ignore</h2>
+<ul>
+<li>忽略 GitHub Changelog 首页和 feed 归档这类聚合页，它们不是原始高信号内容。</li>
+<li>忽略本周 Copilot 周报里纯 UX 层面的多会话展示等次要改动，除非你在做 IDE 管理或磁盘治理。</li>
+</ul>
+<h2 id="sources-checked">Sources Checked</h2>
+<ul>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+<li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+</ul>
+        </main>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var key = "ai-digest-theme";
+        var allowed = ["classic", "neo", "bulletin"];
+        var body = document.body;
+        var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-theme-option]"));
+
+        function setTheme(theme) {
+          var nextTheme = allowed.indexOf(theme) >= 0 ? theme : "classic";
+          body.setAttribute("data-theme", nextTheme);
+          buttons.forEach(function (button) {
+            button.classList.toggle("active", button.getAttribute("data-theme-option") === nextTheme);
+          });
+          try {
+            window.localStorage.setItem(key, nextTheme);
+          } catch (err) {
+          }
+        }
+
+        var initialTheme = "classic";
+        try {
+          var stored = window.localStorage.getItem(key);
+          if (stored && allowed.indexOf(stored) >= 0) {
+            initialTheme = stored;
+          }
+        } catch (err) {
+        }
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            setTheme(button.getAttribute("data-theme-option"));
+          });
+        });
+
+        Array.prototype.slice.call(document.querySelectorAll("[data-jump-to]")).forEach(function (button) {
+          button.addEventListener("click", function () {
+            var jumpUrl = button.getAttribute("data-jump-url");
+            if (jumpUrl) {
+              window.open(jumpUrl, "_blank", "noopener,noreferrer");
+              return;
+            }
+          });
+        });
+        setTheme(initialTheme);
+      })();
+    </script>
+  </body>
+</html>

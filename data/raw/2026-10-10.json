@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.09 Release GitHub Copilot weekly releases — October 5 copilot Oct.09 Improvement CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis application security Oct.08 Improvement Copilot code review: New organization billing options and controls copilot Oct.08 Improvement Triage role users or higher can now archive pull requests collaboration tools Oct.08 Improvement Screen readers can navigate timelines as lists ecosystem & accessibility projects & issues ... +1 Oct.08 Improvement Draft pull requests count toward pull request limits collaboration tools Oct.07 Release Claude Haiku 5.5 in GitHub Copilot copilot Oct.07 Release Purpose-built model for leaked secret detection application security copilot ... +1 Oct.07 Release Local sandboxing for GitHub Copilot now generally available application security copilot platform governance ... +2 Oct.07 Improvement Discover local models in GitHub Copilot CLI copilot Oct.06 Improvement Update your IDE to restore agent activity in Copilot usage metrics account management copilot enterprise management tools ... +2 Oct.06 Release Stacked pull requests generally available collaboration tools Oct.06 Improvement Code scanning AI Scan enablement status in security overview application security Oct.05 Improvement Secret scanning adds detectors for Lovable, Supabase, and more applicati",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Fri, 09 Oct 2026 23:13:00 +0000 en-US hourly 1 https://wordpress.org/?v=7.1.3 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 GitHub Copilot weekly releases — October 5 https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5 Allison Fri, 09 Oct 2026 22:58:23 +0000 https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5 <p>This week&#8217;s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5\">GitHub Copilot weekly releases — October 5</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>This week&rsquo;s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work.</p> <h3 id=\"github-copilot\" id=\"github-copilot\" ><a class=\"heading-link\" href=\"#github-copilot\">GitHub Copilot<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h3> <ul> <li>Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.</li> <li>Limit agents&rsquo; access to files, networks, and credentials with local sandboxing, now generally available in Copilot CLI, the Copilot app, and VS Code sessions using Agent Host. This is included with Copilot at no extra cost. Learn more about <a href=\"https://docs.github.com/copilot/concepts/security-governance-and-network",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Copilot weekly releases — October 5 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage work.",
+    "body_excerpt": "GitHub Copilot weekly releases — October 5 - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 9, 2026 • 1 minute read GitHub Copilot weekly releases — October 5 Table of Contents GitHub Copilot GitHub Copilot app GitHub Copilot CLI GitHub Copilot in VS Code (1.141 release) Menu. Currently selected: GitHub Copilot GitHub Copilot GitHub Copilot app GitHub Copilot CLI GitHub Copilot in VS Code (1.141 release) This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users. Limit agents’ access to files, networks, and credentials with local sandboxing, now generally available in Copilot CLI, the Copilot app, and VS Code sessions using Agent Host. This is included with Copilot at no extra cost. Learn more about local sandboxing . GitHub Copilot app The Copilot app now lets you use separate GitHub accounts for your Copilot license and your repositories. For example, use an enterprise-provided Copilot license while accessing repositories through another account. Download the Copilot app . GitHub Copilot CLI GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Use /model to discover supported models from a running local Ollama instance, alongside your configured models and cloud models provided by GitHub Copilot. Discover local models in GitHub Copilot CLI . GitHub Copilot in VS Code (1.141 release) View agent sessions side by side in the Agents window. Arrange them in a grid to compare results or follow multiple tasks. Free up disk space with “Open worktree cleanup” in chat. See how much space inactive session worktrees use and choose",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "CodeQL 2.27.2 is now available",
+    "body_excerpt": "CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 9, 2026 • 2 minute read CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis Table of Contents Language and framework support macOS 27 compatibility Query changes CodeQL CLI Go library breaking change Menu. Currently selected: Language and framework support Language and framework support macOS 27 compatibility Query changes CodeQL CLI Go library breaking change CodeQL 2.27.2 is now available, adding a C++ regular-expression parser and analysis improvements across several languages. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find and remediate security issues in your code. The Default suite runs 498 security queries covering 170 CWEs. The Extended suite adds 131 queries covering 32 more CWEs. Language and framework support C/C++ CodeQL now parses regular expressions that use the ECMAScript grammar in std::regex . We’ve added SQL-injection sink models for the Comdb2 C API as well as flow summaries for Bloomberg BDE codecs and byte-stream deserializers. Go CodeQL now models the github.com/coder/websocket import path, in addition to nhooyr.io/websocket . Rust The Rust extractor now supports the AnyAttr and DocComment classes. We’ve improved data flow for async blocks used with await as well as added flow summaries for native-tls , async-native-tls , and tokio-native-tls . JavaScript/TypeScript CodeQL now recognizes the Workflow SDK’s \"use workflow\" and \"use step\" directives. We’ve improved Hapi route-handler and request-input tracking through custom route-registration helpers and higher-order functions. macOS 27 compatibility With the release of macOS 27 and Xcode 27, Apple stopped shipping multi-architectur",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
