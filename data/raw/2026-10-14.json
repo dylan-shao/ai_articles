@@ -1,0 +1,58 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Account management Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.13 Improvement Search and filter for budgets now available account management enterprise management tools ... +1 Oct.06 Improvement Update your IDE to restore agent activity in Copilot usage metrics account management copilot enterprise management tools ... +2 September Sep 2026 September Sep 2026 Sep.25 Improvement Usage metrics API adds pull request review stages account management copilot enterprise management tools ... +2 Sep.24 Release Require proof of presence for high-impact actions account management application security enterprise management tools ... +2 Sep.22 Retired Security improvements for SSH account management application security ... +1 Sep.17 Improvement Copilot impact dashboard now shows feature engagement account management copilot enterprise management tools ... +2 Sep.17 Improvement Agentic CLI customizations now in the usage metrics API account management copilot enterprise management tools ... +2 Sep.16 Release Automate SSO authorization for classic PATs and SSH keys account management enterprise management tools ... +1 Sep.11 Improvement Add VS Code Agents to Copilot usage metrics account management copilot enterprise management tools ... +2 Sep.08 Release New customer portal help.github.com account management Sep.03 Release Reopening Copilot Business and Enterprise signups a",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enterprise managed settings enforcement updates - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version…",
+    "body_excerpt": "Enterprise managed settings enforcement updates - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 13, 2026 • 1 minute read Enterprise managed settings enforcement updates Table of Contents Force refresh settings on client startup Minimum required client version Menu. Currently selected: Force refresh settings on client startup Force refresh settings on client startup Minimum required client version Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version requirements to governance-focused managed settings keys over time, starting with the sandbox key. Force refresh settings on client startup Set forceRemoteSettingsRefresh to true through server-managed, MDM-managed, or file-based settings when a policy change must take effect before Copilot starts. The setting is supported in Copilot CLI, VS Code, and the GitHub Copilot app. MDM-managed and file-based delivery can require freshness before the client signs in for the first time. A server-managed value begins requiring refreshes on subsequent startups after the client has received it once. While the setting is active, a cached response cannot satisfy the freshness requirement. If the client cannot confirm current policy, it fails closed rather than running with a stale or unconfirmed policy. Without this setting, clients continue to use the normal managed-settings cache for faster startup and resilience during transient service failures. Minimum required client version We’ve also added enforcement of a required minimum client version to the sandbox key in support of the generally available local sandbox capability. When this key is included in managed settings, ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Search and filter for budgets now available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "The “Budgets and alerts” page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for…",
+    "body_excerpt": "Search and filter for budgets now available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 13, 2026 • 1 minute read Search and filter for budgets now available The “Budgets and alerts” page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for a personal account, enterprise or organization, you can find a specific budget without paginating through the full list. With this release, you can: Search or filter budgets by scope, product, or SKU. In enterprises and organizations, you can also search by user. Narrow the list to one scope, such as organizations or cost centers, from the Scope menu. Track user-level budgets in the same list, including which budget applies to a specific user. To learn more, see Setting up budgets . account management enterprise management tools Share Copied Shared Back to changelog Related Posts Oct.13 Improvement GitHub App improvements for least privilege and management enterprise management tools platform governance ... +1 Oct.13 Improvement Enterprise managed settings enforcement updates client apps copilot enterprise management tools ... +2 Oct.12 Improvement Client telemetry user attribution and configurable capture client apps copilot enterprise management tools ... +2 Oct.10 Release New controls and chat improvements in Copilot for JetBrains copilot enterprise management tools ... +1 Oct.06 Improvement Update your IDE to restore agent activity in Copilot usage metrics account management copilot enterprise management tools ... +2 Sep.30 Retired X25519-only TLS ends for GHE.com on October 7 application security ecosystem & accessibility enterprise management tools ... +2 Sep.25 Improvement Enterprise managed settings in-product validator copilot e",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Gemini 4 Argon in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-13T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon…",
+    "body_excerpt": "Gemini 4 Argon in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 13, 2026 • 1 minute read Gemini 4 Argon in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Learn more Share your feedback Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon solved more tasks than previous Gemini models on every coding benchmark, with its largest gains in Copilot CLI. It also thoroughly checks its work, testing edge cases before it finishes. This model is billed at provider list pricing under usage-based billing. See Models and pricing for GitHub Copilot for details. Availability in GitHub Copilot Gemini 4 Argon is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot coding agent GitHub Copilot app JetBrains IDEs Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators can manage access to Gemini 4 Argon through the model policy in Copilot settings. Under default model enablement, new models are automatically enabled unless an administrator has turned off the global default or explicitly disables this model. Learn more To explore all models available in GitHub Copilot, see our documentation on models and get started with Copilot. Share your feedback Join the GitHub Community to share your feedback. Table of Contents Availability in GitHub Copilot Enab",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
