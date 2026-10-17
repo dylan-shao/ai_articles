@@ -1,0 +1,16 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-16T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Supply chain security Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.16 Release Open source license compliance generally available supply chain security Oct.13 Improvement Improved detection for withdrawn Dependabot alerts supply chain security Oct.12 Improvement Anonymous organization-level registries for Dependabot supply chain security Oct.02 Retired Unvalidated npm trusted publishing configurations now expire supply chain security Oct.02 Improvement npm staged publishing now supports creating new packages supply chain security Oct.02 Improvement New fields for SecurityAdvisory GraphQL API ecosystem & accessibility supply chain security ... +1 Oct.02 Release Confidential comments on repository security advisories supply chain security Oct.02 Release Repository security advisory comments API in public preview ecosystem & accessibility supply chain security ... +1 Oct.01 Improvement Rate limits for private vulnerability reports supply chain security Oct.01 Release Structured forms for private vulnerability reports supply chain security September Sep 2026 September Sep 2026 Sep.30 Improvement Opt-in dist-tag permissions for npm trusted publishing supply chain security Sep.29 Improvement Repository custom runner settings for Dependabot supply chain security Sep.18 Improvement Stage-only npm tokens for safer automation supply chain security Sep.17 Release Workflow ex",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
