@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Blog | ChatPRD — Product Management Insights & AI Tips",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/blog",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-10-19T21:29:00+00:00",
+    "author": null,
+    "excerpt": "Expert insights on product management, AI workflows, spec-driven development, and becoming an AI-native PM. From the ChatPRD team.",
+    "body_excerpt": "Blog | ChatPRD — Product Management Insights & AI Tips Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free AI PM by ChatPRD How I AI Product Releases Video AI Product Management by ChatPRD Expert insights on product management, AI workflows, spec-driven development, and becoming an AI-native PM. Featured PRD scores, document feedback, and DESIGN.md for prototypes Score your PRDs, review suggested edits in comments, and give prototypes your brand with DESIGN.md. Plus project-file context, AI workflows, and more. Claire Vo Oct 19, 2026 · 3 min read Read article Latest articles 206 articles · page 1 of 9 Meta Muse Wonder Review: Agents, Coding, and Design I put Meta's new Muse Wonder model through the How I AI benchmark, testing its agentic workflows, coding capabilities, and creative output. Here's my first look at where it excels as a knowledge work agent and where it still falls short on design. How I AI · Oct 19, 2026 · 10 min Read Claude Code Can Edit a TikTok. Teaching It What’s Funny Is the Hard Part. Brooke Lacey shows Claire Vo how Claude Code orchestrates FFmpeg, Whisper, and Python to turn phone footage into captioned shorts—and why the real work is encoding her timing, taste, and style. How I AI · Oct 19, 2026 · 11 min Read Alex Cornell’s 3 Meta Muse Workflows for Shopping, Hobbies, and Archives Alex Cornell uses Meta Muse to turn Instagram saves into shopping ideas, analyze golf and chess data, and transform an old blog into a personal podcast. How I AI · Oct 12, 2026 · 10 min Read Same Google (or Sharepoint) Doc. Better PRD. Review PRDs in Google Docs, update the same Doc, connect SharePoint and Pendo, and try ChatPRD in ChatGPT. Product Releases · Oct 9, 2026 · 4 min Read John Lindquist’s 6 Jev Workflows for Apps, Data, and AI Agents Explore six Jev workflows from John Lindquist: voice-controlled apps, data deduplication, smart routing, chess, agent coordination, and presentation coaching. How I AI · Oct",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Clear all Apply October Oct 2026 October Oct 2026 Oct.20 Release GitHub package firewall in public preview supply chain security universe26 ... +1 Oct.16 Release Open source license compliance generally available supply chain security universe26 ... +1 Oct.15 Release AI Scan for pull requests generally available application security universe26 ... +1 Oct.15 Release Agentic autofix for code scanning alerts general availability application security copilot universe26 ... +2 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details. Back to top Site-wide Links Product Features Security Enterprise Customer Stories Pricing Resources Platform Developer API Partners Atom Electron GitHub Desktop Support Docs Community Forum Training Status Contact Company About Blog Careers Press Shop © 2026 GitHub, Inc. Terms Privacy Manage Cookies Do not share my personal information LinkedIn icon GitHub on LinkedIn Instagram icon GitHub on Instagram YouTube icon GitHub on YouTube X icon GitHub on X TikTok icon GitHub on TikTo",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Bulk migrate branch protections to rulesets for a repository - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now convert all branch protection rules of a repository to rulesets in a single action. This is an extension of the ability to convert a single branch protection…",
+    "body_excerpt": "Bulk migrate branch protections to rulesets for a repository - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Improvement October 20, 2026 • 1 minute read Bulk migrate branch protections to rulesets for a repository Table of Contents How it works Why migrate to rulesets? Availability Menu. Currently selected: How it works How it works Why migrate to rulesets? Availability You can now convert all branch protection rules of a repository to rulesets in a single action. This is an extension of the ability to convert a single branch protection rule to a ruleset that we released previously, now allowing for at-scale conversions. How it works Navigate to Settings → Rulesets in your repository and click Import branch protection rules . In the Review import dialog, you can: Preview the rulesets that will be created before you confirm the conversion. See which branch protection rules are already covered by an existing ruleset. Review cases where one branch protection rule produces multiple rulesets to preserve its original behavior. Choose an enforcement status (e.g., Active , Evaluate , or Disabled ) and select which rulesets to create. After you click Create rulesets , choose whether to keep or delete the original branch protection rules. Why migrate to rulesets? Rulesets offer several advantages over classic branch protections: Apply rules across multiple branches with pattern matching Layer multiple rulesets for granular policy control Manage rulesets at the organization or enterprise level Configure fine-grained bypass permissions for users, teams, and apps Availability This feature is available for all repositories where rulesets are available. Learn more about converting your branch protections to repository rulesets . Join the discussion within GitHub Community . Table of Contents ",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub package firewall in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-20T00:00:00+00:00",
+    "author": null,
+    "excerpt": "An increasing number of malware attacks exploit systems at package installation time, harvesting credentials on CI/CD hosts or developer workstations without even running the package’s code. To stem this tide…",
+    "body_excerpt": "GitHub package firewall in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 20, 2026 • 1 minute read GitHub package firewall in public preview Table of Contents How it works Availability and limitations How to use it Menu. Currently selected: How it works How it works Availability and limitations How to use it An increasing number of malware attacks exploit systems at package installation time, harvesting credentials on CI/CD hosts or developer workstations without even running the package’s code. To stem this tide of attacks, GitHub is introducing a new package firewall capability. The package firewall sits between endpoints like Actions runners or coding agents and the upstream package repositories, inspecting both metadata requests and package downloads for signs of malicious activity. The package firewall is available today in public preview for all GitHub Enterprise Cloud customers, including data-resident GitHub Enterprise Cloud. How it works First, administrators set policy controls for their enterprise. The controls available today include a configurable cooldown period, checking the GitHub Advisory Database for malware or vulnerability alerts, and supply-chain checks like attestation downgrades. Then endpoints like coding agents and CI/CD hosts need configuration to use the firewall for their requests instead of pointing directly at the upstream package registries. Metadata requests for package lists as well as the actual package downloads then flow through the firewall, which evaluates them against the policy. If a package is blocked erroneously, the user can request an exception with a workflow similar to other GitHub Advanced Security features. Availability and limitations The package firewall is available in public preview as we scale u",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/feed/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "",
+    "body_excerpt": "Archive: 2026 - GitHub Changelog https://github.blog/changelog/ Updates, ideas, and inspiration from GitHub to help developers build and design software. Tue, 20 Oct 2026 18:18:18 +0000 en-US hourly 1 https://wordpress.org/?v=7.1.3 https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32 Archive: 2026 - GitHub Changelog https://github.blog/changelog/ 32 32 153214340 Bulk migrate branch protections to rulesets for a repository https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository Allison Tue, 20 Oct 2026 18:06:21 +0000 https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository <p>You can now convert all branch protection rules of a repository to rulesets in a single action. This is an extension of the ability to convert a single branch protection&#8230;</p> <p>The post <a href=\"https://github.blog/changelog/2026-10-20-bulk-migrate-branch-protections-to-rulesets-for-a-repository\">Bulk migrate branch protections to rulesets for a repository</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p> <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"> <html><body><p>You can now convert all branch protection rules of a repository to rulesets in a single action. This is an extension of the ability to convert a single branch protection rule to a ruleset that we released previously, now allowing for at-scale conversions.</p> <h3 id=\"how-it-works\" id=\"how-it-works\" ><a class=\"heading-link\" href=\"#how-it-works\">How it works<span class=\"heading-hash pl-2 text-italic text-bold\" aria-hidden=\"true\"></span></a></h3> <p>Navigate to <strong>Settings &rarr; Rulesets</strong> in your repository and click <strong>Import branch protection rules</strong>. In the Review import dialog, you can:</p> <ul> <li>Preview the rulesets that will be created before you confirm the conversion.</li> <li>See w",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
