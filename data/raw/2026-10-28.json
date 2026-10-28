@@ -1,0 +1,44 @@
+[
+  {
+    "title": "GitHub Copilot supports server-to-server authentication - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-27T00:00:00+00:00",
+    "author": null,
+    "excerpt": "GitHub Copilot now supports server-to-server authentication for GitHub Apps installed on organizations, available in public preview. Services and agents built with the GitHub Copilot SDK can now make requests on…",
+    "body_excerpt": "GitHub Copilot supports server-to-server authentication - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to changelog Release October 27, 2026 • 1 minute read GitHub Copilot supports server-to-server authentication GitHub Copilot now supports server-to-server authentication for GitHub Apps installed on organizations, available in public preview. Services and agents built with the GitHub Copilot SDK can now make requests on behalf of an organization without relying on a signed-in user’s credentials. This workload-owned identity helps agents and automated services operate reliably at larger scale without tying their authentication or usage to individual users. Developers can give a GitHub App the read-only Copilot Requests organization permission, install the app on an organization, and pass a short-lived installation access token to the Copilot SDK. Usage is attributed and billed to the organization that owns the installation. The organization’s model policies, budgets, and spending controls apply. Organization owners can review which apps have access, identify app-attributed usage in AI usage CSV reports using the app_client_id field, and stop an app’s access by suspending or uninstalling it. To get started, see server-to-server authentication for the GitHub Copilot SDK and managing GitHub App access to your organization’s Copilot . copilot Share Copied Shared Back to changelog Related Posts Oct.26 Release GitHub Copilot assisted permissions generally available copilot Oct.26 Release GPT-6.1 Terra in GitHub Copilot copilot Oct.23 Improvement Usage metrics API adds usage from tools like OpenCode account management copilot enterprise management tools ... +2 Oct.23 Improvement Turn notifications into code with GitHub Copilot in Teams client apps copilot ... +1 Oct.22 Release GitHub Copilot in Vi",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-27T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘26 Clear all Apply October Oct 2026 October Oct 2026 Oct.27 Release GitHub Copilot supports server-to-server authentication copilot Oct.26 Release GitHub Copilot assisted permissions generally available copilot Oct.26 Release GPT-6.1 Terra in GitHub Copilot copilot Oct.23 Improvement Usage metrics API adds usage from tools like OpenCode account management copilot enterprise management tools ... +2 Oct.23 Improvement Turn notifications into code with GitHub Copilot in Teams client apps copilot ... +1 Oct.23 Improvement EMU deletions fix account management Oct.23 Improvement Public monitoring adds triage, validity, API, and webhooks application security Oct.23 Improvement Enterprise installations for GitHub Apps generally available ecosystem & accessibility enterprise management tools ... +1 Oct.22 Release GitHub Copilot in Visual Studio — September update copilot Oct.22 Improvement Custom skills, agents, and MCP servers in usage metrics API account management copilot enterprise management tools ... +2 Oct.22 Improvement Global default for Copilot features generally available copilot enterprise management tools ... +1 Oct.22 Improvement Meta API endpoints updated for Actions blob storage actions Oct.22 Improvement Public monitoring now available with data residency application security Oct.22 Improvement Pull requests: Saved whitespace preferences and improved spl",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: October 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/10/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-10-27T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: October 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app Attend GitHub Universe Search Changelog Docs Customer stories Attend GitHub Universe Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘26 Clear all Apply October Oct 2026 October Oct 2026 Oct.27 Release GitHub Copilot supports server-to-server authentication copilot Oct.26 Release GitHub Copilot assisted permissions generally available copilot Oct.26 Release GPT-6.1 Terra in GitHub Copilot copilot Oct.23 Improvement Usage metrics API adds usage from tools like OpenCode account management copilot enterprise management tools ... +2 Oct.23 Improvement Turn notifications into code with GitHub Copilot in Teams client apps copilot ... +1 Oct.23 Improvement EMU deletions fix account management Oct.23 Improvement Public monitoring adds triage, validity, API, and webhooks application security Oct.23 Improvement Enterprise installations for GitHub Apps generally available ecosystem & accessibility enterprise management tools ... +1 Oct.22 Release GitHub Copilot in Visual Studio — September update copilot Oct.22 Improvement Custom skills, agents, and MCP servers in usage metrics API account management copilot enterprise management tools ... +2 Oct.22 Improvement Global default for Copilot features generally available copilot enterprise management tools ... +1 Oct.22 Improvement Meta API endpoints updated for Actions blob storage actions Oct.22 Improvement Public monitoring now available with data residency application security Oct.22 Improvement Pull requests: Saved whitespace pref",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
