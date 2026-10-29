@@ -1,0 +1,153 @@
+{
+  "full_digest_worthy": true,
+  "executive_summary_zh": [
+    "今天最有信号的是 GitHub 围绕 Copilot 的两条核心能力升级：多模型编排进入 GA，以及本地模型纳入同一调度平面，显示 AI 编码工具正在从“选模型”走向“策略路由与执行基础设施”。",
+    "对平台和工程负责人而言，这些更新的价值不在单个模型本身，而在于成本、延迟、治理、会话连续性与端侧/云侧混合执行开始被产品化。",
+    "此外，VS Code/CLI/app 之间的跨端 agent 会话、模型对比、连接器与插件控制，表明开发者工作流正在被重构为长期运行、可迁移、可治理的 agent 系统。"
+  ],
+  "executive_summary_en": [
+    "The highest-signal news today is GitHub’s Copilot moving from manual model choice to orchestration: multi-model routing is now GA, and local models are being pulled into the same control plane.",
+    "For backend/platform leaders, the real story is not a new model but a productized layer for cost, latency, governance, session continuity, and hybrid local/cloud execution.",
+    "The VS Code/CLI/app updates also show coding workflows shifting toward long-running, portable, governable agent sessions rather than isolated chat interactions."
+  ],
+  "items": [
+    {
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-28",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+      "summary_zh": "GitHub 宣布 Copilot Fusion 正式可用。用户不再为每个任务手动选择模型，而是选择一个编排系统，由 Copilot 根据任务阶段自动路由与协同多个模型，并通过 Standard / High 等 effort 档位平衡性能与成本。",
+      "summary_en": "GitHub announced general availability of Copilot Fusion. Instead of manually picking a model for each task, users choose an orchestration system that routes and coordinates models automatically, with effort levels such as Standard and High to trade off capability, speed, and cost.",
+      "why_it_matters_zh": "这代表 AI 编码产品的竞争重点从“模型目录”转向“任务级调度层”。对工程组织来说，真正可运营的能力是按任务自动选择模型、控制 token 成本、缩短等待时间，并把这些策略封装为默认平台行为，而不是要求开发者自己调参。",
+      "why_it_matters_en": "This marks a shift from a 'model catalog' product to a task-level scheduling layer. For engineering orgs, the operationally meaningful capability is automatic model selection per task, bounded token cost, lower latency, and platform-managed defaults instead of asking every developer to hand-tune model choices.",
+      "key_takeaways_zh": [
+        "Copilot Fusion 将多模型路由和自动模型选择合并为统一入口，强调系统级编排而非单模型偏好。",
+        "GitHub 直接给出外部 benchmark 结果与成本/延迟对比，表明未来采购与平台评估会越来越看端到端任务效率，而不是单轮模型分数。"
+      ],
+      "key_takeaways_en": [
+        "Copilot Fusion unifies multi-model routing and auto model selection into a single abstraction centered on orchestration rather than model preference.",
+        "GitHub cites external benchmark, cost, and latency claims, reinforcing that tool evaluation is moving toward end-to-end task efficiency rather than single-model quality alone."
+      ],
+      "tags": [
+        "multi-model-orchestration",
+        "copilot",
+        "cost-latency-tradeoffs",
+        "coding-agents"
+      ],
+      "signal_score": 9,
+      "novelty_score": 8,
+      "actionability_score": 8
+    },
+    {
+      "title": "GitHub Copilot Fusion now supports selection of local models",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-28",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models/",
+      "summary_zh": "GitHub 将本地模型路由加入 Copilot Fusion 的实验预览。系统可以在本地设备模型与云模型之间自动选择；Windows 提供托管下载与配置流程，CLI 还支持在 Windows/macOS/Linux 上手动接入自有本地模型。",
+      "summary_en": "GitHub added local model routing to Copilot Fusion in experimental preview. The system can choose between on-device and cloud models automatically; Windows gets managed download/setup, while CLI also supports bring-your-own local models across Windows, macOS, and Linux.",
+      "why_it_matters_zh": "这是比“支持本地模型”更强的一步：关键不在本地推理本身，而在于把本地模型纳入同一策略路由层。对平台团队而言，这意味着未来可以按数据敏感度、网络可用性、GPU/CPU 资源、成本预算和延迟目标，动态决定请求是否出端。",
+      "why_it_matters_en": "This is more important than simply 'supporting local models': the key move is bringing local inference into the same policy-routing layer. For platform teams, that opens the door to dynamic decisions based on data sensitivity, connectivity, device resources, budget, and latency goals.",
+      "key_takeaways_zh": [
+        "本地/云混合执行开始产品化，未来治理策略可围绕数据驻留、离线可用性和成本门槛自动化。",
+        "GitHub 先从 Windows 托管体验切入，同时保留跨平台 BYO 模型路径，说明企业落地会同时需要受控默认方案与可扩展集成。"
+      ],
+      "key_takeaways_en": [
+        "Hybrid local/cloud execution is becoming productized, enabling governance policies around data residency, offline operation, and cost thresholds.",
+        "GitHub starts with a managed Windows path while keeping cross-platform BYO support, suggesting enterprise adoption will require both controlled defaults and extensibility."
+      ],
+      "tags": [
+        "local-models",
+        "hybrid-execution",
+        "governance",
+        "developer-tooling"
+      ],
+      "signal_score": 9,
+      "novelty_score": 9,
+      "actionability_score": 9
+    },
+    {
+      "title": "GitHub Copilot in VS Code, Universe releases",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-10-28",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases/",
+      "summary_zh": "GitHub 汇总了 VS Code 中 Copilot 的一系列更新：跨客户端连续的云端 agent 会话、在本机持续运行 agent、从手机控制本地 agent、模型结果对比、桌面应用调用、连接器、插件与 marketplace 治理，以及可构建自定义 client 的能力。",
+      "summary_en": "GitHub bundled a set of Copilot updates in VS Code: cloud agent session continuity across clients, agents that keep running on local machines, phone-based control of local agents, model result comparison, desktop app usage, connectors, plugin/marketplace governance, and support for building custom clients.",
+      "why_it_matters_zh": "这不是单一功能发布，而是一套 agent 工作台能力。高信号点在于：会话跨端迁移、执行地点可选、模型可比较、扩展面可治理。它说明开发者代理正从 IDE 内聊天框演进为企业级执行环境，需要身份、状态同步、权限边界和插件控制。",
+      "why_it_matters_en": "This is not a single feature but an agent workbench. The high-signal point is the combination of cross-client session portability, selectable execution location, model comparison, and governable extension surfaces. It suggests coding agents are evolving from IDE chat panes into enterprise execution environments requiring identity, state sync, permission boundaries, and plugin controls.",
+      "key_takeaways_zh": [
+        "持续运行且可跨客户端接续的 agent，会改变任务切分方式：更多工作将以长任务、后台任务而非即时问答来组织。",
+        "模型对比、连接器和插件控制对平台团队尤其重要，因为它们直接关系到评测、可观测性、合规和内网系统接入。"
+      ],
+      "key_takeaways_en": [
+        "Persistent agents with session continuity will change work decomposition toward long-running and background tasks rather than one-shot prompts.",
+        "Model comparison, connectors, and plugin controls matter especially for platform teams because they touch evaluation, observability, compliance, and internal system integration."
+      ],
+      "tags": [
+        "agent-sessions",
+        "vscode",
+        "connectors",
+        "governance"
+      ],
+      "signal_score": 8,
+      "novelty_score": 7,
+      "actionability_score": 8
+    }
+  ],
+  "top_items": [
+    "Route and orchestrate models with GitHub Copilot Fusion",
+    "GitHub Copilot Fusion now supports selection of local models",
+    "GitHub Copilot in VS Code, Universe releases"
+  ],
+  "new_terms_zh": [
+    "Copilot Fusion",
+    "本地模型自动路由",
+    "会话连续性",
+    "混合本地/云执行"
+  ],
+  "new_terms_en": [
+    "Copilot Fusion",
+    "local model auto routing",
+    "session continuity",
+    "hybrid local/cloud execution"
+  ],
+  "themes_zh": [
+    "AI 编码从模型选择转向策略编排层",
+    "本地模型与云模型正在进入统一控制平面",
+    "开发者代理开始具备长时运行与跨端迁移能力",
+    "企业治理正在覆盖连接器、插件、模型与执行位置"
+  ],
+  "themes_en": [
+    "AI coding is shifting from model choice to orchestration layers",
+    "Local and cloud models are converging into a single control plane",
+    "Developer agents are becoming long-running and portable across clients",
+    "Enterprise governance is expanding to connectors, plugins, models, and execution location"
+  ],
+  "implications_zh": [
+    "平台团队应开始把模型路由策略视为平台配置项，而非开发者个人偏好。",
+    "评测体系需要从静态 benchmark 转向任务成功率、延迟、token 成本和执行位置的联合度量。",
+    "如果组织有合规或内网要求，现在值得试点本地/云混合 agent 路由与权限边界设计。"
+  ],
+  "implications_en": [
+    "Platform teams should start treating model routing policy as platform configuration rather than individual developer preference.",
+    "Evaluation needs to move from static benchmarks toward combined measures of task success, latency, token cost, and execution location.",
+    "If your org has compliance or internal-network constraints, this is a good moment to pilot hybrid local/cloud agent routing and permission-boundary design."
+  ],
+  "reading_order": [
+    "Route and orchestrate models with GitHub Copilot Fusion",
+    "GitHub Copilot Fusion now supports selection of local models",
+    "GitHub Copilot in VS Code, Universe releases"
+  ],
+  "what_to_ignore_zh": [
+    "图片生成功能与今天的高信号主题相关性较弱，对后端/平台负责人优先级不高。",
+    "通用 Changelog 索引页没有新增技术细节，可忽略。",
+    "除非你负责设计资产生产流程，否则不要把注意力放在 Copilot 的多模态展示层。"
+  ],
+  "what_to_ignore_en": [
+    "The image-generation announcement is lower priority for backend/platform leads and weakly related to today’s strongest technical themes.",
+    "The generic changelog index page adds no new technical detail and can be ignored.",
+    "Unless you own design-asset workflows, do not over-index on Copilot’s multimodal presentation layer here."
+  ]
+}
