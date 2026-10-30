@@ -1,0 +1,30 @@
+[
+  {
+    "title": "How I AI Podcast with Claire Vo",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/how-i-ai",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-10-29T21:24:59.861000+00:00",
+    "author": null,
+    "excerpt": "On How I AI, guests share their screens and show Claire Vo how they use AI to do their jobs. Watch the episodes and browse workflows from the show.",
+    "body_excerpt": "How I AI Podcast with Claire Vo Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free How I AI Episodes Workflows How I AI Guests share their screens and show Claire Vo how they use AI to do their jobs. YouTube Spotify Apple Podcasts Browse Workflows Latest episode Grok vs. Dot vs. Muse vs. Claude Duet: Nine Tasks, Four Agents, No Universal Winner Claire Vo puts four personal agents through nine real tasks. Grok Bot wins the broad work test, Muse handles personal and creative jobs, and the coding favorites expose the limits of an overall score. Claire Vo Oct 29, 2026 Watch or read Sponsor offer: How I AI listeners are eligible for $50 in free Cursor credit (limited supply) . Claim code Episode library 118 episodes Search episodes by guest, company, tool, or topic 3 workflows Inside Figma’s PM OS: 31 AI Skills, Better Bug Bashes, and an Automated Growth Loop Figma product manager Ezra Mechaber shows Claire Vo how a lightweight repo became an internal PM operating system—and where browser agents, automated experiments, and a real-time writing assistant still need human judgment. Oct 29, 2026 Watch or read 2 workflows Claude Duet Is Beautiful. That Doesn’t Make It My Go-To Agent. Claire tests Anthropic’s Claude Duet on inbox triage, Warriors tickets, sales work, and a launch video. The design stands out; slow responses, weak follow-through, and missing desktop and team support make it harder to keep using. Oct 26, 2026 Watch or read 2 workflows Inside Reddit Proto: Real Data, Constrained Prototypes, and a Better Handoff Reddit’s Blair Metcalf shows how an internal prototyping harness gives designers and product managers realistic data, design-system guardrails, and a more deliberate path from Figma to production-shaped code. Oct 26, 2026 Watch or read 2 workflows Meta Muse Wonder Review: Agents, Coding, and Design I put Meta's new Muse Wonder model through the How I AI benchmark, testing its agentic workflows, coding cap",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Grok vs. Dot vs. Muse vs. Claude Duet: 9 Real Tasks | How I AI",
+    "source": "ChatPRD Blog",
+    "url": "https://www.chatprd.ai/how-i-ai/grok-vs-dot-vs-muse-vs-claude-duet-nine-tasks-four-agents-no-universal-winner",
+    "landing_url": "https://www.chatprd.ai/blog",
+    "priority": 2,
+    "publish_date": "2026-10-29T21:24:59.861000+00:00",
+    "author": "Claire Vo",
+    "excerpt": "Claire Vo tests four personal agents on nine real tasks. See why Grok wins for work, Muse excels at personal jobs, and coding still needs careful review.",
+    "body_excerpt": "Grok vs. Dot vs. Muse vs. Claude Duet: 9 Real Tasks | How I AI Open menu Product Enterprise Customers Pricing Resources Reviews How I AI Log in Get a demo Start free ← All episodes Back / How I AI / Grok vs. Dot vs. Muse vs. Claude Duet: Nine Tasks, Four Agents, No Universal Winner How I AI Grok vs. Dot vs. Muse vs. Claude Duet: Nine Tasks, Four Agents, No Universal Winner Claire Vo puts four personal agents through nine real tasks. Grok Bot wins the broad work test, Muse handles personal and creative jobs, and the coding favorites expose the limits of an overall score. Claire Vo October 29, 2026 · 10 min read Watch or listen to the full episode Watch on YouTube Listen on Spotify Listen on Apple Podcasts Episode chapters 6 chapters 2:14 Building the benchmark and checking agent access Claire selects nine real tasks, uses computer-use operators, and explains the setup differences that limit the comparison. 10:11 Slack replies, short clips, and bug fixes Dot understands Claire’s preferences, Muse produces the strongest short clip, and coding review reveals a risky validation change. 17:31 Figma thumbnails and actionable inbox triage Grok wins on new thumbnail ideas and a document interface that makes to-dos easier to use. 20:49 Family newspapers, homework, and shoe shopping Muse excels at family-oriented artifacts and fast explanations; Grok handles product comparison best. 26:25 A launch video reverses Claude’s video-editing failure Claude Duet follows the product brief, branding, and voiceover workflow better than the other agents. 30:14 Final ranking and which agent to use Grok leads the overall ranking, Muse stands out for personal tasks, and Claire separates personal agents from her preferred coding tools. Workflows from this episode 3 01 Create a Personalized Family Newspaper with Meta's Muse 02 How to Create a Branded Product Launch Video with Claude Duet 03 Generate Novel YouTube Thumbnail Ideas with Grok and Figma All workflows Episode outline A benchmark bui",
+    "keyword_hits": 3,
+    "youtube_url": "https://www.youtube.com/watch?v=hnCoQ5wB-GU",
+    "youtube_video_id": "hnCoQ5wB-GU"
+  }
+]
