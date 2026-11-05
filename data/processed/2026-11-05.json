@@ -1,0 +1,80 @@
+{
+  "full_digest_worthy": false,
+  "executive_summary_zh": [
+    "今天候选内容整体信号较弱，只有一条与工程平台团队相关且具备一定可操作性的技术更新值得保留。",
+    "CodeQL 2.27.4 主要价值在于提升多语言查询准确率、降低误报，并修正 CWE 元数据与打包发布时的安全检查；这对依赖 GitHub code scanning 的团队有直接影响，但不属于 AI coding/agent 方向的高强度新进展。"
+  ],
+  "executive_summary_en": [
+    "The candidate set is weak today; only one technically relevant item is worth keeping for backend/platform engineering leads.",
+    "CodeQL 2.27.4 matters because it improves multi-language query accuracy, reduces false positives, and fixes CWE metadata plus pack publish/bundle checks; it is actionable for teams using GitHub code scanning, but it is not a major AI coding or agent-related development."
+  ],
+  "items": [
+    {
+      "title": "CodeQL 2.27.4 improves accuracy and query metadata",
+      "source": "GitHub Changelog",
+      "author": "",
+      "publish_date": "2026-11-04",
+      "url": "https://github.blog/changelog/2026-11-04-codeql-2-27-4-improves-accuracy-and-query-metadata/",
+      "summary_zh": "GitHub 发布 CodeQL 2.27.4，重点是提升多语言安全查询的准确率、减少误报，并修正若干查询的 CWE 元数据。更新覆盖 Java/Kotlin、Rust、C/C++ 等语言，同时加强了打包或发布 CodeQL pack 时的安全检查。",
+      "summary_en": "GitHub released CodeQL 2.27.4 with a focus on improving security query accuracy across multiple languages, reducing false positives, and correcting CWE metadata on several queries. The update spans Java/Kotlin, Rust, and C/C++, and also strengthens security checks when bundling or publishing CodeQL packs.",
+      "why_it_matters_zh": "对于将 CodeQL 接入 CI/CD、代码扫描与安全治理流程的团队，这类小版本更新会直接改变告警质量与 triage 成本。更低的误报率意味着更少的开发者噪音，而元数据修正会影响内部漏洞分类、指标报表与合规映射。",
+      "why_it_matters_en": "For teams running CodeQL in CI/CD, code scanning, and security governance workflows, this kind of point release directly affects alert quality and triage cost. Lower false-positive rates reduce developer noise, while metadata corrections can affect internal vulnerability categorization, reporting, and compliance mappings.",
+      "key_takeaways_zh": [
+        "Java/Kotlin 的 log injection 与 path injection 查询识别了更多 sanitizer、guard 与字符串处理路径，能减少漏报与误报。",
+        "Rust 与 C/C++ 若干查询的误报被显著收敛；同时多个语言上的 CWE-730 标签被移除，说明下游安全报表与规则映射可能需要重新校准。"
+      ],
+      "key_takeaways_en": [
+        "Java/Kotlin log-injection and path-injection queries now recognize more sanitizers, guards, and string-handling patterns, improving precision.",
+        "Several Rust and C/C++ queries now produce fewer false positives; meanwhile, CWE-730 was removed from multiple queries across languages, which may require downstream reporting and rule-mapping adjustments."
+      ],
+      "tags": [
+        "CodeQL",
+        "Static Analysis",
+        "Code Scanning",
+        "AppSec",
+        "Developer Tooling"
+      ],
+      "signal_score": 6,
+      "novelty_score": 3,
+      "actionability_score": 7
+    }
+  ],
+  "top_items": [
+    "CodeQL 2.27.4 improves accuracy and query metadata"
+  ],
+  "new_terms_zh": [
+    "CWE 元数据修正",
+    "CodeQL pack 发布安全检查"
+  ],
+  "new_terms_en": [
+    "CWE metadata corrections",
+    "CodeQL pack publish security checks"
+  ],
+  "themes_zh": [
+    "安全扫描工具持续通过规则精度优化来降低工程噪音",
+    "安全元数据与分类标签的调整会影响治理看板与合规口径"
+  ],
+  "themes_en": [
+    "Security scanning tools continue to improve by tuning rule precision and reducing engineering noise",
+    "Security metadata and taxonomy changes can materially affect governance dashboards and compliance interpretation"
+  ],
+  "implications_zh": [
+    "如果你的组织依赖 CodeQL 告警做安全门禁，建议尽快在代表性仓库上回归扫描，比较误报变化与告警基线漂移。",
+    "如果你们将 CWE 标签用于风险分层、自动工单或审计报表，需要检查这次元数据变化是否影响下游自动化。"
+  ],
+  "implications_en": [
+    "If your organization uses CodeQL alerts as security gates, run regression scans on representative repositories to measure false-positive changes and baseline drift.",
+    "If you rely on CWE tags for risk tiering, auto-ticketing, or audit reporting, verify whether the metadata changes alter downstream automation."
+  ],
+  "reading_order": [
+    "CodeQL 2.27.4 improves accuracy and query metadata"
+  ],
+  "what_to_ignore_zh": [
+    "GitHub Changelog 的归档页与月度列表页只是导航聚合，不应作为独立情报项。",
+    "今天没有看到关于 AI coding agents、eval harness、MCP、repo understanding 或组织级采用的高信号原创技术内容。"
+  ],
+  "what_to_ignore_en": [
+    "The GitHub Changelog archive and monthly index pages are navigation aggregates and should not be treated as separate intelligence items.",
+    "There were no strong original technical items today on AI coding agents, eval harnesses, MCP, repo understanding, or organizational adoption."
+  ]
+}
