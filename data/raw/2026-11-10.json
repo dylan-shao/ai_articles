@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Sunsetting Sourcegraph Cody and building the future of code intelligence | Sourcegraph",
+    "source": "Sourcegraph Blog",
+    "url": "https://sourcegraph.com/blog/sunsetting-cody-future-of-code-intelligence",
+    "landing_url": "https://sourcegraph.com/blog",
+    "priority": 1,
+    "publish_date": "2026-11-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Sourcegraph Cody reaches end of life on January 31, 2027. Here is why, what Sourcegraph is building next for developers and coding agents, and how Cody customers can plan their transition.",
+    "body_excerpt": "Sunsetting Sourcegraph Cody and building the future of code intelligence | Sourcegraph Blog Changelog $ inbox subscribe --ai Subscribe for AI news & product updates Documentation About Sourcegraph Search blog Ctrl+K Blog Sunsetting Sourcegraph Cody and building the future of code intelligence November 9, 2026 Dan Adler Sunsetting Sourcegraph Cody and building the future of code intelligence Sourcegraph Cody reaches end of life on January 31, 2027. Here is why, what Sourcegraph is building next for developers and coding agents, and how Cody customers can plan their transition. Today, weâre announcing that we will end of life Sourcegraph Cody on January 31, 2027. Cody has been an important part of Sourcegraphâs journey. We launched it at a time when AI coding assistants were just starting to change how developers work, and it helped bring AI-powered code understanding to developers around the world. But when we decided not to evolve Cody into a coding agent two years ago, we knew that the day would come when it no longer had a place in the market. Our mission at Sourcegraph is to bring clarity and control to the world's most complex codebases. That mission hasn't changed. If anything, I think it's become more important as AI makes it possible to create and change code faster than ever. We can have a bigger impact by focusing on what Sourcegraph does best: helping engineering teams understand complex codebases, and making developers and the coding agents they choose more effective. How we got here When we introduced Cody in early 2023, AI-assisted coding looked very different. Developers were starting to use large language models for autocompletion and basic questions, but the models knew very little about the codebases they were working in. We had spent years at Sourcegraph building the infrastructure to search and understand large codebases. Bringing that knowledge into an AI assistant was a natural next step. And it worked. Cody was a pioneer in the RAG assistan",
+    "keyword_hits": 4,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Keeping code moving with clearer review expectations | Sourcegraph",
+    "source": "Sourcegraph Blog",
+    "url": "https://sourcegraph.com/blog/what-we-learned-building-a-pr-approval-bot",
+    "landing_url": "https://sourcegraph.com/blog",
+    "priority": 1,
+    "publish_date": "2026-11-10T00:00:00+00:00",
+    "author": null,
+    "excerpt": "As agents help us produce more code, review becomes more of a bottleneck. We built a bot to reduce approval chasing and make review expectations explicit.",
+    "body_excerpt": "Keeping code moving with clearer review expectations | Sourcegraph Blog Changelog $ inbox subscribe --ai Subscribe for AI news & product updates Documentation About Sourcegraph Search blog Ctrl+K Blog Keeping code moving with clearer review expectations November 10, 2026 Constantin Nicolae Keeping code moving with clearer review expectations As agents help us produce more code, review becomes more of a bottleneck. We built a bot to reduce approval chasing and make review expectations explicit. The review bottleneck As coding agents help us produce more code, the bottleneck shifts toward review. Writing a change gets faster, but understanding its effects and deciding whether it should ship still take time. At Sourcegraph, we had a stamp group for small PRs. Someone would post âCan someone stamp this?â and a teammate who was available could pick it up. It helped keep small changes moving, but every request still meant finding a person and asking them to switch context. Our GitHub setup required an approval before merging . A routine change and a change that needed a detailed discussion both had to clear that same step. We had different expectations for review, but we were fitting them into one approval requirement. We wanted to make those expectations explicit and spend less time chasing routine approvals. That became our PR routing experiment. Ship, Show, or Ask We thought AI could help us decide whether a change needed another person's attention, and when. An agent could inspect the diff and surrounding code, assess the change against our rules, and provide evidence for choosing a review path. A 2021 article on Ship/Show/Ask describes three ways to handle review. We use the same distinction: Ship: no additional review is needed under our policy. Show: someone should see the change, but their review can happen after merge. Ask: someone needs to review the change before it merges. We started with recommendations only, while human review continued as usual. We used",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Claude Fable 5.2 in GitHub Copilot - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-09T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Claude Fable 5.2, Anthropic’s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large codebases. In early testing, Fable…",
+    "body_excerpt": "Claude Fable 5.2 in GitHub Copilot - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to changelog Release November 9, 2026 • 2 minute read Claude Fable 5.2 in GitHub Copilot Table of Contents Availability in GitHub Copilot Enabling access Zero data retention access for eligible enterprises Learn more Share your feedback Menu. Currently selected: Availability in GitHub Copilot Availability in GitHub Copilot Enabling access Zero data retention access for eligible enterprises Learn more Share your feedback Claude Fable 5.2, Anthropic’s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large codebases. In early testing, Fable 5.2 solved more tasks than Claude Fable 5.1 while using fewer steps and tool calls. It also completed hard tasks that earlier models missed. Claude Fable 5.2 requires data retention by default to operate Anthropic’s safety classifiers. Zero data retention access is available for certain eligible enterprise customers. Continue reading for more details. This model is billed at provider list pricing under usage-based billing. See Models and pricing for GitHub Copilot for details. Availability in GitHub Copilot Claude Fable 5.2 is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in: Visual Studio Code Visual Studio Copilot CLI GitHub Copilot coding agent GitHub Copilot app github.com GitHub Mobile on iOS and Android JetBrains IDEs Xcode Eclipse Rollout will be gradual. Check back soon if you don’t see it yet. Enabling access Copilot Enterprise and Copilot Business plan administrators must enable the Claude Fable 5.2 policy in Copilot settings. The policy is off by default. Claude Fable 5.2 requires data retention by default. When Claude Fable 5.2 is used, Anthropi",
+    "keyword_hits": 3,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
