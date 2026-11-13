@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Secret scanning detects Cloudflare service tokens - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-12-secret-scanning-adds-a-detector-for-cloudflare/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Secret scanning now detects Cloudflare service tokens. Detectors added Secret scanning now automatically detects the following new secret type in your repositories. Provider Secret type Cloudflare cloudflare_access_service_token Partner secrets are…",
+    "body_excerpt": "Secret scanning detects Cloudflare service tokens - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to changelog Improvement November 12, 2026 • 1 minute read Secret scanning detects Cloudflare service tokens Table of Contents Detectors added Learn more Menu. Currently selected: Detectors added Detectors added Learn more Secret scanning now detects Cloudflare service tokens. Detectors added Secret scanning now automatically detects the following new secret type in your repositories. Provider Secret type Cloudflare cloudflare_access_service_token Partner secrets are automatically reported to the secret issuer when found in public repositories through the secret scanning partnership program . User secrets generate secret scanning alerts when found in public or private repositories. Learn more Learn more about secret scanning and see the full list of supported secrets in our documentation. Let us know what you think in the community discussion . Table of Contents Detectors added Learn more Menu. Currently selected: Detectors added Detectors added Learn more application security Share Copied Shared Back to changelog Related Posts Nov.12 Improvement Public monitoring alerts now have direct links application security Nov.09 Improvement Secret scanning detects secrets in GitHub Actions workflow logs application security Nov.05 Improvement Secret scanning upgrades detectors, adds SpaceX as partner application security Nov.04 Improvement CodeQL 2.27.4 improves accuracy and query metadata application security Nov.03 Improvement CodeQL 2.27.3 adds Python 3.15 features and JSON data extensions application security Nov.02 Improvement GitHub Desktop adds short-lived authentication tokens account management application security client apps ... +2 Nov.02 Improvement Security risk assessments include repository protection sta",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Public monitoring alerts now have direct links - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-12-public-monitoring-alerts-now-have-direct-links/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-12T00:00:00+00:00",
+    "author": null,
+    "excerpt": "You can now access individual public monitoring alerts with a direct link to each alert. In your enterprise’s Public monitoring view, click an alert number to open the alert. You…",
+    "body_excerpt": "Public monitoring alerts now have direct links - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to changelog Improvement November 12, 2026 • 1 minute read Public monitoring alerts now have direct links You can now access individual public monitoring alerts with a direct link to each alert. In your enterprise’s Public monitoring view, click an alert number to open the alert. You can use its URL to bookmark the finding or share it with teammates who have access. Public monitoring is available for GitHub Enterprise Cloud customers with GitHub Secret Protection or GitHub Advanced Security, at no additional cost. Learn more about viewing and managing public monitoring alerts , or share your feedback in the community discussion . application security Share Copied Shared Back to changelog Related Posts Nov.12 Improvement Secret scanning detects Cloudflare service tokens application security Nov.09 Improvement Secret scanning detects secrets in GitHub Actions workflow logs application security Nov.05 Improvement Secret scanning upgrades detectors, adds SpaceX as partner application security Nov.04 Improvement CodeQL 2.27.4 improves accuracy and query metadata application security Nov.03 Improvement CodeQL 2.27.3 adds Python 3.15 features and JSON data extensions application security Nov.02 Improvement GitHub Desktop adds short-lived authentication tokens account management application security client apps ... +2 Nov.02 Improvement Security risk assessments include repository protection status application security Nov.02 Retired pull_request_target blocked by default December 2 actions application security ... +1 Oct.28 Release Security extension for the GitHub Copilot app application security copilot universe26 ... +2 Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our bi",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
