@@ -1,0 +1,72 @@
+[
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘26 Clear all Apply November Nov 2026 November Nov 2026 Nov.19 Improvement Improvements on the pull request overview in public preview collaboration tools Nov.19 Release Enterprise Live Migrations from Azure DevOps generally available enterprise management tools Nov.19 Improvement Red Hat Enterprise Linux runner images now generally available actions Nov.19 Improvement S3 audit log streaming with OpenID Connect expands to GHE.com enterprise management tools platform governance ... +1 Nov.18 Release Wait for pull request events with GitHub CLI client apps ecosystem & accessibility ... +1 Nov.18 Improvement Connect Supabase, Box, Calendly, and more to Copilot copilot Nov.18 Release Gemini 4 Neon in GitHub Copilot copilot Nov.18 Improvement Security risk assessments run automatically on GitHub Team application security Nov.18 Release Customize GitHub Copilot for your team copilot Nov.17 Release OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available copilot Nov.17 Improvement GitHub Copilot Fusion updates: more availability, benchmarks, and models copilot Nov.17 Release GitHub Copilot app, Microsoft Ignite releases copilot Nov.17 Release Copilot code review: Adaptive effort, secret detection, and more copilot Nov.17 Release MAI Code 2 and MAI Code 2 Flash in GitHub Copilot copilot Nov.17 Release Monitor GitHub Copilot activity through Microsoft Agent 365 copilot Nov.17 Release GitHub ",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Archive: November 2026 - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/11/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "Archive: November 2026 - GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘26 Clear all Apply November Nov 2026 November Nov 2026 Nov.19 Improvement Improvements on the pull request overview in public preview collaboration tools Nov.19 Release Enterprise Live Migrations from Azure DevOps generally available enterprise management tools Nov.19 Improvement Red Hat Enterprise Linux runner images now generally available actions Nov.19 Improvement S3 audit log streaming with OpenID Connect expands to GHE.com enterprise management tools platform governance ... +1 Nov.18 Release Wait for pull request events with GitHub CLI client apps ecosystem & accessibility ... +1 Nov.18 Improvement Connect Supabase, Box, Calendly, and more to Copilot copilot Nov.18 Release Gemini 4 Neon in GitHub Copilot copilot Nov.18 Improvement Security risk assessments run automatically on GitHub Team application security Nov.18 Release Customize GitHub Copilot for your team copilot Nov.17 Release OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available copilot Nov.17 Improvement GitHub Copilot Fusion updates: more availability, benchmarks, and models copilot Nov.17 Release GitHub Copilot app, Microsoft Ignite releases copilot Nov.17 Release Copilot code review: Adaptive effort, secret detection, and more copilot Nov.17 Release MAI Code 2 and MAI Code 2 Flash in GitHub Copilot copilot Nov.17 Release Monitor GitHub Copilot activity through Microsoft Agent 365 copil",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Improvements on the pull request overview in public preview - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your feedback has helped improve the new pull request Overview page since its November 5, 2026 public preview. Here’s what’s new! Clearer merge status and next steps Failed optional checks…",
+    "body_excerpt": "Improvements on the pull request overview in public preview - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to changelog Improvement November 19, 2026 • 1 minute read Improvements on the pull request overview in public preview Table of Contents Clearer merge status and next steps Smoother review and comment interactions Activity details Page layout and sidebar actions Try the new overview page and give feedback Menu. Currently selected: Clearer merge status and next steps Clearer merge status and next steps Smoother review and comment interactions Activity details Page layout and sidebar actions Try the new overview page and give feedback Your feedback has helped improve the new pull request Overview page since its November 5, 2026 public preview. Here’s what’s new! Clearer merge status and next steps Failed optional checks no longer make mergeable pull requests appear blocked. Previously missing merge requirements now show what needs attention. Readiness summary gives reviewers and visitors clearer guidance, including when no action is needed. Smoother review and comment interactions Checks and approvals now expand when clicked, instead of pinning a preview. Fixed overlapping previews and mobile interaction issues. Resolved review threads now collapse to keep completed conversations out of the way. Comments mentioning Copilot now better explain the action and selected model before submission. Activity details Force-push activity now links to the old and new commits so you can compare changes. Commit activity now includes timestamps so you can see when changes were made. Page layout and sidebar actions Source and target branches now stay visible on smaller screens. Edit links in the Development sidebar directly in Overview. Lock or unlock PR conversations directly in Overview. Fixed uneven spacing, misalign",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "Enterprise Live Migrations from Azure DevOps generally available - GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Enterprise Live Migrations (ELM) from Azure DevOps Services to GitHub Enterprise Cloud with data residency is now generally available. You can move your repositories while your teams keep working, then…",
+    "body_excerpt": "Enterprise Live Migrations from Azure DevOps generally available - GitHub Changelog Skip to content Skip to sidebar / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to changelog Release November 19, 2026 • 1 minute read Enterprise Live Migrations from Azure DevOps generally available Enterprise Live Migrations (ELM) from Azure DevOps Services to GitHub Enterprise Cloud with data residency is now generally available. You can move your repositories while your teams keep working, then cut over on your schedule. Manage migrations through the portal or CLI: Choose a guided experience in the Azure DevOps portal or script your migrations with the Azure DevOps CLI. Pre-migration validation and lifecycle tracking help you identify issues and monitor progress before cutover. Cut over on your schedule: ELM continuously syncs changes from Azure DevOps to GitHub, so developers can keep contributing throughout the migration. When you’re ready, complete the move with a brief cutover at a time that works for your teams. Bring your development history with you: ELM syncs Git history, branches, tags, and pull requests, including titles, descriptions, comments, and user history. Your Azure DevOps branch policies migrate as GitHub branch rulesets. Keep using Azure Boards and Azure Pipelines: You can have ELM create the Azure Boards connection and rewire Azure Pipelines to your migrated GitHub repository, reducing manual setup after cutover. Your work items and pipeline definitions stay in Azure DevOps. Ready to start your migration journey? Visit Microsoft’s ELM documentation to learn more and get started. enterprise management tools Share Copied Shared Back to changelog Related Posts Nov.19 Improvement S3 audit log streaming with OpenID Connect expands to GHE.com enterprise management tools platform governance ... +1 Nov.17 Release Track Copilot code review outcomes in Reposit",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  },
+  {
+    "title": "GitHub Changelog",
+    "source": "GitHub Changelog",
+    "url": "https://github.blog/2026/",
+    "landing_url": "https://github.blog/changelog/",
+    "priority": 2,
+    "publish_date": "2026-11-19T00:00:00+00:00",
+    "author": null,
+    "excerpt": "Your source for the latest features, improvements, and fixes across GitHub products, all in one place.",
+    "body_excerpt": "GitHub Changelog Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot app See what's new Search Changelog Docs Customer stories See what's new Try GitHub Copilot app Back to blog Changelog Copy RSS feed URL Follow @ghchangelog on X All New Releases Improvements Retired Filters ( 0 selected ) Platform governance Clear all Filters ( 0 selected ) Match: Any All Tags Account management Actions Application Security Client apps Collaboration tools Community engagement Copilot Ecosystem & accessibility Enterprise management tools Platform governance Projects & Issues Supply chain security Universe ‘26 Clear all Apply November Nov 2026 November Nov 2026 Nov.19 Improvement S3 audit log streaming with OpenID Connect expands to GHE.com enterprise management tools platform governance ... +1 October Oct 2026 October Oct 2026 Oct.20 Improvement Bulk migrate branch protections to rulesets for a repository platform governance Oct.13 Improvement GitHub App improvements for least privilege and management enterprise management tools platform governance ... +1 Oct.13 Improvement Audit GitHub Code Quality finding dismissals and reopenings application security platform governance ... +1 Oct.12 Release Push attribution for commits in limited public preview application security platform governance ... +1 Oct.07 Release Local sandboxing for GitHub Copilot now generally available application security copilot platform governance ... +2 September Sep 2026 September Sep 2026 August Aug 2026 August Aug 2026 July Jul 2026 July Jul 2026 June Jun 2026 June Jun 2026 May May 2026 May May 2026 April Apr 2026 April Apr 2026 March Mar 2026 March Mar 2026 February Feb 2026 February Feb 2026 January Jan 2026 January Jan 2026 Pagination Prev 2026 2025 2024 ... 2018 2026 2025 ... 2018 Next Subscribe to our developer newsletter Discover tips, technical guides, and best practices in our biweekly newsletter just for devs. Enter your email * Subscribe By submitting, I agree to let GitHub an",
+    "keyword_hits": 2,
+    "youtube_url": null,
+    "youtube_video_id": null
+  }
+]
