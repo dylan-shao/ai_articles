@@ -1,3 +1,3 @@
-# AI Coding Daily Digest - 2026-11-21
+# AI Coding Daily Digest - 2026-11-22
 
 Today has no high-signal AI coding updates worth a full digest.
